@@ -1,0 +1,230 @@
+$wz-color-default: rgba(#000, .15);
+$wz-color-current: #808080;
+$wz-color-done:    $brand-success;
+$wz-color-editing: $brand-primary;
+
+
+.ui-angular-wizard {
+    .steps {
+        border: 1px solid #e1e1e1;
+        margin-bottom: 3em;
+        padding: 0;
+        border-radius: $border-radius;
+
+        h2 {
+            font-size: $font-size-h4;
+            line-height: 1;
+            padding: 1.2em 1em;
+            margin: 0;
+            text-transform: uppercase;
+            border-bottom: 1px solid #e1e1e1;
+        }
+    }
+
+    .ui-wizard-content {
+        background-color: #fafafa;
+        padding: 3em 1em;
+    }
+
+    .ui-wizard-actions {
+        margin: 0;
+        padding: 1.2em 1em;
+        text-align: right;
+        border-top: 1px solid #e1e1e1;
+    }
+}
+
+.steps-indicator {
+    /* ---- steps quantity ---- */
+
+
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 10px 0 30px;
+    padding: 20px 0 30px;
+    height: 30px;
+    list-style: none;
+    
+
+
+    &:before {
+        background-color: $wz-color-default;
+        content: '';
+        position: absolute;
+        height: 1px;
+    }
+
+    &.steps-2:before {
+        left: calc(100% / 2 / 2);
+        right: calc(100% / 2 / 2);
+    }
+
+    &.steps-3:before {
+        left: calc(100% / 3 / 2);
+        right: calc(100% / 3 / 2);
+    }
+
+    &.steps-4:before {
+        left: calc(100% / 4 / 2);
+        right: calc(100% / 4 / 2);
+    }
+
+    &.steps-5:before {
+        left: calc(100% / 5 / 2);
+        right: calc(100% / 5 / 2);
+    }
+
+    &.steps-6:before {
+        left: calc(100% / 6 / 2);
+        right: calc(100% / 6 / 2);
+    }
+
+    &.steps-7:before {
+        left: calc(100% / 7 / 2);
+        right: calc(100% / 7 / 2);
+    }
+
+    &.steps-8:before {
+        left: calc(100% / 8 / 2);
+        right: calc(100% / 8 / 2);
+    }
+
+    &.steps-9:before {
+        left: calc(100% / 9 / 2);
+        right: calc(100% / 9 / 2);
+    }
+
+    &.steps-10:before {
+        left: calc(100% / 10 / 2);
+        right: calc(100% / 10 / 2);
+    }
+
+    /* --- http://www.paulirish.com/2012/box-sizing-border-box-ftw/ ---- */
+    * { 
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box; 
+        box-sizing: border-box;
+    }
+
+
+    li {
+        position: relative;
+        float: left;
+        margin: 0;
+        padding: 0;
+        padding-top: 10px;
+        text-align: center;
+        line-height: 15px;
+
+        a {
+            color: $wz-color-current;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: bold;
+            transition: 0.25s;
+            cursor: pointer;
+
+            &:before {
+                position: absolute;
+                top: -7px;
+                left: calc(50% - 7px);
+                width: 14px;
+                height: 14px;
+                border-radius: 100%;
+                background-color: $wz-color-default;
+                content: '';
+                transition: 0.25s;
+            }
+
+            &:hover {
+                color: darken($wz-color-current, 20%);
+            }
+        }
+    }
+
+    &.steps-2  li {
+        width: calc(100% / 2);
+    }
+
+    &.steps-3  li {
+        width: calc(100% / 3);   
+    }
+
+    &.steps-4  li {
+        width: calc(100% / 4);
+    }
+
+    &.steps-5  li {
+        width: calc(100% / 5);
+    }
+
+    &.steps-6  li {
+        width: calc(100% / 6);
+    }
+
+    &.steps-7  li {
+        width: calc(100% / 7);
+    }
+
+    &.steps-8  li {
+        width: calc(100% / 8);
+    }
+
+    &.steps-9  li {
+        width: calc(100% / 9);
+    }
+
+    &.steps-10 li  {
+        width: calc(100% / 10);
+    }
+
+    &.steps-11 li  {
+        width: calc(100% / 11);
+    }
+
+    li.default {
+        pointer-events: none;
+
+        a:hover {
+            color: $wz-color-current;
+        }
+    }
+
+    li.current,
+    li.editing {
+        pointer-events: none;
+    }
+
+    li.current a:before {
+        background-color: $wz-color-current;
+    }
+
+    li.done a:before {
+        background-color: $wz-color-done;
+    }
+
+    li.editing a:before {
+        background-color: $wz-color-editing;
+    }
+}
+
+// Dark theme
+// --------------------------------------------------
+// override
+.ui-angular-wizard {
+    .steps {
+        border-color: rgba(#000, .15);
+
+        h2 {
+            border-color: rgba(#000, .15);
+        }
+    }
+    .ui-wizard-actions {
+        border-color: rgba(#000, .15);
+    }
+    .ui-wizard-content {
+        background-color: rgba(#000, .035);
+    }
+}
+

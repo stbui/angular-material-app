@@ -1,0 +1,14 @@
+// Dark theme
+// --------------------------------------------------
+.theme-gray,
+.theme-dark {
+    .form-control,
+    .input-group-addon{
+        background-color: rgba(#fff, .05);
+        border-color: rgba(#000, .15);
+        color: $theme_dark_text_color;
+    }
+    .help-block {
+        color: $gray-light;
+    }
+}

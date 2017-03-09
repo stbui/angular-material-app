@@ -1,0 +1,210 @@
+// = Just for demo =
+
+// ui/typography
+.typo-styles dt {
+    display: block;
+    float: left;
+    color: #fff;
+    background-color: rgba(0,0,0,.24);
+    width: 32px;
+    height: 32px;
+    border-radius: 16px;
+    line-height: 32px;
+    text-align: center;
+    font-weight: 500;
+    margin-top: 5px;
+}
+
+.typo-styles dd {
+    display: block;
+    margin-left: 80px;
+    margin-bottom: 20px;
+}
+.typo-styles .typo-styles__demo {
+    margin-bottom: 8px;
+}
+
+// ui/icons
+.page-icons {
+    .card {
+        .fa,
+        .material-icons,
+        .wi {
+            color: rgba(#000, .5);
+        }
+
+        .fa,
+        .wi {
+            font-size: 20px;
+            margin: 5px;
+        }
+    }
+}
+// dark theme
+.theme-gray,
+.theme-dark {
+    .page-icons {
+        .card {
+            .fa,
+            .material-icons,
+            .wi {
+                color: $theme_dark_text_color;
+                opacity: .7;
+            }
+        }
+    }
+}
+
+
+
+
+// ui/grids
+.page-grids .grid-structure .row {
+    margin-top: .8rem;
+
+    .widget-container {
+        margin-top: 5px;
+        background: rgba(#000, .1);
+        padding: 10px 15px 12px;
+        font-size: $font-size-sm;
+        min-height: 0;
+        border-radius: $border-radius;
+    }
+
+}
+
+
+// 
+.color-palette {
+    color: rgba(255,255,255,0.87);
+    font-size: 14px;
+    font-weight: 500;
+    padding-bottom: 60px;
+
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    .dark {
+        color: rgba(0,0,0,0.87);
+    }
+
+    .color-group {
+        padding-bottom: 40px;
+    }
+
+    .color-group:first-child, 
+    .color-group:nth-of-type(3n+1), 
+    .color-group:last-child:first-child, 
+    .color-group:last-child:nth-of-type(3n+1) {
+        clear: left;
+        margin-left: 0;
+    }
+
+    .color-group li.divide,
+    .color-group:last-child li.divide {
+        border-top: 4px solid #fafafa;
+    }
+
+    .color-group li.color,
+    .color-group:last-child li.color {
+        padding: 15px;
+    }
+
+    .color-group li,
+    .color-group:last-child li {
+        list-style-type: none;
+    }
+
+    .color-group li.main-color,
+    .color-group:last-child li.main-color {
+        border-bottom: 4px solid #fafafa;
+    }
+
+    .color-group li.main-color .name,
+    .color-group:last-child li.main-color .name {
+        display: block;
+        margin-bottom: 60px;
+    }
+
+    .color-group li.color .hex,
+    .color-group:last-child li.color .hex {
+        float: right;
+        text-transform: uppercase;
+    }
+}
+
+
+// Angular-material
+// --------------------------------------------------
+
+//
+.whiteframedemoBasicUsage md-whiteframe {
+    background: #fff;
+    margin: 30px;
+    height: 100px; }
+@media screen and (max-width: 599px) {
+    .whiteframedemoBasicUsage md-whiteframe {
+        margin: 7px;
+        height: 50px;
+        background-color: #c8e4fa; }
+    .whiteframedemoBasicUsage md-whiteframe > span {
+        font-size: 0.4em; } }
+@media screen and (min-width: 600px) and (max-width: 959px) {
+    .whiteframedemoBasicUsage md-whiteframe {
+        margin: 20px;
+        height: 75px; }
+    .whiteframedemoBasicUsage md-whiteframe > span {
+        font-size: 0.6em; } }
+@media screen and (min-width: 960px) and (max-width: 1199px) {
+    .whiteframedemoBasicUsage md-whiteframe {
+        margin: 20px;
+        height: 90px;
+        background-color: #fcddde; }
+    .whiteframedemoBasicUsage md-whiteframe > span {
+        font-size: 0.9em; } }
+@media screen and (min-width: 1200px) {
+    .whiteframedemoBasicUsage md-whiteframe {
+        margin: 25px;
+        height: 100px;
+        background-color: #F2FCE2; }
+    .whiteframedemoBasicUsage md-whiteframe > span {
+        font-size: 1em; } }
+
+
+
+//
+.radioButtondemoMultiColumn md-divider {
+    margin: 0 -15px; }
+.radioButtondemoMultiColumn div.radioDemo2 {
+    margin-bottom: 20px; }
+.radioButtondemoMultiColumn h2 {
+    margin-left: 15px; }
+.radioButtondemoMultiColumn p {
+    width: 400px;
+    margin-top: 10px;
+    margin-left: 10px;
+    padding-top: 10px;
+    border-top: 2px solid #ddd; }
+.radioButtondemoMultiColumn md-button.md-raised, .radioButtondemoMultiColumn button.md-raised {
+    width: 200px; }
+.radioButtondemoMultiColumn div.row:last-child {
+    border-bottom: 0px dashed #ddd; }
+.radioButtondemoMultiColumn .summary {
+    width: 100%;
+    padding-top: 10px;
+    margin-left: 25px;
+    margin-top: 20px;
+    margin-bottom: -5px; }
+.radioButtondemoMultiColumn .title {
+    font-weight: bolder; }
+.radioButtondemoMultiColumn .selectedUser .md-checked {
+    padding: 8px;
+    width: 100px; }   
+// Dark theme
+.radioButtondemoMultiColumn div.md-checked {
+    background-color: rgba($brand-info, .1);
+    border-radius: 2px; }
+.radioButtondemoMultiColumn .row {
+    border-bottom: 1px dashed rgba(#000, .15); }

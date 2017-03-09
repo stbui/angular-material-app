@@ -1,0 +1,210 @@
+$TL_content_bg:         rgba(255,255,255,.9);
+$Theme_dark_TL_content_bg: rgba(255,255,255,.05);
+
+.ui-timline-container {
+    padding: 15px;
+}
+
+// 1 remove .alt of .tl-item, 2 add .ui-timline-left to .ui-timline-container
+.ui-timline-left {
+    .ui-timeline {
+        &:before {
+            left: 0;
+        }
+
+        .tl-item {
+            &:before {
+                @media (min-width: map-get($grid-breakpoints, md)) {
+                    display: none;
+                }
+            }
+
+            .tl-caption {
+                @media (min-width: map-get($grid-breakpoints, md)) {
+                    margin-left: -55px;
+                }
+            }
+
+
+            .tl-body {
+                .tl-time {
+                    @media (min-width: map-get($grid-breakpoints, md)) {
+                        left: auto;
+                        right: 15px;
+                        color: $gray-light;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.ui-timeline {
+    display: table;
+    position: relative;
+    table-layout: fixed; // ensure same width
+    width: 100%;
+    border-spacing: 0;
+    border-collapse:collapse;
+    &:before {
+        background-color: rgba(#000, .15);
+        bottom: 0px;
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 30px;
+        width: 1px;
+        z-index: 0;
+        @media (min-width: map-get($grid-breakpoints, md)) {
+            left: 50%;
+        }
+    }
+
+    .tl-item {
+        display: table-row;
+        margin-bottom: 5px;
+        &:before {
+            display: none;
+            content: "";
+            @media (min-width: map-get($grid-breakpoints, md)) {
+                display: block;
+                width: 50%;
+            }
+        }
+
+        .tl-caption {
+            width: 150px;
+            margin-left: -55px;
+            @media (min-width: map-get($grid-breakpoints, md)) {
+                margin-left: -110px;
+            }
+
+        }
+
+        &.alt {
+            @media (min-width: map-get($grid-breakpoints, md)) {
+                text-align: right;
+                &:before {
+                    display: none;
+                }
+                &:after {
+                    content: "";
+                    display: block;
+                    width: 50%;                
+                }
+
+                .tl-body {
+                    .tl-entry {
+                        margin: 0 35px 15px 0;
+                    }
+                    .tl-time {
+                        right: -220px;
+                        left: auto;
+                        text-align: left;
+                    }
+                    .tl-icon {
+                        right: -53px;
+                        left: auto;
+                    }
+                    .tl-content {
+                        &:after {
+                            right: -16px;
+                            left: auto;
+                            border: 8px solid transparent;
+                            border-left: 8px solid $TL_content_bg;
+                            border-top: 8px solid $TL_content_bg;
+                        }
+                    }
+                }
+            }
+        }
+
+        .tl-body {
+            display: table-cell;
+            width: 50%;
+            vertical-align: top;
+
+            .tl-entry {
+                position: relative;
+                margin: 0 0 15px 36px;
+            }
+            .tl-time {
+                z-index: 1;
+                position: absolute;
+                left: auto;
+                right: 15px;
+                top: 0;
+                width: 150px;
+                color: $gray-light;
+                line-height: 35px;
+                text-align: right;
+                @media (min-width: map-get($grid-breakpoints, md)) {
+                    left: -220px;
+                    right: auto;
+                    color: $body-color;
+                }
+            }
+            .tl-icon {
+                position: absolute;
+                left: -53px;
+                top: 0;
+            }
+            .tl-title {}
+            .tl-content {
+                position: relative;
+                padding: 15px;
+                border-radius: $border-radius;
+                background-color: $TL_content_bg;
+                &:after {
+                    content: " ";
+                    line-height: 0;
+                    position: absolute;
+                    left: -16px;
+                    top: 0;
+                    border: 8px solid transparent;
+                    border-right: 8px solid $TL_content_bg;
+                    border-top: 8px solid $TL_content_bg;
+                }
+
+                h4 {
+                    font-size: 18px;
+                    line-height: $font-size-h4;
+                    line-height: $headings-line-height;
+                }
+            }
+        }
+    }
+}
+
+// Dark theme
+// --------------------------------------------------
+.theme-gray,
+.theme-dark {
+    .ui-timeline {
+    .tl-item {
+        &.alt {
+            @media (min-width: map-get($grid-breakpoints, md)) {
+                .tl-body {
+                    .tl-content {
+                        &:after {
+                            border-left: 8px solid $Theme_dark_TL_content_bg;
+                            border-top: 8px solid $Theme_dark_TL_content_bg;
+                        }
+                    }
+                }
+            }
+        }
+
+        .tl-body {
+            .tl-content {
+                background-color: $Theme_dark_TL_content_bg;
+                &:after {
+                    border-right: 8px solid $Theme_dark_TL_content_bg;
+                    border-top: 8px solid $Theme_dark_TL_content_bg;
+                }
+            }
+        }
+    }
+    }
+}
+

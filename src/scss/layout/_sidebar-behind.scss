@@ -1,0 +1,9 @@
+// .nav-behind is desktop only
+// when active, sidebar will show behind top header
+@media only screen and (min-width: $l_screen_md_min) {
+    .nav-behind {
+        .app-sidebar {
+            z-index: $l_zindex_navbar - 1;
+        }
+    }
+}

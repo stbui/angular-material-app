@@ -1,0 +1,39 @@
+
+@mixin bg-style ($background, $color) {
+    background-color: $background;
+    color: $color;
+    &:hover {
+        background-color: $background;
+        color: $color;
+    }
+    a {
+        color: $color;
+        &:hover {
+            color: $color;
+        }
+    }
+}
+
+.bg-body { @include bg-style($body-bg, $body-color); }
+.bg-page { @include bg-style($page-bg, $body-color); }
+
+.bg-light { @include bg-style($white, $body-color); }
+.bg-white { @include bg-style(#fff, $body-color); }
+
+.bg-gray { @include bg-style($gray-light, #fff); }
+.bg-dark { @include bg-style($dark, #fff); }
+.bg-primary { @include bg-style($brand-primary, #fff); }
+.bg-success { @include bg-style($brand-success, #fff); }
+.bg-info { @include bg-style($brand-info, #fff); }
+.bg-warning { @include bg-style($brand-warning, $body-color); }
+.bg-danger { @include bg-style($brand-danger, #fff); }
+
+
+// for mdl-data-table
+.mdl-data-table tbody {
+    .bg-dark { @include bg-style($dark, #fff); }
+    .bg-primary { @include bg-style($brand-primary, #fff); }
+    .bg-success { @include bg-style($brand-success, #fff); }
+    .bg-info { @include bg-style($brand-info, #fff); }
+    .bg-danger { @include bg-style($brand-danger, #fff); }
+}

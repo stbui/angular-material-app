@@ -1,0 +1,48 @@
+// for Directive: accordionNav
+.app-sidebar ul.nav {
+    flex-direction: column;
+    ul {
+        display: none; // hide all sub ul on init
+    }
+
+    li {
+        position: relative;
+
+        &.open {
+            > .icon-has-ul { // child only
+                transform: rotate(-180deg);
+            }
+        }
+    }
+
+    // icon for list has sub ul
+    .icon-has-ul {
+        position: absolute;
+        top: 12px;
+        right: 15px;
+        font-size: 18px;
+        line-height: 1;
+        color: #777;
+        transition: transform .3s ease-in-out;
+    }
+
+    ul {
+        .icon-has-ul {
+            top: 11px;
+        }
+    }
+
+    .nav-divider {
+        background-color: rgba(#000, .15);
+        min-height: 1px;
+        margin: 10px 0;
+        overflow: hidden;
+    }
+}
+
+// for Directive: slimScroll
+.app-sidebar{
+    .sidebar-content {
+        height: calc(100% - #{$l_header_height + $sidebar_footer_height} ); // calc is a simple sultion with a bit cross browser support problem
+    }
+}

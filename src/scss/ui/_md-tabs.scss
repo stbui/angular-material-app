@@ -1,0 +1,9 @@
+
+
+.theme-gray,
+.theme-dark {
+    md-tabs.md-default-theme .md-tab,
+    md-tabs .md-tab {
+        color: $theme_dark_text_color;
+    }
+}

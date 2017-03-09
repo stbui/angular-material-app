@@ -1,0 +1,20 @@
+.form-validation{
+    md-input-container > md-icon {
+        // font-size: 20px;
+        // line-height: 30px;    
+        color: $gray-light2;
+    }
+    md-input-container:not(.md-input-invalid).md-input-has-value > md-icon {
+        color: $brand-success; 
+    }
+    md-input-container.md-input-invalid > md-icon {
+        color: $brand-danger; 
+    }
+}
+
+// use with ngMesages
+.validation-messages {
+    font-size: $font-size-sm;
+    margin: 10px 0 0 20px;
+    color: $brand-danger;
+}

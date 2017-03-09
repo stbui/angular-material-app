@@ -1,0 +1,71 @@
+// Style with angular-material
+
+
+// Header
+// --------------------------------------------------
+
+.top-nav-left,
+.top-nav-right {
+    // only apply to first level, not dropdown
+    li {
+        .header-btn {
+            &.md-button {
+                margin: 0;
+                line-height: $l_header_height;
+                border-radius: 0;
+                min-width: 52px;
+                @media only screen and (min-width: $l_screen_md_min) {
+                    min-width: 60px;
+                }
+
+                > .material-icons {
+                    vertical-align: middle;
+                }
+
+                .badge {
+                    background-color: transparent;
+                    position: absolute;
+                    top: 6px;
+                    right: 3px;
+                    color: inherit;
+                }
+            }
+        }
+
+    }
+}
+
+
+
+// Sidebar
+// --------------------------------------------------
+.app-sidebar {
+    .md-button {
+        margin: 0;
+        text-align: left;
+        text-transform: none;
+        border-radius: 0;
+        font-weight: normal;
+
+        line-height: inherit;
+        min-height: inherit;
+        min-width: inherit; // for collapsed nav
+    }
+}
+
+
+
+// Sidebar
+// --------------------------------------------------
+.quickview-app {
+    md-tabs {
+        > md-tabs-wrapper {
+            background-color: #eee;
+            padding: 0 40px;
+        }
+
+        md-pagination-wrapper {
+            width: 100% !important;
+        }
+    }
+}

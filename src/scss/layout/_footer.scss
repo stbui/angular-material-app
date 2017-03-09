@@ -1,0 +1,35 @@
+.app-page-container {
+    .app-footer{
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        transition: left $l_sidebar_collpase_duration $l_transition_ease_out;
+        &.fixed{
+            position: fixed;
+        }
+    }
+}
+
+// theme
+.app-page-container {
+    .app-footer{
+        // make footer same height with sidebar footer
+        padding: 13px 0;
+        border-top: 1px solid rgba(0,0,0,.05);
+        font-size: 11px;
+        line-height: 17px;
+        color: $text-muted;
+
+        .brand {
+            color: $body-color;
+            text-transform: uppercase;
+            letter-spacing: 0.02em;
+        }
+        
+        .material-icons {
+            font-size: $font-size-sm;
+            vertical-align: text-top;
+        }   
+    }
+}

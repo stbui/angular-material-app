@@ -1,0 +1,37 @@
+.page-with-tabs {
+    > .page-title {
+        background-color: rgba(#000, .05);
+        padding: 30px 15px 30px 39px;
+
+        h2 {
+            margin: 0;
+            font-size: 20px;
+            line-height: 1;
+            font-weight: $headings-font-weight;
+            color: $brand-primary;
+        }
+    }
+
+    > md-tabs {
+        background-color: inherit;
+
+        > md-tabs-wrapper {
+            padding: 0 15px;
+            background-color: rgba(#000, .05);
+            > md-tabs-canvas {
+                > md-pagination-wrapper {
+                    > md-ink-bar {
+                        color: $brand-primary;
+                        background: $brand-primary;
+                    }
+                }
+            }
+        }
+
+        > md-tabs-content-wrapper {
+            > md-tab-content {
+                padding: 15px;
+            }
+        }
+    }
+}

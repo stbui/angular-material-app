@@ -1,0 +1,34 @@
+// Light background sidebar
+// --------------------------------------------------
+$light_nav_text_color:                $body-color;
+$light_nav_link_hover_bg:             transparent; //#f6f6f6;
+$light_nav_link_hover_color:          $brand-primary;
+$light_nav_link_active_bg:            transparent;
+$light_nav_link_active_color:         $brand-primary;
+$light_nav_link_open_bg:              rgba(0,0,0,.05);      // vertical nav only
+$light_nav_link_open_color:           $light_nav_link_active_color;   // vertical nav only
+
+$light_nav_sub_nav_bg:                $light_nav_link_open_bg;
+$light_nav_sub_link_active_color:     $brand-primary;
+// $light_nav_sub2_nav_bg:               #eaeaea;
+$light_nav_sub2_nav_bg:               rgba(0,0,0,.05);
+// $light_nav_sub3_nav_bg:               #ddd;
+$light_nav_sub3_nav_bg:               rgba(0,0,0,.05);
+
+
+
+// Themes
+// --------------------------------------------------
+$theme_dark_text_color:       rgba(255,255,255,.7);
+
+$theme_dark_sidebar_bg_color: $dark;
+$theme_dark_header_bg_color:  lighten($dark, 6%);
+$theme_dark_page_bg:          lighten($dark, 2.5%);
+$theme_dark_box_bg:           $theme_dark_header_bg_color;
+
+$theme_gray_sidebar_bg_color: grayscale($theme_dark_sidebar_bg_color); // or 3c3c3c
+$theme_gray_header_bg_color:  grayscale($theme_dark_header_bg_color); // or #4c4c4c
+$theme_gray_page_bg:          grayscale($theme_dark_page_bg); // #444;
+$theme_gray_text_color:       $theme_dark_text_color;
+$theme_gray_box_bg:           $theme_gray_header_bg_color;
+

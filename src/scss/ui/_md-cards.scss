@@ -1,0 +1,148 @@
+.mdl-card.mdl-card-full-width {
+    width: 100%;
+}
+
+
+.card-panel {
+    padding: $card-padding;
+    margin: $element-top-margin 0 $element-bottom-margin 0;
+    border-radius: $border-radius-card;
+    @extend .mdl-shadow--2dp;
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+    margin: $element-top-margin 0 $element-bottom-margin 0;
+    border-radius: $border-radius-card;
+    @extend .mdl-shadow--2dp;
+
+    .card-title {
+        font-size: 24px;
+        &.activator {
+            cursor: pointer;
+        }
+    }
+
+    .card-action > a {
+        margin-right: $card-padding;
+        text-transform: uppercase;
+    }
+
+    .card-image {
+        position: relative;
+
+        img {
+            border-radius: $border-radius-card $border-radius-card 0 0;
+            position: relative;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .card-title {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            padding: $card-padding;
+            color: #fff;
+            text-shadow: 0 1px 1px rgba(0,0,0,.25);
+        }
+
+    }
+
+    .card-content {
+        padding: $card-padding;
+        border-radius: 0 0 $border-radius-card $border-radius-card;
+
+        p {
+            margin: 0;
+            color: inherit;
+        }
+        .card-title {
+            line-height: 48px;
+        }
+        .card-profile-img {
+            position: relative;
+            z-index: 1;
+            margin-top: -70px;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            padding: 5px; 
+            background-color: #fff;
+            img {
+                width: 90px;
+                height: 90px;
+                border-radius: 50%;
+            }
+
+            &.profile-img-sm {
+                margin-top: -50px;
+                width: 60px;
+                height: 60px;
+                padding: 2px; 
+                img {
+                    width: 56px;
+                    height: 56px;
+                    border-radius: 50%;
+                }               
+            }
+        }
+        .card-button .btn-icon {
+            position: relative;
+            z-index: 1;
+            margin-top: -65px;
+        }
+    }
+
+    .card-action {
+        border-top: 1px solid rgba(0, 0, 0, 0.05);
+        padding: $card-padding;
+        &.no-border {
+            border: 0;
+        }
+    }
+
+    .card-reveal {
+        padding: $card-padding;
+        position: absolute;
+        background-color: #FFF;
+        width: 100%;
+        overflow-y: auto;
+        top: 100%;
+        height: 100%;
+        z-index: 1;
+
+        .card-title {
+            cursor: pointer;
+            display: block;
+        }
+
+    }
+}
+
+
+// Dark theme
+// --------------------------------------------------
+.theme-gray,
+.theme-dark {
+    .mdl-card {
+        color: $theme_dark_text_color;
+    }
+    .mdl-card__supporting-text {
+        color: $theme_dark_text_color;
+    }
+}
+.theme-gray {
+    .mdl-card {
+        background-color: $theme_gray_box_bg;
+    }
+}
+.theme-dark {
+    .mdl-card {
+        background-color: $theme_dark_box_bg;
+    }
+}

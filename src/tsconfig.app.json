@@ -13,7 +13,9 @@
     "target": "es5",
     "module": "es2015",
     "baseUrl": "",
-    "types": []
+    "types": [
+      "hemmerjs"
+    ]
   },
   "exclude": [
     "test.ts",

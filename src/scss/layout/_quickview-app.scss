@@ -1,0 +1,27 @@
+// for app-quickview
+.quickview-open-app {
+    #quickview-app {
+        right: 0;
+    }
+}
+
+.quickview-app {
+    .quickview-close {
+        display: inline-block;
+        z-index: 1; // over md-tabs
+        position: absolute;
+        top: 11px; // ( 48 (header tab height) - 26 (line-height) ) /2
+        right: 15px;
+        line-height: 24px;
+        color: $body-color;
+        opacity: .6;
+        .material-icons {
+            font-size: $font-size-base;
+            vertical-align: middle;
+        }
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+}

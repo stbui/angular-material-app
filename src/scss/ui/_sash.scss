@@ -1,0 +1,129 @@
+$line_height: 30px;
+
+.sash {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: auto;
+    top: 25px;
+    z-index: 1;
+    .material-icons {
+        font-size: 14px;
+        height: 20px;
+        height: 20px;
+        line-height: $line_height;
+    }
+}
+.sash{
+    cursor: default;
+    overflow: visible;
+    pointer-events: none;
+    position: absolute;
+    background-color: $gray-light;
+    pointer-events: auto;
+    color: $white;
+
+    >div {
+        position: relative;
+        z-index: 1;
+        height: $line_height;
+        line-height: $line_height;
+        transition: width 0.1s 0.05s cubic-bezier(0.86, 0, 0.07, 1);
+        width: 25px;
+        &:hover {
+            -webkit-transition-delay: 0;
+            transition-delay: 0;
+            width: 100%;
+
+            .sash-text {
+                opacity: 1;
+                width: 100%;
+                padding-left: 15px;
+            }
+        }
+    }
+    .sash-text {
+        display: block;
+        opacity: 0;
+        overflow: hidden;
+        transition: opacity 0.3s, padding 0.25s, width 0.25s;
+        transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+        white-space: nowrap;
+        width: 3em;
+
+        float: left;
+        margin-left: 5px;
+        padding-right: 20px;
+    }
+    i {
+        position: absolute;
+        right: 1px;
+        margin-left: 5px;
+        &:before {
+            color: #f5f5f5;
+        }
+    }
+
+    &.sash-triangle-right:after {
+        background-color: transparent;
+        border: 15px solid $gray-light;
+        border-right-color: transparent;
+        bottom: 0;
+        content: " ";
+        position: absolute;
+        right: -20px;
+    }
+
+    // Colors
+    &.sash-primary {
+        background-color: $brand-primary;
+        &.sash-triangle-right:after {
+            border-color: $brand-primary;
+            border-right-color: transparent;
+        }
+    }
+    &.sash-info {
+        background-color: $brand-info;
+        &.sash-triangle-right:after {
+            border-color: $brand-info;
+            border-right-color: transparent;
+        }
+    }
+    &.sash-success {
+        background-color: $brand-success;
+        &.sash-triangle-right:after {
+            border-color: $brand-success;
+            border-right-color: transparent;
+        }
+    }
+    &.sash-warning {
+        background-color: $brand-warning;
+        &.sash-triangle-right:after {
+            border-color: $brand-warning;
+            border-right-color: transparent;
+        }
+    }
+    &.sash-danger {
+        background-color: $brand-danger;
+        &.sash-triangle-right:after {
+            border-color: $brand-danger;
+            border-right-color: transparent;
+        }
+    }
+    &.sash-primary {
+        background-color: $brand-primary;
+        &.sash-triangle-right:after {
+            border-color: $brand-primary;
+            border-right-color: transparent;
+        }
+    }
+    &.sash-white {
+        background-color: $white;
+        color: $body-color;
+        &.sash-triangle-right:after {
+            border-color: $white;
+            border-right-color: transparent;
+        }
+    }
+}
+

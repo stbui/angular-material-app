@@ -1,5 +1,11 @@
 # NavigationAngular2Material
 
+https://material.angular.io/guide/getting-started
+http://bootswatch.com
+
+delete:
+bootstrap-sass
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0-rc.1.
 
 ## Development server

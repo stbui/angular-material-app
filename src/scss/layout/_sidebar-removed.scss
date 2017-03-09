@@ -1,0 +1,40 @@
+// Mobile
+@media only screen and (max-width: $l_screen_sm_max) {
+    .no-app-sidebar {
+        & + .app-page-container {
+            .app-header {
+                .header-icon {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+// Desktop only, hide app-sidebar
+@media only screen and (min-width: $l_screen_md_min) {
+    .no-app-sidebar {
+        .app-sidebar {
+            // removed ng-include, so there won't be an app-sidebar
+        }
+
+        & + .app-page-container {
+            .app-header {
+                .brand {
+                    padding-left: 0;
+                }
+            }
+
+            .app-content-wrapper {
+                .app-content {
+                    padding-left: 0;
+                } 
+                .app-footer{
+                    left: 0;
+                }
+            }
+
+        }
+    }
+
+}

@@ -1,0 +1,4 @@
+// The reason for doing so is to solve "relative assets (images, fonts) fail to find" issue
+// The only file changed is bootstrap/_bootstrap.scss
+
+@import "bootstrap/bootstrap";

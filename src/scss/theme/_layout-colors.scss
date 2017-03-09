@@ -1,0 +1,100 @@
+// Colors for layouts based on color option, including sidebar, header, logo
+
+// .bg-dark is the default, there's no need for additional style
+.app-sidebar.bg-dark {}
+// 
+.app-sidebar.bg-light {
+    .nav {
+        // General
+        color: $light_nav_text_color;
+        a {
+            color: $light_nav_text_color;
+        }
+        .nav-header {
+            color: $text-muted;
+        }
+        li {
+            > a {
+                &:hover,
+                &:focus {
+                    background-color: $light_nav_link_hover_bg;
+                    color: $light_nav_link_hover_color;
+                }
+            }
+            &.active {
+                > a,
+                > a:hover,
+                > a:focus {
+                    background-color: $light_nav_link_active_bg;
+                    color: $light_nav_link_active_color;
+                }
+            }
+            &.open {
+                > a,
+                > a:hover,
+                > a:focus {
+                    background-color: $light_nav_link_open_bg;
+                    color: $light_nav_link_open_color;
+                }                        
+                > .icon-has-ul { color: $light_nav_link_active_color; }
+            }
+
+            // overrides Bootstrap 
+            > a:focus {
+                background-color: $light_nav_link_active_bg;
+            }
+        }
+
+        // sub menu
+        ul {
+            background-color: $light_nav_sub_nav_bg;
+            li {
+                &.active,
+                &.open {
+                    > a,
+                    > a:hover,
+                    > a:focus {
+                        background-color: $light_nav_sub2_nav_bg;
+                        color: $light_nav_sub_link_active_color;
+                    }
+                }
+            }
+        }
+
+        // sub2 menu
+        ul ul {
+            background-color: $light_nav_sub2_nav_bg;
+            > li {
+                &.active,
+                &.open {
+                    > a,
+                    > a:hover,
+                    > a:focus {
+                        background-color: $light_nav_sub3_nav_bg;
+                        color: $light_nav_sub_link_active_color;
+                    }
+                }
+            } 
+        }
+
+        // sub3 menu
+        ul ul ul {
+            background-color: $light_nav_sub3_nav_bg;
+        }
+    }
+
+    .sidebar-footer {
+        background-color: $bright;
+    }
+}
+
+
+// toggler
+.app-sidebar {
+    .sidebar-header.bg-light {
+        a.collapsednav-toggler {
+            color: rgba(0,0,0,.5);
+        }
+    }
+}
+

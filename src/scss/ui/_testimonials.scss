@@ -1,0 +1,54 @@
+.testimonial {
+    text-align: center;
+
+    .testimonial__quote {
+        display: block;
+        text-align: center;
+        .material-icons {
+            font-size: 3.5em;
+            line-height: 1em;
+            // margin-bottom: 0.55em;
+        }
+    }
+
+    blockquote {
+        &:before,
+        &:after {
+            content: none;
+        }
+    }
+
+    .avatar {
+        border-radius: 50%;
+        max-width: 80px;
+    }
+
+    h5 {
+        font-size: $font-size-base;
+        margin-bottom: .4em;
+    }
+
+    .title {
+        opacity: .54;
+    }
+}
+
+.testimonial-alt {
+    .avatar {
+        max-width: 100px;
+        margin-bottom: 1rem;
+    }
+
+    blockquote {
+        margin: 0;
+        font-size: $font-size-lg;
+        opacity: .9;
+        border-left: 0;
+    }
+
+    .citation {
+        font-size: $font-size-base;
+        opacity: .54;
+    }
+
+}

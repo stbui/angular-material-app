@@ -1,0 +1,50 @@
+// layout
+.app-header{
+    display: block;
+    position: relative;
+    z-index: $l_zindex_navbar;
+    height: $l_header_height;
+    width: 100%;
+    background-color: $l_white;
+
+    .toggle-sidebar{
+        display: block;
+    }
+}
+
+.fixed-header {
+    .app-header {
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+    }
+}
+// desktop
+@media only screen and (min-width: $l_screen_md_min) {
+    .app-header {
+        .toggle-sidebar-btn {
+            display: none;
+        }
+
+        .brand {
+            display: inline-block;
+            width: $l_sidebar_width;
+            padding: 0 0 0 $l_sidebar_width_collapsed;
+            transition: padding .25s $l_transition_ease_out;
+            a {
+                text-decoration: none;
+                font-weight: normal;
+            }
+        }
+    }
+
+    .nav-behind {
+        .app-header {
+            .brand {
+                padding-left: 0;
+            }
+        }
+    }
+}
+

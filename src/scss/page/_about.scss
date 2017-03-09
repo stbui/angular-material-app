@@ -1,0 +1,55 @@
+.page-about {
+    .hero {
+        &.hero-bg-img {
+            background-size: cover;
+            padding: 0;
+        }
+        .hero-inner {
+            background-color: rgba(#000, .15);
+            padding: 90px 0;
+        }
+        .hero-title,
+        .hero-tagline {
+            color: #fff;
+        }
+    }
+
+    .stat-container {
+        margin-bottom: 30px;
+
+        .stat-item {
+            margin-bottom: 20px;
+            border-bottom: 2px solid $page-bg;
+        }
+
+        .stat-num {
+            display: block;
+            color: $brand-primary;
+            font-size: 72px;
+            font-weight: $font-weight-thin;
+            line-height: 66px;
+        }
+
+        .stat-desc {
+            display: inline-block;
+            margin-bottom: -2px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid $brand-primary;
+            font-size: 20px;
+            line-height: 22px;
+            font-weight: bold;
+        }
+    }
+
+    .article {
+        &:nth-of-type(1) {
+            padding-top: 75px;
+        }
+    }
+
+    .space-bar {
+        padding: 3px;
+        border-radius: $border-radius;
+        margin-right: 5px;
+    }
+}

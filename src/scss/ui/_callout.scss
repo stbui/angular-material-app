@@ -1,0 +1,55 @@
+.callout {
+    margin: 20px 0;
+    padding: 20px;
+    border-left: 3px solid #eee;
+
+    h4 {
+        margin-top: 0;
+        margin-bottom: 5px;
+        font-size: $font-size-lg;
+        line-height: $line-height-base;
+    }
+
+    p:last-child {
+        margin-bottom: 0;
+    }
+}
+
+// use rgba so that background-color also works for dark theme
+.callout-success {
+    background-color: rgba($brand-success, .08); // #f3faf3
+    border-color: $brand-success;
+
+    h4 {
+        color: $brand-success;
+    }   
+}
+
+.callout-info {
+    background-color: rgba($brand-info, .05); // #f4f8fa
+    border-color: $brand-info;
+
+    h4 {
+        color: $brand-info;
+    }
+}
+
+.callout-warning {
+    background-color: rgba($brand-warning, .08); // #fcf8f2
+    border-color: $brand-warning;
+
+    h4 {
+        color: $brand-warning;
+    }
+}
+
+.callout-danger {
+    background-color: rgba($brand-danger, .05); // #fdf7f7
+    border-color: $brand-danger;
+
+    h4 {
+        color: $brand-danger;
+    }
+}
+
+

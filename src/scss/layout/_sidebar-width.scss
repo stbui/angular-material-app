@@ -1,0 +1,141 @@
+// Shared
+// --------------------------------------------------
+.sidebar-sm,
+.sidebar-lg {
+
+// page-container
+@media only screen and (min-width: $l_screen_md_min) {
+    &.nav-collapsed {
+        .app-page-container {
+            .app-content-wrapper {
+                .app-content {
+                    padding-left: $l_sidebar_width_collapsed;
+                }
+                .app-footer {
+                    left: $l_sidebar_width_collapsed;
+                }
+            }
+        }
+    }
+}
+
+// sidebar-collapsed
+@media only screen and (min-width: $l_screen_md_min) {
+    &.nav-collapsed .app-sidebar{
+        width: $l_sidebar_width_collapsed;
+    }
+}
+
+}
+
+
+
+// Small
+// --------------------------------------------------
+.sidebar-sm {
+
+// header
+@media only screen and (min-width: $l_screen_md_min) {
+    .app-header {
+        .brand {
+            width: $l_sidebar_width_sm;
+        }
+    }
+}
+
+// page-container
+@media only screen and (min-width: $l_screen_md_min) {
+    .app-page-container {
+        .app-content-wrapper {
+            .app-content {
+                padding-left: $l_sidebar_width_sm;
+            } 
+            .app-footer{
+                left: $l_sidebar_width_sm;
+            }
+        }
+    }
+}
+@media only screen and (max-width: $l_screen_sm_max) {
+    // off-canvas sidebar
+    &.sidebar-mobile-open {
+        .app-page-container {
+            transform: translateX($l_sidebar_width_sm);
+        }
+    }
+}
+
+// sidebar
+.app-sidebar {
+    width: $l_sidebar_width_sm;
+}
+
+// sidebar-collapsed
+@media only screen and (min-width: $l_screen_md_min) {
+    &.nav-collapsed .app-sidebar:hover{
+        width: $l_sidebar_width_sm;
+        > * {
+            width: $l_sidebar_width_sm;
+        }
+    }
+}
+
+}
+
+
+
+
+
+// Large
+// --------------------------------------------------
+.sidebar-lg {
+
+
+// header
+@media only screen and (min-width: $l_screen_md_min) {
+    .app-header {
+        .brand {
+            width: $l_sidebar_width_lg;
+        }
+    }
+}
+
+// page-container
+@media only screen and (min-width: $l_screen_md_min) {
+    .app-page-container {
+        .app-content-wrapper {
+            .app-content {
+                padding-left: $l_sidebar_width_lg;
+            } 
+            .app-footer{
+                left: $l_sidebar_width_lg;
+            }
+        }
+    }
+}
+@media only screen and (max-width: $l_screen_sm_max) {
+    // off-canvas sidebar
+    &.sidebar-mobile-open {
+        .app-page-container {
+            transform: translateX($l_sidebar_width_lg);
+        }
+    }
+}
+
+// sidebar
+.app-sidebar {
+    width: $l_sidebar_width_lg;
+}
+
+// sidebar-collapsed
+@media only screen and (min-width: $l_screen_md_min) {
+    &.nav-collapsed .app-sidebar:hover{
+        width: $l_sidebar_width_lg;
+        > * {
+            width: $l_sidebar_width_lg;
+        }
+    }
+}
+
+
+}

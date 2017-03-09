@@ -1,0 +1,47 @@
+.page-profile {
+
+    .profile-header {
+        position: relative;
+        margin: 0 0 15px;
+        padding: 50px 30px 90px;
+        background: url('#{$image_path}/background/1.png') no-repeat center center fixed; 
+        background-size: cover;
+    }
+
+    .profile-img {
+        display: inline-block;
+        margin-right: 20px;
+        img {
+            max-width: 120px;
+            height: auto;
+            box-shadow: 0 0 0 5px rgba(255,255,255,.5), 0 0 10px rgba(0,0,0,.2);
+        }
+    }
+
+    .profile-social {
+        display: inline-block;
+        > a {
+            margin-right: 15px;
+            box-shadow: 0 0 5px rgba(0,0,0,.2);
+        }
+    }
+
+    .profile-info {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0,0,0,.3);
+        line-height: 20px;
+        padding: 10px 30px;
+        color: $bright;
+
+        ul {
+            margin: 0;
+        }
+    }
+
+    img.media-object {
+        border-radius: $border-radius;
+    }
+}

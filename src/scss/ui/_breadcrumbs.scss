@@ -1,0 +1,26 @@
+.breadcrumb {
+    display: block;
+    margin: 0;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    background-color: transparent;
+    padding: 15px 0;
+    text-transform: uppercase;
+    color: #ccc;
+    text-shadow: none;
+    font-size: 11px;
+
+    a {
+        color: #ccc;
+        text-decoration: none;
+        &:hover {
+            color: $link-color;
+        }
+    }
+
+    li {
+        padding-left: 0;
+    }
+
+}

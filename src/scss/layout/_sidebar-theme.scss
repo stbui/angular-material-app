@@ -1,0 +1,209 @@
+// overall
+.app-sidebar{
+    box-shadow: 1px 0 2px rgba(0,0,0,.15);
+    .sidebar-header{
+        line-height: $l_header_height;
+        padding: 0 18px; // 16px + 2
+        box-shadow: 0 1px 1px rgba(0,0,0,.1);
+
+        // Ideally, don't use material-icons:dashboard, hard to position, affect sibling text
+        .logo-icon {
+            text-align: center;
+            font-size: 24px;
+            &.material-icons {
+                line-height: $l_header_height;
+                height: $l_header_height;
+                vertical-align: sub; // quick fix to vertically center material-icons & sibling text
+            }
+        }
+
+        a.brand {
+            display: inline-block;
+            font-weight: normal;
+            font-size: 23px;
+            line-height: $l_header_height;
+            text-decoration: none;
+        }
+    }
+
+    .sidebar-footer {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: $sidebar_footer_height;
+        border-top: 1px solid rgba(0,0,0,.1);
+        background-color: $sidebar_bg_color;
+    }
+}
+
+
+// sidebar nav, for sidebar-content (accordionNav), sidebar-footer
+.app-sidebar .nav {
+    // General
+    a {
+        display: block;
+        position: relative;
+        text-decoration: none;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    li {
+        position: relative;
+        .badge {
+            position: absolute;
+            padding: 3px 6px;
+        }
+    }
+    .nav-header {
+        margin: 15px 15px 10px;
+        font-size: $font-size-sm;
+    }
+
+    // first level li 
+    > li {
+        > a {
+            line-height: 24px;
+        }
+    }
+    .nav-icon {
+        display: inline-block;
+
+        &.material-icons {
+            width: 24px;
+            height: 24px; // with font-size 20px, material-icons will be at least 25px high
+            font-size: 20px;
+            line-height: 1;
+            text-align: center;
+            vertical-align: middle;
+            margin-bottom: -2px; // hack to vertically center material-icons, and make `li > a` tag 44px height instead of weird 45px
+        }
+    }
+
+    // sub ul
+    ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+            > a {
+                padding: 10px 18px; // Align with 1st level: 18px = 16px (1st level) + 2px ()
+
+                .material-icons {
+                    width: 20px;
+                    height: 20px; // with font-size 20px, material-icons will be at least 25px high
+                    font-size: 16px;
+                    line-height: 1;
+                    text-align: center;
+                    vertical-align: middle;
+                    margin-bottom: -2px;
+                }
+            }
+        }
+    }
+
+    // sub2 ul 
+    ul ul {
+        li {
+            > a {
+                padding: 10px 15px 10px 56px; // With icon, padding-left: 18(a padding-left)+20(icon width)+18(nav-icon margin-right)
+            }
+        }
+    }
+
+    // sub3 ul 
+    ul ul ul {
+        li {
+            > a {
+                padding-left: 74px;
+            }
+        }
+    }
+}
+
+// Multi-level nav color
+// Default dark background style
+// use with directive "accordionNav", which add .open class on li
+// use with ui-router directive "ui-sref-active" & "ui-sref", which add .active class on li
+.app-sidebar {
+    background-color: $sidebar_bg_color;
+
+    .nav {
+        // General
+        color: $sidebar_text_color;
+        a {
+            color: $sidebar_text_color;
+        }
+        .nav-header {
+            color: $text-muted;
+        }
+        .nav-divider {
+            background-color: rgba(0,0,0,.15);
+        }
+        li {
+            > a {
+                &:hover,
+                &:focus {
+                    background-color: $nav_link_hover_bg;
+                    color: $nav_link_hover_color;
+                }
+            }
+            &.active {
+                > a,
+                > a:hover,
+                > a:focus {
+                    background-color: $nav_link_active_bg;
+                    color: $nav_link_active_color;
+                }
+            }
+            &.open {
+                > a,
+                > a:hover,
+                > a:focus {
+                    background-color: $nav_link_open_bg;
+                    color: $nav_link_active_color;
+                }
+                > .icon-has-ul {}
+            }
+        }
+
+        // sub ul
+        ul {
+            background-color: $nav_sub_bg;
+            li {
+                &.active,
+                &.open {
+                    > a,
+                    > a:hover,
+                    > a:focus {
+                        background-color: $nav_sub2_bg;
+                    }
+                }
+            }
+        }
+
+        // >= sub2 ul
+        ul ul {
+            background-color: $nav_sub2_bg;
+            > li {
+                &.active,
+                &.open {
+                    > a,
+                    > a:hover,
+                    > a:focus {
+                        background-color: $nav_sub3_bg;
+                        color: $nav_sub_link_active_color;
+                    }
+                }
+            } 
+        }
+
+        ul ul ul {
+            background-color: $nav_sub3_bg;
+        }
+    }
+}
+
+
+

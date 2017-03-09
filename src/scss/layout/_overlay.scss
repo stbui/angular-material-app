@@ -1,0 +1,32 @@
+
+// layout
+.app-overlay{
+    // display: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s ease, 
+                visibility .3s ease; // vibisility also needs to be transitional, otherwise there won't be an exit transition
+
+    z-index: $l_zindex_overlay;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: $l_white;
+    overflow: hidden;
+
+    .overlay-close{
+        position: absolute;
+        right: 20px;
+        top: 25px;
+    }
+}
+.overlay-active {
+    .app-overlay {
+        // display: block;
+        visibility: visible;
+        opacity: 1;
+    }
+}
+

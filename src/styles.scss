@@ -1,0 +1,12 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+@import "./scss/loader";
+@import "./vendors/material-design-icons/iconfont/material-icons.css";
+@import "~@angular/material/core/theming/prebuilt/deeppurple-amber";
+
+@import "./scss/bootstrap";
+@import "./scss/layout";
+@import "./scss/theme";
+@import "./scss/ui";
+@import "./scss/app";

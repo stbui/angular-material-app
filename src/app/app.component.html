@@ -1,3 +1,36 @@
-<h1>
-  {{title}}
-</h1>
+
+
+<aside>
+  <app-sidebar></app-sidebar>
+</aside>
+
+<section id="page-container" class="app-page-container">
+  <app-header></app-header>
+
+  <div class="app-content-wrapper">
+    <div class="app-content">
+      <a routerLink="dashboard">dashboard</a>
+      <br>
+      <a routerLink="buttons">buttons</a>
+      <br>
+      <a routerLink="cards">cards</a>
+
+      <br>
+      <a routerLink="about">about</a>
+      <br>
+      <a routerLink="services">services</a>
+      <br>
+      <a routerLink="contact">contact</a>
+
+      <router-outlet></router-outlet>
+    </div>
+
+    <section>
+      <app-footer></app-footer>
+    </section>
+  </div>
+
+</section>
+
+
+

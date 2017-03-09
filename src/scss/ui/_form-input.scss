@@ -1,0 +1,34 @@
+.input-round {
+    border-radius: 2em;
+}
+
+input.input-primary {
+    border-color: $skin;
+    &:focus {
+        border-color: $skin;
+    }
+}
+input.input-info {
+    border-color: $brand-info;
+    &:focus {
+        border-color: $brand-info;
+    }
+}
+input.input-success {
+    border-color: $brand-success;
+    &:focus {
+        border-color: $brand-success;
+    }
+}
+input.input-warning {
+    border-color: $brand-warning;
+    &:focus {
+        border-color: $brand-warning;
+    }
+}
+input.input-danger {
+    border-color: $brand-danger;
+    &:focus {
+        border-color: $brand-danger;
+    }
+}

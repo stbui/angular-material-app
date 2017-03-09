@@ -1,0 +1,33 @@
+// layout
+.app-sidebar {
+    display: block;
+    z-index: $l_zindex_sidebar_mobile;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    height: 100vh; // Fix(Safari): Fix sidebar fail to on safari
+    width: $l_sidebar_width;
+    overflow: hidden;
+    background-color: $l_gray_dark;
+
+    .sidebar-header{
+        display: block;
+        position: relative;
+        height: $l_header_height;
+    }
+
+    .sidebar-footer {
+        background-color: $l_gray_dark; // needed, otherwise content below will show up
+    }
+}
+
+// desktop
+@media only screen and (min-width: $l_screen_md_min) {
+    .app-sidebar {
+        z-index: $l_zindex_sidebar;
+        overflow-x: hidden;
+    }
+}
+
+

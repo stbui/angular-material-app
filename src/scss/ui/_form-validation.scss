@@ -1,0 +1,19 @@
+
+// form validation
+.form-validation{
+    .form-control {
+        &:focus {
+            box-shadow: none;
+        }
+    }
+
+    .ng-pristine {} // When it is first initialized
+    .ng-dirty {} // When the view changes
+    .ng-valid.ng-dirty {
+        border-color: $brand-success;
+    }
+    .ng-invalid.ng-dirty {
+        border-color: $brand-danger;
+    }
+}
+

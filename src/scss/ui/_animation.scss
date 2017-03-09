@@ -1,0 +1,270 @@
+.content-container.ng-leave  { z-index:9999; }
+.content-container.ng-enter  { z-index:8888; }
+
+/*==========  animations  ==========*/
+// Thanks, https://github.com/daneden/animate.css
+
+// html { // fix webkit translate causing scollbar issue, side effect: page fail to scroll
+//   overflow: hidden;
+// }
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.animate-spin {
+    animation: spin 3s linear infinite;
+}
+
+
+// animate-fade-up, a combination of "fadeOutUp" and "fadeInUp"
+@keyframes fade-up-enter {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes fade-up-leave {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+    100% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+}
+.animate-fade-up.ng-enter,
+.animate-fade-up.ng-leave {
+}
+.animate-fade-up.ng-enter {
+    animation: 0.35s fade-up-enter;
+}
+// .animate-fade-up.ng-leave {
+//     @include animation: 0.35s fade-up-leave);
+// }
+
+
+
+// animate-flip-y, a combination of "flipInY" and "flipOutY"
+@keyframes animate-flip-y-enter {
+    0% {
+        transform: perspective(3000px) rotateY(90deg);
+        opacity: 0;
+    }
+    100% {
+        transform: perspective(3000px) rotateY(0deg);
+        opacity: 1;
+    }
+
+}
+@keyframes animate-flip-y-leave {
+    0% {
+        transform: perspective(3000px) rotateY(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: perspective(3000px) rotateY(-90deg);
+        opacity: 0;
+    }
+}
+.animate-flip-y.ng-enter {
+    animation: 0.35s animate-flip-y-enter ease-in-out;
+}
+// .animate-flip-y.ng-leave {
+//     @include animation: 0.5s animate-flip-y-leave);
+// }
+
+
+// vertical slide
+@keyframes slideInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-2000px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+@keyframes slideOutUp {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-2000px);
+    }
+}
+.animate-vertical-slide.ng-hide-add {
+    animation: .35s slideOutUp ease-in-out;
+}
+.animate-vertical-slide.ng-hide-remove {
+    animation: .35s .35s slideInDown ease-in-out;
+}
+
+
+/*==========  simple ones  ==========*/
+
+// scaleUp
+@keyframes slideOutUp {
+    0% {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+.ainmate-scale-up.ng-enter {
+    animation: 0.35s slideOutUp ease-in-out;
+}
+
+// 
+@keyframes slideInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(25px);
+    }
+    
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.ainmate-slide-in-right.ng-enter {
+    animation: 0.35s slideInRight ease-in-out;
+}
+
+
+// 
+.animated {
+    animation-duration: .35s;
+    animation-fill-mode: both;
+}
+.animated.infinite {
+    animation-iteration-count: infinite;
+}
+.animated.hinge {
+    animation-duration: 2s;
+}
+@keyframes slideInUp {
+    0% {
+        transform: translateY(100%);
+        visibility: visible;
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+.slideInUp {
+    animation-name: slideInUp;
+}
+
+
+
+@keyframes scaleInLeft {
+    0% {
+        transform-origin: left top;
+        transform: scale(.5);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+.scaleInLeft {
+    animation-name: scaleInLeft;
+}
+
+@keyframes scaleInRight {
+    0% {
+        transform-origin: right top;
+        transform: scale(.5);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+.scaleInRight {
+    animation-name: scaleInRight;
+}
+
+
+
+@keyframes rotateInUpLeft {
+    0% {
+        transform-origin: left bottom;
+        transform: rotate3d(0, 0, 1, 45deg);
+        opacity: 0;
+    }
+
+    100% {
+        transform-origin: left bottom;
+        transform: none;
+        opacity: 1;
+    }
+}
+.rotateInUpLeft {
+    animation-name: rotateInUpLeft;
+}
+
+@keyframes rotateInUpRight {
+    0% {
+        transform-origin: right bottom;
+        transform: rotate3d(0, 0, 1, -90deg);
+        opacity: 0;
+    }
+
+    100% {
+        transform-origin: right bottom;
+        transform: none;
+        opacity: 1;
+    }
+}
+.rotateInUpRight {
+    animation-name: rotateInUpRight;
+}
+
+// Dropdown
+.dropdown-menu {
+    transform-origin: top left;
+    &.pull-right {
+        // left: auto!important;
+        transform-origin: top right;
+    }
+}
+.dropdown-menu-scaleIn {
+    display: block;
+    opacity: 0;
+    transition: all .25s;
+    transform: scale(.8);
+    backface-visibility: hidden;
+    pointer-events: none;
+}
+.open > .dropdown-menu-scaleIn {
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: auto;
+}
+

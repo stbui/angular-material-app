@@ -1,0 +1,106 @@
+// Depends on
+// * https://getmdl.io/components/index.html#tables-section
+// * boxes component
+
+// Add to mdl-data-table
+.mdl-data-table {
+    &.mdl-data-table-non-numeric {
+        td, th {
+            text-align: left;
+        }
+    }
+}
+
+
+
+// mdl-data-table in box
+.box {
+    &.table-box {
+        border-radius: 0;
+    }
+
+    > .mdl-data-table {
+        width: 100%;
+        background-color: transparent;
+    }
+}
+
+
+// Responsive tables
+.table-responsive {
+    overflow-x: auto;
+    min-height: 0.01%; // Workaround for IE9 bug (see https://github.com/twbs/bootstrap/issues/14837)
+
+    @media screen and (max-width: (map-get($grid-breakpoints, md) - 1)) {
+        width: 100%;
+        margin-bottom: ($line-height-base * 0.75 * 1rem);
+        overflow-y: hidden;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+        border: 1px solid $table-border-color;
+
+        // Tighten up spacing
+        > .mdl-data-table {
+            margin-bottom: 0;
+
+            // Ensure the content doesn't wrap
+            > thead,
+            > tbody,
+            > tfoot {
+                > tr {
+                    > th,
+                    > td {
+                        white-space: nowrap;
+                    }
+                }
+            }
+        }
+
+        // Special overrides for the bordered tables
+        > .table-bordered {
+            border: 0;
+
+            // Nuke the appropriate borders so that the parent can handle them
+            > thead,
+            > tbody,
+            > tfoot {
+                > tr {
+                    > th:first-child,
+                    > td:first-child {
+                        border-left: 0;
+                    }
+                    > th:last-child,
+                    > td:last-child {
+                        border-right: 0;
+                    }
+                }
+            }
+
+            // Only nuke the last row's bottom-border in `tbody` and `tfoot` since
+            // chances are there will be only one `tr` in a `thead` and that would
+            // remove the border altogether.
+            > tbody,
+            > tfoot {
+                > tr:last-child {
+                    > th,
+                    > td {
+                        border-bottom: 0;
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+
+// 
+.theme-gray,
+.theme-dark {
+    .box {
+        > .mdl-data-table {
+            th {
+                color: $theme-dark-data-table-header-color;
+            }
+        }
+    }
+}

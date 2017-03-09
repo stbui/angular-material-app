@@ -1,0 +1,23 @@
+
+
+.theme-gray,
+.theme-dark {
+    md-list.md-default-theme md-list-item.md-2-line .md-list-item-text h3,
+    md-list md-list-item.md-2-line .md-list-item-text h3,
+    md-list.md-default-theme md-list-item.md-2-line .md-list-item-text h4,
+    md-list md-list-item.md-2-line .md-list-item-text h4,
+    md-list.md-default-theme md-list-item.md-3-line .md-list-item-text h3,
+    md-list md-list-item.md-3-line .md-list-item-text h3,
+    md-list.md-default-theme md-list-item.md-3-line .md-list-item-text h4,
+    md-list md-list-item.md-3-line .md-list-item-text h4 {
+        color: $theme_dark_text_color;
+    }
+
+    md-list.md-default-theme md-list-item.md-2-line .md-list-item-text p,
+    md-list md-list-item.md-2-line .md-list-item-text p,
+    md-list.md-default-theme md-list-item.md-3-line .md-list-item-text p,
+    md-list md-list-item.md-3-line .md-list-item-text p {
+        color: $theme_dark_text_color;
+        opacity: .5;
+    }
+}

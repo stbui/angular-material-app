@@ -1,0 +1,386 @@
+
+$icon_box_icon_size: 28px;
+$icon_box_dimension: 64px;
+
+$icon_box_lg_icon_size: 42px;
+$icon_box_lg_dimension: 96px;
+
+
+.icon-box {
+    margin-top: 30px;
+    position: relative;
+    padding: 0 0 0 80px;
+    .ibox-icon {
+        display: block;
+        position: absolute;
+        width: $icon_box_dimension;
+        height: $icon_box_dimension;
+        top: 0;
+        left: 0;
+    
+        a {
+            text-decoration: none;
+        }
+
+        a,
+        i,
+        img {
+            display: block;
+            position: relative;
+            width: 100%;
+            height: 100%;
+            color: #FFF;
+        }
+        i,
+        img {
+            border-radius: 50%;
+            background-color: $brand-primary;
+        }
+        i {
+            font-style: normal;
+            font-size: $icon_box_icon_size;
+            text-align: center;
+            line-height: $icon_box_dimension;
+        }
+    }
+    h3 {
+        font-size: 16px;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin: 0;
+        color: $body-color;
+    }
+    p {
+        margin: 8px 0 0 0;
+        color: $gray-light2;
+    }
+    .before-heading { font-size: 14px; }
+}
+
+
+/* Icon Box - Icon Large
+-----------------------------------------------------------------*/
+
+.icon-box {
+    &.ibox-lg {
+        padding: 0 0 0 115px;
+        .ibox-icon {
+            width: $icon_box_lg_dimension;
+            height: $icon_box_lg_dimension;
+            i {
+                font-size: $icon_box_lg_icon_size;
+                line-height: $icon_box_lg_dimension;
+            }
+
+        }
+    }
+}
+
+
+/* Icon Box - Icon Outline
+-----------------------------------------------------------------*/
+
+.icon-box {
+    &.ibox-outline {
+        .ibox-icon {
+            border: 1px solid $brand-primary;
+            border-radius: 50%;
+            padding: 3px;
+            i {
+                line-height: 56px;
+            }
+        }
+    }
+}
+
+/* Icon Box - Icon Outline Large
+-----------------------------------------------------------------*/
+
+.icon-box {
+    &.ibox-outline {
+        &.ibox-lg {
+            .ibox-icon {
+                padding: 4px;
+                i {
+                    line-height: 86px;
+                }
+            }
+        }
+    }
+}
+
+
+/* Icon Box - Icon Rounded
+-----------------------------------------------------------------*/
+
+.icon-box {
+    &.ibox-rounded {
+        .ibox-icon {
+            border-radius: $border-radius !important;
+            i,
+            img {
+                border-radius: $border-radius !important;
+            }
+        }
+    }
+}
+
+/* Icon Box - Icon Rounded & Large
+-----------------------------------------------------------------*/
+
+.icon-box {
+    &.ibox-rounded {
+        &.ibox-lg {
+            .ibox-icon {
+                border-radius: $border-radius !important;
+                i,
+                img { border-radius: $border-radius !important; }
+            }
+        }
+    }
+}
+
+/* Icon Box - Light Background
+-----------------------------------------------------------------*/
+
+.icon-box {
+    &.ibox-light {
+        i,
+        img {
+            background-color: #e5e5e5;
+            color: $body-color;
+        }
+        &.ibox-outline {
+            .ibox-icon {
+                border-color: #E5E5E5;
+                i {
+                    line-height: 54px;
+                }
+            }
+            i,
+            img {
+                border: 1px solid #E5E5E5;
+                background-color: #e5e5e5;
+                color: $body-color;
+            }
+            &.ibox-lg {
+                .ibox-icon {
+                    i { line-height: 84px; }
+                }
+            }
+        }
+        .ibox-icon i { line-height: 62px; }
+    }
+    &.ibox-lg {
+        .ibox-icon {
+            i { line-height: 96px; }
+        }
+    }
+}
+
+/* Icon Box - Dark Background
+-----------------------------------------------------------------*/
+
+.icon-box {
+    &.ibox-dark {
+        &.ibox-outline {
+            .ibox-icon { border-color: $body-color; }
+        }
+        .ibox-icon {
+            i,
+            img { background-color: $body-color; }
+        }
+    }
+}
+
+
+/* Icon Box - Border
+-----------------------------------------------------------------*/
+
+.icon-box {
+    &.ibox-border {
+        .ibox-icon {
+            border: 1px solid  $brand-primary;
+            border-radius: 50%;
+            i,
+            img {
+                border: none;
+                background-color: transparent !important;
+                color: $brand-primary;
+            }
+        }
+        .ibox-icon {
+            padding: 0;
+            i { line-height: 62px !important; }
+        }
+        &.ibox-lg .ibox-icon i { line-height: 94px !important; }
+    }
+}
+
+
+/* Icon Box - Border - Light
+-----------------------------------------------------------------*/
+
+.icon-box {
+    &.ibox-border {
+        &.ibox-light {
+            .ibox-icon { border-color: #E5E5E5; }
+            i,
+            img { color: #888; }
+        }
+    }
+}
+
+/* Icon Box - Border - Dark
+-----------------------------------------------------------------*/
+
+.icon-box {
+    &.ibox-border {
+        &.ibox-dark {
+            .ibox-icon { border-color: #333; }
+            i,
+            img { color: $body-color; }
+        }
+    }
+}
+
+
+/* Icon Box - Plain
+-----------------------------------------------------------------*/
+
+.icon-box {
+    &.ibox-plain {
+        .ibox-icon {
+            border: none !important;
+            height: auto !important;
+            i,
+            img {
+                border: none !important;
+                background-color: transparent !important;
+                color: $brand-primary;
+                border-radius: 0;
+            }
+            i {
+                font-size: 48px;
+                line-height: 1 !important;
+            }
+            img { height: 64px; }
+        }
+        &.ibox-image {
+            .ibox-icon { width: auto; }
+            img {
+                width: auto;
+                display: inline-block;
+            }
+        }
+        &.ibox-small {
+            padding-left: 42px;
+            .ibox-icon {
+                width: 28px;
+                i {
+                    font-size: 28px;
+                }
+                img {
+                    height: 28px;
+                }
+            }
+            h3 {
+                font-size: 15px;
+                line-height: 26px;
+                margin-bottom: 10px;
+            }
+            p {
+                margin-left: -42px;
+            }
+        }
+        &.ibox-lg {
+            .ibox-icon {
+                i {font-size: 72px; }
+                img { height: 96px; }
+            }
+        }
+        &.ibox-light {
+            .ibox-icon {
+                i,
+                img { color: #888; }
+            }
+        }
+        &.ibox-dark {
+            .ibox-icon {
+                i,
+                img { color: $body-color; }
+            }
+        }
+    }
+}
+
+
+/* Icon Box - Center
+-----------------------------------------------------------------*/
+
+.icon-box {
+    &.ibox-center {
+        padding: 0;
+        text-align: center;
+        &.ibox-small {
+            padding-left: 0 !important;
+        }
+        .ibox-icon {
+            position: relative;
+            margin: 0 auto;
+        }
+
+        h3 {
+            margin: .8em 0 0;
+        }
+
+        p {
+            font-size: 14px;
+            margin-top: 0em;
+        }
+    }
+}
+
+
+/* Icon Box - Right
+-----------------------------------------------------------------*/
+
+.icon-box {
+    &.ibox-right {
+        padding: 0 80px 0 0;
+        text-align: right;
+        &.ibox-lg { padding-right: 115px; }
+        .ibox-icon {
+            left: auto;
+            right: 0;
+        }
+        &.ibox-plain {
+            &.ibox-small {
+                padding: 0 42px 0 0;
+                p {
+                    margin: 0 -42px 0 0;
+                }
+            }
+        }
+    }
+}
+
+
+/* Dark Theme
+-----------------------------------------------------------------*/
+.theme-gray,
+.theme-dark {
+    .icon-box {
+        h3 {
+            color: $theme_dark_text_color;
+        }
+    }
+}
+
+
+/* Boxed
+-----------------------------------------------------------------*/
+.box-body > .icon-box {
+    margin-top: 0;
+}
