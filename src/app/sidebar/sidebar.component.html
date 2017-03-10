@@ -1,50 +1,51 @@
-<nav class="app-sidebar">
-
-  <section class="sidebar-header">
-
-    <span class="logo-icon material-icons">view_compact</span>
-    <a href="#!/" class="brand">stbui</a>
-    <a href="" class="collapsednav-toggler"><i class="material-icons">test</i></a>
+<nav class="app-sidebar bg-dark">
+  <section class="sidebar-header bg-primary">
+    <md-icon class="logo-icon material-icons">view_compact</md-icon>
+    <a href="/" class="brand">stbui</a>
+    <a class="collapsednav-toggler"><i class="material-icons">radio_button_checked</i></a>
   </section>
 
   <section class="sidebar-content">
     <ul class="nav">
-      <li class="nav-header"><span data-translate="NAVIGATION"></span></li>
-      <li><a md-button aria-label="menu" routerLink="dashboard"><i class="nav-icon material-icons">home</i><span class="nav-text" data-translate="DASHBOARD">dashboard</span></a></li>
+      <li class="nav-header"><span data-translate="NAVIGATION">Navigation</span></li>
+      <!--<li><a md-button aria-label="menu" routerLink="buttons"><i class="nav-icon material-icons">home</i><span class="nav-text" data-translate="DASHBOARD">buttons</span></a></li>-->
+      <!--<li><a md-button aria-label="menu" routerLink="cards"><i class="nav-icon material-icons">home</i><span class="nav-text" data-translate="DASHBOARD">cards</span></a></li>-->
+      <!--<li><a md-button aria-label="menu" routerLink="about"><i class="nav-icon material-icons">home</i><span class="nav-text" data-translate="DASHBOARD">about</span></a></li>-->
+      <!--<li><a md-button aria-label="menu" routerLink="services"><i class="nav-icon material-icons">home</i><span class="nav-text" data-translate="DASHBOARD">services</span></a></li>-->
 
-      <li><a md-button aria-label="menu" routerLink="buttons"><i class="nav-icon material-icons">home</i><span class="nav-text" data-translate="DASHBOARD">buttons</span></a></li>
-      <li><a md-button aria-label="menu" routerLink="cards"><i class="nav-icon material-icons">home</i><span class="nav-text" data-translate="DASHBOARD">cards</span></a></li>
-      <li><a md-button aria-label="menu" routerLink="about"><i class="nav-icon material-icons">home</i><span class="nav-text" data-translate="DASHBOARD">about</span></a></li>
-      <li><a md-button aria-label="menu" routerLink="services"><i class="nav-icon material-icons">home</i><span class="nav-text" data-translate="DASHBOARD">services</span></a></li>
-
-
-      <li><a md-button aria-label="menu" href="javascript:;" toggle-quickview data-target="customizer"><i class="nav-icon material-icons">settings</i><span class="nav-text" data-translate="CUSTOMIZER"></span></a></li>
       <li>
-        <a md-button aria-label="menu" href="#!/app/ui"><i class="nav-icon material-icons">bubble_chart</i><span class="nav-text" data-translate="UI_KIT"></span></a>
+        <a md-button routerLink="dashboard">
+          <md-icon class="nav-icon material-icons">home</md-icon>
+          <span class="nav-text">Dashboard</span>
+        </a>
+      </li>
+
+      <li>
+        <a md-button routerLink="dashboard">
+          <md-icon class="nav-icon material-icons">settings</md-icon>
+          <span class="nav-text">Customizer</span>
+        </a>
+      </li>
+
+      <li>
+        <a md-button aria-label="menu">
+          <md-icon class="nav-icon material-icons">bubble_chart</md-icon>
+          <span class="nav-text">UI Kit</span></a>
         <ul>
-          <li><a class="prepend-icon" md-button aria-label="menu" routerLink="buttons"><span data-translate="BUTTONS">buttons</span></a></li>
-          <li><a class="prepend-icon" md-button aria-label="menu" href="#!/app/ui/icons"><span data-translate="ICONS"></span><span class="badge badge-pill badge-info">3</span></a></li>
-          <li><a class="prepend-icon" md-button aria-label="menu" href="#!/app/ui/cards"><span data-translate="CARDS"></span></a></li>
-          <li><a class="prepend-icon" md-button aria-label="menu" href="#!/app/ui/boxes"><span data-translate="BOXES"></span></a></li>
-          <li><a class="prepend-icon" md-button aria-label="menu" href="#!/app/ui/icon-boxes"><span data-translate="ICON_BOXES"></span></a></li>
-          <li><a class="prepend-icon" md-button aria-label="menu" href="#!/app/ui/components"><span data-translate="COMPONENTS"></span><span class="badge badge-pill badge-danger">14</span></a></li>
-          <li><a class="prepend-icon" md-button aria-label="menu" href="#!/app/ui/feature-callouts"><span data-translate="FEATURE_CALLOUTS"></span></a></li>
-          <li><a class="prepend-icon" md-button aria-label="menu" href="#!/app/ui/hover"><span data-translate="HOVER"></span></a></li>
-          <li><a class="prepend-icon" md-button aria-label="menu" href="#!/app/ui/lists"><span data-translate="LISTS"></span></a></li>
-          <li><a class="prepend-icon" md-button aria-label="menu" href="#!/app/ui/sash"><span data-translate="SASH"></span></a></li>
-          <li><a class="prepend-icon" md-button aria-label="menu" href="#!/app/ui/testimonials"><span data-translate="TESTIMONIALS"></span></a></li>
-          <li><a class="prepend-icon" md-button aria-label="menu" href="#!/app/ui/pricing-tables"><span data-translate="PRICING_TABLES"></span></a></li>
-          <li><a class="prepend-icon" md-button aria-label="menu" href="#!/app/ui/call-to-actions"><span data-translate="CALL_TO_ACTIONS"></span></a></li>
-          <li><a class="prepend-icon" md-button aria-label="menu" href="#!/app/ui/timeline"><span data-translate="TIMELINE"></span></a></li>
-          <li><a class="prepend-icon" md-button aria-label="menu" href="#!/app/ui/maps"><span data-translate="MAPS"></span></a></li>
-          <li><a class="prepend-icon" md-button aria-label="menu" href="#!/app/ui/grids"><span data-translate="GRIDS"></span></a></li>
-          <li><a class="prepend-icon" md-button aria-label="menu" href="#!/app/ui/color"><span data-translate="COLOR"></span></a></li>
-          <li><a class="prepend-icon" md-button aria-label="menu" href="#!/app/ui/typography"><span data-translate="TYPOGRAPHY"></span></a></li>
-        </ul>
+          <li><a class="prepend-icon" md-button aria-label="menu" routerLink="buttons"><span>Buttons</span></a></li>
+          <li><a class="prepend-icon" md-button><span>Icons</span><span class="badge badge-pill badge-info">3</span></a></li>
+          <li><a class="prepend-icon" md-button><span>Cards</span></a></li>
+          <li><a class="prepend-icon" md-button><span>Boxes</span></a></li>
+          <li><a class="prepend-icon" md-button><span>Icon Boxes</span></a></li>
+          <li><a class="prepend-icon" md-button><span>Components</span><span class="badge badge-pill badge-danger">14</span></a></li>
+          <li><a class="prepend-icon" md-button><span>Feature Callouts</span></a></li>
+         </ul>
       </li>
       <!-- <li><a md-button aria-label="menu" href="#!/app/widget"><i class="nav-icon material-icons">widgets</i><span class="nav-text">Widgets</span></a></li> -->
       <li>
-        <a md-button aria-label="menu" href="#!/app/table"><i class="nav-icon material-icons">list</i><span class="nav-text" data-translate="TABLES"></span></a>
+        <a md-button>
+          <md-icon class="nav-icon material-icons">list</md-icon>
+          <span class="nav-text" data-translate="TABLES">Tables</span></a>
         <ul>
           <li><a class="prepend-icon" md-button aria-label="menu" href="#!/app/table/static"><span data-translate="STATIC_TABLES"></span></a></li>
           <li><a class="prepend-icon" md-button aria-label="menu" href="#!/app/table/responsive"><span data-translate="RESPONSIVE_TABLES"></span></a></li>
@@ -52,7 +53,9 @@
         </ul>
       </li>
       <li>
-        <a md-button aria-label="menu" href="#!/app/form"><i class="nav-icon material-icons">format_color_text</i><span class="nav-text" data-translate="FORMS"></span></a>
+        <a md-button>
+          <md-icon class="nav-icon material-icons">format_color_text</md-icon>
+          <span class="nav-text">Forms</span></a>
         <ul>
           <li>
             <a class="prepend-icon" md-button aria-label="menu" href="#!/app/form/element"><span data-translate="FORM_ELEMENTS"></span><span class="badge badge-pill badge-info">10</span></a>
@@ -76,7 +79,9 @@
         </ul>
       </li>
       <li>
-        <a md-button aria-label="menu" href="#!/app/chart"><i class="nav-icon material-icons">equalizer</i><span class="nav-text" data-translate="CHARTS"></span></a>
+        <a md-button>
+          <md-icon class="nav-icon material-icons">equalizer</md-icon>
+          <span class="nav-text">Charts</span></a>
         <ul>
           <li><a class="prepend-icon" md-button aria-label="menu" href="#!/app/chart/line"><span><span data-translate="LINE"></span> & <span data-translate="AREA"></span></span></a></li>
           <li><a class="prepend-icon" md-button aria-label="menu" href="#!/app/chart/bar"><span data-translate="BAR"></span></a></li>
@@ -90,7 +95,9 @@
 
       <li class="nav-divider"></li>
       <li>
-        <a md-button aria-label="menu" href="#!/app/page"><i class="nav-icon material-icons">content_copy</i><span class="nav-text" data-translate="PAGES"></span></a>
+        <a md-button>
+          <md-icon class="nav-icon material-icons">content_copy</md-icon>
+          <span class="nav-text">Pages</span></a>
         <ul>
           <!-- <li><a class="prepend-icon" md-button aria-label="menu" href="#!/app/page/gallery"><span data-translate="GALLERY"></span></a></li> -->
           <!-- <li><a class="prepend-icon" md-button aria-label="menu" href="#!/app/page/portfolio"><span data-translate="PORTFOLIO"></span></a></li> -->
@@ -106,7 +113,9 @@
         </ul>
       </li>
       <li>
-        <a md-button aria-label="menu" href="#!/extra"><i class="nav-icon material-icons">more_horiz</i><span class="nav-text" data-translate="EXTRA_PAGES"></span></a>
+        <a md-button>
+          <md-icon class="nav-icon material-icons">more_horiz</md-icon>
+          <span class="nav-text">Extre Pages</span></a>
         <ul>
           <li><a class="prepend-icon" md-button aria-label="menu" href="#!/signin"><span data-translate="SIGN_IN"></span></a></li>
           <li><a class="prepend-icon" md-button aria-label="menu" href="#!/signup"><span data-translate="SIGN_UP"></span></a></li>
@@ -119,7 +128,9 @@
         </ul>
       </li>
       <li>
-        <a md-button aria-label="menu" href="#!/app/pglayout"><i class="nav-icon material-icons">view_array</i><span class="nav-text" data-translate="PAGE_LAYOUTS"></span></a>
+        <a md-button>
+          <md-icon class="nav-icon material-icons">view_array</md-icon>
+          <span class="nav-text">Page Layouts</span></a>
         <ul>
           <li><a class="prepend-icon" md-button aria-label="menu" href="#!/app/pglayout/blank-full"><span data-translate="FULL_WIDTH"></span></a></li>
           <li><a class="prepend-icon" md-button aria-label="menu" href="#!/app/pglayout/blank-centered"><span data-translate="CENTERED"></span></a></li>
@@ -130,7 +141,9 @@
         </ul>
       </li>
       <li>
-        <a md-button aria-label="menu" href="#!/app/ecommerce"><i class="nav-icon material-icons">shopping_cart</i><span class="nav-text" data-translate="ECOMMERCE"></span></a>
+        <a md-button>
+          <md-icon class="nav-icon material-icons">shopping_cart</md-icon>
+          <span class="nav-text">Ecommerce</span></a>
         <ul>
           <li><a class="prepend-icon" md-button aria-label="menu" href="#!/app/ecommerce/products"><span data-translate="PRODUCTS"></span></a></li>
           <li><a class="prepend-icon" md-button aria-label="menu" href="#!/app/ecommerce/horizontal-products"><span><span data-translate="PRODUCTS"></span> (<span data-translate="HORIZONTAL"></span>)</span></a></li>
@@ -138,7 +151,9 @@
         </ul>
       </li>
       <li>
-        <a md-button aria-label="menu" href="#!/app/app" ><i class="nav-icon material-icons">apps</i><span class="nav-text" data-translate="APPS"></span><span class="badge badge-pill badge-success">2</span></a>
+        <a md-button>
+          <md-icon class="nav-icon material-icons">apps</md-icon>
+          <span class="nav-text">Apps</span></a>
         <ul>
           <li><a class="prepend-icon" md-button aria-label="menu" href="#!/app/app/calendar"><span data-translate="CALENDAR"></span></a></li>
           <li><a class="prepend-icon" md-button aria-label="menu" href="#!/app/app/task"><span data-translate="TASK"></span></a></li>
@@ -146,7 +161,9 @@
       </li>
       <!-- <li><a md-button aria-label="menu" href="#!/app/email/inbox" ><i class="nav-icon material-icons">mail_outline</i><span class="nav-text" data-translate="EMAIL(WIP)"></span></a></li> -->
       <li>
-        <a md-button aria-label="menu" href="#!/app/menu"><i class="nav-icon material-icons">sort</i><span class="nav-text" data-translate="MENU_LEVELS">Menu Levels</span></a>
+        <a md-button>
+          <md-icon class="nav-icon material-icons">sort</md-icon>
+          <span class="nav-text">Menu Levels</span></a>
         <ul>
           <li><a class="prepend-icon" md-button aria-label="menu" href="javascript:;"><span><span data-translate="LEVEL"></span> 1</span></a></li>
           <li>
@@ -164,7 +181,12 @@
           </li>
         </ul>
       </li>
-      <li><a md-button aria-label="menu" href="http://demo.ngtemplates.com/admin-material/landing/index.html" target="_blank"><i class="nav-icon material-icons">phonelink</i><span class="nav-text" data-translate="LANDING"></span></a></li>
+
+      <li>
+        <a md-button>
+          <md-icon class="nav-icon material-icons">phonelink</md-icon>
+          <span class="nav-text">Loading</span></a>
+      </li>
     </ul>
 
   </section>
@@ -172,9 +194,9 @@
   <section class="sidebar-footer">
     <ul class="nav">
       <li><a md-button aria-label="menu" target="_blank">
-        <i class="nav-icon material-icons">help</i>
-        <span class="nav-text"><span data-translate="HELP"></span> & <span
-          data-translate="SUPPORT"></span></span></a></li>
+        <md-icon class="nav-icon material-icons">help</md-icon>
+        <span class="nav-text"><span>help</span> & <span>support</span></span></a></li>
     </ul>
   </section>
+
 </nav>

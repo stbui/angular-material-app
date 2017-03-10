@@ -2,6 +2,13 @@
 
 https://material.angular.io/guide/getting-started
 http://bootswatch.com
+http://wrapbootstrap.com/preview/WB0F66100
+https://wrapbootstrap.com/search?q=Material+
+https://genesisui.com/demo/?theme=leaf&version=angular2
+
+```
+npm install ng2-bootstrap --save
+```
 
 delete:
 bootstrap-sass

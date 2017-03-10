@@ -18,6 +18,7 @@ import { ContactComponent } from './contact/contact.component';
 import { ProfileComponent } from './profile/profile.component';
 import { BlogComponent } from './blog/blog.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { SidebarRightComponent } from './sidebar-right/sidebar-right.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     ContactComponent,
     ProfileComponent,
     BlogComponent,
-    SidebarComponent
+    SidebarComponent,
+    SidebarRightComponent
   ],
   imports: [
     BrowserModule,

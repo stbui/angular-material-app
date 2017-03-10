@@ -3,7 +3,16 @@
 
 @import "./scss/loader";
 @import "./vendors/material-design-icons/iconfont/material-icons.css";
+
+
 @import "~@angular/material/core/theming/prebuilt/deeppurple-amber";
+//@import "~@angular/material/core/theming/_all-theme";
+//@include md-core();
+//$primary: md-palette($md-cyan);
+//$accent: md-palette($md-amber);
+//$theme: md-light-theme($primary, $accent);
+//@include angular-material-theme($theme);
+
 
 @import "./scss/bootstrap";
 @import "./scss/layout";
