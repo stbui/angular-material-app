@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CustomizerService } from './customizer.service';
 
 @Component({
   selector: 'app-customizer',
@@ -8,15 +9,15 @@ import { Component, OnInit } from '@angular/core';
 export class CustomizerComponent implements OnInit {
 
   isOpen: boolean = false;
+  colorOption;
 
-  constructor() { }
+  constructor(private _customizerService: CustomizerService) { }
 
   ngOnInit() {
-    this.isOpen = false;
   }
 
   toggleQuickview() {
-    this.isOpen = !this.isOpen;
+    this.isOpen = this._customizerService.toggleQuickview();
     console.log(this);
   }
 

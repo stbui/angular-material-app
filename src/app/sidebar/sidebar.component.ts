@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HeaderService } from '../header/header.service';
+import { CustomizerService } from '../customizer/customizer.service';
 
 @Component({
   selector: 'app-sidebar',
@@ -7,9 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidebarComponent implements OnInit {
 
-  constructor() { }
+  classes: any = {};
+
+  constructor(
+    private _headerService: HeaderService,
+    private _customizerService: CustomizerService
+  ) { }
 
   ngOnInit() {
   }
 
+  setTheme() {
+    return this._headerService.getTheme();
+  }
+
+  toggleQuickview() {
+    this._customizerService.toggleQuickview();
+    console.log(this);
+  }
 }

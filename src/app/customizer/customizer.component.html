@@ -13,22 +13,212 @@
       <h4 class="section-header">布局选项</h4>
       <div class="divider divider-sm"></div>
 
+      <md-list>
+        <md-list-item>
+          <p>固顶头部</p>
+          <md-slide-toggle class="md-secondary"></md-slide-toggle>
+        </md-list-item>
+        <md-list-item>
+          <p>折叠侧边栏</p>
+          <md-slide-toggle class="md-secondary"></md-slide-toggle>
+        </md-list-item>
+        <md-list-item>
+          <p>Boxed Layout</p>
+          <md-slide-toggle class="md-secondary"></md-slide-toggle>
+        </md-list-item>
+      </md-list>
+
 
       <div class="divider divider-lg divider-solid"></div>
       <h4 class="section-header">颜色选项</h4>
-      <p class="small no-margin">Tip: Additionally, you can active "Full Width Header" above</p>
+      <p class="small no-margin"></p>
       <div class="divider"></div>
 
-      <section ng-include=" 'app/layout/customizer-color.html'"> </section>
+
+      <div class="row">
+
+        <div class="col-4">
+          <label class="color-option-check">
+            <input type="radio" name="color" value="11" [(ngModel)]="colorOption">
+            <span class="color-option-item bg-page">
+                <span class="overlay"><span class="material-icons">check</span></span>
+                <span class="bg-dark item-header"></span>
+                <span class="bg-light item-header"></span>
+                <span class="bg-dark"></span>
+            </span>
+          </label>
+          <label class="color-option-check">
+            <input type="radio" name="color" value="12" [(ngModel)]="colorOption">
+            <span class="color-option-item bg-page">
+                <span class="overlay"><span class="material-icons">check</span></span>
+                <span class="bg-primary item-header"></span>
+                <span class="bg-light item-header"></span>
+                <span class="bg-dark"></span>
+            </span>
+          </label>
+          <label class="color-option-check">
+            <input type="radio" name="color" value="13" [(ngModel)]="colorOption">
+            <span class="color-option-item bg-page">
+                <span class="overlay"><span class="material-icons">check</span></span>
+                <span class="bg-success item-header"></span>
+                <span class="bg-light item-header"></span>
+                <span class="bg-dark"></span>
+            </span>
+          </label>
+          <label class="color-option-check">
+            <input type="radio" name="color" value="14" [(ngModel)]="colorOption">
+            <span class="color-option-item bg-page">
+                <span class="overlay"><span class="material-icons">check</span></span>
+                <span class="bg-info item-header"></span>
+                <span class="bg-light item-header"></span>
+                <span class="bg-dark"></span>
+            </span>
+          </label>
+          <label class="color-option-check">
+            <input type="radio" name="color" value="15" [(ngModel)]="colorOption">
+            <span class="color-option-item bg-page">
+                <span class="overlay"><span class="material-icons">check</span></span>
+                <span class="bg-warning item-header"></span>
+                <span class="bg-light item-header"></span>
+                <span class="bg-dark"></span>
+            </span>
+          </label>
+          <label class="color-option-check">
+            <input type="radio" name="color" value="16" [(ngModel)]="colorOption">
+            <span class="color-option-item bg-page">
+                <span class="overlay"><span class="material-icons">check</span></span>
+                <span class="bg-danger item-header"></span>
+                <span class="bg-light item-header"></span>
+                <span class="bg-dark"></span>
+            </span>
+          </label>
+        </div>
+
+        <div class="col-4">
+          <label class="color-option-check">
+            <input type="radio" name="color" value="21" [(ngModel)]="colorOption">
+            <span class="color-option-item bg-page">
+                <span class="overlay"><span class="material-icons">check</span></span>
+                <span class="bg-light item-header"></span>
+                <span class="bg-light item-header"></span>
+                <span class="bg-dark"></span>
+            </span>
+          </label>
+          <label class="color-option-check">
+            <input type="radio" name="color" value="22" [(ngModel)]="colorOption">
+            <span class="color-option-item bg-page">
+                <span class="overlay"><span class="material-icons">check</span></span>
+                <span class="bg-primary item-header"></span>
+                <span class="bg-primary item-header"></span>
+                <span class="bg-dark"></span>
+            </span>
+          </label>
+          <label class="color-option-check">
+            <input type="radio" name="color" value="23" [(ngModel)]="colorOption">
+            <span class="color-option-item bg-page">
+                <span class="overlay"><span class="material-icons">check</span></span>
+                <span class="bg-success item-header"></span>
+                <span class="bg-success item-header"></span>
+                <span class="bg-dark"></span>
+            </span>
+          </label>
+          <label class="color-option-check">
+            <input type="radio" name="color" value="24" [(ngModel)]="colorOption">
+            <span class="color-option-item bg-page">
+                <span class="overlay"><span class="material-icons">check</span></span>
+                <span class="bg-info item-header"></span>
+                <span class="bg-info item-header"></span>
+                <span class="bg-dark"></span>
+            </span>
+          </label>
+          <label class="color-option-check">
+            <input type="radio" name="color" value="25" [(ngModel)]="colorOption">
+            <span class="color-option-item bg-page">
+                <span class="overlay"><span class="material-icons">check</span></span>
+                <span class="bg-warning item-header"></span>
+                <span class="bg-warning item-header"></span>
+                <span class="bg-dark"></span>
+            </span>
+          </label>
+          <label class="color-option-check">
+            <input type="radio" name="color" value="26" [(ngModel)]="colorOption">
+            <span class="color-option-item bg-page">
+                <span class="overlay"><span class="material-icons">check</span></span>
+                <span class="bg-danger item-header"></span>
+                <span class="bg-danger item-header"></span>
+                <span class="bg-dark"></span>
+            </span>
+          </label>
+        </div>
+        <div class="col-4">
+          <label class="color-option-check">
+            <input type="radio" name="color" value="31" [(ngModel)]="colorOption">
+            <span class="color-option-item bg-page">
+                <span class="overlay"><span class="material-icons">check</span></span>
+                <span class="bg-dark item-header"></span>
+                <span class="bg-dark item-header"></span>
+                <span class="bg-light"></span>
+            </span>
+          </label>
+          <label class="color-option-check">
+            <input type="radio" name="color" value="32" [(ngModel)]="colorOption">
+            <span class="color-option-item bg-page">
+                <span class="overlay"><span class="material-icons">check</span></span>
+                <span class="bg-primary item-header"></span>
+                <span class="bg-primary item-header"></span>
+                <span class="bg-light"></span>
+            </span>
+          </label>
+          <label class="color-option-check">
+            <input type="radio" name="color" value="33" [(ngModel)]="colorOption">
+            <span class="color-option-item bg-page">
+                <span class="overlay"><span class="material-icons">check</span></span>
+                <span class="bg-success item-header"></span>
+                <span class="bg-success item-header"></span>
+                <span class="bg-light"></span>
+            </span>
+          </label>
+          <label class="color-option-check">
+            <input type="radio" name="color" value="34" [(ngModel)]="colorOption">
+            <span class="color-option-item bg-page">
+                <span class="overlay"><span class="material-icons">check</span></span>
+                <span class="bg-info item-header"></span>
+                <span class="bg-info item-header"></span>
+                <span class="bg-light"></span>
+            </span>
+          </label>
+          <label class="color-option-check">
+            <input type="radio" name="color" value="35" [(ngModel)]="colorOption">
+            <span class="color-option-item bg-page">
+                <span class="overlay"><span class="material-icons">check</span></span>
+                <span class="bg-warning item-header"></span>
+                <span class="bg-warning item-header"></span>
+                <span class="bg-light"></span>
+            </span>
+          </label>
+          <label class="color-option-check">
+            <input type="radio" name="color" value="36" [(ngModel)]="colorOption">
+            <span class="color-option-item bg-page">
+                <span class="overlay"><span class="material-icons">check</span></span>
+                <span class="bg-danger item-header"></span>
+                <span class="bg-danger item-header"></span>
+                <span class="bg-light"></span>
+            </span>
+          </label>
+        </div>
+
+      </div>
+
+
 
       <div class="divider divider-lg divider-solid"></div>
-      <h4 class="section-header">Theme Options</h4>
+      <h4 class="section-header">主题选项</h4>
       <div class="divider"></div>
 
       <div class="row no-margin theme-options clearfix">
         <div class="col-4">
           <label class="theme-option-check">
-            <input type="radio" name="theme" value="dark" ng-model="app.theme">
+            <input type="radio" name="theme" value="dark" [(ngModel)]="theme">
             <span class="theme-option-item bg-dark">
                             <span class="overlay"><span class="material-icons">check</span></span>
                             <span>Dark</span>
@@ -37,7 +227,7 @@
         </div>
         <div class="col-4">
           <label class="theme-option-check">
-            <input type="radio" name="theme" value="gray" ng-model="app.theme">
+            <input type="radio" name="theme" value="gray" [(ngModel)]="theme">
             <span class="theme-option-item bg-gray">
                             <span class="overlay"><span class="material-icons">check</span></span>
                             <span>Gray</span>
@@ -46,7 +236,7 @@
         </div>
         <div class="col-4">
           <label class="theme-option-check">
-            <input type="radio" name="theme" value="light" ng-model="app.theme">
+            <input type="radio" name="theme" value="light" [(ngModel)]="theme">
             <span class="theme-option-item bg-page">
                             <span class="overlay"><span class="material-icons">check</span></span>
                             <span>Light</span>

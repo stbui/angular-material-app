@@ -1,5 +1,5 @@
 <nav class="app-sidebar bg-dark">
-  <section class="sidebar-header bg-primary">
+  <section class="sidebar-header" [ngClass]="setTheme()">
     <md-icon class="logo-icon material-icons">view_compact</md-icon>
     <a href="/" class="brand">stbui</a>
     <a class="collapsednav-toggler"><i class="material-icons">radio_button_checked</i></a>
@@ -21,7 +21,7 @@
       </li>
 
       <li>
-        <a md-button routerLink="dashboard">
+        <a md-button routerLink="dashboard" (click)="toggleQuickview()">
           <md-icon class="nav-icon material-icons">settings</md-icon>
           <span class="nav-text">Customizer</span>
         </a>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HeaderService } from './header.service';
 
 @Component({
   selector: 'app-header',
@@ -7,13 +8,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  classes: any = {};
 
-  ngOnInit() {
+  constructor(private _headerService: HeaderService) {
   }
 
-  toggleRight() {
+  ngOnInit() {
+    // console.log(_headerService)
+  }
 
+  getTheme() {
+    return this._headerService.getTheme();
+    //
+    // return this.classes = {
+    //   'bg-light': false,
+    //   'bg-dark': true,
+    //   'bg-primary': false,
+    //   'bg-success': false,
+    //   'bg-info': false,
+    //   'bg-warning': false,
+    //   'bg-danger': false
+    // };
   }
 
 }

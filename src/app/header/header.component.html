@@ -1,12 +1,12 @@
 <!--<md-toolbar color="primary">-->
-  <!--<span>test</span>-->
-  <!--<span class="spacer"></span>-->
-  <!--<button md-icon-button><md-icon>more_vert</md-icon></button>-->
+<!--<span>test</span>-->
+<!--<span class="spacer"></span>-->
+<!--<button md-icon-button><md-icon>more_vert</md-icon></button>-->
 <!--</md-toolbar>-->
 
 
 <div class="app-header">
-  <div class="app-header-inner bg-primary">
+  <div class="app-header-inner" [ngClass]="getTheme()">
 
     <div class="hidden-md-up float-left">
       <a href="" toggle-sidebar class="header-icon toggle-sidebar-btn">
@@ -22,7 +22,9 @@
     <div class="top-nav-left hidden-lg-down">
       <ul class="list-unstyled list-inline">
         <li class="list-inline-item">
-          <button md-button class="header-btn"><md-icon>search</md-icon></button>
+          <button md-button class="header-btn">
+            <md-icon>search</md-icon>
+          </button>
         </li>
         <li class="list-inline-item">
           <button md-button [mdMenuTriggerFor]="menu" class="header-btn">
@@ -30,35 +32,35 @@
             <span class="badge">3</span>
           </button>
           <md-menu #menu="mdMenu">
-              <button md-menu-item>
-                <md-icon>dialpad</md-icon>
-                <span>Redial Redial Redial Redial Redial Redial</span>
-              </button>
-              <button md-menu-item disabled>
-                <md-icon>voicemail</md-icon>
-                <span>Check voicemail</span>
-              </button>
-              <button md-menu-item>
-                <md-icon>notifications_off</md-icon>
-                <span>Disable alerts</span>
-              </button>
+            <button md-menu-item>
+              <md-icon>dialpad</md-icon>
+              <span>Redial Redial Redial Redial Redial Redial</span>
+            </button>
+            <button md-menu-item disabled>
+              <md-icon>voicemail</md-icon>
+              <span>Check voicemail</span>
+            </button>
+            <button md-menu-item>
+              <md-icon>notifications_off</md-icon>
+              <span>Disable alerts</span>
+            </button>
           </md-menu>
 
           <!--<md-list #menu="mdMenu">-->
-            <!--<md-list-item class="md-2-line">-->
-              <!--<md-icon class="material-icons">chat_bubble_outline</md-icon>-->
-              <!--<div class="md-list-item-text">-->
-                <!--<h3>Message from Jane</h3>-->
-                <!--<p>15 minutes ago</p>-->
-              <!--</div>-->
-            <!--</md-list-item>-->
-            <!--<md-list-item class="md-2-line">-->
-              <!--<md-icon class="material-icons">person_outline</md-icon>-->
-              <!--<div class="md-list-item-text">-->
-                <!--<h3>New member John joined</h3>-->
-                <!--<p>1 hour ago</p>-->
-              <!--</div>-->
-            <!--</md-list-item>-->
+          <!--<md-list-item class="md-2-line">-->
+          <!--<md-icon class="material-icons">chat_bubble_outline</md-icon>-->
+          <!--<div class="md-list-item-text">-->
+          <!--<h3>Message from Jane</h3>-->
+          <!--<p>15 minutes ago</p>-->
+          <!--</div>-->
+          <!--</md-list-item>-->
+          <!--<md-list-item class="md-2-line">-->
+          <!--<md-icon class="material-icons">person_outline</md-icon>-->
+          <!--<div class="md-list-item-text">-->
+          <!--<h3>New member John joined</h3>-->
+          <!--<p>1 hour ago</p>-->
+          <!--</div>-->
+          <!--</md-list-item>-->
           <!--</md-list>-->
 
         </li>
@@ -70,9 +72,12 @@
         <li class="hidden-lg-down">
 
         </li>
-        <li><a href="" class="header-btn hidden-md-up" md-button open-search-overlay><i class="material-icons">search</i></a></li>
+        <li><a href="" class="header-btn hidden-md-up" md-button open-search-overlay><i
+          class="material-icons">search</i></a></li>
         <li>
-          <button md-button [mdMenuTriggerFor]="setting" class="header-btn"><md-icon>face</md-icon></button>
+          <button md-button [mdMenuTriggerFor]="setting" class="header-btn">
+            <md-icon>face</md-icon>
+          </button>
           <md-menu #setting="mdMenu">
             <button md-menu-item>
               <md-icon>assignment</md-icon>
@@ -88,7 +93,11 @@
             </button>
           </md-menu>
         </li>
-        <li><button md-button class="header-btn"><md-icon>more_vert</md-icon></button></li>
+        <li>
+          <button md-button class="header-btn">
+            <md-icon>more_vert</md-icon>
+          </button>
+        </li>
       </ul>
     </div>
 
