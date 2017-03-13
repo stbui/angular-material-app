@@ -10,8 +10,28 @@ https://genesisui.com/demo/?theme=leaf&version=angular2
 npm install ng2-bootstrap --save
 ```
 
+
+
+
+
 delete:
 bootstrap-sass
+
+
+=================================
+使用jquery
+```
+npm install -D @types/jquery
+```
+```
+import * as $ from 'jquery';
+
+$('body').addClass('');
+```
+http://asdfblog.com/
+
+
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0-rc.1.
 
