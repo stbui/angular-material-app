@@ -50,8 +50,7 @@ import { TodoModule } from './todo/todo.module';
     CustomizerComponent,
     SigninComponent,
     SignupComponent,
-    PageNotFoundComponent,
-    TodoModule
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -59,7 +58,8 @@ import { TodoModule } from './todo/todo.module';
     HttpModule,
     InMemoryWebApiModule.forRoot(InMemoryTodoDbService),
     routes,
-    MaterialModule.forRoot()
+    MaterialModule.forRoot(),
+    TodoModule
   ],
   providers: [],
   bootstrap: [AppComponent]

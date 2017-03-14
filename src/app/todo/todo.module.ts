@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
 
+import { MaterialModule } from '@angular/material';
 import { routing } from './todo.routes'
 
 import { TodoComponent } from './todo.component';
@@ -15,6 +16,7 @@ import { TodoService } from './todo.service';
     CommonModule,
     FormsModule,
     HttpModule,
+    MaterialModule.forRoot(),
     routing
   ],
   declarations: [
