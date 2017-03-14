@@ -2,6 +2,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+
+import { InMemoryWebApiModule} from 'angular-in-memory-web-api';
+import { InMemoryTodoDbService } from './todo/todo.data';
+
 import { routes } from './app.router';
 import { MaterialModule } from '@angular/material';
 import { AppComponent } from './app.component';
@@ -20,6 +24,12 @@ import { BlogComponent } from './blog/blog.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { SidebarRightComponent } from './sidebar-right/sidebar-right.component';
 import { CustomizerComponent } from './customizer/customizer.component';
+import { SigninComponent } from './signin/signin.component';
+import { SignupComponent } from './signup/signup.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { TodoModule } from './todo/todo.module';
+
+
 
 @NgModule({
   declarations: [
@@ -37,12 +47,17 @@ import { CustomizerComponent } from './customizer/customizer.component';
     BlogComponent,
     SidebarComponent,
     SidebarRightComponent,
-    CustomizerComponent
+    CustomizerComponent,
+    SigninComponent,
+    SignupComponent,
+    PageNotFoundComponent,
+    TodoModule
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
+    InMemoryWebApiModule.forRoot(InMemoryTodoDbService),
     routes,
     MaterialModule.forRoot()
   ],

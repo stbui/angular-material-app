@@ -1,0 +1,63 @@
+<div class="page-auth">
+  <div class="main-body">
+    <div class="card bg-white" ng-controller="MaterialSignUpCtrl">
+      <div class="card-content">
+        <div class="logo">
+          <a href="#!/">Register</a>
+        </div>
+
+        <form name="material_signup_form" class="md-form-auth form-validation" ng-submit="submit()">
+          <fieldset>
+            <md-input-container class="md-block">
+              <label>Username</label>
+              <md-icon class="material-icons">perm_identity</md-icon>
+              <input required
+                     type="text"
+                     name="name"
+                     ng-model="user.name">
+              <div ng-messages="material_signup_form.name.$error" multiple ng-if='material_signup_form.name.$dirty'>
+                <div ng-message="required">This is required.</div>
+                <div ng-message="pattern">It must be an e-mail address.</div>
+              </div>
+            </md-input-container>
+
+            <md-input-container class="md-block">
+              <label>Email</label>
+              <md-icon class="material-icons">mail_outline</md-icon>
+              <input required
+                     type="email"
+                     name="email"
+                     ng-model="user.email"
+                     ng-pattern="/^.+@.+\..+$/" />
+              <div ng-messages="material_signup_form.email.$error" multiple ng-if='material_signup_form.email.$dirty'>
+                <div ng-message="required">This is required.</div>
+                <div ng-message="pattern">It must be an e-mail address.</div>
+              </div>
+            </md-input-container>
+
+            <md-input-container class="md-block no-margin-bottom">
+              <label>Password</label>
+              <md-icon class="material-icons">lock_outline</md-icon>
+              <input required
+                     type="password"
+                     name="password"
+                     ng-model="user.password">
+              <div ng-messages="material_signup_form.password.$error" multiple ng-if='material_signup_form.password.$dirty'>
+                <div ng-message="required">This is required.</div>
+              </div>
+            </md-input-container>
+            <p class="text-small no-margin">By clicking on sign up, you agree to <a href="javascript:;"><i>terms</i></a> and <a href="javascript:;"><i>privacy policy</i></a></p>
+
+            <div class="divider divider-md"></div>
+            <button md-button type="submit"
+                       class="md-raised float-right md-primary">Sign Up</button>
+          </fieldset>
+        </form>
+
+        <div class="additional-info">
+          <a href="#!/signin">Login</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

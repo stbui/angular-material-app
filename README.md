@@ -6,15 +6,22 @@ http://wrapbootstrap.com/preview/WB0F66100
 https://wrapbootstrap.com/search?q=Material+
 https://genesisui.com/demo/?theme=leaf&version=angular2
 
+已安装过的模块
 ```
+// 
 npm install ng2-bootstrap --save
+// 内存服务器
+npm install --save angular-in-memory-web-api
 ```
 
+npm install -g json-server
+json-server ./src/app/todo/todo-data.json
+
+npm install material-design-lite --save
 
 
 
-
-delete:
+需要删除的模块:
 bootstrap-sass
 
 

@@ -1,0 +1,11 @@
+<footer class="footer" *ngIf="itemCount > 0">
+  <span class="todo-count">
+    <strong>{{itemCount}}</strong> {{itemCount == 1 ? 'item' : 'items'}} left
+  </span>
+  <ul class="filters">
+    <li><a href="">All</a></li>
+    <li><a href="">Active</a></li>
+    <li><a href="">Completed</a></li>
+  </ul>
+  <button class="clear-completed">Clear completed</button>
+</footer>

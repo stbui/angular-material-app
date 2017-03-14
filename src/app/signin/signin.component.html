@@ -1,0 +1,30 @@
+<div class="page-auth">
+  <div class="main-body">
+    <div class="card bg-white" ng-controller="MaterialLoginCtrl">
+      <div class="card-content">
+        <div class="logo">
+          <a href="#!/">Login</a>
+        </div>
+
+        <form name="material_login_form" class="md-form-auth form-validation" ng-submit="submit()">
+          <fieldset>
+            <md-input-container class="md-block">
+              <input mdInput placeholder="Login">
+            </md-input-container>
+            <md-input-container class="md-block">
+              <input mdInput placeholder="Passowrd">
+            </md-input-container>
+            <button md-button>Login</button>
+          </fieldset>
+        </form>
+
+        <div class="additional-info">
+          <a href="#!/signup">Register</a>
+          <span class="divider-h"></span>
+          <a href="#!/forgot-password">Forgot your password?</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
