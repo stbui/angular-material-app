@@ -1,20 +1,20 @@
-<section class="todoapp">
-  <app-todo-header
-    placeholder="What do you want"
-    (textChanges)="onTextChanges($event)"
-    (onEnterUp)="addTodo()" >
-  </app-todo-header>
-  <section class="main" *ngIf="todos?.length > 0">
-    <input class="toggle-all" type="checkbox">
-    <ul class="todo-list">
-      <li *ngFor="let todo of todos" [class.completed]="todo.completed">
-        <div class="view">
-          <input class="toggle" type="checkbox" (click)="toggleTodo(todo)" [checked]="todo.completed">
-          <label (click)="toggleTodo(todo)">{{todo.desc}}</label>
-          <button md-icon-button class="destroy" (click)="removeTodo(todo); $event.stopPropagation()"><md-icon>close</md-icon></button>
-        </div>
-      </li>
-    </ul>
+<div class="container-fluid">
+  <section class="todoapp">
+    <app-todo-header
+      placeholder="What do you want"
+      (textChanges)="onTextChanges($event)"
+      (onEnterUp)="addTodo()">
+    </app-todo-header>
+    <app-todo-list
+      [todos]="todos"
+      (onToggleAll)="toggleAll()"
+      (onRemoveTodo)="removeTodo($event)"
+      (onToggleTodo)="toggleTodo($event)"
+    >
+    </app-todo-list>
+    <app-todo-footer
+      [itemCount]="todos?.length"
+      (onClear)="clearCompleted()">
+    </app-todo-footer>
   </section>
-  <app-todo-footer [itemCount]="todos?.length"></app-todo-footer>
-</section>
+</div>

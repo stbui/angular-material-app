@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { HeaderService } from './header.service';
 
 @Component({
@@ -7,6 +7,8 @@ import { HeaderService } from './header.service';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+
+  @Input() theme: string = '';
 
   classes: any = {};
 

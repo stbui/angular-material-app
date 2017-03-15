@@ -1,7 +1,7 @@
-<aside><app-sidebar></app-sidebar></aside>
+<aside><app-sidebar [theme]="theme"></app-sidebar></aside>
 
 <section id="page-container" class="app-page-container">
-  <app-header></app-header>
+  <app-header [theme]="theme"></app-header>
 
   <div class="app-content-wrapper">
     <div class="app-content">
@@ -19,7 +19,7 @@
 
 </section>
 
-<aside><app-customizer></app-customizer></aside>
+<aside><app-customizer (themeChanges)="onThemeChanges($event)"></app-customizer></aside>
 
 
 

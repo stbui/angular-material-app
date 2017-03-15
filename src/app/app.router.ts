@@ -25,4 +25,4 @@ export const router: Routes = [
   { path: 'profile', component: ProfileComponent }
 ];
 
-export const routes: ModuleWithProviders = RouterModule.forRoot(router);
+export const routes: ModuleWithProviders = RouterModule.forRoot(router,{useHash: true});

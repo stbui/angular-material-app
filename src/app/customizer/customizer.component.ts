@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { CustomizerService } from './customizer.service';
 
 @Component({
@@ -7,6 +7,8 @@ import { CustomizerService } from './customizer.service';
   styleUrls: ['./customizer.component.scss']
 })
 export class CustomizerComponent implements OnInit {
+
+  @Output() themeChanges = new EventEmitter<any>()
 
   isOpen: boolean = false;
   colorOption;
@@ -18,7 +20,21 @@ export class CustomizerComponent implements OnInit {
 
   toggleQuickview() {
     this.isOpen = this._customizerService.toggleQuickview();
-    console.log(this);
   }
 
+  colorOptions() {
+    return this._customizerService.getTheme();
+  }
+
+
+  onClick() {
+    console.log(this.colorOption);
+    let theme = {
+      header:'bg-dark',
+      logo:'bg-dark',
+      slider:'bg-dark'
+    }
+
+    this.themeChanges.emit(theme);
+  }
 }

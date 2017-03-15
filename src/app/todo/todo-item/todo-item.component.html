@@ -1,0 +1,5 @@
+<div class="view">
+  <input class="toggle" type="checkbox" (click)="toggle()" [checked]="isChecked">
+  <label [class.labelcompleted]="isChecked" (click)="toggle()">{{todoDesc}}</label>
+  <button class="destroy" (click)="remove(); $event.stopPropagation()"></button>
+</div>

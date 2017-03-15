@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { HeaderService } from '../header/header.service';
 import { CustomizerService } from '../customizer/customizer.service';
 
@@ -9,6 +9,7 @@ import { CustomizerService } from '../customizer/customizer.service';
 })
 export class SidebarComponent implements OnInit {
 
+  @Input() theme: string = '';
   classes: any = {};
 
   constructor(

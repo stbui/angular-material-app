@@ -9,5 +9,13 @@ import { CustomizerService } from './customizer/customizer.service';
   providers: [ HeaderService, CustomizerService ]
 })
 export class AppComponent {
+
+  theme:string = 'bg-success';
+
   title = 'angular2 bootstrap4 material2 web';
+
+  onThemeChanges(value) {
+    console.log(value);
+    this.theme = value.header;
+  }
 }

@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
-import { InMemoryWebApiModule} from 'angular-in-memory-web-api';
+// import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryTodoDbService } from './todo/todo.data';
 
 import { routes } from './app.router';
@@ -56,7 +56,7 @@ import { TodoModule } from './todo/todo.module';
     BrowserModule,
     FormsModule,
     HttpModule,
-    InMemoryWebApiModule.forRoot(InMemoryTodoDbService),
+    // InMemoryWebApiModule.forRoot(InMemoryTodoDbService),
     routes,
     MaterialModule.forRoot(),
     TodoModule

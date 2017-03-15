@@ -25,6 +25,8 @@ npm install material-design-lite --save
 bootstrap-sass
 
 
+https://github.com/wpcfan/awesome-tutorials/tree/master/angular2/ng2-tut
+
 =================================
 使用jquery
 ```

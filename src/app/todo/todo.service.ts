@@ -7,15 +7,14 @@ import 'rxjs/add/operator/toPromise';
 @Injectable()
 export class TodoService {
 
-  private apiUrl = 'api/todos';
+  // private apiUrl = 'api/todos';
+  private apiUrl = 'http://localhost:3000/todos';
   private headers = new Headers({'Content-Type': 'application/json'});
 
   constructor(private http: Http) {
-    console.log('todo.service.....');
   }
 
   addTodo(desc: string): Promise<TodoModel> {
-    console.log('todo.service addTodo');
     let todo = {
       id: Math.random(),
       desc: desc,
@@ -25,36 +24,54 @@ export class TodoService {
     return this.http
       .post(this.apiUrl, JSON.stringify(todo), {headers: this.headers})
       .toPromise()
-      .then(res => res.json().data as TodoModel)
+      .then(res => res.json() as TodoModel)
       .catch(this.handleError);
   }
 
   toggleTodo(todo: TodoModel): Promise<TodoModel> {
     const url = `${this.apiUrl}/${todo.id}`;
-    console.log(url);
-    let updateTodo = Object.assign({}, todo, {completed: !todo.completed});
-
-    return this.http.put(this.apiUrl, JSON.stringify(updateTodo), {headers: this.headers})
+    let updatedTodo = Object.assign({}, todo, {completed: !todo.completed});
+    return this.http
+      .patch(url, JSON.stringify({completed: !todo.completed}), {headers: this.headers})
       .toPromise()
-      .then(() => updateTodo)
+      .then(() => updatedTodo)
       .catch(this.handleError);
   }
 
   deleteTodoById(id: string): Promise<void> {
     const url = `${this.apiUrl}/${id}`;
 
-    return this.http.delete(url, {headers: this.headers})
+    return this.http
+      .delete(url, {headers: this.headers})
       .toPromise()
       .then(() => null)
       .catch(this.handleError);
   }
 
   getTodos(): Promise<TodoModel[]> {
-    console.log('todo.service getTodos');
     return this.http.get(this.apiUrl)
       .toPromise()
-      .then(res => res.json().data as TodoModel[])
+      .then(res => res.json() as TodoModel[])
       .catch(this.handleError);
+  }
+
+  filterTodos(filter: string): Promise<TodoModel[]> {
+    switch (filter) {
+      case 'Active':
+        return this.http
+          .get(`${this.apiUrl}?completed=false`)
+          .toPromise()
+          .then(res => res.json() as TodoModel[])
+          .catch(this.handleError);
+      case 'Completed':
+        return this.http
+          .get(`${this.apiUrl}?completed=true`)
+          .toPromise()
+          .then(res => res.json() as TodoModel[])
+          .catch(this.handleError);
+      default:
+        return this.getTodos();
+    }
   }
 
   private handleError(error: any): Promise<any> {

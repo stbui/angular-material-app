@@ -9,8 +9,38 @@ export class CustomizerService {
   }
 
   toggleQuickview() {
-    console.log(this.isOpend);
     return this.isOpend = !this.isOpend;
+  }
+
+  getTheme() {
+    let theme = [
+      {
+        logo:'bg-dark',
+        header:'bg-light',
+        slider:'bg-dark',
+        body:''
+      },
+      {
+        logo:'bg-primary',
+        header:'bg-light',
+        slider:'bg-dark',
+        body:''
+      },
+      {
+        logo:'bg-success',
+        header:'bg-light',
+        slider:'bg-dark',
+        body:''
+      }
+    ];
+
+    return theme;
+  }
+
+  selectTheme() {
+    let theme = this.getTheme();
+
+    return theme;
   }
 
 }
