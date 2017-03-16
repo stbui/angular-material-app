@@ -6,6 +6,10 @@ http://wrapbootstrap.com/preview/WB0F66100
 https://wrapbootstrap.com/search?q=Material+
 https://genesisui.com/demo/?theme=leaf&version=angular2
 
+angular2
+https://teradata.github.io/covalent/#/
+https://dribbble.com/shots/3250690-Covalent-Material-Design-Sketch-Template-beta
+
 已安装过的模块
 ```
 // 
@@ -14,8 +18,10 @@ npm install ng2-bootstrap --save
 npm install --save angular-in-memory-web-api
 ```
 
+```
 npm install -g json-server
-json-server ./src/app/todo/todo-data.json
+json-server ./src/app/todo/todo.data.json
+```
 
 npm install material-design-lite --save
 

@@ -11,30 +11,19 @@ export class CustomizerComponent implements OnInit {
   @Output() themeChanges = new EventEmitter<any>()
 
   isOpen: boolean = false;
-  colorOption;
+  colorOptions;
 
   constructor(private _customizerService: CustomizerService) { }
 
   ngOnInit() {
+    this.colorOptions = this._customizerService.getTheme();
   }
 
   toggleQuickview() {
     this.isOpen = this._customizerService.toggleQuickview();
   }
 
-  colorOptions() {
-    return this._customizerService.getTheme();
-  }
-
-
-  onClick() {
-    console.log(this.colorOption);
-    let theme = {
-      header:'bg-dark',
-      logo:'bg-dark',
-      slider:'bg-dark'
-    }
-
+  onClick(theme) {
     this.themeChanges.emit(theme);
   }
 }

@@ -14,8 +14,9 @@ export class AppComponent {
 
   title = 'angular2 bootstrap4 material2 web';
 
-  onThemeChanges(value) {
-    console.log(value);
-    this.theme = value.header;
+  onThemeChanges(theme) {
+    console.log(theme);
+    // this.theme = theme.header;
+    this.theme = theme;
   }
 }

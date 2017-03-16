@@ -1,5 +1,5 @@
-<nav class="app-sidebar bg-dark">
-  <section class="sidebar-header" [ngClass]="theme">
+<nav class="app-sidebar" [ngClass]="theme.slider">
+  <section class="sidebar-header" [ngClass]="theme.logo">
     <md-icon class="logo-icon material-icons">view_compact</md-icon>
     <a href="/" class="brand">stbui</a>
     <a class="collapsednav-toggler"><i class="material-icons">radio_button_checked</i></a>
@@ -12,7 +12,6 @@
       <!--<li><a md-button aria-label="menu" routerLink="cards"><i class="nav-icon material-icons">home</i><span class="nav-text" data-translate="DASHBOARD">cards</span></a></li>-->
       <!--<li><a md-button aria-label="menu" routerLink="about"><i class="nav-icon material-icons">home</i><span class="nav-text" data-translate="DASHBOARD">about</span></a></li>-->
       <!--<li><a md-button aria-label="menu" routerLink="services"><i class="nav-icon material-icons">home</i><span class="nav-text" data-translate="DASHBOARD">services</span></a></li>-->
-
       <li>
         <a md-button routerLink="dashboard">
           <md-icon class="nav-icon material-icons">home</md-icon>
@@ -27,11 +26,11 @@
         </a>
       </li>
 
-      <li>
+      <li [class.open]="isMenuOpen" (click)="toggleMenu($event)">
         <a md-button aria-label="menu">
           <md-icon class="nav-icon material-icons">bubble_chart</md-icon>
           <span class="nav-text">UI Kit</span></a>
-        <ul>
+        <ul [style.display]="isMenuOpen?'block':'none'">
           <li><a class="prepend-icon" md-button aria-label="menu" routerLink="buttons"><span>Buttons</span></a></li>
           <li><a class="prepend-icon" md-button><span>Icons</span><span class="badge badge-pill badge-info">3</span></a></li>
           <li><a class="prepend-icon" md-button><span>Cards</span></a></li>
@@ -43,11 +42,11 @@
         <i class="material-icons icon-has-ul">arrow_drop_down</i>
       </li>
       <!-- <li><a md-button aria-label="menu" href="#!/app/widget"><i class="nav-icon material-icons">widgets</i><span class="nav-text">Widgets</span></a></li> -->
-      <li>
+      <li [class.open]="isMenuOpen" (click)="toggleMenu()">
         <a md-button>
           <md-icon class="nav-icon">list</md-icon>
           <span class="nav-text" data-translate="TABLES">Tables</span></a>
-        <ul>
+        <ul [style.display]="isMenuOpen?'block':'none'">
           <li><a class="prepend-icon" md-button aria-label="menu" href="#!/app/table/static"><span data-translate="STATIC_TABLES"></span></a></li>
           <li><a class="prepend-icon" md-button aria-label="menu" href="#!/app/table/responsive"><span data-translate="RESPONSIVE_TABLES"></span></a></li>
           <li><a class="prepend-icon" md-button aria-label="menu" href="#!/app/table/data"><span data-translate="DATA_TABLES"></span></a></li>

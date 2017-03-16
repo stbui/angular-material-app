@@ -9,8 +9,9 @@ import { CustomizerService } from '../customizer/customizer.service';
 })
 export class SidebarComponent implements OnInit {
 
-  @Input() theme: string = '';
+  @Input() theme: any;
   classes: any = {};
+  isMenuOpen: boolean= false;
 
   constructor(
     private _headerService: HeaderService,
@@ -27,5 +28,10 @@ export class SidebarComponent implements OnInit {
   toggleQuickview() {
     this._customizerService.toggleQuickview();
     console.log(this);
+  }
+
+  toggleMenu(value) {
+    this.isMenuOpen = !this.isMenuOpen;
+    console.log(value)
   }
 }

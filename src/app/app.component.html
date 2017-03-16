@@ -2,19 +2,13 @@
 
 <section id="page-container" class="app-page-container">
   <app-header [theme]="theme"></app-header>
-
+  <section><app-sidebar-right></app-sidebar-right></section>
   <div class="app-content-wrapper">
     <div class="app-content">
-      <section>
-        <app-sidebar-right></app-sidebar-right>
-      </section>
-
       <router-outlet></router-outlet>
     </div>
 
-    <section>
-      <app-footer></app-footer>
-    </section>
+    <section><app-footer></app-footer></section>
   </div>
 
 </section>

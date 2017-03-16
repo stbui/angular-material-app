@@ -8,7 +8,7 @@ import { HeaderService } from './header.service';
 })
 export class HeaderComponent implements OnInit {
 
-  @Input() theme: string = '';
+  @Input() theme: any;
 
   classes: any = {};
 
