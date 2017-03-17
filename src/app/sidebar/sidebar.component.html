@@ -1,5 +1,5 @@
 <nav class="app-sidebar" [ngClass]="theme.slider">
-  <section class="sidebar-header" [ngClass]="theme.logo">
+  <section class="sidebar-header bg-dark" [ngClass]="theme.logo">
     <md-icon class="logo-icon material-icons">view_compact</md-icon>
     <a href="/" class="brand">stbui</a>
     <a class="collapsednav-toggler"><i class="material-icons">radio_button_checked</i></a>
@@ -8,10 +8,6 @@
   <section class="sidebar-content">
     <ul class="nav">
       <li class="nav-header"><span data-translate="NAVIGATION">Navigation</span></li>
-      <!--<li><a md-button aria-label="menu" routerLink="buttons"><i class="nav-icon material-icons">home</i><span class="nav-text" data-translate="DASHBOARD">buttons</span></a></li>-->
-      <!--<li><a md-button aria-label="menu" routerLink="cards"><i class="nav-icon material-icons">home</i><span class="nav-text" data-translate="DASHBOARD">cards</span></a></li>-->
-      <!--<li><a md-button aria-label="menu" routerLink="about"><i class="nav-icon material-icons">home</i><span class="nav-text" data-translate="DASHBOARD">about</span></a></li>-->
-      <!--<li><a md-button aria-label="menu" routerLink="services"><i class="nav-icon material-icons">home</i><span class="nav-text" data-translate="DASHBOARD">services</span></a></li>-->
       <li>
         <a md-button routerLink="dashboard">
           <md-icon class="nav-icon material-icons">home</md-icon>
@@ -26,15 +22,17 @@
         </a>
       </li>
 
-      <li [class.open]="isMenuOpen" (click)="toggleMenu($event)">
+      <app-sidebar-menu title="UI Kit"></app-sidebar-menu>
+
+      <li (click)="toggleMenu($event)">
         <a md-button aria-label="menu">
           <md-icon class="nav-icon material-icons">bubble_chart</md-icon>
           <span class="nav-text">UI Kit</span></a>
         <ul [style.display]="isMenuOpen?'block':'none'">
-          <li><a class="prepend-icon" md-button aria-label="menu" routerLink="buttons"><span>Buttons</span></a></li>
-          <li><a class="prepend-icon" md-button><span>Icons</span><span class="badge badge-pill badge-info">3</span></a></li>
-          <li><a class="prepend-icon" md-button><span>Cards</span></a></li>
-          <li><a class="prepend-icon" md-button><span>Boxes</span></a></li>
+          <li><a class="prepend-icon" md-button routerLink="buttons"><span>Buttons</span></a></li>
+          <li><a class="prepend-icon" md-button routerLink="Icons"><span>Icons</span><span class="badge badge-pill badge-info">3</span></a></li>
+          <li><a class="prepend-icon" md-button routerLink="cards"><span>Cards</span></a></li>
+          <li><a class="prepend-icon" md-button routerLink="boxes"><span>Boxes</span></a></li>
           <li><a class="prepend-icon" md-button><span>Icon Boxes</span></a></li>
           <li><a class="prepend-icon" md-button><span>Components</span><span class="badge badge-pill badge-danger">14</span></a></li>
           <li><a class="prepend-icon" md-button><span>Feature Callouts</span></a></li>
@@ -42,14 +40,14 @@
         <i class="material-icons icon-has-ul">arrow_drop_down</i>
       </li>
       <!-- <li><a md-button aria-label="menu" href="#!/app/widget"><i class="nav-icon material-icons">widgets</i><span class="nav-text">Widgets</span></a></li> -->
-      <li [class.open]="isMenuOpen" (click)="toggleMenu()">
+      <li [class.open]="isMenuOpen" (click)="toggleMenu($event)">
         <a md-button>
           <md-icon class="nav-icon">list</md-icon>
           <span class="nav-text" data-translate="TABLES">Tables</span></a>
         <ul [style.display]="isMenuOpen?'block':'none'">
-          <li><a class="prepend-icon" md-button aria-label="menu" href="#!/app/table/static"><span data-translate="STATIC_TABLES"></span></a></li>
-          <li><a class="prepend-icon" md-button aria-label="menu" href="#!/app/table/responsive"><span data-translate="RESPONSIVE_TABLES"></span></a></li>
-          <li><a class="prepend-icon" md-button aria-label="menu" href="#!/app/table/data"><span data-translate="DATA_TABLES"></span></a></li>
+          <li><a class="prepend-icon" md-button><span data-translate="STATIC_TABLES">STATIC_TABLES</span></a></li>
+          <li><a class="prepend-icon" md-button><span data-translate="RESPONSIVE_TABLES">RESPONSIVE_TABLES</span></a></li>
+          <li><a class="prepend-icon" md-button><span data-translate="DATA_TABLES">DATA_TABLES</span></a></li>
         </ul>
         <i class="material-icons icon-has-ul">arrow_drop_down</i>
       </li>

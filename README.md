@@ -12,6 +12,8 @@ https://dribbble.com/shots/3250690-Covalent-Material-Design-Sketch-Template-beta
 
 已安装过的模块
 ```
+
+
 // 
 npm install ng2-bootstrap --save
 // 内存服务器
@@ -24,7 +26,7 @@ json-server ./src/app/todo/todo.data.json
 ```
 
 npm install material-design-lite --save
-
+npm install ng2-bootstrap bootstrap@next --save
 
 
 需要删除的模块:
@@ -33,7 +35,11 @@ bootstrap-sass
 
 https://github.com/wpcfan/awesome-tutorials/tree/master/angular2/ng2-tut
 
-=================================
+
+npm i -g @angular/cli@latest
+npm i -g typescript
+npm install -g tslint
+
 使用jquery
 ```
 npm install -D @types/jquery

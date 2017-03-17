@@ -1,37 +1,52 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { HeaderService } from '../header/header.service';
-import { CustomizerService } from '../customizer/customizer.service';
+import { Component, OnInit, Input, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.scss']
 })
+
 export class SidebarComponent implements OnInit {
 
   @Input() theme: any;
-  classes: any = {};
-  isMenuOpen: boolean= false;
+  classes: any;
+  isMenuOpen: boolean = false;
+
+  items:any={};
 
   constructor(
-    private _headerService: HeaderService,
-    private _customizerService: CustomizerService
+    private _elementRef: ElementRef
   ) { }
 
   ngOnInit() {
-  }
+    let menu = {
+      name: 'test',
+      icon: 'icon',
+      items: [
+        {
+          name: 'test1',
+          badeg: 3,
+          links: '#'
+        },
+        {
+          name: 'test2',
+          badeg: 3,
+          links: '#'
+        }
+      ]
+    }
 
-  setTheme() {
-    return this._headerService.getTheme();
+    this.items = menu;
   }
 
   toggleQuickview() {
-    this._customizerService.toggleQuickview();
-    console.log(this);
   }
 
-  toggleMenu(value) {
+  toggleMenu($event) {
+    var element$ = $event.target;
+    console.log(element$);
+
+    element$.classList.add('open');
     this.isMenuOpen = !this.isMenuOpen;
-    console.log(value)
   }
 }

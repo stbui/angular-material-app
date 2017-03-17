@@ -4,12 +4,15 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 // import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { InMemoryTodoDbService } from './todo/todo.data';
+// import { InMemoryTodoDbService } from './todo/todo.data';
 
 import { routes } from './app.router';
 import { MaterialModule } from '@angular/material';
 import { AppComponent } from './app.component';
 import 'hammerjs';
+
+import { Ng2BootstrapModule } from 'ng2-bootstrap';
+
 import { TestComponent } from './test/test.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HeaderComponent } from './header/header.component';
@@ -28,6 +31,8 @@ import { SigninComponent } from './signin/signin.component';
 import { SignupComponent } from './signup/signup.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { TodoModule } from './todo/todo.module';
+
+import { SidebarMenuComponent } from './sidebar/menu/menu.component';
 
 
 
@@ -50,7 +55,9 @@ import { TodoModule } from './todo/todo.module';
     CustomizerComponent,
     SigninComponent,
     SignupComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    SidebarMenuComponent
+
   ],
   imports: [
     BrowserModule,
@@ -59,6 +66,7 @@ import { TodoModule } from './todo/todo.module';
     // InMemoryWebApiModule.forRoot(InMemoryTodoDbService),
     routes,
     MaterialModule.forRoot(),
+    Ng2BootstrapModule.forRoot(),
     TodoModule
   ],
   providers: [],

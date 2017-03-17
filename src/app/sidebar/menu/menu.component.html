@@ -1,0 +1,9 @@
+<li [class.open]="isOpen" (click)="onToggleMenu($event)">
+  <a md-button>
+    <md-icon class="nav-icon material-icons">bubble_chart</md-icon>
+    <span class="nav-text">{{ title }}</span></a>
+  <ul [style.display]="isOpen?'block':'none'">
+    <li><a class="prepend-icon" md-button routerLink="buttons"><span>Buttons</span></a></li>
+  </ul>
+  <i class="material-icons icon-has-ul">arrow_drop_down</i>
+</li>

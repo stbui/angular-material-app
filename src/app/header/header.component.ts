@@ -16,21 +16,6 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit() {
-    // console.log(_headerService)
-  }
-
-  getTheme() {
-    return this._headerService.getTheme();
-    //
-    // return this.classes = {
-    //   'bg-light': false,
-    //   'bg-dark': true,
-    //   'bg-primary': false,
-    //   'bg-success': false,
-    //   'bg-info': false,
-    //   'bg-warning': false,
-    //   'bg-danger': false
-    // };
   }
 
 }

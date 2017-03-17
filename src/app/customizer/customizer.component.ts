@@ -11,6 +11,7 @@ export class CustomizerComponent implements OnInit {
   @Output() themeChanges = new EventEmitter<any>()
 
   isOpen: boolean = false;
+  isChecked: boolean = false;
   colorOptions;
 
   constructor(private _customizerService: CustomizerService) { }
