@@ -1,9 +1,14 @@
-<li [class.open]="isOpen" (click)="onToggleMenu($event)">
-  <a md-button>
-    <md-icon class="nav-icon material-icons">bubble_chart</md-icon>
-    <span class="nav-text">{{ title }}</span></a>
-  <ul [style.display]="isOpen?'block':'none'">
-    <li><a class="prepend-icon" md-button routerLink="buttons"><span>Buttons</span></a></li>
+<li [class.open]="isOpen">
+  <a md-button (click)="onToggleTriggered($event)">
+    <md-icon class="nav-icon material-icons">{{ items.icon }}</md-icon>
+    <span class="nav-text">{{ items.name }}</span></a>
+  <ul [style.display]="isOpen?'block':'none'" *ngIf="items.items?.length>0">
+    <li *ngFor="let item of items.items">
+      <a class="prepend-icon" md-button routerLink="{{ item.links }}">
+        <span>{{ item.name }}</span>
+        <span class="badge badge-pill badge-info" *ngIf="item.badeg">{{ item.badeg }}</span>
+      </a>
+    </li>
   </ul>
-  <i class="material-icons icon-has-ul">arrow_drop_down</i>
+  <i class="material-icons icon-has-ul" *ngIf="items.items?.length>0">arrow_drop_down</i>
 </li>

@@ -1,4 +1,5 @@
-import {Input, Output, Component, ElementRef} from '@angular/core';
+import {Input, Component} from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sidebar-menu',
@@ -11,8 +12,6 @@ export class SidebarMenuComponent {
   _items: any;
   isOpen: boolean = false;
 
-  @Input() title: any = 'title';
-
   @Input()
   set items(items) {
     this._items = items;
@@ -22,15 +21,18 @@ export class SidebarMenuComponent {
     return this._items;
   }
 
+  constructor(private _router:Router) { }
 
-  constructor() {
-    console.log(this._items)
-  }
-
-  onToggleMenu($event) {
-    $event.stopPropagation();
+  onToggleTriggered($event) {
     $event.preventDefault();
+    $event.stopPropagation();
 
-    this.isOpen = !this.isOpen;
+    if(!!this._items.items) {
+      this.isOpen = !this.isOpen;
+    } else {
+      if(this._items.links) {
+        this._router.navigate([this._items.links])
+      }
+    }
   }
 }

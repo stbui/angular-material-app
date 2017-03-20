@@ -10,6 +10,7 @@ import { ContactComponent } from './contact/contact.component';
 import { ProfileComponent } from './profile/profile.component';
 import { SigninComponent } from './signin/signin.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { ToastComponent } from './toast/toast.component';
 
 export const router: Routes = [
   { path: '', redirectTo: '404', pathMatch: 'full' },
@@ -22,6 +23,7 @@ export const router: Routes = [
   { path: 'signin', component: SigninComponent },
   { path: '404', component: PageNotFoundComponent },
   { path: 'todo', redirectTo: 'todo/All' },
+  { path: 'toast', component: ToastComponent },
   { path: 'profile', component: ProfileComponent }
 ];
 

@@ -37,6 +37,11 @@ import * as $ from 'jquery';
 $('body').addClass('stbui');
 ```
 
+#### 
+- ng2-bootstrap
+
+http://valor-software.com/ng2-bootstrap/#/
+
 
 https://material.angular.io/guide/getting-started
 

@@ -24,7 +24,6 @@ import { ServicesComponent } from './services/services.component';
 import { ContactComponent } from './contact/contact.component';
 import { ProfileComponent } from './profile/profile.component';
 import { BlogComponent } from './blog/blog.component';
-import { SidebarComponent } from './sidebar/sidebar.component';
 import { SidebarRightComponent } from './sidebar-right/sidebar-right.component';
 import { CustomizerComponent } from './customizer/customizer.component';
 import { SigninComponent } from './signin/signin.component';
@@ -32,7 +31,13 @@ import { SignupComponent } from './signup/signup.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { TodoModule } from './todo/todo.module';
 
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { SidebarService } from './sidebar/sidebar.service';
 import { SidebarMenuComponent } from './sidebar/menu/menu.component';
+
+import { ComponentModule } from './component/component.module'
+import { ComponentComponent } from './component/component.component';
+import { ToastComponent } from './toast/toast.component';
 
 
 
@@ -56,8 +61,9 @@ import { SidebarMenuComponent } from './sidebar/menu/menu.component';
     SigninComponent,
     SignupComponent,
     PageNotFoundComponent,
-    SidebarMenuComponent
-
+    SidebarMenuComponent,
+    ComponentComponent,
+    ToastComponent
   ],
   imports: [
     BrowserModule,
@@ -67,9 +73,12 @@ import { SidebarMenuComponent } from './sidebar/menu/menu.component';
     routes,
     MaterialModule.forRoot(),
     Ng2BootstrapModule.forRoot(),
-    TodoModule
+    TodoModule,
+    ComponentModule
   ],
-  providers: [],
+  providers: [
+    { provide: 'sidebar', useClass: SidebarService }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

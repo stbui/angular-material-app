@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, ElementRef } from '@angular/core';
+import { Component, OnInit, Input, Inject } from '@angular/core';
 
 @Component({
   selector: 'app-sidebar',
@@ -9,44 +9,18 @@ import { Component, OnInit, Input, ElementRef } from '@angular/core';
 export class SidebarComponent implements OnInit {
 
   @Input() theme: any;
-  classes: any;
-  isMenuOpen: boolean = false;
-
-  items:any={};
+  items:any;
 
   constructor(
-    private _elementRef: ElementRef
+    @Inject('sidebar') private service,
   ) { }
 
   ngOnInit() {
-    let menu = {
-      name: 'test',
-      icon: 'icon',
-      items: [
-        {
-          name: 'test1',
-          badeg: 3,
-          links: '#'
-        },
-        {
-          name: 'test2',
-          badeg: 3,
-          links: '#'
-        }
-      ]
-    }
-
-    this.items = menu;
+    this.getMenus();
   }
 
-  toggleQuickview() {
+  getMenus() {
+    this.items = this.service.getMenus();
   }
 
-  toggleMenu($event) {
-    var element$ = $event.target;
-    console.log(element$);
-
-    element$.classList.add('open');
-    this.isMenuOpen = !this.isMenuOpen;
-  }
 }
