@@ -10,6 +10,7 @@ export class SidebarComponent implements OnInit {
 
   @Input() theme: any;
   items:any;
+  brand:string = 'stbui';
 
   constructor(
     @Inject('sidebar') private service,

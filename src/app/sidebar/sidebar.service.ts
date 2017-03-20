@@ -4,7 +4,6 @@ import { Injectable } from '@angular/core';
 export class SidebarService {
 
   constructor() {
-    console.log('sidebar.service')
   }
 
   getMenus() {
@@ -105,9 +104,9 @@ export class SidebarService {
         ]
       },
       {"name":"Extra Pages", "icon":"more_horiz", "items": [
-        {"name":"Sigin In", "links":"sigin"},
-        {"name":"Sigin Up", "links":"sigin"},
-        {"name":"404 Error", "links":"sigin"}
+        {"name":"Sigin In", "links":"signin"},
+        {"name":"Sigin Up", "links":"signup"},
+        {"name":"404 Error", "links":"404"}
       ]},
       {
         "name": "Apps",

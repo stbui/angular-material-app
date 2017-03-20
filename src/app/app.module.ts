@@ -13,7 +13,6 @@ import 'hammerjs';
 
 import { Ng2BootstrapModule } from 'ng2-bootstrap';
 
-import { TestComponent } from './test/test.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
@@ -30,21 +29,20 @@ import { SigninComponent } from './signin/signin.component';
 import { SignupComponent } from './signup/signup.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { TodoModule } from './todo/todo.module';
+import { ComponentModule } from './component/component.module'
+import { FormModule } from './form/form.module';
 
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { SidebarService } from './sidebar/sidebar.service';
 import { SidebarMenuComponent } from './sidebar/menu/menu.component';
 
-import { ComponentModule } from './component/component.module'
-import { ComponentComponent } from './component/component.component';
 import { ToastComponent } from './toast/toast.component';
-
+import { TablesComponent } from './tables/tables.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    TestComponent,
     DashboardComponent,
     HeaderComponent,
     FooterComponent,
@@ -62,8 +60,8 @@ import { ToastComponent } from './toast/toast.component';
     SignupComponent,
     PageNotFoundComponent,
     SidebarMenuComponent,
-    ComponentComponent,
-    ToastComponent
+    ToastComponent,
+    TablesComponent
   ],
   imports: [
     BrowserModule,
@@ -74,6 +72,7 @@ import { ToastComponent } from './toast/toast.component';
     MaterialModule.forRoot(),
     Ng2BootstrapModule.forRoot(),
     TodoModule,
+    FormModule,
     ComponentModule
   ],
   providers: [

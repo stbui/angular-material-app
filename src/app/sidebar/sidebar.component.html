@@ -1,7 +1,7 @@
 <nav class="app-sidebar" [ngClass]="theme.slider">
   <section class="sidebar-header bg-dark" [ngClass]="theme.logo">
     <md-icon class="logo-icon material-icons">view_compact</md-icon>
-    <a href="/" class="brand">stbui</a>
+    <a href="/" class="brand">{{ brand }}</a>
     <a class="collapsednav-toggler"><i class="material-icons">radio_button_checked</i></a>
   </section>
 
@@ -10,7 +10,6 @@
       <li class="nav-header"><span>Navigation</span></li>
       <app-sidebar-menu [items]="item" *ngFor="let item of items"></app-sidebar-menu>
     </ul>
-
   </section>
 
   <section class="sidebar-footer">
