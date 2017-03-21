@@ -7,9 +7,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ValidationComponent implements OnInit {
 
+  username:string = '';
+  password:string = '';
+  email:string = '';
+  submitted:boolean = false;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onSubmit() {
+    this.submitted = true;
+  }
+
+  addUser() {
+
   }
 
 }

@@ -50,20 +50,23 @@ export class SidebarService {
         "icon": "list",
         "items": [
           { "name": "Static Tables", "links": "tables/static"},
-          { "name": "Responsive Tables", "links": "tables/responsive"},
-          { "name": "Data Tables", "links":"tables/data"}
+          // { "name": "Responsive Tables", "links": "tables/responsive"},
+          { "name": "Datatable", "links":"tables/datatable"}
         ]
       },
       {
         "name": "Forms",
         "icon": "format_color_text",
         "items": [
-          { "name": "Form Elements","links":"forms/elements"}
+          { "name": "Form Elements","links":"forms/elements"},
+          { "name": "Form validation","links":"forms/validation"},
+          { "name": "Ckeditor","links":"forms/ckeditor"}
         ]
       },
       {
         "name": "Charts",
-        "icon": "equalizer"
+        "icon": "equalizer",
+        "links": "chart"
       },
       {
         "name": "Pages",

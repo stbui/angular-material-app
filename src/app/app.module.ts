@@ -28,14 +28,15 @@ import { SignupComponent } from './signup/signup.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { TodoModule } from './todo/todo.module';
 import { ComponentModule } from './component/component.module'
-import { FormsModule } from './forms/forms.module';
+import { FormModule } from './forms/forms.module';
+import { TablesModule } from './tables/tables.module';
 
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { SidebarService } from './sidebar/sidebar.service';
 import { SidebarMenuComponent } from './sidebar/menu/menu.component';
 
 import { ToastComponent } from './toast/toast.component';
-import { TablesComponent } from './tables/tables.component';
+import { ChartComponent } from './chart/chart.component';
 
 
 @NgModule({
@@ -59,17 +60,18 @@ import { TablesComponent } from './tables/tables.component';
     PageNotFoundComponent,
     SidebarMenuComponent,
     ToastComponent,
-    TablesComponent
+    ChartComponent
   ],
   imports: [
     BrowserModule,
     // HttpModule,
     // InMemoryWebApiModule.forRoot(InMemoryTodoDbService),
-    routes,
     MaterialModule.forRoot(),
     Ng2BootstrapModule.forRoot(),
+    routes,
     TodoModule,
-    FormsModule,
+    FormModule,
+    TablesModule,
     ComponentModule
   ],
   providers: [

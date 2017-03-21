@@ -19,12 +19,18 @@ json-server ./src/app/todo/todo.data.json
 npm install --save ng2-bootstrap
 npm install --save angular-in-memory-web-api
 npm install --save bootstrap-sass
+npm install --save ng2-ckeditor
+npm i -S angular2-datatable
+
+-- npm i -S ng2-echarts -- 
+-- npm install --save angular2-highcharts --
 ```
 
 ####
 ```
 npm install --save material-design-lite
 npm install --save ng2-bootstrap bootstrap@next
+npm install --save ng2-validation
 ```
 
 

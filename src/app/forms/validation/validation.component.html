@@ -1,0 +1,241 @@
+<section class="container-fluid with-maxwidth chapter">
+  <h1 class="m-n font-thin h3">Validation</h1>
+</section>
+
+<section class="container-fluid with-maxwidth chapter">
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="card">
+          <div class="card-block">
+            <form (ngSubmit)="onSubmit()" name="form" class="form-validation">
+              <div class="card-title">Register</div>
+              <p class="text-muted">Please fill the information to continue</p>
+              <div class="form-group">
+                <label>Username <em class="text-muted">(allow 'a-zA-Z0-9', 4-10 length)</em></label>
+                <input [(ngModel)]="username" type="text" class="form-control" name="username" required minlength="4"  maxlength="10">
+              </div>
+              <div class="form-group">
+                <label>Email</label>
+                <input [(ngModel)]="email" type="email" class="form-control" name="email" required>
+              </div>
+              <div class="form-group pull-in clearfix">
+                <div class="col-sm-6">
+                  <label>Enter password</label>
+                  <input [(ngModel)]="password" type="password" class="form-control" name="password" required>
+                </div>
+                <div class="col-sm-6">
+                  <label>Confirm password</label>
+                  <input type="password" class="form-control" name="confirm_password">
+                  <span>Passwords do not match!</span>
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Phone</label>
+                <input type="text" class="form-control" placeholder="(XXX) XXXX XXX">
+              </div>
+              <div class="checkbox">
+                <label class="i-checks">
+                  <input type="checkbox"><i></i> I agree to the <a href class="text-info">Terms of Service</a>
+                </label>
+              </div>
+              <footer class="text-right bg-light lter">
+                <button md-raised-button color="accent" [disabled]="submitted" type="submit">Submit</button>
+              </footer>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6">
+        <div class="card">
+          <div class="card-block">
+            <div class="card-title">Contact</div>
+            <form name="form-contact" class="form-validation">
+              <div class="form-group pull-in clearfix">
+                <div class="col-sm-6">
+                  <label>Your name</label>
+                  <input type="text" class="form-control" placeholder="Name">
+                </div>
+                <div class="col-sm-6">
+                  <label>Email</label>
+                  <input type="email" class="form-control" placeholder="Enter email">
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Your website</label>
+                <input type="url" class="form-control" placeholder="http://">
+              </div>
+              <div class="form-group">
+                <label>Message</label>
+                <textarea class="form-control" rows="6" placeholder="Type your message"></textarea>
+              </div>
+              <footer class="panel-footer text-right bg-light lter">
+                <button type="submit" class="btn btn-success">Submit</button>
+              </footer>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-6">
+        <form name="formValidate" class="form-horizontal form-validation">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <strong>Basic constraints</strong>
+            </div>
+            <div class="panel-body">
+              <div class="form-group">
+                <label class="col-sm-3 control-label">Required</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" placeholder="required field">
+                  <select class="form-control m-t">
+                    <option value="">Please choose</option>
+                    <option value="foo">Foo</option>
+                    <option value="bar">Bar</option>
+                  </select>
+                  <label class="checkbox i-checks">
+                    <input type="checkbox"><i></i> Agree to the policy
+                  </label>
+                </div>
+              </div>
+              <div class="line line-dashed b-b line-lg pull-in"></div>
+              <div class="form-group">
+                <label class="col-sm-3 control-label">Min Length</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" placeholder="minlength = 5">
+                </div>
+              </div>
+              <div class="line line-dashed b-b line-lg pull-in"></div>
+              <div class="form-group">
+                <label class="col-sm-3 control-label">Max Length</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" placeholder="maxlength = 5">
+                </div>
+              </div>
+              <div class="line line-dashed b-b line-lg pull-in"></div>
+              <div class="form-group">
+                <label class="col-sm-3 control-label">Range Length</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" placeholder="minlength = 5 maxlength = 10">
+                </div>
+              </div>
+              <div class="line line-dashed b-b line-lg pull-in"></div>
+              <div class="form-group">
+                <label class="col-sm-3 control-label">Min</label>
+                <div class="col-sm-9">
+                  <input type="number" class="form-control" placeholder="min = 5">
+                </div>
+              </div>
+              <div class="line line-dashed b-b line-lg pull-in"></div>
+              <div class="form-group">
+                <label class="col-sm-3 control-label">Max</label>
+                <div class="col-sm-9">
+                  <input type="number" class="form-control" placeholder="max = 5">
+                </div>
+              </div>
+              <div class="line line-dashed b-b line-lg pull-in"></div>
+              <div class="form-group">
+                <label class="col-sm-3 control-label">Range</label>
+                <div class="col-sm-9">
+                  <input type="number" class="form-control" placeholder="min = 5 max = 10">
+                </div>
+              </div>
+              <div class="line line-dashed b-b line-lg pull-in"></div>
+              <div class="form-group">
+                <label class="col-sm-3 control-label">RegExp</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" placeholder="hexa color code">
+                </div>
+              </div>
+            </div>
+            <footer class="panel-footer text-right bg-light lter">
+              <button type="submit" class="btn btn-success">Submit</button>
+            </footer>
+          </div>
+        </form>
+      </div>
+      <div class="col-sm-6">
+        <form name="forma" class="form-horizontal form-validation">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <strong>Type constraints</strong>
+            </div>
+            <div class="panel-body">
+              <div class="form-group">
+                <label class="col-sm-3 control-label">Email</label>
+                <div class="col-sm-9">
+                  <input type="email" class="form-control" placeholder="email">
+                </div>
+              </div>
+              <div class="line line-dashed b-b line-lg pull-in"></div>
+              <div class="form-group">
+                <label class="col-sm-3 control-label">Url</label>
+                <div class="col-sm-9">
+                  <input type="url" class="form-control" placeholder="http://">
+                </div>
+              </div>
+              <div class="line line-dashed b-b line-lg pull-in"></div>
+              <div class="form-group">
+                <label class="col-sm-3 control-label">Digits</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" placeholder="digits">
+                </div>
+              </div>
+              <div class="line line-dashed b-b line-lg pull-in"></div>
+              <div class="form-group">
+                <label class="col-sm-3 control-label">Number</label>
+                <div class="col-sm-9">
+                  <input type="number" class="form-control" placeholder="number">
+                </div>
+              </div>
+              <div class="line line-dashed b-b line-lg pull-in"></div>
+              <div class="form-group">
+                <label class="col-sm-3 control-label">Alphanum</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" placeholder="alphanumeric string">
+                </div>
+              </div>
+              <div class="line line-dashed b-b line-lg pull-in"></div>
+              <div class="form-group">
+                <label class="col-sm-3 control-label">Date Iso</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" placeholder="YYYY-MM-DD">
+                </div>
+              </div>
+              <div class="line line-dashed b-b line-lg pull-in"></div>
+              <div class="form-group">
+                <label class="col-sm-3 control-label">Phone</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" placeholder="(XXX) XXXX XXX">
+                </div>
+              </div>
+              <div class="line line-dashed b-b line-lg pull-in"></div>
+              <div class="form-group">
+                <label class="col-sm-3 control-label">Equal To</label>
+                <div class="col-sm-9">
+                  <div class="row">
+                    <div class="col-sm-6"><input type="text" name="foo" class="form-control" ng-model="g.h" required></div>
+                    <div class="col-sm-6"><input type="text" name="confirm_foo" class="form-control">
+                      <span>Not match!</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="line line-dashed b-b line-lg pull-in"></div>
+              <div class="form-group">
+                <label class="col-sm-3 control-label">Black-list</label>
+                <div class="col-sm-9">
+                  <input type="email" name="email" class="form-control" placeholder="input 'bad@domain.com'">
+                  <span>This e-mail is black-listed!</span>
+                </div>
+              </div>
+            </div>
+            <footer class="panel-footer text-right bg-light lter">
+              <button type="submit" class="btn btn-success">Submit</button>
+            </footer>
+          </div>
+        </form>
+      </div>
+    </div>
+</section>
