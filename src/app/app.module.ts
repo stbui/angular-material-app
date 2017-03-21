@@ -1,17 +1,15 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+// import { HttpModule } from '@angular/http';
 
 // import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 // import { InMemoryTodoDbService } from './todo/todo.data';
 
-import { routes } from './app.router';
 import { MaterialModule } from '@angular/material';
-import { AppComponent } from './app.component';
 import 'hammerjs';
-
 import { Ng2BootstrapModule } from 'ng2-bootstrap';
+import { routes } from './app.router';
+import { AppComponent } from './app.component';
 
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HeaderComponent } from './header/header.component';
@@ -30,7 +28,7 @@ import { SignupComponent } from './signup/signup.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { TodoModule } from './todo/todo.module';
 import { ComponentModule } from './component/component.module'
-import { FormModule } from './form/form.module';
+import { FormsModule } from './forms/forms.module';
 
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { SidebarService } from './sidebar/sidebar.service';
@@ -65,14 +63,13 @@ import { TablesComponent } from './tables/tables.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule,
-    HttpModule,
+    // HttpModule,
     // InMemoryWebApiModule.forRoot(InMemoryTodoDbService),
     routes,
     MaterialModule.forRoot(),
     Ng2BootstrapModule.forRoot(),
     TodoModule,
-    FormModule,
+    FormsModule,
     ComponentModule
   ],
   providers: [
