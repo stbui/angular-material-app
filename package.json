@@ -1,6 +1,6 @@
 {
-  "name": "navigation-angular2-material",
-  "version": "0.0.0",
+  "name": "angular2-material2-bootstrap4-admin-app",
+  "version": "0.0.1",
   "license": "MIT",
   "scripts": {
     "ng": "ng",

@@ -27,7 +27,8 @@ import { SigninComponent } from './signin/signin.component';
 import { SignupComponent } from './signup/signup.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { TodoModule } from './todo/todo.module';
-import { ComponentModule } from './component/component.module'
+// import { ComponentModule } from './component/component.module'
+import { stbuiModule } from './component/index';
 import { FormModule } from './forms/forms.module';
 import { TablesModule } from './tables/tables.module';
 
@@ -68,11 +69,11 @@ import { ChartComponent } from './chart/chart.component';
     // InMemoryWebApiModule.forRoot(InMemoryTodoDbService),
     MaterialModule.forRoot(),
     Ng2BootstrapModule.forRoot(),
+    stbuiModule.forRoot(),
     routes,
     TodoModule,
     FormModule,
-    TablesModule,
-    ComponentModule
+    TablesModule
   ],
   providers: [
     { provide: 'sidebar', useClass: SidebarService }

@@ -1,7 +1,7 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "project": {
-    "name": "navigation-angular2-material"
+    "name": "angular2-material2-bootstrap4-admin-app"
   },
   "apps": [
     {
