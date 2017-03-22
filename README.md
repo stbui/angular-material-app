@@ -1,6 +1,25 @@
 # angular2-material2-bootstrap4-admin-app
 
-后台模板
+后台 Material 模板，Angular 2 & Bootstrap 4
+
+### Features
+- Google Material Design
+- Responsive Design
+- Light, Gray and Dark Themes
+- Multiple Color Schemes, with 18 predefined schemes
+- Powerful Layout Settings
+- 1500+ Icons, including 900+ official material design icons
+- Sass/Scss CSS, easily update style by changing a few variables
+- Modular Code, add & remove with ease
+- Bundling with Webpack 2
+- Package Management with NPM
+- Cross Browser Support
+- Free Future Updates
+
+### Credits
+- Angular
+- Bootstrap
+- Angular Mateiral2
 
 ```
 npm i -g @angular/cli@latest
@@ -22,6 +41,7 @@ npm install --save bootstrap-sass
 npm install --save ng2-ckeditor
 npm i -S angular2-datatable
 
+npm install --save-dev @types/echarts
 -- npm i -S ng2-echarts -- 
 -- npm install --save angular2-highcharts --
 ```

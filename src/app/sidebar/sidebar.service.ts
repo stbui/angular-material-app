@@ -118,6 +118,10 @@ export class SidebarService {
           {
             "name": "Task",
             "links": "todo"
+          },
+          {
+            "name": "Chat",
+            "links": "chat"
           }
         ]
       }

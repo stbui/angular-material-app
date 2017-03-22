@@ -12,6 +12,7 @@ import { SigninComponent } from './signin/signin.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ToastComponent } from './toast/toast.component';
 import { ChartComponent } from './chart/chart.component';
+import { ChatComponent } from './chat/chat.component';
 
 export const router: Routes = [
   { path: '', redirectTo: '404', pathMatch: 'full' },
@@ -26,6 +27,7 @@ export const router: Routes = [
   { path: 'todo', redirectTo: 'todo/All' },
   { path: 'toast', component: ToastComponent },
   { path: 'chart', component: ChartComponent },
+  { path: 'chat', component: ChatComponent },
   { path: 'profile', component: ProfileComponent }
 ];
 

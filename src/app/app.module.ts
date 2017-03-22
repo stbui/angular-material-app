@@ -38,6 +38,7 @@ import { SidebarMenuComponent } from './sidebar/menu/menu.component';
 
 import { ToastComponent } from './toast/toast.component';
 import { ChartComponent } from './chart/chart.component';
+import { ChatComponent } from './chat/chat.component';
 
 
 @NgModule({
@@ -61,7 +62,8 @@ import { ChartComponent } from './chart/chart.component';
     PageNotFoundComponent,
     SidebarMenuComponent,
     ToastComponent,
-    ChartComponent
+    ChartComponent,
+    ChatComponent
   ],
   imports: [
     BrowserModule,
