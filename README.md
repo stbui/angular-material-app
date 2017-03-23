@@ -88,3 +88,9 @@ https://dribbble.com/shots/3250690-Covalent-Material-Design-Sketch-Template-beta
 https://github.com/wpcfan/awesome-tutorials/tree/master/angular2/ng2-tut
 
 http://asdfblog.com/
+
+http://ng-lightning.github.io/ng-lightning/#/components
+http://themes.nyasha.me/#primer
+https://fury.martinsuess.com/apps/chat
+https://themeforest.net/item/fury-angular-2-material-design-admin-template/19325966
+https://themeforest.net/search?utf8=%E2%9C%93&term=material+angular&referrer=search&view=list&sort=sales

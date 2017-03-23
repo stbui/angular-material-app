@@ -11,8 +11,7 @@ export class TodoService {
   private apiUrl = 'http://localhost:3000/todos';
   private headers = new Headers({'Content-Type': 'application/json'});
 
-  constructor(private http: Http) {
-  }
+  constructor(private http: Http) { }
 
   addTodo(desc: string): Promise<TodoModel> {
     let todo = {

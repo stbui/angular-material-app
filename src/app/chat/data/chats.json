@@ -1,0 +1,119 @@
+{
+    "data": [
+        {
+            "name": "Alice Freeman",
+            "avatar": "assets/images/avatars/alice.jpg",
+            "lastMessage": "Are you going to commit latest...",
+            "status": "online",
+            "dialog": [
+                {
+                    "who": "contact",
+                    "message": "Quickly come to the meeting room 1B, we have a big server issue",
+                    "time": "12 mins. ago"
+                },
+                {
+                    "who": "user",
+                    "message": "I’m having breakfast right now, can’t you wait for 10 minutes?",
+                    "time": "11 mins. ago"
+                },
+                {
+                    "who": "contact",
+                    "message": "We are losing money! Quick!",
+                    "time": "9 mins. ago"
+                },
+                {
+                    "who": "user",
+                    "message": "It’s not my money, you know. I will eat my breakfast and then I will come to the meeting room.",
+                    "time": "2 mins. ago"
+                },
+                {
+                    "who": "contact",
+                    "message": "You are the worst!",
+                    "time": "Just now"
+                },
+                {
+                    "who": "contact",
+                    "message": "We are losing money! Quick!",
+                    "time": "9 mins. ago"
+                },
+                {
+                    "who": "user",
+                    "message": "It’s not my money, you know. I will eat my breakfast and then I will come to the meeting room.",
+                    "time": "2 mins. ago"
+                },
+                {
+                    "who": "contact",
+                    "message": "You are the worst!",
+                    "time": "Just now"
+                },
+                {
+                    "who": "contact",
+                    "message": "We are losing money! Quick!",
+                    "time": "9 mins. ago"
+                },
+                {
+                    "who": "user",
+                    "message": "It’s not my money, you know. I will eat my breakfast and then I will come to the meeting room.",
+                    "time": "2 mins. ago"
+                },
+                {
+                    "who": "contact",
+                    "message": "You are the worst!",
+                    "time": "Just now"
+                },
+                {
+                    "who": "contact",
+                    "message": "We are losing money! Quick!",
+                    "time": "9 mins. ago"
+                },
+                {
+                    "who": "user",
+                    "message": "It’s not my money, you know. I will eat my breakfast and then I will come to the meeting room.",
+                    "time": "2 mins. ago"
+                },
+                {
+                    "who": "contact",
+                    "message": "You are the worst!",
+                    "time": "Just now"
+                }
+            ]
+        },
+        {
+            "name": "Joyce Walters",
+            "avatar": "assets/images/avatars/joyce.jpg",
+            "lastMessage": "Something wrong with our servers...",
+            "status": "away",
+            "dialog": [
+                {
+                    "who": "contact",
+                    "message": "Quickly come to the meeting room 1B, we have a big server issue",
+                    "time": "12 mins. ago"
+                },
+                {
+                    "who": "user",
+                    "message": "I’m having breakfast right now, can’t you wait for 10 minutes?",
+                    "time": "11 mins. ago"
+                },
+                {
+                    "who": "contact",
+                    "message": "We are losing money! Quick!",
+                    "time": "9 mins. ago"
+                }
+            ]
+        },
+        {
+            "name": "Vincent Munoz",
+            "avatar": "assets/images/avatars/vincent.jpg",
+            "lastMessage": "Everybody, quickly gather in the...",
+            "status": "online",
+            "unread": 3,
+            "dialog": [
+                {
+                    "who": "contact",
+                    "message": "Quickly come to the meeting room 1B, we have a big server issue",
+                    "time": "12 mins. ago"
+                }
+            ]
+        }
+    ]
+}

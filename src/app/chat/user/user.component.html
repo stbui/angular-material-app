@@ -1,3 +1,44 @@
-<p>
-  user works!
-</p>
+<md-toolbar class="md-tall md-accent">
+
+  <div class="md-toolbar-tools md-toolbar-tools-top">
+
+    <button md-button class="md-icon-button">
+      <md-icon>arrow</md-icon>
+    </button>
+
+  </div>
+
+  <div class="md-toolbar-tools md-toolbar-tools-bottom">
+
+    <div layout="column">
+
+      <img [src]="user.avatar" [alt]="user.name" class="md-avatar avatar user-avatar huge"  />
+
+      <div class="user-name">{{ user.name }}</div>
+
+    </div>
+
+  </div>
+
+</md-toolbar>
+
+<div class="md-hue-2" flex ms-scroll ms-padding>
+
+  <!-- USER MOOD -->
+  <md-card>
+
+    <md-card-title>Mood</md-card-title>
+
+    <md-card-content>
+
+            <span class="mood">
+              {{ user.name }}
+            </span>
+
+    </md-card-content>
+
+  </md-card>
+  <!-- / USER MOOD -->
+
+</div>
+

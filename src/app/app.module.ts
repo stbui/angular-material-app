@@ -31,6 +31,7 @@ import { TodoModule } from './todo/todo.module';
 import { stbuiModule } from './component/index';
 import { FormModule } from './forms/forms.module';
 import { TablesModule } from './tables/tables.module';
+import { ChatModule } from './chat/chat.module';
 
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { SidebarService } from './sidebar/sidebar.service';
@@ -38,7 +39,6 @@ import { SidebarMenuComponent } from './sidebar/menu/menu.component';
 
 import { ToastComponent } from './toast/toast.component';
 import { ChartComponent } from './chart/chart.component';
-import { ChatModule } from './chat/chat.module';
 
 
 @NgModule({
