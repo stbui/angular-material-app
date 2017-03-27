@@ -3,7 +3,7 @@ import { TodoComponent } from './todo.component';
 
 export const routes: Routes = [
   {
-    path: 'todo/:filter',
+    path: 'apps/todo/:filter',
     component: TodoComponent
   }
 ];

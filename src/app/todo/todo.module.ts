@@ -2,9 +2,11 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
-
 import { MaterialModule } from '@angular/material';
-import { routing } from './todo.routes'
+
+import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryTodoDbService } from './todo.data';
+// import { routing } from './todo.routes'
 
 import { TodoComponent } from './todo.component';
 import { TodoFooterComponent } from './todo-footer/todo-footer.component';
@@ -19,7 +21,8 @@ import { TodoListComponent } from './todo-list/todo-list.component';
     FormsModule,
     HttpModule,
     MaterialModule.forRoot(),
-    routing
+    InMemoryWebApiModule.forRoot(InMemoryTodoDbService)
+    // routing
   ],
   declarations: [
     TodoComponent,

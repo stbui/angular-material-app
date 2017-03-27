@@ -20,11 +20,11 @@ export class SidebarService {
           {
             "name": "Buttons",
             "badeg": 3,
-            "links": "/buttons"
+            "links": "/components/buttons"
           },
           {
             "name": "Cards",
-            "links": "/cards"
+            "links": "/components/cards"
           },
           {
             "name": "Boxes",
@@ -66,7 +66,7 @@ export class SidebarService {
       {
         "name": "Charts",
         "icon": "equalizer",
-        "links": "chart"
+        "links": "/components/chart"
       },
       {
         "name": "Pages",
@@ -74,7 +74,7 @@ export class SidebarService {
         "items": [
           {
             "name":"about",
-            "links":"about"
+            "links":"pages/about"
           },
           {
             "name":"services",
@@ -107,8 +107,8 @@ export class SidebarService {
         ]
       },
       {"name":"Extra Pages", "icon":"more_horiz", "items": [
-        {"name":"Sigin In", "links":"signin"},
-        {"name":"Sigin Up", "links":"signup"},
+        {"name":"Sigin In", "links":"/signin"},
+        {"name":"Sigin Up", "links":"/signup"},
         {"name":"404 Error", "links":"404"}
       ]},
       {
@@ -117,11 +117,11 @@ export class SidebarService {
         "items": [
           {
             "name": "Task",
-            "links": "todo"
+            "links": "/apps/todo/All"
           },
           {
             "name": "Chat",
-            "links": "chat"
+            "links": "/apps/chats"
           }
         ]
       }
@@ -131,3 +131,4 @@ export class SidebarService {
   }
 
 }
+

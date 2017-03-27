@@ -1,14 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 // import { HttpModule } from '@angular/http';
 
-// import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
-// import { InMemoryTodoDbService } from './todo/todo.data';
-
+import { FlexLayoutModule } from "@angular/flex-layout";
 import { MaterialModule } from '@angular/material';
 import 'hammerjs';
-import { Ng2BootstrapModule } from 'ng2-bootstrap';
-import { routes } from './app.router';
+
+import { RoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -31,7 +30,7 @@ import { TodoModule } from './todo/todo.module';
 import { stbuiModule } from './component/index';
 import { FormModule } from './forms/forms.module';
 import { TablesModule } from './tables/tables.module';
-import { ChatModule } from './chat/chat.module';
+import { ChatsModule } from './chats/chats.module';
 
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { SidebarService } from './sidebar/sidebar.service';
@@ -39,6 +38,10 @@ import { SidebarMenuComponent } from './sidebar/menu/menu.component';
 
 import { ToastComponent } from './toast/toast.component';
 import { ChartComponent } from './chart/chart.component';
+import { AdminComponent } from './admin/admin.component';
+
+import { SidenavComponent } from './sidenav/sidenav.component';
+
 
 
 @NgModule({
@@ -62,20 +65,22 @@ import { ChartComponent } from './chart/chart.component';
     PageNotFoundComponent,
     SidebarMenuComponent,
     ToastComponent,
-    ChartComponent
+    ChartComponent,
+    AdminComponent,
+    SidenavComponent
   ],
   imports: [
     BrowserModule,
     // HttpModule,
-    // InMemoryWebApiModule.forRoot(InMemoryTodoDbService),
-    MaterialModule.forRoot(),
-    Ng2BootstrapModule.forRoot(),
+    FormsModule,
+    FlexLayoutModule,
+    MaterialModule,
     stbuiModule.forRoot(),
-    routes,
+    RoutingModule,
     TodoModule,
     FormModule,
     TablesModule,
-    ChatModule
+    ChatsModule
   ],
   providers: [
     { provide: 'sidebar', useClass: SidebarService }
