@@ -1,19 +1,18 @@
 <div class="container-fluid">
   <section class="todoapp">
     <app-todo-header
-      placeholder="What do you want"
-      (textChanges)="onTextChanges($event)"
-      (onEnterUp)="addTodo()">
+      placeholder="您想要做什么"
+      (onEnterUp)="addTodo($event)">
     </app-todo-header>
     <app-todo-list
-      [todos]="todos"
+      [todos]="todos | async"
       (onToggleAll)="toggleAll()"
       (onRemoveTodo)="removeTodo($event)"
       (onToggleTodo)="toggleTodo($event)"
     >
     </app-todo-list>
     <app-todo-footer
-      [itemCount]="todos?.length"
+      [itemCount]="todos?.length | async"
       (onClear)="clearCompleted()">
     </app-todo-footer>
   </section>

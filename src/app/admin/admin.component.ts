@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class AdminComponent implements OnInit {
 
   theme: string = 'bg-success';
-  title = 'angular2 bootstrap4 material2 web';
+  title = 'angular2 material2 web app';
 
   constructor() { }
 

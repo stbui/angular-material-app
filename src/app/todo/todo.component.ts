@@ -1,92 +1,50 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import { Router, ActivatedRoute, Params } from '@angular/router';
-import { TodoService } from './todo.service';
 import { TodoModel } from './todo.model';
+
+import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'app-todo',
   templateUrl: './todo.component.html',
-  styleUrls: ['./todo.component.scss'],
-  providers: [ TodoService ]
+  styleUrls: ['./todo.component.scss']
 })
 export class TodoComponent implements OnInit {
 
-  todos: TodoModel[] = [];
+  todos: Observable<TodoModel[]>;
   desc: string = '';
 
   constructor(
-    private _todoService: TodoService,
-    private _route: ActivatedRoute,
-    private _router: Router
+    @Inject('todoService') private service,
+    private router: ActivatedRoute,
   ) { }
 
   ngOnInit() {
-    this._route.params.forEach((params:Params)=>{
-      let filter = params['filter'];
-      this.filterTodos(filter);
-    });
-    this.getTodos();
-  }
-
-  addTodo() {
-    this._todoService
-      .addTodo(this.desc)
-      .then(todo => {
-        this.todos = [...this.todos, todo];
+    this.router.params
+      .pluck('filter')
+      .subscribe(filter => {
+        this.service.filterTodos(filter);
+        this.todos = this.service.todos;
       });
   }
 
-  toggleTodo(todo: TodoModel):Promise<void> {
-    const i = this.todos.indexOf(todo);
-    return this._todoService
-      .toggleTodo(todo)
-      .then(t => {
-        this.todos = [
-          ...this.todos.slice(0,i),
-          t,
-          ...this.todos.slice(i+1)
-        ];
-        return null;
-      });
+  addTodo(desc: string) {
+    this.service.addTodo(desc);
   }
 
-  removeTodo(todo:TodoModel):Promise<void> {
-    const i = this.todos.indexOf(todo);
-    return this._todoService
-      .deleteTodoById(todo.id)
-      .then(()=> {
-        this.todos = [
-          ...this.todos.slice(0,i),
-          ...this.todos.slice(i+1)
-        ];
-        return null;
-      });
+  toggleTodo(todo: TodoModel) {
+    this.service.toggleTodo(todo);
   }
 
-  getTodos(): void {
-    this._todoService
-      .getTodos()
-      .then(todos => this.todos = [...todos]);
-  }
-
-  filterTodos(filter: string): void {
-    this._todoService.filterTodos(filter).then(todos => this.todos = [...todos]);
+  removeTodo(todo:TodoModel) {
+    this.service.deleteTodo(todo);
   }
 
   toggleAll() {
-    // this.todos.forEach(todo=>this.toggleTodo(todo));
-    Promise.all(this.todos.map(todo=>this.toggleTodo(todo)));
+    this.service.toggleAll();
   }
 
   clearCompleted() {
-    const completed_todos = this.todos.filter(todo => todo.completed === true);
-    const active_todos = this.todos.filter(todo => todo.completed === false);
-    Promise.all(completed_todos.map(todo => this._todoService.deleteTodoById(todo.id)))
-      .then(() => this.todos = [...active_todos]);
+    this.service.clearCompleted();
   }
-
-  onTextChanges(value) {
-    this.desc = value;
-  }
-
 }

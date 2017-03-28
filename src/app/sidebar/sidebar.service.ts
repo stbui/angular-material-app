@@ -27,21 +27,28 @@ export class SidebarService {
             "links": "/components/cards"
           },
           {
-            "name": "Boxes",
-            "links": "#"
-          },
-
-          {
-            "name": "Components",
-            "links": "#"
+            "name": "Lists",
+            "links": "/components/lists"
           },
           {
-            "name": "Feature Callouts",
-            "links": "#"
+            "name": "Menu",
+            "links": "/components/menu"
+          },
+          {
+            "name": "Dialogs",
+            "links": "/components/dialog"
+          },
+          {
+            "name": "Slider",
+            "links": "/components/slider"
+          },
+          {
+            "name": "Snack-Bar",
+            "links": "/components/sanck-bar"
           },
           {
             "name": "Toast",
-            "links": "toast"
+            "links": "/components/toast"
           }
         ]
       },
@@ -49,18 +56,18 @@ export class SidebarService {
         "name": "Tables",
         "icon": "list",
         "items": [
-          { "name": "Static Tables", "links": "tables/static"},
+          { "name": "Static Tables", "links": "/tables/static"},
           // { "name": "Responsive Tables", "links": "tables/responsive"},
-          { "name": "Datatable", "links":"tables/datatable"}
+          { "name": "Datatable", "links":"/tables/datatable"}
         ]
       },
       {
         "name": "Forms",
         "icon": "format_color_text",
         "items": [
-          { "name": "Form Elements","links":"forms/elements"},
-          { "name": "Form validation","links":"forms/validation"},
-          { "name": "Ckeditor","links":"forms/ckeditor"}
+          { "name": "Form Elements","links":"/forms/elements"},
+          { "name": "Form validation","links":"/forms/validation"},
+          { "name": "Ckeditor","links":"/forms/ckeditor"}
         ]
       },
       {
@@ -74,42 +81,42 @@ export class SidebarService {
         "items": [
           {
             "name":"about",
-            "links":"pages/about"
+            "links":"/pages/about"
           },
           {
             "name":"services",
-            "links":"services"
+            "links":"/pages/services"
           },
           {
             "name":"contact",
-            "links":"contact"
+            "links":"/pages/contact"
           },
           {
             "name":"careers",
-            "links":"careers"
+            "links":"/pages/careers"
           },
           {
             "name":"profile",
-            "links":"profile"
+            "links":"/pages/profile"
           },
           {
             "name":"blog",
-            "links":"blog"
+            "links":"/blog"
           },
           {
             "name":"faqs",
-            "links":"faqs"
+            "links":"/faqs"
           },
           {
             "name":"terms",
-            "links":"terms"
+            "links":"/terms"
           }
         ]
       },
       {"name":"Extra Pages", "icon":"more_horiz", "items": [
         {"name":"Sigin In", "links":"/signin"},
         {"name":"Sigin Up", "links":"/signup"},
-        {"name":"404 Error", "links":"404"}
+        {"name":"404 Error", "links":"/404"}
       ]},
       {
         "name": "Apps",
@@ -122,6 +129,10 @@ export class SidebarService {
           {
             "name": "Chat",
             "links": "/apps/chats"
+          },
+          {
+            "name": "Mail",
+            "links": "/apps/mail"
           }
         ]
       }

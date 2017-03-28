@@ -15,9 +15,6 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { ButtonsComponent } from './buttons/buttons.component';
 import { CardsComponent } from './cards/cards.component';
-import { AboutComponent } from './about/about.component';
-import { ServicesComponent } from './services/services.component';
-import { ContactComponent } from './contact/contact.component';
 import { ProfileComponent } from './profile/profile.component';
 import { BlogComponent } from './blog/blog.component';
 import { SidebarRightComponent } from './sidebar-right/sidebar-right.component';
@@ -31,6 +28,8 @@ import { stbuiModule } from './component/index';
 import { FormModule } from './forms/forms.module';
 import { TablesModule } from './tables/tables.module';
 import { ChatsModule } from './chats/chats.module';
+import { MailModule } from './mail/mail.module';
+import { PagesModule } from './pages/pages.module';
 
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { SidebarService } from './sidebar/sidebar.service';
@@ -43,7 +42,6 @@ import { AdminComponent } from './admin/admin.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -52,9 +50,6 @@ import { SidenavComponent } from './sidenav/sidenav.component';
     FooterComponent,
     ButtonsComponent,
     CardsComponent,
-    AboutComponent,
-    ServicesComponent,
-    ContactComponent,
     ProfileComponent,
     BlogComponent,
     SidebarComponent,
@@ -80,7 +75,9 @@ import { SidenavComponent } from './sidenav/sidenav.component';
     TodoModule,
     FormModule,
     TablesModule,
-    ChatsModule
+    ChatsModule,
+    MailModule,
+    PagesModule
   ],
   providers: [
     { provide: 'sidebar', useClass: SidebarService }

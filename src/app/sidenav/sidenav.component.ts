@@ -12,4 +12,7 @@ export class SidenavComponent implements OnInit {
   ngOnInit() {
   }
 
+  toggleDropdown() {
+
+  }
 }

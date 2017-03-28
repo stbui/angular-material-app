@@ -11,11 +11,11 @@ import 'rxjs/add/operator/distinctUntilChanged';
 })
 export class TodoHeaderComponent {
   inputValue: string = '';
-  @Input() placeholder: string = 'What needs to be done?';
+  @Input() placeholder: string = '您的任务完成了吗？';
   @Input() delay: number = 200;
 
   @Output() textChanges = new EventEmitter<string>();
-  @Output() onEnterUp = new EventEmitter<boolean>();
+  @Output() onEnterUp = new EventEmitter<string>();
 
   constructor(private elementRef: ElementRef) {
     const event$ = Observable.fromEvent(elementRef.nativeElement, 'keyup')
@@ -26,7 +26,7 @@ export class TodoHeaderComponent {
   }
 
   enterUp() {
-    this.onEnterUp.emit(true);
+    this.onEnterUp.emit(this.inputValue);
     this.inputValue = '';
   }
 }

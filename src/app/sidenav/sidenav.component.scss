@@ -1,0 +1,24 @@
+.sidenav-container, .sidenav-scrollbar-container {
+  height: 100%;
+}
+
+
+.sidenav-anchor {
+  position: relative;
+  cursor: pointer;
+  color: #A7A9AE;
+  transition: color .1s;
+
+  &:hover {
+    color: #FFFFFF;
+  }
+
+  &.active {
+    color: #FFFFFF;
+  }
+}
+
+.sidenav-item-name {
+  margin-left: 24px;
+  font-size: 14px;
+}

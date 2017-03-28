@@ -2,79 +2,113 @@ import { Injectable } from '@angular/core';
 import { Http, Headers } from '@angular/http';
 import { TodoModel } from './todo.model';
 
-import 'rxjs/add/operator/toPromise';
+import { Observable } from 'rxjs/Observable';
+import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 
 @Injectable()
 export class TodoService {
 
   private apiUrl = 'api/todos';
-  // private apiUrl = 'http://localhost:3000/todos';
+  // private apiUrl = 'http://127.0.0.1:3000/todos';
   private headers = new Headers({'Content-Type': 'application/json'});
+  private _todos: BehaviorSubject<TodoModel[]>;
+  private dataStore: {todos: TodoModel[]};
 
-  constructor(private http: Http) { }
+  constructor(private http: Http) {
+    this.dataStore = {todos: []};
+    this._todos = new BehaviorSubject<TodoModel[]>([]);
+  }
 
-  addTodo(desc: string): Promise<TodoModel> {
-    let todo = {
+  get todos() {
+    return this._todos.asObservable();
+  }
+
+  addTodo(desc: string) {
+    let todoToAdd = {
       id: Math.random(),
       desc: desc,
       completed: false
-    };
+    }
 
-    return this.http
-      .post(this.apiUrl, JSON.stringify(todo), {headers: this.headers})
-      .toPromise()
-      .then(res => res.json() as TodoModel)
-      .catch(this.handleError);
+    this.http.post(this.apiUrl, JSON.stringify(todoToAdd), {headers: this.headers})
+      .map(res => res.json().data as TodoModel)
+      .subscribe(todo => {
+        this.dataStore.todos = [...this.dataStore.todos, todo];
+        this._todos.next(Object.assign({}, this.dataStore).todos);
+      });
   }
 
-  toggleTodo(todo: TodoModel): Promise<TodoModel> {
+  toggleTodo(todo: TodoModel) {
     const url = `${this.apiUrl}/${todo.id}`;
+    const i = this.dataStore.todos.indexOf(todo);
     let updatedTodo = Object.assign({}, todo, {completed: !todo.completed});
-    return this.http
-      .patch(url, JSON.stringify({completed: !todo.completed}), {headers: this.headers})
-      .toPromise()
-      .then(() => updatedTodo)
-      .catch(this.handleError);
+    this.http.post(url, JSON.stringify({completed: !todo.completed}), {headers: this.headers})
+      .subscribe(r => {
+        this.dataStore.todos = [
+          ...this.dataStore.todos.slice(0, i),
+          updatedTodo,
+          ...this.dataStore.todos.slice(i + 1)
+        ];
+        this._todos.next(Object.assign({}, this.dataStore).todos);
+      });
   }
 
-  deleteTodoById(id: string): Promise<void> {
-    const url = `${this.apiUrl}/${id}`;
-
-    return this.http
+  deleteTodo(todo: TodoModel) {
+    const url = `${this.apiUrl}/${todo.id}`;
+    const i = this.dataStore.todos.indexOf(todo);
+    this.http
       .delete(url, {headers: this.headers})
-      .toPromise()
-      .then(() => null)
-      .catch(this.handleError);
+      .subscribe(r => {
+        this.dataStore.todos = [
+          ...this.dataStore.todos.slice(0, i),
+          ...this.dataStore.todos.slice(i + 1)
+        ];
+        this._todos.next(Object.assign({}, this.dataStore).todos);
+      });
   }
 
-  getTodos(): Promise<TodoModel[]> {
-    return this.http.get(this.apiUrl)
-      .toPromise()
-      .then(res => res.json() as TodoModel[])
-      .catch(this.handleError);
+  getTodos() {
+    this.http.get(this.apiUrl)
+      .map(res => res.json().data as TodoModel[])
+      .do(r => console.log(r))
+      .subscribe(todos => {
+        this.dataStore.todos = [...todos];
+        this._todos.next(Object.assign({}, this.dataStore).todos);
+      });
   }
 
-  filterTodos(filter: string): Promise<TodoModel[]> {
+  filterTodos(filter: string) {
     switch (filter) {
-      case 'Active':
-        return this.http
+      case 'ACTIVE':
+        this.http
           .get(`${this.apiUrl}?completed=false`)
-          .toPromise()
-          .then(res => res.json() as TodoModel[])
-          .catch(this.handleError);
-      case 'Completed':
-        return this.http
+          .map(res => res.json().data as TodoModel[])
+          .subscribe(todos => {
+            this.dataStore.todos = [...todos];
+            this._todos.next(Object.assign({}, this.dataStore).todos);
+          });
+        break;
+      case 'COMPLETED':
+        this.http
           .get(`${this.apiUrl}?completed=true`)
-          .toPromise()
-          .then(res => res.json() as TodoModel[])
-          .catch(this.handleError);
+          .map(res => res.json().data as TodoModel[])
+          .subscribe(todos => {
+            this.dataStore.todos = [...todos];
+            this._todos.next(Object.assign({}, this.dataStore).todos);
+          });
+        break;
       default:
-        return this.getTodos();
+        this.getTodos();
     }
   }
 
-  private handleError(error: any): Promise<any> {
-    console.error('An error occurred', error);
-    return Promise.reject(error.message || error);
+  toggleAll() {
+    this.dataStore.todos.forEach(todo => this.toggleTodo(todo));
+  }
+
+  clearCompleted() {
+    this.dataStore.todos
+      .filter(todo => todo.completed)
+      .forEach(todo => this.deleteTodo(todo));
   }
 }

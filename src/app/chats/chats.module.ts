@@ -26,7 +26,7 @@ const perfectScrollbarConfig: PerfectScrollbarConfigInterface = {
     FlexLayoutModule,
     MaterialModule,
     PerfectScrollbarModule.forRoot(perfectScrollbarConfig),
-    InMemoryWebApiModule.forRoot(InMemoryChatDbService)
+    // InMemoryWebApiModule.forRoot(InMemoryChatDbService)
   ],
   declarations: [
     ChatsComponent,

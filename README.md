@@ -33,17 +33,37 @@ npm install -g json-server
 json-server ./src/app/todo/todo.data.json
 ```
 
+
+### 依赖包
+
+[@angular/material](https://github.com/angular/material2)
+
+[flex-layout](https://github.com/angular/flex-layout)
+
+[angular-in-memory-web-api](https://github.com/angular/in-memory-web-api)
+
+[angular2-perfect-scrollbar](https://www.npmjs.com/package/angular2-perfect-scrollbar)
+
+[ng2-ckeditor](https://github.com/chymz/ng2-ckeditor)
+
 #### 安装过的模块
 ```
 npm install --save ng2-bootstrap
 npm install --save angular-in-memory-web-api
 npm install --save bootstrap-sass
-npm install --save ng2-ckeditor
 npm i -S angular2-datatable
+npm install ngx-quill --save
+
+npm install --save echarts
+npm install --save-dev @types/echarts
 
 npm install --save-dev @types/echarts
+npm install --save ng2-ckeditor
+npm install ng2-ueditor --save
 -- npm i -S ng2-echarts -- 
 -- npm install --save angular2-highcharts --
+npm install ng2-charts --save
+npm install chart.js --save
 ```
 
 ####

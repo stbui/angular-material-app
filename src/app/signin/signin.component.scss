@@ -1,0 +1,84 @@
+$gray-lighter:              #eceeef !default;
+$gray-light:                #636c72 !default;
+$image_path:            "/assets/images/" !default;
+$padding-for-icon: 40px;
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;
+
+$text-muted: $gray-light !default;
+$font-size-sm:   .875rem !default;
+
+
+.page-auth {
+  background-color: $gray-lighter;
+  min-height: 100%;
+  background: url('#{$image_path}background/1.png') no-repeat center center fixed;
+  background-size: cover;
+  padding: 0 10px;
+
+  .card {
+    //@extend .z-depth-2;
+    padding: 40px 30px;
+  }
+  .logo {
+    padding-left: ($padding-for-icon - 4);
+    font-size: 32px;
+    &.text-center {
+      padding: 0;
+    }
+    a {
+      font-weight: normal;
+      text-decoration: none;
+    }
+    margin-bottom: 1.3em;
+  }
+
+  .main-body {
+    position: relative;
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 50px 0 20px;
+    @media (min-width: map-get($grid-breakpoints, md)) {
+      padding-top: 150px;
+    }
+  }
+  .additional-info {
+    color: $text-muted;
+    background-color: rgba(#000, .04);
+    //padding: 10px 6px;
+    //position: absolute;
+    //bottom: 0;
+    //left: 0;
+    //right: 0;
+    text-align: center;
+    font-size: $font-size-sm;
+    a {
+      color: $gray-light;
+    }
+    .divider-h {
+      border-right: 1px solid rgba(#000, .1);
+      margin: 0 15px;
+    }
+  }
+
+
+  //
+  &.page-confirm-email {
+    .logo {
+      font-size: 24px;
+      margin-bottom: .8em;
+    }
+  }
+  .confirm-mail-icon {
+    text-align: center;
+    .material-icons {
+      color: $gray-light;
+      font-size: 100px;
+    }
+  }
+}

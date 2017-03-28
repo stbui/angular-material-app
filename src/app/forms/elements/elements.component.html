@@ -1,99 +1,43 @@
+<div class="main-elements" fxLayout="column" fxLayoutAlign="center center">
+ <md-card>
+   <md-card-title>Basic Form</md-card-title>
+   <md-card-content>
+     <form fxLayout="column">
+       <md-input-container>
+         <input mdInput placeholder="请输入您的邮箱">
+       </md-input-container>
+       <md-input-container>
+         <input mdInput placeholder="请输入您的密码">
+       </md-input-container>
+       <md-checkbox>记住我</md-checkbox>
+       <button md-raised-button color="primary" type="submit">提交</button>
+     </form>
+   </md-card-content>
+ </md-card>
+
+  <md-card>
+    <md-card-title>Inline form</md-card-title>
+    <md-card-content>
+      <form>
+        <md-input-container>
+          <input mdInput placeholder="请输入您的邮箱">
+        </md-input-container>
+        <md-input-container>
+          <input mdInput placeholder="请输入您的密码">
+        </md-input-container>
+        <md-checkbox>记住我</md-checkbox>
+        <button md-raised-button color="primary" type="submit">提交</button>
+      </form>
+    </md-card-content>
+  </md-card>
+</div>
+
+
 <section class="container-fluid with-maxwidth chapter">
   <div class="page-title">Form Elements</div>
 </section>
 
 <section class="container-fluid with-maxwidth chapter">
-  <div class="row">
-    <div class="col-sm-6">
-      <div class="card">
-        <div class="card-block">
-          <div class="card-title">Basic form</div>
-          <form role="form">
-            <div class="form-group">
-              <label>Email address</label>
-              <input type="email" class="form-control" placeholder="Enter email">
-            </div>
-            <div class="form-group">
-              <label>Password</label>
-              <input type="password" class="form-control" placeholder="Password">
-            </div>
-            <div class="checkbox">
-              <label class="i-checks">
-                <input type="checkbox" checked disabled><i></i> Check me out
-              </label>
-            </div>
-            <button type="submit" class="btn btn-sm btn-primary">Submit</button>
-          </form>
-        </div>
-      </div>
-
-
-    </div>
-    <div class="col-sm-6">
-      <div class="card">
-        <div class="card-block">
-          <div class="card-title">Horizontal form</div>
-          <form class="bs-example form-horizontal">
-            <div class="form-group">
-              <label class="col-lg-2 control-label">Email</label>
-              <div class="col-lg-10">
-                <input type="email" class="form-control" placeholder="Email">
-                <span class="help-block m-b-none">Example block-level help text here.</span>
-              </div>
-            </div>
-            <div class="form-group">
-              <label class="col-lg-2 control-label">Password</label>
-              <div class="col-lg-10">
-                <input type="password" class="form-control" placeholder="Password">
-              </div>
-            </div>
-            <div class="form-group">
-              <div class="col-lg-offset-2 col-lg-10">
-                <div class="checkbox">
-                  <label class="i-checks">
-                    <input type="checkbox" checked><i></i> Remember me
-                  </label>
-                </div>
-              </div>
-            </div>
-            <div class="form-group">
-              <div class="col-lg-offset-2 col-lg-10">
-                <button type="submit" class="btn btn-sm btn-info">Sign in</button>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="card-block">
-      <div class="card-title">Inline form</div>
-      <form class="form-inline" role="form">
-        <div class="form-group">
-          <label class="sr-only" for="exampleInputEmail2">Email address</label>
-          <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Enter email">
-        </div>
-        <div class="form-group">
-          <label class="sr-only" for="exampleInputPassword2">Password</label>
-          <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password">
-        </div>
-        <div class="checkbox m-l m-r-xs">
-          <label class="i-checks">
-            <input type="checkbox"><i></i> Remember me
-          </label>
-        </div>
-        <button type="submit" class="btn btn-default">Sign in</button>
-        <span ng-controller="ModalDemoCtrl">
-          <script type="text/ng-template" id="myModalContent.html">
-            <div ng-include="'tpl/modal.form.html'"></div>
-          </script>
-          <button class="btn btn-success" ng-click="open('lg')">Form in a modal</button>
-        </span>
-      </form>
-    </div>
-  </div>
 
   <div class="card">
     <div class="card-block">
