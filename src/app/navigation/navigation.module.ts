@@ -3,14 +3,18 @@ import { CommonModule } from '@angular/common';
 import { MaterialModule } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
-import { MailComponent } from './mail.component';
+import { RoutingModule } from './navigation-routing.module';
+import { NavigationComponent } from './navigation.component';
 
 @NgModule({
   imports: [
     CommonModule,
     FlexLayoutModule,
-    MaterialModule.forRoot()
+    MaterialModule.forRoot(),
+    RoutingModule
   ],
-  declarations: [MailComponent]
+  declarations: [
+    NavigationComponent
+  ]
 })
-export class MailModule { }
+export class NavigationModule { }

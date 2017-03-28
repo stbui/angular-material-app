@@ -30,15 +30,14 @@ import { TablesModule } from './tables/tables.module';
 import { ChatsModule } from './chats/chats.module';
 import { MailModule } from './mail/mail.module';
 import { PagesModule } from './pages/pages.module';
+import { NavigationModule } from './navigation/navigation.module';
 
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { SidebarService } from './sidebar/sidebar.service';
 import { SidebarMenuComponent } from './sidebar/menu/menu.component';
-
 import { ToastComponent } from './toast/toast.component';
 import { ChartComponent } from './chart/chart.component';
 import { AdminComponent } from './admin/admin.component';
-
 import { SidenavComponent } from './sidenav/sidenav.component';
 
 
@@ -77,7 +76,8 @@ import { SidenavComponent } from './sidenav/sidenav.component';
     TablesModule,
     ChatsModule,
     MailModule,
-    PagesModule
+    PagesModule,
+    NavigationModule
   ],
   providers: [
     { provide: 'sidebar', useClass: SidebarService }

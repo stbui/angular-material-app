@@ -133,6 +133,10 @@ export class SidebarService {
           {
             "name": "Mail",
             "links": "/apps/mail"
+          },
+          {
+            "name": "码农庄园",
+            "links": "/apps/navigation"
           }
         ]
       }
