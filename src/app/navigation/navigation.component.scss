@@ -1,21 +1,20 @@
-:host{
-  position: relative;
+:host {
+  display: block;
+  margin: 15px;
+}
+
+.widget {
+
+}
+
+.nav-title {
+  white-space: nowrap;
+  text-overflow: ellipsis;
   overflow: hidden;
-  width: 100%;
-  max-width: 400px;
-  border-radius: 2px;
-  background: #fff;
-  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .14), 0 2px 2px 0 rgba(0, 0, 0, .098), 0 1px 5px 0 rgba(0, 0, 0, .084);
 }
 
-
-.p-16 {
-  padding: 16px;
-
-}
-
-.media {
-  width: 80px;
-  min-width: 80px;
-  max-width: 80px;
+.nav-desc {
+  height: 150px;
+  min-height: 150px;
+  overflow: hidden;
 }

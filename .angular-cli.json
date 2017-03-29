@@ -22,6 +22,7 @@
         "styles.scss"
       ],
       "scripts": [
+//        "../node_modules/chart.js/dist/Chart.bundle.min.js"
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {

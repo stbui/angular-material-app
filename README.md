@@ -46,6 +46,9 @@ json-server ./src/app/todo/todo.data.json
 
 [ng2-ckeditor](https://github.com/chymz/ng2-ckeditor)
 
+[A feature-rich yet lightweight data-table crafted for Angular2](https://github.com/swimlane/angular2-data-table)
+
+[Beautiful charts for Angular2 based on Chart.js](https://github.com/valor-software/ng2-charts)
 #### 安装过的模块
 ```
 npm install --save ng2-bootstrap
@@ -53,6 +56,9 @@ npm install --save angular-in-memory-web-api
 npm install --save bootstrap-sass
 npm i -S angular2-datatable
 npm install ngx-quill --save
+
+npm install ng2-charts --save
+npm install chart.js --save
 
 npm install --save echarts
 npm install --save-dev @types/echarts
@@ -62,7 +68,6 @@ npm install --save ng2-ckeditor
 npm install ng2-ueditor --save
 -- npm i -S ng2-echarts -- 
 -- npm install --save angular2-highcharts --
-npm install ng2-charts --save
 npm install chart.js --save
 ```
 
@@ -83,13 +88,24 @@ import * as $ from 'jquery';
 $('body').addClass('stbui');
 ```
 
-#### 
-- ng2-bootstrap
+#### 参考
 
-http://valor-software.com/ng2-bootstrap/#/
+##### 开源
+
+- https://github.com/greengerong/rebirth
 
 
-https://material.angular.io/guide/getting-started
+##### 组件
+
+bootstrap
+- [ng2-bootstrap](http://valor-software.com/ng2-bootstrap/#/) : http://valor-software.com/ng2-bootstrap/#/
+
+一套优秀的企业级Angular组件库
+- [PrimeNg](https://www.primefaces.org/primeng/): https://www.primefaces.org/primeng/
+
+- [ng-lightning](http://ng-lightning.github.io/ng-lightning/#/): http://ng-lightning.github.io/ng-lightning/#/
+
+#####
 
 http://bootswatch.com
 
@@ -109,7 +125,7 @@ https://github.com/wpcfan/awesome-tutorials/tree/master/angular2/ng2-tut
 
 http://asdfblog.com/
 
-http://ng-lightning.github.io/ng-lightning/#/components
+
 http://themes.nyasha.me/#primer
 https://fury.martinsuess.com/apps/chat
 https://themeforest.net/item/fury-angular-2-material-design-admin-template/19325966

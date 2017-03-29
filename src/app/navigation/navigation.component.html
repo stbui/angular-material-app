@@ -1,21 +1,50 @@
-<div class="template-10 p-16">
-  <div class="pb-16" fxlayout="row" fxlayoutAlign="space-between center">
-    <div class="info">
-      <div class="title secondary-text" ng-if="card.title">
-        card.title
-      </div>
-
-      <div class="subtitle h2" ng-if="card.subtitle">
-        card.subtitle
-      </div>
-    </div>
-
-    <div class="media ml-16">
-      <img class="image">
-    </div>
-  </div>
-
-  <div class="text">
-    card.text
+<div fxlayout="row" fxLayoutWrap>
+  <div fxFlex="100" fxFlex.gt-md="20" fxFlex.gt-sm="33.3" fxFlex.gt-xs="50" *ngFor="let nav of navigations | async">
+    <md-card class="widget">
+      <md-card-title class="nav-title"><a href="{{ nav.link }}" target="_blank">{{ nav.title }}</a></md-card-title>
+      <md-card-content class="nav-desc">{{ nav.description }}</md-card-content>
+    </md-card>
   </div>
 </div>
+
+
+<!--<div fxLayout="column" fxLayoutAlign="center stretch">-->
+
+  <!--<div fxLayout="column" fxLayout.gt-sm="row" fxLayoutAlign="space-between stretch">-->
+
+    <!--<div fxLayout="column" fxLayout.gt-md="row" fxFlex="100%" fxFlex.gt-sm>-->
+      <!--<div fxFlex="100%" fxFlex.gt.sm>-->
+        <!--<md-card class="widget">-->
+          <!--<md-card-title>1</md-card-title>-->
+          <!--<md-card-content>1</md-card-content>-->
+        <!--</md-card>-->
+      <!--</div>-->
+
+      <!--<div fxFlex="100%" fxFlex.gt.sm>-->
+        <!--<md-card class="widget">-->
+          <!--<md-card-title>2</md-card-title>-->
+          <!--<md-card-content>2</md-card-content>-->
+        <!--</md-card>-->
+      <!--</div>-->
+
+    <!--</div>-->
+
+    <!--<div fxLayout="column" fxLayout.gt-md="row" fxFlex="100%" fxFlex.gt-sm>-->
+      <!--<div fxFlex="100%" fxFlex.gt.sm>-->
+        <!--<md-card class="widget">-->
+          <!--<md-card-title>3</md-card-title>-->
+          <!--<md-card-content>bdfaad</md-card-content>-->
+        <!--</md-card>-->
+      <!--</div>-->
+
+      <!--<div fxFlex="100%" fxFlex.gt.sm>-->
+        <!--<md-card class="widget">-->
+          <!--<md-card-title>4</md-card-title>-->
+          <!--<md-card-content>5fg</md-card-content>-->
+        <!--</md-card>-->
+      <!--</div>-->
+    <!--</div>-->
+
+  <!--</div>-->
+
+<!--</div>-->
