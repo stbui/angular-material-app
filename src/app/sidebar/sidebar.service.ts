@@ -110,6 +110,10 @@ export class SidebarService {
           {
             "name":"terms",
             "links":"/terms"
+          },
+          {
+            "name":"收藏神器",
+            "links":"/pages/collection"
           }
         ]
       },

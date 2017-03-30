@@ -9,6 +9,7 @@ import { PagesComponent } from './pages.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { ServicesComponent } from './services/services.component';
+import { CollectionComponent } from './collection/collection.component';
 
 @NgModule({
   imports: [
@@ -22,7 +23,8 @@ import { ServicesComponent } from './services/services.component';
     PagesComponent,
     AboutComponent,
     ContactComponent,
-    ServicesComponent
+    ServicesComponent,
+    CollectionComponent
   ]
 })
 export class PagesModule { }

@@ -5,6 +5,7 @@ import { AdminComponent } from '../admin/admin.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { ServicesComponent } from './services/services.component';
+import { CollectionComponent } from './collection/collection.component';
 
 const routers: Routes = [
   {
@@ -18,6 +19,10 @@ const routers: Routes = [
       {
         path: 'pages/contact',
         component: ContactComponent
+      },
+      {
+        path: 'pages/collection',
+        component: CollectionComponent
       },
       {
         path: 'pages/services',

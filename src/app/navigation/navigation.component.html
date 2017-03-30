@@ -3,8 +3,8 @@
     <md-card-content>
       <div class="nav-category">
         <div class="nav-category-title">专辑：</div>
-        <a class="nav-category-item active" (click)="findNavLists()">全部</a>
-        <a class="nav-category-item" (click)="findNavLists(category.id)" *ngFor="let category of categorys">{{ category.name }}</a>
+        <a class="nav-category-item" [class.active]="nav_id == 0" (click)="findNavLists()">全部</a>
+        <a class="nav-category-item" [class.active]="nav_id == category.id" (click)="findNavLists(category.id)" *ngFor="let category of categorys">{{ category.name }}</a>
       </div>
     </md-card-content>
   </md-card>
