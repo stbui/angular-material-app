@@ -7,6 +7,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { RoutingModule } from './navigation-routing.module';
 import { NavigationService } from './navigation.service';
 import { NavigationComponent } from './navigation.component';
+import { PaginationComponent } from './pagination/pagination.component';
 
 @NgModule({
   imports: [
@@ -17,7 +18,8 @@ import { NavigationComponent } from './navigation.component';
     RoutingModule
   ],
   declarations: [
-    NavigationComponent
+    NavigationComponent,
+    PaginationComponent
   ],
   providers: [
     { provide: 'NavigationService', useClass: NavigationService }

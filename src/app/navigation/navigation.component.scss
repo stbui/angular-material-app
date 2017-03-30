@@ -18,3 +18,36 @@
   min-height: 150px;
   overflow: hidden;
 }
+
+.nav-category {
+  position: relative;
+  padding-left: 79px;
+}
+.nav-category-title {
+  margin: 0 0 15px;
+  position: absolute;
+  left: 10px;
+  border-bottom: none;
+  font-size: 14px;
+  line-height: 28px;
+  color: #333;
+}
+
+.nav-category-item {
+  display: inline-block;
+  margin-right: 10px;
+  padding: 0 5px;
+  font-size: 14px;
+  line-height: 28px;
+  color: #333;
+  cursor: default;
+
+
+  .active,
+  &.active,
+  &:hover {
+    background-color: #049DF6;
+    color: #fff !important;
+  }
+
+}

@@ -115,6 +115,30 @@ https://wrapbootstrap.com/search?q=Material+
 
 https://genesisui.com/demo/?theme=leaf&version=angular2
 
+##### Rxjs
+
+https://github.com/benjycui/introrx-chinese-edition
+
+https://github.com/kittencup/angular2-ama-cn/issues/40
+
+https://yuyang041060120.github.io/2016/05/16/observable-vs-promise/
+
+#### other
+
+https://github.com/hstarorg/ngx-modular-platform
+
+angular2 issues
+
+https://github.com/kittencup/angular2-ama-cn/issues
+
+Angular 2 中文资料汇总(文章，视频，教程)
+
+https://github.com/kittencup/angular2-learning-cn
+
+ng-book 2 总目录
+
+https://github.com/kittencup/angular2-ama-cn/issues/43
+
 
 angular2
 https://teradata.github.io/covalent/#/

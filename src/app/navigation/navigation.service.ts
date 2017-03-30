@@ -7,7 +7,7 @@ import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 export class NavigationService {
 
   private _navigations: BehaviorSubject<any>;
-  private apiUrl='http://127.0.0.1:8360/api/link?topicId=&page=1';
+  private apiUrl = 'http://127.0.0.1:8360/api';
 
   get navigations() {
     return this._navigations.asObservable();
@@ -17,13 +17,20 @@ export class NavigationService {
     this._navigations = new BehaviorSubject<any>([]);
   }
 
-  getNavs() {
-    this.http.get(this.apiUrl)
-      .map(res => res.json().data)
+  getNavs(topicId:any = '', page:any = 1) {
+    const url = `${this.apiUrl}/link?topicId=${topicId}&page=${page}`;
+    this.http.get(url)
+      .map(res => res.json())
       .do(res => console.log(res))
       .subscribe(res => {
         this._navigations.next(res);
       });
   }
 
+  getCategorys() {
+    const url = `${this.apiUrl}/topic`;
+    return this.http.get(url)
+      .map(res => res.json())
+      .do(res => console.log(res));
+  }
 }
