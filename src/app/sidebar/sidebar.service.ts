@@ -20,36 +20,41 @@ export class SidebarService {
           {
             "name": "Buttons",
             "badeg": 3,
-            "links": "/components/buttons"
+            "links": "/materials/buttons"
           },
           {
             "name": "Cards",
-            "links": "/components/cards"
+            "links": "/materials/cards"
           },
           {
             "name": "Lists",
-            "links": "/components/lists"
+            "links": "/materials/lists"
           },
           {
             "name": "Menu",
-            "links": "/components/menu"
-          },
-          {
-            "name": "Dialogs",
-            "links": "/components/dialog"
+            "links": "/materials/menu"
           },
           {
             "name": "Slider",
-            "links": "/components/slider"
+            "links": "/materials/slider"
           },
           {
             "name": "Snack-Bar",
-            "links": "/components/sanck-bar"
+            "links": "/materials/sanck-bar"
           },
           {
             "name": "Toast",
-            "links": "/components/toast"
+            "links": "/materials/toast"
+          },
+          {
+            "name": "Tooltips",
+            "links": "/materials/tooltips"
+          },
+          {
+            "name": "Dialogs",
+            "links": "/materials/dialogs"
           }
+
         ]
       },
       {

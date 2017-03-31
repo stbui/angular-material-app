@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MaterialModule } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { QuillModule } from 'ngx-quill';
 
 import { MailComponent } from './mail.component';
 
@@ -9,7 +10,8 @@ import { MailComponent } from './mail.component';
   imports: [
     CommonModule,
     FlexLayoutModule,
-    MaterialModule.forRoot()
+    MaterialModule.forRoot(),
+    QuillModule
   ],
   declarations: [MailComponent]
 })

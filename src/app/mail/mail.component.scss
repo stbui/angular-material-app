@@ -1,0 +1,440 @@
+$color__inactive: #616161;
+$color__primary: #3F51B5;
+$color__read: #9F9F9F;
+$color__checkbox__star: #616161;
+
+$height__search__title: 56px;
+$margin-top__search__title: 42px;
+
+:host {
+  display: block;
+  position: relative;
+  height: 100%;
+}
+
+.inbox {
+  height: 100%;
+
+  .header {
+    min-height: 200px;
+    max-height: 200px;
+    background: #fff url('/assets/img/backgrounds/2.jpg') no-repeat center center fixed;
+    background-size: cover;
+  }
+
+  .container {
+    margin-top: -200px;
+    max-height: 100%;
+    box-sizing: border-box;
+    height: 100%;
+  }
+
+  .navigation {
+    padding: $margin-top__search__title 24px 0;
+
+    .title-container {
+      min-height: $height__search__title;
+      max-height: $height__search__title;
+      padding-left: 16px;
+      padding-right: 16px;
+      color: white;
+      font-size: 28px;
+
+      md-icon {
+        margin-right: 4px;
+        height: 24px;
+        width: 24px;
+        font-size: 24px;
+        vertical-align: sub;
+      }
+
+      .title {
+        vertical-align: middle;
+      }
+    }
+
+    .compose-container {
+      margin: 52px 16px 0 12px;
+
+      .compose {
+        padding-left: 20px;
+        padding-right: 32px;
+        width: 100%;
+
+        md-icon {
+          margin-right: 10px;
+        }
+      }
+    }
+
+    .nav-list {
+      margin-top: 28px;
+
+      .nav-item {
+        color: $color__inactive;
+        margin: 8px 0;
+
+        .nav-title {
+
+          .icon {
+            margin-right: 12px;
+            font-size: 22px;
+            width: 22px;
+            height: 22px;
+          }
+
+          .text {
+            font-size: 14px;
+          }
+
+          .icon, .text {
+            font-weight: 500;
+            vertical-align: middle;
+          }
+        }
+
+        &.active {
+          color: #3F51B5;
+        }
+      }
+    }
+
+    md-divider {
+      margin: 0 16px;
+    }
+  }
+
+  .content-container {
+    max-width: 100%;
+    height: 100%;
+
+    .search {
+      background: white;
+      margin-top: $margin-top__search__title;
+      min-height: $height__search__title;
+      max-height: $height__search__title;
+
+      md-icon {
+        vertical-align: middle;
+        margin-right: 14px;
+        margin-left: 16px;
+      }
+
+      input {
+        border: 0;
+        height: $height__search__title;
+        outline: none;
+      }
+    }
+
+    .mails-container {
+      margin-top: 43px;
+      background: white;
+      position: relative;
+      height: 100%;
+      overflow-y: hidden;
+
+      .toolbar {
+        box-sizing: border-box;
+        min-height: 60px;
+        max-height: 60px;
+        border-bottom: 1px solid #EEE;
+        padding: 8px 24px;
+        color: $color__inactive;
+
+        .chevrons {
+          margin-left: 16px;
+        }
+      }
+
+      .toolbar-detail {
+        .icon-group {
+          border-right: 1px solid #EEE;
+        }
+
+        .back {
+          margin-left: -12px;
+          margin-right: 12px;
+        }
+
+        .archive {
+          margin-left: 12px;
+          margin-right: 6px;
+        }
+
+        .spam {
+          margin-left: 6px;
+          margin-right: 6px;
+        }
+
+        .delete {
+          margin-left: 6px;
+          margin-right: 12px;
+        }
+
+        .move {
+          margin-left: 12px;
+          margin-right: 6px;
+        }
+
+        .label {
+          margin-left: 6px;
+          margin-right: 12px;
+        }
+
+        .options {
+          margin-left: 12px;
+          margin-right: 12px;
+        }
+      }
+
+      .mails {
+        overflow-y: auto;
+        height: calc(100% - 54px);
+        position: relative;
+
+        .mail {
+          padding: 8px 24px;
+          white-space: nowrap;
+          font-weight: 500;
+          font-size: 15px;
+          text-decoration: none;
+          color: $color__inactive;
+          transition: background .1s ease-in-out;
+          position: relative;
+          border-bottom: 1px solid #EEE;
+          cursor: pointer;
+          min-height: 42px;
+
+          &.read {
+            color: $color__read;
+            font-weight: normal;
+          }
+
+          .start-wrapper {
+            padding-right: 8px;
+
+            .checkbox {
+              margin: 0 8px 0 0;
+              color: $color__checkbox__star;
+            }
+
+            .star {
+              margin: 0 8px;
+              color: $color__checkbox__star;
+
+              &.active {
+                color: #FFC107;
+              }
+            }
+
+            .from-avatar {
+              margin: 0 8px;
+              border-radius: 50%;
+            }
+
+            .from-name {
+              margin: 0 8px;
+              overflow-x: hidden;
+              text-overflow: ellipsis;
+            }
+          }
+
+          .content-wrapper {
+            white-space: nowrap;
+            overflow-x: hidden;
+            display: block;
+            margin: 0;
+
+            .labels {
+              .label {
+                padding: 2px 8px;
+                font-size: 13px;
+                color: #FFFFFF;
+              }
+
+              .label + .label {
+                margin-left: 6px;
+              }
+            }
+
+            .subject {
+              margin: 0 8px;
+            }
+
+            .middot {
+              font-weight: bold;
+            }
+
+            .content {
+              overflow-x: hidden;
+              text-overflow: ellipsis;
+              margin: 0 8px;
+            }
+          }
+
+          .end-wrapper {
+            margin-left: 16px;
+
+            .when {
+              margin: 0 8px;
+            }
+
+            .options {
+              margin: 0 0 0 8px;
+              color: $color__checkbox__star;
+            }
+          }
+
+          &:hover {
+            background: #EEE;
+          }
+        }
+
+        .no-mails-container {
+          margin-top: 16px;
+
+          .no-mails {
+            font-size: 18px;
+          }
+        }
+
+        .mail-detail {
+          padding: 24px 32px;
+
+          .mail-header {
+
+            .avatar {
+              height: 45px;
+              width: 45px;
+              margin-right: 20px;
+            }
+
+            .from {
+              font-weight: 500;
+              font-size: 15px;
+            }
+
+            .to {
+              color: #999;
+              font-size: 15px;
+              margin-top: 2px;
+              font-weight: 500;
+
+              md-icon {
+                height: 16px;
+                width: 16px;
+                font-size: 16px;
+                vertical-align: middle;
+              }
+            }
+
+            .mail-extra {
+              color: #999;
+              font-size: 15px;
+              font-weight: 500;
+
+              .when {
+                vertical-align: middle;
+              }
+
+              .options {
+                vertical-align: middle;
+                margin-left: 16px;
+              }
+            }
+          }
+
+          .mail-content {
+            margin-top: 32px;
+            margin-bottom: 240px;
+
+            .mail-content-text {
+
+            }
+          }
+
+          .attachments-container {
+            .attachments-header {
+              color: #999;
+
+              .title {
+                font-size: 13px;
+                font-weight: 500;
+                margin-right: 24px;
+              }
+
+              .download {
+                margin-left: 24px;
+              }
+            }
+
+            .attachments {
+              margin-top: 12px;
+              margin-bottom: 12px;
+
+              .attachment {
+                margin-right: 12px;
+
+                img {
+                  max-height: 140px;
+                  max-width: 80px;
+                }
+              }
+            }
+          }
+
+          .respond {
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            padding: 24px 32px;
+            border-top: 1px solid #EEE;
+            cursor: pointer;
+
+            .avatar {
+              margin-right: 28px;
+            }
+
+            .click-reply {
+              color: #999;
+
+              .semi-bold {
+                font-weight: 500;
+              }
+            }
+
+            .reply {
+              color: #2B303B;
+              margin-right: 24px;
+            }
+
+            .respond-buttons {
+              margin-top: 12px;
+
+              md-icon {
+                font-size: 18px;
+                height: 18px;
+                width: 18px;
+                margin-left: 6px;
+              }
+
+              button {
+                margin-left: 12px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .inbox {
+    .content-container {
+      max-width: calc(100% - 290px); // 250px sidebar + 40px margin
+    }
+  }
+}

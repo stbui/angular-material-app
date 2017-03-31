@@ -13,8 +13,6 @@ import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { ButtonsComponent } from './buttons/buttons.component';
-import { CardsComponent } from './cards/cards.component';
 import { ProfileComponent } from './profile/profile.component';
 import { BlogComponent } from './blog/blog.component';
 import { SidebarRightComponent } from './sidebar-right/sidebar-right.component';
@@ -31,11 +29,11 @@ import { ChatsModule } from './chats/chats.module';
 import { MailModule } from './mail/mail.module';
 import { PagesModule } from './pages/pages.module';
 import { NavigationModule } from './navigation/navigation.module';
+import { MaterialsModule } from './materials/materials.module';
 
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { SidebarService } from './sidebar/sidebar.service';
 import { SidebarMenuComponent } from './sidebar/menu/menu.component';
-import { ToastComponent } from './toast/toast.component';
 import { ChartComponent } from './chart/chart.component';
 import { AdminComponent } from './admin/admin.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
@@ -48,8 +46,6 @@ import { ChartsModule } from 'ng2-charts/ng2-charts';
     DashboardComponent,
     HeaderComponent,
     FooterComponent,
-    ButtonsComponent,
-    CardsComponent,
     ProfileComponent,
     BlogComponent,
     SidebarComponent,
@@ -59,7 +55,6 @@ import { ChartsModule } from 'ng2-charts/ng2-charts';
     SignupComponent,
     PageNotFoundComponent,
     SidebarMenuComponent,
-    ToastComponent,
     ChartComponent,
     AdminComponent,
     SidenavComponent
@@ -79,7 +74,8 @@ import { ChartsModule } from 'ng2-charts/ng2-charts';
     MailModule,
     PagesModule,
     NavigationModule,
-    ChartsModule
+    ChartsModule,
+    MaterialsModule
   ],
   providers: [
     { provide: 'sidebar', useClass: SidebarService }

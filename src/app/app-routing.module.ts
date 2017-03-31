@@ -3,12 +3,9 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { AdminComponent } from './admin/admin.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { ButtonsComponent } from './buttons/buttons.component';
-import { CardsComponent } from './cards/cards.component';
 import { ProfileComponent } from './profile/profile.component';
 import { SigninComponent } from './signin/signin.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { ToastComponent } from './toast/toast.component';
 import { ChartComponent } from './chart/chart.component';
 import { ChatsComponent } from './chats/chats.component';
 import { MailComponent } from './mail/mail.component';
@@ -27,9 +24,6 @@ const routers: Routes = [
       {path: 'dashboard', component: DashboardComponent},
       {path: 'apps/chats', component: ChatsComponent},
       {path: 'apps/mail', component: MailComponent},
-      {path: 'components/buttons', component: ButtonsComponent},
-      {path: 'components/cards', component: CardsComponent},
-      {path: 'components/toast', component: ToastComponent},
       {path: 'components/chart', component: ChartComponent}
     ]
   }

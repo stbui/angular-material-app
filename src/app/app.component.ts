@@ -10,7 +10,7 @@ import { CustomizerService } from './customizer/customizer.service';
 export class AppComponent {
 
   theme: string = 'bg-success';
-  title = 'angular2 material2 web';
+  title = 'angular2 material2 web - Power by 码农庄园';
 
   onThemeChanges(theme) {
     this.theme = theme;
