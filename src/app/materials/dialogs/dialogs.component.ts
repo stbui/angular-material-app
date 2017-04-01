@@ -21,3 +21,19 @@ export class DialogsComponent implements OnInit {
   }
 
 }
+
+
+// @Component({
+//   selector: 'stbui-demo-dialog',
+//   template: `
+//     <h1>test</h1>
+//
+//     <md-dialog-actions align="end">
+//       <button md-button (click)="dialogRef.close('No!')">No</button>
+//       <button md-button color="primary" (click)="dialogRef.close('Yes!')">Yes</button>
+//     </md-dialog-actions>
+//   `
+// })
+// export class DemoDialog {
+//   constructor(public dialogRef: MdDialogRef<DemoDialog>) { }
+// }

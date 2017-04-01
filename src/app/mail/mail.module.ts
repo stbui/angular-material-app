@@ -5,6 +5,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { QuillModule } from 'ngx-quill';
 
 import { MailComponent } from './mail.component';
+import { ComposeComponent } from './compose/compose.component';
 
 @NgModule({
   imports: [
@@ -13,6 +14,9 @@ import { MailComponent } from './mail.component';
     MaterialModule.forRoot(),
     QuillModule
   ],
-  declarations: [MailComponent]
+  entryComponents: [
+    ComposeComponent
+  ],
+  declarations: [MailComponent, ComposeComponent]
 })
 export class MailModule { }

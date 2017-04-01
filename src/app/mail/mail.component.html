@@ -9,9 +9,9 @@
       </div>
 
       <div class="compose-container">
-        <button class="compose" md-raised-button color="primary">
+        <button class="compose" md-raised-button color="primary" (click)="openComposeDialog()">
           <md-icon>mode_edit</md-icon>
-          <span>Compose</span>
+          <span>写信</span>
         </button>
       </div>
 
@@ -20,51 +20,51 @@
         <a class="nav-item mt0" md-list-item>
           <h3 class="nav-title" md-line>
             <md-icon class="icon">inbox</md-icon>
-            <span class="text">Primary </span>
+            <span class="text">收件箱 </span>
           </h3>
         </a>
         <a class="nav-item" md-list-item>
           <h3 class="nav-title" md-line>
             <md-icon class="icon">group</md-icon>
-            <span class="text">Social </span>
+            <span class="text">联系人 </span>
           </h3>
         </a>
         <a class="nav-item" md-list-item>
           <h3 class="nav-title" md-line>
             <md-icon class="icon">local_offer</md-icon>
-            <span class="text">Promotions </span>
+            <span class="text">标签 </span>
           </h3>
         </a>
         <md-divider></md-divider>
         <a class="nav-item" md-list-item>
           <h3 class="nav-title" md-line>
             <md-icon class="icon">star</md-icon>
-            <span class="text">Starred</span>
+            <span class="text">星标邮件</span>
           </h3>
         </a>
         <a class="nav-item" md-list-item>
           <h3 class="nav-title" md-line>
             <md-icon class="icon">send</md-icon>
-            <span class="text">Sent Mails</span>
+            <span class="text">已发送</span>
           </h3>
         </a>
         <a class="nav-item" md-list-item>
           <h3 class="nav-title" md-line>
             <md-icon class="icon">drafts</md-icon>
-            <span class="text">Drafts</span>
+            <span class="text">草稿箱</span>
           </h3>
         </a>
         <md-divider></md-divider>
         <a class="nav-item" md-list-item>
           <h3 class="nav-title" md-line>
             <md-icon class="icon">backspace</md-icon>
-            <span class="text">Spam</span>
+            <span class="text">垃圾邮件</span>
           </h3>
         </a>
         <a class="nav-item" md-list-item>
           <h3 class="nav-title" md-line>
             <md-icon class="icon">delete</md-icon>
-            <span class="text">Trash</span>
+            <span class="text">回收站</span>
           </h3>
         </a>
       </md-nav-list>
@@ -77,7 +77,7 @@
         <div fxLayout="row" fxLayoutAlign="center center">
           <md-icon>search</md-icon>
         </div>
-        <input fxFlex type="search" placeholder="Search...">
+        <input fxFlex type="search" placeholder="搜索...">
       </div>
 
       <div class="mails-container mat-elevation-z2" fxFlex>
@@ -162,6 +162,7 @@
                 </button>
               </div>
             </a>
+
           </div>
 
           <div class="no-mails-container" fxLayout="column" fxLayoutAlign="start center">
@@ -192,7 +193,7 @@
 
               <div class="attachments-container">
                 <div class="attachments-header" fxLayout="row" fxLayoutAlign="start center">
-                  <span class="title">Attachments</span>
+                  <span class="title">附件</span>
                   <md-divider fxFlex></md-divider>
                   <button class="download" md-icon-button>
                     <md-icon>file_download</md-icon>

@@ -1,0 +1,45 @@
+<div class="inbox-compose">
+  <div md-dialog-content fxLayout="row" fxLayoutAlign="space-between center">
+    <span>写信</span>
+    <button md-dialog-close md-icon-button>
+      <md-icon>close</md-icon>
+    </button>
+  </div>
+  <div class="content" md-dialog-content>
+    <p>
+      <md-input-container class="input-container">
+        <input mdInput placeholder="收件人">
+      </md-input-container>
+    </p>
+
+    <p>
+      <md-input-container class="input-container">
+        <input mdInput placeholder="发件人" disabled value="stbui@stbui.com">
+      </md-input-container>
+    </p>
+
+    <p>
+      <md-input-container class="input-container">
+        <input mdInput placeholder="主题">
+      </md-input-container>
+    </p>
+
+    <p class="editor">
+      <quill-editor></quill-editor>
+    </p>
+
+  </div>
+  <div md-dialog-actions fxLayout="row">
+    <button md-dialog-close md-icon-button>
+      <md-icon>delete</md-icon>
+    </button>
+    <span fxFlex><!-- fill space --></span>
+    <button md-icon-button>
+      <md-icon>attachment</md-icon>
+    </button>
+    <button class="send" md-raised-button color="primary" (click)="send()">
+      发送 <md-icon>send</md-icon>
+    </button>
+  </div>
+
+</div>
