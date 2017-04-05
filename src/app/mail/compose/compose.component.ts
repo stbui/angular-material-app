@@ -8,6 +8,12 @@ import {MdDialogRef} from "@angular/material";
 })
 export class ComposeComponent implements OnInit {
 
+  mail;
+  name;
+  address = 'stbui@stbui.com';
+  subject;
+  content;
+
   constructor(
     private dialogRef: MdDialogRef<ComposeComponent>
   ) { }
@@ -16,6 +22,16 @@ export class ComposeComponent implements OnInit {
   }
 
   send() {
-    this.dialogRef.close('邮件已发送');
+    this.mail = {
+      from: {
+        name: this.name,
+        mail: this.address
+      },
+      subject: this.subject,
+      content: this.content
+    }
+
+    console.log(this.mail,  this.name,this.subject)
+    this.dialogRef.close(this.mail);
   }
 }
