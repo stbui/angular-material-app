@@ -1,13 +1,18 @@
+:host {
+  position: relative;
+  width: 100%;
+}
+
+.todo-item {
+
+}
+
 input {
   text-align: center;
   width: 40px;
-  /* auto, since non-WebKit browsers doesn't support input styling */
   height: auto;
-  position: absolute;
-  top: 0;
-  bottom: 0;
   margin: auto 0;
-  border: none; /* Mobile Safari */
+  border: none;
   -webkit-appearance: none;
   appearance: none;
 }
@@ -19,36 +24,11 @@ input:checked::after {
 }
 label {
   word-break: break-all;
-  padding: 15px 60px 15px 15px;
-  margin-left: 45px;
-  display: block;
   line-height: 1.2;
   transition: color 0.4s;
+  margin-left: 10px;
 }
 .labelcompleted {
   color: #d9d9d9;
   text-decoration: line-through;
-}
-.destroy {
-  display: none;
-  position: absolute;
-  top: 0;
-  right: 10px;
-  bottom: 0;
-  width: 40px;
-  height: 40px;
-  margin: auto 0;
-  font-size: 30px;
-  color: #cc9a9a;
-  margin-bottom: 11px;
-  transition: color 0.2s ease-out;
-}
-.destroy:hover {
-  color: #af5b5e;
-}
-.destroy:after {
-  content: '×';
-}
-.destroy {
-  display: block;
 }

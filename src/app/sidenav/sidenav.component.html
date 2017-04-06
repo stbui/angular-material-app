@@ -1,19 +1,20 @@
 <div class="sidenav-container" fxLayout="column">
-  <md-toolbar class="primary">
-
+  <md-toolbar class="sidebar-logo stb-dark">
+    <md-icon>view_compact</md-icon>
+    <a href="/" class="sidebar-logo-text">stbui</a>
   </md-toolbar>
 
-  <div class="sidenav-scrollbar-container" fxLayout="column">
+  <div class="sidenav-scrollbar-container stb-dark" fxLayout="column">
     <md-nav-list fxLayout="column">
-      <a class="sidenav-anchor" md-list-item md-ripple>
-        <md-icon>build</md-icon>
-        <span class="sidenav-item-name">test</span>
+      <a class="sidenav-anchor" md-list-item md-ripple *ngFor="let item of items">
+        <md-icon>{{ item.icon }}</md-icon>
+        <span class="sidenav-item-name">{{ item.name }}</span>
         <span fxFlex></span>
         <span class="badge">3</span>
       </a>
-      <a class="sidenav-anchor" md-list-item md-ripple (click)="toggleDropdown()">
+      <a class="sidenav-anchor active" md-list-item md-ripple (click)="toggleDropdown()">
         <md-icon>build</md-icon>
-        <span class="sidenav-item-name">test</span>
+        <span class="sidenav-item-name">UI Kit</span>
         <span fxFlex></span>
         <span class="badge">3</span>
         <md-icon class="sidenav-item-dropdown-indicator rotate fade-in-on-icon-sidenav">expand_more</md-icon>
@@ -21,10 +22,16 @@
       <md-nav-list fxLayout="column">
         <a class="sidenav-anchor" md-list-item md-ripple>
           <md-icon></md-icon>
-          <span class="sidenav-item-name">test</span>
+          <span class="sidenav-item-name">Tables</span>
           <span fxFlex></span>
           <span class="badge">3</span>
           </a>
+        <a class="sidenav-anchor" md-list-item md-ripple>
+          <md-icon></md-icon>
+          <span class="sidenav-item-name">Tables</span>
+          <span fxFlex></span>
+          <span class="badge">3</span>
+        </a>
       </md-nav-list>
     </md-nav-list>
 

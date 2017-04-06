@@ -31,6 +31,7 @@ npm install -g tslint
 ```
 npm install -g json-server
 json-server ./src/app/todo/todo.data.json
+json-server ./src/assets/data/data.json
 ```
 
 
@@ -106,6 +107,8 @@ bootstrap
 - [ng-lightning](http://ng-lightning.github.io/ng-lightning/#/): http://ng-lightning.github.io/ng-lightning/#/
 
 #####
+
+https://github.com/surmon-china/angular-admin
 
 http://bootswatch.com
 

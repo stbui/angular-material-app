@@ -3,10 +3,12 @@ import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
 import { MaterialModule } from '@angular/material';
+import { FlexLayoutModule } from "@angular/flex-layout";
 
 import { RoutingModule } from './todo-routing.module'
-import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { InMemoryTodoDbService } from './todo.data';
+// test
+// import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
+// import { InMemoryTodoDbService } from './todo.data';
 
 import { TodoComponent } from './todo.component';
 import { TodoService } from './todo.service';
@@ -21,6 +23,7 @@ import { TodoListComponent } from './todo-list/todo-list.component';
     FormsModule,
     HttpModule,
     MaterialModule.forRoot(),
+    FlexLayoutModule,
     RoutingModule,
     // InMemoryWebApiModule.forRoot(InMemoryTodoDbService)
   ],

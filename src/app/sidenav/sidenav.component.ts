@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 
 @Component({
   selector: 'app-sidenav',
@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidenavComponent implements OnInit {
 
-  constructor() { }
+  items;
+
+  constructor( @Inject('sidebar') private service,) { }
 
   ngOnInit() {
+    this.getMemus();
+  }
+
+  getMemus() {
+    this.items = this.service.getMenus();
   }
 
   toggleDropdown() {

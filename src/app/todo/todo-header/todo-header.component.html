@@ -1,9 +1,5 @@
-<header>
-  <h1>Todos</h1>
-  <input
-    class="new-todo"
-    [placeholder]="placeholder"
-    autofocus=""
-    [(ngModel)]="inputValue"
-    (keyup.enter)="enterUp()">
-</header>
+<div fxLayout="column">
+  <md-input-container fxFlex>
+    <input class="new-todo" mdInput [placeholder]="placeholder" (keyup.enter)="enterUp()" [(ngModel)]="inputValue">
+  </md-input-container>
+</div>

@@ -2,6 +2,32 @@
   height: 100%;
 }
 
+.sidenav-container {
+  md-toolbar {
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.sidebar-logo {
+  color: #fff;
+  //box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+
+  &-text {
+   color:#fff;
+    font-weight: normal;
+    font-size: 23px;
+    margin-left: 10px;
+  }
+}
+
+.sidenav-scrollbar-container {
+  md-icon {
+    width: 18px;
+    height: 18px;
+    font-size: 18px;
+    line-height: 18px;
+  }
+}
 
 .sidenav-anchor {
   position: relative;
@@ -10,11 +36,12 @@
   transition: color .1s;
 
   &:hover {
-    color: #FFFFFF;
+    color: #fafafa;
   }
 
   &.active {
-    color: #FFFFFF;
+    background-color: #2D353C;
+    color: #fafafa;
   }
 }
 
@@ -22,3 +49,22 @@
   margin-left: 24px;
   font-size: 14px;
 }
+
+
+/***************/
+.stb-dark {
+  background: #333C44;
+
+  .sidenav-anchor {
+    color: #a1a1a1;
+
+    &:hover {
+      color: #fafafa;
+    }
+
+    &.active {
+      color: #fafafa;
+    }
+  }
+}
+

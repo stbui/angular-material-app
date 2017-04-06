@@ -8,8 +8,8 @@ import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 @Injectable()
 export class TodoService {
 
-  private apiUrl = 'api/todos';
-  // private apiUrl = 'http://127.0.0.1:3000/todos';
+  // private apiUrl = 'api/todos';
+  private apiUrl = 'http://localhost:3000/todos';
   private headers = new Headers({'Content-Type': 'application/json'});
   private _todos: BehaviorSubject<TodoModel[]>;
   private dataStore: {todos: TodoModel[]};
@@ -31,7 +31,7 @@ export class TodoService {
     }
 
     this.http.post(this.apiUrl, JSON.stringify(todoToAdd), {headers: this.headers})
-      .map(res => res.json().data as TodoModel)
+      .map(res => res.json() as TodoModel)
       .subscribe(todo => {
         this.dataStore.todos = [...this.dataStore.todos, todo];
         this._todos.next(Object.assign({}, this.dataStore).todos);
@@ -69,7 +69,7 @@ export class TodoService {
 
   getTodos() {
     this.http.get(this.apiUrl)
-      .map(res => res.json().data as TodoModel[])
+      .map(res => res.json() as TodoModel[])
       .do(r => console.log(r))
       .subscribe(todos => {
         this.dataStore.todos = [...todos];
@@ -82,7 +82,7 @@ export class TodoService {
       case 'ACTIVE':
         this.http
           .get(`${this.apiUrl}?completed=false`)
-          .map(res => res.json().data as TodoModel[])
+          .map(res => res.json() as TodoModel[])
           .subscribe(todos => {
             this.dataStore.todos = [...todos];
             this._todos.next(Object.assign({}, this.dataStore).todos);
@@ -91,7 +91,7 @@ export class TodoService {
       case 'COMPLETED':
         this.http
           .get(`${this.apiUrl}?completed=true`)
-          .map(res => res.json().data as TodoModel[])
+          .map(res => res.json() as TodoModel[])
           .subscribe(todos => {
             this.dataStore.todos = [...todos];
             this._todos.next(Object.assign({}, this.dataStore).todos);

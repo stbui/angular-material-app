@@ -5,8 +5,9 @@ import { FormsModule } from '@angular/forms';
 import { FlexLayoutModule } from "@angular/flex-layout";
 import { MaterialModule } from "@angular/material";
 import { PerfectScrollbarModule, PerfectScrollbarConfigInterface } from "angular2-perfect-scrollbar";
-import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { InMemoryChatDbService } from './chats.data';
+// test
+// import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
+// import { InMemoryChatDbService } from './chats.data';
 
 import { ChatsService } from './chats.service';
 import { ChatsComponent } from './chats.component';

@@ -1,11 +1,9 @@
-<footer class="footer">
-  <span class="todo-count">
-    <strong>{{itemCount}}</strong> {{itemCount == 1 ? 'item' : 'items'}} left
-  </span>
-  <ul class="filters">
-    <li><a routerLink="/apps/todo/ALL">All</a></li>
-    <li><a routerLink="/apps/todo/ACTIVE">Active</a></li>
-    <li><a routerLink="/apps/todo/COMPLETED">Completed</a></li>
-  </ul>
-  <button class="clear-completed" (click)="onClick()">Clear completed</button>
+<footer class="todo-footer" fxLayout="row" fxLayoutAlign="space-around center">
+  <span><strong>{{itemCount}}</strong> 项 </span>
+  <div class="filters">
+    <button md-button routerLink="/apps/todo/ALL">所有</button>
+    <button md-button routerLink="/apps/todo/ACTIVE">进行中</button>
+    <button md-button routerLink="/apps/todo/COMPLETED">完成</button>
+  </div>
+  <button md-button (click)="onClick()"><md-icon>delete</md-icon>清除完成</button>
 </footer>
