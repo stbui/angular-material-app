@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, HostBinding } from '@angular/core';
 import { SidenavItem } from './item.model';
 
 @Component({
@@ -10,6 +10,8 @@ export class ItemComponent implements OnInit {
 
   @Input() item: SidenavItem;
   isOpen: boolean = false;
+
+  // @HostBinding('class.open');
 
   constructor() {
   }
