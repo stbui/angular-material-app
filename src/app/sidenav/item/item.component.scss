@@ -1,0 +1,21 @@
+.sidenav-anchor {
+  position: relative;
+}
+
+
+/**/
+:host {
+  color: #a1a1a1;
+}
+
+.sidenav-anchor {
+
+
+  &:hover {
+    color: #fafafa;
+  }
+
+  &.active {
+    color: #fafafa;
+  }
+}

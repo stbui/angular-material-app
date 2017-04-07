@@ -30,13 +30,13 @@ import { MailModule } from './mail/mail.module';
 import { PagesModule } from './pages/pages.module';
 import { NavigationModule } from './navigation/navigation.module';
 import { MaterialsModule } from './materials/materials.module';
+import { SidenavModule } from './sidenav/sidenav.module';
 
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { SidebarService } from './sidebar/sidebar.service';
 import { SidebarMenuComponent } from './sidebar/menu/menu.component';
 import { ChartComponent } from './chart/chart.component';
 import { AdminComponent } from './admin/admin.component';
-import { SidenavComponent } from './sidenav/sidenav.component';
 
 import { ChartsModule } from 'ng2-charts/ng2-charts';
 
@@ -57,8 +57,7 @@ import { ChartsModule } from 'ng2-charts/ng2-charts';
     PageNotFoundComponent,
     SidebarMenuComponent,
     ChartComponent,
-    AdminComponent,
-    SidenavComponent
+    AdminComponent
   ],
   imports: [
     BrowserModule,
@@ -76,7 +75,8 @@ import { ChartsModule } from 'ng2-charts/ng2-charts';
     PagesModule,
     NavigationModule,
     ChartsModule,
-    MaterialsModule
+    MaterialsModule,
+    SidenavModule
   ],
   providers: [
     { provide: 'sidebar', useClass: SidebarService }
