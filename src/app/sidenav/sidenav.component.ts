@@ -9,13 +9,25 @@ import { SidenavItem } from './item/item.model';
 export class SidenavComponent implements OnInit {
 
   items:SidenavItem[] = [];
-  constructor() { }
+  constructor(@Inject('sidebar') private service) { }
 
   ngOnInit() {
-    this.addItem('demo','icon','route');
+
+    let menus  = this.service.getMenus();
+    menus.forEach((value, index) => {
+      let parentItem = this.addItem(value.name,value.icon,value.links);
+    });
+
+    let demo = this.addItem('demo','icon','route');
+    this.addSubItem(demo,'demosub','/');
+
     this.addItem('demo1','icon','route');
+
     let demo2 = this.addItem('demo2','icon','route');
     this.addSubItem(demo2,'sub','/');
+    this.addSubItem(demo2,'sub','/');
+    this.addSubItem(demo2,'sub','/');
+
   }
 
   addItem(name: string, icon:string,route:string,badge?:string,badgeColor?:string) {

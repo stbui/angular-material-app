@@ -43,3 +43,13 @@
 [A feature-rich yet lightweight data-table crafted for Angular2](https://github.com/swimlane/angular2-data-table)
 
 [Beautiful charts for Angular2 based on Chart.js](https://github.com/valor-software/ng2-charts)
+
+
+### Docker
+
+快速部署
+
+```
+docker pull stbui/angular2-material2-admin-app
+docker run -d -P stbui/angular2-material2-admin-app
+```

@@ -1,17 +1,21 @@
-import { Component, OnInit, Input, HostBinding } from '@angular/core';
+import { Component, OnInit, Input, HostBinding, ViewEncapsulation } from '@angular/core';
 import { SidenavItem } from './item.model';
 
 @Component({
   selector: 'sidenav-item',
   templateUrl: './item.component.html',
-  styleUrls: ['./item.component.scss']
+  styleUrls: ['./item.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class ItemComponent implements OnInit {
 
   @Input() item: SidenavItem;
-  isOpen: boolean = false;
+  isCollapse:boolean = false;
 
-  // @HostBinding('class.open');
+  @HostBinding('class.open')
+  get isOpen() {
+    return this.isCollapse;
+  }
 
   constructor() {
   }
@@ -20,7 +24,7 @@ export class ItemComponent implements OnInit {
   }
 
   toggleDropdown() {
-    this.isOpen = !this.isOpen;
+    this.isCollapse = !this.isCollapse;
   }
 
   getSubItemsHeight() {
@@ -31,7 +35,7 @@ export class ItemComponent implements OnInit {
 
   getOpenSubItemCount(item: SidenavItem): number {
     let count = 0;
-    if (item.hasSubItems() && this.isOpen) {
+    if (item.hasSubItems() && this.isCollapse) {
       count += item.subItems.length;
     }
     return count;
