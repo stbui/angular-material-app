@@ -53,6 +53,10 @@ export class SidebarService {
           {
             "name": "Dialogs",
             "links": "/materials/dialogs"
+          },
+          {
+            "name": "Tabs",
+            "links": "/materials/tabs"
           }
 
         ]

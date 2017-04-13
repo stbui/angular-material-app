@@ -12,6 +12,7 @@ import { DialogsComponent } from './dialogs/dialogs.component';
 import { ListsComponent } from './lists/lists.component';
 import { MenuComponent } from './menu/menu.component';
 import { SliderComponent } from './slider/slider.component';
+import { TabsComponent } from './tabs/tabs.component';
 
 @NgModule({
   imports: [
@@ -28,7 +29,8 @@ import { SliderComponent } from './slider/slider.component';
     DialogsComponent,
     ListsComponent,
     MenuComponent,
-    SliderComponent
+    SliderComponent,
+    TabsComponent
   ]
 })
 export class MaterialsModule { }

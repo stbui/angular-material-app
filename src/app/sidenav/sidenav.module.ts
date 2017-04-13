@@ -5,6 +5,7 @@ import { FlexLayoutModule } from "@angular/flex-layout";
 
 import { SidenavComponent } from './sidenav.component';
 import { ItemComponent } from './item/item.component';
+import { SidenavService } from './sidenav.service';
 
 
 import { PerfectScrollbarModule, PerfectScrollbarConfigInterface } from "angular2-perfect-scrollbar";
@@ -19,6 +20,9 @@ const perfectScrollbarConfig: PerfectScrollbarConfigInterface = {
     FlexLayoutModule,
     PerfectScrollbarModule.forRoot(perfectScrollbarConfig),
   ],
-  declarations: [SidenavComponent, ItemComponent]
+  declarations: [SidenavComponent, ItemComponent],
+  providers: [
+    {provide: 'sidenavService', useClass: SidenavService}
+  ]
 })
 export class SidenavModule { }

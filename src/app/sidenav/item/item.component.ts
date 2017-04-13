@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, HostBinding, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, Input,Inject, HostBinding, ViewEncapsulation } from '@angular/core';
 import { SidenavItem } from './item.model';
 
 @Component({
@@ -17,7 +17,7 @@ export class ItemComponent implements OnInit {
     return this.isCollapse;
   }
 
-  constructor() {
+  constructor(@Inject('sidenavService') private sidenavService) {
   }
 
   ngOnInit() {
@@ -25,6 +25,9 @@ export class ItemComponent implements OnInit {
 
   toggleDropdown() {
     this.isCollapse = !this.isCollapse;
+    if(this.item.hasSubItems()) {
+      this.sidenavService.toggleCurrentlyOpen(this.item);
+    }
   }
 
   getSubItemsHeight() {

@@ -10,6 +10,7 @@ import { DialogsComponent } from './dialogs/dialogs.component';
 import { ListsComponent } from './lists/lists.component';
 import { MenuComponent } from './menu/menu.component';
 import { SliderComponent } from './slider/slider.component';
+import { TabsComponent } from './tabs/tabs.component'
 
 const routers: Routes = [
   {
@@ -47,6 +48,10 @@ const routers: Routes = [
       {
         path: 'materials/slider',
         component: SliderComponent
+      },
+      {
+        path: 'materials/tabs',
+        component: TabsComponent
       }
 
     ]

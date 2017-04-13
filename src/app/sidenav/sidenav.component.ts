@@ -1,5 +1,6 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { SidenavItem } from './item/item.model';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-sidenav',
@@ -9,24 +10,29 @@ import { SidenavItem } from './item/item.model';
 export class SidenavComponent implements OnInit {
 
   items:SidenavItem[] = [];
-  constructor(@Inject('sidebar') private service) { }
+  private _itemsSubscription :Subscription;
+  constructor(@Inject('sidebar') private sidebarService,
+  @Inject('sidenavService') private service) { }
 
   ngOnInit() {
-
-    let menus  = this.service.getMenus();
-    menus.forEach((value, index) => {
-      let parentItem = this.addItem(value.name,value.icon,value.links);
+    this._itemsSubscription = this.service.items$.subscribe((items:SidenavItem[])=>{
+      this.items = items;
     });
 
-    let demo = this.addItem('demo','icon','route');
-    this.addSubItem(demo,'demosub','/');
-
-    this.addItem('demo1','icon','route');
-
-    let demo2 = this.addItem('demo2','icon','route');
-    this.addSubItem(demo2,'sub','/');
-    this.addSubItem(demo2,'sub','/');
-    this.addSubItem(demo2,'sub','/');
+    // let menus  = this.sidebarService.getMenus();
+    // menus.forEach((value, index) => {
+    //   let parentItem = this.service.addItem(value.name,value.icon,value.links);
+    // });
+    //
+    // let demo = this.service.addItem('demo','icon','route');
+    // this.service.addSubItem(demo,'demosub','/');
+    //
+    // this.service.addItem('demo1','icon','route');
+    //
+    // let demo2 = this.service.addItem('demo2','icon','route');
+    // this.service.addSubItem(demo2,'sub','/');
+    // this.service.addSubItem(demo2,'sub','/');
+    // this.service.addSubItem(demo2,'sub','/');
 
   }
 
