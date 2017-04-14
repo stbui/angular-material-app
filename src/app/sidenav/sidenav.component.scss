@@ -4,6 +4,12 @@ md-toolbar.mat-toolbar.sidenav-toolbar {
   z-index: 3;
 }
 
+.logo-text {
+  color: #fff;
+  text-decoration: none;
+  height: 35px; margin-left: 24px; margin-bottom: -5px;
+}
+
 .sidenav-container, .sidenav-scrollbar-container {
   height: 100%;
 }

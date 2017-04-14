@@ -1,6 +1,7 @@
 <a class="sidenav-anchor"
    *ngIf="!item.hasSubItems()"
-   md-list-item md-ripple>
+   md-list-item md-ripple
+   [routerLink]="[item.route]" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
 
   <md-icon>{{ item.icon }}</md-icon>
   <span class="sidenav-item-name fade-in-on-icon-sidenav">{{ item.name }}</span>

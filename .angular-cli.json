@@ -19,6 +19,7 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
+        "../node_modules/normalize.css/normalize.css",
         "../node_modules/quill/dist/quill.snow.css",
         "styles.scss"
       ],

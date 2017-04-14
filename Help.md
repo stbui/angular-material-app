@@ -20,6 +20,7 @@ npm install --save angular-in-memory-web-api
 npm install --save bootstrap-sass
 npm i -S angular2-datatable
 npm install ngx-quill --save
+npm install --save normalize.css
 
 npm install ng2-charts --save
 npm install chart.js --save

@@ -1,9 +1,10 @@
 <md-sidenav-container>
 
   <md-sidenav class="sidenav" align="start" mode="side" opened="true" #sidenav>
-    <div class="sidenav-container" fxLayout="column">
-      <app-sidebar [theme]="theme"></app-sidebar>
-    </div>
+    <!--<div class="sidenav-container" fxLayout="column">-->
+      <!--&lt;!&ndash;<app-sidebar [theme]="theme"></app-sidebar>&ndash;&gt;-->
+    <!--</div>-->
+    <app-sidenav></app-sidenav>
   </md-sidenav>
 
   <app-header [theme]="theme"></app-header>
@@ -11,8 +12,7 @@
   <div class="main-container" #scrollContainer>
     <router-outlet></router-outlet>
   </div>
-
   <app-footer></app-footer>
 
-  <app-customizer (themeChanges)="onThemeChanges($event)"></app-customizer>
+  <!--<app-customizer (themeChanges)="onThemeChanges($event)"></app-customizer>-->
 </md-sidenav-container>

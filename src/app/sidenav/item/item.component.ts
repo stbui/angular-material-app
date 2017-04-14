@@ -10,11 +10,10 @@ import { SidenavItem } from './item.model';
 export class ItemComponent implements OnInit {
 
   @Input() item: SidenavItem;
-  isCollapse:boolean = false;
 
   @HostBinding('class.open')
   get isOpen() {
-    return this.isCollapse;
+    return this.sidenavService.isOpen(this.item);
   }
 
   constructor(@Inject('sidenavService') private sidenavService) {
@@ -24,22 +23,30 @@ export class ItemComponent implements OnInit {
   }
 
   toggleDropdown() {
-    this.isCollapse = !this.isCollapse;
     if(this.item.hasSubItems()) {
       this.sidenavService.toggleCurrentlyOpen(this.item);
     }
   }
 
+  /*
+  *  获取子菜单高度
+  * */
   getSubItemsHeight() {
     if (this.item.hasSubItems()) {
-      return (this.getOpenSubItemCount(this.item) * 48) + 'px';
+      return (this.getOpenSubItemsCount(this.item) * 56) + 'px';
     }
   }
 
-  getOpenSubItemCount(item: SidenavItem): number {
+  /*
+  * 计算子菜单高度
+  * */
+  getOpenSubItemsCount(item: SidenavItem): number {
     let count = 0;
-    if (item.hasSubItems() && this.isCollapse) {
+    if (item.hasSubItems() && this.sidenavService.isOpen(item)) {
       count += item.subItems.length;
+      item.subItems.forEach((subItem) => {
+        count += this.getOpenSubItemsCount(subItem);
+      })
     }
     return count;
   }
