@@ -22,7 +22,7 @@ export class SidenavService {
     this.addSubItem(components, 'Menu', '/materials/menu', 3);
     this.addSubItem(components, 'Slider', '/materials/slider', 3);
     this.addSubItem(components, 'Snack-Bar', '/materials/snackbar', 3);
-    this.addSubItem(components, 'Toast', '/materials/Toast', 3);
+    this.addSubItem(components, 'Toast', '/materials/toast', 3);
     this.addSubItem(components, 'Tooltips', '/materials/tooltips', 3);
     this.addSubItem(components, 'Dialogs', '/materials/dialogs', 3);
     this.addSubItem(components, 'Tabs', '/materials/tabs', 3);
@@ -34,7 +34,7 @@ export class SidenavService {
 
     let tables =  this.addItem('Tables', 'list', null, 5);
     this.addSubItem(tables, 'Static Tables', '/tables/static', 1);
-    this.addSubItem(tables, 'DataTables', '/tables/datatables', 2);
+    this.addSubItem(tables, 'Datatable', '/tables/datatable', 2);
 
     let charts = this.addItem('Charts', 'equalizer', '/charts', 1);
 
@@ -54,8 +54,8 @@ export class SidenavService {
     this.addSubItem(extraPages, '注册', '/pages/sigup', 1);
 
     let apps =  this.addItem('Apps', 'apps', null, 8);
-    this.addSubItem(apps, 'Task', '/apps/todo', 1);
-    this.addSubItem(apps, 'Chat', '/apps/chat', 1);
+    this.addSubItem(apps, 'Task', '/apps/todo/ALL', 1);
+    this.addSubItem(apps, 'Chat', '/apps/chats', 1);
     this.addSubItem(apps, 'Mail', '/apps/mail', 1);
     this.addSubItem(apps, '码农庄园', '/apps/navigation', 1);
   }

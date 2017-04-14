@@ -1,4 +1,4 @@
-<div class="main-datatable" fxLayout="column">
+<div class="main-datatable mat-elevation-z2" fxLayout="column">
 
   <md-card>
     <md-card-title>Base Table</md-card-title>
@@ -7,21 +7,21 @@
         <thead>
         <tr>
           <th></th>
-          <th>Name</th>
-          <th>Company</th>
-          <th>E-Mail</th>
-          <th>Phone</th>
-          <th>Balance</th>
+          <th>APP</th>
+          <th>领域</th>
+          <th>开发商</th>
+          <th>活跃人数(万)</th>
+          <th>环比增幅(%)</th>
         </tr>
         </thead>
         <tbody>
         <tr *ngFor="let row of rows">
-          <td class="avatar-cell"><img class="avatar" [src]="row.picture"></td>
-          <td>{{ row.name.first }} {{ row.name.last }}</td>
-          <td>{{ row.company }}</td>
-          <td>{{ row.email }}</td>
-          <td>{{ row.phone }}</td>
-          <td>{{ row.balance }}</td>
+          <td><img class="avatar-cell" src="http://imguserradar.analysys.cn/images/item_logo/min/64_64_{{ row.appId }}.png" alt=""></td>
+          <td>{{ row.appName }}</td>
+          <td>{{ row.cateNames }}</td>
+          <td>{{ row.developCompanyFullName }}</td>
+          <td>{{ row.activeNums }}</td>
+          <td>{{ row.activeNumsRatio }}</td>
         </tr>
         </tbody>
       </table>
@@ -35,21 +35,21 @@
         <thead>
         <tr>
           <th></th>
-          <th>Name</th>
-          <th>Company</th>
-          <th>E-Mail</th>
-          <th>Phone</th>
-          <th>Balance</th>
+          <th>APP</th>
+          <th>领域</th>
+          <th>开发商</th>
+          <th>活跃人数(万)</th>
+          <th>环比增幅(%)</th>
         </tr>
         </thead>
         <tbody>
         <tr *ngFor="let row of rows">
-          <td class="avatar-cell"><img class="avatar" [src]="row.picture"></td>
-          <td>{{ row.name.first }} {{ row.name.last }}</td>
-          <td>{{ row.company }}</td>
-          <td>{{ row.email }}</td>
-          <td>{{ row.phone }}</td>
-          <td>{{ row.balance }}</td>
+          <td><img class="avatar-cell" src="http://imguserradar.analysys.cn/images/item_logo/min/64_64_{{ row.appId }}.png" alt=""></td>
+          <td>{{ row.appName }}</td>
+          <td>{{ row.cateNames }}</td>
+          <td>{{ row.developCompanyFullName }}</td>
+          <td>{{ row.activeNums }}</td>
+          <td>{{ row.activeNumsRatio }}</td>
         </tr>
         </tbody>
       </table>
@@ -59,25 +59,25 @@
   <md-card>
     <md-card-title>Striped Table</md-card-title>
     <md-card-content>
-      <table class="table striped">
+      <table class="table table-striped">
         <thead>
         <tr>
           <th></th>
-          <th>Name</th>
-          <th>Company</th>
-          <th>E-Mail</th>
-          <th>Phone</th>
-          <th>Balance</th>
+          <th>APP</th>
+          <th>领域</th>
+          <th>开发商</th>
+          <th>活跃人数(万)</th>
+          <th>环比增幅(%)</th>
         </tr>
         </thead>
         <tbody>
         <tr *ngFor="let row of rows">
-          <td class="avatar-cell"><img class="avatar" [src]="row.picture"></td>
-          <td>{{ row.name.first }} {{ row.name.last }}</td>
-          <td>{{ row.company }}</td>
-          <td>{{ row.email }}</td>
-          <td>{{ row.phone }}</td>
-          <td>{{ row.balance }}</td>
+          <td><img class="avatar-cell" src="http://imguserradar.analysys.cn/images/item_logo/min/64_64_{{ row.appId }}.png" alt=""></td>
+          <td>{{ row.appName }}</td>
+          <td>{{ row.cateNames }}</td>
+          <td>{{ row.developCompanyFullName }}</td>
+          <td>{{ row.activeNums }}</td>
+          <td>{{ row.activeNumsRatio }}</td>
         </tr>
         </tbody>
       </table>
@@ -87,25 +87,25 @@
   <md-card>
     <md-card-title>Condensed Table</md-card-title>
     <md-card-content>
-      <table class="table condensed">
+      <table class="table table-condensed">
         <thead>
         <tr>
           <th></th>
-          <th>Name</th>
-          <th>Company</th>
-          <th>E-Mail</th>
-          <th>Phone</th>
-          <th>Balance</th>
+          <th>APP</th>
+          <th>领域</th>
+          <th>开发商</th>
+          <th>活跃人数(万)</th>
+          <th>环比增幅(%)</th>
         </tr>
         </thead>
         <tbody>
         <tr *ngFor="let row of rows">
-          <td class="avatar-cell"><img class="avatar" [src]="row.picture"></td>
-          <td>{{ row.name.first }} {{ row.name.last }}</td>
-          <td>{{ row.company }}</td>
-          <td>{{ row.email }}</td>
-          <td>{{ row.phone }}</td>
-          <td>{{ row.balance }}</td>
+          <td><img class="avatar-cell" src="http://imguserradar.analysys.cn/images/item_logo/min/64_64_{{ row.appId }}.png" alt=""></td>
+          <td>{{ row.appName }}</td>
+          <td>{{ row.cateNames }}</td>
+          <td>{{ row.developCompanyFullName }}</td>
+          <td>{{ row.activeNums }}</td>
+          <td>{{ row.activeNumsRatio }}</td>
         </tr>
         </tbody>
       </table>
@@ -115,25 +115,25 @@
   <md-card>
     <md-card-title>Bordered Table</md-card-title>
     <md-card-content>
-      <table class="table bordered">
+      <table class="table table-bordered">
         <thead>
         <tr>
           <th></th>
-          <th>Name</th>
-          <th>Company</th>
-          <th>E-Mail</th>
-          <th>Phone</th>
-          <th>Balance</th>
+          <th>APP</th>
+          <th>领域</th>
+          <th>开发商</th>
+          <th>活跃人数(万)</th>
+          <th>环比增幅(%)</th>
         </tr>
         </thead>
         <tbody>
         <tr *ngFor="let row of rows">
-          <td class="avatar-cell"><img class="avatar" [src]="row.picture"></td>
-          <td>{{ row.name.first }} {{ row.name.last }}</td>
-          <td>{{ row.company }}</td>
-          <td>{{ row.email }}</td>
-          <td>{{ row.phone }}</td>
-          <td>{{ row.balance }}</td>
+          <td><img class="avatar-cell" src="http://imguserradar.analysys.cn/images/item_logo/min/64_64_{{ row.appId }}.png" alt=""></td>
+          <td>{{ row.appName }}</td>
+          <td>{{ row.cateNames }}</td>
+          <td>{{ row.developCompanyFullName }}</td>
+          <td>{{ row.activeNums }}</td>
+          <td>{{ row.activeNumsRatio }}</td>
         </tr>
         </tbody>
       </table>
@@ -147,21 +147,21 @@
         <thead>
         <tr>
           <th></th>
-          <th>Name</th>
-          <th>Company</th>
-          <th>E-Mail</th>
-          <th>Phone</th>
-          <th>Balance</th>
+          <th>APP</th>
+          <th>领域</th>
+          <th>开发商</th>
+          <th>活跃人数(万)</th>
+          <th>环比增幅(%)</th>
         </tr>
         </thead>
         <tbody>
         <tr *ngFor="let row of rows">
-          <td class="avatar-cell"><img class="avatar" [src]="row.picture"></td>
-          <td>{{ row.name.first }} {{ row.name.last }}</td>
-          <td>{{ row.company }}</td>
-          <td>{{ row.email }}</td>
-          <td>{{ row.phone }}</td>
-          <td>{{ row.balance }}</td>
+          <td><img class="avatar-cell" src="http://imguserradar.analysys.cn/images/item_logo/min/64_64_{{ row.appId }}.png" alt=""></td>
+          <td>{{ row.appName }}</td>
+          <td>{{ row.cateNames }}</td>
+          <td>{{ row.developCompanyFullName }}</td>
+          <td>{{ row.activeNums }}</td>
+          <td>{{ row.activeNumsRatio }}</td>
         </tr>
         </tbody>
       </table>
