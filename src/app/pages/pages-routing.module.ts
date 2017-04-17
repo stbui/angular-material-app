@@ -13,6 +13,10 @@ const routers: Routes = [
     component: AdminComponent,
     children: [
       {
+        path: '',
+        component: AboutComponent
+      },
+      {
         path: 'pages/about',
         component: AboutComponent
       },
