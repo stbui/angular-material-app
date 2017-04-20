@@ -1,4 +1,3 @@
-
 <div fxlayout="column" class="todo mat-elevation-z2">
   <div class="todo-header"><h1>Todos</h1></div>
   <app-todo-header placeholder="请输入您要完成的任务" (onEnterUp)="addTodo($event)"></app-todo-header>
@@ -11,55 +10,3 @@
   [itemCount]="todos?.length | async"
   (onClear)="clearCompleted()"></app-todo-footer>
 </div>
-
-
-<!--<div class="todo mat-elevation-z2" fxlayout="column" fxLayoutAlign="center center">-->
-  <!--<div class="header"><h1>Todos</h1></div>-->
-  <!--<app-todo-header-->
-    <!--placeholder="请输入您要完成的任务"-->
-    <!--(onEnterUp)="addTodo($event)">-->
-  <!--</app-todo-header>-->
-  <!--<app-todo-list-->
-    <!--[todos]="todos | async"-->
-    <!--(onToggleAll)="toggleAll()"-->
-    <!--(onRemoveTodo)="removeTodo($event)"-->
-    <!--(onToggleTodo)="toggleTodo($event)"-->
-  <!--&gt;-->
-  <!--</app-todo-list>-->
-  <!--<app-todo-footer-->
-    <!--[itemCount]="todos?.length | async"-->
-    <!--(onClear)="clearCompleted()">-->
-  <!--</app-todo-footer>-->
-<!--</div>-->
-
-<!--&lt;!&ndash;<div class="container-fluid">&ndash;&gt;-->
-  <!--&lt;!&ndash;<section class="todoapp">&ndash;&gt;-->
-    <!--&lt;!&ndash;<app-todo-header&ndash;&gt;-->
-      <!--&lt;!&ndash;placeholder="您想要做什么"&ndash;&gt;-->
-      <!--&lt;!&ndash;(onEnterUp)="addTodo($event)">&ndash;&gt;-->
-    <!--&lt;!&ndash;</app-todo-header>&ndash;&gt;-->
-    <!--&lt;!&ndash;<app-todo-list&ndash;&gt;-->
-      <!--&lt;!&ndash;[todos]="todos | async"&ndash;&gt;-->
-      <!--&lt;!&ndash;(onToggleAll)="toggleAll()"&ndash;&gt;-->
-      <!--&lt;!&ndash;(onRemoveTodo)="removeTodo($event)"&ndash;&gt;-->
-      <!--&lt;!&ndash;(onToggleTodo)="toggleTodo($event)"&ndash;&gt;-->
-    <!--&lt;!&ndash;&gt;&ndash;&gt;-->
-    <!--&lt;!&ndash;</app-todo-list>&ndash;&gt;-->
-    <!--&lt;!&ndash;<app-todo-footer&ndash;&gt;-->
-      <!--&lt;!&ndash;[itemCount]="todos?.length | async"&ndash;&gt;-->
-      <!--&lt;!&ndash;(onClear)="clearCompleted()">&ndash;&gt;-->
-    <!--&lt;!&ndash;</app-todo-footer>&ndash;&gt;-->
-  <!--&lt;!&ndash;</section>&ndash;&gt;-->
-<!--&lt;!&ndash;</div>&ndash;&gt;-->
-
-
-
-<!--<md-toolbar>-->
-  <!--<div class="toolbar" fxLayout="row" fxLayoutAlign="start center" style="width: 100%">-->
-    <!--<img class="avatar pointer">-->
-    <!--<span fxFlex></span>-->
-    <!--<button md-icon-button>-->
-      <!--<md-icon>more_vert</md-icon>-->
-    <!--</button>-->
-  <!--</div>-->
-<!--</md-toolbar>-->

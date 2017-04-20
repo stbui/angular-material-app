@@ -48,6 +48,7 @@ export class SidenavService {
     this.addSubItem(pages, 'faqs', '/pages/faqs', 1);
     this.addSubItem(pages, 'terms', '/pages/terms', 1);
     this.addSubItem(pages, '收藏神器', '/pages/collection', 1);
+    this.addSubItem(pages, '用户管理', '/pages/user', 1);
 
     let extraPages =  this.addItem('Extra Pages', 'more_horiz', null, 8);
     this.addSubItem(extraPages, '登录', '/pages/sigin', 1);

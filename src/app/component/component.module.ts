@@ -4,6 +4,8 @@ import { ButtonComponent } from './button/button.component';
 import { BadgeComponent } from './badge/badge.component';
 import { DialogComponent } from './dialog/dialog.component';
 import { MaterialModule } from '@angular/material';
+import { DatePickerComponent } from './date-picker/date-picker.component';
+import { CalendarComponent } from './date-picker/calendar/calendar.component';
 
 @NgModule({
   imports: [
@@ -13,7 +15,12 @@ import { MaterialModule } from '@angular/material';
   declarations: [
     ButtonComponent,
     BadgeComponent,
-    DialogComponent
-  ]
+    DialogComponent,
+    DatePickerComponent,
+    CalendarComponent
+  ],
+  exports: [
+    DatePickerComponent
+  ],
 })
 export class ComponentModule { }

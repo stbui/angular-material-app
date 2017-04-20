@@ -10,6 +10,7 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { ServicesComponent } from './services/services.component';
 import { CollectionComponent } from './collection/collection.component';
+import { UserComponent } from './user/user.component';
 
 @NgModule({
   imports: [
@@ -24,7 +25,8 @@ import { CollectionComponent } from './collection/collection.component';
     AboutComponent,
     ContactComponent,
     ServicesComponent,
-    CollectionComponent
+    CollectionComponent,
+    UserComponent
   ]
 })
 export class PagesModule { }

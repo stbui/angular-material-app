@@ -27,6 +27,13 @@
 
 ![demo image](src/assets/images-demo/2017-04-07_202402.jpg)
 
+### 平台环境
+
+* Angular-cli:    1.0.0-rc.1
+* Angular2:       2.4.0
+* Material2:      2.0.0-beta.2
+* Flex-Layout:    2.0.0-rc.1
+ 
 
 ### 依赖包
 

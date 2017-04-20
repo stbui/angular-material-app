@@ -6,6 +6,7 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { ServicesComponent } from './services/services.component';
 import { CollectionComponent } from './collection/collection.component';
+import { UserComponent } from './user/user.component';
 
 const routers: Routes = [
   {
@@ -31,6 +32,10 @@ const routers: Routes = [
       {
         path: 'pages/services',
         component: ServicesComponent
+      },
+      {
+        path: 'pages/user',
+        component: UserComponent
       }
     ]
   }

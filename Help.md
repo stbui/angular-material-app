@@ -83,6 +83,10 @@ https://genesisui.com/demo/?theme=leaf&version=angular2
 
 ##### Rxjs
 
+rxjs官方文档中文翻译
+
+https://www.gitbook.com/book/buctwbzs/rxjs/details
+
 https://github.com/benjycui/introrx-chinese-edition
 
 https://github.com/kittencup/angular2-ama-cn/issues/40
