@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MaterialModule } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { ComponentModule } from '../component/component.module'
 
 import { RoutingModule } from './materials-routing.module';
 import { ToastComponent } from './toast/toast.component';
@@ -13,12 +14,14 @@ import { ListsComponent } from './lists/lists.component';
 import { MenuComponent } from './menu/menu.component';
 import { SliderComponent } from './slider/slider.component';
 import { TabsComponent } from './tabs/tabs.component';
+import { PaginationComponent } from './pagination/pagination.component';
 
 @NgModule({
   imports: [
     CommonModule,
     MaterialModule,
     FlexLayoutModule,
+    ComponentModule,
     RoutingModule
   ],
   declarations: [
@@ -30,7 +33,8 @@ import { TabsComponent } from './tabs/tabs.component';
     ListsComponent,
     MenuComponent,
     SliderComponent,
-    TabsComponent
+    TabsComponent,
+    PaginationComponent
   ]
 })
 export class MaterialsModule { }

@@ -1,16 +1,55 @@
+@import '~@angular/material/core/theming/all-theme';
+
+@mixin navigation-theme($theme) {
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+  $warn: map-get($theme, warn);
+  $background: map-get($theme, background);
+  $foreground: map-get($theme, foreground);
+
+  .nav-category-item {
+    color: mat-color($foreground, text);
+
+    .active,
+    &.active {
+      background-color: mat-color($primary);
+      color: #fff;
+    }
+
+    &:hover {
+      background-color: mat-color($primary, .2);
+
+      .active,
+      &.active {
+        background-color: mat-color($primary);
+        color: #fff;
+      }
+    }
+  }
+
+  .nav-title a {
+    color: mat-color($primary);
+    &:hover {
+      color: mat-color($primary, .9);
+    }
+  }
+}
+
+$navigation-border-radious: 2px !default;
+
 :host {
   display: block;
   margin: 15px;
-}
-
-.widget {
-
 }
 
 .nav-title {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+
+  a {
+    text-decoration: none;
+  }
 }
 
 .nav-desc {
@@ -21,7 +60,7 @@
 
 .nav-category {
   position: relative;
-  padding-left: 79px;
+  padding-left: 80px;
 }
 
 .nav-category-title {
@@ -29,25 +68,25 @@
   position: absolute;
   left: 10px;
   border-bottom: none;
-  font-size: 14px;
+  font-size: $mat-body-font-size-base;
   line-height: 28px;
   color: #333;
 }
 
 .nav-category-item {
+  user-select: none;
+  position: relative;
   display: inline-block;
   margin-right: 10px;
   padding: 0 5px;
-  font-size: 14px;
+
+  font-size: $mat-body-font-size-base;
+  font-family: $mat-font-family;
+  font-weight: 500;
+  text-align: center;
+
   line-height: 28px;
-  color: #333;
   cursor: default;
 
-  .active,
-  &.active,
-  &:hover {
-    background-color: #049DF6;
-    color: #fff !important;
-  }
-
+  border-radius: $navigation-border-radious;
 }

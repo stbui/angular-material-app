@@ -1,0 +1,14 @@
+<md-card>
+  <md-card-title>分页</md-card-title>
+  <md-card-content>
+    <stbui-pagination align="center" total=1000></stbui-pagination>
+  </md-card-content>
+</md-card>
+
+<md-card>
+  <md-card-title>分页</md-card-title>
+  <md-card-content>
+    <stbui-pagination align="center" total=1000 (onPage)="page($event)"></stbui-pagination>
+    <div>当前页码：{{ currentPage }}</div>
+  </md-card-content>
+</md-card>

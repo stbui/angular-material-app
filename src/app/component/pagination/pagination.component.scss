@@ -1,3 +1,11 @@
+@import '~@angular/material/core/theming/all-theme';
+
+$pagination-size: 32px !default;
+$pagination-line-height: 32px !default;
+$pagination-padding: 0 8px !default;
+$pagination-margin: 0 8px !default;
+$pagination-border-radious: 2px !default;
+
 .pagination {
   display: -webkit-box;
   display: -webkit-flex;
@@ -29,31 +37,19 @@
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
-    font-size: 16px;
-    height: 32px;
-    min-width: 32px;
-    padding-left: 8px;
-    padding-right: 8px;
-    line-height: 32px;
-    margin: 0 8px;
-    color: rgba(0,0,0,.87);
+
+    font-size: $mat-body-font-size-base;
+    font-family: $mat-font-family;
+    font-weight: 500;
+    text-align: center;
+
+    height: $pagination-size;
+    min-width: $pagination-size;
+    padding: $pagination-padding;
+    margin: $pagination-margin;
+    line-height: $pagination-line-height;
     position: relative;
-    border-radius: 2px;
-
-    &:hover {
-      background-color: rgba(0,0,0,.1);
-    }
-
-    .active,
-    &.active {
-      background: #00aced;
-
-      a {
-        color: #fff;
-        text-decoration: none;
-      }
-    }
-
+    border-radius: $pagination-border-radious;
   }
 
   &-item-wrapper {
@@ -78,4 +74,30 @@
   display: -ms-flexbox;
   display: flex;
   justify-content: center;
+}
+
+@mixin pagination-theme($theme) {
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+  $warn: map-get($theme, warn);
+  $background: map-get($theme, background);
+  $foreground: map-get($theme, foreground);
+
+  .pagination li {
+    color: mat-color($foreground, text);
+  }
+
+  .pagination li:hover {
+    background-color: mat-color($primary, .2);
+  }
+
+  .pagination li {
+    &:hover .active,
+    &:hover.active,
+    .active,
+    &.active {
+      background-color: mat-color($primary);
+      color: #fff;
+    }
+  }
 }

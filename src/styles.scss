@@ -1,23 +1,23 @@
-/* You can add global styles to this file, and also import other style files */
-
-
-//@import "./scss/loader";
 @import "./vendors/material-design-icons/iconfont/material-icons.css";
-@import '~@angular/material/core/theming/prebuilt/indigo-pink.css';
-//@import "~@angular/material/core/theming/prebuilt/deeppurple-amber";
-//@import "~@angular/material/core/theming/_all-theme";
-//@include md-core();
-//$primary: md-palette($md-cyan);
-//$accent: md-palette($md-amber);
-//$theme: md-light-theme($primary, $accent);
-//@include angular-material-theme($theme);
 
+@import "~@angular/material/core/theming/prebuilt/deeppurple-amber";
+//@import "~@angular/material/core/theming/prebuilt/indigo-pink";
+//@import "~@angular/material/core/theming/prebuilt/purple-green";
+//@import "~@angular/material/core/theming/prebuilt/pink-bluegrey";
+@include mat-core();
+
+//$pagination-primary: mat-palette($mat-indigo);
+//$pagination-accent: mat-palette($mat-pink);
+//$pagination-warn: mat-palette($mat-red);
+//$pagination-theme: mat-light-theme($pagination-primary, $pagination-accent,$pagination-warn);
 //
-//@import "./scss/bootstrap";
-//@import "./scss/layout";
-//@import "./scss/theme";
-//@import "./scss/ui";
-//@import "./scss/app";
+//@include angular-material-theme($pagination-theme);
+
+@import "./app/component/pagination/pagination.component";
+@include pagination-theme($theme);
+
+@import "./app/navigation/navigation.component";
+@include navigation-theme($theme);
 
 
 @import "./scss/apps/_tables";

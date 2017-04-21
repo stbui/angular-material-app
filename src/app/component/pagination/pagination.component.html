@@ -1,12 +1,11 @@
 <ul class="pagination">
   <li *ngIf="currentPage > 6" (click)="onPageTriggered(1)">
-    <a class="pagination-item-wrapper">
-      <md-icon>chevron_left</md-icon>
-    </a></li>
+    <md-icon>chevron_left</md-icon>
+  </li>
   <li md-ripple [class.active]="currentPage == page" (click)="onPageTriggered(page)" *ngFor="let page of pages">
-    <a class="pagination-item-wrapper">{{ page }}</a></li>
+    {{ page }}
+  </li>
   <li *ngIf="currentPage < totalPages - 4" (click)="onPageTriggered(totalPages)">
-    <a class="pagination-item-wrapper">
-      <md-icon>chevron_right</md-icon>
-    </a></li>
+    <md-icon>chevron_right</md-icon>
+  </li>
 </ul>

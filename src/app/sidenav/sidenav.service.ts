@@ -15,28 +15,30 @@ export class SidenavService {
 
   constructor(@Inject('sidebar') private sidebarService) {
     let dashboard = this.addItem('Dashboard', 'home', '/', 1);
-    let components =  this.addItem('UI Kit', 'bubble_chart', null, 3);
-    this.addSubItem(components, 'Buttons', '/materials/buttons', 1);
-    this.addSubItem(components, 'Cards', '/materials/cards', 2);
-    this.addSubItem(components, 'Lists', '/materials/lists', 3);
-    this.addSubItem(components, 'Menu', '/materials/menu', 3);
-    this.addSubItem(components, 'Slider', '/materials/slider', 3);
-    this.addSubItem(components, 'Snack-Bar', '/materials/snackbar', 3);
-    this.addSubItem(components, 'Toast', '/materials/toast', 3);
-    this.addSubItem(components, 'Tooltips', '/materials/tooltips', 3);
-    this.addSubItem(components, 'Dialogs', '/materials/dialogs', 3);
-    this.addSubItem(components, 'Tabs', '/materials/tabs', 3);
+    let materials =  this.addItem('UI Kit', 'bubble_chart', null, 3);
+    this.addSubItem(materials, 'Buttons', '/materials/buttons', 1);
+    this.addSubItem(materials, 'Cards', '/materials/cards', 2);
+    this.addSubItem(materials, 'Lists', '/materials/lists', 3);
+    this.addSubItem(materials, 'Menu', '/materials/menu', 3);
+    this.addSubItem(materials, 'Slider', '/materials/slider', 3);
+    this.addSubItem(materials, 'Snack-Bar', '/materials/snackbar', 3);
+    this.addSubItem(materials, 'Toast', '/materials/toast', 3);
+    this.addSubItem(materials, 'Tooltips', '/materials/tooltips', 3);
+    this.addSubItem(materials, 'Dialogs', '/materials/dialogs', 3);
+    this.addSubItem(materials, 'Tabs', '/materials/tabs', 3);
+    this.addSubItem(materials, 'Pagination', '/materials/pagination', 3);
+
+    let components =  this.addItem('Components', 'equalizer', null, 3);
+    this.addSubItem(components, 'Charts', '/components/chart', 1);
 
     let forms = this.addItem('Forms', 'format_color_text', null, 4);
     this.addSubItem(forms, 'Form Elements', '/forms/elements', 1);
     this.addSubItem(forms, 'Form validation', '/forms/validation', 1);
-    this.addSubItem(forms, 'editor', '/forms/editor', 1);
+    this.addSubItem(forms, 'editor', '/forms/ckeditor', 1);
 
     let tables =  this.addItem('Tables', 'list', null, 5);
     this.addSubItem(tables, 'Static Tables', '/tables/static', 1);
     this.addSubItem(tables, 'Datatable', '/tables/datatable', 2);
-
-    let charts = this.addItem('Charts', 'equalizer', '/charts', 1);
 
     let pages =  this.addItem('Pages', 'content_copy', null, 7);
     this.addSubItem(pages, 'about', '/pages/about', 1);

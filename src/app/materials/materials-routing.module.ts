@@ -11,6 +11,7 @@ import { ListsComponent } from './lists/lists.component';
 import { MenuComponent } from './menu/menu.component';
 import { SliderComponent } from './slider/slider.component';
 import { TabsComponent } from './tabs/tabs.component'
+import { PaginationComponent } from './pagination/pagination.component'
 
 const routers: Routes = [
   {
@@ -52,6 +53,10 @@ const routers: Routes = [
       {
         path: 'materials/tabs',
         component: TabsComponent
+      },
+      {
+        path: 'materials/pagination',
+        component: PaginationComponent
       }
 
     ]

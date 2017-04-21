@@ -6,6 +6,8 @@ import { DialogComponent } from './dialog/dialog.component';
 import { MaterialModule } from '@angular/material';
 import { DatePickerComponent } from './date-picker/date-picker.component';
 import { CalendarComponent } from './date-picker/calendar/calendar.component';
+import { PaginationComponent } from './pagination/pagination.component';
+import { ComponentComponent } from './component.component';
 
 @NgModule({
   imports: [
@@ -13,14 +15,14 @@ import { CalendarComponent } from './date-picker/calendar/calendar.component';
     MaterialModule
   ],
   declarations: [
-    ButtonComponent,
-    BadgeComponent,
-    DialogComponent,
     DatePickerComponent,
-    CalendarComponent
+    CalendarComponent,
+    PaginationComponent,
+    ComponentComponent
   ],
   exports: [
-    DatePickerComponent
-  ],
+    DatePickerComponent,
+    PaginationComponent
+  ]
 })
 export class ComponentModule { }

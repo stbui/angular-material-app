@@ -4,10 +4,11 @@ import { HttpModule } from '@angular/http';
 import { MaterialModule } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
+import { ComponentModule } from '../component/component.module';
+
 import { RoutingModule } from './navigation-routing.module';
 import { NavigationService } from './navigation.service';
 import { NavigationComponent } from './navigation.component';
-import { PaginationComponent } from './pagination/pagination.component';
 
 @NgModule({
   imports: [
@@ -15,11 +16,11 @@ import { PaginationComponent } from './pagination/pagination.component';
     HttpModule,
     FlexLayoutModule,
     MaterialModule.forRoot(),
-    RoutingModule
+    RoutingModule,
+    ComponentModule
   ],
   declarations: [
-    NavigationComponent,
-    PaginationComponent
+    NavigationComponent
   ],
   providers: [
     { provide: 'NavigationService', useClass: NavigationService }
