@@ -21,7 +21,7 @@ export class NavigationService {
     const url = `${this.apiUrl}/link?topicId=${topicId}&page=${page}`;
     this.http.get(url)
       .map(res => res.json())
-      .do(res => console.log(res))
+      // .do(res => console.log(res))
       .subscribe(res => {
         this._navigations.next(res);
       });

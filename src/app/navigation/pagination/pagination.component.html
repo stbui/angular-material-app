@@ -1,5 +1,12 @@
-<ul class="pagination" fxlayout="row" fxLayoutAlign="center center">
-  <li *ngIf="currentPage > 6" (click)="onPageTriggered(1)"><a>首页</a></li>
-  <li [class.active]="currentPage == page" (click)="onPageTriggered(page)" *ngFor="let page of pages"><a>{{ page }}</a></li>
-  <li *ngIf="currentPage < totalPages - 4" (click)="onPageTriggered(totalPages)"><a>尾页</a></li>
+<ul class="pagination">
+  <li *ngIf="currentPage > 6" (click)="onPageTriggered(1)">
+    <a class="pagination-item-wrapper">
+      <md-icon>chevron_left</md-icon>
+    </a></li>
+  <li md-ripple [class.active]="currentPage == page" (click)="onPageTriggered(page)" *ngFor="let page of pages">
+    <a class="pagination-item-wrapper">{{ page }}</a></li>
+  <li *ngIf="currentPage < totalPages - 4" (click)="onPageTriggered(totalPages)">
+    <a class="pagination-item-wrapper">
+      <md-icon>chevron_right</md-icon>
+    </a></li>
 </ul>

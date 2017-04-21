@@ -1,23 +1,47 @@
-import {Component, Input, Output, EventEmitter, OnInit} from '@angular/core';
+import {Component, Input, Output, EventEmitter, ViewEncapsulation} from '@angular/core';
 
 @Component({
+  moduleId: module.id,
   selector: 'stbui-pagination',
   templateUrl: './pagination.component.html',
-  styleUrls: ['./pagination.component.scss']
+  styleUrls: ['./pagination.component.scss'],
+  host: {
+    '[class.pagination-end]': '_isEnd',
+    '[class.pagination-center]': '_isCenter',
+  },
+  encapsulation: ViewEncapsulation.None
 })
-export class PaginationComponent implements OnInit {
+export class PaginationComponent {
 
-  @Output() onPage = new EventEmitter();
-  @Input() total;
+  @Output() onPage = new EventEmitter<void>();
+  @Input() total: number;
 
-  currentPage;
-  totalPages;
+  private _align: 'start' | 'center' | 'end' = 'start';
+  @Input()
+  get align() {
+    return this._align;
+  }
+
+  set align(value) {
+    value = (value == 'end') ? 'end' : (value == 'center') ? 'center' : 'start';
+    if (value != this._align) {
+      this._align = value;
+    }
+  }
+
+  get _isEnd() {
+    return this._align == 'end';
+  }
+
+  get _isCenter() {
+    return this._align == 'center';
+  }
+
+  currentPage: number;
+  totalPages: number;
   pages = [];
 
   constructor() {
-  }
-
-  ngOnInit() {
   }
 
   ngOnChanges() {

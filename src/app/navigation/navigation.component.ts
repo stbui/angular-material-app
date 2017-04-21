@@ -11,7 +11,7 @@ export class NavigationComponent implements OnInit {
   categorys;
   currentPage;
   totalPages;
-  nav_id='';
+  nav_id = '';
 
   constructor(@Inject('NavigationService') private service) {
   }
@@ -21,7 +21,7 @@ export class NavigationComponent implements OnInit {
     this.getCategorys();
   }
 
-  getNavs(id:any = '', page: any = '') {
+  getNavs(id: any = '', page: any = '') {
     this.service.getNavs(id, page);
     this.service.navigations.subscribe(res => {
       this.navigations = res.data;
@@ -42,7 +42,6 @@ export class NavigationComponent implements OnInit {
   }
 
   page(current) {
-    console.log('navigation.component: ', current);
     this.getNavs(this.nav_id, current);
   }
 }
