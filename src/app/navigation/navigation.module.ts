@@ -5,10 +5,10 @@ import { MaterialModule } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { ComponentModule } from '../component/component.module';
-
 import { RoutingModule } from './navigation-routing.module';
 import { NavigationService } from './navigation.service';
 import { NavigationComponent } from './navigation.component';
+
 
 @NgModule({
   imports: [

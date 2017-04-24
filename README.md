@@ -66,4 +66,4 @@ docker run -d -P stbui/angular2-material2-admin-app
 - [] 集成 七牛云
 - [] 集成 阿里云
 - [] 集成极光推送
-- [] 高德地图
+- [x] 高德地图

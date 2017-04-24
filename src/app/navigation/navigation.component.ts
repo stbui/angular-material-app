@@ -27,9 +27,7 @@ export class NavigationComponent implements OnInit {
       this.navigations = res.data;
       this.totalPages = res.totalPages;
       this.currentPage = res.currentPage;
-      console.log('navigation.component getNavs: ', res.totalPages);
     });
-    // this.navigations  = this.service.navigations;
   }
 
   getCategorys() {

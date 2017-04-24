@@ -1,8 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-// import { HttpModule } from '@angular/http';
-
 import { FlexLayoutModule } from "@angular/flex-layout";
 import { MaterialModule } from '@angular/material';
 import 'hammerjs';
@@ -22,7 +20,6 @@ import { SignupComponent } from './signup/signup.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { TodoModule } from './todo/todo.module';
 
-import { stbuiModule } from './component/index';
 import { FormModule } from './forms/forms.module';
 import { TablesModule } from './tables/tables.module';
 import { ChatsModule } from './chats/chats.module';
@@ -61,11 +58,9 @@ import { ChartsModule } from 'ng2-charts/ng2-charts';
   ],
   imports: [
     BrowserModule,
-    // HttpModule,
     FormsModule,
     FlexLayoutModule,
     MaterialModule,
-    stbuiModule.forRoot(),
     RoutingModule,
     TodoModule,
     FormModule,
@@ -79,8 +74,9 @@ import { ChartsModule } from 'ng2-charts/ng2-charts';
     SidenavModule
   ],
   providers: [
-    { provide: 'sidebar', useClass: SidebarService }
+    {provide: 'sidebar', useClass: SidebarService}
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

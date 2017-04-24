@@ -4,5 +4,6 @@
 // The list of which env maps to which file can be found in `.angular-cli.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  amapApi:'http://webapi.amap.com/maps?v=1.3&key=5ca4be36897408ccfacadf90df1c5f91'
 };

@@ -43,6 +43,8 @@ npm install --save ng2-bootstrap bootstrap@next
 npm install --save ng2-validation
 ```
 
+http://lbs.amap.com/api/javascript-api/summary/
+
 
 #### jquery 导入方法
 ```
@@ -126,3 +128,75 @@ http://themes.nyasha.me/#primer
 https://fury.martinsuess.com/apps/chat
 https://themeforest.net/item/fury-angular-2-material-design-admin-template/19325966
 https://themeforest.net/search?utf8=%E2%9C%93&term=material+angular&referrer=search&view=list&sort=sales
+
+
+http://stackoverflow.com/questions/34489916/load-external-js-script-dynamically-in-angular-2
+interface Scripts {
+    name: string;
+    src: string;
+}  
+export const ScriptStore: Scripts[] = [
+    {name: 'filepicker', src: 'https://api.filestackapi.com/filestack.js'},
+    { name: 'rangeSlider', src: '../../../assets/js/ion.rangeSlider.min.js' }
+];
+import {Injectable} from "@angular/core";
+import {ScriptStore} from "./script.store";
+
+declare var document: any;
+
+@Injectable()
+export class Script {
+
+private scripts: any = {};
+
+constructor() {
+    ScriptStore.forEach((script: any) => {
+        this.scripts[script.name] = {
+            loaded: false,
+            src: script.src
+        };
+    });
+}
+
+load(...scripts: string[]) {
+    var promises: any[] = [];
+    scripts.forEach((script) => promises.push(this.loadScript(script)));
+    return Promise.all(promises);
+}
+
+loadScript(name: string) {
+    return new Promise((resolve, reject) => {
+        //resolve if already loaded
+        if (this.scripts[name].loaded) {
+            resolve({script: name, loaded: true, status: 'Already Loaded'});
+        }
+        else {
+            //load script
+            let script = document.createElement('script');
+            script.type = 'text/javascript';
+            script.src = this.scripts[name].src;
+            if (script.readyState) {  //IE
+                script.onreadystatechange = () => {
+                    if (script.readyState === "loaded" || script.readyState === "complete") {
+                        script.onreadystatechange = null;
+                        this.scripts[name].loaded = true;
+                        resolve({script: name, loaded: true, status: 'Loaded'});
+                    }
+                };
+            } else {  //Others
+                script.onload = () => {
+                    this.scripts[name].loaded = true;
+                    resolve({script: name, loaded: true, status: 'Loaded'});
+                };
+            }
+            script.onerror = (error: any) => resolve({script: name, loaded: false, status: 'Loaded'});
+            document.getElementsByTagName('head')[0].appendChild(script);
+        }
+    });
+}
+
+}
+
+this.script.load('filepicker', 'rangeSlider').then(data => {
+            console.log('script loaded ', data);
+        }).catch(error => console.log(error));
