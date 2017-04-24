@@ -15,6 +15,7 @@ import { MenuComponent } from './menu/menu.component';
 import { SliderComponent } from './slider/slider.component';
 import { TabsComponent } from './tabs/tabs.component';
 import { PaginationComponent } from './pagination/pagination.component';
+import { AmapComponent } from './amap/amap.component';
 
 @NgModule({
   imports: [
@@ -34,7 +35,8 @@ import { PaginationComponent } from './pagination/pagination.component';
     MenuComponent,
     SliderComponent,
     TabsComponent,
-    PaginationComponent
+    PaginationComponent,
+    AmapComponent
   ]
 })
 export class MaterialsModule { }

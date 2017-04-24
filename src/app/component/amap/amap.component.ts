@@ -15,12 +15,20 @@ export class AmapComponent {
   @Input() lat: number = 116.397428;
   @Input() lng: number = 39.90923;
 
-  private jsApi: any = {};
+  private jsApi: any;
+  private zoom:number = 11;
+  private id;
 
   constructor() {
+    this.setMapId();
     this.getAmapStyles();
     this.jsApi = environment.amapApi;
     this.loadScript(this.jsApi);
+  }
+
+  setMapId() {
+    let random = Math.floor(Math.random() * 100);
+    this.id = `container_${random}`;
   }
 
   getAmapStyles() {
@@ -45,9 +53,9 @@ export class AmapComponent {
   }
 
   loadMap() {
-    new AMap.Map('container', {
+    new AMap.Map(this.id, {
       resizeEnable: true,
-      zoom: 11,
+      zoom: this.zoom,
       center: [this.lat, this.lng]
     });
   }

@@ -12,6 +12,7 @@ import { MenuComponent } from './menu/menu.component';
 import { SliderComponent } from './slider/slider.component';
 import { TabsComponent } from './tabs/tabs.component'
 import { PaginationComponent } from './pagination/pagination.component'
+import { AmapComponent } from './amap/amap.component';
 
 const routers: Routes = [
   {
@@ -57,8 +58,11 @@ const routers: Routes = [
       {
         path: 'materials/pagination',
         component: PaginationComponent
+      },
+      {
+        path: 'materials/amap',
+        component: AmapComponent
       }
-
     ]
   }
 ];
