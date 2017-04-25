@@ -10,9 +10,12 @@ import { DialogsComponent } from './dialogs/dialogs.component';
 import { ListsComponent } from './lists/lists.component';
 import { MenuComponent } from './menu/menu.component';
 import { SliderComponent } from './slider/slider.component';
-import { TabsComponent } from './tabs/tabs.component'
-import { PaginationComponent } from './pagination/pagination.component'
+import { TabsComponent } from './tabs/tabs.component';
+
+import { PaginationComponent } from './pagination/pagination.component';
 import { AmapComponent } from './amap/amap.component';
+import { DatePickerComponent } from './date-picker/date-picker.component';
+
 
 const routers: Routes = [
   {
@@ -62,6 +65,10 @@ const routers: Routes = [
       {
         path: 'materials/amap',
         component: AmapComponent
+      },
+      {
+        path: 'materials/datepicker',
+        component: DatePickerComponent
       }
     ]
   }

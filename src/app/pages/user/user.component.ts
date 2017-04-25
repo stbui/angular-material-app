@@ -9,6 +9,8 @@ export class UserComponent implements OnInit {
 
   users;
 
+  private checked = false;
+
   constructor() { }
 
   ngOnInit() {
@@ -34,5 +36,14 @@ export class UserComponent implements OnInit {
 
   onEditTriggered(user) {
     console.log(user)
+  }
+
+  onDeleteTriggered(user) {
+    let i = this.users.indexOf(user);
+
+    this.users = [
+      ...this.users.slice(0,i),
+      ...this.users.slice(i+1)
+    ];
   }
 }

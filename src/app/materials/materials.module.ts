@@ -16,6 +16,7 @@ import { SliderComponent } from './slider/slider.component';
 import { TabsComponent } from './tabs/tabs.component';
 import { PaginationComponent } from './pagination/pagination.component';
 import { AmapComponent } from './amap/amap.component';
+import { DatePickerComponent } from './date-picker/date-picker.component';
 
 @NgModule({
   imports: [
@@ -36,7 +37,8 @@ import { AmapComponent } from './amap/amap.component';
     SliderComponent,
     TabsComponent,
     PaginationComponent,
-    AmapComponent
+    AmapComponent,
+    DatePickerComponent
   ]
 })
 export class MaterialsModule { }

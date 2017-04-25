@@ -14,7 +14,7 @@
   <table class="table table-hover">
     <thead>
     <tr>
-      <th><md-checkbox class="checkbox"></md-checkbox></th>
+      <th><md-checkbox class="checkbox" [(ngModel)]="checked"></md-checkbox></th>
       <th>UID</th>
       <th>账号</th>
       <th>最后登录时间</th>
@@ -25,13 +25,13 @@
     </thead>
     <tbody>
     <tr *ngFor="let user of users" (click)="onEditTriggered(user)">
-      <td><md-checkbox class="checkbox"></md-checkbox></td>
+      <td><md-checkbox class="checkbox" [checked]="checked"></md-checkbox></td>
       <td>{{ user.uid }}</td>
       <td>{{ user.account }}</td>
       <td>{{ user.loginTime }}</td>
       <td>{{ user.loginIP }}</td>
       <td>{{ user.status }}</td>
-      <td><button md-icon-button><md-icon>delete</md-icon></button></td>
+      <td><button md-icon-button (click)="onDeleteTriggered(user)"><md-icon>delete</md-icon></button></td>
     </tr>
     </tbody>
   </table>
