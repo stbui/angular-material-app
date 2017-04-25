@@ -1,14 +1,13 @@
 import { Injectable } from '@angular/core';
 import { Http, Headers } from '@angular/http';
+import { environment } from '../../environments/environment';
 
 import { Observable } from 'rxjs/Observable';
 import { Chat } from './chats.model';
 
 @Injectable()
 export class ChatsService {
-
-  // public api = 'api/chats';
-  public api = 'http://localhost:3000/chats';
+  public api = environment.chatsApi + '/chats';
   private header = new Headers({'Content-Type': 'application/json'});
 
   constructor(private http: Http) {

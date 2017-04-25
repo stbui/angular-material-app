@@ -32,7 +32,6 @@ export class NavigationService {
   getCategorys() {
     const url = `${this.apiUrl}/topic`;
     return this.http.get(url)
-      .map(res => res.json())
-      .do(res => console.log(res));
+      .map(res => res.json());
   }
 }

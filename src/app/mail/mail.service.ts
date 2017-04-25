@@ -1,19 +1,25 @@
 import { Injectable } from '@angular/core';
 import { Http, Headers } from '@angular/http';
+import { environment } from '../../environments/environment';
 
 @Injectable()
 export class MailService {
 
-  private apiUrl='http://127.0.0.1:3000/mail';
+  private apiUrl = environment.mailApi + '/mail';
 
-  constructor(private http: Http) { }
+  constructor(private http: Http) {
+  }
 
-  getMails() {}
+  getMails() {
+  }
 
-  send() {}
+  send() {
+  }
 
-  delete() {}
+  delete() {
+  }
 
-  save() {}
+  save() {
+  }
 
 }

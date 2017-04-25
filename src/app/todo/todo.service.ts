@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Http, Headers } from '@angular/http';
+import { environment } from '../../environments/environment';
 import { TodoModel } from './todo.model';
 
 import { Observable } from 'rxjs/Observable';
@@ -7,9 +8,7 @@ import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 
 @Injectable()
 export class TodoService {
-
-  // private apiUrl = 'api/todos';
-  private apiUrl = 'http://localhost:3000/todos';
+  private apiUrl = environment.todoApi + '/todos';
   private headers = new Headers({'Content-Type': 'application/json'});
   private _todos: BehaviorSubject<TodoModel[]>;
   private dataStore: {todos: TodoModel[]};
