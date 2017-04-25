@@ -33,6 +33,29 @@
 * Angular2:       2.4.0
 * Material2:      2.0.0-beta.2
 * Flex-Layout:    2.0.0-rc.1
+
+### 使用入门
+
+```
+npm i -g @angular/cli
+git clone https://github.com/stbui/angular2-material2-bootstrap4-admin-app.git
+```
+
+进入项目目录
+```
+npm install
+npm run start
+```
+打开你的浏览器，访问
+```
+http://127.0.0.1:4200
+```
+
+### 发布
+
+```
+ng build --prod --aot --env=prod
+```
  
 
 ### 依赖包
@@ -70,3 +93,7 @@ docker run -d -P stbui/angular2-material2-admin-app
 - [ ] markdown
 - [ ] ckeditor
 - [ ] highcharts
+
+
+### 开源许可证
+

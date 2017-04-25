@@ -5,5 +5,6 @@
 
 export const environment = {
   production: false,
-  amapApi:'http://webapi.amap.com/maps?v=1.3&key=5ca4be36897408ccfacadf90df1c5f91'
+  amapApi:'http://webapi.amap.com/maps?v=1.3&key=5ca4be36897408ccfacadf90df1c5f91',
+  navigationApi: 'http://127.0.0.1:8360'
 };

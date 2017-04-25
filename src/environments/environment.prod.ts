@@ -1,4 +1,5 @@
 export const environment = {
   production: true,
-  amapApi:''
+  amapApi:'',
+  navigationApi: 'http://stbui.com'
 };

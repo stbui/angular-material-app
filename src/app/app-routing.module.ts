@@ -12,7 +12,7 @@ import { MailComponent } from './mail/mail.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 
 const routers: Routes = [
-  { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+  { path: '', redirectTo: '/apps/navigation', pathMatch: 'full' },
   {path: 'test', component: SidenavComponent },
   {path: 'signin', component: SigninComponent},
   {path: '404', component: PageNotFoundComponent},

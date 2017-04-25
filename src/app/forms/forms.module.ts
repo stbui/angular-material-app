@@ -6,6 +6,7 @@ import { FormsModule }  from '@angular/forms';
 import { QuillModule } from 'ngx-quill';
 
 import { RoutingModule } from './forms-routing.module';
+import { FormsComponent } from './forms.component';
 import { ElementsComponent } from './elements/elements.component';
 import { ValidationComponent } from './validation/validation.component';
 import { CkeditorComponent } from './ckeditor/ckeditor.component';
@@ -20,6 +21,7 @@ import { CkeditorComponent } from './ckeditor/ckeditor.component';
     RoutingModule
   ],
   declarations: [
+    FormsComponent,
     ElementsComponent,
     ValidationComponent,
     CkeditorComponent

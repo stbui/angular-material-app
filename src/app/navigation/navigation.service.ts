@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Http, Headers } from '@angular/http';
+import { environment } from '../../environments/environment'
+
 
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 
@@ -7,7 +9,7 @@ import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 export class NavigationService {
 
   private _navigations: BehaviorSubject<any>;
-  private apiUrl = 'http://127.0.0.1:8360/api';
+  private apiUrl = environment.navigationApi + '/api';
 
   get navigations() {
     return this._navigations.asObservable();
