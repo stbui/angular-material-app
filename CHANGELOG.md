@@ -4,6 +4,7 @@
 
 #### 新增
 - MarkDown
+- echarts
 
 ### 优化
 - pages 目录下的组件

@@ -5,10 +5,13 @@ import { FormsModule } from '@angular/forms';
 import { RoutingModule } from './componebt-routing.module';
 import { DatePickerComponent } from './date-picker/date-picker.component';
 import { CalendarComponent } from './date-picker/calendar/calendar.component';
+import { DayButtonComponent } from './date-picker/day-button/day-button.component';
 import { PaginationComponent } from './pagination/pagination.component';
 import { ComponentComponent } from './component.component';
 import { AmapComponent } from './amap/amap.component';
 import { MarkdownComponent } from './markdown/markdown.component';
+import { DatePickerPipe } from './date-picker/date-picker.pipe';
+
 
 @NgModule({
   imports: [
@@ -23,7 +26,9 @@ import { MarkdownComponent } from './markdown/markdown.component';
     PaginationComponent,
     ComponentComponent,
     AmapComponent,
-    MarkdownComponent
+    MarkdownComponent,
+    DatePickerPipe,
+    DayButtonComponent
   ],
   exports: [
     DatePickerComponent,

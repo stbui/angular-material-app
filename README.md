@@ -70,6 +70,7 @@ docker run -d -P stbui/angular2-material2-admin-app
 - [x] 分页
 - [x] MarkDown
 - [x] 高德地图
+- [x] echarts
 - [ ] 集成 七牛云
 - [ ] 集成 阿里云
 - [ ] ckeditor

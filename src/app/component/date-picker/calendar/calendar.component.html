@@ -2,15 +2,15 @@
   <div class="stb-date-display">
     <div class="stb-date-display-year">
       <div class="stb-date-display-slideIn-wrapper">
-        <div class="stb-date-display-year-title">
-          2017
+        <div class="stb-date-display-year-title" *ngFor="let displayDate of displayDates">
+          {{ displayDate.getFullYear() }}
         </div>
       </div>
     </div>
     <div class="stb-date-display-monthday">
       <div class="stb-date-display-slideIn-wrapper">
-        <div class="stb-date-display-monthday-title">
-          04-24 星期一
+        <div class="stb-date-display-monthday-title" *ngFor="let displayDate of displayDates">
+          {{ displayDate | datePicker:'formatDisplay' }}
         </div>
       </div>
     </div>
@@ -22,8 +22,8 @@
           <md-icon>chevron_left</md-icon>
         </button>
         <div class="stb-calendar-toolbar-title-wrapper">
-          <div class="stb-calendar-toolbar-title">
-            2017 四月
+          <div class="stb-calendar-toolbar-title" *ngFor="let displayDate of displayDates">
+            {{ displayDate | datePicker:'formatMonth' }}
           </div>
         </div>
         <button md-icon-button>
@@ -37,110 +37,13 @@
       <div class="stb-calendar-monthday">
         <div class="stb-calendar-monthday-slide">
           <div class="stb-calendar-monthday-content">
-            <div class="stb-calendar-monthday-row"><span class="stb-day-empty"></span><span
-              class="stb-day-empty"></span><span class="stb-day-empty"></span><span class="stb-day-empty"></span><span
-              class="stb-day-empty"></span>
-              <button class="stb-day-button">
-                <div class="stb-day-button-bg"></div>
-                <span class="stb-day-button-text">1</span></button>
-              <button class="stb-day-button">
-                <div class="stb-day-button-bg"></div>
-                <span class="stb-day-button-text">2</span></button>
-            </div>
-            <div class="stb-calendar-monthday-row">
-              <button class="stb-day-button">3</button>
-              <button class="stb-day-button">
-                <div class="stb-day-button-bg"></div>
-                <span class="stb-day-button-text">4</span></button>
-              <button class="stb-day-button">
-                <div class="stb-day-button-bg"></div>
-                <span class="stb-day-button-text">5</span></button>
-              <button class="stb-day-button">
-                <div class="stb-day-button-bg"></div>
-                <span class="stb-day-button-text">6</span></button>
-              <button class="stb-day-button">
-                <div class="stb-day-button-bg"></div>
-                <span class="stb-day-button-text">7</span></button>
-              <button class="stb-day-button">
-                <div class="stb-day-button-bg"></div>
-                <span class="stb-day-button-text">8</span></button>
-              <button class="stb-day-button">
-                <div class="stb-day-button-bg"></div>
-                <span class="stb-day-button-text">9</span></button>
-            </div>
-            <div class="stb-calendar-monthday-row">
-              <button class="stb-day-button">
-                <div class="stb-day-button-bg"></div>
-                <span class="stb-day-button-text">10</span></button>
-              <button class="stb-day-button">
-                <div class="stb-day-button-bg"></div>
-                <span class="stb-day-button-text">11</span></button>
-              <button class="stb-day-button">
-                <div class="stb-day-button-bg"></div>
-                <span class="stb-day-button-text">12</span></button>
-              <button class="stb-day-button">
-                <div class="stb-day-button-bg"></div>
-                <span class="stb-day-button-text">13</span></button>
-              <button class="stb-day-button">
-                <div class="stb-day-button-bg"></div>
-                <span class="stb-day-button-text">14</span></button>
-              <button class="stb-day-button">
-                <div class="stb-day-button-bg"></div>
-                <span class="stb-day-button-text">15</span></button>
-              <button class="stb-day-button">
-                <div class="stb-day-button-bg"></div>
-                <span class="stb-day-button-text">16</span></button>
-            </div>
-            <div class="stb-calendar-monthday-row">
-              <button class="stb-day-button">
-                <div class="stb-day-button-bg"></div>
-                <span class="stb-day-button-text">17</span></button>
-              <button class="stb-day-button">
-                <div class="stb-day-button-bg"></div>
-                <span class="stb-day-button-text">18</span></button>
-              <button class="stb-day-button">
-                <div class="stb-day-button-bg"></div>
-                <span class="stb-day-button-text">19</span></button>
-              <button class="stb-day-button">
-                <div class="stb-day-button-bg"></div>
-                <span class="stb-day-button-text">20</span></button>
-              <button class="stb-day-button">
-                <div class="stb-day-button-bg"></div>
-                <span class="stb-day-button-text">21</span></button>
-              <button class="stb-day-button">
-                <div class="stb-day-button-bg"></div>
-                <span class="stb-day-button-text">22</span></button>
-              <button class="stb-day-button">
-                <div class="stb-day-button-bg"></div>
-                <span class="stb-day-button-text">23</span></button>
-            </div>
-            <div class="stb-calendar-monthday-row">
-              <button class="selected stb-day-button now">
-                <div class="stb-day-button-bg"></div>
-                <span class="stb-day-button-text">24</span></button>
-              <button class="stb-day-button">
-                <div class="stb-day-button-bg"></div>
-                <span class="stb-day-button-text">25</span></button>
-              <button class="stb-day-button">
-                <div class="stb-day-button-bg"></div>
-                <span class="stb-day-button-text">26</span></button>
-              <button class="stb-day-button">
-                <div class="stb-day-button-bg"></div>
-                <span class="stb-day-button-text">27</span></button>
-              <button class="stb-day-button">
-                <div class="stb-day-button-bg"></div>
-                <span class="stb-day-button-text">28</span></button>
-              <button class="stb-day-button">
-                <div class="stb-day-button-bg"></div>
-                <span class="stb-day-button-text">29</span></button>
-              <button class="stb-day-button">
-                <div class="stb-day-button-bg"></div>
-                <span class="stb-day-button-text">30</span></button>
+            <div class="stb-calendar-monthday-row" *ngFor="let week of weeksArray">
+              <stbui-day-button [date]="date" *ngFor="let date of week"></stbui-day-button>
             </div>
           </div>
         </div>
       </div>
-    </div> <!---->
+    </div>
     <div class="stb-calendar-actions">
       <button md-button color="primary">取消</button>
       <button md-button color="primary">确定</button>
