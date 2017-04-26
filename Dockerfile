@@ -1,4 +1,4 @@
-FROM node:6-alpine
+FROM node:lastest
 
 RUN npm install -g @angular/cli@1.0.0
 WORKDIR /stbui.stbui.com
