@@ -15,60 +15,65 @@ import { TabsComponent } from './tabs/tabs.component';
 import { PaginationComponent } from './pagination/pagination.component';
 import { AmapComponent } from './amap/amap.component';
 import { DatePickerComponent } from './date-picker/date-picker.component';
+import { MarkdownComponent } from './markdown/markdown.component';
 
 
 const routers: Routes = [
   {
-    path: '',
+    path: 'materials',
     component: AdminComponent,
     children: [
       {
-        path: 'materials/toast',
+        path: 'toast',
         component: ToastComponent
       },
       {
-        path: 'materials/buttons',
+        path: 'buttons',
         component: ButtonsComponent
       },
       {
-        path: 'materials/cards',
+        path: 'cards',
         component: CardsComponent
       },
       {
-        path: 'materials/tooltips',
+        path: 'tooltips',
         component: TooltipsComponent
       },
       {
-        path: 'materials/dialogs',
+        path: 'dialogs',
         component: DialogsComponent
       },
       {
-        path: 'materials/lists',
+        path: 'lists',
         component: ListsComponent
       },
       {
-        path: 'materials/menu',
+        path: 'menu',
         component: MenuComponent
       },
       {
-        path: 'materials/slider',
+        path: 'slider',
         component: SliderComponent
       },
       {
-        path: 'materials/tabs',
+        path: 'tabs',
         component: TabsComponent
       },
       {
-        path: 'materials/pagination',
+        path: 'pagination',
         component: PaginationComponent
       },
       {
-        path: 'materials/amap',
+        path: 'amap',
         component: AmapComponent
       },
       {
-        path: 'materials/datepicker',
+        path: 'datepicker',
         component: DatePickerComponent
+      },
+      {
+        path: 'markdown',
+        component: MarkdownComponent
       }
     ]
   }

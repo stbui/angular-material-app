@@ -1,39 +1,27 @@
-
-```
-npm i -g @angular/cli@latest
-npm i -g typescript
-npm install -g tslint
-```
-
-
-#### api
+#### 本地接口API
 ```
 npm install -g json-server
 json-server ./src/app/todo/todo.data.json
 json-server ./src/assets/data/data.json
 ```
 
-#### 安装过的模块
+#### 过安装的模块
 ```
-npm install --save ng2-bootstrap
 npm install --save angular-in-memory-web-api
-npm install --save bootstrap-sass
 npm i -S angular2-datatable
 npm install ngx-quill --save
 npm install --save normalize.css
 
-npm install ng2-charts --save
-npm install chart.js --save
-
 npm install --save echarts
 npm install --save-dev @types/echarts
 
-npm install --save-dev @types/echarts
-npm install --save ng2-ckeditor
-npm install ng2-ueditor --save
--- npm i -S ng2-echarts -- 
--- npm install --save angular2-highcharts --
-npm install chart.js --save
+npm install --save markdown-it
+npm install --save-dev @types/markdown-it
+
+-- pm install --save ng2-ckeditor --
+-- npm install --save ckeditor --
+-- npm install --save-dev @types/ckeditor -- 
+
 ```
 
 ####
@@ -46,20 +34,25 @@ npm install --save ng2-validation
 http://lbs.amap.com/api/javascript-api/summary/
 
 
-#### jquery 导入方法
-```
-npm install -D @types/jquery
-```
-```
-import * as $ from 'jquery';
-$('body').addClass('stbui');
-```
-
-
 ##### 开源
 
 - https://github.com/greengerong/rebirth
 
+##### angular 2 组件
+
+[@angular/material](https://github.com/angular/material2)
+
+[flex-layout](https://github.com/angular/flex-layout)
+
+[angular-in-memory-web-api](https://github.com/angular/in-memory-web-api)
+
+[angular2-perfect-scrollbar](https://www.npmjs.com/package/angular2-perfect-scrollbar)
+
+[ng2-ckeditor](https://github.com/chymz/ng2-ckeditor)
+
+[A feature-rich yet lightweight data-table crafted for Angular2](https://github.com/swimlane/angular2-data-table)
+
+[markdown](https://github.com/markdown-it/markdown-it)
 
 ##### 组件
 

@@ -7,7 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminComponent implements OnInit {
 
-  theme: string = 'bg-success';
   title = 'angular2 material2 web - Power by 码农庄园';
 
   constructor() { }
@@ -15,7 +14,4 @@ export class AdminComponent implements OnInit {
   ngOnInit() {
   }
 
-  onThemeChanges(theme) {
-    this.theme = theme;
-  }
 }

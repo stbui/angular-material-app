@@ -1,0 +1,6 @@
+<div *ngIf="source" [innerHTML]="source"></div>
+
+<md-input-container *ngIf="!source">
+  <textarea class="markdown" [ngStyle]="getMarkDown()" mdInput (keyup)="keyUp()" [(ngModel)]="inputValue"
+            name="inputValue" placeholder="markdown"></textarea>
+</md-input-container>

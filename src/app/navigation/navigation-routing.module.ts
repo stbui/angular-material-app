@@ -6,11 +6,11 @@ import { NavigationComponent } from './navigation.component';
 
 const routers: Routes = [
   {
-    path:'',
+    path:'apps',
     component: AdminComponent,
     children: [
       {
-        path: 'apps/navigation',
+        path: 'navigation',
         component: NavigationComponent
       }
     ]

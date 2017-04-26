@@ -17,6 +17,7 @@ import { TabsComponent } from './tabs/tabs.component';
 import { PaginationComponent } from './pagination/pagination.component';
 import { AmapComponent } from './amap/amap.component';
 import { DatePickerComponent } from './date-picker/date-picker.component';
+import { MarkdownComponent } from './markdown/markdown.component';
 
 @NgModule({
   imports: [
@@ -38,7 +39,8 @@ import { DatePickerComponent } from './date-picker/date-picker.component';
     TabsComponent,
     PaginationComponent,
     AmapComponent,
-    DatePickerComponent
+    DatePickerComponent,
+    MarkdownComponent
   ]
 })
 export class MaterialsModule { }

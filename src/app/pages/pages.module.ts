@@ -11,13 +11,15 @@ import { ContactComponent } from './contact/contact.component';
 import { ServicesComponent } from './services/services.component';
 import { CollectionComponent } from './collection/collection.component';
 import { UserComponent } from './user/user.component';
+import { SignupComponent } from './signup/signup.component';
+import { SigninComponent } from './signin/signin.component';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     FlexLayoutModule,
-    MaterialModule.forRoot(),
+    MaterialModule,
     RoutingModule
   ],
   declarations: [
@@ -26,7 +28,9 @@ import { UserComponent } from './user/user.component';
     ContactComponent,
     ServicesComponent,
     CollectionComponent,
-    UserComponent
+    UserComponent,
+    SignupComponent,
+    SigninComponent
   ]
 })
 export class PagesModule { }

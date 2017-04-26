@@ -7,10 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-  brand:string="stbui";
-  year:string="2017"
+  private brand: string = "stbui";
+  private year: string = "20170426"
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
 

@@ -1,0 +1,14 @@
+<md-card>
+  <md-card-title>带输入 Markdown</md-card-title>
+  <md-card-content>
+    <stbui-markdown width="500px" height="200px" class="markdown" (onMarkDown)="onMarkDownTriggered($event)"></stbui-markdown>
+    <div [innerHTML]="markdown"></div>
+  </md-card-content>
+</md-card>
+
+<md-card>
+  <md-card-title>指定源字符 Markdown</md-card-title>
+  <md-card-content>
+    <stbui-markdown [source]="source" width="500px" height="200px" class="markdown"></stbui-markdown>
+  </md-card-content>
+</md-card>

@@ -13,8 +13,7 @@ export class SidenavComponent implements OnInit {
   items: SidenavItem[] = [];
   private _itemsSubscription: Subscription;
 
-  constructor(@Inject('sidebar') private sidebarService,
-              @Inject('sidenavService') private service,
+  constructor(@Inject('sidenavService') private service,
               private router: Router) {
   }
 
@@ -23,17 +22,17 @@ export class SidenavComponent implements OnInit {
       this.items = items;
     });
 
-    this.router.events.subscribe((event)=>{
-      if(event instanceof NavigationEnd) {
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
         console.log(event.url);
       }
     });
 
   }
 
+  toggleIconSidenav() {
+  }
 
-
-  toggleIconSidenav(){}
-
-  isIconSidenav() {}
+  isIconSidenav() {
+  }
 }

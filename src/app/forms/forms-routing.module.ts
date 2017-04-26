@@ -4,7 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { AdminComponent } from '../admin/admin.component';
 import { ElementsComponent } from './elements/elements.component';
 import { ValidationComponent } from './validation/validation.component';
-import { CkeditorComponent } from './ckeditor/ckeditor.component';
+import { EditorComponent } from './editor/editor.component';
 
 const routers: Routes = [
   {
@@ -20,8 +20,8 @@ const routers: Routes = [
         component: ValidationComponent
       },
       {
-        path: 'forms/ckeditor',
-        component: CkeditorComponent
+        path: 'forms/editor',
+        component: EditorComponent
       }
     ]
   }

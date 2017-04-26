@@ -24,7 +24,6 @@
 - Typescript
 - RxJx
 
-
 ![demo image](src/assets/images-demo/2017-04-07_202402.jpg)
 
 ### 平台环境
@@ -56,24 +55,6 @@ http://127.0.0.1:4200
 ```
 ng build --prod --aot --env=prod
 ```
- 
-
-### 依赖包
-
-[@angular/material](https://github.com/angular/material2)
-
-[flex-layout](https://github.com/angular/flex-layout)
-
-[angular-in-memory-web-api](https://github.com/angular/in-memory-web-api)
-
-[angular2-perfect-scrollbar](https://www.npmjs.com/package/angular2-perfect-scrollbar)
-
-[ng2-ckeditor](https://github.com/chymz/ng2-ckeditor)
-
-[A feature-rich yet lightweight data-table crafted for Angular2](https://github.com/swimlane/angular2-data-table)
-
-[Beautiful charts for Angular2 based on Chart.js](https://github.com/valor-software/ng2-charts)
-
 
 ### Docker
 
@@ -87,10 +68,10 @@ docker run -d -P stbui/angular2-material2-admin-app
 ### 开发计划
 
 - [x] 分页
+- [x] MarkDown
 - [x] 高德地图
 - [ ] 集成 七牛云
 - [ ] 集成 阿里云
-- [ ] markdown
 - [ ] ckeditor
 - [ ] highcharts
 

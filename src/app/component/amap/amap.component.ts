@@ -15,15 +15,15 @@ export class AmapComponent {
   @Input() lat: number = 116.397428;
   @Input() lng: number = 39.90923;
 
-  private jsApi: any;
   private zoom:number = 11;
   private id;
+  private isLoaded = false;
 
   constructor() {
     this.setMapId();
     this.getAmapStyles();
-    this.jsApi = environment.amapApi;
-    this.loadScript(this.jsApi);
+
+    this.loadScript(environment.amapApi);
   }
 
   setMapId() {

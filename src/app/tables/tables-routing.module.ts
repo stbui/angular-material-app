@@ -8,15 +8,15 @@ import { DatatableComponent } from './datatable/datatable.component';
 
 const routers: Routes = [
   {
-    path: '',
+    path: 'tables',
     component: AdminComponent,
     children: [
       {
-        path: 'tables/static',
+        path: 'static',
         component: StaticComponent
       },
       {
-        path: 'tables/datatable',
+        path: 'datatable',
         component: DatatableComponent
       }
     ]

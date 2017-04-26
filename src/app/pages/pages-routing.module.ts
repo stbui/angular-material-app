@@ -7,34 +7,38 @@ import { ContactComponent } from './contact/contact.component';
 import { ServicesComponent } from './services/services.component';
 import { CollectionComponent } from './collection/collection.component';
 import { UserComponent } from './user/user.component';
+import { SignupComponent } from './signup/signup.component';
+import { SigninComponent } from './signin/signin.component';
 
 const routers: Routes = [
+  {path: 'sigin', component: SigninComponent},
+  {path: 'sigup', component: SignupComponent},
   {
-    path:'',
+    path:'pages',
     component: AdminComponent,
     children: [
       {
         path: '',
+        component: UserComponent
+      },
+      {
+        path: 'about',
         component: AboutComponent
       },
       {
-        path: 'pages/about',
-        component: AboutComponent
-      },
-      {
-        path: 'pages/contact',
+        path: 'contact',
         component: ContactComponent
       },
       {
-        path: 'pages/collection',
+        path: 'collection',
         component: CollectionComponent
       },
       {
-        path: 'pages/services',
+        path: 'services',
         component: ServicesComponent
       },
       {
-        path: 'pages/user',
+        path: 'user',
         component: UserComponent
       }
     ]
