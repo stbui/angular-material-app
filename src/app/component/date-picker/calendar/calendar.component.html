@@ -38,7 +38,7 @@
         <div class="stb-calendar-monthday-slide">
           <div class="stb-calendar-monthday-content">
             <div class="stb-calendar-monthday-row" *ngFor="let week of weeksArray">
-              <stbui-day-button [date]="date" *ngFor="let date of week"></stbui-day-button>
+              <stbui-day-button (onSelected)="onDaySelected($event)" [date]="date" *ngFor="let date of week"></stbui-day-button>
             </div>
           </div>
         </div>

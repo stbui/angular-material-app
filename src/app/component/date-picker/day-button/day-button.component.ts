@@ -7,14 +7,11 @@ import {Component, Input, EventEmitter, Output} from '@angular/core';
 })
 export class DayButtonComponent {
 
-  private _selected: boolean = false;
+  @Input() selected: boolean = false;
   @Input() date: any;
   @Output() onSelected = new EventEmitter();
 
   constructor() {
-  }
-
-  ngOnInit() {
   }
 
   isNow() {
@@ -25,7 +22,7 @@ export class DayButtonComponent {
     // return this.date && d.getYear() === now.getYear() && d.getMonth() === now.getMonth() && d.getDate() === now.getDate();
   }
 
-  selected(day) {
-    this._selected = true;
+  onSelectedTriggered(day) {
+    this.onSelected.emit(day);
   }
 }

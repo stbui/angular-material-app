@@ -15,18 +15,18 @@ export class DatePickerPipe implements PipeTransform {
 
   transform(value: any, args?: any): any {
     if (args == 'undefined') args = 'formatMonth';
+    //
+    // console.log(args)
+    // switch (args) {
+    //   case 'formatMonth':
+    //     return this.formatMonth(value);
+    //   case 'formatDisplay':
+    //     return this.formatDisplay(value);
+    //   case 'formatDay':
+    //     return this.formatDay(value);
+    // }
 
-    console.log(args)
-    switch (args) {
-      case 'formatMonth':
-        return this.formatMonth(value);
-      case 'formatDisplay':
-        return this.formatDisplay(value);
-      case 'formatDay':
-        return this.formatDay(value);
-    }
-
-    // return this[args](value);
+    return this[args](value);
   }
 
   formatMonth(date) {
