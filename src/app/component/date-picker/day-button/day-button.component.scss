@@ -1,0 +1,70 @@
+:host {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.stb-day-button {
+  display: inline-block;
+  background: none;
+  user-select: none;
+  outline: none;
+  text-decoration: none;
+  cursor: pointer;
+  margin: 0px;
+  padding: 4px 0px;
+  font-size: inherit;
+  font-weight: 400;
+  position: relative;
+  border: 10px;
+  width: 42px;
+  &.disabled{
+    opacity: .4;
+  }
+}
+.stb-day-empty {
+  font-weight: 400;
+  padding: 4px 0px;
+  position: relative;
+  width: 42px;
+}
+.stb-day-button-bg {
+  position: absolute;
+  top: 0;
+  left: 4px;
+  height: 34px;
+  background-color: #7e57c2;
+  border-radius: 50%;
+  opacity: 0;
+  transform: scale(0);
+  -webkit-transition: all .45s cubic-bezier(.23,1,.32,1);
+  transition: all .45s cubic-bezier(.23,1,.32,1);
+
+  width: 34px;
+  .stb-day-button:hover &,
+  .stb-day-button.hover &,
+  .stb-day-button.selected &{
+    transform: scale(1);
+  }
+  .stb-day-button:hover &,
+  .stb-day-button.hover &{
+    opacity: 0.6;
+  }
+
+  .stb-day-button.selected &{
+    opacity: 1;
+  }
+}
+.stb-day-button-text{
+  font-weight: 400;
+  position: relative;
+  color: rgba(0,0,0,.87);
+  .stb-day-button.now &{
+    color: #7e57c2;
+  }
+  .stb-day-button:hover &,
+  .stb-day-button.hover &,
+  .stb-day-button.selected &{
+    color:#fff;
+  }
+}

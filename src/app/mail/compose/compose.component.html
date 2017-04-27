@@ -1,0 +1,39 @@
+<div class="inbox-compose">
+  <div md-dialog-content fxLayout="row" fxLayoutAlign="space-between center">
+    <span>写信</span>
+    <button md-dialog-close md-icon-button>
+      <md-icon>close</md-icon>
+    </button>
+  </div>
+
+  <form #mailForm="ngForm">
+    <div fxLayout="column" md-dialog-content>
+      <md-input-container fxFlex>
+        <input mdInput placeholder="收件人" name="name" [(ngModel)]="name" required>
+      </md-input-container>
+      <md-input-container fxFlex>
+        <input mdInput placeholder="发件人" disabled name="address" [(ngModel)]="address" required>
+      </md-input-container>
+      <md-input-container fxFlex>
+        <input mdInput placeholder="主题" name="subject" [(ngModel)]="subject" required>
+      </md-input-container>
+      <p class="editor">
+        <quill-editor name="content" [(ngModel)]="content"></quill-editor>
+      </p>
+    </div>
+
+    <div md-dialog-actions fxLayout="row">
+      <button md-dialog-close md-icon-button>
+        <md-icon>delete</md-icon>
+      </button>
+      <span fxFlex><!-- fill space --></span>
+      <button md-icon-button>
+        <md-icon>attachment</md-icon>
+      </button>
+      <button class="send" md-raised-button color="primary" [disabled]="!mailForm.valid" (click)="send()">
+        发送 <md-icon>send</md-icon>
+      </button>
+    </div>
+
+  </form>
+</div>

@@ -1,0 +1,67 @@
+<div *ngIf="!mail" class="toolbar" fxLayout="row" fxLayoutAlign="start center">
+  <md-checkbox class="checkbox"></md-checkbox>
+  <span fxFlex><!-- fill space --></span>
+  <span>1 - 25 of {{ itemCount }}</span>
+  <div class="chevrons">
+    <button md-icon-button>
+      <md-icon>chevron_left</md-icon>
+    </button>
+    <button md-icon-button>
+      <md-icon>chevron_right</md-icon>
+    </button>
+  </div>
+</div>
+
+<div *ngIf="mail" class="toolbar toolbar-detail" fxLayout="row" fxLayoutAlign="start center">
+  <div class="icon-group">
+    <button class="back" md-icon-button mdTooltip="返回" (click)="onForwardTriggered()">
+      <md-icon>arrow_back</md-icon>
+    </button>
+  </div>
+  <div class="icon-group">
+    <button class="archive" md-icon-button mdTooltip="收取">
+      <md-icon>archive</md-icon>
+    </button>
+    <button class="spam" md-icon-button mdTooltip="标记垃圾">
+      <md-icon>backspace</md-icon>
+    </button>
+    <button class="delete" md-icon-button mdTooltip="删除">
+      <md-icon>delete</md-icon>
+    </button>
+  </div>
+  <div class="icon-group">
+    <button class="archive" md-icon-button mdTooltip="移动到">
+      <md-icon>folder</md-icon>
+    </button>
+    <button class="spam" md-icon-button mdTooltip="标签" [mdMenuTriggerFor]="mailLabels">
+      <md-icon>label</md-icon>
+    </button>
+  </div>
+  <button class="delete" md-icon-button [mdMenuTriggerFor]="mailOptions">
+    <md-icon>more_vert</md-icon>
+  </button>
+  <span fxFlex><!-- fill space --></span>
+  <span>1 - 25 of 0</span>
+  <div class="chevrons">
+    <button md-icon-button>
+      <md-icon>chevron_left</md-icon>
+    </button>
+    <button md-icon-button>
+      <md-icon>chevron_right</md-icon>
+    </button>
+  </div>
+</div>
+
+<md-menu #mailOptions="mdMenu">
+  <button md-menu-item> <md-icon>markunread_mailbox</md-icon>标记未读 </button>
+  <button md-menu-item> <md-icon>label</md-icon> 标签 </button>
+  <md-divider></md-divider>
+  <button md-menu-item> <md-icon>delete</md-icon> 删除 </button>
+</md-menu>
+
+<md-menu #mailLabels="mdMenu">
+  <button md-menu-item> <md-icon>markunread_mailbox</md-icon>标记未读 </button>
+  <button md-menu-item> <md-icon>label</md-icon> 标签 </button>
+  <md-divider></md-divider>
+  <button md-menu-item> <md-icon>delete</md-icon> 删除 </button>
+</md-menu>

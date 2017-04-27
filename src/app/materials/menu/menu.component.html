@@ -1,0 +1,39 @@
+<md-card>
+  <md-card-title>Menu</md-card-title>
+  <md-card-content>
+    <button md-icon-button [mdMenuTriggerFor]="menu">
+      <md-icon>grade</md-icon>
+    </button>
+
+    <md-menu #menu="mdMenu">
+      <button md-menu-item> 刷新 </button>
+      <button md-menu-item> 设置 </button>
+      <button md-menu-item> 帮助 </button>
+      <button md-menu-item disabled> 退出 </button>
+    </md-menu>
+  </md-card-content>
+</md-card>
+
+<md-card>
+  <md-card-title>带图标 Menu</md-card-title>
+  <md-card-content>
+    <button md-icon-button [mdMenuTriggerFor]="menu2">
+      <md-icon>more_vert</md-icon>
+    </button>
+
+    <md-menu #menu2="mdMenu">
+      <button md-menu-item>
+        <md-icon> dialpad </md-icon>
+        <span> Redial </span>
+      </button>
+      <button md-menu-item disabled>
+        <md-icon> voicemail </md-icon>
+        <span> Check voicemail </span>
+      </button>
+      <button md-menu-item>
+        <md-icon> notifications_off </md-icon>
+        <span> Disable alerts </span>
+      </button>
+    </md-menu>
+  </md-card-content>
+</md-card>

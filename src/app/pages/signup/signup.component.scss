@@ -1,0 +1,51 @@
+$image_path:            "/assets/images/" !default;
+
+:host {
+  display: block;
+  background: #fff url('#{$image_path}background/1.png') no-repeat center center fixed;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.register {
+  background: white;
+  width: 380px;
+
+  .register-header {
+    background: #ccc;
+    padding: 24px;
+  }
+
+  .register-content {
+    padding: 24px 42px 42px;
+
+    md-input-container {
+      width: 100%;
+      margin: 6px 0;
+    }
+
+    .extra-options {
+      margin: 16px 0 32px;
+
+      .remember-me {
+        color: #777;
+      }
+    }
+
+    a {
+      text-decoration: none;
+      color: #2196F3;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    .note {
+      color: #777;
+      margin: 24px 0 0;
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,46 @@
+<div class="sidenav-container">
+  <md-toolbar>
+    <div class="toolbar" fxLayout="row" fxLayoutAlign="start center">
+      <img class="avatar pointer" [src]="avatar">
+      <span fxFlex></span>
+      <button md-icon-button>
+        <md-icon>phone</md-icon>
+      </button>
+      <button md-icon-button [mdMenuTriggerFor]="userMenu">
+        <md-icon>more_vert</md-icon>
+      </button>
+    </div>
+  </md-toolbar>
+
+  <div class="chat-contacts-container" fxLayout="column">
+    <perfect-scrollbar>
+      <md-nav-list class="chat-contacts">
+        <md-list-item class="chat-contact" (click)="setActiveChat(chat)" *ngFor="let chat of chats" md-ripple>
+          <img [src]="chat.picture" md-list-avatar>
+          <h3 class="name" md-line>{{chat.name}}</h3>
+          <p class="last-message" md-line> {{chat.lastMessage}}</p>
+        </md-list-item>
+      </md-nav-list>
+    </perfect-scrollbar>
+  </div>
+</div>
+
+<md-menu #userMenu="mdMenu">
+  <button md-menu-item>
+    <md-icon> account_circle </md-icon>
+    <span> 我 </span>
+  </button>
+  <button md-menu-item>
+    <md-icon> settings </md-icon>
+    <span> 设置 </span>
+  </button>
+  <button md-menu-item>
+    <md-icon>help</md-icon>
+    <span>帮助</span>
+  </button>
+  <md-divider></md-divider>
+  <button md-menu-item>
+    <md-icon> exit_to_app </md-icon>
+    <span> 退出 </span>
+  </button>
+</md-menu>

@@ -1,0 +1,14 @@
+<md-sidenav-container>
+
+  <md-sidenav class="sidenav" align="start" mode="side" opened="true" #sidenav>
+    <app-sidenav></app-sidenav>
+  </md-sidenav>
+
+  <app-header></app-header>
+
+  <div class="main-container" #scrollContainer>
+    <router-outlet></router-outlet>
+  </div>
+  <app-footer></app-footer>
+
+</md-sidenav-container>

@@ -1,0 +1,103 @@
+@import '~@angular/material/core/theming/all-theme';
+
+$pagination-size: 32px !default;
+$pagination-line-height: 32px !default;
+$pagination-padding: 0 8px !default;
+$pagination-margin: 0 8px !default;
+$pagination-border-radious: 2px !default;
+
+.pagination {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  user-select: none;
+  cursor: pointer;
+  -webkit-appearance: none;
+
+  li {
+    box-sizing: border-box;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+
+    font-size: $mat-body-font-size-base;
+    font-family: $mat-font-family;
+    font-weight: 500;
+    text-align: center;
+
+    height: $pagination-size;
+    min-width: $pagination-size;
+    padding: $pagination-padding;
+    margin: $pagination-margin;
+    line-height: $pagination-line-height;
+    position: relative;
+    border-radius: $pagination-border-radious;
+  }
+
+  &-item-wrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.pagination-end {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.pagination-center {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+}
+
+@mixin pagination-theme($theme) {
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+  $warn: map-get($theme, warn);
+  $background: map-get($theme, background);
+  $foreground: map-get($theme, foreground);
+
+  .pagination li {
+    color: mat-color($foreground, text);
+  }
+
+  .pagination li:hover {
+    background-color: mat-color($primary, .2);
+  }
+
+  .pagination li {
+    &:hover .active,
+    &:hover.active,
+    .active,
+    &.active {
+      background-color: mat-color($primary);
+      color: #fff;
+    }
+  }
+}

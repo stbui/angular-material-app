@@ -1,0 +1,58 @@
+$height__chat-header: 150px;
+$height__chat-toolbar: 64px;
+$height__chat-container: calc(100% - #{$height__chat-header - $height__chat-toolbar});
+
+
+md-toolbar {
+  border-bottom: 1px solid #EEE;
+
+  .toolbar {
+    width: 100%;
+  }
+
+  .current-contact {
+    .avatar {
+      margin: 0 14px 0 10px;
+    }
+
+    .name {
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+    .status {
+      font-size: 14px;
+      color: #888;
+    }
+  }
+}
+
+.chat-contacts-container {
+  height: calc(100% - #{$height__chat-toolbar});
+
+  .chat-contacts {
+    padding-top: 0;
+
+    .chat-contact {
+      position: relative;
+      cursor: pointer;
+      transition: background .1s linear;
+
+      &:hover {
+        background: #EEE;
+      }
+
+      .name {  }
+
+      .last-message {
+        color: #888;
+      }
+    }
+  }
+}
+
+
+.sidenav-container, .sidenav-scrollbar-container {
+  height: 100%;
+}
+

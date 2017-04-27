@@ -1,0 +1,66 @@
+<div class="mail-detail" *ngIf="mail">
+
+  <div class="mail-subject">{{ mail.subject }}</div>
+
+  <div class="mail-header" fxLayout="row">
+    <img class="avatar" src="assets/images/avatars/7.jpg">
+    <div class="mail-info" fxLayout="column">
+      <span class="from">{{ mail.from.name }}</span>
+      <span class="to">to me <md-icon>arrow_drop_down</md-icon></span>
+    </div>
+    <span fxFlex><!-- fill space--></span>
+    <div class="mail-extra">
+      <span class="when">{{ mail.when }}</span>
+      <button class="options" [mdMenuTriggerFor]="mailOptions" md-icon-button>
+        <md-icon>more_vert</md-icon>
+      </button>
+    </div>
+  </div>
+
+  <div class="mail-content">
+    <div class="mail-content-text">
+      <p>{{ mail.content }}</p>
+    </div>
+
+    <div class="attachments-container">
+      <div class="attachments-header" fxLayout="row" fxLayoutAlign="start center">
+        <span class="title">附件</span>
+        <md-divider fxFlex></md-divider>
+        <button class="download" md-icon-button>
+          <md-icon>file_download</md-icon>
+        </button>
+      </div>
+
+      <div class="attachments" fxLayout="row" fxLayoutWrap="wrap">
+        <div class="attachment">
+          <img class="pointer">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="respond" fxLayout="row" fxLayoutAlign="start center">
+    <img class="avatar" src="assets/images/avatars/7.jpg">
+    <span class="click-reply">点击 <span class="semi-bold">回复</span> or <span class="semi-bold">后退</span></span>
+    <span fxFlex><!-- fill space --></span>
+    <md-icon class="reply">reply</md-icon>
+    <md-icon class="forward">forward</md-icon>
+  </div>
+
+  <div style="display: none" class="respond respond-active">
+    <quill-editor></quill-editor>
+    <div class="respond-buttons" fxLayout="row" fxLayoutAlign="end stretch">
+      <button md-button>Cancel</button>
+      <button md-raised-button color="primary">Send <md-icon>send</md-icon></button>
+    </div>
+  </div>
+
+</div>
+
+
+<md-menu #mailOptions="mdMenu">
+  <button md-menu-item> <md-icon>markunread_mailbox</md-icon>标记未读 </button>
+  <button md-menu-item> <md-icon>label</md-icon> 标签 </button>
+  <md-divider></md-divider>
+  <button md-menu-item> <md-icon>delete</md-icon> 删除 </button>
+</md-menu>

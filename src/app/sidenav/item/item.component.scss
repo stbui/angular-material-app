@@ -1,0 +1,47 @@
+:host {
+  color: #a1a1a1;
+}
+
+.sidenav-anchor {
+  position: relative;
+  cursor: pointer;
+  transform: color .1s;
+
+  &:hover {
+    color: #fafafa;
+  }
+
+  &.active {
+    color: #fafafa;
+  }
+}
+
+
+md-nav-list a.sidenav-anchor {
+  color: #a1a1a1 !important;
+
+  .sidenav-item-name {
+    font-size: 14px;
+    margin-left: 24px;
+  }
+}
+
+.sidenav-list {
+  transition: height .4s cubic-bezier(.35, 0, .25, 1);
+  overflow: hidden;
+
+  sidenav-item {
+    &.open {
+      > .sidenav-anchor {
+        .sidenav-item-dropdown-indicator {
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    .sidenav-item-dropdown-indicator {
+      transition: transform .25s;
+    }
+
+  }
+}

@@ -1,0 +1,27 @@
+.header-btn {
+  min-width: 60px;
+  line-height: 60px;
+}
+
+.badge {
+  background-color: transparent;
+  position: absolute;
+  top: 6px;
+  right: 3px;
+  color: inherit;
+}
+
+
+.main-toolbar {
+  background-color: #fff;
+
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.search-btn,
+.notify-btn,
+.user-btn,
+.more-btn {
+  height: 100%;
+  min-width: 50px;
+}

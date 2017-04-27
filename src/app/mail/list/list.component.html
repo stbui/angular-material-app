@@ -1,0 +1,40 @@
+<div class="mail-list">
+  <a class="mail" #mailList fxLayout="row" (click)="onOpenMailDetialTriggered(mail)" *ngFor="let mail of mails">
+    <div fxHide="true" fxHide.gt-xs="false" class="start-wrapper" fxFlex="180px" fxFlex.gt-sm="270px" fxLayout="row" fxLayoutAlign="start center">
+      <md-checkbox class="checkbox"></md-checkbox>
+      <button fxHide="true" fxHide.gt-sm="false" md-icon-button>
+        <md-icon class="star" *ngIf="!mail.starred">star_border</md-icon>
+        <md-icon class="star active" *ngIf="mail.starred">star</md-icon>
+      </button>
+      <img fxHide="true" fxHide.gt-sm="false" class="from-avatar" src="assets/images/avatars/7.jpg">
+      <span class="from-name">{{ mail.from.name }}</span>
+    </div>
+    <p class="content-wrapper" fxLayout="row" fxLayoutAlign="start center">
+                <span class="labels">
+                  <span class="label">{{ mail.labels.name }}</span>
+                </span>
+      <span class="subject">{{ mail.subject }}</span>
+      <span class="middot">&middot;</span>
+      <span class="content">{{ mail.content }}</span>
+    </p>
+    <div fxHide="true" fxHide.gt-xs="false" fxFlex="100px" fxFlex.gt-sm="200px" class="end-wrapper" fxLayout="row" fxLayoutAlign="end center">
+      <span class="when">{{ mail.when }}</span>
+      <button fxHide="true" fxHide.gt-sm="false"  class="options" [mdMenuTriggerFor]="mailOptions" md-icon-button>
+        <md-icon>more_vert</md-icon>
+      </button>
+    </div>
+  </a>
+</div>
+
+
+<div class="no-mails-container" fxLayout="column" fxLayoutAlign="start center" *ngIf="mails.length == 0">
+  <span class="no-mails">没有邮件</span>
+</div>
+
+
+<md-menu #mailOptions="mdMenu">
+  <button md-menu-item> <md-icon>markunread_mailbox</md-icon>标记未读 </button>
+  <button md-menu-item> <md-icon>label</md-icon> 标签 </button>
+  <md-divider></md-divider>
+  <button md-menu-item> <md-icon>delete</md-icon> 删除 </button>
+</md-menu>

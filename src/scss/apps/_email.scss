@@ -1,0 +1,249 @@
+
+#mail {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+
+    .mail-sidenav {
+        z-index: 59;
+        width: 240px;
+        min-width: 240px;
+    }
+    .mail-list-container,
+    .mail-read-container {
+        flex: 1;
+    }
+
+    .mail-sidenav {
+        height: calc(100vh - 104px); // header 60px + footer 44px
+        overflow: hidden;
+    }
+    .mail-list-content,
+    .mail-read-content {
+        height: calc(100vh - 164px); // header 60px + footer 44px + toolbar 60px
+        overflow: hidden;
+    }
+}
+
+
+// toolbar
+.toolbar {
+    position: relative;
+    background-color: #fff;
+    width: 100%;
+}
+.list-toolbar {
+    padding: 10px 16px 10px 26px;
+}
+.read-toolbar {
+    padding: 10px 15px 10px 15px;
+}
+
+
+
+// sidenav
+#mail {
+    .mail-sidenav {
+        padding: 0;
+        border-right: 1px solid #555;
+
+        md-list-item._md-button-wrap>div.md-button:first-child {
+            padding: 0 25px;
+        }
+
+        &.md-locked-open {
+
+            .header {
+                color: #FFFFFF;
+
+                .logo {
+                    padding-top: 27px;
+
+                    .logo-icon {
+
+                        md-icon {
+                            color: #FFFFFF;
+                        }
+                    }
+                }
+            }
+        }
+
+        &:not(.md-locked-open) {
+
+            .header {
+                height: 150px;
+                min-height: 150px;
+                max-height: 150px;
+                padding-top: 24px;
+            }
+        }
+    }
+
+    .compose-btn-container {
+        padding: 16px 25px;
+
+        .md-button {
+            margin: 0;
+        }
+    }
+}
+
+
+#mail {
+    // for list and read
+    .avatar {
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+        line-height: 32px;
+        border-radius: 50%;
+        margin-right: 8px;
+        background-color: rgba(#000, .15);
+        text-align: center;
+    }
+}
+
+
+// list
+#mail {
+    .mail-list-container {
+        border-right: 1px solid rgba(#000, .15);
+    }
+    .mail-list {
+        padding: 0;
+    }
+
+    .mail-list-item {
+        border-bottom: 1px solid rgba(#000, .15);
+        &:last-child {
+            border-bottom: 0;
+        }
+        // state
+        &.unread {
+            background-color: rgba(#fff, .2);
+
+            .subject,
+            .message {
+                font-weight: 500;
+            }
+        }        
+        &.selected {
+            background: rgba($brand-info, .1);
+        }
+        &.checked {
+            background-color: rgba($brand-warning, .1);
+        }
+
+        // 
+        .md-secondary-container {
+            order: 1;
+            min-width: 40px;
+            .md-secondary {
+                margin: 0 6px 0 0;
+            }
+            .md-button.md-icon-button {
+                padding: 10px;
+            }
+        }
+        .md-list-item-text {
+            order: 2;
+            margin: 15px 0;
+            &:focus {
+                outline: none;
+            }
+        }
+        .name {
+            font-size: 15px;
+            font-weight: 500;
+            padding-bottom: 8px;
+
+            .has-attachment {
+                margin-left: 8px;
+                transform: rotate(90deg);
+            }
+        }
+        .subject {
+            text-overflow: ellipsis;
+        }
+        .message {
+            opacity: .7;
+        }
+        .email-time {
+            margin: 0 8px;
+            font-size: $font-size-sm;
+            opacity: .6;
+            line-height: 32px;
+        }
+    }
+}
+
+
+
+// read
+#mail {
+    .mail-content { 
+        padding: 0 15px;
+        .mail-header {
+            border-bottom: 1px solid rgba(#000, 0.15);
+
+            .subject {
+                font-size: 20px;
+                line-height: 30px;
+                padding: 30px 0;
+                font-weight: $headings-font-weight;
+            }
+        }
+
+        strong {
+            font-weight: $headings-font-weight;
+        }
+
+        .info {
+            margin-bottom: 25px;
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(#000, 0.15);
+        }
+        .to-text {
+            opacity: .7;
+            font-style: italic;
+        }
+        .email-time {
+            margin-left: 10px;
+        }
+
+        .attachments {
+            padding: 24px 0;
+            border-top: 1px solid rgba(0, 0, 0, 0.12);
+
+            .title {
+                margin-bottom: 16px;
+                font-weight: 500;
+            }
+
+            .attachment {
+
+                .preview {
+                    width: 100px;
+                    margin: 0 16px 8px 0;
+                }
+
+                .link {
+                    margin-bottom: 2px;
+                }
+
+                .size {
+                    font-size: 11px;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+

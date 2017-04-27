@@ -1,0 +1,43 @@
+<div class="main-datatable" fxLayout="column">
+
+  <md-card>
+    <md-card-title>Data Table</md-card-title>
+    <md-card-content>
+      <table class="table table-striped" [mfData]="data" #mf="mfDataTable" [mfRowsOnPage]="5">
+        <thead>
+        <tr>
+
+          <th>
+            <mfDefaultSorter by="appName">APP</mfDefaultSorter>
+          </th>
+          <th>
+            <mfDefaultSorter by="cateNames">领域</mfDefaultSorter>
+          </th>
+          <th>
+            <mfDefaultSorter by="developCompanyFullName">开发商</mfDefaultSorter>
+          </th>
+          <th>
+            <mfDefaultSorter by="activeNums">活跃人数(万)</mfDefaultSorter>
+          </th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let item of mf.data">
+          <td>{{item.appName}}</td>
+          <td>{{item.cateNames}}</td>
+          <td class="text-right">{{item.developCompanyFullName}}</td>
+          <td>{{item.activeNums}}</td>
+        </tr>
+        </tbody>
+        <tfoot>
+        <tr>
+          <td colspan="4">
+            <mfBootstrapPaginator [rowsOnPageSet]="[5,10,25]"></mfBootstrapPaginator>
+          </td>
+        </tr>
+        </tfoot>
+      </table>
+    </md-card-content>
+  </md-card>
+
+</div>

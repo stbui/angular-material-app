@@ -1,0 +1,19 @@
+$height__main-toolbar: 64px;
+
+.sidenav {
+  width: 250px;
+  max-lines: 250px;
+  background: #c3325f;
+  overflow-x: hidden;
+}
+
+.sidenav-container {
+
+}
+
+.main-container {
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: calc(100% - 82px);
+  position: relative;
+}

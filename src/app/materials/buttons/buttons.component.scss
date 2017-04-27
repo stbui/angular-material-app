@@ -1,0 +1,21 @@
+.mat-raised-button.mat-primary, .mat-fab.mat-primary, .mat-mini-fab.mat-primary {
+  background-color: #2196f3;
+}
+
+.mat-raised-button.mat-accent, .mat-fab.mat-accent, .mat-mini-fab.mat-accent {
+  background-color: #66bb6a;
+  color:rgba(255, 255, 255, 0.87);
+}
+
+.mat-raised-button.mat-warn, .mat-fab.mat-warn, .mat-mini-fab.mat-warn {
+  background-color: #ef5350;
+}
+
+
+:host {
+  display: block;
+}
+
+md-card {
+  margin: 20px;
+}

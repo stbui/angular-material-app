@@ -1,0 +1,69 @@
+<div class="chat-inner-container">
+  <md-toolbar>
+    <div class="toolbar" fxLayout="row">
+      <button md-icon-button (click)="onChatSideTriggered()">
+        <md-icon>menu</md-icon>
+      </button>
+
+      <div class="current-contact" fxLayout="row" fxLayoutAlign="start center">
+        <img class="avatar pointer" *ngIf="activeChat" [src]="activeChat.picture">
+
+        <div fxLayout="column">
+          <span class="name" *ngIf="activeChat">{{ activeChat.name }}</span>
+          <span class="status">Online</span>
+        </div>
+      </div>
+
+      <span fxFlex></span>
+
+      <button md-icon-button [mdMenuTriggerFor]="chatMenu">
+        <md-icon>more_vert</md-icon>
+      </button>
+    </div>
+  </md-toolbar>
+
+  <div class="chat-content" fxLayout="column" fxLayoutAlign="end stretch">
+
+    <perfect-scrollbar #chatScroll>
+      <div class="messages-container" *ngIf="activeChat">
+        <div class="chat-message" *ngFor="let message of activeChat.messages" [ngSwitch]="message.who" fxLayout="column" fxLayoutAlign="end start">
+          <div class="partner" *ngSwitchCase="'partner'" fxFlexAlign="start" fxLayout="row" fxLayoutAlign="start start">
+            <img class="avatar" [src]="activeChat.picture">
+            <span class="message mat-elevation-z1">{{ message.message }}</span>
+          </div>
+          <div class="me" *ngSwitchCase="'me'" fxFlexAlign="end" fxLayout="row" fxLayoutAlign="end start">
+            <span class="message mat-elevation-z1">{{ message.message }}</span>
+            <img class="avatar" [src]="avatar">
+          </div>
+        </div>
+      </div>
+    </perfect-scrollbar>
+
+
+    <div class="chat-respond" fxLayout="row" fxLayoutAlign="start center">
+      <md-input-container fxFlex>
+        <textarea mdInput (keyup.enter)="onSendTriggered()" [(ngModel)]="newMessage" placeholder="输入您要发送的消息"></textarea>
+      </md-input-container>
+      <button (click)="onSendTriggered()" md-fab color="primary"><md-icon>send</md-icon></button>
+    </div>
+  </div>
+</div>
+
+
+<md-menu #chatMenu="mdMenu">
+  <button md-menu-item>
+    <md-icon> account_circle </md-icon>
+    <span> 群聊信息 </span>
+  </button>
+  <button md-menu-item>
+    <md-icon> volume_mute </md-icon>
+    <span> 群公告 </span>
+  </button>
+  <md-divider></md-divider>
+  <button md-menu-item (click)="clearMessages(activeChat)">
+    <md-icon> clear_all </md-icon>
+    <span> 清空聊天记录 </span>
+  </button>
+</md-menu>
+
+

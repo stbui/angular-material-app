@@ -1,0 +1,28 @@
+<div class="page-auth">
+  <div class="main-body">
+    <md-card>
+      <md-card-title class="logo">
+        用户登录
+      </md-card-title>
+      <md-card-content>
+        <form>
+          <div fxLayout="column" fxLayoutAlign="start stretch">
+            <md-input-container>
+              <input mdInput placeholder="邮箱" type="text" name="email">
+            </md-input-container>
+            <md-input-container>
+              <input mdInput placeholder="密码" type="password" name="password">
+            </md-input-container>
+            <button color="primary" md-raised-button disabled="true">登录</button>
+          </div>
+        </form>
+      </md-card-content>
+      <md-card-actions class="additional-info">
+        <a [routerLink]="['/sigup']">注册</a>
+        <span class="divider-h"></span>
+        <a href="forgot-password">忘记密码?</a>
+      </md-card-actions>
+    </md-card>
+
+  </div>
+</div>

@@ -1,0 +1,95 @@
+<!--<section class="quickview-wrapper customizer hidden-lg-down">-->
+<section class="quickview-wrapper customizer" [class.open]="isOpen">
+  <a class="customizer-close" (click)="toggleQuickview()"><md-icon>close</md-icon></a>
+  <a class="customizer-toggle" (click)="toggleQuickview()"><md-icon>settings</md-icon></a>
+
+
+  <div class="quickview-inner">
+    <div>
+      <p class="customizer-header">自定义</p>
+      <p class="small no-margin">实时定制和预览。</p>
+
+      <div class="divider divider-lg divider-solid"></div>
+      <h4 class="section-header">布局选项</h4>
+      <div class="divider divider-sm"></div>
+
+      <md-list>
+        <md-list-item>
+          <p>固顶头部</p>
+          <md-slide-toggle class="md-secondary"></md-slide-toggle>
+        </md-list-item>
+        <md-list-item>
+          <p>折叠侧边栏</p>
+          <md-slide-toggle class="md-secondary"></md-slide-toggle>
+        </md-list-item>
+        <md-list-item>
+          <p>Boxed Layout</p>
+          <md-slide-toggle class="md-secondary"></md-slide-toggle>
+        </md-list-item>
+      </md-list>
+
+
+      <div class="divider divider-lg divider-solid"></div>
+      <h4 class="section-header">颜色选项</h4>
+      <p class="small no-margin"></p>
+      <div class="divider"></div>
+
+
+      <div class="row">
+
+        <div class="col-4" *ngFor="let color of colorOptions">
+
+          <label class="color-option-check">
+            <input type="radio" name="color" value="{{ color }}" (change)="onClick(color)">
+            <span class="color-option-item bg-page">
+                <span class="overlay"><span class="material-icons">check</span></span>
+                <span class="{{ color.logo }} item-header"></span>
+                <span class="{{ color.header }} item-header"></span>
+                <span class="{{ color.slider }}"></span>
+            </span>
+          </label>
+        </div>
+
+      </div>
+
+      <div class="divider divider-lg divider-solid"></div>
+      <h4 class="section-header">主题选项</h4>
+      <div class="divider"></div>
+
+      <div class="row no-margin theme-options clearfix">
+        <div class="col-4">
+          <label class="theme-option-check">
+            <input type="radio" name="theme" value="dark" [(ngModel)]="theme">
+            <span class="theme-option-item bg-dark">
+                            <span class="overlay"><span class="material-icons">check</span></span>
+                            <span>Dark</span>
+                        </span>
+          </label>
+        </div>
+        <div class="col-4">
+          <label class="theme-option-check">
+            <input type="radio" name="theme" value="gray" [(ngModel)]="theme">
+            <span class="theme-option-item bg-gray">
+                            <span class="overlay"><span class="material-icons">check</span></span>
+                            <span>Gray</span>
+                        </span>
+          </label>
+        </div>
+        <div class="col-4">
+          <label class="theme-option-check">
+            <input type="radio" name="theme" value="light" [(ngModel)]="theme">
+            <span class="theme-option-item bg-page">
+                            <span class="overlay"><span class="material-icons">check</span></span>
+                            <span>Light</span>
+                        </span>
+          </label>
+        </div>
+      </div>
+      <div class="divider divider-lg divider-solid"></div>
+      <div class="text-right">
+        <a target="_blank">现在下载</a>
+      </div>
+
+    </div>
+  </div>
+</section>

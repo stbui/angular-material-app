@@ -1,0 +1,42 @@
+.todo-list-item {
+  position: relative;
+  margin-bottom: 5px;
+}
+
+label[for='toggle-all'] {
+  display: none;
+}
+.toggle-all {
+  position: absolute;
+  top: -55px;
+  left: -12px;
+  width: 60px;
+  height: 34px;
+  text-align: center;
+  border: none;
+}
+.toggle-all:before {
+  content: '❯';
+  font-size: 22px;
+  color: #e6e6e6;
+  padding: 10px 27px 10px 27px;
+}
+.toggle-all:checked:before {
+  color: #737373;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  .toggle-all,
+  .toggle {
+    background: none;
+  }
+  .toggle {
+    height: 40px;
+  }
+  .toggle-all {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    -webkit-appearance: none;
+    appearance: none;
+  }
+}

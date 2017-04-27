@@ -1,0 +1,12 @@
+<div class="header"></div>
+
+<div class="chat-container">
+  <div class="chat mat-elevation-z4">
+    <md-sidenav-container>
+      <md-sidenav class="mat-elevation-z2" mode="side" opened="true" #chatSidenav>
+        <app-contacts [chats]="chats" (onActiveChat)="onActiveChat($event)"></app-contacts>
+      </md-sidenav>
+      <app-chat [activeChat]="activeChat" [chatSidenav]="chatSidenav" (onSendChat)="sendChat($event)"></app-chat>
+    </md-sidenav-container>
+  </div>
+</div>

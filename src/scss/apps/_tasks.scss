@@ -1,0 +1,232 @@
+$color_alpha_gray: rgba(#000, .3);
+
+// color
+.page-tasks {
+    .filters {
+        border-bottom: 1px solid rgba(#000, .1);
+    }
+
+    .task-list {
+        .view {
+            background-color: #fff;
+            .icon-edit,
+            .icon-remove {
+                color: $color_alpha_gray;
+                &:hover {
+                    color: $gray-dark;
+                }
+            }
+        }
+        .completed .view {
+            label {
+                color: $color_alpha_gray;
+            }
+        }
+    }
+
+    .task-footer {
+        border-top: 4px double rgba(#000, .1);
+        .clear-completed {
+            color: $color_alpha_gray;
+            &:hover {
+                color: $body-color;
+            }
+        }
+    }
+}
+
+// 
+.theme-gray,
+.theme-dark {
+    .task-list {
+        .view {
+            background-color: rgba(#fff, .08);
+            .icon-edit,
+            .icon-remove {
+                color: $color_alpha_gray;
+                &:hover {
+                    color: $gray-dark;
+                }
+            }
+        }
+        .completed .view {
+            label {
+                color: $color_alpha_gray;
+            }
+        }
+    }    
+}
+
+
+
+// general
+.page-tasks {
+    label,
+    .material-icons {
+        &:focus {
+            outline: none;
+        }
+    }
+    .material-icons {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    // essential
+    .task-list {
+        
+        // when init
+        .view {
+            display: block;
+        }
+
+        .edit {
+            display: none;
+        }
+
+        // when editing
+        li.editing {
+
+            .view {
+                display: none;
+            }
+
+            .edit {
+                display: block;
+            }
+        }
+
+    }
+
+    // add-on style
+
+    .add-task {
+        position: relative;
+
+        input {
+            height: 44px;
+            padding: 6px 12px;
+        }
+    }
+
+    label {
+        font-weight: normal;
+    }
+
+    // filters
+    .filters {
+        margin: 15px 0;
+        padding: 10px 0;
+
+        li {
+            > a {
+                color: $gray-light;
+                padding: 5px 10px;
+                &:hover,
+                &:focus {
+                    text-decoration: none;
+                }
+            }
+
+            &.active {
+                > a {
+                    border: 1px solid rgba(#000, .15);
+                    border-radius: $border-radius;
+                }
+            }
+        }
+    }
+
+
+    .task-list {
+        // when init
+        .view {
+            position: relative;
+            margin-bottom: 10px;
+            padding: 0 12px 0 40px;
+            border-radius: $border-radius;
+            box-shadow: 0 0 1px rgba(0,0,0,.2);
+            &:hover {
+                .icon-edit,
+                .icon-remove {
+                    display: block;
+                }
+            }
+
+            input[type="checkbox"] {
+                position: absolute;
+                top: 16px;
+                left: 16px;
+            }
+
+            label {
+                line-height: 20px;
+                margin: 0;
+                width: 100%;
+                padding: 12px 0 12px;
+            }
+
+            .icon-edit,
+            .icon-remove {
+                display: none;
+                position: absolute;
+                top: 14px;
+                transition: all .2s ease-in-out;
+                &:hover {
+                    cursor: pointer;
+                    transform: scale(1.3);
+                }
+            }
+            .icon-edit {
+                right: 40px;
+            }
+            .icon-remove {
+                right: 16px;
+            }
+        }
+
+        .completed .view {
+            label {
+                text-decoration: line-through;
+            }
+        }
+        
+        // when editing
+        input.edit {
+            margin-bottom: 10px;
+            height: 44px;
+            padding: 6px 12px 6px 40px;
+        }
+    }
+
+    .task-footer {
+        margin: 15px 0;
+        padding: 12px;
+
+        > ul {
+            display: flex;
+            justify-content: space-between;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            li {
+                flex-grow: 1;
+            }
+        }
+
+        .clear-completed {
+            border-radius: $border-radius;
+            transition: color, .2s ease-in-out;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+
+    .tips {
+        h3 {
+            margin-top: 0;
+        }
+    }
+}

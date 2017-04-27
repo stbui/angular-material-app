@@ -1,0 +1,48 @@
+<div class="main-validation" fxLayout="row" fxLayoutAlign="center">
+  <md-card fxFlex="50">
+    <md-card-title>注册</md-card-title>
+    <md-card-content>
+      <form fxLayout="column" #formRegister="ngForm">
+        <md-input-container>
+          <input mdInput placeholder="请输入您的用户名" name="username" ngModel="stbui" required minlength="4"  maxlength="10">
+        </md-input-container>
+        <md-input-container>
+          <input mdInput placeholder="请输入您的邮箱" name="email" ngModel required>
+        </md-input-container>
+        <md-input-container>
+          <input mdInput placeholder="请输入您的密码" name="password" ngModel required>
+        </md-input-container>
+        <md-input-container>
+          <input mdInput placeholder="请再次输入您的密码" name="password_confirm" ngModel required>
+        </md-input-container>
+        <md-input-container>
+          <input mdInput placeholder="请输入您的手机" name="phone" ngModel>
+        </md-input-container>
+        <md-checkbox>我同意</md-checkbox>
+        <button md-raised-button color="primary" type="submit" [disabled]="!formRegister.valid">提交</button>
+      </form>
+    </md-card-content>
+  </md-card>
+
+  <md-card fxFlex="50">
+    <md-card-title>联系方式</md-card-title>
+    <md-card-content>
+      <form fxLayout="column" #formContact="ngForm">
+        <md-input-container>
+          <input mdInput placeholder="您的名字" name="name" ngModel required minlength="4"  maxlength="10">
+        </md-input-container>
+        <md-input-container>
+          <input mdInput placeholder="您的邮箱" name="email" ngModel required>
+        </md-input-container>
+        <md-input-container>
+          <input mdInput placeholder="请您的网址" name="website ngModel" required>
+        </md-input-container>
+        <md-input-container>
+          <textarea mdInput placeholder="留言" rows="3" name="message" ngModel required></textarea>
+        </md-input-container>
+        <md-checkbox>我同意</md-checkbox>
+        <button md-raised-button color="primary" type="submit" [disabled]="!formContact.valid">提交</button>
+      </form>
+    </md-card-content>
+  </md-card>
+</div>

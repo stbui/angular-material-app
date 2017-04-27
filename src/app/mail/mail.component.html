@@ -1,0 +1,103 @@
+<div class="inbox" fxLayout="column">
+  <div class="header mat-elevation-z2"></div>
+  <div class="container" fxLayout="row">
+    <div class="navigation" fxFlex="250px" fxHide="true" fxHide.gt-md="false">
+
+      <div class="title-container">
+        <md-icon>mail</md-icon>
+        <span class="title">Mail</span>
+      </div>
+
+      <div class="compose-container">
+        <button class="compose" md-raised-button (click)="openComposeDialog()">
+          <md-icon>mode_edit</md-icon>
+          <span>写信</span>
+        </button>
+      </div>
+
+      <md-nav-list class="nav-list">
+        <h3 md-subheader>Inbox</h3>
+        <a class="nav-item mt0" md-list-item>
+          <h3 class="nav-title" md-line>
+            <md-icon class="icon">mail</md-icon>
+            <span class="text">收件箱 </span>
+          </h3>
+        </a>
+        <a class="nav-item" md-list-item>
+          <h3 class="nav-title" md-line>
+            <md-icon class="icon">group</md-icon>
+            <span class="text">联系人 </span>
+          </h3>
+        </a>
+        <a class="nav-item" md-list-item>
+          <h3 class="nav-title" md-line>
+            <md-icon class="icon">local_offer</md-icon>
+            <span class="text">标签 </span>
+          </h3>
+        </a>
+        <md-divider></md-divider>
+        <a class="nav-item" md-list-item>
+          <h3 class="nav-title" md-line>
+            <md-icon class="icon">star</md-icon>
+            <span class="text">星标邮件</span>
+          </h3>
+        </a>
+        <a class="nav-item" md-list-item>
+          <h3 class="nav-title" md-line>
+            <md-icon class="icon">send</md-icon>
+            <span class="text">已发送</span>
+          </h3>
+        </a>
+        <a class="nav-item" md-list-item>
+          <h3 class="nav-title" md-line>
+            <md-icon class="icon">drafts</md-icon>
+            <span class="text">草稿箱</span>
+          </h3>
+        </a>
+        <md-divider></md-divider>
+        <a class="nav-item" md-list-item>
+          <h3 class="nav-title" md-line>
+            <md-icon class="icon">backspace</md-icon>
+            <span class="text">垃圾邮件</span>
+          </h3>
+        </a>
+        <a class="nav-item" md-list-item>
+          <h3 class="nav-title" md-line>
+            <md-icon class="icon">delete</md-icon>
+            <span class="text">回收站</span>
+          </h3>
+        </a>
+      </md-nav-list>
+
+    </div>
+
+    <div class="content-container" fxFlex fxLayout="column">
+
+      <div class="search mat-elevation-z2" fxLayout="row">
+        <div fxLayout="row" fxLayoutAlign="center center">
+          <md-icon>search</md-icon>
+        </div>
+        <input fxFlex type="search" placeholder="搜索...">
+      </div>
+
+      <div class="mails-container mat-elevation-z2" fxFlex>
+        <stb-toolbar [mail]="shownMailDetail" [itemCount]="shownMails.length" (onForward)="onForward($event)"></stb-toolbar>
+
+        <div class="mails">
+          <stb-list *ngIf="!shownMailDetail" [mails]="shownMails" (onOpenMailDetial)="openMailDetial($event)"></stb-list>
+          <stb-detail *ngIf="shownMailDetail" [mail]="shownMailDetail"></stb-detail>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<md-menu #mailOptions="mdMenu">
+  <button md-menu-item> <md-icon>markunread_mailbox</md-icon>标记未读 </button>
+  <button md-menu-item> <md-icon>label</md-icon> 标签 </button>
+  <md-divider></md-divider>
+  <button md-menu-item> <md-icon>delete</md-icon> 删除 </button>
+</md-menu>

@@ -1,0 +1,12 @@
+<div fxlayout="column" class="todo mat-elevation-z2">
+  <div class="todo-header"><h1>Todos</h1></div>
+  <app-todo-header placeholder="请输入您要完成的任务" (onEnterUp)="addTodo($event)"></app-todo-header>
+  <app-todo-list
+  [todos]="todos | async"
+  (onToggleAll)="toggleAll()"
+  (onRemoveTodo)="removeTodo($event)"
+  (onToggleTodo)="toggleTodo($event)" ></app-todo-list>
+  <app-todo-footer
+  [itemCount]="todos?.length | async"
+  (onClear)="clearCompleted()"></app-todo-footer>
+</div>

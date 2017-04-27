@@ -1,0 +1,115 @@
+$color__inactive: #616161;
+$color__primary: #3F51B5;
+$color__read: #9F9F9F;
+$color__checkbox__star: #616161;
+
+$height__search__title: 56px;
+$margin-top__search__title: 42px;
+
+
+.mail {
+  padding: 8px 24px;
+  white-space: nowrap;
+  font-weight: 500;
+  font-size: 15px;
+  text-decoration: none;
+  color: $color__inactive;
+  transition: background .1s ease-in-out;
+  position: relative;
+  border-bottom: 1px solid #EEE;
+  cursor: pointer;
+  min-height: 42px;
+
+  &.read {
+    color: $color__read;
+    font-weight: normal;
+  }
+
+  .start-wrapper {
+    padding-right: 8px;
+
+    .checkbox {
+      margin: 0 8px 0 0;
+      color: $color__checkbox__star;
+    }
+
+    .star {
+      margin: 0 8px;
+      color: $color__checkbox__star;
+
+      &.active {
+        color: #FFC107;
+      }
+    }
+
+    .from-avatar {
+      margin: 0 8px;
+      border-radius: 50%;
+      width: 40px;
+    }
+
+    .from-name {
+      margin: 0 8px;
+      overflow-x: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  .content-wrapper {
+    white-space: nowrap;
+    overflow-x: hidden;
+    display: block;
+    margin: 0;
+
+    .labels {
+      .label {
+        padding: 2px 8px;
+        font-size: 13px;
+        color: #FFFFFF;
+      }
+
+      .label + .label {
+        margin-left: 6px;
+      }
+    }
+
+    .subject {
+      margin: 0 8px;
+    }
+
+    .middot {
+      font-weight: bold;
+    }
+
+    .content {
+      overflow-x: hidden;
+      text-overflow: ellipsis;
+      margin: 0 8px;
+    }
+  }
+
+  .end-wrapper {
+    margin-left: 16px;
+
+    .when {
+      margin: 0 8px;
+    }
+
+    .options {
+      margin: 0 0 0 8px;
+      color: $color__checkbox__star;
+    }
+  }
+
+  &:hover {
+    background: #EEE;
+  }
+}
+
+.no-mails-container {
+  margin-top: 16px;
+
+  .no-mails {
+    font-size: 18px;
+  }
+}

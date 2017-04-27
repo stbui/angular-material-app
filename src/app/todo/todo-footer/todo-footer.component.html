@@ -1,0 +1,9 @@
+<footer class="todo-footer" fxLayout="row" fxLayoutAlign="space-around center">
+  <span><strong>{{itemCount}}</strong> 项 </span>
+  <div class="filters">
+    <button md-button routerLink="/apps/todo/ALL">所有</button>
+    <button md-button routerLink="/apps/todo/ACTIVE">进行中</button>
+    <button md-button routerLink="/apps/todo/COMPLETED">完成</button>
+  </div>
+  <button md-button (click)="onClick()"><md-icon>delete</md-icon>清除完成</button>
+</footer>

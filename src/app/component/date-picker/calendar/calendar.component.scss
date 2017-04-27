@@ -1,0 +1,257 @@
+$textColor:rgba(0,0,0,.87);
+
+.stb-calendar {
+  color: $textColor;
+  user-select: none;
+  width: 310px;
+}
+.stb-calendar-landspace{
+  width: 479px;
+}
+.stb-calendar-container{
+  display: flex;
+  flex-direction: column;
+}
+.stb-calendar-monthday-container {
+  display: flex;
+  align-content: space-between;
+  justify-content: space-between;
+  flex-direction: column;
+  font-size: 12px;
+  font-weight: 400;
+  padding: 0px 8px;
+  //transition: all .45s @easeOutFunction;
+}
+.stb-calendar-week {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-weight: 500;
+  height: 20px;
+  line-height: 15px;
+  opacity: 0.5;
+  text-align: center;
+}
+.stb-calendar-week-day {
+  width: 42px;
+}
+.stb-calendar-monthday{
+  position: relative;
+  overflow: hidden;
+  height: 214px;
+}
+.stb-calendar-monthday-slide{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+}
+.stb-calendar-actions{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin: 0px;
+  max-height: 48px;
+  padding: 0px;
+  .stb-flat-button {
+    min-width: 64px;
+    margin: 4px 8px 8px 0px;
+  }
+}
+.stb-calendar-slide-next-enter-active,
+.stb-calendar-slide-next-leave-active,
+.stb-calendar-slide-prev-enter-active,
+.stb-calendar-slide-prev-leave-active {
+  //transition: transform 450ms @easeOutFunction, opacity 450ms @easeOutFunction;
+  backface-visibility: hidden;
+}
+.stb-calendar-slide-next-enter {
+  transform: translate3d(100%, 0, 0);
+}
+.stb-calendar-slide-next-leave-active {
+  transform: translate3d(-100%, 0, 0);
+  opacity: 0;
+}
+.stb-calendar-slide-prev-enter {
+  transform: translate3d(-100%, 0, 0);
+}
+.stb-calendar-slide-prev-leave-active {
+  transform: translate3d(100%, 0, 0);
+  opacity: 0;
+}
+
+
+
+.stb-calendar-monthday-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-weight: 400;
+  height: 228px;
+  line-height: 2;
+  position: relative;
+  text-align: center;
+}
+.stb-calendar-monthday-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 34px;
+  margin-bottom: 2px;
+}
+
+
+.stb-calendar-toolbar {
+  display: flex;
+  justify-content: space-between;
+  height: 48px;
+}
+.stb-calendar-toolbar-title-wrapper {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  width: 100%;
+}
+.stb-calendar-toolbar-title {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  line-height: 48px;
+}
+.stb-calendar-svg-icon {
+  display: block;
+  fill: currentColor;
+  height: 24px;
+  width: 24px;
+  user-select: none;
+}
+
+
+.stb-calendar-year-container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  margin-top: 10px;
+  width: 310px;
+  height: 272px;
+  overflow: hidden;
+}
+.stb-calendar-year {
+  //background-color: @dialogBackgroundColor;
+  height: inherit;
+  line-height: 35px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  position: relative;
+}
+.stb-calendar-year-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100%;
+}
+
+.stb-date-display{
+  width: 100%;
+  font-weight: 700;
+  display: block;
+  background-color: #7e57c2;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 0;
+  color: #fff;
+  padding: 20px;
+  .stb-calendar-landspace & {
+    width: 165px;
+    height: 330px;
+    float: left;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 2px;
+  }
+}
+.stb-date-display-year {
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 16px;
+  height: 16px;
+  opacity: 0.7;
+  //transition: all .45s @easeOutFunction;
+  margin-bottom: 10px;
+  .stb-date-display.selected-year &{
+    opacity: 1;
+  }
+}
+.stb-date-display-year-title {
+  cursor: pointer;
+  .stb-date-display-year.disabled &{
+    cursor: not-allowed;
+  }
+  .stb-date-display.selected-year {
+    cursor: default;
+  }
+}
+.stb-date-display-monthday {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  font-size: 36px;
+  line-height: 36px;
+  height: 38px;
+  //transition: all .45s @easeOutFunction;
+  width: 100%;
+  font-weight: 500;
+  .stb-date-display.selected-year &{
+    opacity: 0.7;
+  }
+  .stb-calendar-landspace & {
+    height: 100%;
+  }
+}
+.stb-date-display-slideIn-wrapper {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+}
+.stb-date-display-monthday-title {
+  cursor: default;
+  width: 100%;
+  display: block;
+  .stb-date-display.selected-year &{
+    cursor: pointer;
+  }
+}
+.stb-date-display-next-enter-active,
+.stb-date-display-next-leave-active,
+.stb-date-display-prev-enter-active,
+.stb-date-display-prev-leave-active {
+  //transition: transform 450ms @easeOutFunction, opacity 450ms @easeOutFunction;
+  backface-visibility: hidden;
+}
+.stb-date-display-next-enter {
+  transform: translate3d(0, -100%, 0);
+  opacity: 0;
+}
+.stb-date-display-next-leave-active {
+  transform: translate3d(0, 100%, 0);
+  opacity: 0;
+}
+.stb-date-display-prev-enter {
+  transform: translate3d(0, 100%, 0);
+  opacity: 0;
+}
+.stb-date-display-prev-leave-active {
+  transform: translate3d(0, -100%, 0);
+  opacity: 0;
+}

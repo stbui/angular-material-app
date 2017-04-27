@@ -1,0 +1,38 @@
+<div fxLayout="row" fxLayoutAlign="end center">
+  <md-input-container>
+    <input mdInput placeholder="注册时间">
+  </md-input-container>
+  <md-input-container>
+    <input mdInput placeholder="注册时间" value="2017-04-17">
+  </md-input-container>
+  <md-input-container>
+    <input mdInput placeholder="请输入您的查询">
+  </md-input-container>
+</div>
+
+<div fxLayout="row" fxLayoutAlign="center center">
+  <table class="table table-hover">
+    <thead>
+    <tr>
+      <th><md-checkbox class="checkbox" [(ngModel)]="checked"></md-checkbox></th>
+      <th>UID</th>
+      <th>账号</th>
+      <th>最后登录时间</th>
+      <th>最后登录IP</th>
+      <th>状态</th>
+      <th>管理操作</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let user of users" (click)="onEditTriggered(user)">
+      <td><md-checkbox class="checkbox" [checked]="checked"></md-checkbox></td>
+      <td>{{ user.uid }}</td>
+      <td>{{ user.account }}</td>
+      <td>{{ user.loginTime }}</td>
+      <td>{{ user.loginIP }}</td>
+      <td>{{ user.status }}</td>
+      <td><button md-icon-button (click)="onDeleteTriggered(user)"><md-icon>delete</md-icon></button></td>
+    </tr>
+    </tbody>
+  </table>
+</div>
