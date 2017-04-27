@@ -2,9 +2,19 @@
 
 基于`Angular 2`框架与`Material2`设计开发一套面向后台通用模板库
 
-[![Build Status](https://img.shields.io/travis/stbui/angular2-material2-bootstrap4-admin-app.svg?style=flat)][Build Status]
+[![Build Status](https://travis-ci.org/stbui/angular2-material2-bootstrap4-admin-app.svg?branch=master)](https://travis-ci.org/stbui/angular2-material2-bootstrap4-admin-app)
 [![Dependency Status](https://david-dm.org/stbui/angular2-material2-bootstrap4-admin-app/dev-status.svg)](https://david-dm.org/stbui/angular2-material2-bootstrap4-admin-app?type=dev)
 [![Join the chat at https://gitter.im/angular2-material2-bootstrap4-admin-app](https://badges.gitter.im/stbui/angular2-material2-bootstrap4-admin-app.svg)](https://gitter.im/angular2-material2-bootstrap4-admin-app/Lobby?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
+[![Github All Releases](https://img.shields.io/github/downloads/stbui/angular2-material2-bootstrap4-admin-app/total.svg)](http://www.stbui.com)
+
+[![Sauce Test Status](https://saucelabs.com/browser-matrix/angular2-ci.svg)](https://saucelabs.com/u/angular2-ci)
+
+### 平台环境
+
+[![Angular](https://img.shields.io/badge/Angular2-2.4.0-green.svg?style=flat-square)](https://github.com/angular/angular)
+[![Angular-cli](https://img.shields.io/badge/Angular.cli-1.0.0.rc.1-green.svg?style=square)](https://github.com/angular/angular-cli)
+[![Material2](https://img.shields.io/badge/Material2-2.0.0.beta.2-green.svg?style=square)](https://github.com/angular/material2)
+[![Flex-Layout](https://img.shields.io/badge/Flex.Layout-2.0.0.rc.1-green.svg?style=square)](https://github.com/angular/flex-layout)
 
 ### 基本功能
 - 谷歌 Material 设计
@@ -30,12 +40,6 @@
 
 ![demo image](src/assets/images-demo/2017-04-07_202402.jpg)
 
-### 平台环境
-
-* Angular-cli:    1.0.0-rc.1
-* Angular2:       2.4.0
-* Material2:      2.0.0-beta.2
-* Flex-Layout:    2.0.0-rc.1
 
 ### 使用入门
 
