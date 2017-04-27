@@ -2,6 +2,10 @@
 
 基于`Angular 2`框架与`Material2`设计开发一套面向后台通用模板库
 
+[![Build Status](https://img.shields.io/travis/stbui/angular2-material2-bootstrap4-admin-app.svg?style=flat)][Build Status]
+[![Dependency Status](https://david-dm.org/stbui/angular2-material2-bootstrap4-admin-app/dev-status.svg)](https://david-dm.org/stbui/angular2-material2-bootstrap4-admin-app?type=dev)
+[![Join the chat at https://gitter.im/angular2-material2-bootstrap4-admin-app](https://badges.gitter.im/stbui/angular2-material2-bootstrap4-admin-app.svg)](https://gitter.im/angular2-material2-bootstrap4-admin-app/Lobby?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
+
 ### 基本功能
 - 谷歌 Material 设计
 - 响应式设计
