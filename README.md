@@ -12,9 +12,9 @@
 
 ### 平台环境
 
-[![Angular](https://img.shields.io/badge/Angular2-2.4.0-brightgreen.svg?style=flat-square)](https://github.com/angular/angular)
+[![Angular](https://img.shields.io/badge/Angular%202-2.4.0-brightgreen.svg?style=flat-square)](https://github.com/angular/angular)
 [![Angular-cli](https://img.shields.io/badge/Angular.cli-1.0.0.rc.1-brightgreen.svg?style=square)](https://github.com/angular/angular-cli)
-[![Material2](https://img.shields.io/badge/Material2-2.0.0.beta.2-brightgreen.svg?style=square)](https://github.com/angular/material2)
+[![Material 2](https://img.shields.io/badge/Material%202-2.0.0.beta.2-brightgreen.svg?style=square)](https://github.com/angular/material2)
 [![Flex-Layout](https://img.shields.io/badge/Flex.Layout-2.0.0.rc.1-brightgreen.svg?style=square)](https://github.com/angular/flex-layout)
 
 
@@ -34,6 +34,15 @@
 
 
 ### 技术栈
+
+[![Angular 2](https://img.shields.io/badge/Angular%202-2.4.0-brightgreen.svg?style=flat-square)](https://github.com/angular/angular)
+[![Angular Mateiral 2](https://img.shields.io/badge/Mateiral%202-2.0.0.beta.2-brightgreen.svg?style=square)](https://github.com/angular/material2)
+[![Scss](https://img.shields.io/badge/Scss-latest-brightgreen.svg?style=flat-square)](https://github.com/sass/sass)
+[![Typescript](https://img.shields.io/badge/Typescript-latest-brightgreen.svg?style=flat-square)](https://github.com/Microsoft/TypeScript)
+[![rxjs](https://img.shields.io/badge/rxjs-5.1.0-brightgreen.svg?style=flat-square)](https://github.com/Reactive-Extensions/RxJS)
+[![Bootstrap 4](https://img.shields.io/badge/Bootstrap-4.0.0-brightgreen.svg?style=flat-square)](https://github.com/twbs/bootstrap)
+
+
 - Angular 2
 - Bootstrap 4
 - Angular Mateiral2
