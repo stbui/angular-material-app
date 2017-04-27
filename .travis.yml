@@ -1,20 +1,6 @@
-dist: trusty
 sudo: required
 language: node_js
 node_js:
   - "7"
 os:
   - linux
-env:
-  global:
-    - DBUS_SESSION_BUS_ADDRESS=/dev/null
-    - DISPLAY=:99.0
-    - CHROME_BIN=chromium-browser
-before_script:
-  - sh -e /etc/init.d/xvfb start
-  - echo $TRAVIS_BUILD_DIR
-  - cp $TRAVIS_BUILD_DIR/src/environments/environment.ts $TRAVIS_BUILD_DIR/src/environments/environment.prod.ts
-install:
-  - npm install
-script:
-  - npm run build
