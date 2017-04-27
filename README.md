@@ -64,6 +64,10 @@ ng build --prod --aot --env=prod
 docker pull stbui/angular2-material2-admin-app
 docker run -d -P stbui/angular2-material2-admin-app
 ```
+或
+```
+docker run --rm --name angular2-material2-admin-app -v "$PWD":/usr/src/app -w /usr/src/app -p 4200:4200 -it node:latest bash -c "npm install && npm start"
+```
 
 ### 开发计划
 

@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component, Input, EventEmitter, Output} from '@angular/core';
 
 @Component({
   selector: 'stbui-day-button',
@@ -7,8 +7,9 @@ import {Component, Input} from '@angular/core';
 })
 export class DayButtonComponent {
 
-  private selected: boolean = false;
+  private _selected: boolean = false;
   @Input() date: any;
+  @Output() onSelected = new EventEmitter();
 
   constructor() {
   }
@@ -24,7 +25,7 @@ export class DayButtonComponent {
     // return this.date && d.getYear() === now.getYear() && d.getMonth() === now.getMonth() && d.getDate() === now.getDate();
   }
 
-  onSelected(day) {
-    this.selected = true;
+  selected(day) {
+    this._selected = true;
   }
 }
