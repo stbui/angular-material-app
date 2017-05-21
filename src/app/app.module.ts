@@ -24,7 +24,7 @@ import { MaterialsModule } from './materials/materials.module';
 import { SidenavModule } from './sidenav/sidenav.module';
 import { ChartComponent } from './chart/chart.component';
 import { AdminComponent } from './admin/admin.component';
-import { ChartsModule } from 'ng2-charts/ng2-charts';
+// import { ChartsModule } from 'ng2-charts/ng2-charts';
 
 
 @NgModule({
@@ -51,7 +51,7 @@ import { ChartsModule } from 'ng2-charts/ng2-charts';
     MailModule,
     PagesModule,
     NavigationModule,
-    ChartsModule,
+    // ChartsModule,
     MaterialsModule,
     SidenavModule
   ],

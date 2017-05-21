@@ -15,7 +15,7 @@ import { EditorComponent } from './editor/editor.component';
     CommonModule,
     FormsModule,
     FlexLayoutModule,
-    MaterialModule.forRoot(),
+    MaterialModule,
     QuillModule,
     RoutingModule
   ],

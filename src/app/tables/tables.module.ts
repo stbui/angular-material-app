@@ -14,7 +14,7 @@ import { DatatableComponent } from './datatable/datatable.component';
   imports: [
     CommonModule,
     FlexLayoutModule,
-    MaterialModule.forRoot(),
+    MaterialModule,
     DataTableModule,
     RoutingModule
   ],

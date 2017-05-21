@@ -16,7 +16,7 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
     CommonModule,
     FormsModule,
     FlexLayoutModule,
-    MaterialModule.forRoot(),
+    MaterialModule,
     QuillModule
   ],
   entryComponents: [

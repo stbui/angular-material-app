@@ -22,7 +22,7 @@ import { TodoListComponent } from './todo-list/todo-list.component';
     CommonModule,
     FormsModule,
     HttpModule,
-    MaterialModule.forRoot(),
+    MaterialModule,
     FlexLayoutModule,
     RoutingModule,
     // InMemoryWebApiModule.forRoot(InMemoryTodoDbService)

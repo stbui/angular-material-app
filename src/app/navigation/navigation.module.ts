@@ -15,7 +15,7 @@ import { NavigationComponent } from './navigation.component';
     CommonModule,
     HttpModule,
     FlexLayoutModule,
-    MaterialModule.forRoot(),
+    MaterialModule,
     RoutingModule,
     ComponentModule
   ],
