@@ -4,7 +4,7 @@ import { MaterialModule } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { TablesComponent } from './tables.component';
-import { DataTableModule } from 'angular2-datatable';
+// import { DataTableModule } from 'angular2-datatable';
 import { RoutingModule } from './tables-routing.module';
 import { StaticComponent } from './static/static.component';
 import { DatatableComponent } from './datatable/datatable.component';
@@ -15,7 +15,7 @@ import { DatatableComponent } from './datatable/datatable.component';
     CommonModule,
     FlexLayoutModule,
     MaterialModule,
-    DataTableModule,
+    // DataTableModule,
     RoutingModule
   ],
   declarations: [
