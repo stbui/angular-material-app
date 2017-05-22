@@ -11,8 +11,17 @@ export class DayButtonComponent {
   @Input() date: any;
   @Output() onSelected = new EventEmitter();
 
+
   constructor() {
   }
+
+  ngOnChanges() {
+    const now = new Date();
+    const d = new Date(this.date);
+    console.log(d.getDate(), now.getDate());
+    this.selected = this.date && d.getMonth() === now.getMonth() && d.getDate() === now.getDate();
+  }
+
 
   isNow() {
     // const d = new Date(this.date);
