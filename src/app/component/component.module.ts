@@ -11,6 +11,9 @@ import { ComponentComponent } from './component.component';
 import { AmapComponent } from './amap/amap.component';
 import { MarkdownComponent } from './markdown/markdown.component';
 import { DatePickerPipe } from './date-picker/date-picker.pipe';
+import { ToolbarComponent } from './date-picker/toolbar/toolbar.component';
+import { DateDisplayComponent } from './date-picker/date-display/date-display.component';
+import { MonthComponent } from './date-picker/month/month.component';
 
 
 @NgModule({
@@ -28,7 +31,10 @@ import { DatePickerPipe } from './date-picker/date-picker.pipe';
     AmapComponent,
     MarkdownComponent,
     DatePickerPipe,
-    DayButtonComponent
+    DayButtonComponent,
+    ToolbarComponent,
+    DateDisplayComponent,
+    MonthComponent
   ],
   exports: [
     DatePickerComponent,

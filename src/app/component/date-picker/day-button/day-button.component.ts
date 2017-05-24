@@ -1,4 +1,4 @@
-import {Component, Input, EventEmitter, Output} from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'stbui-day-button',
@@ -6,29 +6,21 @@ import {Component, Input, EventEmitter, Output} from '@angular/core';
   styleUrls: ['./day-button.component.scss']
 })
 export class DayButtonComponent {
-
-  @Input() selected: boolean = false;
+  
   @Input() date: any;
   @Output() onSelected = new EventEmitter();
+  @Input()
+  get selected() {
+    return this.isNow();
+  }
 
 
   constructor() {
   }
 
-  ngOnChanges() {
-    const now = new Date();
-    const d = new Date(this.date);
-    console.log(d.getDate(), now.getDate());
-    this.selected = this.date && d.getMonth() === now.getMonth() && d.getDate() === now.getDate();
-  }
-
-
-  isNow() {
-    // const d = new Date(this.date);
-    // console.log(d.getYear())
-    //
-    // const now = new Date();
-    // return this.date && d.getYear() === now.getYear() && d.getMonth() === now.getMonth() && d.getDate() === now.getDate();
+  isNow () {
+      const now = new Date();
+      return this.date && this.date.getFullYear() === now.getFullYear() && this.date.getMonth() === now.getMonth() && this.date.getDate() === now.getDate();
   }
 
   onSelectedTriggered(day) {
