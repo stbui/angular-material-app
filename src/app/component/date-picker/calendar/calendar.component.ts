@@ -13,13 +13,23 @@ export class CalendarComponent {
 
   private _currentlySelected = [];
 
-  @Input() mode;
+  private _mode;
+  @Input()
+  set mode(value) {
+    this._mode =(value == 'portrait')? false : true;
+  }
+
+  get mode() {
+    return this._mode;
+  }
+
 
   weekTexts;
   displayDates;
-  selectedDate;
+  selectedDate = new Date();
   slideType = 'next';
   displayMonthDay =  true;
+
 
   constructor() {
     const displayDate = dateUtils.cloneDate(new Date());
@@ -47,13 +57,14 @@ export class CalendarComponent {
   changeDislayDate(date) {
     const oldDate = this.displayDates[0];
     if (date.getFullYear() === oldDate.getFullYear() && date.getMonth() === oldDate.getMonth()) return;
-      const displayDate = dateUtils.cloneDate(date);
-      displayDate.setDate(1);
-      this.displayDates.push(displayDate);
-      this.displayDates.splice(0, 1);
+    const displayDate = dateUtils.cloneDate(date);
+    displayDate.setDate(1);
+    this.displayDates.push(displayDate);
+    this.displayDates.splice(0, 1);
   }
 
   onSelected(date) {
+    this.selectedDate = date;
     this.changeDislayDate(date);
   }
 

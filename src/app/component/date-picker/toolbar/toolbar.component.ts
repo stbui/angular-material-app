@@ -1,19 +1,16 @@
-import { Component, Output, Input, EventEmitter, OnInit } from '@angular/core';
+import { Component, Output, Input, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'stbui-calendar-toolbar',
   templateUrl: './toolbar.component.html',
   styleUrls: ['./toolbar.component.scss']
 })
-export class ToolbarComponent implements OnInit {
+export class ToolbarComponent {
 
   @Input() displayDates;
   @Output() monthChange = new EventEmitter();
 
   constructor() { }
-
-  ngOnInit() {
-  }
 
   OnPrev() {
     this.monthChange.emit(-1);

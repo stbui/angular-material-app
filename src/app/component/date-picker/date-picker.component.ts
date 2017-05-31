@@ -1,11 +1,11 @@
-import {Component, Input, OnInit} from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'stbui-date-picker',
   templateUrl: './date-picker.component.html',
   styleUrls: ['./date-picker.component.scss']
 })
-export class DatePickerComponent implements OnInit {
+export class DatePickerComponent {
   private _mode: 'portrait' | 'landscape' = 'portrait';
 
   @Input()
@@ -22,11 +22,6 @@ export class DatePickerComponent implements OnInit {
 
 
   constructor() {
-  }
-
-
-  ngOnInit() {
-  
   }
 
 }
