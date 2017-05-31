@@ -88,6 +88,7 @@ docker run --rm --name angular2-material2-admin-app -v "$PWD":/usr/src/app -w /u
 - [x] MarkDown
 - [x] 高德地图
 - [x] echarts
+- [x] Date Pick
 - [ ] 集成 七牛云
 - [ ] 集成 阿里云
 - [ ] ckeditor

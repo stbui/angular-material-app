@@ -20,7 +20,9 @@ $textColor:rgba(0,0,0,.87);
   font-size: 12px;
   font-weight: 400;
   padding: 0px 8px;
-  //transition: all .45s @easeOutFunction;
+  -webkit-transition: all .45s cubic-bezier(.23,1,.32,1);
+  transition: all .45s cubic-bezier(.23,1,.32,1);
+  //transition: all .45s cubic-bezier(.23,1,.32,1);
 }
 .stb-calendar-week {
   display: flex;
@@ -63,7 +65,7 @@ $textColor:rgba(0,0,0,.87);
 .stb-calendar-slide-next-leave-active,
 .stb-calendar-slide-prev-enter-active,
 .stb-calendar-slide-prev-leave-active {
-  //transition: transform 450ms @easeOutFunction, opacity 450ms @easeOutFunction;
+  //transition: transform 450ms cubic-bezier(.23,1,.32,1), opacity 450ms cubic-bezier(.23,1,.32,1);
   backface-visibility: hidden;
 }
 .stb-calendar-slide-next-enter {
@@ -185,7 +187,7 @@ $textColor:rgba(0,0,0,.87);
   line-height: 16px;
   height: 16px;
   opacity: 0.7;
-  //transition: all .45s @easeOutFunction;
+  //transition: all .45s cubic-bezier(.23,1,.32,1);
   margin-bottom: 10px;
   .stb-date-display.selected-year &{
     opacity: 1;
@@ -207,7 +209,7 @@ $textColor:rgba(0,0,0,.87);
   font-size: 36px;
   line-height: 36px;
   height: 38px;
-  //transition: all .45s @easeOutFunction;
+  //transition: all .45s cubic-bezier(.23,1,.32,1);
   width: 100%;
   font-weight: 500;
   .stb-date-display.selected-year &{
@@ -236,7 +238,7 @@ $textColor:rgba(0,0,0,.87);
 .stb-date-display-next-leave-active,
 .stb-date-display-prev-enter-active,
 .stb-date-display-prev-leave-active {
-  //transition: transform 450ms @easeOutFunction, opacity 450ms @easeOutFunction;
+  //transition: transform 450ms cubic-bezier(.23,1,.32,1), opacity 450ms cubic-bezier(.23,1,.32,1);
   backface-visibility: hidden;
 }
 .stb-date-display-next-enter {

@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SidebarRightComponent } from './sidebar-right.component';
+import { PopoverComponent } from './popover.component';
 
-describe('SidebarRightComponent', () => {
-  let component: SidebarRightComponent;
-  let fixture: ComponentFixture<SidebarRightComponent>;
+describe('PopoverComponent', () => {
+  let component: PopoverComponent;
+  let fixture: ComponentFixture<PopoverComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SidebarRightComponent ]
+      declarations: [ PopoverComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SidebarRightComponent);
+    fixture = TestBed.createComponent(PopoverComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

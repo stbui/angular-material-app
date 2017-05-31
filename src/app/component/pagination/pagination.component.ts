@@ -14,7 +14,7 @@ import {Component, Input, Output, EventEmitter, ViewEncapsulation} from '@angula
 export class PaginationComponent {
 
   @Output() onPage = new EventEmitter<void>();
-  @Input() total: number;
+  @Input() total: number = 10;
 
   private _align: 'start' | 'center' | 'end' = 'start';
   @Input()

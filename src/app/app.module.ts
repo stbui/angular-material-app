@@ -11,7 +11,6 @@ import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { SidebarRightComponent } from './sidebar-right/sidebar-right.component';
 import { CustomizerComponent } from './customizer/customizer.component';
 import { TodoModule } from './todo/todo.module';
 import { FormModule } from './forms/forms.module';
@@ -24,7 +23,6 @@ import { MaterialsModule } from './materials/materials.module';
 import { SidenavModule } from './sidenav/sidenav.module';
 import { ChartComponent } from './chart/chart.component';
 import { AdminComponent } from './admin/admin.component';
-// import { ChartsModule } from 'ng2-charts/ng2-charts';
 
 
 @NgModule({
@@ -33,7 +31,6 @@ import { AdminComponent } from './admin/admin.component';
     DashboardComponent,
     HeaderComponent,
     FooterComponent,
-    SidebarRightComponent,
     CustomizerComponent,
     ChartComponent,
     AdminComponent
@@ -51,7 +48,6 @@ import { AdminComponent } from './admin/admin.component';
     MailModule,
     PagesModule,
     NavigationModule,
-    // ChartsModule,
     MaterialsModule,
     SidenavModule
   ],

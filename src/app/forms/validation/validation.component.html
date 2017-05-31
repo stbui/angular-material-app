@@ -18,7 +18,7 @@
         <md-input-container>
           <input mdInput placeholder="请输入您的手机" name="phone" ngModel>
         </md-input-container>
-        <md-checkbox>我同意</md-checkbox>
+        <md-checkbox class="extra-options">我同意</md-checkbox>
         <button md-raised-button color="primary" type="submit" [disabled]="!formRegister.valid">提交</button>
       </form>
     </md-card-content>
@@ -40,7 +40,7 @@
         <md-input-container>
           <textarea mdInput placeholder="留言" rows="3" name="message" ngModel required></textarea>
         </md-input-container>
-        <md-checkbox>我同意</md-checkbox>
+        <md-checkbox class="extra-options">我同意</md-checkbox>
         <button md-raised-button color="primary" type="submit" [disabled]="!formContact.valid">提交</button>
       </form>
     </md-card-content>

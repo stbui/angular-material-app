@@ -24,4 +24,8 @@ export class DatePickerComponent {
   constructor() {
   }
 
+  handleClick() {
+    console.log(1)
+  }
+
 }

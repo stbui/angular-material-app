@@ -21,16 +21,16 @@ export class ChartComponent implements OnInit {
       },
       tooltip: {},
       legend: {
-        data:['销量']
+        data:['前端框架']
       },
       xAxis: {
-        data: ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子"]
+        data: ["React","Vue","Angular 2","Angular","Ember","No Framework","Backone"]
       },
       yAxis: {},
       series: [{
-        name: '销量',
+        name: '前端框架',
         type: 'bar',
-        data: [5, 20, 36, 10, 10, 20]
+        data: [75, 49, 45, 27, 26, 21, 19]
       }]
     };
 
