@@ -28,6 +28,7 @@ export class SidenavService {
     this.addSubItem(materials, 'Tabs', '/materials/tabs', 3);
     this.addSubItem(materials, 'Pagination', '/materials/pagination', 3);
     this.addSubItem(materials, 'Date Picker', '/materials/datepicker', 3);
+    this.addSubItem(materials, 'Popover', '/materials/popover', 3);
 
     let components = this.addItem('Components', 'equalizer', null, 3);
     this.addSubItem(components, '高德地图', '/materials/amap', 1);

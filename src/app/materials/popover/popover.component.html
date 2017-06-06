@@ -1,0 +1,15 @@
+<md-card>
+  <md-card-title>Popover</md-card-title>
+  <md-card-content>
+    <button md-icon-button [popoverTriggerFor]="popover">
+      <md-icon>grade</md-icon>
+    </button>
+    <stbui-popover #popover="stbuiPopover">
+      <button md-menu-item> 刷新 </button>
+      <button md-menu-item> 设置 </button>
+      <button md-menu-item> 帮助 </button>
+      <button md-menu-item disabled> 退出 </button>
+    </stbui-popover>
+
+  </md-card-content>
+</md-card>

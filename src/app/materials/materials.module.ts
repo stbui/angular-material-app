@@ -18,6 +18,7 @@ import { PaginationComponent } from './pagination/pagination.component';
 import { AmapComponent } from './amap/amap.component';
 import { DatePickerComponent } from './date-picker/date-picker.component';
 import { MarkdownComponent } from './markdown/markdown.component';
+import { PopoverComponent } from './popover/popover.component';
 
 @NgModule({
   imports: [
@@ -40,7 +41,8 @@ import { MarkdownComponent } from './markdown/markdown.component';
     PaginationComponent,
     AmapComponent,
     DatePickerComponent,
-    MarkdownComponent
+    MarkdownComponent,
+    PopoverComponent
   ]
 })
 export class MaterialsModule { }

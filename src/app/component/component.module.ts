@@ -4,6 +4,7 @@ import { MaterialModule } from '@angular/material';
 import { FormsModule } from '@angular/forms';
 import { RoutingModule } from './componebt-routing.module';
 import { ComponentComponent } from './component.component';
+
 import { DatePickerComponent } from './date-picker/date-picker.component';
 import { CalendarComponent } from './date-picker/calendar/calendar.component';
 import { DayButtonComponent } from './date-picker/day-button/day-button.component';
@@ -11,6 +12,7 @@ import { DatePickerPipe } from './date-picker/date-picker.pipe';
 import { ToolbarComponent } from './date-picker/toolbar/toolbar.component';
 import { DateDisplayComponent } from './date-picker/date-display/date-display.component';
 import { MonthComponent } from './date-picker/month/month.component';
+
 import { AmapComponent } from './amap/amap.component';
 import { MarkdownComponent } from './markdown/markdown.component';
 import { PaginationComponent } from './pagination/pagination.component';
@@ -45,7 +47,8 @@ import { PopoverDirective } from './popover/popover.directive';
     PaginationComponent,
     AmapComponent,
     MarkdownComponent,
-    PopoverComponent
+    PopoverComponent,
+    PopoverDirective
   ]
 })
 export class ComponentModule { }
