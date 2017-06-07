@@ -32,12 +32,10 @@ export class DatePickerComponent {
   }
 
   onCancelDatePicker(value) {
-    console.log(value);
     this.onCanel.emit(value);
   }
 
   onConfirmDatePicker(value) {
-    console.log(value);
     this.onConfirm.emit(value);
   }
 
