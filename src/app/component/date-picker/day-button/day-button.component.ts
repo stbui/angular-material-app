@@ -6,7 +6,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./day-button.component.scss']
 })
 export class DayButtonComponent {
-  
+
   @Input() date: any;
   @Output() onSelected = new EventEmitter();
   @Input()
@@ -18,9 +18,9 @@ export class DayButtonComponent {
   constructor() {
   }
 
-  isNow () {
-      const now = new Date();
-      return this.date && this.date.getFullYear() === now.getFullYear() && this.date.getMonth() === now.getMonth() && this.date.getDate() === now.getDate();
+  isNow() {
+    const now = new Date();
+    return this.date && this.date.getFullYear() === now.getFullYear() && this.date.getMonth() === now.getMonth() && this.date.getDate() === now.getDate();
   }
 
   onSelectedTriggered(day) {

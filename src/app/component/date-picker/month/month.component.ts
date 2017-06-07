@@ -7,7 +7,7 @@ import * as dateUtils from '../dateUtils';
   styleUrls: ['./month.component.scss']
 })
 export class MonthComponent {
- 
+
   private weeksArray;
 
   @Output() selected = new EventEmitter();
@@ -24,7 +24,7 @@ export class MonthComponent {
   constructor() { }
 
   onSelectedTrigger(date) {
-    if(date) {
+    if (date) {
       this.selected.emit(date);
     }
   }

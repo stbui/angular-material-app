@@ -3,7 +3,7 @@ import { Directive, Input, ElementRef, HostListener, AfterViewInit } from '@angu
 @Directive({
   selector: '[stbuiPopover],[popoverTriggerFor]',
   host: {
-    '(click)':'togglePopover()'
+    '(click)': 'togglePopover()'
   },
   exportAs: 'popoverDirective'
 })
@@ -11,14 +11,14 @@ export class PopoverDirective implements AfterViewInit {
 
   @Input('popoverTriggerFor') popover;
 
-  constructor() { }
+  constructor(private _elementRef: ElementRef) { }
 
   ngAfterViewInit() {
     this._checkPopover();
   }
 
   private _checkPopover() {
-    if(!this.popover) {
+    if (!this.popover) {
       throw new Error(`
       Example:
         <stbui-popover #popover="stbPopover"></stbui-popover>
@@ -28,8 +28,10 @@ export class PopoverDirective implements AfterViewInit {
   }
 
   togglePopover() {
-    console.log(this.popover);
+    // console.log(this.popover);
     this.popover.openPopover();
+    console.log(this._elementRef.nativeElement);
+    this.popover.getAnchorPosition(this._elementRef.nativeElement);
   }
 
 }

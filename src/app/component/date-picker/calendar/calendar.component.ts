@@ -7,7 +7,7 @@ import * as dateUtils from '../dateUtils';
   templateUrl: './calendar.component.html',
   styleUrls: ['./calendar.component.scss'],
   encapsulation: ViewEncapsulation.None,
-  animations:[ transitionAnimation]
+  animations: [transitionAnimation]
 })
 export class CalendarComponent {
 
@@ -16,7 +16,7 @@ export class CalendarComponent {
   private _mode;
   @Input()
   set mode(value) {
-    this._mode =(value == 'portrait')? false : true;
+    this._mode = (value == 'portrait') ? false : true;
   }
 
   get mode() {
@@ -28,7 +28,7 @@ export class CalendarComponent {
   displayDates;
   selectedDate = new Date();
   slideType = 'next';
-  displayMonthDay =  true;
+  displayMonthDay = true;
 
 
   constructor() {

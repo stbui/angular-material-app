@@ -7,12 +7,17 @@ import { Component, Input } from '@angular/core';
 })
 export class DatePickerComponent {
   private _mode: 'portrait' | 'landscape' = 'portrait';
+  private landscape: boolean = false;
 
   @Input()
   set mode(value) {
     value = (value == 'portrait') ? 'portrait' : 'landscape';
     if (value != this._mode) {
       this._mode = value;
+    }
+
+    if (value == 'landscape') {
+      this.landscape = true;
     }
   }
 

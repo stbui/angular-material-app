@@ -7,7 +7,7 @@ import { Component, Input } from '@angular/core';
 })
 export class DateDisplayComponent {
 
-  private displayDates=[];
+  private displayDates = [];
   @Input()
   set selectedDate(val) {
     this.displayDates = [val];
