@@ -1,4 +1,4 @@
-import { Component, Input, ViewEncapsulation } from '@angular/core';
+import { Component, Input, Output, EventEmitter, ViewEncapsulation } from '@angular/core';
 import { transitionAnimation } from '../transition.animation';
 import * as dateUtils from '../dateUtils';
 
@@ -23,6 +23,8 @@ export class CalendarComponent {
     return this._mode;
   }
 
+  @Output() onCancelDatePicker = new EventEmitter<any>();
+  @Output() onConfirmDatePicker = new EventEmitter<any>();
 
   weekTexts;
   displayDates;
@@ -66,6 +68,14 @@ export class CalendarComponent {
   onSelected(date) {
     this.selectedDate = date;
     this.changeDislayDate(date);
+  }
+
+  onCancelDatePickerTriggered() {
+    this.onCancelDatePicker.emit('取消');
+  }
+
+  onConfirmDatePickerTriggered() {
+    this.onConfirmDatePicker.emit(this.selectedDate);
   }
 
 }

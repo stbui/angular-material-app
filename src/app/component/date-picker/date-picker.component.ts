@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'stbui-date-picker',
@@ -25,12 +25,20 @@ export class DatePickerComponent {
     return this._mode;
   }
 
+  @Output() onCanel = new EventEmitter<any>();
+  @Output() onConfirm = new EventEmitter<any>();
 
   constructor() {
   }
 
-  handleClick() {
-    console.log(1)
+  onCancelDatePicker(value) {
+    console.log(value);
+    this.onCanel.emit(value);
+  }
+
+  onConfirmDatePicker(value) {
+    console.log(value);
+    this.onConfirm.emit(value);
   }
 
 }
