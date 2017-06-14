@@ -5,7 +5,11 @@
 ### fixes:
 - 指定material2版本为2.0.0-beta.2
 
+### updated
+- 更新material icon 依赖
+
 - 其他调整
+
 
 ## 0.0.1 - 2017.04.27
 
