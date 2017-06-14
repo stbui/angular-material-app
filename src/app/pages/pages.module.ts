@@ -9,10 +9,13 @@ import { PagesComponent } from './pages.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { ServicesComponent } from './services/services.component';
+import { BlogComponent } from './blog/blog.component';
+import { ProfileComponent } from './profile/profile.component';
 import { CollectionComponent } from './collection/collection.component';
 import { UserComponent } from './user/user.component';
 import { SignupComponent } from './signup/signup.component';
 import { SigninComponent } from './signin/signin.component';
+
 
 @NgModule({
   imports: [
@@ -28,6 +31,8 @@ import { SigninComponent } from './signin/signin.component';
     ContactComponent,
     ServicesComponent,
     CollectionComponent,
+    BlogComponent,
+    ProfileComponent,
     UserComponent,
     SignupComponent,
     SigninComponent
