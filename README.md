@@ -48,7 +48,7 @@
 ### 使用入门
 
 ```
-npm i -g @angular/cli@1.0.0-rc.1
+npm i -g @angular/cli
 git clone https://github.com/stbui/angular2-material2-bootstrap4-admin-app.git
 ```
 
