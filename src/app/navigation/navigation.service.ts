@@ -9,7 +9,7 @@ import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 export class NavigationService {
 
   private _navigations: BehaviorSubject<any>;
-  private apiUrl = environment.navigationApi + '/api';
+  private apiUrl = environment.navigationApi;
 
   get navigations() {
     return this._navigations.asObservable();
@@ -19,8 +19,8 @@ export class NavigationService {
     this._navigations = new BehaviorSubject<any>([]);
   }
 
-  getNavs(topicId:any = '', page:any = 1) {
-    const url = `${this.apiUrl}/link?topicId=${topicId}&page=${page}`;
+  getNavs(topicId: any = '', page: any = 1) {
+    const url = `${this.apiUrl}/links/?topicId=${topicId}&page=${page}`;
     this.http.get(url)
       .map(res => res.json())
       // .do(res => console.log(res))
