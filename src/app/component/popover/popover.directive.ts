@@ -11,7 +11,8 @@ export class PopoverDirective implements AfterViewInit {
 
   @Input('popoverTriggerFor') popover;
 
-  constructor(private _elementRef: ElementRef) { }
+  constructor(private _elementRef:ElementRef) {
+  }
 
   ngAfterViewInit() {
     this._checkPopover();

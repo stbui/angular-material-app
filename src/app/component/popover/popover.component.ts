@@ -1,4 +1,7 @@
-import { Component, Input, Output, EventEmitter, ElementRef, TemplateRef, ViewChild, ViewContainerRef, AfterViewInit, OnInit } from '@angular/core';
+import {
+  Component, Input, Output, EventEmitter, ElementRef, TemplateRef, ViewChild, ViewContainerRef, AfterViewInit,
+  OnInit, HostListener
+} from '@angular/core';
 import { Overlay, OverlayState, OverlayRef } from '@angular/material';
 
 @Component({
@@ -25,6 +28,19 @@ export class PopoverComponent implements OnInit {
   @ViewChild(TemplateRef) templateRef: TemplateRef<any>;
   @ViewChild('popover') popover: ElementRef;
 
+  @HostListener('document:click', ['$event', '$event.target']) onClick(event, targetElement) {
+    if(!targetElement) {
+      return;
+    }
+
+    const clickedInside = this._elementRef.nativeElement.contains(targetElement);
+    if(!clickedInside) {
+      console.log(event, targetElement);
+      console.log(clickedInside);
+    }
+
+  }
+
   private _overlayRef: OverlayRef;
   private _popoverOpen: boolean = false;
 
@@ -41,7 +57,7 @@ export class PopoverComponent implements OnInit {
       bottom: rect.bottom,
       middle: 0,
       center: 0
-    }
+    };
 
     a.right = rect.right || a.left + a.width;
     a.bottom = rect.bottom || a.top + a.height;
@@ -63,7 +79,7 @@ export class PopoverComponent implements OnInit {
   }
 
   getElInfo(el) {
-    let box = el.getBoundingClientRect()
+    let box = el.getBoundingClientRect();
     return {
       left: box.left,
       top: box.top,
@@ -73,12 +89,12 @@ export class PopoverComponent implements OnInit {
   }
 
   setStyle() {
-    const { targetOrigin, anchorOrigin } = this
+    const { targetOrigin, anchorOrigin } = this;
     const anchor = this.getAnchorPosition(this.trigger);
     let targetPosition = {
       top: anchor[anchorOrigin.vertical] - 0,
       left: anchor[anchorOrigin.horizontal] - 0
-    }
+    };
     console.log('setStyle', targetOrigin);
     return {
       top: `${Math.max(0, targetPosition.top)}px`,
@@ -123,7 +139,7 @@ export class PopoverComponent implements OnInit {
     return overlayState;
   }
 
-  constructor(private _overlay: Overlay) { }
+  constructor(private _overlay: Overlay, private _elementRef: ElementRef) { }
 
   ngOnInit() {
   }
