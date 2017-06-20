@@ -1,8 +1,6 @@
 import {
-  Component, Input, Output, EventEmitter, ElementRef, TemplateRef, ViewChild, ViewContainerRef, AfterViewInit,
-  OnInit, HostListener
+  Component, Input, Output, EventEmitter, HostListener, ElementRef
 } from '@angular/core';
-import { Overlay, OverlayState, OverlayRef } from '@angular/material';
 
 @Component({
   selector: 'stbui-popover',
@@ -10,13 +8,13 @@ import { Overlay, OverlayState, OverlayRef } from '@angular/material';
   styleUrls: ['./popover.component.scss'],
   exportAs: 'stbuiPopover'
 })
-export class PopoverComponent implements OnInit {
+export class PopoverComponent {
 
-  @Input() overlay: boolean = false;
-  @Input() overlayOpacity: number = 0.01;
-  @Input() overlayColor: string = '#000';
-  @Input() targetOrigin = { vertical: 'top', horizontal: 'left' };
-  @Input() anchorOrigin = { vertical: 'bottom', horizontal: 'left' };
+  @Input() overlay:boolean = false;
+  @Input() overlayOpacity:number = 0.01;
+  @Input() overlayColor:string = '#000';
+  @Input() targetOrigin = {vertical: 'top', horizontal: 'left'};
+  @Input() anchorOrigin = {vertical: 'bottom', horizontal: 'left'};
   @Input() autoPosition = true;
   @Input() open = false;
   // @Input() trigger;
@@ -25,24 +23,20 @@ export class PopoverComponent implements OnInit {
   @Output() show = new EventEmitter();
   @Output() hide = new EventEmitter();
 
-  @ViewChild(TemplateRef) templateRef: TemplateRef<any>;
-  @ViewChild('popover') popover: ElementRef;
 
-  @HostListener('document:click', ['$event', '$event.target']) onClick(event, targetElement) {
-    if(!targetElement) {
+  @HostListener('document:click', ['$event', '$event.target']) onClick(event:MouseEvent, targetElement:HTMLElement) {
+    if (!targetElement) {
       return;
     }
 
+    const clickedInset = this.trigger.contains(targetElement);
     const clickedInside = this._elementRef.nativeElement.contains(targetElement);
-    if(!clickedInside) {
-      console.log(event, targetElement);
-      console.log(clickedInside);
+    if (!clickedInside && !clickedInset) {
+      this.closePopover();
     }
-
   }
 
-  private _overlayRef: OverlayRef;
-  private _popoverOpen: boolean = false;
+  private _popoverOpen:boolean = false;
 
   public trigger;
 
@@ -50,7 +44,7 @@ export class PopoverComponent implements OnInit {
     const rect = el.getBoundingClientRect();
     const a = {
       top: rect.top,
-      left: rect.left,
+      left: el.offsetLeft,
       width: el.width,
       height: el.height,
       right: rect.right,
@@ -89,16 +83,16 @@ export class PopoverComponent implements OnInit {
   }
 
   setStyle() {
-    const { targetOrigin, anchorOrigin } = this;
+    const {targetOrigin, anchorOrigin} = this;
     const anchor = this.getAnchorPosition(this.trigger);
+    let target = this.getTargetPosition(this.trigger);
     let targetPosition = {
-      top: anchor[anchorOrigin.vertical] - 0,
-      left: anchor[anchorOrigin.horizontal] - 0
+      top: anchor[anchorOrigin.vertical] - target[targetOrigin.vertical],
+      left: anchor[anchorOrigin.horizontal] - target[targetOrigin.horizontal]
     };
-    console.log('setStyle', targetOrigin);
     return {
       top: `${Math.max(0, targetPosition.top)}px`,
-      left: '200px'
+      left: `${Math.max(0, targetPosition.left)}px`
     }
   }
 
@@ -107,45 +101,19 @@ export class PopoverComponent implements OnInit {
   }
 
   openPopover() {
-    if (!this._popoverOpen) {
-      this._createOverlay();
-
-      let commentElement = this.templateRef.elementRef.nativeElement;
-      let embeddedView = this.templateRef.createEmbeddedView(null);
-      embeddedView.rootNodes.forEach((node) => {
-        commentElement.parentNode
-          .insertBefore(node, commentElement.nextSibling);
-      });
-
-      this._popoverOpen = true;
-    }
+    this._popoverOpen = true;
   }
 
   closePopover() {
     this._popoverOpen = false;
   }
 
-  private _createOverlay() {
-    if (!this._overlayRef) {
-      const config = this._getOverlayConfig();
-      this._overlayRef = this._overlay.create(config);
-    }
+  toggle() {
+    this._popoverOpen = !this._popoverOpen;
   }
 
-  private _getOverlayConfig() {
-    const overlayState = new OverlayState();
-    overlayState.hasBackdrop = true;
-    overlayState.backdropClass = 'cdk-overlay-transparent-backdrop';
-    return overlayState;
-  }
 
-  constructor(private _overlay: Overlay, private _elementRef: ElementRef) { }
-
-  ngOnInit() {
-  }
-
-  ngAfterViewInit() {
-
+  constructor(private _elementRef:ElementRef) {
   }
 
 }

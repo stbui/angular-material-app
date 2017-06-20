@@ -29,10 +29,10 @@ export class PopoverDirective implements AfterViewInit {
   }
 
   togglePopover() {
-    // console.log(this.popover);
-    this.popover.openPopover();
-    console.log(this._elementRef.nativeElement);
-    this.popover.getAnchorPosition(this._elementRef.nativeElement);
+    // this.popover.openPopover();
+    this.popover.toggle();
+    this.popover.trigger = this._elementRef.nativeElement;
+    // this.popover.getAnchorPosition(this._elementRef.nativeElement);
   }
 
 }
