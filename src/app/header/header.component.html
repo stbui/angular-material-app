@@ -1,4 +1,12 @@
-<md-toolbar class="main-toolbar">
+<div class="main-toolbar mat-elevation-z2" fxLayout="row" fxLayoutAlign="start center">
+
+  <span fxFlex></span>
+
+  <button md-button [fxHide]="true" [fxHide.gt-sm]="false" class="fullscreen-btn" (click)="toggleFullscreen()">
+    <md-icon *ngIf="!isFullscreen">fullscreen</md-icon>
+    <md-icon *ngIf="isFullscreen">fullscreen_exit</md-icon>
+  </button>
+
   <button md-button class="search-btn">
     <md-icon>search</md-icon>
   </button>
@@ -8,22 +16,13 @@
     <span class="badge">3</span>
   </button>
 
-  <span fxFlex></span>
+  <stbui-toolbar-user></stbui-toolbar-user>
 
-  <button md-button [mdMenuTriggerFor]="setting" class="user-btn">
-    <md-icon>face</md-icon>
-    <span>stbui</span>
-  </button>
-
-  <button md-button class="more-btn">
-    帮助
-  </button>
-
-  <button md-button class="more-btn">
+  <button md-button class="more-btn" (click)="customizer.open()">
     <md-icon>more_vert</md-icon>
   </button>
 
-</md-toolbar>
+</div>
 
 
 <md-menu #menu="mdMenu">
@@ -38,20 +37,5 @@
   <button md-menu-item>
     <md-icon>notifications_off</md-icon>
     <span>开发进度</span>
-  </button>
-</md-menu>
-
-<md-menu #setting="mdMenu">
-  <button md-menu-item>
-    <md-icon>assignment</md-icon>
-    <span>我的资料</span>
-  </button>
-  <button md-menu-item>
-    <md-icon>settings</md-icon>
-    <span>lock</span>
-  </button>
-  <button md-menu-item>
-    <md-icon>keyboard_tab</md-icon>
-    <span>退出</span>
   </button>
 </md-menu>

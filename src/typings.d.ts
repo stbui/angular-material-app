@@ -1,4 +1,4 @@
-/* SystemJS module definition */
-declare var module: {
-  id: string;
-};
+declare module 'screenfull' {
+  var enabled: any;
+  function toggle(): any
+}

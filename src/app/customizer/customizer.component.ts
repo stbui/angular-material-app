@@ -2,7 +2,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { CustomizerService } from './customizer.service';
 
 @Component({
-  selector: 'app-customizer',
+  selector: 'stbui-customizer',
   templateUrl: './customizer.component.html',
   styleUrls: ['./customizer.component.scss']
 })

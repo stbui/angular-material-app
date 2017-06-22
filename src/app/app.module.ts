@@ -9,9 +9,9 @@ import { RoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { CustomizerComponent } from './customizer/customizer.component';
+import { HeaderModule } from './header/header.module';
 import { TodoModule } from './todo/todo.module';
 import { FormModule } from './forms/forms.module';
 import { TablesModule } from './tables/tables.module';
@@ -29,7 +29,6 @@ import { AdminComponent } from './admin/admin.component';
   declarations: [
     AppComponent,
     DashboardComponent,
-    HeaderComponent,
     FooterComponent,
     CustomizerComponent,
     ChartComponent,
@@ -41,6 +40,7 @@ import { AdminComponent } from './admin/admin.component';
     FlexLayoutModule,
     MaterialModule,
     RoutingModule,
+    HeaderModule,
     TodoModule,
     FormModule,
     TablesModule,

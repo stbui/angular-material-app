@@ -1,7 +1,6 @@
 import {Component, Input, Output, EventEmitter, ViewEncapsulation} from '@angular/core';
 
 @Component({
-  moduleId: module.id,
   selector: 'stbui-pagination',
   templateUrl: './pagination.component.html',
   styleUrls: ['./pagination.component.scss'],

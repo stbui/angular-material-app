@@ -9,9 +9,14 @@ export class AdminComponent implements OnInit {
 
   title = 'angular2 material2 web - Power by 码农庄园';
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
+  }
+
+  onActivate(e, scrollContainer) {
+    scrollContainer.scrollTop = 0;
   }
 
 }

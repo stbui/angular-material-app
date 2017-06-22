@@ -55,25 +55,6 @@ code {
   white-space: pre;
 }
 
-.demo-preview {
-  background: #F2F2F2;
-
-  button {
-    //margin: 12px;
-  }
-
-  md-card {
-    margin: 24px 0;
-  }
-
-  md-card + md-card {
-    margin: 0 0 24px;
-  }
-
-  md-card > md-card-content > * {
-    margin: 10px 5px;
-  }
-}
 
 h3, h4, h5, p {
   margin: 0 0 16px;
@@ -89,12 +70,6 @@ p {
   line-height: 1.5;
 }
 
-@media only screen and (min-width: 1280px) {
-  .demo-tabs {
-    overflow-x: hidden;
-  }
-}
-
 .inline {
   display: inline-block;
   padding: 0 0.5em;
@@ -107,12 +82,6 @@ p {
   vertical-align: middle;
   height: 16px;
   width: 22px;
-}
-
-.demo-list {
-  margin: 24px 0;
-  background: #FFF;
-  width: 350px;
 }
 
 .subline {
