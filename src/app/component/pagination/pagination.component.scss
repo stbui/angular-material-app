@@ -1,4 +1,6 @@
-@import '~@angular/material/core/theming/all-theme';
+// @import '~@angular/material/core/theming/all-theme';
+@import '~@angular/material/_theming';
+$mat-body-font-size-base: 14px;
 
 $pagination-size: 32px !default;
 $pagination-line-height: 32px !default;

@@ -1,6 +1,6 @@
 # 通用管理系统快速开发框架
 
-基于最新`Angular 2`框架与`Material2`技术的企业级通用管理系统快速开发框架，涵盖了大量的常用组件和基础功能，您可以快速开发各种MIS系统，如CMS、OA、CRM、ERP、POS等，最大程度上帮助企业节省时间成本和费用开支。
+基于最新`Angular 4`框架与`Material2`技术的企业级通用管理系统快速开发框架，涵盖了大量的常用组件和基础功能，您可以快速开发各种MIS系统，如CMS、OA、CRM、ERP、POS等，最大程度上帮助企业节省时间成本和费用开支。
 
 [![Travis](https://travis-ci.org/stbui/angular2-material2-bootstrap4-admin-app.svg?branch=master)](https://travis-ci.org/stbui/angular2-material2-bootstrap4-admin-app)
 [![Docker Build Statu](https://img.shields.io/docker/build/stbui/angular2-material2-admin-app.svg?style=flat-square)](https://hub.docker.com/r/stbui/angular2-material2-admin-app/)
@@ -12,10 +12,10 @@
 
 ### 平台环境
 
-[![Angular](https://img.shields.io/badge/Angular%202-2.4.0-brightgreen.svg?style=flat-square)](https://github.com/angular/angular)
-[![Angular-cli](https://img.shields.io/badge/Angular.cli-1.0.0.rc.1-brightgreen.svg?style=square)](https://github.com/angular/angular-cli)
+[![Angular](https://img.shields.io/badge/Angular%202-4.0.0-brightgreen.svg?style=flat-square)](https://github.com/angular/angular)
+[![Angular-cli](https://img.shields.io/badge/Angular.cli-1.1.2-brightgreen.svg?style=square)](https://github.com/angular/angular-cli)
 [![Material 2](https://img.shields.io/badge/Material%202-2.0.0.beta.2-brightgreen.svg?style=square)](https://github.com/angular/material2)
-[![Flex-Layout](https://img.shields.io/badge/Flex.Layout-2.0.0.rc.1-brightgreen.svg?style=square)](https://github.com/angular/flex-layout)
+[![Flex-Layout](https://img.shields.io/badge/Flex.Layout-2.0.0.beta.7-brightgreen.svg?style=square)](https://github.com/angular/flex-layout)
 
 
 ### 基本功能
@@ -35,12 +35,11 @@
 
 ### 技术栈
 
-[![Angular 2](https://img.shields.io/badge/Angular%202-2.4.0-brightgreen.svg?style=flat-square)](https://github.com/angular/angular)
-[![Angular Mateiral 2](https://img.shields.io/badge/Mateiral%202-2.0.0.beta.2-brightgreen.svg?style=square)](https://github.com/angular/material2)
+[![Angular 4](https://img.shields.io/badge/Angular%202-4.0.0-brightgreen.svg?style=flat-square)](https://github.com/angular/angular)
+[![Angular Mateiral 2](https://img.shields.io/badge/Mateiral%202-latest-brightgreen.svg?style=square)](https://github.com/angular/material2)
 [![Scss](https://img.shields.io/badge/Scss-latest-brightgreen.svg?style=flat-square)](https://github.com/sass/sass)
 [![Typescript](https://img.shields.io/badge/Typescript-latest-brightgreen.svg?style=flat-square)](https://github.com/Microsoft/TypeScript)
 [![rxjs](https://img.shields.io/badge/rxjs-5.1.0-brightgreen.svg?style=flat-square)](https://github.com/Reactive-Extensions/RxJS)
-[![Bootstrap 4](https://img.shields.io/badge/Bootstrap-4.0.0-brightgreen.svg?style=flat-square)](https://github.com/twbs/bootstrap)
 
 ![demo image](src/assets/images-demo/2017-04-07_202402.jpg)
 
@@ -95,5 +94,9 @@ docker run --rm --name angular2-material2-admin-app -v "$PWD":/usr/src/app -w /u
 - [ ] highcharts
 
 
-### 开源许可证
+### 依赖模块
+
+```
+angular2-perfect-scrollbar material-design-icons ngx-quill normalize.css screenfull @swimlane/ngx-datatable
+```
 

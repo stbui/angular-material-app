@@ -3,8 +3,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 @Component({
   selector: 'app-datatable',
   templateUrl: './datatable.component.html',
-  styleUrls: ['./datatable.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  styleUrls: ['./datatable.component.scss']
 })
 export class DatatableComponent implements OnInit {
 

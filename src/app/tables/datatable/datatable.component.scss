@@ -1,15 +1,9 @@
+@import '~@swimlane/ngx-datatable/release/index.css';
+@import '~@swimlane/ngx-datatable/release/themes/material.css';
+@import '~@swimlane/ngx-datatable/release/assets/icons.css';
+
 :host {
   display: block;
-  margin: 15px 0;
-}
-
-.main-datatable {
-  md-card {
-    margin: 15px;
-  }
-}
-
-
-.pull-right {
-  float: right;
+  margin: 36px;
+  position: relative;
 }
