@@ -1,6 +1,8 @@
-// @import '~@angular/material/core/theming/all-theme';
 @import '~@angular/material/_theming';
-$mat-body-font-size-base: 14px;
+
+$navigation-font-family: $mat-font-family;
+$navigation-font-size-base: 14px !default;
+$navigation-border-radius: 2px !default;
 
 @mixin navigation-theme($theme) {
   $primary: map-get($theme, primary);
@@ -37,8 +39,6 @@ $mat-body-font-size-base: 14px;
   }
 }
 
-$navigation-border-radious: 2px !default;
-
 :host {
   display: block;
   margin: 15px;
@@ -70,7 +70,7 @@ $navigation-border-radious: 2px !default;
   position: absolute;
   left: 10px;
   border-bottom: none;
-  font-size: $mat-body-font-size-base;
+  font-size: $navigation-font-size-base;
   line-height: 28px;
   color: #333;
 }
@@ -81,14 +81,11 @@ $navigation-border-radious: 2px !default;
   display: inline-block;
   margin-right: 10px;
   padding: 0 5px;
-
-  font-size: $mat-body-font-size-base;
-  font-family: $mat-font-family;
+  border-radius: $navigation-border-radius;
+  font-size: $navigation-font-size-base;
+  font-family: $navigation-font-family;
   font-weight: 500;
   text-align: center;
-
   line-height: 28px;
   cursor: default;
-
-  border-radius: $navigation-border-radious;
 }

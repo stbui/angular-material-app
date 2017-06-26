@@ -1,5 +1,8 @@
 $textColor:rgba(0,0,0,.87);
 
+$calendar-background-color: #7e57c2;
+
+
 .stb-calendar {
   color: $textColor;
   user-select: none;
@@ -256,4 +259,26 @@ $textColor:rgba(0,0,0,.87);
 .stb-date-display-prev-leave-active {
   transform: translate3d(0, -100%, 0);
   opacity: 0;
+}
+
+
+@mixin calendar-theme($theme) {
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+  $warn: map-get($theme, warn);
+  $background: map-get($theme, background);
+  $foreground: map-get($theme, foreground);
+
+  .stb-date-display {
+    background: mat-color($primary, .2);
+  }
+
+  .pagination li {
+    color: mat-color($foreground, text);
+  }
+
+  .pagination li:hover {
+    background-color: mat-color($primary, .2);
+  }
+
 }

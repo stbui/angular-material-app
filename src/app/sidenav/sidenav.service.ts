@@ -42,7 +42,7 @@ export class SidenavService {
 
     let tables = this.addItem('Tables', 'list', null, 5);
     this.addSubItem(tables, 'Static Tables', '/tables/static', 1);
-    this.addSubItem(tables, 'Datatable', '/tables/datatable', 2);
+    this.addSubItem(tables, 'Data Tables', '/tables/datatable', 2);
 
     let pages = this.addItem('Pages', 'content_copy', null, 7);
     this.addSubItem(pages, '关于', '/pages/about', 1);

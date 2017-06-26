@@ -1,12 +1,10 @@
-// @import '~@angular/material/core/theming/all-theme';
 @import '~@angular/material/_theming';
-$mat-body-font-size-base: 14px;
-
+$pagination-font-size-base: 14px !default;
 $pagination-size: 32px !default;
 $pagination-line-height: 32px !default;
 $pagination-padding: 0 8px !default;
 $pagination-margin: 0 8px !default;
-$pagination-border-radious: 2px !default;
+$pagination-border-radius: 2px !default;
 
 .pagination {
   display: -webkit-box;
@@ -40,7 +38,7 @@ $pagination-border-radious: 2px !default;
     -ms-flex-align: center;
     align-items: center;
 
-    font-size: $mat-body-font-size-base;
+    font-size: $pagination-font-size-base;
     font-family: $mat-font-family;
     font-weight: 500;
     text-align: center;
@@ -51,7 +49,7 @@ $pagination-border-radious: 2px !default;
     margin: $pagination-margin;
     line-height: $pagination-line-height;
     position: relative;
-    border-radius: $pagination-border-radious;
+    border-radius: $pagination-border-radius;
   }
 
   &-item-wrapper {
