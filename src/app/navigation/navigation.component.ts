@@ -42,4 +42,10 @@ export class NavigationComponent implements OnInit {
   page(current) {
     this.getNavs(this.nav_id, current);
   }
+
+  setClassActive(id) {
+    if (this.nav_id == id) {
+      return true;
+    }
+  }
 }

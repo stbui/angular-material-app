@@ -1,0 +1,70 @@
+$search-background-color: rgba(48, 52, 65, 0.05) !default;
+$search-background-color-hover: rgba(48, 52, 65, 0.1) !default;
+$search-placeholder: rgba(0, 0, 0, 0.87) !default;
+
+.search-main {
+  position: relative;
+
+  .search-icon {
+    position: absolute;
+    font-size: 24px;
+    top: 6px;
+    left: 15px;
+    transition: color 0.2s ease;
+  }
+
+  input.search-input {
+    display: block;
+    padding: 8px 8px 8px 48px;
+    //box-shadow: 0 1px 1.5px rgba(0, 0, 0, 0.06), 0 1px 1px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+    height: 36px;
+    transition: all 0.2s ease;
+    border: none;
+    font-size: 16px;
+    appearance: textfield;
+    font-weight: 300;
+    outline: none;
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: currentColor;
+    //background: $search-background-color;
+    width: 100%;
+
+    &:hover {
+      background: $search-background-color-hover;
+    }
+
+    &::-webkit-input-placeholder {  color: currentColor;  }
+    &:-moz-placeholder {  opacity: 1;  color: currentColor;  }
+    &::-moz-placeholder {  opacity: 1;  color: currentColor;  }
+    &:-ms-input-placeholder {  color: currentColor;  }
+  }
+
+  &.focus {
+    .search-icon {
+      color: rgba(0, 0, 0, 0.87);
+    }
+
+    input.search-input {
+      background: white;
+      background: $search-background-color-hover;
+
+      &::-webkit-input-placeholder {
+        color: $search-placeholder;
+      }
+      &:-moz-placeholder {
+        opacity: 1;
+        color: $search-placeholder;
+      }
+      &::-moz-placeholder {
+        opacity: 1;
+        color: $search-placeholder;
+      }
+      &:-ms-input-placeholder {
+        color: $search-placeholder;
+      }
+    }
+  }
+
+}

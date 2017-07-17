@@ -6,8 +6,8 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./date-picker.component.scss']
 })
 export class DatePickerComponent {
-  private _mode: 'portrait' | 'landscape' = 'portrait';
-  private landscape: boolean = false;
+  _mode: 'portrait' | 'landscape' = 'portrait';
+  landscape: boolean = false;
 
   @Input()
   set mode(value) {

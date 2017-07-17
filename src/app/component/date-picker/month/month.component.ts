@@ -8,7 +8,7 @@ import * as dateUtils from '../dateUtils';
 })
 export class MonthComponent {
 
-  private weeksArray;
+  weeksArray;
 
   @Output() selected = new EventEmitter();
 

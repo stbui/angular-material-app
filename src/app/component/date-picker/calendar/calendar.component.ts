@@ -11,7 +11,7 @@ import * as dateUtils from '../dateUtils';
 })
 export class CalendarComponent {
 
-  private _currentlySelected = [];
+  _currentlySelected = [];
 
   private _mode;
   @Input()

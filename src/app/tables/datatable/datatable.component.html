@@ -1,6 +1,33 @@
-<div class="datatable-main">
-  <ngx-datatable class="material"
-                 [rows]="rows"
-                 [columns]="columns">
-  </ngx-datatable>
+<div fxLayout="row" fxLayoutAlign="start center" class="table-tools">
+  <span class="show-result">已选 {{ checkednum }} 条</span>
+  <button md-raised-button class="table-tools-btn">
+    <md-icon>edit</md-icon>
+    <span>编辑</span></button>
+  <button md-raised-button class="table-tools-btn" (click)="onMultiDelete()">
+    <md-icon>delete</md-icon>
+    <span>删除</span></button>
+  <span fxFlex></span>
+  <stbui-search (onSearch)="onSearch($event)"></stbui-search>
 </div>
+
+<table class="table table-bordered table-striped table-hover">
+  <tr>
+    <th>
+      <md-checkbox [(ngModel)]="checkedAll" (change)="onCheckedAllChange($event)"></md-checkbox>
+    </th>
+    <th *ngFor="let column of columns">{{ column }}</th>
+  </tr>
+  <tr *ngFor="let row of tableData;let i = index;">
+    <td>
+      <md-checkbox [checked]="checkedAll" (change)="onCheckedChange($event)" [id]="row.id"></md-checkbox>
+    </td>
+    <td>{{ row.name }}</td>
+    <td>{{ row.id }}</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+</table>
+
+<stbui-pagination [total]="pageTotal" (onPage)="onPage($event)"></stbui-pagination>

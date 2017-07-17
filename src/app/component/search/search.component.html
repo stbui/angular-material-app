@@ -1,0 +1,10 @@
+<div fxLayout="row" class="search-main">
+  <md-icon class="search-icon">search</md-icon>
+  <input type="search"
+         autocomplete="off"
+         spellcheck="false"
+         (keyup.enter)="enterUp()"
+         [(ngModel)]="inputValue"
+         class="search-input"
+         [placeholder]="placeholder">
+</div>

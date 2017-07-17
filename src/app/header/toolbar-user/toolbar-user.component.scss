@@ -7,8 +7,10 @@
   position: relative;
 
   .toolbar-user-btn {
+    display: flex;
+    justify-content: center;
     height: 100%;
-    min-width: 72px;
+    min-width: 160px;
 
     .avatar {
       width: 40px;

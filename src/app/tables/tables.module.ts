@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MaterialModule } from '@angular/material';
+import { MdCheckboxModule, MdButtonModule, MdIconModule } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { FormsModule } from '@angular/forms';
 
 import { TablesComponent } from './tables.component';
 // import { DataTableModule } from 'angular2-datatable';
@@ -9,21 +10,29 @@ import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 import { RoutingModule } from './tables-routing.module';
 import { StaticComponent } from './static/static.component';
 import { DatatableComponent } from './datatable/datatable.component';
+import { DataTableService } from './datatable/datatable.service';
+import { ComponentModule } from '../component/component.module';
 
 
 @NgModule({
   imports: [
     CommonModule,
     FlexLayoutModule,
-    MaterialModule,
-    // DataTableModule,
+    MdCheckboxModule,
+    MdButtonModule,
+    MdIconModule,
+    FormsModule,
     NgxDatatableModule,
-    RoutingModule
+    RoutingModule,
+    ComponentModule
   ],
   declarations: [
     TablesComponent,
     StaticComponent,
     DatatableComponent
+  ],
+  providers: [
+    { provide: 'dataTableService', useClass: DataTableService }
   ]
 })
 export class TablesModule { }

@@ -15,9 +15,9 @@ export class AmapComponent {
   @Input() lat: number = 116.397428;
   @Input() lng: number = 39.90923;
 
-  private zoom:number = 11;
-  private id;
-  private isLoaded = false;
+  zoom:number = 11;
+  id;
+  isLoaded = false;
 
   constructor() {
     this.setMapId();

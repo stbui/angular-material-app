@@ -9,11 +9,8 @@
 }
 
 .badge {
-  background-color: transparent;
   position: absolute;
   top: 6px;
-  right: 3px;
-  color: inherit;
 }
 
 .search-btn,
@@ -21,5 +18,5 @@
 .fullscreen-btn,
 .more-btn {
   height: 100%;
-  min-width: 50px;
+  min-width: 70px;
 }

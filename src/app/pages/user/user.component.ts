@@ -9,7 +9,7 @@ export class UserComponent implements OnInit {
 
   users;
 
-  private checked = false;
+  checked = false;
 
   constructor() { }
 

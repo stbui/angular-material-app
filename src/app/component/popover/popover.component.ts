@@ -36,9 +36,9 @@ export class PopoverComponent {
     }
   }
 
-  private _popoverOpen:boolean = false;
+  _popoverOpen:boolean = false;
 
-  public trigger;
+  trigger;
 
   getAnchorPosition(el) {
     const rect = el.getBoundingClientRect();

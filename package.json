@@ -4,9 +4,10 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --extract-css",
-    "build": "ng build --extract-css",
-    "min":"ng build --aot --extract-css --environment=prod",
+    "start": "ng serve",
+    "build": "ng build --environment=prod --extract-css --base-href=https://stbui.github.io/angular2-material2-bootstrap4-admin-app/",
+    "min":"ng build --environment=prod --extract-css --aot",
+    "site": "ngh",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"

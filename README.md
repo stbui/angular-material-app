@@ -12,10 +12,10 @@
 
 ### 平台环境
 
-[![Angular](https://img.shields.io/badge/Angular%202-4.0.0-brightgreen.svg?style=flat-square)](https://github.com/angular/angular)
+[![Angular](https://img.shields.io/badge/Angular%204-4.0.0-brightgreen.svg?style=flat-square)](https://github.com/angular/angular)
 [![Angular-cli](https://img.shields.io/badge/Angular.cli-1.1.2-brightgreen.svg?style=square)](https://github.com/angular/angular-cli)
-[![Material 2](https://img.shields.io/badge/Material%202-2.0.0.beta.2-brightgreen.svg?style=square)](https://github.com/angular/material2)
-[![Flex-Layout](https://img.shields.io/badge/Flex.Layout-2.0.0.beta.7-brightgreen.svg?style=square)](https://github.com/angular/flex-layout)
+[![Material 2](https://img.shields.io/badge/Material%202-2.0.0.beta.7-brightgreen.svg?style=square)](https://github.com/angular/material2)
+[![Flex-Layout](https://img.shields.io/badge/Flex.Layout-2.0.0.beta.8-brightgreen.svg?style=square)](https://github.com/angular/flex-layout)
 
 
 ### 基本功能
@@ -35,7 +35,7 @@
 
 ### 技术栈
 
-[![Angular 4](https://img.shields.io/badge/Angular%202-4.0.0-brightgreen.svg?style=flat-square)](https://github.com/angular/angular)
+[![Angular](https://img.shields.io/badge/Angular%204-4.0.0-brightgreen.svg?style=flat-square)](https://github.com/angular/angular)
 [![Angular Mateiral 2](https://img.shields.io/badge/Mateiral%202-latest-brightgreen.svg?style=square)](https://github.com/angular/material2)
 [![Scss](https://img.shields.io/badge/Scss-latest-brightgreen.svg?style=flat-square)](https://github.com/sass/sass)
 [![Typescript](https://img.shields.io/badge/Typescript-latest-brightgreen.svg?style=flat-square)](https://github.com/Microsoft/TypeScript)
@@ -47,13 +47,8 @@
 ### 使用入门
 
 ```
-npm i -g @angular/cli
 git clone https://github.com/stbui/angular2-material2-bootstrap4-admin-app.git
-```
-
-
-进入项目目录
-```
+cd angular2-material2-bootstrap4-admin-app
 npm install
 npm run start
 ```
@@ -65,7 +60,7 @@ http://127.0.0.1:4200
 ### 发布
 
 ```
-ng build --prod --aot --env=prod
+ng build --prod --aot --env=prod --extract-css
 ```
 
 ### Docker
@@ -99,4 +94,3 @@ docker run --rm --name angular2-material2-admin-app -v "$PWD":/usr/src/app -w /u
 ```
 angular2-perfect-scrollbar material-design-icons ngx-quill normalize.css screenfull @swimlane/ngx-datatable
 ```
-

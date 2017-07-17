@@ -7,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-  private brand: string = "stbui";
-  private year: string = "20170426"
+  brand:string = "stbui";
+  year:string = "20170426";
 
   constructor() {
   }

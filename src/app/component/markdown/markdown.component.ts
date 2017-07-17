@@ -8,9 +8,9 @@ import * as markdown from 'markdown-it';
 })
 export class MarkdownComponent {
 
-  private renderer = markdown();
-  private inputValue: string = '';
-  private _source:string = '';
+  renderer = markdown();
+  inputValue: string = '';
+  _source:string = '';
 
   @Output() onMarkDown = new EventEmitter();
   @Input() width: string = '';
