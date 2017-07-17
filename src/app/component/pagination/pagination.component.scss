@@ -6,10 +6,12 @@ $pagination-padding: 0 8px !default;
 $pagination-margin: 0 8px !default;
 $pagination-border-radius: 2px !default;
 
+:host {
+  display: flex;
+  justify-content: center;
+}
+
 .pagination {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
