@@ -19,6 +19,7 @@ import { PaginationComponent } from './pagination/pagination.component';
 import { PopoverComponent } from './popover/popover.component';
 import { PopoverDirective } from './popover/popover.directive';
 import { SearchComponent } from './search/search.component';
+import { TableComponent } from './table/table.component';
 
 
 @NgModule({
@@ -42,7 +43,8 @@ import { SearchComponent } from './search/search.component';
     MonthComponent,
     PopoverComponent,
     PopoverDirective,
-    SearchComponent
+    SearchComponent,
+    TableComponent
   ],
   exports: [
     DatePickerComponent,
@@ -51,7 +53,8 @@ import { SearchComponent } from './search/search.component';
     MarkdownComponent,
     PopoverComponent,
     PopoverDirective,
-    SearchComponent
+    SearchComponent,
+    TableComponent
   ]
 })
 export class ComponentModule { }

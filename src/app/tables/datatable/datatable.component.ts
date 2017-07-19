@@ -1,4 +1,4 @@
-import {Component, OnInit, Inject} from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 
 @Component({
   selector: 'app-datatable',
@@ -18,11 +18,55 @@ export class DatatableComponent implements OnInit {
 
   tableData;
 
+
+  //
+  columnsDemo;
+
   constructor(@Inject('dataTableService') private service) {
     this.service.select();
 
     this.pageTotal = Math.ceil(this.service.count() / this.pageSize);
     this.renderTable();
+
+
+    this.columnsDemo = {
+      columns: [
+        {
+          title: '姓名',
+          key: 'name'
+        },
+        {
+          title: '年龄',
+          key: 'age'
+        },
+        {
+          title: '地址',
+          key: 'address'
+        }
+      ],
+      data: [
+        {
+          name: '王小明',
+          age: 18,
+          address: '北京市朝阳区芍药居'
+        },
+        {
+          name: '张小刚',
+          age: 25,
+          address: '北京市海淀区西二旗'
+        },
+        {
+          name: '李小红',
+          age: 30,
+          address: '上海市浦东新区世纪大道'
+        },
+        {
+          name: '周小伟',
+          age: 26,
+          address: '深圳市南山区深南大道'
+        }
+      ]
+    };
   }
 
   ngOnInit() {
