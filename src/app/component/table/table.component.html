@@ -46,7 +46,6 @@
 
 
 <div class="table-wrapper" style="width: 690px;" *ngIf="width">
-  <div class="table table-border">
     <div class="table-header">
       <table class="table" cellspacing="0" cellpadding="0" border="0" style="width: 820px;">
         <colgroup>
@@ -120,14 +119,13 @@
             <col width="120">
           </colgroup>
           <tbody class="table-tbody">
-            <tr *ngFor="let d of data">
-              <td *ngFor="let column of columns" [class.table-hidden]="!column.fixed">
-                {{ d[column.key] }}
-              </td>
-            </tr>
+          <tr *ngFor="let d of data">
+            <td *ngFor="let column of columns" [class.table-hidden]="!column.fixed">
+              {{ d[column.key] }}
+            </td>
+          </tr>
           </tbody>
         </table>
       </div>
     </div>
-  </div>
 </div>
