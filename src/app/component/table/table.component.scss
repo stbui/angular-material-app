@@ -1,0 +1,34 @@
+.table-wrapper {
+  position: relative;
+  border: 1px solid #dddee1;
+  border-bottom: 0;
+  border-right: 0;
+}
+
+.table-header {
+  overflow: hidden;
+}
+.table-body {
+  overflow: auto;
+}
+.table-fixed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-shadow: 2px 0 6px -2px rgba(0,0,0,.2);
+}
+.table-fixed-header {
+  overflow: hidden;
+}
+.table-fixed-body {
+  overflow: hidden;
+  position: relative;
+  z-index: 3;
+}
+.table-hidden {
+  visibility: hidden;
+}
+
+table {
+  table-layout: fixed;
+}

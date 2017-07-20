@@ -1,5 +1,5 @@
 <table class="table" [class.table-hover]="disabledHover" [class.table-striped]="stripe"
-       [class.table-condensed]="tableCondensed" [class.table-bordered]="border" *ngIf="!height">
+       [class.table-condensed]="tableCondensed" [class.table-bordered]="border" *ngIf="!height && !width">
   <thead>
   <tr>
     <th *ngFor="let column of columns">
@@ -20,7 +20,6 @@
   <div>
     <table class="table" [class.table-hover]="disabledHover" [class.table-striped]="stripe"
            [class.table-condensed]="tableCondensed" [class.table-bordered]="border" style="width: 978px">
-      <colgroup><col width="223"><col width="142"><col width="592"></colgroup>
       <thead>
       <tr>
         <th *ngFor="let column of columns">{{ column.title }}</th>
@@ -44,3 +43,91 @@
 <ng-template #elseSelection>
   <md-checkbox [checked]="isSelectAll" (change)="onCheckedChange($event)"></md-checkbox>
 </ng-template>
+
+
+<div class="table-wrapper" style="width: 690px;" *ngIf="width">
+  <div class="table table-border">
+    <div class="table-header">
+      <table class="table" cellspacing="0" cellpadding="0" border="0" style="width: 820px;">
+        <colgroup>
+          <col width="100">
+          <col width="100">
+          <col width="100">
+          <col width="100">
+          <col width="200">
+          <col width="100">
+          <col width="120">
+        </colgroup>
+        <thead>
+        <tr>
+          <th *ngFor="let column of columns" [class.table-hidden]="column.fixed">
+            {{ column.title }}
+          </th>
+        </tr>
+        </thead>
+      </table>
+    </div>
+    <div class="table-body">
+      <table class="table" cellspacing="0" cellpadding="0" border="0" style="width: 820px;">
+        <colgroup>
+          <col width="100">
+          <col width="100">
+          <col width="100">
+          <col width="100">
+          <col width="200">
+          <col width="100">
+          <col width="120">
+        </colgroup>
+        <tbody class="table-tbody">
+        <tr *ngFor="let d of data">
+          <td *ngFor="let column of columns" [class.table-hidden]="column.fixed">
+            {{ d[column.key] }}
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="table-fixed" style="width: 100px;">
+      <div class="table-fixed-header">
+        <table class="table" cellspacing="0" cellpadding="0" border="0" style="width: 100px;">
+          <colgroup>
+            <col width="100">
+            <col width="100">
+            <col width="100">
+            <col width="100">
+            <col width="200">
+            <col width="100">
+            <col width="120">
+          </colgroup>
+          <thead>
+          <tr>
+            <th *ngFor="let column of columns" [class.table-hidden]="!column.fixed">
+              {{ column.title }}
+            </th>
+          </tr>
+          </thead>
+        </table>
+      </div>
+      <div class="table-fixed-body">
+        <table class="table" cellspacing="0" cellpadding="0" border="0" style="width: 100px;">
+          <colgroup>
+            <col width="100">
+            <col width="100">
+            <col width="100">
+            <col width="100">
+            <col width="200">
+            <col width="100">
+            <col width="120">
+          </colgroup>
+          <tbody class="table-tbody">
+            <tr *ngFor="let d of data">
+              <td *ngFor="let column of columns" [class.table-hidden]="!column.fixed">
+                {{ d[column.key] }}
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
