@@ -7,7 +7,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 })
 export class TableComponent {
 
-  @Input() data;
+  @Input() data = [];
   // 表格列的配置描述
   @Input() columns = [];
   // 是否显示间隔斑马纹
@@ -23,7 +23,7 @@ export class TableComponent {
   // 禁用鼠标悬停时的高亮
   @Input() disabledHover: boolean = true;
   // 是否支持高亮选中的行，即单选
-  @Input() highlightRow:boolean = false;
+  @Input() highlightRow: boolean = false;
 
   @Output() onCurrentChange = new EventEmitter();
   @Output() onSelect = new EventEmitter();
@@ -37,27 +37,27 @@ export class TableComponent {
 
   tableCondensed = false;
   tableHover = true;
+  isSelectAll = false;
 
-  rows = [];
 
   constructor() {
 
-    const d = [
-      {id: '1', name: "李彦龙"},
-      {id: '2', name: "郁梦寒"},
-      {id: '3', name: "亥夏真"},
-      {id: '4', name: "汗水凡"},
-      {id: '5', name: "歧骏桀"},
-      {id: '6', name: "潜云溪"},
-      {id: '7', name: "无夜春"},
-      {id: '6', name: "鄂叶彤"},
-      {id: '8', name: "鲁文彬"},
-      {id: '9', name: "寻涵阳"},
-      {id: '10', name: "董晨风"},
-      {id: '11', name: "蒙白梅"},
-      {id: '12', name: "纪沛春"}
-    ];
-    this.rows = d;
+  }
+
+  styles() {
+    return {
+      height: `${this.height}px`,
+      'overflow-y': 'scroll'
+    }
+  }
+
+  onCheckedChange() {
+    const status = !this.isSelectAll;
+
+    this.isSelectAll = status;
+  }
+
+  selectAll(status) {
 
   }
 

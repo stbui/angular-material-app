@@ -1,22 +1,46 @@
-<table class="table" [class.table-hover]="disabledHover" [class.table-striped]="stripe" [class.table-condensed]="tableCondensed" [class.table-bordered]="border">
+<table class="table" [class.table-hover]="disabledHover" [class.table-striped]="stripe"
+       [class.table-condensed]="tableCondensed" [class.table-bordered]="border" *ngIf="!height">
   <thead>
   <tr>
-    <th></th>
-    <th>APP</th>
-    <th>领域</th>
-    <th>开发商</th>
-    <th>活跃人数(万)</th>
-    <th>环比增幅(%)</th>
+    <th *ngFor="let column of columns">
+      <span *ngIf="!column.type && column.type !== 'selection'; else elseSelection">{{ column.title }}</span>
+    </th>
   </tr>
   </thead>
   <tbody>
-  <tr *ngFor="let row of rows">
-    <td>1</td>
-    <td>2</td>
-    <td>3</td>
-    <td>4</td>
-    <td>{{ row.activeNums }}</td>
-    <td>{{ row.activeNumsRatio }}</td>
+  <tr *ngFor="let d of data">
+    <td *ngFor="let column of columns">
+      <span *ngIf="!column.type && column.type !== 'selection'; else elseSelection">{{ d[column.key] }}</span>
+    </td>
   </tr>
   </tbody>
 </table>
+
+<div *ngIf="height">
+  <div>
+    <table class="table" [class.table-hover]="disabledHover" [class.table-striped]="stripe"
+           [class.table-condensed]="tableCondensed" [class.table-bordered]="border" style="width: 978px">
+      <colgroup><col width="223"><col width="142"><col width="592"></colgroup>
+      <thead>
+      <tr>
+        <th *ngFor="let column of columns">{{ column.title }}</th>
+      </tr>
+      </thead>
+    </table>
+  </div>
+  <div [ngStyle]="styles()">
+    <table class="table" [class.table-hover]="disabledHover" [class.table-striped]="stripe"
+           [class.table-condensed]="tableCondensed" [class.table-bordered]="border" style="width: 961px">
+      <tbody>
+      <tr *ngFor="let d of data">
+        <td *ngFor="let column of columns">{{ d[column.key] }}</td>
+      </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<ng-template #elseSelection>
+  <md-checkbox [checked]="isSelectAll" (change)="onCheckedChange($event)"></md-checkbox>
+</ng-template>
