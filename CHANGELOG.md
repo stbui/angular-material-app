@@ -1,5 +1,18 @@
 # Changelog
 
+## 2017.07.20
+
+### add
+- table
+- angular-cli -> 1.2.1
+
+
+## 2017.07.14
+
+### updated
+- 打包抽出css文件
+
+
 ## 2017.06.22
 
 ### updated

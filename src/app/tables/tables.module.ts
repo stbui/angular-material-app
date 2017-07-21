@@ -5,7 +5,6 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule } from '@angular/forms';
 
 import { TablesComponent } from './tables.component';
-import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 import { RoutingModule } from './tables-routing.module';
 import { StaticComponent } from './static/static.component';
 import { DatatableComponent } from './datatable/datatable.component';
@@ -21,7 +20,6 @@ import { ComponentModule } from '../component/component.module';
     MdButtonModule,
     MdIconModule,
     FormsModule,
-    NgxDatatableModule,
     RoutingModule,
     ComponentModule
   ],

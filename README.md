@@ -13,7 +13,7 @@
 ### 平台环境
 
 [![Angular](https://img.shields.io/badge/Angular%204-4.0.0-brightgreen.svg?style=flat-square)](https://github.com/angular/angular)
-[![Angular-cli](https://img.shields.io/badge/Angular.cli-1.1.2-brightgreen.svg?style=square)](https://github.com/angular/angular-cli)
+[![Angular-cli](https://img.shields.io/badge/Angular.cli-1.2.1-brightgreen.svg?style=square)](https://github.com/angular/angular-cli)
 [![Material 2](https://img.shields.io/badge/Material%202-2.0.0.beta.7-brightgreen.svg?style=square)](https://github.com/angular/material2)
 [![Flex-Layout](https://img.shields.io/badge/Flex.Layout-2.0.0.beta.8-brightgreen.svg?style=square)](https://github.com/angular/flex-layout)
 
@@ -83,6 +83,8 @@ docker run --rm --name angular2-material2-admin-app -v "$PWD":/usr/src/app -w /u
 - [x] 高德地图
 - [x] echarts
 - [x] Date Pick
+- [ ] popover
+- [ ] Data Table
 - [ ] 集成 七牛云
 - [ ] 集成 阿里云
 - [ ] ckeditor
@@ -92,5 +94,5 @@ docker run --rm --name angular2-material2-admin-app -v "$PWD":/usr/src/app -w /u
 ### 依赖模块
 
 ```
-angular2-perfect-scrollbar material-design-icons ngx-quill normalize.css screenfull @swimlane/ngx-datatable
+angular2-perfect-scrollbar material-design-icons ngx-quill normalize.css screenfull
 ```
