@@ -1,131 +1,74 @@
-<table class="table" [class.table-hover]="disabledHover" [class.table-striped]="stripe"
-       [class.table-condensed]="tableCondensed" [class.table-bordered]="border" *ngIf="!height && !width">
-  <thead>
-  <tr>
-    <th *ngFor="let column of columns">
-      <span *ngIf="!column.type && column.type !== 'selection'; else elseSelection">{{ column.title }}</span>
-    </th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr *ngFor="let d of data">
-    <td *ngFor="let column of columns">
-      <span *ngIf="!column.type && column.type !== 'selection'; else elseSelection">{{ d[column.key] }}</span>
-    </td>
-  </tr>
-  </tbody>
-</table>
-
-<div *ngIf="height">
-  <div>
-    <table class="table" [class.table-hover]="disabledHover" [class.table-striped]="stripe"
-           [class.table-condensed]="tableCondensed" [class.table-bordered]="border" style="width: 978px">
-      <thead>
-      <tr>
-        <th *ngFor="let column of columns">{{ column.title }}</th>
-      </tr>
-      </thead>
-    </table>
-  </div>
-  <div [ngStyle]="styles()">
-    <table class="table" [class.table-hover]="disabledHover" [class.table-striped]="stripe"
-           [class.table-condensed]="tableCondensed" [class.table-bordered]="border" style="width: 961px">
-      <tbody>
-      <tr *ngFor="let d of data">
-        <td *ngFor="let column of columns">{{ d[column.key] }}</td>
-      </tr>
-      </tbody>
-    </table>
-
-  </div>
-</div>
-
-<ng-template #elseSelection>
-  <md-checkbox [checked]="isSelectAll" (change)="onCheckedChange($event)"></md-checkbox>
-</ng-template>
-
-
-<div class="table-wrapper" style="width: 690px;" *ngIf="width">
+<!--<div class="table-wrapper">
+  <div [class.table-hover]="disabledHover" [class.table-striped]="stripe">
     <div class="table-header">
-      <table class="table" cellspacing="0" cellpadding="0" border="0" style="width: 820px;">
-        <colgroup>
-          <col width="100">
-          <col width="100">
-          <col width="100">
-          <col width="100">
-          <col width="200">
-          <col width="100">
-          <col width="120">
-        </colgroup>
-        <thead>
-        <tr>
-          <th *ngFor="let column of columns" [class.table-hidden]="column.fixed">
-            {{ column.title }}
-          </th>
-        </tr>
-        </thead>
-      </table>
+      <stbui-table-head [columns]="columns" [data]="data" [columnsWidth]="columnsWidth"></stbui-table-head>
     </div>
-    <div class="table-body">
-      <table class="table" cellspacing="0" cellpadding="0" border="0" style="width: 820px;">
-        <colgroup>
-          <col width="100">
-          <col width="100">
-          <col width="100">
-          <col width="100">
-          <col width="200">
-          <col width="100">
-          <col width="120">
-        </colgroup>
-        <tbody class="table-tbody">
-        <tr *ngFor="let d of data">
-          <td *ngFor="let column of columns" [class.table-hidden]="column.fixed">
-            {{ d[column.key] }}
-          </td>
-        </tr>
-        </tbody>
-      </table>
+    <div class="table-body" [ngStyle]="styles()" #tableBody>
+      <stbui-table-body
+        [columns]="columns"
+        [data]="data"
+        [columnsWidth]="columnsWidth"
+        [border]="border"
+        [stripe]="stripe"
+        [disabledHover]="disabledHover"
+      ></stbui-table-body>
     </div>
-    <div class="table-fixed" style="width: 100px;">
-      <div class="table-fixed-header">
-        <table class="table" cellspacing="0" cellpadding="0" border="0" style="width: 100px;">
-          <colgroup>
-            <col width="100">
-            <col width="100">
-            <col width="100">
-            <col width="100">
-            <col width="200">
-            <col width="100">
-            <col width="120">
-          </colgroup>
-          <thead>
-          <tr>
-            <th *ngFor="let column of columns" [class.table-hidden]="!column.fixed">
-              {{ column.title }}
-            </th>
-          </tr>
-          </thead>
-        </table>
+
+    <div class="table-fixed" *ngIf="isLeftFixed()" style="width: 174px">
+      <div class="table-header">
+        <stbui-table-head
+          [columns]="columns"
+          [data]="data"
+          [columnsWidth]="columnsWidth"
+          fixed="left"
+        ></stbui-table-head>
       </div>
-      <div class="table-fixed-body">
-        <table class="table" cellspacing="0" cellpadding="0" border="0" style="width: 100px;">
-          <colgroup>
-            <col width="100">
-            <col width="100">
-            <col width="100">
-            <col width="100">
-            <col width="200">
-            <col width="100">
-            <col width="120">
-          </colgroup>
-          <tbody class="table-tbody">
-          <tr *ngFor="let d of data">
-            <td *ngFor="let column of columns" [class.table-hidden]="!column.fixed">
-              {{ d[column.key] }}
-            </td>
-          </tr>
-          </tbody>
-        </table>
+      <div class="table-body">
+        <stbui-table-body
+          [columns]="columns"
+          [data]="data"
+          [columnsWidth]="columnsWidth"
+          fixed="left"
+        ></stbui-table-body>
       </div>
     </div>
+  </div>
+</div>-->
+
+
+<div [ngClass]="[prefixCls+'table-wrapper']" [ngStyle]="{'width.px': width}">
+  <div [ngClass]="[prefixCls+'table',prefixCls+'table-border']">
+    <div [ngClass]="[prefixCls+'table-header']">
+      <stbui-table-head
+        [columns]="columns"
+        [data]="data"
+        [columnsWidth]="columnsWidth"
+      ></stbui-table-head>
+    </div>
+    <div [ngClass]="[prefixCls+'table-body']" [ngStyle]="{'height.px': height}">
+      <stbui-table-body
+        [columns]="columns"
+        [data]="data"
+        [columnsWidth]="columnsWidth"
+      ></stbui-table-body>
+    </div>
+    <div [ngClass]="[prefixCls+'table-fixed']" *ngIf="isLeftFixed()" style="width: 100px;">
+      <div [ngClass]="[prefixCls+'table-fixed-header']">
+        <stbui-table-head
+          [columns]="columns"
+          [data]="data"
+          [columnsWidth]="columnsWidth"
+          fixed="left"
+        ></stbui-table-head>
+      </div>
+      <div [ngClass]="[prefixCls+'table-fixed-body']">
+        <stbui-table-body
+          [columns]="columns"
+          [data]="data"
+          [columnsWidth]="columnsWidth"
+          fixed="left"
+        ></stbui-table-body>
+      </div>
+    </div>
+  </div>
 </div>

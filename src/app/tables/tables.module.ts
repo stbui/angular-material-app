@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MdCheckboxModule, MdButtonModule, MdIconModule } from '@angular/material';
+import { MdCheckboxModule, MdButtonModule, MdIconModule, MdCardModule } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule } from '@angular/forms';
 
@@ -19,6 +19,7 @@ import { ComponentModule } from '../component/component.module';
     MdCheckboxModule,
     MdButtonModule,
     MdIconModule,
+    MdCardModule,
     FormsModule,
     RoutingModule,
     ComponentModule

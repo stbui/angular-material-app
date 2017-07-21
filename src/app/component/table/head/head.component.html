@@ -1,20 +1,18 @@
-<div class="table-header">
-  <table class="table" cellspacing="0" cellpadding="0" border="0" style="width: 820px;">
-    <colgroup>
-      <col width="100">
-      <col width="100">
-      <col width="100">
-      <col width="100">
-      <col width="200">
-      <col width="100">
-      <col width="120">
-    </colgroup>
-    <thead>
-    <tr>
-      <th *ngFor="let column of columns" [class.table-hidden]="column.fixed">
-        {{ column.title }}
-      </th>
-    </tr>
-    </thead>
-  </table>
-</div>
+<table class="table">
+  <colgroup>
+    <col width="100">
+    <col width="100">
+    <col width="100">
+    <col width="100">
+    <col width="200">
+    <col width="100">
+    <col width="120">
+  </colgroup>
+  <thead>
+  <tr>
+    <th *ngFor="let column of columns" [class.stbui-table-hidden]="column.fixed !== 'left' && fixed === 'left'">
+      {{ column.title }}
+    </th>
+  </tr>
+  </thead>
+</table>

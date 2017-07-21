@@ -40,6 +40,39 @@ export class DatatableComponent implements OnInit {
           title: '姓名',
           key: 'name',
           width: 100,
+          // fixed: 'left'
+        },
+        {
+          title: '年龄',
+          key: 'age',
+          width: 100
+        },
+        {
+          title: '省份',
+          key: 'province',
+          width: 100
+        },
+        {
+          title: '市区',
+          key: 'city',
+          width: 100
+        },
+        {
+          title: '地址',
+          key: 'address',
+          width: 200
+        },
+        {
+          title: '邮编',
+          key: 'zip',
+          width: 100
+        }
+      ],
+      columns2: [
+        {
+          title: '姓名',
+          key: 'name',
+          width: 100,
           fixed: 'left'
         },
         {
@@ -83,6 +116,22 @@ export class DatatableComponent implements OnInit {
           address: '北京市海淀区西二旗',
           province: '北京市',
           city: '海淀区',
+          zip: 100000
+        },
+        {
+          name: '李小红',
+          age: 30,
+          address: '上海市浦东新区世纪大道',
+          province: '上海市',
+          city: '浦东新区',
+          zip: 100000
+        },
+        {
+          name: '周小伟',
+          age: 26,
+          address: '深圳市南山区深南大道',
+          province: '广东',
+          city: '南山区',
           zip: 100000
         },
         {

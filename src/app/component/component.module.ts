@@ -19,7 +19,10 @@ import { PaginationComponent } from './pagination/pagination.component';
 import { PopoverComponent } from './popover/popover.component';
 import { PopoverDirective } from './popover/popover.directive';
 import { SearchComponent } from './search/search.component';
+
 import { TableComponent } from './table/table.component';
+import { HeadComponent } from './table/head/head.component';
+import { BodyComponent } from './table/body/body.component';
 
 
 @NgModule({
@@ -44,7 +47,9 @@ import { TableComponent } from './table/table.component';
     PopoverComponent,
     PopoverDirective,
     SearchComponent,
-    TableComponent
+    TableComponent,
+    HeadComponent,
+    BodyComponent
   ],
   exports: [
     DatePickerComponent,

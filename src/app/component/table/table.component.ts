@@ -1,4 +1,14 @@
-import { Component, Input, Output, EventEmitter, ViewEncapsulation } from '@angular/core';
+import {
+  Component,
+  Input,
+  Output,
+  EventEmitter,
+  ElementRef,
+  ViewChild,
+  Renderer2,
+  OnInit,
+  ViewEncapsulation
+} from '@angular/core';
 
 @Component({
   selector: 'stbui-table',
@@ -6,7 +16,7 @@ import { Component, Input, Output, EventEmitter, ViewEncapsulation } from '@angu
   styleUrls: ['./table.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class TableComponent {
+export class TableComponent implements OnInit{
 
   @Input() data = [];
   // 表格列的配置描述
@@ -36,19 +46,52 @@ export class TableComponent {
   @Output() onRowDbClick = new EventEmitter();
   @Output() onExpand = new EventEmitter();
 
+  @ViewChild('tableBody') tableBody: ElementRef;
+
   tableCondensed = false;
   tableHover = true;
   isSelectAll = false;
 
+  columnsWidth = [];
 
-  constructor() {
+  prefixCls = 'stbui-';
 
+
+  constructor(private renderer: Renderer2) {
+
+  }
+
+  ngOnInit() {
+
+  }
+
+  ngAfterViewInit() {
+    // let columnsWidth = [];
+    // if (this.data.length) {
+    //   const nativeElement = this.tableBody.nativeElement;
+    //   const table = nativeElement.querySelectorAll('table');
+    //   const tr = table[0].querySelectorAll('tbody tr');
+    //   const td = tr[0].querySelectorAll('td');
+    //
+    //   for (let i = 0; i < td.length; i++) {
+    //     const width = document.defaultView.getComputedStyle(td[i], '').width;
+    //     columnsWidth.push({
+    //       width: parseInt(width)
+    //     });
+    //   }
+    //   this.columnsWidth = columnsWidth;
+    // }
   }
 
   styles() {
     return {
-      height: `${this.height}px`,
-      'overflow-y': 'scroll'
+      width: `${this.width}px`
+    }
+  }
+
+  bodyStyle() {
+    return {
+      height: `${this.height}px`
     }
   }
 
@@ -60,6 +103,14 @@ export class TableComponent {
 
   selectAll(status) {
 
+  }
+
+  isLeftFixed() {
+    return this.columns.some(col => col.fixed && col.fixed === 'left');
+  }
+
+  isRightFixed() {
+    return this.columns.some(col => col.fixed && col.fixed === 'right');
   }
 
 }
