@@ -1,9 +1,10 @@
-<div [ngClass]="[prefixCls+'table-wrapper']" [ngStyle]="{'width.px': width}" #table>
+<div [ngClass]="[prefixCls+'table-wrapper']" [ngStyle]="styles()" #table>
   <div [ngClass]="[prefixCls+'table',prefixCls+'table-border']">
     <div [ngClass]="[prefixCls+'table-header']" #header>
       <stbui-table-head
         [columns]="cloneColumns"
         [data]="data"
+        [objData]="objData"
         [styleObject]="tableStyle()"
         [columnsWidth]="columnsWidth"
       ></stbui-table-head>
@@ -12,6 +13,7 @@
       <stbui-table-body
         [columns]="cloneColumns"
         [data]="data"
+        [objData]="objData"
         [styleObject]="tableStyle()"
         [columnsWidth]="columnsWidth"
       ></stbui-table-body>
@@ -22,6 +24,8 @@
         <stbui-table-head
           [columns]="leftFixedColumns()"
           [data]="data"
+          [objData]="objData"
+          [styleObject]="fixedTableStyle()"
           [columnsWidth]="columnsWidth"
           fixed="left"
         ></stbui-table-head>
@@ -30,6 +34,8 @@
         <stbui-table-body
           [columns]="leftFixedColumns()"
           [data]="data"
+          [objData]="objData"
+          [styleObject]="fixedTableStyle()"
           [columnsWidth]="columnsWidth"
           fixed="left"
         ></stbui-table-body>
@@ -41,6 +47,8 @@
         <stbui-table-head
           [columns]="rightFixedColumns()"
           [data]="data"
+          [objData]="objData"
+          [styleObject]="fixedRightTableStyle()"
           [columnsWidth]="columnsWidth"
           fixed="right"
         ></stbui-table-head>
@@ -49,6 +57,8 @@
         <stbui-table-body
           [columns]="rightFixedColumns()"
           [data]="data"
+          [objData]="objData"
+          [styleObject]="fixedRightTableStyle()"
           [columnsWidth]="columnsWidth"
           fixed="right"
         ></stbui-table-body>

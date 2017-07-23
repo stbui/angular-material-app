@@ -13,6 +13,7 @@ export class BodyComponent {
 
   @Input() fixed;
   @Input() styleObject;
+  @Input() objData;
 
   // 是否显示间隔斑马纹
   @Input() stripe: boolean = false;
@@ -28,7 +29,7 @@ export class BodyComponent {
   }
 
   ngOnInit() {
-   
+
   }
 
   ngAfterViewInit() {
@@ -43,5 +44,28 @@ export class BodyComponent {
     return {
       'stbui-table-hidden': !this.fixed && column.fixed && (column.fixed === 'left' || column.fixed === 'right')
     }
+  }
+
+  rowClasses(_index) {
+    return {
+      'stbui-row-hover': false
+    }
+  }
+
+  handleMouseIn(_index) {
+    // if (this.objData[_index]._isHover) return;
+    // this.objData[_index]._isHover = true;
+  }
+
+  handleMouseOut() {
+
+  }
+
+  clickCurrentRow() {
+
+  }
+
+  dblclickCurrentRow() {
+
   }
 }

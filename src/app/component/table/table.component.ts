@@ -58,6 +58,7 @@ export class TableComponent implements OnInit {
   prefixCls = 'stbui-';
   tableWidth = 0;
   cloneColumns;
+  objData;
   columnKey = 1;
   bodyHeight = 0;
   scrollBarWidth = 0;
@@ -69,10 +70,7 @@ export class TableComponent implements OnInit {
 
   ngOnInit() {
     this.cloneColumns = this.makeColumns();
-
-    const $element = this.table.nativeElement;
-    const width = document.defaultView.getComputedStyle($element, '').width;
-    this.tableWidth = parseInt(width);
+    this.objData = this.makeObjData();
 
     this.columnsWidth = [
       { width: 100 },
@@ -104,8 +102,31 @@ export class TableComponent implements OnInit {
   }
 
   styles() {
+    let style = {};
+    // if (this.height) {
+    //   style['height'] = `${this.height}px`;
+    // }
+
+    if (this.width) {
+      style['width'] = `${this.width}px`;
+    }
+
+    return style;
+  }
+
+  tableStyle() {
+    const allWidth = !this.columns.some(cell => !cell.width);
+
+    if (allWidth) {
+      this.tableWidth = this.columns.map(cell => cell.width).reduce((a, b) => a + b);
+    } else {
+      const $element = this.table.nativeElement;
+      const width = document.defaultView.getComputedStyle($element, '').width;
+      this.tableWidth = parseInt(width);
+    }
+
     return {
-      width: `${this.width}px`
+      width: `${this.tableWidth}px`
     }
   }
 
@@ -115,14 +136,8 @@ export class TableComponent implements OnInit {
     }
   }
 
-  tableStyle() {
-    return {
-      width: `${this.tableWidth}px`
-    }
-  }
-
   fixedHeader() {
-    
+
   }
 
   fixedBodyStyle() {
@@ -230,6 +245,27 @@ export class TableComponent implements OnInit {
     });
 
     return left.concat(center).concat(right);
+  }
+
+  makeObjData() {
+    let data = {};
+    this.data.forEach((row, index) => {
+      const newRow = row;
+      newRow._isHover = false;
+      if (newRow._disabled) {
+        newRow._isDisabled = newRow._disabled;
+      } else {
+        newRow._isDisabled = false;
+      }
+      if (newRow._checked) {
+        newRow._isChecked = newRow._checked;
+      } else {
+        newRow._isChecked = false;
+      }
+     
+      data[index] = newRow;
+    });
+    return data;
   }
 
 }

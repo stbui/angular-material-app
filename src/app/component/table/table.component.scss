@@ -176,11 +176,10 @@ $border-color-split: #e9eaec;
   &-stripe &-body tr:nth-child(2n) td,&-stripe &-fixed-body tr:nth-child(2n) td {
     background-color: #f8f8f9
   }
-
-  //tr&-row-hover td {
-  //  background-color: #ebf7ff
-  //}
-
+ 
+  tr.stbui-row-hover td {
+   background-color: #ebf7ff
+  }
 
   &-large {
     font-size: 14px;

@@ -13,6 +13,7 @@ export class HeadComponent {
 
   @Input() fixed;
   @Input() styleObject;
+  @Input() objData;
 
   constructor() {
     
