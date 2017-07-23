@@ -59,6 +59,7 @@ export class TableComponent implements OnInit {
   tableWidth = 0;
   cloneColumns;
   objData;
+  rebuildData = [];
   columnKey = 1;
   bodyHeight = 0;
   scrollBarWidth = 0;
