@@ -16,7 +16,7 @@
         [columnsWidth]="columnsWidth"
       ></stbui-table-body>
     </div>
-    <div [ngClass]="[prefixCls+'table-fixed']" *ngIf="isLeftFixed()" style="width: 100px;">
+    <div [ngClass]="[prefixCls+'table-fixed']" *ngIf="isLeftFixed()" [ngStyle]="fixedTableStyle()">
       <div [ngClass]="[prefixCls+'table-fixed-header']">
         <stbui-table-head
           [columns]="columns"

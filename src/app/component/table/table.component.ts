@@ -57,6 +57,8 @@ export class TableComponent implements OnInit {
   columnsWidth = [];
   prefixCls = 'stbui-';
   tableWidth = 0;
+  cloneColumns;
+  columnKey = 1;
 
 
   constructor(private element: ElementRef, private renderer: Renderer2) {
@@ -64,6 +66,10 @@ export class TableComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.cloneColumns = this.makeColumns();
+
+    // this.fixedTableStyle();
+
     const $element = this.table.nativeElement;
     const width = document.defaultView.getComputedStyle($element, '').width;
     this.tableWidth = parseInt(width);
@@ -115,6 +121,32 @@ export class TableComponent implements OnInit {
     }
   }
 
+  fixedTableStyle() {
+    let style = {};
+    let width = 0;
+    let leftFixedColumns = this.leftFixedColumns();
+    leftFixedColumns.forEach((col) => {
+      if (col.fixed && col.fixed === 'left') width += col._width;
+    });
+
+    return {
+      width: `${width}px`
+    };
+  }
+
+  leftFixedColumns() {
+    let left = [];
+    let other = [];
+    this.cloneColumns.forEach((col) => {
+      if (col.fixed && col.fixed === 'left') {
+        left.push(col);
+      } else {
+        other.push(col);
+      }
+    });
+    return left.concat(other);
+  }
+
   onCheckedChange() {
     const status = !this.isSelectAll;
 
@@ -138,6 +170,29 @@ export class TableComponent implements OnInit {
       this.header.nativeElement.scrollLeft = event.target.scrollLeft;
     }
 
+  }
+
+  makeColumns() {
+    let columns = this.columns;
+    let left = [];
+    let center = [];
+    let right = [];
+
+    columns.forEach((column, index) => {
+      column._index = index;
+      column._columnKey = this.columnKey++;
+      column._width = column.width ? column.width : '';
+
+      if (column.fixed && column.fixed === 'left') {
+        left.push(column);
+      } else if (column.fixed && column.fixed === 'right') {
+        right.push(column);
+      } else {
+        center.push(column);
+      }
+    });
+
+    return left.concat(center).concat(right);
   }
 
 }
