@@ -1,4 +1,4 @@
-import { Component, Input, Output } from '@angular/core';
+import { Component, Input, Output, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'stbui-table-body',
@@ -12,6 +12,7 @@ export class BodyComponent {
   @Input() columnsWidth;
 
   @Input() fixed;
+  @Input() styleObject;
 
   // 是否显示间隔斑马纹
   @Input() stripe: boolean = false;
@@ -20,7 +21,17 @@ export class BodyComponent {
   // 禁用鼠标悬停时的高亮
   @Input() disabledHover: boolean = true;
 
+  @ViewChild('tbody') tbody: ElementRef;
+
   constructor() {
+
+  }
+
+  ngOnInit() {
+   
+  }
+
+  ngAfterViewInit() {
 
   }
 

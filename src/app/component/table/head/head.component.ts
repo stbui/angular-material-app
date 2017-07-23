@@ -12,6 +12,7 @@ export class HeadComponent {
   @Input() columnsWidth;
 
   @Input() fixed;
+  @Input() styleObject;
 
   constructor() {
   }

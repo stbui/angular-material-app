@@ -16,7 +16,7 @@ import {
   styleUrls: ['./table.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class TableComponent implements OnInit{
+export class TableComponent implements OnInit {
 
   @Input() data = [];
   // 表格列的配置描述
@@ -47,22 +47,36 @@ export class TableComponent implements OnInit{
   @Output() onExpand = new EventEmitter();
 
   @ViewChild('tableBody') tableBody: ElementRef;
+  @ViewChild('header') header: ElementRef;
+  @ViewChild('table') table: ElementRef;
 
   tableCondensed = false;
   tableHover = true;
   isSelectAll = false;
 
   columnsWidth = [];
-
   prefixCls = 'stbui-';
+  tableWidth = 0;
 
 
-  constructor(private renderer: Renderer2) {
+  constructor(private element: ElementRef, private renderer: Renderer2) {
 
   }
 
   ngOnInit() {
+    const $element = this.table.nativeElement;
+    const width = document.defaultView.getComputedStyle($element, '').width;
+    this.tableWidth = parseInt(width);
 
+    this.columnsWidth = [
+      { width: 100 },
+      { width: 100 },
+      { width: 100 },
+      { width: 100 },
+      { width: 200 },
+      { width: 100 },
+      { width: 120 }
+    ]
   }
 
   ngAfterViewInit() {
@@ -95,6 +109,12 @@ export class TableComponent implements OnInit{
     }
   }
 
+  tableStyle() {
+    return {
+      width: `${this.tableWidth}px`
+    }
+  }
+
   onCheckedChange() {
     const status = !this.isSelectAll;
 
@@ -111,6 +131,13 @@ export class TableComponent implements OnInit{
 
   isRightFixed() {
     return this.columns.some(col => col.fixed && col.fixed === 'right');
+  }
+
+  handleBodyScroll(event) {
+    if (this.isLeftFixed) {
+      this.header.nativeElement.scrollLeft = event.target.scrollLeft;
+    }
+
   }
 
 }

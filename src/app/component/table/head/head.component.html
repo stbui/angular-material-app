@@ -1,12 +1,6 @@
-<table class="table">
+<table class="table" [ngStyle]="styleObject">
   <colgroup>
-    <col width="100">
-    <col width="100">
-    <col width="100">
-    <col width="100">
-    <col width="200">
-    <col width="100">
-    <col width="120">
+    <col *ngFor="let columnWidth of columnsWidth" [width]="setCellWidth(columnWidth)">
   </colgroup>
   <thead>
   <tr>

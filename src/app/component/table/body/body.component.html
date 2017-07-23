@@ -1,14 +1,8 @@
-<table class="table" style="width: 820px;">
+<table class="table" [ngStyle]="styleObject">
   <colgroup>
-    <col width="100">
-    <col width="100">
-    <col width="100">
-    <col width="100">
-    <col width="200">
-    <col width="100">
-    <col width="120">
+    <col *ngFor="let columnWidth of columnsWidth" [width]="setCellWidth(columnWidth)">
   </colgroup>
-  <tbody class="table-tbody">
+  <tbody class="table-tbody" #tbody>
   <tr *ngFor="let d of data">
     <td *ngFor="let column of columns" [class.stbui-table-hidden]="column.fixed !== 'left' && fixed === 'left'">
       {{ d[column.key] }}

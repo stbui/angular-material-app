@@ -1,54 +1,18 @@
-<!--<div class="table-wrapper">
-  <div [class.table-hover]="disabledHover" [class.table-striped]="stripe">
-    <div class="table-header">
-      <stbui-table-head [columns]="columns" [data]="data" [columnsWidth]="columnsWidth"></stbui-table-head>
-    </div>
-    <div class="table-body" [ngStyle]="styles()" #tableBody>
-      <stbui-table-body
-        [columns]="columns"
-        [data]="data"
-        [columnsWidth]="columnsWidth"
-        [border]="border"
-        [stripe]="stripe"
-        [disabledHover]="disabledHover"
-      ></stbui-table-body>
-    </div>
-
-    <div class="table-fixed" *ngIf="isLeftFixed()" style="width: 174px">
-      <div class="table-header">
-        <stbui-table-head
-          [columns]="columns"
-          [data]="data"
-          [columnsWidth]="columnsWidth"
-          fixed="left"
-        ></stbui-table-head>
-      </div>
-      <div class="table-body">
-        <stbui-table-body
-          [columns]="columns"
-          [data]="data"
-          [columnsWidth]="columnsWidth"
-          fixed="left"
-        ></stbui-table-body>
-      </div>
-    </div>
-  </div>
-</div>-->
-
-
-<div [ngClass]="[prefixCls+'table-wrapper']" [ngStyle]="{'width.px': width}">
+<div [ngClass]="[prefixCls+'table-wrapper']" [ngStyle]="{'width.px': width}" #table>
   <div [ngClass]="[prefixCls+'table',prefixCls+'table-border']">
-    <div [ngClass]="[prefixCls+'table-header']">
+    <div [ngClass]="[prefixCls+'table-header']" #header>
       <stbui-table-head
         [columns]="columns"
         [data]="data"
+        [styleObject]="tableStyle()"
         [columnsWidth]="columnsWidth"
       ></stbui-table-head>
     </div>
-    <div [ngClass]="[prefixCls+'table-body']" [ngStyle]="{'height.px': height}">
+    <div [ngClass]="[prefixCls+'table-body']" [ngStyle]="{'height.px': height}" (scroll)="handleBodyScroll($event)">
       <stbui-table-body
         [columns]="columns"
         [data]="data"
+        [styleObject]="tableStyle()"
         [columnsWidth]="columnsWidth"
       ></stbui-table-body>
     </div>
