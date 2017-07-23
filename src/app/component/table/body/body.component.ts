@@ -38,4 +38,10 @@ export class BodyComponent {
   setCellWidth(column) {
     return column.width;
   }
+
+  cellClasses(column) {
+    return {
+      'stbui-table-hidden': !this.fixed && column.fixed && (column.fixed === 'left' || column.fixed === 'right')
+    }
+  }
 }

@@ -3,10 +3,10 @@
     <col *ngFor="let columnWidth of columnsWidth" [width]="setCellWidth(columnWidth)">
   </colgroup>
   <thead>
-  <tr>
-    <th *ngFor="let column of columns" [class.stbui-table-hidden]="column.fixed !== 'left' && fixed === 'left'">
-      {{ column.title }}
-    </th>
-  </tr>
+    <tr>
+      <th *ngFor="let column of columns" [ngClass]="cellClasses(column)">
+        {{ column.title }}
+      </th>
+    </tr>
   </thead>
 </table>

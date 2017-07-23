@@ -59,6 +59,8 @@ export class TableComponent implements OnInit {
   tableWidth = 0;
   cloneColumns;
   columnKey = 1;
+  bodyHeight = 0;
+  scrollBarWidth = 0;
 
 
   constructor(private element: ElementRef, private renderer: Renderer2) {
@@ -67,8 +69,6 @@ export class TableComponent implements OnInit {
 
   ngOnInit() {
     this.cloneColumns = this.makeColumns();
-
-    // this.fixedTableStyle();
 
     const $element = this.table.nativeElement;
     const width = document.defaultView.getComputedStyle($element, '').width;
@@ -121,6 +121,17 @@ export class TableComponent implements OnInit {
     }
   }
 
+  fixedHeader() {
+    
+  }
+
+  fixedBodyStyle() {
+    let height = 0;
+    return {
+      height: `${height}px`
+    };
+  }
+
   fixedTableStyle() {
     let style = {};
     let width = 0;
@@ -129,6 +140,19 @@ export class TableComponent implements OnInit {
       if (col.fixed && col.fixed === 'left') width += col._width;
     });
 
+    return {
+      width: `${width}px`
+    };
+  }
+
+  fixedRightTableStyle() {
+    let style = {};
+    let width = 0;
+    let rightFixedColumns = this.rightFixedColumns();
+    rightFixedColumns.forEach((col) => {
+      if (col.fixed && col.fixed === 'right') width += col._width;
+    });
+    // width += this.scrollBarWidth;
     return {
       width: `${width}px`
     };
@@ -144,7 +168,20 @@ export class TableComponent implements OnInit {
         other.push(col);
       }
     });
-    return left.concat(other);
+    return left;
+  }
+
+  rightFixedColumns() {
+    let right = [];
+    let other = [];
+    this.cloneColumns.forEach((col) => {
+      if (col.fixed && col.fixed === 'right') {
+        right.push(col);
+      } else {
+        other.push(col);
+      }
+    });
+    return right;
   }
 
   onCheckedChange() {

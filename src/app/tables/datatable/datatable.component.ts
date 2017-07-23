@@ -22,7 +22,7 @@ export class DatatableComponent implements OnInit {
   //
   columnsDemo;
 
-  constructor(@Inject('dataTableService') private service) {
+  constructor( @Inject('dataTableService') private service) {
     this.service.select();
 
     this.pageTotal = Math.ceil(this.service.count() / this.pageSize);
@@ -99,6 +99,11 @@ export class DatatableComponent implements OnInit {
           title: '邮编',
           key: 'zip',
           width: 100
+        }, {
+          title: '操作',
+          key: 'action',
+          fixed: 'right',
+          width: 120,
         }
       ],
       data: [
@@ -206,7 +211,7 @@ export class DatatableComponent implements OnInit {
     }
 
     this.currentChecked.forEach((x) => {
-      this.onDelete({id: x});
+      this.onDelete({ id: x });
     });
     this.currentChecked = [];
 

@@ -2,24 +2,25 @@
   <div [ngClass]="[prefixCls+'table',prefixCls+'table-border']">
     <div [ngClass]="[prefixCls+'table-header']" #header>
       <stbui-table-head
-        [columns]="columns"
+        [columns]="cloneColumns"
         [data]="data"
         [styleObject]="tableStyle()"
         [columnsWidth]="columnsWidth"
       ></stbui-table-head>
     </div>
-    <div [ngClass]="[prefixCls+'table-body']" [ngStyle]="{'height.px': height}" (scroll)="handleBodyScroll($event)">
+    <div [ngClass]="[prefixCls+'table-body']" [ngStyle]="bodyStyle()" (scroll)="handleBodyScroll($event)">
       <stbui-table-body
-        [columns]="columns"
+        [columns]="cloneColumns"
         [data]="data"
         [styleObject]="tableStyle()"
         [columnsWidth]="columnsWidth"
       ></stbui-table-body>
     </div>
+
     <div [ngClass]="[prefixCls+'table-fixed']" *ngIf="isLeftFixed()" [ngStyle]="fixedTableStyle()">
       <div [ngClass]="[prefixCls+'table-fixed-header']">
         <stbui-table-head
-          [columns]="columns"
+          [columns]="leftFixedColumns()"
           [data]="data"
           [columnsWidth]="columnsWidth"
           fixed="left"
@@ -27,12 +28,32 @@
       </div>
       <div [ngClass]="[prefixCls+'table-fixed-body']">
         <stbui-table-body
-          [columns]="columns"
+          [columns]="leftFixedColumns()"
           [data]="data"
           [columnsWidth]="columnsWidth"
           fixed="left"
         ></stbui-table-body>
       </div>
     </div>
+
+    <div [ngClass]="[prefixCls+'table-fixed-right']" *ngIf="isRightFixed()" [ngStyle]="fixedRightTableStyle()">
+      <div [ngClass]="[prefixCls+'table-fixed-header']">
+        <stbui-table-head
+          [columns]="rightFixedColumns()"
+          [data]="data"
+          [columnsWidth]="columnsWidth"
+          fixed="right"
+        ></stbui-table-head>
+      </div>
+      <div [ngClass]="[prefixCls+'table-fixed-body']">
+        <stbui-table-body
+          [columns]="rightFixedColumns()"
+          [data]="data"
+          [columnsWidth]="columnsWidth"
+          fixed="right"
+        ></stbui-table-body>
+      </div>
+    </div>
+
   </div>
 </div>
