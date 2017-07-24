@@ -6,6 +6,7 @@ import { FlexLayoutModule } from "@angular/flex-layout";
 import { HeaderComponent } from './header.component';
 import { ToolbarUserComponent } from './toolbar-user/toolbar-user.component';
 import { ToolbarHelpComponent } from './toolbar-help/toolbar-help.component';
+import { ToolBarNotificationComponent } from './toolbar-notification/toolbar-notification.component';
 
 @NgModule({
   imports: [
@@ -16,7 +17,8 @@ import { ToolbarHelpComponent } from './toolbar-help/toolbar-help.component';
   declarations: [
     HeaderComponent,
     ToolbarUserComponent,
-    ToolbarHelpComponent
+    ToolbarHelpComponent,
+    ToolBarNotificationComponent
   ],
   exports: [
     HeaderComponent
