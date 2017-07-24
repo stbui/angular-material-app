@@ -16,11 +16,11 @@ export class HeadComponent {
   @Input() objData;
 
   constructor() {
-    
+
   }
 
   ngOnInit() {
-    
+
   }
 
   setCellWidth(column) {

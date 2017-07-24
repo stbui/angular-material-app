@@ -2,7 +2,7 @@
   <colgroup>
     <col *ngFor="let columnWidth of columnsWidth" [width]="setCellWidth(columnWidth)">
   </colgroup>
-  <tbody class="table-tbody" #tbody>
+  <tbody class="table-tbody">
     <tr *ngFor="let d of data" [ngClass]="rowClasses(d)" (mouseenter)="handleMouseIn()" (mouseleave)="handleMouseOut()">
       <td *ngFor="let column of columns" [ngClass]="cellClasses(column)">
         {{ d[column.key] }}

@@ -22,18 +22,7 @@ export class BodyComponent {
   // 禁用鼠标悬停时的高亮
   @Input() disabledHover: boolean = true;
 
-  @ViewChild('tbody') tbody: ElementRef;
-
   constructor() {
-
-  }
-
-  ngOnInit() {
-
-  }
-
-  ngAfterViewInit() {
-
   }
 
   setCellWidth(column) {

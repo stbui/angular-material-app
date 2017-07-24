@@ -74,32 +74,37 @@ export class TableComponent implements OnInit {
     this.objData = this.makeObjData();
 
     this.columnsWidth = [
-      { width: 100 },
-      { width: 100 },
-      { width: 100 },
-      { width: 100 },
-      { width: 200 },
-      { width: 100 },
-      { width: 120 }
-    ]
+      {width: 100},
+      {width: 100},
+      {width: 100},
+      {width: 100},
+      {width: 200},
+      {width: 100},
+      {width: 120}
+    ];
   }
 
   ngAfterViewInit() {
-    // let columnsWidth = [];
-    // if (this.data.length) {
-    //   const nativeElement = this.tableBody.nativeElement;
-    //   const table = nativeElement.querySelectorAll('table');
-    //   const tr = table[0].querySelectorAll('tbody tr');
-    //   const td = tr[0].querySelectorAll('td');
-    //
-    //   for (let i = 0; i < td.length; i++) {
-    //     const width = document.defaultView.getComputedStyle(td[i], '').width;
-    //     columnsWidth.push({
-    //       width: parseInt(width)
-    //     });
-    //   }
-    //   this.columnsWidth = columnsWidth;
-    // }
+    setTimeout(() => {
+      this.setColumnsWidth();
+    }, 0)
+  }
+
+  setColumnsWidth() {
+    let columnsWidth = [];
+    if (this.data.length) {
+      const nativeElement = this.table.nativeElement;
+
+      const td = nativeElement.querySelectorAll('tbody td');
+
+      for (let i = 0; i < this.columns.length; i++) {
+        const width = document.defaultView.getComputedStyle(td[i], '').width;
+        columnsWidth.push({
+          width: parseInt(width)
+        });
+      }
+      this.columnsWidth = columnsWidth;
+    }
   }
 
   styles() {
@@ -123,7 +128,7 @@ export class TableComponent implements OnInit {
     } else {
       const $element = this.table.nativeElement;
       const width = document.defaultView.getComputedStyle($element, '').width;
-      this.tableWidth = parseInt(width);
+      this.tableWidth = parseInt(width) - 1;
     }
 
     return {
@@ -263,7 +268,7 @@ export class TableComponent implements OnInit {
       } else {
         newRow._isChecked = false;
       }
-     
+
       data[index] = newRow;
     });
     return data;
