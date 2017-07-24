@@ -1,28 +1,20 @@
-<div class="page-auth">
-  <div class="main-body">
+<div class="sigin-conainer" fxLayout="column" fxLayoutAlign="center center">
+  <div class="sigin-main">
     <md-card>
-      <md-card-title class="logo">
+      <md-card-title>
         用户登录
       </md-card-title>
       <md-card-content>
-        <form>
-          <div fxLayout="column" fxLayoutAlign="start stretch">
-            <md-input-container>
-              <input mdInput placeholder="邮箱" type="text" name="email">
-            </md-input-container>
-            <md-input-container>
-              <input mdInput placeholder="密码" type="password" name="password">
-            </md-input-container>
-            <button color="primary" md-raised-button disabled="true">登录</button>
-          </div>
+        <form fxLayout="column" fxLayoutAlign="start stretch" #formRegister="ngForm">
+          <md-input-container>
+            <input mdInput placeholder="请输入您的邮箱" name="email" ngModel required>
+          </md-input-container>
+          <md-input-container>
+            <input mdInput placeholder="请输入您的密码" name="password" ngModel required>
+          </md-input-container>
+          <button md-raised-button color="primary" type="submit" [disabled]="!formRegister.valid" (click)="onSubmit()">登录</button>
         </form>
       </md-card-content>
-      <md-card-actions class="additional-info">
-        <a [routerLink]="['/sigup']">注册</a>
-        <span class="divider-h"></span>
-        <a href="forgot-password">忘记密码?</a>
-      </md-card-actions>
     </md-card>
-
   </div>
 </div>

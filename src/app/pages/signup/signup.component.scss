@@ -2,7 +2,7 @@ $image_path:            "/assets/images/" !default;
 
 :host {
   display: block;
-  background: #fff url('#{$image_path}background/1.png') no-repeat center center fixed;
+  background: #fff url('#{$image_path}background/login.jpg') no-repeat center center fixed;
   background-size: cover;
   height: 100%;
   width: 100%;

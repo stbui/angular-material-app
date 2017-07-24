@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { MaterialModule } from '@angular/material';
+import { MdCardModule, MdInputModule, MdCheckboxModule, MdButtonModule, MdIconModule } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { RoutingModule } from './pages-routing.module';
@@ -22,7 +22,11 @@ import { SigninComponent } from './signin/signin.component';
     CommonModule,
     FormsModule,
     FlexLayoutModule,
-    MaterialModule,
+    MdCardModule,
+    MdInputModule,
+    MdCheckboxModule,
+    MdButtonModule,
+    MdIconModule,
     RoutingModule
   ],
   declarations: [

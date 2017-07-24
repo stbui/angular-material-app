@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef, HostListener } from '@angular/core';
 
 @Component({
   selector: 'stbui-toolbar-user',
@@ -9,7 +9,19 @@ export class ToolbarUserComponent implements OnInit {
 
   isOpen: boolean = false;
 
-  constructor() { }
+  @HostListener('document:click', ['$event', '$event.target']) onClick(event: MouseEvent, targetElement: HTMLElement) {
+    if (!targetElement) {
+      return;
+    }
+
+    const clickedInside = this._elementRef.nativeElement.contains(targetElement);
+    if (!clickedInside) {
+      this.isOpen = false;
+    }
+  }
+
+  constructor(private _elementRef: ElementRef) {
+  }
 
   ngOnInit() {
   }

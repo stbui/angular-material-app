@@ -72,37 +72,32 @@ export class TableComponent implements OnInit {
   ngOnInit() {
     this.cloneColumns = this.makeColumns();
     this.objData = this.makeObjData();
-
-    this.columnsWidth = [
-      {width: 100},
-      {width: 100},
-      {width: 100},
-      {width: 100},
-      {width: 200},
-      {width: 100},
-      {width: 120}
-    ];
   }
 
   ngAfterViewInit() {
     setTimeout(() => {
       this.setColumnsWidth();
-    }, 0)
+    }, 0);
   }
 
   setColumnsWidth() {
     let columnsWidth = [];
     if (this.data.length) {
-      const nativeElement = this.table.nativeElement;
+      // if (this.isRightFixed()) {
+        // const rightFixedColumns = this.rightFixedColumns();
+        // columnsWidth = rightFixedColumns.map(cell => {
+        //   return {width: cell.width}
+        // });
+      // } else {
+      //   const nativeElement = this.table.nativeElement;
+      //   const td = nativeElement.querySelectorAll('tbody td');
+      //
+      //   columnsWidth = this.columns.map((cell, index) => {
+      //     const width = this.getStyle(td[index], 'width');
+      //     return {width: parseInt(width)}
+      //   });
+      // }
 
-      const td = nativeElement.querySelectorAll('tbody td');
-
-      for (let i = 0; i < this.columns.length; i++) {
-        const width = document.defaultView.getComputedStyle(td[i], '').width;
-        columnsWidth.push({
-          width: parseInt(width)
-        });
-      }
       this.columnsWidth = columnsWidth;
     }
   }
@@ -120,6 +115,12 @@ export class TableComponent implements OnInit {
     return style;
   }
 
+  getStyle(element, property) {
+    if (element && property) {
+      return document.defaultView.getComputedStyle(element, '')[property];
+    }
+  }
+
   tableStyle() {
     const allWidth = !this.columns.some(cell => !cell.width);
 
@@ -127,7 +128,7 @@ export class TableComponent implements OnInit {
       this.tableWidth = this.columns.map(cell => cell.width).reduce((a, b) => a + b);
     } else {
       const $element = this.table.nativeElement;
-      const width = document.defaultView.getComputedStyle($element, '').width;
+      const width = this.getStyle($element, 'width');
       this.tableWidth = parseInt(width) - 1;
     }
 
