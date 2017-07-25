@@ -93,6 +93,20 @@ docker run --rm --name angular2-material2-admin-app -v "$PWD":/usr/src/app -w /u
 
 ### 依赖模块
 
-```
-angular2-perfect-scrollbar material-design-icons ngx-quill normalize.css screenfull
-```
+[material-design-icons](https://github.com/google/material-design-icons)
+- 
+
+[normalize.css](https://github.com/necolas/normalize.css) 
+-
+ 
+[angular2-perfect-scrollbar](https://github.com/ywein/angular2-perfect-scrollbar)
+- This is an Angular 2 wrapper library for perfect-scrollbar.
+
+[ngx-quill](https://github.com/KillerCodeMonkey/ngx-quill)
+- quill editor with angular and TS
+
+[screenfull](https://github.com/sindresorhus/screenfull.js/)
+- Simple wrapper for cross-browser usage of the JavaScript Fullscreen API
+
+[angular-sortablejs](https://github.com/SortableJS/angular-sortablejs)
+- This package is an Angular 2 binding for Sortable.js. Supports standard arrays and Angular FormArray

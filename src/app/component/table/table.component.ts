@@ -10,6 +10,7 @@ import {
   ViewEncapsulation
 } from '@angular/core';
 
+
 @Component({
   selector: 'stbui-table',
   templateUrl: './table.component.html',
@@ -64,6 +65,8 @@ export class TableComponent implements OnInit {
   bodyHeight = 0;
   scrollBarWidth = 0;
 
+  cellWidths;
+
 
   constructor(private element: ElementRef, private renderer: Renderer2) {
 
@@ -80,26 +83,34 @@ export class TableComponent implements OnInit {
     }, 0);
   }
 
-  setColumnsWidth() {
-    let columnsWidth = [];
-    if (this.data.length) {
-      // if (this.isRightFixed()) {
-        // const rightFixedColumns = this.rightFixedColumns();
-        // columnsWidth = rightFixedColumns.map(cell => {
-        //   return {width: cell.width}
-        // });
-      // } else {
-      //   const nativeElement = this.table.nativeElement;
-      //   const td = nativeElement.querySelectorAll('tbody td');
-      //
-      //   columnsWidth = this.columns.map((cell, index) => {
-      //     const width = this.getStyle(td[index], 'width');
-      //     return {width: parseInt(width)}
-      //   });
-      // }
+  setCellWidths(widths) {
+    this.cellWidths = widths;
+  }
 
-      this.columnsWidth = columnsWidth;
-    }
+  getCellWidths() {
+    return this.cellWidths;
+  }
+
+  setColumnsWidth() {
+    // let columnsWidth = [];
+    // if (this.data.length) {
+    // if (this.isRightFixed()) {
+    // const rightFixedColumns = this.rightFixedColumns();
+    // columnsWidth = rightFixedColumns.map(cell => {
+    //   return {width: cell.width}
+    // });
+    // } else {
+    //   const nativeElement = this.table.nativeElement;
+    //   const td = nativeElement.querySelectorAll('tbody td');
+    //
+    //   columnsWidth = this.columns.map((cell, index) => {
+    //     const width = this.getStyle(td[index], 'width');
+    //     return {width: parseInt(width)}
+    //   });
+    // }
+
+    // this.columnsWidth = columnsWidth;
+    // }
   }
 
   styles() {
@@ -128,8 +139,7 @@ export class TableComponent implements OnInit {
       this.tableWidth = this.columns.map(cell => cell.width).reduce((a, b) => a + b);
     } else {
       const $element = this.table.nativeElement;
-      const width = this.getStyle($element, 'width');
-      this.tableWidth = parseInt(width) - 1;
+      this.tableWidth = $element.offsetWidth - 1;
     }
 
     return {

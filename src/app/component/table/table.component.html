@@ -7,6 +7,7 @@
         [objData]="objData"
         [styleObject]="tableStyle()"
         [columnsWidth]="columnsWidth"
+        [cellWidths]="getCellWidths()"
       ></stbui-table-head>
     </div>
     <div [ngClass]="[prefixCls+'table-body']" [ngStyle]="bodyStyle()" (scroll)="handleBodyScroll($event)">
@@ -16,6 +17,7 @@
         [objData]="objData"
         [styleObject]="tableStyle()"
         [columnsWidth]="columnsWidth"
+        (onCellWidths)="setCellWidths($event)"
       ></stbui-table-body>
     </div>
 

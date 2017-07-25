@@ -81,7 +81,7 @@ export class DatatableComponent implements OnInit {
         {
           title: '姓名',
           key: 'name',
-          width: 100,
+          width: 117,
           fixed: 'left'
         },
         {

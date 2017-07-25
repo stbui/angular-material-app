@@ -4,6 +4,10 @@ $table-prefix:'#{$css-prefix}table';
 $table-border-color: #dddee1;
 $border-color-split: #e9eaec;
 
+table {
+  border-spacing: 0;
+}
+
 .#{$table-prefix} {
   width: inherit;
   height: 100%;

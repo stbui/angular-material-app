@@ -12,7 +12,6 @@ $candy-app-theme: mat-light-theme($candy-app-primary, $candy-app-accent, $candy-
 @include pagination-theme($candy-app-theme);
 @include navigation-theme($candy-app-theme);
 
-@import "./scss/apps/_tables";
 
 html, body {
   margin: 0;

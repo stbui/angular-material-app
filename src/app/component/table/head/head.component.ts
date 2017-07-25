@@ -10,6 +10,7 @@ export class HeadComponent {
   @Input() columns;
   @Input() data;
   @Input() columnsWidth;
+  @Input() cellWidths;
 
   @Input() fixed;
   @Input() styleObject;
@@ -19,12 +20,8 @@ export class HeadComponent {
 
   }
 
-  ngOnInit() {
-
-  }
-
-  setCellWidth(column) {
-    return column.width;
+  setCellWidth(cell) {
+    return cell.width;
   }
 
   cellClasses(column) {

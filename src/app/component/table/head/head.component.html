@@ -1,11 +1,13 @@
 <table class="table" [ngStyle]="styleObject">
   <colgroup>
-    <col *ngFor="let columnWidth of columnsWidth" [width]="setCellWidth(columnWidth)">
+    <col *ngFor="let cellWidth of cellWidths" [width]="setCellWidth(cellWidth)">
   </colgroup>
   <thead>
     <tr>
       <th *ngFor="let column of columns" [ngClass]="cellClasses(column)">
-        {{ column.title }}
+        <div class="stbui-table-cell">
+          {{ column.title }}
+        </div>
       </th>
     </tr>
   </thead>
