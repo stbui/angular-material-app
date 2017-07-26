@@ -84,7 +84,7 @@
         <stb-toolbar [mail]="shownMailDetail" [itemCount]="shownMails.length" (onForward)="onForward($event)"></stb-toolbar>
 
         <div class="mails">
-          <stb-list *ngIf="!shownMailDetail" [mails]="shownMails" (onOpenMailDetial)="openMailDetial($event)"></stb-list>
+          <stb-list *ngIf="!shownMailDetail" [mails]="shownMails | async" (onOpenMailDetial)="openMailDetial($event)"></stb-list>
           <stb-detail *ngIf="shownMailDetail" [mail]="shownMailDetail"></stb-detail>
         </div>
 

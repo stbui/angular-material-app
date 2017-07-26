@@ -7,7 +7,7 @@
     "start": "ng serve",
     "build": "ng build --environment=prod --extract-css --base-href=https://stbui.github.io/angular2-material2-bootstrap4-admin-app/",
     "min":"ng build --environment=prod --extract-css --aot",
-    "site": "ngh",
+    "github.io": "ngh",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"

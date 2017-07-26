@@ -7,7 +7,7 @@ import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
 })
 export class ListComponent implements OnInit {
 
-  @Input() mails;
+  @Input()  mails;
   @Output() onOpenMailDetial = new EventEmitter();
 
 

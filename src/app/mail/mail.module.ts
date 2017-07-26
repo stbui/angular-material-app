@@ -10,6 +10,7 @@ import { ComposeComponent } from './compose/compose.component';
 import { DetailComponent } from './detail/detail.component';
 import { ListComponent } from './list/list.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
+import { MailService } from './mail.service';
 
 @NgModule({
   imports: [
@@ -22,6 +23,16 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
   entryComponents: [
     ComposeComponent
   ],
-  declarations: [MailComponent, ComposeComponent, DetailComponent, ListComponent, ToolbarComponent]
+  declarations: [
+    MailComponent,
+    ComposeComponent,
+    DetailComponent,
+    ListComponent,
+    ToolbarComponent
+  ],
+  providers: [
+    { provide: 'mailService', useClass: MailService }
+  ]
 })
-export class MailModule { }
+export class MailModule {
+}

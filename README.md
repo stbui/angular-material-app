@@ -94,10 +94,10 @@ docker run --rm --name angular2-material2-admin-app -v "$PWD":/usr/src/app -w /u
 ### 依赖模块
 
 [material-design-icons](https://github.com/google/material-design-icons)
-- 
+- material-design-icons
 
 [normalize.css](https://github.com/necolas/normalize.css) 
--
+- normalize.css
  
 [angular2-perfect-scrollbar](https://github.com/ywein/angular2-perfect-scrollbar)
 - This is an Angular 2 wrapper library for perfect-scrollbar.

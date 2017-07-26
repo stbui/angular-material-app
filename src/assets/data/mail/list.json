@@ -1,0 +1,82 @@
+[
+  {
+    "from": {
+      "name": "bright",
+      "mail": "demo@stbui.com"
+    },
+    "subject": "雄安新区特写：抢注域名售价百万，当地人称“我们是首都人”",
+    "content": "据《环球时报》5日报道，记者在域名注册服务商、阿里云旗下万网查询发现，多种后缀的xiongan域名被注册量多达四五十个，大多数域名注册日显示为4月1日，即雄安新区信息首次公开当日。",
+    "when": "20170405",
+    "read": true,
+    "starred": true,
+    "labels": [
+      {
+        "name": "Private",
+        "color": "darkgrey"
+      }
+    ],
+    "group": "promotions",
+    "type": "sent",
+    "attachments": ["assets/img/backgrounds/1.jpg"]
+  },
+  {
+    "from": {
+      "name": "bright",
+      "mail": "demo@stbui.com"
+    },
+    "subject": "人民网评：雄安新区，如何成为下一个深圳浦东？",
+    "content": "“我们是‘特区’人了!”一夜之间,雄县、安新县、容城县,这三个县城,从知名度不高变得全国知晓、世界瞩目。不成想,一则春天的故事刚刚翻开“目录页”,炒房投机者就急忙想写下他们的“插页”。然而,3县政府当机立断,泼下一盆冷水:楼盘停售、交易冻结,雄县甚至冻结了户口迁入。无房可买的现实也在释放一个强烈的信号:雄安新区是“千年大计、国家大事”,绝不会是炒房资本竞逐的乐园。",
+    "when": "20170405",
+    "read": true,
+    "starred": true,
+    "labels": [
+      {
+        "name": "Private",
+        "color": "darkgrey"
+      }
+    ],
+    "group": "promotions",
+    "type": "sent",
+    "attachments": ["assets/img/backgrounds/1.jpg"]
+  },
+  {
+    "from": {
+      "name": "bright",
+      "mail": "demo@stbui.com"
+    },
+    "subject": "快手为什么成功",
+    "content": "就在今天，快手获得了腾讯 3.5 亿美金的融资。本文是我几个月前写的一个快手分析，一直没有在公众号推送过，赶这个热点分享给大家吧。",
+    "when": "20170405",
+    "read": true,
+    "starred": true,
+    "labels": [
+      {
+        "name": "Private",
+        "color": "darkgrey"
+      }
+    ],
+    "group": "promotions",
+    "type": "sent",
+    "attachments": ["assets/img/backgrounds/1.jpg"]
+  },
+  {
+    "from": {
+      "name": "bright",
+      "mail": "demo@stbui.com"
+    },
+    "subject": "给碎片化学习泼点冷水",
+    "content": "不经意间，“碎片化学习”成了热门话题。就我所见，鼓吹它的文章很多，质疑它的文章很少，仿佛“碎片化时间”不仅是碎片化时代的必须选择，而且是学习发展的必然方向。我不赞成这样的观点。你可以说这是个碎片化时代，所以我们不得不选择碎片化学习。但把它过分拔高，认定碎片化学习卓然超越其它的学习方式，这是不对的。",
+    "when": "20170405",
+    "read": true,
+    "starred": true,
+    "labels": [
+      {
+        "name": "Private",
+        "color": "darkgrey"
+      }
+    ],
+    "group": "promotions",
+    "type": "sent",
+    "attachments": ["assets/img/backgrounds/1.jpg"]
+  }
+]
