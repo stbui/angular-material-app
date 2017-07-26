@@ -7,14 +7,14 @@ import { Chat } from './chats.model';
 
 @Injectable()
 export class ChatsService {
-  public api = environment.chatsApi + '/chats';
+  public apiUrl = environment.chatsApi;
   private header = new Headers({'Content-Type': 'application/json'});
 
   constructor(private http: Http) {
   }
 
   addChat(chat) {
-    let url = `${this.api}/${chat.name}`;
+    const url = this.apiUrl;
 
     return this.http
       .post(url, JSON.stringify(chat), {headers: this.header})
@@ -22,7 +22,8 @@ export class ChatsService {
   }
 
   getChats(): Observable<any> {
-    return this.http.get(this.api).map(res => res.json() as Chat[]);
+    const url = this.apiUrl;
+    return this.http.get(url).map(res => res.json() as Chat[]);
   }
 
 }

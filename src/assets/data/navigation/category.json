@@ -1,0 +1,17 @@
+{
+  "errno": 0,
+  "errmsg": "",
+  "data": [
+    {
+      "id": 634,
+      "catalog_name": "产品",
+      "description": null,
+      "topic_id": 0,
+      "status_is": "Y",
+      "redirect_url": "",
+      "image_link": "",
+      "sort_order": 0,
+      "create_time": 0
+    }
+  ]
+}

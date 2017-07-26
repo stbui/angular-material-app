@@ -20,7 +20,10 @@ export class NavigationService {
   }
 
   getNavs(topicId: any = '', page: any = 1) {
-    const url = `${this.apiUrl}/links/?topicId=${topicId}&page=${page}`;
+    let url = `${this.apiUrl}/links/?topicId=${topicId}&page=${page}`;
+    if (!environment.production) {
+      url = `${this.apiUrl}/links${topicId}${page}.json`;
+    }
     this.http.get(url)
       .map(res => res.json())
       // .do(res => console.log(res))
@@ -30,7 +33,10 @@ export class NavigationService {
   }
 
   getCategorys() {
-    const url = `${this.apiUrl}/topic`;
+    let url = `${this.apiUrl}/topic`;
+    if (!environment.production) {
+      url = `${this.apiUrl}/topic.json`;
+    }
     return this.http.get(url)
       .map(res => res.json());
   }

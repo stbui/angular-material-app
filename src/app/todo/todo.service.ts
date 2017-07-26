@@ -8,7 +8,7 @@ import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 
 @Injectable()
 export class TodoService {
-  private apiUrl = environment.todoApi + '/todos';
+  private apiUrl = environment.todoApi;
   private headers = new Headers({'Content-Type': 'application/json'});
   private _todos: BehaviorSubject<TodoModel[]>;
   private dataStore: {todos: TodoModel[]};
@@ -23,11 +23,11 @@ export class TodoService {
   }
 
   addTodo(desc: string) {
-    let todoToAdd = {
+    const todoToAdd = {
       id: Math.random(),
       desc: desc,
       completed: false
-    }
+    };
 
     this.http.post(this.apiUrl, JSON.stringify(todoToAdd), {headers: this.headers})
       .map(res => res.json() as TodoModel)
@@ -40,7 +40,7 @@ export class TodoService {
   toggleTodo(todo: TodoModel) {
     const url = `${this.apiUrl}/${todo.id}`;
     const i = this.dataStore.todos.indexOf(todo);
-    let updatedTodo = Object.assign({}, todo, {completed: !todo.completed});
+    const updatedTodo = Object.assign({}, todo, {completed: !todo.completed});
     this.http.post(url, JSON.stringify({completed: !todo.completed}), {headers: this.headers})
       .subscribe(r => {
         this.dataStore.todos = [

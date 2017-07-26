@@ -7,6 +7,6 @@
   (onRemoveTodo)="removeTodo($event)"
   (onToggleTodo)="toggleTodo($event)" ></app-todo-list>
   <app-todo-footer
-  [itemCount]="todos | async"
+  [itemCount]="(todos | async)?.length"
   (onClear)="clearCompleted()"></app-todo-footer>
 </div>

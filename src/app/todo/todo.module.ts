@@ -6,10 +6,6 @@ import { MaterialModule } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { RoutingModule } from './todo-routing.module'
-// test
-// import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
-// import { InMemoryTodoDbService } from './todo.data';
-
 import { TodoComponent } from './todo.component';
 import { TodoService } from './todo.service';
 import { TodoFooterComponent } from './todo-footer/todo-footer.component';
@@ -24,8 +20,7 @@ import { TodoListComponent } from './todo-list/todo-list.component';
     HttpModule,
     MaterialModule,
     FlexLayoutModule,
-    RoutingModule,
-    // InMemoryWebApiModule.forRoot(InMemoryTodoDbService)
+    RoutingModule
   ],
   declarations: [
     TodoComponent,
