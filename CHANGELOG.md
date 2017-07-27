@@ -4,6 +4,7 @@
 
 ### 优化
 - navigation，todo，mail 数据
+- 样式主题
 
 ### 添加
 - github.io 环境

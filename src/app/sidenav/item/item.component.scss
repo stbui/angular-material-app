@@ -1,25 +1,11 @@
-:host {
-  color: #a1a1a1;
-}
 
 .sidenav-anchor {
   position: relative;
   cursor: pointer;
-  transform: color .1s;
-
-  &:hover {
-    color: #fafafa;
-  }
-
-  &.active {
-    color: #fafafa;
-  }
+  transition: color .1s;
 }
 
-
 md-nav-list a.sidenav-anchor {
-  color: #a1a1a1 !important;
-
   .sidenav-item-name {
     font-size: 14px;
     margin-left: 24px;

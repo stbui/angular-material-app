@@ -1,0 +1,25 @@
+@mixin pagination-theme($theme) {
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+  $warn: map-get($theme, warn);
+  $background: map-get($theme, background);
+  $foreground: map-get($theme, foreground);
+
+  .pagination li {
+    color: mat-color($foreground, text);
+  }
+
+  .pagination li:hover {
+    background-color: mat-color($primary, .2);
+  }
+
+  .pagination li {
+    &:hover .active,
+    &:hover.active,
+    .active,
+    &.active {
+      background-color: mat-color($primary);
+      color: #fff;
+    }
+  }
+}

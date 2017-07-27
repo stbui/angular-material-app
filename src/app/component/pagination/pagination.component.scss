@@ -1,4 +1,4 @@
-@import '~@angular/material/_theming';
+$pagination-font-family: Roboto, 'Helvetica Neue', sans-serif !default;
 $pagination-font-size-base: 14px !default;
 $pagination-size: 32px !default;
 $pagination-line-height: 32px !default;
@@ -41,7 +41,7 @@ $pagination-border-radius: 2px !default;
     align-items: center;
 
     font-size: $pagination-font-size-base;
-    font-family: $mat-font-family;
+    font-family: $pagination-font-family;
     font-weight: 500;
     text-align: center;
 
@@ -76,30 +76,4 @@ $pagination-border-radius: 2px !default;
   display: -ms-flexbox;
   display: flex;
   justify-content: center;
-}
-
-@mixin pagination-theme($theme) {
-  $primary: map-get($theme, primary);
-  $accent: map-get($theme, accent);
-  $warn: map-get($theme, warn);
-  $background: map-get($theme, background);
-  $foreground: map-get($theme, foreground);
-
-  .pagination li {
-    color: mat-color($foreground, text);
-  }
-
-  .pagination li:hover {
-    background-color: mat-color($primary, .2);
-  }
-
-  .pagination li {
-    &:hover .active,
-    &:hover.active,
-    .active,
-    &.active {
-      background-color: mat-color($primary);
-      color: #fff;
-    }
-  }
 }

@@ -1,43 +1,7 @@
 @import '~@angular/material/_theming';
-
-$navigation-font-family: $mat-font-family;
+$navigation-font-family: Roboto, 'Helvetica Neue', sans-serif !default;
 $navigation-font-size-base: 14px !default;
 $navigation-border-radius: 2px !default;
-
-@mixin navigation-theme($theme) {
-  $primary: map-get($theme, primary);
-  $accent: map-get($theme, accent);
-  $warn: map-get($theme, warn);
-  $background: map-get($theme, background);
-  $foreground: map-get($theme, foreground);
-
-  .nav-category-item {
-    color: mat-color($foreground, text);
-
-    .active,
-    &.active {
-      background-color: mat-color($primary);
-      color: #fff;
-    }
-
-    &:hover {
-      background-color: mat-color($primary, .2);
-
-      .active,
-      &.active {
-        background-color: mat-color($primary);
-        color: #fff;
-      }
-    }
-  }
-
-  .nav-title a {
-    color: mat-color($primary);
-    &:hover {
-      color: mat-color($primary, .9);
-    }
-  }
-}
 
 :host {
   display: block;
@@ -45,9 +9,7 @@ $navigation-border-radius: 2px !default;
 }
 
 .nav-title {
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
+  @include mat-truncate-line();
 
   a {
     text-decoration: none;

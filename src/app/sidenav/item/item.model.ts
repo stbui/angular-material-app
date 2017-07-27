@@ -1,15 +1,15 @@
 export class SidenavItem {
   name: string;
   icon: string;
-  route: string;
+  route: any;
   parent: SidenavItem;
   subItems: SidenavItem[];
   position: number;
   badge: string;
   badgeColor: string;
 
-  constructor(model:any = null) {
-    if(model) {
+  constructor(model: any = null) {
+    if (model) {
       this.name = model.name;
       this.icon = model.icon;
       this.route = model.route;
@@ -22,7 +22,7 @@ export class SidenavItem {
   }
 
   hasSubItems() {
-    if(this.subItems) {
+    if (this.subItems) {
       return this.subItems.length > 0;
     }
 
@@ -34,12 +34,16 @@ export class SidenavItem {
   }
 
   mapSubItems(list: SidenavItem[]) {
-    if(list) {
+    if (list) {
       list.forEach((item, index) => {
         list[index] = new SidenavItem(item);
       });
 
       return list;
     }
+  }
+
+  isRouteString() {
+    return this.route instanceof String || typeof this.route === 'string';
   }
 }
