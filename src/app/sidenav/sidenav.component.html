@@ -1,6 +1,6 @@
 <div class="sidenav-container" fxLayout="column">
 
-  <md-toolbar class="sidenav-toolbar mat-elevation-z2 stbui-warn" fxLayout="row" fxFlexAlign="center center">
+  <md-toolbar class="sidenav-toolbar mat-elevation-z2" [ngClass]="[theme.logo]" fxLayout="row" fxFlexAlign="center center">
     <md-icon class="logo-icon material-icons">view_compact</md-icon>
     <a class="logo-text" href="/">Stbui</a>
     <span fxFlex></span>
@@ -10,7 +10,7 @@
     </button>
   </md-toolbar>
 
-  <div class="sidenav-scrollbar-container stbui-default" fxLayout="column">
+  <div class="sidenav-scrollbar-container" [ngClass]="[theme.aside]" fxLayout="column">
     <perfect-scrollbar>
       <md-nav-list fxLayout="column">
         <sidenav-item *ngFor="let item of items" [item]="item"></sidenav-item>

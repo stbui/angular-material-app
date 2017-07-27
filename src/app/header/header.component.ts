@@ -1,4 +1,4 @@
-import { Component, OnInit, Input,} from '@angular/core';
+import { Component, OnInit, Input, } from '@angular/core';
 import * as screenfull from 'screenfull';
 
 
@@ -9,11 +9,15 @@ import * as screenfull from 'screenfull';
 })
 export class HeaderComponent implements OnInit {
 
-  @Input() theme:any;
+  @Input() theme = {
+    header: 'stbui-white',
+    aside: 'stbui-default',
+    logo: 'stbui-primary'
+  };
   @Input() customizer;
-  isFullscreen:boolean = false;
+  isFullscreen: boolean = false;
 
-  classes:any = {};
+  classes: any = {};
 
   constructor() {
   }

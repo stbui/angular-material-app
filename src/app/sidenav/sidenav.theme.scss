@@ -67,7 +67,7 @@
 
   .stbui-primary {
     background: mat-color($primary);
-    color: mat-color($foreground, text);
+    color: #fff;
 
     .sidenav-anchor {
       color: #a1a1a1;
@@ -83,7 +83,7 @@
   }
 
   .logo-text {
-    color: mat-color($foreground, text);
+    color: #fff;
   }
 }
 
@@ -95,8 +95,8 @@
   $foreground: map-get($theme, foreground);
 
   .stbui-accent {
-    background: mat-color($primary);
-    color: mat-color($foreground, text);
+    background: mat-color($accent);
+    color: #fff;
 
     .sidenav-anchor {
       color: #a1a1a1;
@@ -112,7 +112,7 @@
   }
 
   .logo-text {
-    color: mat-color($foreground, text);
+    color: #fff;
   }
 }
 
@@ -124,7 +124,7 @@
   $foreground: map-get($theme, foreground);
 
   .stbui-warn {
-    background: mat-color($primary);
+    background: mat-color($warn);
     color: #fff;
 
     .sidenav-anchor {
