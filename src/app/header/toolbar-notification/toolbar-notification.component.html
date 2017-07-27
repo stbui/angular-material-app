@@ -1,7 +1,7 @@
 <div class="toolbar-notification-container">
   <button md-button (click)="toggleDropdown()" [ngClass]="[cssPrefix+'-btn']" [class.open]="isOpen">
     <md-icon>notifications_none</md-icon>
-    <span class="badge">3</span>
+    <span class="badge">{{ notifications?.length }}</span>
   </button>
 
   <div class="dropdown mat-elevation-z1" [class.open]="isOpen">
@@ -9,73 +9,28 @@
       <div class="header" fxLayout="row" fxLayoutAlign="space-between center">
         <div class="title">
           <div class="name">通知</div>
-          <div class="extra">您有 1 条新的通知</div>
+          <div class="extra">您有 {{ notifications?.length }} 条新的通知</div>
         </div>
         <button type="button" md-icon-button>
           <md-icon class="icon">settings</md-icon>
         </button>
       </div>
-      <!--<perfect-scrollbar class="content">-->
-        <div class="notification" fxLayout="row" fxLayoutAlign="start center" md-ripple>
-          <md-icon class="icon">notifications</md-icon>
-          <div class="title" fxLayout="column">
-            <div class="name">这是一条通知</div>
-            <div class="time">刚刚</div>
+      <perfect-scrollbar class="content">
+        <div *ngFor="let notification of notifications; last as isLast">
+          <div class="notification" fxLayout="row" fxLayoutAlign="start center" md-ripple>
+            <md-icon class="icon">notifications</md-icon>
+            <div class="title" fxLayout="column">
+              <div class="name">{{ notification.title }}</div>
+              <div class="time">{{ notification.lastTime }}</div>
+            </div>
+            <span fxFlex></span>
+            <button type="button" md-icon-button (click)="delete(notification)">
+              <md-icon class="close">close</md-icon>
+            </button>
           </div>
-          <span fxFlex></span>
-          <button type="button" md-icon-button>
-            <md-icon class="close">close</md-icon>
-          </button>
+          <div class="divider" *ngIf="!isLast"></div>
         </div>
-        <div class="divider"></div>
-        <div class="notification primary" fxLayout="row" fxLayoutAlign="start center" md-ripple>
-          <md-icon class="icon">shopping_basket</md-icon>
-          <div class="title" fxLayout="column">
-            <div class="name">这是一条通知</div>
-            <div class="time">23 分钟之前</div>
-          </div>
-          <span fxFlex></span>
-          <button type="button" md-icon-button>
-            <md-icon class="close">close</md-icon>
-          </button>
-        </div>
-        <div class="divider"></div>
-        <div class="notification accent" fxLayout="row" fxLayoutAlign="start center" md-ripple>
-          <md-icon class="icon">eject</md-icon>
-          <div class="title" fxLayout="column">
-            <div class="name">这是一条通知</div>
-            <div class="time">1 个小时之前</div>
-          </div>
-          <span fxFlex></span>
-          <button type="button" md-icon-button>
-            <md-icon class="close">close</md-icon>
-          </button>
-        </div>
-        <div class="divider"></div>
-        <div class="notification read" fxLayout="row" fxLayoutAlign="start center" md-ripple>
-          <md-icon class="icon">cached</md-icon>
-          <div class="title" fxLayout="column">
-            <div class="name">这是一条通知</div>
-            <div class="time">1 个小时之前</div>
-          </div>
-          <span fxFlex></span>
-          <button type="button" md-icon-button>
-            <md-icon class="close">close</md-icon>
-          </button>
-        </div>
-        <div class="divider"></div>
-        <div class="notification read" fxLayout="row" fxLayoutAlign="start center" md-ripple>
-          <md-icon class="icon">code</md-icon>
-          <div class="title" fxLayout="column">
-            <div class="name">这是一条通知</div>
-            <div class="time">1 个小时之前</div>
-          </div>
-          <span fxFlex></span>
-          <button type="button" md-icon-button>
-            <md-icon class="close">close</md-icon>
-          </button>
-        </div>
-      <!--</perfect-scrollbar>-->
+      </perfect-scrollbar>
       <div class="footer" fxLayout="row" fxLayoutAlign="center center">
         <div class="action">查看所以通知</div>
       </div>
