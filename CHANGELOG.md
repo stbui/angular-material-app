@@ -1,5 +1,14 @@
 # Changelog
 
+## 2017.07.26
+
+### 优化
+- navigation，todo，mail 数据
+
+### 添加
+- github.io 环境
+
+
 ## 2017.07.20
 
 ### add
