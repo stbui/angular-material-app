@@ -11,7 +11,6 @@
     .active,
     &.active {
       background-color: mat-color($primary);
-      color: #fff;
     }
 
     &:hover {
@@ -20,7 +19,7 @@
       .active,
       &.active {
         background-color: mat-color($primary);
-        color: #fff;
+        color: mat-color($foreground, text);
       }
     }
   }
@@ -28,7 +27,7 @@
   .nav-title a {
     color: mat-color($primary);
     &:hover {
-      color: mat-color($primary, .9);
+      color: mat-color($primary, .8);
     }
   }
 }

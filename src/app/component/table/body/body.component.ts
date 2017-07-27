@@ -33,7 +33,7 @@ export class BodyComponent implements AfterViewInit {
   ngAfterViewInit() {
     const cells = this.tbody.nativeElement.children[0].children;
     setTimeout(() => {
-      for (let cell of cells) {
+      for (const cell of cells) {
         this.cellWidths.push({width: cell.offsetWidth});
       }
 

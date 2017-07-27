@@ -78,9 +78,6 @@ export class TableComponent implements OnInit {
   }
 
   ngAfterViewInit() {
-    setTimeout(() => {
-      this.setColumnsWidth();
-    }, 0);
   }
 
   setCellWidths(widths) {
@@ -89,28 +86,6 @@ export class TableComponent implements OnInit {
 
   getCellWidths() {
     return this.cellWidths;
-  }
-
-  setColumnsWidth() {
-    // let columnsWidth = [];
-    // if (this.data.length) {
-    // if (this.isRightFixed()) {
-    // const rightFixedColumns = this.rightFixedColumns();
-    // columnsWidth = rightFixedColumns.map(cell => {
-    //   return {width: cell.width}
-    // });
-    // } else {
-    //   const nativeElement = this.table.nativeElement;
-    //   const td = nativeElement.querySelectorAll('tbody td');
-    //
-    //   columnsWidth = this.columns.map((cell, index) => {
-    //     const width = this.getStyle(td[index], 'width');
-    //     return {width: parseInt(width)}
-    //   });
-    // }
-
-    // this.columnsWidth = columnsWidth;
-    // }
   }
 
   styles() {
