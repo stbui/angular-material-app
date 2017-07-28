@@ -22,6 +22,16 @@
         color: #fafafa;
       }
     }
+
+    sidenav-item.open {
+      > .sidenav-anchor {
+        background-color: rgba(0, 0, 0, .1);
+
+        &:before {
+          background: linear-gradient(180deg, rgba(0, 0, 0, .1), transparent);
+        }
+      }
+    }
   }
 
   .logo-text {

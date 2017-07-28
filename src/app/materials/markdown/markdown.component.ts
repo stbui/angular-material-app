@@ -10,9 +10,9 @@ export class MarkdownComponent implements OnInit {
 
   private markdown = '';
   private source = `
-# angular2-material2-admin-app
+# angular-material2-admin-app
 
-基于 Angular 2 框架与 Material2 设计开发一套面向后台通用模板库
+基于最新Angular 4框架与Material2技术的企业级通用管理系统快速开发框架，涵盖了大量的常用组件和基础功能，您可以快速开发各种MIS系统，如CMS、OA、CRM、ERP、POS等，最大程度上帮助企业节省时间成本和费用开支。
 
 ### 基本功能
 - 谷歌 Material 设计

@@ -14,7 +14,7 @@ const routers: Routes = [
   {path: 'sigin', component: SigninComponent},
   {path: 'sigup', component: SignupComponent},
   {
-    path:'pages',
+    path: 'pages',
     component: AdminComponent,
     children: [
       {
@@ -46,8 +46,8 @@ const routers: Routes = [
 ];
 
 @NgModule({
-  imports: [ RouterModule.forRoot(routers, {useHash: true}) ],
-  exports: [ RouterModule ],
+  imports: [RouterModule.forRoot(routers, {useHash: true})],
+  exports: [RouterModule],
   providers: []
 })
 

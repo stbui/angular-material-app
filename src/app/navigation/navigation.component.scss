@@ -3,9 +3,10 @@ $navigation-font-family: Roboto, 'Helvetica Neue', sans-serif !default;
 $navigation-font-size-base: 14px !default;
 $navigation-border-radius: 2px !default;
 
-:host {
-  display: block;
-  margin: 15px;
+
+md-card {
+  padding: 10px;
+  margin: 10px;
 }
 
 .nav-title {
@@ -18,7 +19,6 @@ $navigation-border-radius: 2px !default;
 
 .nav-desc {
   height: 150px;
-  min-height: 150px;
   overflow: hidden;
 }
 
@@ -34,11 +34,9 @@ $navigation-border-radius: 2px !default;
   border-bottom: none;
   font-size: $navigation-font-size-base;
   line-height: 28px;
-  color: #333;
 }
 
 .nav-category-item {
-  user-select: none;
   position: relative;
   display: inline-block;
   margin-right: 10px;
@@ -50,4 +48,8 @@ $navigation-border-radius: 2px !default;
   text-align: center;
   line-height: 28px;
   cursor: default;
+}
+
+.nav-category-title {
+  color: #333;
 }

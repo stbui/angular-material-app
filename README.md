@@ -8,14 +8,18 @@
 [![devDependency Status](https://img.shields.io/david/stbui/angular2-material2-bootstrap4-admin-app.svg?style=flat-square)](https://david-dm.org/stbui/angular2-material2-bootstrap4-admin-app?type=dev)
 [![Github All Releases](https://img.shields.io/github/downloads/stbui/angular2-material2-bootstrap4-admin-app/total.svg)](http://www.stbui.com)
 [![Join the chat at https://gitter.im/angular2-material2-bootstrap4-admin-app](https://badges.gitter.im/stbui/angular2-material2-bootstrap4-admin-app.svg)](https://gitter.im/angular2-material2-bootstrap4-admin-app/Lobby?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
-[![Sauce Test Status](https://saucelabs.com/browser-matrix/angular2-ci.svg)](https://saucelabs.com/u/angular2-ci)
+
 
 ### 平台环境
 
 [![Angular](https://img.shields.io/badge/Angular%204-4.0.0-brightgreen.svg?style=flat-square)](https://github.com/angular/angular)
-[![Angular-cli](https://img.shields.io/badge/Angular.cli-1.2.1-brightgreen.svg?style=square)](https://github.com/angular/angular-cli)
-[![Material 2](https://img.shields.io/badge/Material%202-2.0.0.beta.7-brightgreen.svg?style=square)](https://github.com/angular/material2)
+[![Angular-cli](https://img.shields.io/badge/Angular.cli-1.2.5-brightgreen.svg?style=square)](https://github.com/angular/angular-cli)
+[![Angular Mateiral 2](https://img.shields.io/badge/Material%202-2.0.0.beta.8-brightgreen.svg?style=square)](https://github.com/angular/material2)
 [![Flex-Layout](https://img.shields.io/badge/Flex.Layout-2.0.0.beta.8-brightgreen.svg?style=square)](https://github.com/angular/flex-layout)
+
+[![Scss](https://img.shields.io/badge/Scss-latest-brightgreen.svg?style=flat-square)](https://github.com/sass/sass)
+[![Typescript](https://img.shields.io/badge/Typescript-latest-brightgreen.svg?style=flat-square)](https://github.com/Microsoft/TypeScript)
+[![rxjs](https://img.shields.io/badge/rxjs-5.1.0-brightgreen.svg?style=flat-square)](https://github.com/Reactive-Extensions/RxJS)
 
 
 ### 基本功能
@@ -31,15 +35,6 @@
 - 通过 NPM 管理包
 - 跨浏览器支持
 - 免费更新
-
-
-### 技术栈
-
-[![Angular](https://img.shields.io/badge/Angular%204-4.0.0-brightgreen.svg?style=flat-square)](https://github.com/angular/angular)
-[![Angular Mateiral 2](https://img.shields.io/badge/Mateiral%202-latest-brightgreen.svg?style=square)](https://github.com/angular/material2)
-[![Scss](https://img.shields.io/badge/Scss-latest-brightgreen.svg?style=flat-square)](https://github.com/sass/sass)
-[![Typescript](https://img.shields.io/badge/Typescript-latest-brightgreen.svg?style=flat-square)](https://github.com/Microsoft/TypeScript)
-[![rxjs](https://img.shields.io/badge/rxjs-5.1.0-brightgreen.svg?style=flat-square)](https://github.com/Reactive-Extensions/RxJS)
 
 ![demo image](src/assets/images-demo/2017-04-07_202402.jpg)
 
@@ -57,11 +52,13 @@ npm run start
 http://127.0.0.1:4200
 ```
 
+
 ### 发布
 
 ```
 ng build --prod --aot --env=prod --extract-css
 ```
+
 
 ### Docker
 
@@ -75,20 +72,6 @@ docker run -d -P stbui/angular2-material2-admin-app
 ```
 docker run --rm --name angular2-material2-admin-app -v "$PWD":/usr/src/app -w /usr/src/app -p 4200:4200 -it node:latest bash -c "npm install && npm start"
 ```
-
-### 开发计划
-
-- [x] 分页
-- [x] MarkDown
-- [x] 高德地图
-- [x] echarts
-- [x] Date Pick
-- [ ] popover
-- [ ] Data Table
-- [ ] 集成 七牛云
-- [ ] 集成 阿里云
-- [ ] ckeditor
-- [ ] highcharts
 
 
 ### 依赖模块

@@ -7,22 +7,22 @@ import { ChartComponent } from './chart/chart.component';
 import { ChatsComponent } from './chats/chats.component';
 import { MailComponent } from './mail/mail.component';
 
-const routers:Routes = [
-  { path: '', redirectTo: '/apps/navigation', pathMatch: 'full' },
+const routers: Routes = [
+  {path: '', redirectTo: '/apps/navigation', pathMatch: 'full'},
   {
     path: '', component: AdminComponent,
     children: [
-      { path: '', component: DashboardComponent },
-      { path: 'dashboard', component: DashboardComponent },
-      { path: 'apps/chats', component: ChatsComponent },
-      { path: 'apps/mail', component: MailComponent },
-      { path: 'components/chart', component: ChartComponent }
+      {path: '', component: DashboardComponent},
+      {path: 'dashboard', component: DashboardComponent},
+      {path: 'apps/chats', component: ChatsComponent},
+      {path: 'apps/mail', component: MailComponent},
+      {path: 'components/chart', component: ChartComponent}
     ]
   }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routers, { useHash: true })],
+  imports: [RouterModule.forRoot(routers, {useHash: true})],
   exports: [RouterModule],
   providers: []
 })

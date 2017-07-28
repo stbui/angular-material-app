@@ -1,5 +1,5 @@
 <div class="toolbar-notification-container">
-  <button md-button (click)="toggleDropdown()" [ngClass]="[cssPrefix+'-btn']" [class.open]="isOpen">
+  <button md-icon-button (click)="toggleDropdown()" [ngClass]="[cssPrefix+'-btn']" [class.open]="isOpen">
     <md-icon>notifications_none</md-icon>
     <span class="badge">{{ notifications?.length }}</span>
   </button>

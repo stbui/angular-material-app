@@ -15,6 +15,7 @@ export class HeaderComponent implements OnInit {
     logo: 'stbui-primary'
   };
   @Input() customizer;
+  @Input() sidenav;
   isFullscreen: boolean = false;
 
   classes: any = {};

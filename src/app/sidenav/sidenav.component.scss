@@ -26,3 +26,11 @@ md-toolbar.mat-toolbar.sidenav-toolbar {
   }
 }
 
+.sidenav-footer {
+  border-top: 1px solid rgba(0, 0, 0, .1);
+  a {
+    background-color: rgba(0, 0, 0, .12);
+    color: rgba(255, 255, 255, .8)
+  }
+}
+

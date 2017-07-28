@@ -9,7 +9,7 @@
   </md-sidenav>
 
   <div class="sidenav-container" fxLayout="column">
-    <stbui-header [customizer]="customizer"></stbui-header>
+    <stbui-header [customizer]="customizer" [sidenav]="sidenav"></stbui-header>
 
     <div class="main-container" #scrollContainer>
       <router-outlet (activate)="onActivate($event, scrollContainer)"></router-outlet>

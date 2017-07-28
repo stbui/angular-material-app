@@ -1,5 +1,5 @@
 <div fxlayout="column">
-  <md-card class="widget">
+  <md-card>
     <md-card-content>
       <div class="nav-category">
         <div class="nav-category-title">专辑：</div>
@@ -11,10 +11,10 @@
 </div>
 
 <div fxlayout="row" fxLayoutWrap>
-  <div fxFlex="100" fxFlex.gt-md="20" fxFlex.gt-sm="33.3" fxFlex.gt-xs="50" *ngFor="let nav of navigations">
-    <md-card class="widget">
-      <md-card-title class="nav-title"><a href="{{ nav.link }}" target="_blank">{{ nav.title }}</a></md-card-title>
-      <md-card-content class="nav-desc">{{ nav.description }}</md-card-content>
+  <div fxFlex="100" fxFlex.gt-md="20" fxFlex.gt-sm="33.3" fxFlex.gt-xs="50" *ngFor="let navigation of navigations">
+    <md-card>
+      <md-card-title class="nav-title"><a href="{{ navigation.link }}" target="_blank">{{ navigation.title }}</a></md-card-title>
+      <md-card-content class="nav-desc">{{ navigation.description }}</md-card-content>
     </md-card>
   </div>
 </div>
