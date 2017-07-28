@@ -24,6 +24,7 @@ import { MaterialsModule } from './materials/materials.module';
 import { SidenavModule } from './sidenav/sidenav.module';
 import { ChartComponent } from './chart/chart.component';
 import { AdminComponent } from './admin/admin.component';
+import { ChartsModule } from 'ng2-charts';
 
 
 @NgModule({
@@ -52,7 +53,8 @@ import { AdminComponent } from './admin/admin.component';
     PagesModule,
     NavigationModule,
     MaterialsModule,
-    SidenavModule
+    SidenavModule,
+    ChartsModule
   ],
   bootstrap: [AppComponent]
 })

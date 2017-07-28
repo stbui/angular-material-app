@@ -11,6 +11,7 @@
     .active,
     &.active {
       background-color: mat-color($primary);
+      color: mat-color($background, card);
     }
 
     &:hover {

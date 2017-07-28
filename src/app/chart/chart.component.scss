@@ -3,5 +3,14 @@
 }
 
 md-card {
-  margin: 20px;
+  margin: 5px;
+  padding: 0;
+}
+
+md-card-title {
+  padding: 16px 24px;
+}
+
+md-card-content {
+  padding: 0 24px 24px 24px;
 }

@@ -1,0 +1,26 @@
+@mixin calendar-theme($theme) {
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+  $warn: map-get($theme, warn);
+  $background: map-get($theme, background);
+  $foreground: map-get($theme, foreground);
+
+  .stb-date-display {
+    background-color: mat-color($primary);
+  }
+
+  .stb-day-button-bg {
+    background-color: mat-color($primary);
+
+    .stb-day-button:hover &,
+    .stb-day-button.hover &{
+      opacity: 0.6;
+    }
+  }
+
+  .stb-day-button-text {
+    .stb-day-button.now &{
+      background-color: mat-color($primary);
+    }
+  }
+}

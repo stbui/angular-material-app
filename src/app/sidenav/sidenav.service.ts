@@ -20,10 +20,10 @@ export class SidenavService {
     this.addSubItem(materials, '卡片', '/materials/cards', 2);
     this.addSubItem(materials, '列表', '/materials/lists', 3);
     this.addSubItem(materials, '菜单', '/materials/menu', 3);
-    this.addSubItem(materials, 'Slider', '/materials/slider', 3);
+    this.addSubItem(materials, '滑块', '/materials/slider', 3);
     this.addSubItem(materials, 'Snack-Bar', '/materials/snackbar', 3);
     this.addSubItem(materials, 'Toast', '/materials/toast', 3);
-    this.addSubItem(materials, 'Tooltips', '/materials/tooltips', 3);
+    this.addSubItem(materials, '文字提示', '/materials/tooltips', 3);
     this.addSubItem(materials, '对话框', '/materials/dialogs', 3);
     this.addSubItem(materials, '标签页', '/materials/tabs', 3);
     this.addSubItem(materials, '分页', '/materials/pagination', 3);

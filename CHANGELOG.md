@@ -1,17 +1,15 @@
 # Changelog
 
 ## 2017.07.26
-
-### 优化
-- navigation，todo，mail 数据
-- 样式主题
-
-### 添加
-- github.io 环境
-
-#### 删除
-- *.spec,ts
-
+- **添加** github.io 环境
+- **添加** ng2-charts 图表库
+- **优化** navigation，todo，mail mock数据
+- **优化** 样式主题
+- **更新** @angular/material@2.0.0-beta.8
+- **更新** @angular/cli@1.2.5
+- **删除** *.spec.ts
+- **移除** echarts
+- **移除** angular-in-memory-web-api
 
 ## 2017.07.20
 

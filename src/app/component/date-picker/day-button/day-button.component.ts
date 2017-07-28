@@ -9,6 +9,7 @@ export class DayButtonComponent {
 
   @Input() date: any;
   @Output() onSelected = new EventEmitter();
+
   @Input()
   get selected() {
     return this.isNow();

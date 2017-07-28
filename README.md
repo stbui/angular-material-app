@@ -110,3 +110,6 @@ docker run --rm --name angular2-material2-admin-app -v "$PWD":/usr/src/app -w /u
 
 [angular-sortablejs](https://github.com/SortableJS/angular-sortablejs)
 - This package is an Angular 2 binding for Sortable.js. Supports standard arrays and Angular FormArray
+
+[ng2-charts](https://github.com/valor-software/ng2-charts)
+- Beautiful charts for Angular2 based on Chart.js

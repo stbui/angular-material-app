@@ -9,9 +9,11 @@ $candy-app-theme: mat-light-theme($candy-app-primary, $candy-app-accent, $candy-
 
 @import "./app/sidenav/sidenav.theme";
 @import "./app/component/pagination/pagination.theme";
+@import "./app/component/date-picker/date-picker.theme";
 @import "./app/navigation/navigation.theme";
 @include theme-skin($candy-app-theme);
 @include pagination-theme($candy-app-theme);
+@include calendar-theme($candy-app-theme);
 @include navigation-theme($candy-app-theme);
 
 html, body {
