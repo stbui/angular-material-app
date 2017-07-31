@@ -33,4 +33,5 @@ import { TodoListComponent } from './todo-list/todo-list.component';
     {provide: 'todoService', useClass: TodoService}
   ]
 })
-export class TodoModule {}
+export class TodoModule {
+}

@@ -9,12 +9,14 @@ import { TodoModel } from '../todo.model';
 export class TodoListComponent {
   _todos: TodoModel[] = [];
   @Input()
-  set todos(todos:TodoModel[]){
+  set todos(todos: TodoModel[]) {
     this._todos = [...todos];
   }
+
   get todos() {
     return this._todos;
   }
+
   @Output() onRemoveTodo = new EventEmitter<TodoModel>();
   @Output() onToggleTodo = new EventEmitter<TodoModel>();
   @Output() onToggleAll = new EventEmitter<boolean>();
@@ -22,9 +24,11 @@ export class TodoListComponent {
   onRemoveTriggered(todo: TodoModel) {
     this.onRemoveTodo.emit(todo);
   }
+
   onToggleTriggered(todo: TodoModel) {
     this.onToggleTodo.emit(todo);
   }
+
   onToggleAllTriggered() {
     this.onToggleAll.emit(true);
   }

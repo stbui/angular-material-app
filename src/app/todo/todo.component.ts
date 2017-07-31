@@ -14,10 +14,9 @@ export class TodoComponent implements OnInit {
   todos: Observable<TodoModel[]>;
   desc: string = '';
 
-  constructor(
-    @Inject('todoService') private service,
-    private router: ActivatedRoute,
-  ) { }
+  constructor(@Inject('todoService') private service,
+              private router: ActivatedRoute) {
+  }
 
   ngOnInit() {
     this.router.params
@@ -36,7 +35,7 @@ export class TodoComponent implements OnInit {
     this.service.toggleTodo(todo);
   }
 
-  removeTodo(todo:TodoModel) {
+  removeTodo(todo: TodoModel) {
     this.service.deleteTodo(todo);
   }
 

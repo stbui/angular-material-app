@@ -1,5 +1,5 @@
-import {Component, Input, Output, EventEmitter, ElementRef} from '@angular/core';
-import {Observable} from 'rxjs/Rx';
+import { Component, Input, Output, EventEmitter, ElementRef } from '@angular/core';
+import { Observable } from 'rxjs/Rx';
 import 'rxjs/Observable';
 import 'rxjs/add/operator/debounceTime';
 import 'rxjs/add/operator/distinctUntilChanged';

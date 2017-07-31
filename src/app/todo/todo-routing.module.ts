@@ -6,7 +6,7 @@ import { TodoComponent } from './todo.component';
 
 const routers: Routes = [
   {
-    path:'',
+    path: '',
     component: AdminComponent,
     children: [
       {
@@ -18,8 +18,8 @@ const routers: Routes = [
 ];
 
 @NgModule({
-  imports: [ RouterModule.forRoot(routers, {useHash: true}) ],
-  exports: [ RouterModule ],
+  imports: [RouterModule.forRoot(routers, {useHash: true})],
+  exports: [RouterModule],
   providers: []
 })
 

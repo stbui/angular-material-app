@@ -1,6 +1,6 @@
-<section fxlayout="column" *ngIf="todos?.length > 0">
-  <input class="toggle-all" type="checkbox" (click)="onToggleAllTriggered()">
-  <md-nav-list>
+<section class="todo-wrap" *ngIf="todos?.length > 0">
+  <!--<input class="toggle-all" type="checkbox" (click)="onToggleAllTriggered()">-->
+  <md-list class="todo-list">
     <md-list-item class="todo-list-item" *ngFor="let todo of todos" [class.completed]="todo.completed">
       <app-todo-item
         [isChecked]="todo.completed"
@@ -9,5 +9,5 @@
         [todoDesc]="todo.desc">
       </app-todo-item>
     </md-list-item>
-  </md-nav-list>
+  </md-list>
 </section>

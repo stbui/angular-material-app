@@ -1,4 +1,8 @@
-.todo-footer {
-  margin-top: 10px;
-  width: 100%;
+.todo-toolbar {
+  margin-top: 5px;
+  min-height: 50px;
+
+  .mat-toolbar-row {
+    height: 50px;
+  }
 }

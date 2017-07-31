@@ -30,7 +30,7 @@ export class SidenavService {
     this.addSubItem(materials, '日期选择器', '/materials/datepicker', 3);
     this.addSubItem(materials, '弹出框', '/materials/popover', 3);
 
-    const components = this.addItem('扩展组件', 'equalizer', null, 3);
+    const components = this.addItem('拓展组件', 'equalizer', null, 3);
     this.addSubItem(components, '高德地图', '/materials/amap', 1);
     this.addSubItem(components, 'Markdown', '/materials/markdown', 1);
     this.addSubItem(components, '图表', '/components/chart', 1);

@@ -24,6 +24,11 @@
     }
 
     sidenav-item.open {
+
+      > .sidenav-list {
+        background-color: rgba(0, 0, 0, .1);
+      }
+
       > .sidenav-anchor {
         background-color: rgba(0, 0, 0, .1);
 

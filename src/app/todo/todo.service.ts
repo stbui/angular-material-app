@@ -11,7 +11,7 @@ export class TodoService {
   private apiUrl = environment.todoApi;
   private headers = new Headers({'Content-Type': 'application/json'});
   private _todos: BehaviorSubject<TodoModel[]>;
-  private dataStore: {todos: TodoModel[]};
+  private dataStore: { todos: TodoModel[] };
 
   constructor(private http: Http) {
     this.dataStore = {todos: []};

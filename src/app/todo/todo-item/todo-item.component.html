@@ -1,8 +1,8 @@
-<div class="todo-item" md-line fxLayout="row" fxLayoutAlign="start center">
-  <input class="toggle" type="checkbox" (click)="toggle()" [checked]="isChecked">
-  <label [class.labelcompleted]="isChecked" (click)="toggle()">{{todoDesc}}</label>
+<div fxLayout="row" fxLayoutAlign="start center">
+  <md-radio-button [checked]="isChecked" (click)="toggle()"></md-radio-button>
+  <span>{{ todoDesc }}</span>
   <span fxFlex></span>
-  <button class="todo-item-delete" md-icon-button (click)="remove(); $event.stopPropagation()">
+  <button md-icon-button (click)="remove(); $event.stopPropagation()">
     <md-icon>delete</md-icon>
   </button>
 </div>
