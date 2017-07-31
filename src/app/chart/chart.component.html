@@ -1,54 +1,50 @@
 <div fxLayout="row" fxLayoutWrap>
   <div fxFlex.gt-sm="33.3">
     <md-card>
-      <md-card-title>charts</md-card-title>
+      <md-card-title>Line chart</md-card-title>
       <md-card-content>
-        <canvas baseChart width="400" height="400"
-                [datasets]="lineChartData"
-                [labels]="lineChartLabels"
-                [options]="lineChartOptions"
-                [colors]="lineChartColors"
-                [legend]="lineChartLegend"
-                [chartType]="lineChartType"
-                (chartHover)="chartHovered($event)"
-                (chartClick)="chartClicked($event)"></canvas>
+        <stbui-chart-line></stbui-chart-line>
       </md-card-content>
     </md-card>
   </div>
   <div fxFlex.gt-sm="33.3">
     <md-card>
-      <md-card-title>charts</md-card-title>
+      <md-card-title>Bar chart</md-card-title>
       <md-card-content>
-        <canvas baseChart width="400" height="400"
-                [datasets]="lineChartData"
-                [labels]="lineChartLabels"
-                [options]="lineChartOptions"
-                [colors]="lineChartColors"
-                [legend]="lineChartLegend"
-                [chartType]="lineChartType"
-                (chartHover)="chartHovered($event)"
-                (chartClick)="chartClicked($event)"></canvas>
+        <stbui-chart-bar></stbui-chart-bar>
       </md-card-content>
     </md-card>
   </div>
   <div fxFlex.gt-sm="33.3">
     <md-card>
-      <md-card-title>charts</md-card-title>
+      <md-card-title>Doughnut chart</md-card-title>
       <md-card-content>
-        <canvas baseChart width="400" height="400"
-                [datasets]="lineChartData"
-                [labels]="lineChartLabels"
-                [options]="lineChartOptions"
-                [colors]="lineChartColors"
-                [legend]="lineChartLegend"
-                [chartType]="lineChartType"
-                (chartHover)="chartHovered($event)"
-                (chartClick)="chartClicked($event)"></canvas>
+        <stbui-chart-doughnut></stbui-chart-doughnut>
+      </md-card-content>
+    </md-card>
+  </div>
+  <div fxFlex.gt-sm="33.3">
+    <md-card>
+      <md-card-title>Pie chart</md-card-title>
+      <md-card-content>
+        <stbui-chart-pie></stbui-chart-pie>
+      </md-card-content>
+    </md-card>
+  </div>
+  <div fxFlex.gt-sm="33.3">
+    <md-card>
+      <md-card-title>Radar chart</md-card-title>
+      <md-card-content>
+        <stbui-chart-radar></stbui-chart-radar>
+      </md-card-content>
+    </md-card>
+  </div>
+  <div fxFlex.gt-sm="33.3">
+    <md-card>
+      <md-card-title>Polar Area Chart</md-card-title>
+      <md-card-content>
+        <stbui-chart-polar></stbui-chart-polar>
       </md-card-content>
     </md-card>
   </div>
 </div>
-
-
-
-

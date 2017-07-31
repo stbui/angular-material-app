@@ -25,7 +25,7 @@
         "styles.scss"
       ],
       "scripts": [
-        "../node_modules/chart.js/src/chart.js"
+        "../node_modules/chart.js/dist/Chart.js"
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {
