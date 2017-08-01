@@ -5,9 +5,9 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --environment=prod --extract-css",
+    "build": "ng build --environment=prod --extract-css -prod",
     "build:github": "ng build --environment=github --extract-css --base-href=https://stbui.github.io/angular2-material2-bootstrap4-admin-app/",
-    "min": "ng build --environment=prod --extract-css --aot",
+    "min": "ng build --environment=prod --extract-css -prod --aot",
     "publish:github": "ngh",
     "test": "ng test",
     "lint": "ng lint",

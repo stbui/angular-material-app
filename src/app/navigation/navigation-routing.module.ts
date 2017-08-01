@@ -18,7 +18,7 @@ const routers: Routes = [
 ];
 
 @NgModule({
-  imports: [ RouterModule.forRoot(routers, {useHash: true}) ],
+  imports: [ RouterModule.forChild(routers) ],
   exports: [ RouterModule ],
   providers: []
 })

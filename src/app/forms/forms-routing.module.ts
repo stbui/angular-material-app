@@ -8,19 +8,19 @@ import { EditorComponent } from './editor/editor.component';
 
 const routers: Routes = [
   {
-    path:'',
+    path:'forms',
     component: AdminComponent,
     children: [
       {
-        path: 'forms/elements',
+        path: 'elements',
         component: ElementsComponent
       },
       {
-        path: 'forms/validation',
+        path: 'validation',
         component: ValidationComponent
       },
       {
-        path: 'forms/editor',
+        path: 'editor',
         component: EditorComponent
       }
     ]
@@ -28,7 +28,7 @@ const routers: Routes = [
 ];
 
 @NgModule({
-  imports: [ RouterModule.forRoot(routers, {useHash: true}) ],
+  imports: [ RouterModule.forChild(routers) ],
   exports: [ RouterModule ],
   providers: []
 })
