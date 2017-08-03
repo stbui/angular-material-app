@@ -36,7 +36,7 @@
 - 跨浏览器支持
 - 免费更新
 
-![demo image](src/assets/images-demo/20170802104620.jpg)
+![demo image](src/assets/images-demo/20170802104620.png)
 
 ### 使用入门
 
