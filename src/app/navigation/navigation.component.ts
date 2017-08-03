@@ -44,8 +44,6 @@ export class NavigationComponent implements OnInit {
   }
 
   setClassActive(id) {
-    if (this.nav_id == id) {
-      return true;
-    }
+      return this.nav_id === id;
   }
 }

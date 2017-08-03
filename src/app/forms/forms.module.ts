@@ -1,10 +1,7 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { MaterialModule } from '@angular/material';
-import { FlexLayoutModule } from '@angular/flex-layout';
-import { FormsModule }  from '@angular/forms';
+import { SharedModule } from '../shared/shared.module';
 import { QuillModule } from 'ngx-quill';
-import { RoutingModule } from './forms-routing.module';
+import { FormsRoutingModule } from './forms.routing';
 import { FormsComponent } from './forms.component';
 import { ElementsComponent } from './elements/elements.component';
 import { ValidationComponent } from './validation/validation.component';
@@ -12,12 +9,9 @@ import { EditorComponent } from './editor/editor.component';
 
 @NgModule({
   imports: [
-    CommonModule,
-    FormsModule,
-    FlexLayoutModule,
-    MaterialModule,
+    SharedModule,
     QuillModule,
-    RoutingModule
+    FormsRoutingModule
   ],
   declarations: [
     FormsComponent,
@@ -26,4 +20,5 @@ import { EditorComponent } from './editor/editor.component';
     EditorComponent
   ]
 })
-export class FormModule { }
+export class FormModule {
+}

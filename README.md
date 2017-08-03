@@ -1,13 +1,13 @@
 # 通用管理系统快速开发框架
 
-基于最新`Angular 4`框架与`Material2`技术的企业级通用管理系统快速开发框架，涵盖了大量的常用组件和基础功能，您可以快速开发各种MIS系统，如CMS、OA、CRM、ERP、POS等，最大程度上帮助企业节省时间成本和费用开支。
+基于最新`Angular 4`框架与`Material 2`技术的企业级通用管理系统快速开发框架，涵盖了大量的常用组件和基础功能，您可以快速开发各种MIS系统，如CMS、OA、CRM、ERP、POS等，最大程度上帮助企业节省时间成本和费用开支。
 
-[![Travis](https://travis-ci.org/stbui/angular2-material2-bootstrap4-admin-app.svg?branch=master)](https://travis-ci.org/stbui/angular2-material2-bootstrap4-admin-app)
-[![Docker Build Statu](https://img.shields.io/docker/build/stbui/angular2-material2-admin-app.svg?style=flat-square)](https://hub.docker.com/r/stbui/angular2-material2-admin-app/)
-[![Dependency Status](https://img.shields.io/david/stbui/angular2-material2-bootstrap4-admin-app.svg?style=flat-square)](https://david-dm.org/stbui/angular2-material2-bootstrap4-admin-app)
-[![devDependency Status](https://img.shields.io/david/stbui/angular2-material2-bootstrap4-admin-app.svg?style=flat-square)](https://david-dm.org/stbui/angular2-material2-bootstrap4-admin-app?type=dev)
-[![Github All Releases](https://img.shields.io/github/downloads/stbui/angular2-material2-bootstrap4-admin-app/total.svg)](http://www.stbui.com)
-[![Join the chat at https://gitter.im/angular2-material2-bootstrap4-admin-app](https://badges.gitter.im/stbui/angular2-material2-bootstrap4-admin-app.svg)](https://gitter.im/angular2-material2-bootstrap4-admin-app/Lobby?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
+[![Travis](https://travis-ci.org/stbui/angular-material-app.svg?branch=master)](https://travis-ci.org/stbui/angular-material-app)
+[![Docker Build Statu](https://img.shields.io/docker/build/stbui/angular-material-app.svg?style=flat-square)](https://hub.docker.com/r/stbui/angular-material-app/)
+[![Dependency Status](https://img.shields.io/david/stbui/angular-material-app.svg?style=flat-square)](https://david-dm.org/stbui/angular-material-app)
+[![devDependency Status](https://img.shields.io/david/stbui/angular-material-app.svg?style=flat-square)](https://david-dm.org/stbui/angular-material-app?type=dev)
+[![Github All Releases](https://img.shields.io/github/downloads/stbui/angular-material-app/total.svg)](http://www.stbui.com)
+[![Join the chat at https://gitter.im/angular-material-app](https://badges.gitter.im/stbui/angular-material-app.svg)](https://gitter.im/angular-material-app/Lobby?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
 
 
 ### 平台环境
@@ -36,14 +36,13 @@
 - 跨浏览器支持
 - 免费更新
 
-![demo image](src/assets/images-demo/2017-04-07_202402.jpg)
-
+![demo image](src/assets/images-demo/20170802104620.jpg)
 
 ### 使用入门
 
 ```
-git clone https://github.com/stbui/angular2-material2-bootstrap4-admin-app.git
-cd angular2-material2-bootstrap4-admin-app
+git clone https://github.com/stbui/angular-material-app.git
+cd angular-material-app
 npm install
 npm run start
 ```
@@ -65,12 +64,12 @@ ng build --prod --aot --env=prod --extract-css
 快速部署
 
 ```
-docker pull stbui/angular2-material2-admin-app
-docker run -d -P stbui/angular2-material2-admin-app
+docker pull stbui/angular-material-app
+docker run -d -P stbui/angular-material-app
 ```
 或
 ```
-docker run --rm --name angular2-material2-admin-app -v "$PWD":/usr/src/app -w /usr/src/app -p 4200:4200 -it node:latest bash -c "npm install && npm start"
+docker run --rm --name angular-material-app -v "$PWD":/usr/src/app -w /usr/src/app -p 4200:4200 -it node:latest bash -c "npm install && npm start"
 ```
 
 

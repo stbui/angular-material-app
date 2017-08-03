@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { MaterialModule } from '@angular/material';
-import { FlexLayoutModule } from '@angular/flex-layout';
+import { SharedModule } from '../shared/shared.module';
+import { HttpModule } from '@angular/http';
 
 import { HeaderComponent } from './header.component';
 import { ToolbarUserComponent } from './toolbar-user/toolbar-user.component';
@@ -16,10 +15,9 @@ const perfectScrollbarConfig: PerfectScrollbarConfigInterface = {
 
 @NgModule({
   imports: [
-    CommonModule,
-    MaterialModule,
-    FlexLayoutModule,
-    PerfectScrollbarModule
+    SharedModule,
+    PerfectScrollbarModule,
+    HttpModule
   ],
   declarations: [
     HeaderComponent,

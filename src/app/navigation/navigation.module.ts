@@ -1,29 +1,22 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { HttpModule } from '@angular/http';
-import { MaterialModule } from '@angular/material';
-import { FlexLayoutModule } from '@angular/flex-layout';
+import { SharedModule } from '../shared/shared.module';
 
-import { ComponentModule } from '../component/component.module';
-import { RoutingModule } from './navigation-routing.module';
-import { NavigationService } from './navigation.service';
 import { NavigationComponent } from './navigation.component';
-
+import { NavigationRoutingModule } from './navigation.routing';
+import { NavigationService } from './navigation.service';
+import { ComponentModule } from '../component/component.module';
 
 @NgModule({
   imports: [
-    CommonModule,
     HttpModule,
-    FlexLayoutModule,
-    MaterialModule,
-    RoutingModule,
+    SharedModule,
+    NavigationRoutingModule,
     ComponentModule
   ],
-  declarations: [
-    NavigationComponent
-  ],
+  declarations: [NavigationComponent],
   providers: [
-    { provide: 'NavigationService', useClass: NavigationService }
-  ]
+  { provide: 'NavigationService', useClass: NavigationService }
+]
 })
 export class NavigationModule { }

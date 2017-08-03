@@ -1,10 +1,7 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { MdCardModule, MdInputModule, MdCheckboxModule, MdButtonModule, MdIconModule } from '@angular/material';
-import { FlexLayoutModule } from '@angular/flex-layout';
+import { SharedModule } from '../shared/shared.module';
 
-import { RoutingModule } from './pages-routing.module';
+import { PagesRoutingModule } from './pages.routing.';
 import { PagesComponent } from './pages.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
@@ -13,21 +10,12 @@ import { BlogComponent } from './blog/blog.component';
 import { ProfileComponent } from './profile/profile.component';
 import { CollectionComponent } from './collection/collection.component';
 import { UserComponent } from './user/user.component';
-import { SignupComponent } from './signup/signup.component';
-import { SigninComponent } from './signin/signin.component';
 
 
 @NgModule({
   imports: [
-    CommonModule,
-    FormsModule,
-    FlexLayoutModule,
-    MdCardModule,
-    MdInputModule,
-    MdCheckboxModule,
-    MdButtonModule,
-    MdIconModule,
-    RoutingModule
+    SharedModule,
+    PagesRoutingModule
   ],
   declarations: [
     PagesComponent,
@@ -37,9 +25,7 @@ import { SigninComponent } from './signin/signin.component';
     CollectionComponent,
     BlogComponent,
     ProfileComponent,
-    UserComponent,
-    SignupComponent,
-    SigninComponent
+    UserComponent
   ]
 })
 export class PagesModule { }

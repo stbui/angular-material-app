@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MaterialComponentsModule } from './material.module';
 import { FormsModule } from '@angular/forms';
-import { RoutingModule } from './componebt-routing.module';
 import { ComponentComponent } from './component.component';
 
 import { DatePickerComponent } from './date-picker/date-picker.component';
@@ -29,8 +28,7 @@ import { BodyComponent } from './table/body/body.component';
   imports: [
     CommonModule,
     MaterialComponentsModule,
-    FormsModule,
-    RoutingModule
+    FormsModule
   ],
   declarations: [
     DatePickerComponent,

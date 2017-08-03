@@ -1,0 +1,162 @@
+.section-container {
+  background-color: #009688;
+  height: 500px;
+  color: #fff;
+  padding: 0 20px;
+
+  .content {
+    margin-top: 20px;
+  }
+}
+
+.home-logo {
+  a {
+    font-size: 28px;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  margin: 20px 0 0 40px;
+}
+
+.nav {
+  display: flex;
+
+  li {
+    display: flex;
+    padding: 10px 20px;
+
+    a {
+      text-decoration: none;
+      text-align: center;
+      color: #fff;
+    }
+  }
+}
+
+.product-container {
+  background-color: #f6f6f6;
+  color: #fff;
+  padding: 20px;
+
+  .product-card {
+    margin-bottom: 40px;
+  }
+  .product-title,
+  .product-subtitle {
+    text-align: center;
+    color: #333;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  .product-title {
+    font-size: 26px;
+
+  }
+
+  md-card {
+    margin: 0 10px;
+  }
+
+  .list-avatar-icon {
+    font-size: 40px;
+  }
+
+}
+
+.dual-bg {
+  background: #474d5d;
+  background: -moz-linear-gradient(left, #474d5d 0%, #383c49 50%, #474d5d 50%, #383c49 100%);
+  background: -webkit-linear-gradient(left, #474d5d 0%, #383c49 50%, #474d5d 50%, #383c49 100%);
+  background: linear-gradient(to right, #474d5d 0%, #383c49 50%, #474d5d 50%, #383c49 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#474d5d', endColorstr='#383c49', GradientType=1);
+}
+
+.advantage-card {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.footer {
+  padding: 30px 0 30px;
+  background: #2f3d4a;
+  color: #8f9aa5;
+}
+
+.footer-copyright {
+
+}
+
+h2, h4 {
+  color: #313743;
+  margin: 10px 0;
+}
+
+h4 {
+  line-height: 22px;
+  font-size: 18px;
+  margin-top: 30px;
+}
+
+p {
+  color: #838ea5;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.fix-width {
+  width: 100%;
+  max-width: 1270px;
+  margin: 0 auto;
+}
+
+.m-10 {
+  margin: 10px;
+}
+
+.m-20 {
+  margin: 20px;
+}
+
+.m-b-20 {
+  margin-bottom: 20px;
+}
+
+.m-t-20 {
+  margin-top: 20px;
+}
+
+.m-t-40 {
+  margin-top: 40px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-white {
+  color: #fff;
+}
+
+//button
+.stbui-button {
+  &-lg {
+    padding: 6px 90px;
+    font-size: 20px;
+  }
+}
+
+.stbui-button-outline {
+  border: 1px solid #3f51b5;
+  color: #3f51b5;
+
+  &:hover {
+    background-color: #3f51b5;
+    color: #fff;
+  }
+}
+
+.stbui-button-block {
+  width: 100%;
+}

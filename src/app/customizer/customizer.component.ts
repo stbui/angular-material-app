@@ -1,5 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { CustomizerService } from './customizer.service';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'stbui-customizer',
@@ -8,23 +7,9 @@ import { CustomizerService } from './customizer.service';
 })
 export class CustomizerComponent implements OnInit {
 
-  @Output() themeChanges = new EventEmitter<any>()
-
-  isOpen: boolean = false;
-  isChecked: boolean = false;
-  colorOptions;
-
-  constructor(private _customizerService: CustomizerService) { }
+  constructor() {
+  }
 
   ngOnInit() {
-    this.colorOptions = this._customizerService.getTheme();
-  }
-
-  toggleQuickview() {
-    this.isOpen = this._customizerService.toggleQuickview();
-  }
-
-  onClick(theme) {
-    this.themeChanges.emit(theme);
   }
 }

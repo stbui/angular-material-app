@@ -1,7 +1,7 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "project": {
-    "name": "angular-material2-admin-app"
+    "name": "angular-material-app"
   },
   "apps": [
     {
@@ -20,8 +20,8 @@
       "prefix": "app",
       "styles": [
         "../node_modules/normalize.css/normalize.css",
-        "../node_modules/quill/dist/quill.snow.css",
         "../node_modules/material-design-icons/iconfont/material-icons.css",
+        "../node_modules/quill/dist/quill.snow.css",
         "styles.scss"
       ],
       "scripts": [
@@ -42,13 +42,16 @@
   },
   "lint": [
     {
-      "project": "src/tsconfig.app.json"
+      "project": "src/tsconfig.app.json",
+      "exclude": "**/node_modules/**"
     },
     {
-      "project": "src/tsconfig.spec.json"
+      "project": "src/tsconfig.spec.json",
+      "exclude": "**/node_modules/**"
     },
     {
-      "project": "e2e/tsconfig.e2e.json"
+      "project": "e2e/tsconfig.e2e.json",
+      "exclude": "**/node_modules/**"
     }
   ],
   "test": {
@@ -58,7 +61,6 @@
   },
   "defaults": {
     "styleExt": "scss",
-    "component": {
-    }
+    "component": {}
   }
 }

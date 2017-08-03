@@ -17,8 +17,6 @@ $candy-app-theme: mat-light-theme($candy-app-primary, $candy-app-accent, $candy-
 @include navigation-theme($candy-app-theme);
 
 html, body {
-  margin: 0;
-  padding: 0;
   min-height: 100%;
   height: 100%;
   line-height: normal;
@@ -32,38 +30,7 @@ html, body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-div {
-  box-sizing: border-box;
-}
-
 md-sidenav-container {
-  height: 100%;
-}
-
-.avatar-flex {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  flex-shrink: 0;
-}
-
-.widget {
-  margin: 12px;
-}
-
-.avatar {
-  width: 40px;
-  min-width: 40px;
-  height: 40px;
-  line-height: 40px;
-  border-radius: 50%;
-  text-align: center;
-}
-
-.quickpanel .mat-tab-body-content,
-.quickpanel .mat-tab-body-wrapper,
-.quickpanel md-tab-body,
-.quickpanel md-tab-group {
   height: 100%;
 }
 

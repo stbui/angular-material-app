@@ -14,7 +14,7 @@ export class SidenavService {
   currentlyOpen$: Observable<SidenavItem[]> = this._currentlyOpenSubject.asObservable();
 
   constructor() {
-    const dashboard = this.addItem('主页', 'home', '/', 1);
+    const dashboard = this.addItem('主页', 'home', '/home', 1);
     const materials = this.addItem('UI元素', 'bubble_chart', null, 3);
     this.addSubItem(materials, '按钮', '/materials/buttons', 1);
     this.addSubItem(materials, '卡片', '/materials/cards', 2);
@@ -46,11 +46,11 @@ export class SidenavService {
     this.addSubItem(tables, 'Data Tables', '/tables/datatable', 2);
 
     const pages = this.addItem('页面', 'content_copy', null, 7);
-    this.addSubItem(pages, '关于', '/pages/about', 1);
-    this.addSubItem(pages, '服务', '/pages/services', 1);
-    this.addSubItem(pages, '联系', '/pages/contact', 1);
-    this.addSubItem(pages, '团队', '/pages/terms', 1);
-    this.addSubItem(pages, '反馈', '/pages/faqs', 1);
+    // this.addSubItem(pages, '关于', '/pages/about', 1);
+    // this.addSubItem(pages, '服务', '/pages/services', 1);
+    // this.addSubItem(pages, '联系', '/pages/contact', 1);
+    // this.addSubItem(pages, '团队', '/pages/terms', 1);
+    // this.addSubItem(pages, '反馈', '/pages/faqs', 1);
     this.addSubItem(pages, '团队管理', '/', 1);
     this.addSubItem(pages, '项目管理', '/', 1);
     this.addSubItem(pages, '联系人', '/', 1);

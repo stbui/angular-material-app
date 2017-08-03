@@ -1,0 +1,20 @@
+.stbui-button {
+  &-lg {
+    padding: 6px 90px;
+    font-size: 20px;
+  }
+}
+
+.stbui-button-outline {
+  border: 1px solid #3f51b5;
+  color: #3f51b5;
+
+  &:hover {
+    background-color: #3f51b5;
+    color: #fff;
+  }
+}
+
+.stbui-button-block {
+  width: 100%;
+}

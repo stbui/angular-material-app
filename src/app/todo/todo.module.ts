@@ -1,11 +1,8 @@
-import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
-import { FormsModule } from '@angular/forms';
-import { MaterialModule } from '@angular/material';
-import { FlexLayoutModule } from '@angular/flex-layout';
+import { SharedModule } from '../shared/shared.module';
 
-import { RoutingModule } from './todo-routing.module'
+import { TodoRoutingModule } from './todo.routing';
 import { TodoComponent } from './todo.component';
 import { TodoService } from './todo.service';
 import { TodoFooterComponent } from './todo-footer/todo-footer.component';
@@ -15,12 +12,9 @@ import { TodoListComponent } from './todo-list/todo-list.component';
 
 @NgModule({
   imports: [
-    CommonModule,
-    FormsModule,
     HttpModule,
-    MaterialModule,
-    FlexLayoutModule,
-    RoutingModule
+    SharedModule,
+    TodoRoutingModule
   ],
   declarations: [
     TodoComponent,

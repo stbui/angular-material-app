@@ -1,7 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { MaterialModule } from '@angular/material';
-import { FlexLayoutModule } from '@angular/flex-layout';
+import { SharedModule } from '../shared/shared.module';
 import { ChartsModule } from 'ng2-charts';
 
 import { ChartComponent } from './chart.component';
@@ -11,13 +9,13 @@ import { DoughnutComponent } from './doughnut/doughnut.component';
 import { RadarComponent } from './radar/radar.component';
 import { PieComponent } from './pie/pie.component';
 import { PolarComponent } from './polar/polar.component';
+import { ChartRoutingModule } from './chart.routing';
 
 @NgModule({
   imports: [
-    CommonModule,
+    SharedModule,
     ChartsModule,
-    MaterialModule,
-    FlexLayoutModule
+    ChartRoutingModule
   ],
   declarations: [
     ChartComponent,

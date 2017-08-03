@@ -1,25 +1,21 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { MaterialModule } from '@angular/material';
-import { FlexLayoutModule } from '@angular/flex-layout';
-import { RoutingModule } from './app-routing.module';
+import { SharedModule } from '../shared/shared.module';
+import { RouterModule } from '@angular/router';
 
 import { SidenavComponent } from './sidenav.component';
 import { ItemComponent } from './item/item.component';
 import { SidenavService } from './sidenav.service';
 
 
-import { PerfectScrollbarModule, PerfectScrollbarConfigInterface } from "angular2-perfect-scrollbar";
+import { PerfectScrollbarModule, PerfectScrollbarConfigInterface } from 'angular2-perfect-scrollbar';
 const perfectScrollbarConfig: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
 };
 
 @NgModule({
   imports: [
-    CommonModule,
-    MaterialModule,
-    FlexLayoutModule,
-    RoutingModule,
+    SharedModule,
+    RouterModule,
     PerfectScrollbarModule.forRoot(perfectScrollbarConfig),
   ],
   declarations: [
@@ -33,4 +29,5 @@ const perfectScrollbarConfig: PerfectScrollbarConfigInterface = {
     {provide: 'sidenavService', useClass: SidenavService}
   ]
 })
-export class SidenavModule { }
+export class SidenavModule {
+}

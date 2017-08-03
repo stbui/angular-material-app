@@ -1,10 +1,8 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { MaterialModule } from '@angular/material';
-import { FlexLayoutModule } from '@angular/flex-layout';
-import { ComponentModule } from '../component/component.module'
+import { SharedModule } from '../shared/shared.module';
+import { ComponentModule } from '../component/component.module';
 
-import { RoutingModule } from './materials-routing.module';
+import { MaterialsRoutingModule } from './materials.routing';
 import { ToastComponent } from './toast/toast.component';
 import { ButtonsComponent } from './buttons/buttons.component';
 import { CardsComponent } from './cards/cards.component';
@@ -22,11 +20,9 @@ import { PopoverComponent } from './popover/popover.component';
 
 @NgModule({
   imports: [
-    CommonModule,
-    MaterialModule,
-    FlexLayoutModule,
+    SharedModule,
     ComponentModule,
-    RoutingModule
+    MaterialsRoutingModule
   ],
   declarations: [
     ToastComponent,
