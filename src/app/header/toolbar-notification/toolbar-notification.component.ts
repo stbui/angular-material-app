@@ -33,7 +33,7 @@ export class ToolbarNotificationComponent {
   }
 
   select() {
-    this.notifications = this.service.select();
+    this.notifications = [];
   }
 
   delete(notification) {

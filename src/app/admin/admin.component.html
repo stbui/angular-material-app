@@ -1,11 +1,11 @@
 <md-sidenav-container>
 
   <md-sidenav class="customizer" align="end" mode="over" #customizer>
-    <stbui-customizer></stbui-customizer>
+    <stbui-customizer (theme)="onTheme($event)"></stbui-customizer>
   </md-sidenav>
 
   <md-sidenav class="sidenav" align="start" mode="side" opened="true" #sidenav>
-    <app-sidenav></app-sidenav>
+    <app-sidenav [theme]="theme"></app-sidenav>
   </md-sidenav>
 
   <div class="sidenav-container" fxLayout="column">

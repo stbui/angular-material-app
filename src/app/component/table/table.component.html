@@ -1,71 +1,14 @@
-<div [ngClass]="[prefixCls+'table-wrapper']" [ngStyle]="styles()" #table>
-  <div [ngClass]="[prefixCls+'table',prefixCls+'table-border']">
-    <div [ngClass]="[prefixCls+'table-header']" #header>
-      <stbui-table-head
-        [columns]="cloneColumns"
-        [data]="data"
-        [objData]="objData"
-        [styleObject]="tableStyle()"
-        [columnsWidth]="columnsWidth"
-        [cellWidths]="getCellWidths()"
-      ></stbui-table-head>
-    </div>
-    <div [ngClass]="[prefixCls+'table-body']" [ngStyle]="bodyStyle()" (scroll)="handleBodyScroll($event)">
-      <stbui-table-body
-        [columns]="cloneColumns"
-        [data]="data"
-        [objData]="objData"
-        [styleObject]="tableStyle()"
-        [columnsWidth]="columnsWidth"
-        (onCellWidths)="setCellWidths($event)"
-      ></stbui-table-body>
-    </div>
-
-    <div [ngClass]="[prefixCls+'table-fixed']" *ngIf="isLeftFixed()" [ngStyle]="fixedTableStyle()">
-      <div [ngClass]="[prefixCls+'table-fixed-header']">
-        <stbui-table-head
-          [columns]="leftFixedColumns()"
-          [data]="data"
-          [objData]="objData"
-          [styleObject]="fixedTableStyle()"
-          [columnsWidth]="columnsWidth"
-          fixed="left"
-        ></stbui-table-head>
-      </div>
-      <div [ngClass]="[prefixCls+'table-fixed-body']">
-        <stbui-table-body
-          [columns]="leftFixedColumns()"
-          [data]="data"
-          [objData]="objData"
-          [styleObject]="fixedTableStyle()"
-          [columnsWidth]="columnsWidth"
-          fixed="left"
-        ></stbui-table-body>
-      </div>
-    </div>
-
-    <div [ngClass]="[prefixCls+'table-fixed-right']" *ngIf="isRightFixed()" [ngStyle]="fixedRightTableStyle()">
-      <div [ngClass]="[prefixCls+'table-fixed-header']">
-        <stbui-table-head
-          [columns]="rightFixedColumns()"
-          [data]="data"
-          [objData]="objData"
-          [styleObject]="fixedRightTableStyle()"
-          [columnsWidth]="columnsWidth"
-          fixed="right"
-        ></stbui-table-head>
-      </div>
-      <div [ngClass]="[prefixCls+'table-fixed-body']">
-        <stbui-table-body
-          [columns]="rightFixedColumns()"
-          [data]="data"
-          [objData]="objData"
-          [styleObject]="fixedRightTableStyle()"
-          [columnsWidth]="columnsWidth"
-          fixed="right"
-        ></stbui-table-body>
-      </div>
-    </div>
-
-  </div>
-</div>
+<table class="table table-bordered">
+  <thead>
+  <tr>
+    <th *ngFor="let column of columns">{{ column.title }}</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let row of data">
+    <td *ngFor="let column of columns">
+      {{ row[column.key] }}
+    </td>
+  </tr>
+  </tbody>
+</table>
