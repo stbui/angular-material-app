@@ -24,17 +24,17 @@ export class CustomizerComponent implements OnInit {
       logo: 'stbui-default'
     },
     primary: {
-      header: 'stbui-white',
+      header: 'stbui-primary',
       aside: 'stbui-primary',
       logo: 'stbui-primary'
     },
     accent: {
-      header: 'stbui-white',
+      header: 'stbui-accent',
       aside: 'stbui-accent',
       logo: 'stbui-accent'
     },
     warn: {
-      header: 'stbui-white',
+      header: 'stbui-warn',
       aside: 'stbui-warn',
       logo: 'stbui-warn'
     }

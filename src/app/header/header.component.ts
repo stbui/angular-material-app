@@ -18,8 +18,6 @@ export class HeaderComponent implements OnInit {
   @Input() sidenav;
   isFullscreen: boolean = false;
 
-  classes: any = {};
-
   constructor() {
   }
 
