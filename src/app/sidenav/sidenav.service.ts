@@ -43,7 +43,7 @@ export class SidenavService {
 
     const tables = this.addItem('表格', 'list', null, 5);
     this.addSubItem(tables, '基本表格', '/tables/static', 1);
-    this.addSubItem(tables, 'Data Tables', '/tables/datatable', 2);
+    this.addSubItem(tables, '数据表格', '/tables/datatable', 2);
 
     const pages = this.addItem('页面', 'content_copy', null, 7);
     // this.addSubItem(pages, '关于', '/pages/about', 1);
