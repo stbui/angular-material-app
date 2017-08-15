@@ -1,4 +1,5 @@
-import { Component, ElementRef, HostListener, Inject } from '@angular/core';
+import { Component, ElementRef, HostListener, Inject, ViewChild } from '@angular/core';
+import { PerfectScrollbarComponent, PerfectScrollbarDirective, PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 
 
 @Component({
@@ -12,6 +13,10 @@ export class ToolbarNotificationComponent {
   cssPrefix = 'toolbar-notification';
   isOpen: boolean = false;
   notifications = [];
+
+  public config: PerfectScrollbarConfigInterface = {suppressScrollX: true};
+  @ViewChild(PerfectScrollbarComponent) componentScroll: PerfectScrollbarComponent;
+  @ViewChild(PerfectScrollbarDirective) directiveScroll: PerfectScrollbarDirective;
 
   @HostListener('document:click', ['$event', '$event.target']) onClick(event: MouseEvent, targetElement: HTMLElement) {
     if (!targetElement) {
@@ -33,7 +38,7 @@ export class ToolbarNotificationComponent {
   }
 
   select() {
-    this.notifications = [];
+    this.notifications = this.service.select();
   }
 
   delete(notification) {

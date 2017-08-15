@@ -5,6 +5,13 @@
 * **框架：** 升级到`angular 5`
 
 
+# 0.4.6 (2017.08.18)
+
+### 问题修改
+
+* angular2-perfect-scrollbar 更换为 ngx-perfect-scrollbar
+
+
 # 0.4.5 (2017.08.11)
 
 

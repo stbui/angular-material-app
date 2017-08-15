@@ -12,31 +12,31 @@ export class ToolbarNotificationService {
     this.notifications = [
       {
         id: 'id',
-        title: '这是一条通知',
+        title: '计划升级到angular 5',
         lastTime: '23 分钟之前',
         state: 'state'
       },
       {
         id: 'id',
-        title: '这是一条通知',
+        title: '0.4.5 版本更新记录',
         lastTime: '23 分钟之前',
         state: 'state'
       },
       {
         id: 'id',
-        title: '这是一条通知',
+        title: '优化项目结构',
         lastTime: '23 分钟之前',
         state: 'state'
       },
       {
         id: 'id',
-        title: '这是一条通知',
+        title: '添加base框架分支',
         lastTime: '23 分钟之前',
         state: 'state'
       },
       {
         id: 'id',
-        title: '这是一条通知',
+        title: '框架搭建完成',
         lastTime: '23 分钟之前',
         state: 'state'
       }

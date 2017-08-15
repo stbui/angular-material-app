@@ -6,9 +6,9 @@ import { SidenavComponent } from './sidenav.component';
 import { ItemComponent } from './item/item.component';
 import { SidenavService } from './sidenav.service';
 
-
-import { PerfectScrollbarModule, PerfectScrollbarConfigInterface } from 'angular2-perfect-scrollbar';
-const perfectScrollbarConfig: PerfectScrollbarConfigInterface = {
+import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
+import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
+const PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
 };
 
@@ -16,7 +16,7 @@ const perfectScrollbarConfig: PerfectScrollbarConfigInterface = {
   imports: [
     SharedModule,
     RouterModule,
-    PerfectScrollbarModule.forRoot(perfectScrollbarConfig),
+    PerfectScrollbarModule.forRoot(PERFECT_SCROLLBAR_CONFIG),
   ],
   declarations: [
     SidenavComponent,

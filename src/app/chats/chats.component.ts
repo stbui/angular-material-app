@@ -1,5 +1,5 @@
-import {Component, OnInit, ViewChild, ViewEncapsulation, Inject, ElementRef} from '@angular/core';
-import {PerfectScrollbarComponent} from "angular2-perfect-scrollbar";
+import { Component, OnInit, ViewEncapsulation, Inject } from '@angular/core';
+
 
 @Component({
   selector: 'app-chats',
@@ -11,8 +11,6 @@ export class ChatsComponent implements OnInit {
 
   chats: any[];
   activeChat: any;
-
-  @ViewChild('chatScroll') private chatScroll: PerfectScrollbarComponent;
 
   constructor(@Inject('ChatsService') private service) {
   }
