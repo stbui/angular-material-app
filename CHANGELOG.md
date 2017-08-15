@@ -7,9 +7,15 @@
 
 # 0.4.6 (2017.08.18)
 
+
 ### 问题修改
 
 * angular2-perfect-scrollbar 更换为 ngx-perfect-scrollbar
+
+
+### 功能优化
+
+* **table：** 
 
 
 # 0.4.5 (2017.08.11)

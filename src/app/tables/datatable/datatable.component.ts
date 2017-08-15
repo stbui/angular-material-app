@@ -8,17 +8,13 @@ import { Component, OnInit, Inject } from '@angular/core';
 export class DatatableComponent implements OnInit {
 
   columnsDemo;
+  selectData;
 
-  constructor( @Inject('dataTableService') private service) {
+  constructor(@Inject('dataTableService') private service) {
     this.service.select();
 
     this.columnsDemo = {
       columns: [
-        // {
-        //   type: 'selection',
-        //   width: 60,
-        //   align: 'center'
-        // },
         {
           title: '姓名',
           key: 'name',
@@ -78,6 +74,11 @@ export class DatatableComponent implements OnInit {
         }
       ],
       columns2: [
+        {
+          type: 'selection',
+          width: 60,
+          align: 'center'
+        },
         {
           title: '姓名',
           key: 'name',
@@ -169,6 +170,10 @@ export class DatatableComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  onSelectChange($event) {
+    this.selectData = $event;
   }
 
 }

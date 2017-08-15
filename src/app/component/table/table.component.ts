@@ -36,6 +36,7 @@ export class TableComponent implements OnInit {
   @Input() disabledHover: boolean = true;
   // 是否支持高亮选中的行，即单选
   @Input() highlightRow: boolean = false;
+  @Input() tableSize: string = 'default';
 
   @Output() onCurrentChange = new EventEmitter();
   @Output() onSelect = new EventEmitter();
@@ -67,6 +68,9 @@ export class TableComponent implements OnInit {
 
   cellWidths;
 
+  checkboxSelection = [];
+  checked: boolean = false;
+
 
   constructor(private element: ElementRef, private renderer: Renderer2) {
 
@@ -88,18 +92,6 @@ export class TableComponent implements OnInit {
     return this.cellWidths;
   }
 
-  styles() {
-    let style = {};
-    // if (this.height) {
-    //   style['height'] = `${this.height}px`;
-    // }
-
-    if (this.width) {
-      style['width'] = `${this.width}px`;
-    }
-
-    return style;
-  }
 
   getStyle(element, property) {
     if (element && property) {
@@ -119,14 +111,9 @@ export class TableComponent implements OnInit {
 
     return {
       width: `${this.tableWidth}px`
-    }
+    };
   }
 
-  bodyStyle() {
-    return {
-      height: `${this.height}px`
-    }
-  }
 
   fixedHeader() {
 
@@ -260,4 +247,44 @@ export class TableComponent implements OnInit {
     return data;
   }
 
+  styles() {
+    const style = {};
+    // if (this.height) {
+    //   style['height'] = `${this.height}px`;
+    // }
+
+    if (this.width) {
+      style['width.px'] = this.width;
+    }
+
+    return style;
+  }
+
+  bodyStyle() {
+    return {
+      'height.px': this.height
+    };
+  }
+
+  /*
+   * 事件
+   * */
+  onCheckBoxTrigger($event, row) {
+    if ($event.checked) {
+      this.checkboxSelection.push(row);
+    } else {
+      this.checkboxSelection = this.checkboxSelection.filter((source) => source !== row);
+    }
+    this.onSelectChange.emit(this.checkboxSelection);
+  }
+
+  onCheckBoxAllTrigger($event) {
+    if ($event.checked) {
+      this.checkboxSelection = this.data;
+    } else {
+      this.checkboxSelection = [];
+    }
+
+    this.onSelectAll.emit(this.checkboxSelection);
+  }
 }

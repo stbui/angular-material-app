@@ -1,171 +1,36 @@
-
-<div class="main-datatable mat-elevation-z2" fxLayout="column">
-
+<div class="main-static">
   <md-card>
     <md-card-title>Base Table</md-card-title>
     <md-card-content>
-      <table class="table">
-        <thead>
-        <tr>
-          <th></th>
-          <th>APP</th>
-          <th>领域</th>
-          <th>开发商</th>
-          <th>活跃人数(万)</th>
-          <th>环比增幅(%)</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr *ngFor="let row of rows">
-          <td><img class="avatar-cell" src="http://imguserradar.analysys.cn/images/item_logo/min/64_64_{{ row.appId }}.png" alt=""></td>
-          <td>{{ row.appName }}</td>
-          <td>{{ row.cateNames }}</td>
-          <td>{{ row.developCompanyFullName }}</td>
-          <td>{{ row.activeNums }}</td>
-          <td>{{ row.activeNumsRatio }}</td>
-        </tr>
-        </tbody>
-      </table>
+      <stbui-table height="500" [columns]="data.columns" [data]="data.data"></stbui-table>
     </md-card-content>
   </md-card>
 
   <md-card>
     <md-card-title>Hover Table</md-card-title>
     <md-card-content>
-      <table class="table table-hover">
-        <thead>
-        <tr>
-          <th></th>
-          <th>APP</th>
-          <th>领域</th>
-          <th>开发商</th>
-          <th>活跃人数(万)</th>
-          <th>环比增幅(%)</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr *ngFor="let row of rows">
-          <td><img class="avatar-cell" src="http://imguserradar.analysys.cn/images/item_logo/min/64_64_{{ row.appId }}.png" alt=""></td>
-          <td>{{ row.appName }}</td>
-          <td>{{ row.cateNames }}</td>
-          <td>{{ row.developCompanyFullName }}</td>
-          <td>{{ row.activeNums }}</td>
-          <td>{{ row.activeNumsRatio }}</td>
-        </tr>
-        </tbody>
-      </table>
+      <stbui-table height="500" [columns]="data.columns" [data]="data.data"></stbui-table>
     </md-card-content>
   </md-card>
 
   <md-card>
     <md-card-title>Striped Table</md-card-title>
     <md-card-content>
-      <table class="table table-striped">
-        <thead>
-        <tr>
-          <th></th>
-          <th>APP</th>
-          <th>领域</th>
-          <th>开发商</th>
-          <th>活跃人数(万)</th>
-          <th>环比增幅(%)</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr *ngFor="let row of rows">
-          <td><img class="avatar-cell" src="http://imguserradar.analysys.cn/images/item_logo/min/64_64_{{ row.appId }}.png" alt=""></td>
-          <td>{{ row.appName }}</td>
-          <td>{{ row.cateNames }}</td>
-          <td>{{ row.developCompanyFullName }}</td>
-          <td>{{ row.activeNums }}</td>
-          <td>{{ row.activeNumsRatio }}</td>
-        </tr>
-        </tbody>
-      </table>
-    </md-card-content>
-  </md-card>
-
-  <md-card>
-    <md-card-title>Condensed Table</md-card-title>
-    <md-card-content>
-      <table class="table table-condensed">
-        <thead>
-        <tr>
-          <th></th>
-          <th>APP</th>
-          <th>领域</th>
-          <th>开发商</th>
-          <th>活跃人数(万)</th>
-          <th>环比增幅(%)</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr *ngFor="let row of rows">
-          <td><img class="avatar-cell" src="http://imguserradar.analysys.cn/images/item_logo/min/64_64_{{ row.appId }}.png" alt=""></td>
-          <td>{{ row.appName }}</td>
-          <td>{{ row.cateNames }}</td>
-          <td>{{ row.developCompanyFullName }}</td>
-          <td>{{ row.activeNums }}</td>
-          <td>{{ row.activeNumsRatio }}</td>
-        </tr>
-        </tbody>
-      </table>
+      <stbui-table height="500" stripe="true" [columns]="data.columns" [data]="data.data"></stbui-table>
     </md-card-content>
   </md-card>
 
   <md-card>
     <md-card-title>Bordered Table</md-card-title>
     <md-card-content>
-      <table class="table table-bordered">
-        <thead>
-        <tr>
-          <th></th>
-          <th>APP</th>
-          <th>领域</th>
-          <th>开发商</th>
-          <th>活跃人数(万)</th>
-          <th>环比增幅(%)</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr *ngFor="let row of rows">
-          <td><img class="avatar-cell" src="http://imguserradar.analysys.cn/images/item_logo/min/64_64_{{ row.appId }}.png" alt=""></td>
-          <td>{{ row.appName }}</td>
-          <td>{{ row.cateNames }}</td>
-          <td>{{ row.developCompanyFullName }}</td>
-          <td>{{ row.activeNums }}</td>
-          <td>{{ row.activeNumsRatio }}</td>
-        </tr>
-        </tbody>
-      </table>
+      <stbui-table height="500" border="true" [columns]="data.columns" [data]="data.data"></stbui-table>
     </md-card-content>
   </md-card>
 
   <md-card>
     <md-card-title>All Table</md-card-title>
     <md-card-content>
-      <table class="table" [class.table-hover]="tableHover" [class.table-striped]="tableStriped" [class.table-condensed]="tableCondensed" [class.table-bordered]="tableBordered">
-        <thead>
-        <tr>
-          <th></th>
-          <th>APP</th>
-          <th>领域</th>
-          <th>开发商</th>
-          <th>活跃人数(万)</th>
-          <th>环比增幅(%)</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr *ngFor="let row of rows">
-          <td><img class="avatar-cell" src="http://imguserradar.analysys.cn/images/item_logo/min/64_64_{{ row.appId }}.png" alt=""></td>
-          <td>{{ row.appName }}</td>
-          <td>{{ row.cateNames }}</td>
-          <td>{{ row.developCompanyFullName }}</td>
-          <td>{{ row.activeNums }}</td>
-          <td>{{ row.activeNumsRatio }}</td>
-        </tr>
-        </tbody>
-      </table>
+      <stbui-table height="500" stripe="true" border="true" [columns]="data.columns" [data]="data.data"></stbui-table>
     </md-card-content>
   </md-card>
 
