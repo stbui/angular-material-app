@@ -5,9 +5,11 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "start:api": "ng serve --proxy-config proxy.conf.js",
     "build": "ng build --environment=prod --extract-css --prod --aot",
     "build:github": "ng build --environment=github --extract-css --prod --aot --base-href=https://stbui.github.io/angular-material-app/",
     "publish:github": "ngh",
+    "docs": "hads ./docs -o",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -45,6 +47,7 @@
     "@types/jasminewd2": "~2.0.2",
     "@types/node": "~6.0.60",
     "codelyzer": "~3.0.1",
+    "hads": "^1.3.4",
     "jasmine-core": "~2.6.2",
     "jasmine-spec-reporter": "~4.1.0",
     "karma": "~1.7.0",

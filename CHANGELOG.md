@@ -12,10 +12,17 @@
 
 * angular2-perfect-scrollbar 更换为 ngx-perfect-scrollbar
 
+### 功能实现
+
+* 增加老持浏览器不支持提示语
+* 增加api协议配置
+* 增加文本生成器
+* 允许导入json文件
 
 ### 功能优化
 
 * **table：** 
+
 
 
 # 0.4.5 (2017.08.11)
