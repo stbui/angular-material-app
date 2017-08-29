@@ -9,7 +9,7 @@ install:
   - npm install
 script:
   - npm run build:github
-after_script：
+after_script:
   - cd ./dist
   - git init
   - git config user.name "stbui"
