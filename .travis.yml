@@ -1,20 +1,25 @@
 language: node_js
 node_js:
   - '8'
-before_script:
+branches:
+  only:
+    - master
+install:
   - npm install -g @angular/cli
   - npm install
 script:
   - npm run build:github
-deploy:
-  provider: pages
-  local_dir: dist
-  repo: stbui/angular-material-app
-  skip_cleanup: true
-  github_token: $GH_TOKEN
-  on:
-    branch: master
-  target_branch: gh-pages
+after_script:
+  - cd ./dist
+  - git init
+  - git config user.name "stbui"
+  - git config user.email "w431106@163.com"
+  - git add .
+  - git commit -m ""Travis CI Auto Builder"
+  - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" gh-pages:gh-pages
 cache:
   directories:
     - node_modules
+env:
+  global:
+    - GH_REF: github.com/stbui/angular-material-app.git
