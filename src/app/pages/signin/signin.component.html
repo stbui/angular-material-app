@@ -1,17 +1,15 @@
 <div class="sigin-conainer" fxLayout="column" fxLayoutAlign="center center">
   <div class="sigin-main">
     <md-card>
-      <md-card-title>
-        用户登录
-      </md-card-title>
+      <md-card-title>用户登录</md-card-title>
       <md-card-content>
         <form fxLayout="column" fxLayoutAlign="start stretch" #formRegister="ngForm">
-          <md-input-container>
+          <md-form-field class="full-width">
             <input mdInput placeholder="请输入您的邮箱" name="email" ngModel required>
-          </md-input-container>
-          <md-input-container>
+          </md-form-field>
+          <md-form-field class="full-width">
             <input mdInput placeholder="请输入您的密码" name="password" ngModel required>
-          </md-input-container>
+          </md-form-field>
           <button md-raised-button color="primary" type="submit" [disabled]="!formRegister.valid" (click)="onSubmit()">登录</button>
         </form>
       </md-card-content>

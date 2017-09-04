@@ -1,7 +1,5 @@
-$gray-lighter:              #eceeef !default;
-$image_path:            "/assets/images/" !default;
-
-
+$gray-lighter: #eceeef !default;
+$image_path: "/assets/images/" !default;
 
 $prefix: 'sigin';
 
@@ -18,4 +16,8 @@ $prefix: 'sigin';
     margin: 0 auto;
     width: 500px;
   }
+}
+
+.full-width {
+  width: 100%;
 }

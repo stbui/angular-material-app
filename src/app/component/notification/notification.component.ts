@@ -29,7 +29,7 @@ export class NotificationComponent implements OnDestroy {
   }
 
   constructor(
-    public notifications: notificationModel
+    public notifications: NotificationModel
   ) {
     this.message = this.notifications.message;
     this.title = this.notifications.title;

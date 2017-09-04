@@ -2,16 +2,25 @@
 
 欢迎阅读项目文档
 
+* [样式](css.md)
+* [组件](component.md)
+* [部署](deploy.md)
+* [后台接口代理](backend-proxy.md)
+* [travis ci 配置](travis.md)
+* [docker中运行](docker.md)
+
+---
+
 # 项目结构
 
 ```
 dist/                        产线资源目录
 docs/                        项目文档
-e2e/                         end-to-end tests
+e2e/                         
 src/                         项目源码
 |- app/                      应用组件
-|  |- core/                  core module
-|  |- shared/                共用模块  (common components, directives and pipes)
+|  |- core/                  
+|  |- shared/                共用模块
 |  |- app.component.*        根组件
 |  |- app.module.ts          根模块
 |  |- app-routing.module.ts  根路由
@@ -23,7 +32,7 @@ src/                         项目源码
 |- main.ts                   应用入口
 |- polyfills.ts              
 +- test.ts                   单元测试入口
-proxy.conf.js                后台接口协议配置
+proxy.conf.js                后台接口代理
 ```
 
 命令说明
