@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-// import { TreeModel } from 'ng2-tree';
+import { NotificationService } from '../../component/index';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-popover',
@@ -8,31 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PopoverComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit() {
+  constructor(private _notification: NotificationService, private toastr: ToastrService) {
   }
 
-  public tree = {
-    value: 'Programming languages by programming paradigm',
-    children: [
-      {
-        value: 'Object-oriented programming',
-        children: [
-          {value: 'Java'},
-          {value: 'C++'},
-          {value: 'C#'}
-        ]
-      },
-      {
-        value: 'Prototype-based programming',
-        children: [
-          {value: 'JavaScript'},
-          {value: 'CoffeeScript'},
-          {value: 'Lua'}
-        ]
-      }
-    ]
+  ngOnInit() {
+    // this.toastr.success('Hello world!', 'Toastr fun!');
+  }
+
+  showSuccess() {
+    this._notification.open('测试消息', '测试标题');
   }
 
 }

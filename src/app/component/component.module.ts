@@ -22,7 +22,6 @@ import { SearchComponent } from './search/search.component';
 import { TableComponent } from './table/table.component';
 import { HeadComponent } from './table/head/head.component';
 import { BodyComponent } from './table/body/body.component';
-import { NotificationComponent } from './notification/notification.component';
 
 
 @NgModule({
@@ -48,8 +47,7 @@ import { NotificationComponent } from './notification/notification.component';
     SearchComponent,
     TableComponent,
     HeadComponent,
-    BodyComponent,
-    NotificationComponent
+    BodyComponent
   ],
   exports: [
     DatePickerComponent,
@@ -62,4 +60,5 @@ import { NotificationComponent } from './notification/notification.component';
     TableComponent
   ]
 })
-export class ComponentModule { }
+export class ComponentModule {
+}

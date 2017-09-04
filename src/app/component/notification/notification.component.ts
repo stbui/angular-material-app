@@ -1,6 +1,7 @@
-import { Component, OnDestroy, HostListener } from '@angular/core';
-import { NotificationInterface } from './notification.interface';
-import { NotificationModel } from './notification.model';
+import { Component, OnDestroy, HostListener, ComponentRef } from '@angular/core';
+import { NotificationConfig } from './notification.config';
+import { NotificationService } from './notification.service';
+import { ComponentPortal, PortalHostDirective } from '@angular/cdk/portal';
 
 @Component({
   selector: 'stbui-notification',
@@ -11,7 +12,6 @@ export class NotificationComponent implements OnDestroy {
 
   message?: string | null;
   title?: string;
-  options;
 
   @HostListener('click')
   onClick() {
@@ -28,11 +28,10 @@ export class NotificationComponent implements OnDestroy {
 
   }
 
-  constructor(
-    public notifications: NotificationModel
-  ) {
-    this.message = this.notifications.message;
-    this.title = this.notifications.title;
+  constructor(protected _noticationService: NotificationService,
+              public _notificationConfig: NotificationConfig) {
+    this.message = _notificationConfig.message;
+    this.title = _notificationConfig.title;
   }
 
   ngOnDestroy() {
@@ -48,7 +47,7 @@ export class NotificationComponent implements OnDestroy {
   }
 
   remove() {
-
+    this._noticationService.remove(this._notificationConfig.id);
   }
 
 }

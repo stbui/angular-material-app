@@ -1,5 +1,8 @@
+import { ComponentType } from '@angular/cdk/portal';
+
 export interface NotificationInterface {
-  titleClass?: string;
+  titleClass?: NotificationIconClasses;
+  notificationComponent?: ComponentType<any>;
 }
 
 export interface NotificationIconClasses {
@@ -9,7 +12,3 @@ export interface NotificationIconClasses {
   warning?: string;
 }
 
-export interface Activate {
-  id?: number;
-  message?: string;
-}

@@ -1,3 +1,13 @@
-<button (click)="remove()">
-  &times;
-</button>
+<div id="notification-container" class="notification-top-right">
+  <div class="notification-success notification ng-trigger ng-trigger-flyInOut">
+    <button (click)="remove()" class="notification-close-button">&times;</button>
+    <div *ngIf="title" class="notification-title" [attr.aria-label]="title">
+      {{title}}
+    </div>
+    <div *ngIf="message" class="notification-message" [innerHTML]="message">
+    </div>
+    <div *ngIf="message" class="notification-message" [attr.aria-label]="message">
+      {{message}}
+    </div>
+  </div>
+</div>

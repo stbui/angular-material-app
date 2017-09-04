@@ -18,11 +18,16 @@ import { DatePickerComponent } from './date-picker/date-picker.component';
 import { MarkdownComponent } from './markdown/markdown.component';
 import { PopoverComponent } from './popover/popover.component';
 
+import { NotificaitonModule } from '../component/index';
+import {ToastrModule } from 'ngx-toastr';
+
 @NgModule({
   imports: [
     SharedModule,
     ComponentModule,
-    MaterialsRoutingModule
+    MaterialsRoutingModule,
+    NotificaitonModule.forRoot(),
+    ToastrModule.forRoot()
   ],
   declarations: [
     ToastComponent,
