@@ -1,4 +1,4 @@
-import { ComponentRef, Injectable, Injector } from '@angular/core';
+import { ComponentRef, Injectable, Injector, Inject } from '@angular/core';
 import { Overlay, OverlayState } from '@angular/cdk/overlay';
 import { ComponentPortal } from '@angular/cdk/portal';
 import { Observable } from 'rxjs/Observable';
@@ -7,6 +7,7 @@ import { NotificationRef } from './notification.ref';
 import { NotificationInjector } from './notification.injector';
 import { NotificationConfig } from './notification.config';
 import { NotificationComponent } from './notification.component';
+import { STBUI_NOTIFICATION_DATA } from './notification.token';
 
 export interface Activate {
   id?: number;
@@ -27,7 +28,10 @@ export class NotificationService {
   private index = 0;
 
   constructor(private _injector: Injector,
-              private _overlay: Overlay) {
+              private _overlay: Overlay,
+              @Inject(STBUI_NOTIFICATION_DATA) public config: NotificationConfig) {
+
+    this.config = config;
   }
 
   show(message?: string, title?: string, config?: NotificationConfig, type = '') {

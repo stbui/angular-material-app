@@ -1,3 +1,7 @@
+:host {
+  display: block;
+}
+
 .notification-title {
   font-weight: bold;
 }
@@ -148,7 +152,7 @@ button.notification-close-button {
   pointer-events: auto;
 }
 .notification-success {
-  background-color: #51A351;
+  background-color: #3f51b5;
 }
 .notification-error {
   background-color: #BD362F;

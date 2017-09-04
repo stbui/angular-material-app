@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { Overlay, OverlayContainer } from '@angular/cdk/overlay';
 import { NotificationComponent } from './notification.component';
 import { NotificationService } from './notification.service';
+import { STBUI_NOTIFICATION_DATA } from './notification.token';
 
 @NgModule({
   imports: [CommonModule],
@@ -18,10 +19,11 @@ export class NotificaitonModule {
     }
   }
 
-  static forRoot(): ModuleWithProviders {
+  static forRoot(config?): ModuleWithProviders {
     return {
       ngModule: NotificaitonModule,
       providers: [
+        { provide: STBUI_NOTIFICATION_DATA, useValue: config },
         OverlayContainer,
         Overlay,
         NotificationService,

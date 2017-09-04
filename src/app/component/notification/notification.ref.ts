@@ -22,7 +22,7 @@ export class NotificationRef<T> {
   }
 
   close(): void {
-    this._overlayRef.detach();
+    this._overlayRef.dispose();
     this._afterClosed.next();
     this._afterClosed.complete();
   }

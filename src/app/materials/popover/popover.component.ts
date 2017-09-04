@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { NotificationService } from '../../component/index';
-import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-popover',
@@ -9,14 +8,17 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class PopoverComponent implements OnInit {
 
-  constructor(private _notification: NotificationService, private toastr: ToastrService) {
+  options;
+
+  constructor(private _notification: NotificationService) {
+    this.options = _notification.config;
   }
 
   ngOnInit() {
-    // this.toastr.success('Hello world!', 'Toastr fun!');
   }
 
   showSuccess() {
+    console.log(this.options)
     this._notification.open('测试消息', '测试标题');
   }
 
