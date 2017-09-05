@@ -1,0 +1,34 @@
+@import '~@angular/material/_theming';
+
+$candy-app-primary: mat-palette($mat-indigo);
+$candy-app-accent: mat-palette($mat-pink, A200, A100, A400);
+$candy-app-warn: mat-palette($mat-red);
+$candy-app-theme: mat-light-theme($candy-app-primary, $candy-app-accent, $candy-app-warn);
+
+
+@mixin notification-theme($theme) {
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+  $warn: map-get($theme, warn);
+  $background: map-get($theme, background);
+  $foreground: map-get($theme, foreground);
+
+  .notification {
+    background-color: mat-color($primary);
+    pointer-events: auto;
+  }
+  .notification-success {
+    background-color: mat-color($accent);
+  }
+  .notification-error {
+    background-color: mat-color($accent);
+  }
+  .notification-info {
+    background-color: mat-color($primary);
+  }
+  .notification-warning {
+    background-color: mat-color($warn);
+  }
+}
+
+@include notification-theme($candy-app-theme);

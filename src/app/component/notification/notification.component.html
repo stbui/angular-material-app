@@ -1,13 +1,10 @@
-<div id="notification-container" class="notification-top-right">
-  <div class="notification-success notification ng-trigger ng-trigger-flyInOut">
+<div id="notification-container" [ngClass]="config.positionClass">
+  <div [ngClass]="notificationClasses">
     <button (click)="remove()" class="notification-close-button">&times;</button>
-    <div *ngIf="title" class="notification-title" [attr.aria-label]="title">
+    <div *ngIf="title" class="notification-title" [attr.aria-label]="title" [ngClass]="config.titleClass">
       {{title}}
     </div>
-    <div *ngIf="message" class="notification-message" [innerHTML]="message">
-    </div>
-    <div *ngIf="message" class="notification-message" [attr.aria-label]="message">
-      {{message}}
+    <div *ngIf="message" [innerHTML]="message"  [ngClass]="config.messageClass">
     </div>
   </div>
 </div>

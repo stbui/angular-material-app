@@ -18,8 +18,12 @@ export class PopoverComponent implements OnInit {
   }
 
   showSuccess() {
-    console.log(this.options)
-    this._notification.open('测试消息', '测试标题');
+    console.log(this.options);
+    this._notification.show('测试消息', '测试标题');
+  }
+
+  clear() {
+    this._notification.clear();
   }
 
 }

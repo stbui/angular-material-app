@@ -1,11 +1,12 @@
 import { ComponentType } from '@angular/cdk/portal';
 
 export interface NotificationInterface {
-  titleClass?: NotificationIconClasses;
+  titleClass?: string;
   positionClass?: string;
   messageClass?: string;
   notificationClass?: string;
   closeButton?: boolean;
+  iconClasses?: NotificationIconClasses;
   notificationComponent?: ComponentType<any>;
 }
 
