@@ -19,15 +19,13 @@ import { MarkdownComponent } from './markdown/markdown.component';
 import { PopoverComponent } from './popover/popover.component';
 
 import { NotificaitonModule } from '../component/index';
-import {ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   imports: [
     SharedModule,
     ComponentModule,
     MaterialsRoutingModule,
-    NotificaitonModule.forRoot(),
-    ToastrModule.forRoot()
+    NotificaitonModule.forRoot()
   ],
   declarations: [
     ToastComponent,

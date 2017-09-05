@@ -8,17 +8,13 @@ import { NotificationService } from '../../component/index';
 })
 export class PopoverComponent implements OnInit {
 
-  options;
-
   constructor(private _notification: NotificationService) {
-    this.options = _notification.config;
   }
 
   ngOnInit() {
   }
 
-  showSuccess() {
-    console.log(this.options);
+  show() {
     this._notification.show('测试消息', '测试标题');
   }
 

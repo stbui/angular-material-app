@@ -10,9 +10,9 @@ import {
 })
 export class PopoverComponent {
 
-  @Input() overlay:boolean = false;
-  @Input() overlayOpacity:number = 0.01;
-  @Input() overlayColor:string = '#000';
+  @Input() overlay: boolean = false;
+  @Input() overlayOpacity: number = 0.01;
+  @Input() overlayColor: string = '#000';
   @Input() targetOrigin = {vertical: 'top', horizontal: 'left'};
   @Input() anchorOrigin = {vertical: 'bottom', horizontal: 'left'};
   @Input() autoPosition = true;
@@ -24,7 +24,7 @@ export class PopoverComponent {
   @Output() hide = new EventEmitter();
 
 
-  @HostListener('document:click', ['$event', '$event.target']) onClick(event:MouseEvent, targetElement:HTMLElement) {
+  @HostListener('document:click', ['$event', '$event.target']) onClick(event: MouseEvent, targetElement: HTMLElement) {
     if (!targetElement) {
       return;
     }
@@ -36,7 +36,7 @@ export class PopoverComponent {
     }
   }
 
-  _popoverOpen:boolean = false;
+  _popoverOpen: boolean = false;
 
   trigger;
 
@@ -113,7 +113,7 @@ export class PopoverComponent {
   }
 
 
-  constructor(private _elementRef:ElementRef) {
+  constructor(private _elementRef: ElementRef) {
   }
 
 }
