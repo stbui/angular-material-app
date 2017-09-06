@@ -1,9 +1,9 @@
-FROM node:latest
+FROM node:alpine
 
-RUN npm install -g @angular/cli
+RUN npm install -g @angular/cli --verbose --registry=https://registry.npm.taobao.org
 WORKDIR /stbui
 COPY . /stbui
-RUN npm install
+RUN npm install --verbose --registry=https://registry.npm.taobao.org
 
 EXPOSE 4200
 
