@@ -1,4 +1,4 @@
-import { Directive, Input, ElementRef, HostListener, AfterViewInit } from '@angular/core';
+import { Directive, Input, ElementRef, AfterViewInit } from '@angular/core';
 
 @Directive({
   selector: '[stbuiPopover],[popoverTriggerFor]',
@@ -29,10 +29,8 @@ export class PopoverDirective implements AfterViewInit {
   }
 
   togglePopover() {
-    // this.popover.openPopover();
     this.popover.toggle();
     this.popover.trigger = this._elementRef.nativeElement;
-    // this.popover.getAnchorPosition(this._elementRef.nativeElement);
   }
 
 }

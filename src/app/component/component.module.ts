@@ -4,14 +4,6 @@ import { MaterialComponentsModule } from './material.module';
 import { FormsModule } from '@angular/forms';
 import { ComponentComponent } from './component.component';
 
-import { DatePickerComponent } from './date-picker/date-picker.component';
-import { CalendarComponent } from './date-picker/calendar/calendar.component';
-import { DayButtonComponent } from './date-picker/day-button/day-button.component';
-import { DatePickerPipe } from './date-picker/date-picker.pipe';
-import { ToolbarComponent } from './date-picker/toolbar/toolbar.component';
-import { DateDisplayComponent } from './date-picker/date-display/date-display.component';
-import { MonthComponent } from './date-picker/month/month.component';
-
 import { AmapComponent } from './amap/amap.component';
 import { MarkdownComponent } from './markdown/markdown.component';
 import { PaginationComponent } from './pagination/pagination.component';
@@ -31,17 +23,10 @@ import { BodyComponent } from './table/body/body.component';
     FormsModule
   ],
   declarations: [
-    DatePickerComponent,
-    CalendarComponent,
     PaginationComponent,
     ComponentComponent,
     AmapComponent,
     MarkdownComponent,
-    DatePickerPipe,
-    DayButtonComponent,
-    ToolbarComponent,
-    DateDisplayComponent,
-    MonthComponent,
     PopoverComponent,
     PopoverDirective,
     SearchComponent,
@@ -50,7 +35,6 @@ import { BodyComponent } from './table/body/body.component';
     BodyComponent
   ],
   exports: [
-    DatePickerComponent,
     PaginationComponent,
     AmapComponent,
     MarkdownComponent,

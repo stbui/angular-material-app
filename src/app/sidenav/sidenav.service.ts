@@ -34,7 +34,8 @@ export class SidenavService {
     this.addSubItem(components, '高德地图', '/materials/amap', 1);
     this.addSubItem(components, 'Markdown', '/materials/markdown', 1);
     this.addSubItem(components, '图表', '/components/chart', 1);
-    this.addSubItem(components, '通知', '/components/chart', 1);
+    this.addSubItem(components, '通知', '/materials/popover', 1);
+    this.addSubItem(components, '日历', '/materials/calendar', 1);
 
     const forms = this.addItem('表单', 'format_color_text', null, 4);
     this.addSubItem(forms, '表单元素', '/forms/elements', 1);

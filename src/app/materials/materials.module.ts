@@ -17,15 +17,20 @@ import { AmapComponent } from './amap/amap.component';
 import { DatePickerComponent } from './date-picker/date-picker.component';
 import { MarkdownComponent } from './markdown/markdown.component';
 import { PopoverComponent } from './popover/popover.component';
+import { CalendarComponent } from './calendar/calendar.component';
 
-import { NotificaitonModule } from '../component/index';
+import { NotificaitonModule, DatePickerModule } from '../component/index';
+
+import { CalendarModule } from 'angular-calendar';
 
 @NgModule({
   imports: [
     SharedModule,
     ComponentModule,
     MaterialsRoutingModule,
-    NotificaitonModule.forRoot()
+    NotificaitonModule.forRoot(),
+    DatePickerModule,
+    CalendarModule.forRoot()
   ],
   declarations: [
     ToastComponent,
@@ -41,7 +46,8 @@ import { NotificaitonModule } from '../component/index';
     AmapComponent,
     DatePickerComponent,
     MarkdownComponent,
-    PopoverComponent
+    PopoverComponent,
+    CalendarComponent
   ]
 })
 export class MaterialsModule { }

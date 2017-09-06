@@ -1,10 +1,12 @@
-FROM node:alpine
+FROM node:latest
 
-RUN npm install -g @angular/cli --verbose --registry=https://registry.npm.taobao.org
+RUN npm -g config set user root
+RUN npm install -g @angular/cli@latest
 WORKDIR /stbui
 COPY . /stbui
-RUN npm install --verbose --registry=https://registry.npm.taobao.org
+RUN npm install --quiet --production --no-progress --registry=${registry:-https://registry.npmjs.org} && \
+    npm cache clean --force
 
 EXPOSE 4200
 
-CMD ["ng", "serve"]
+CMD npm run start

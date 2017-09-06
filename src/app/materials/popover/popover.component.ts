@@ -14,7 +14,7 @@ export class PopoverComponent implements OnInit {
   ngOnInit() {
   }
 
-  show() {
+  showNotication() {
     this._notification.show('测试消息', '测试标题');
   }
 

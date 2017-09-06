@@ -10,6 +10,7 @@
     "build:github": "ng build --environment=github --extract-css --prod --aot --base-href=https://stbui.github.io/angular-material-app/",
     "publish:github": "ngh",
     "docs": "hads ./docs -o",
+    "compodoc": "./node_modules/.bin/compodoc -p tsconfig.json -s",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -28,6 +29,7 @@
     "@angular/platform-browser": "^4.0.0",
     "@angular/platform-browser-dynamic": "^4.0.0",
     "@angular/router": "^4.0.0",
+    "angular-calendar": "^0.21.1",
     "core-js": "^2.4.1",
     "flex-layout": "^1.0.1",
     "hammerjs": "^2.0.8",
@@ -44,6 +46,7 @@
     "@angular/cli": "1.2.6",
     "@angular/compiler-cli": "^4.0.0",
     "@angular/language-service": "^4.0.0",
+    "@compodoc/compodoc": "^1.0.0-beta.15",
     "@types/jasmine": "~2.5.53",
     "@types/jasminewd2": "~2.0.2",
     "@types/node": "~6.0.60",

@@ -20,12 +20,18 @@ export class AdminComponent implements OnInit {
   ngOnInit() {
   }
 
+  /**
+   * @param {Object} theme 主题对象
+   */
   onTheme(theme) {
     this.theme = theme;
   }
 
-  onActivate(e, scrollContainer) {
+  /**
+   * @param {Event} event 事件
+   * @param {Object} scrollContainer 容器dom
+   */
+  onActivate(event, scrollContainer) {
     scrollContainer.scrollTop = 0;
   }
-
 }

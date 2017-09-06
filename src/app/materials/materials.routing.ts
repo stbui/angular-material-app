@@ -16,6 +16,7 @@ import { AmapComponent } from './amap/amap.component';
 import { DatePickerComponent } from './date-picker/date-picker.component';
 import { MarkdownComponent } from './markdown/markdown.component';
 import { PopoverComponent } from './popover/popover.component';
+import { CalendarComponent } from './calendar/calendar.component';
 
 
 const routes: Routes = [
@@ -78,6 +79,10 @@ const routes: Routes = [
   {
     path: 'popover',
     component: PopoverComponent
+  },
+  {
+    path: 'calendar',
+    component: CalendarComponent
   }
 ];
 
