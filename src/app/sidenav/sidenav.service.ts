@@ -16,19 +16,19 @@ export class SidenavService {
   constructor() {
     const dashboard = this.addItem('主页', 'home', '/home', 1);
     const materials = this.addItem('UI元素', 'bubble_chart', null, 3);
+    this.addSubItem(materials, '分页', '/materials/pagination', 3);
+    this.addSubItem(materials, '日期选择器', '/materials/datepicker', 3);
+    this.addSubItem(materials, '弹出框', '/materials/popover', 3);
     this.addSubItem(materials, '按钮', '/materials/buttons', 1);
     this.addSubItem(materials, '卡片', '/materials/cards', 2);
     this.addSubItem(materials, '列表', '/materials/lists', 3);
     this.addSubItem(materials, '菜单', '/materials/menu', 3);
     this.addSubItem(materials, '滑块', '/materials/slider', 3);
-    this.addSubItem(materials, 'Snack-Bar', '/materials/snackbar', 3);
-    this.addSubItem(materials, 'Toast', '/materials/toast', 3);
+    this.addSubItem(materials, '标签页', '/materials/tabs', 3);
     this.addSubItem(materials, '文字提示', '/materials/tooltips', 3);
     this.addSubItem(materials, '对话框', '/materials/dialogs', 3);
-    this.addSubItem(materials, '标签页', '/materials/tabs', 3);
-    this.addSubItem(materials, '分页', '/materials/pagination', 3);
-    this.addSubItem(materials, '日期选择器', '/materials/datepicker', 3);
-    this.addSubItem(materials, '弹出框', '/materials/popover', 3);
+    this.addSubItem(materials, 'Toast', '/materials/toast', 3);
+    this.addSubItem(materials, 'Snack-Bar', '/materials/snackbar', 3);
 
     const components = this.addItem('拓展组件', 'equalizer', null, 3);
     this.addSubItem(components, '高德地图', '/materials/amap', 1);
