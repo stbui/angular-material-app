@@ -1,4 +1,4 @@
-# 通用管理系统快速开发框架
+# 通用管理系统快速开发框架 [demo](https://github.com/stbui/angular-material-app)
 
 基于最新`Angular 4`框架与`Material 2`技术的企业级通用管理系统快速开发框架，涵盖了大量的常用组件和基础功能，您可以快速开发各种MIS系统，如CMS、OA、CRM、ERP、POS等，最大程度上帮助企业节省时间成本和费用开支。
 
@@ -23,21 +23,20 @@
 
 
 ### 基本功能
-- 谷歌 Material 设计
-- 响应式设计
+- material design 
 - 内置3套主题，供自由切换
-- 多种颜色方案，有18个预定义的方案
-- Flex Layout 强大的布局设置
+- 多种颜色方案，有多个预定义的配色方案
+- Flex Layout 强大的布局
+- 响应式设计
+- 内置常用组件
 - 1500+ 图标, 包括 900+ 官方 material design 图标
 - Sass/Scss CSS, 很容易通过改变一些变量的更新
 - 模块代码，添加和删除非常轻松
 - Webpack 2 构建项目
-- 通过 NPM 管理包
-- 跨浏览器支持
-- 免费更新
+- 定期更新，不断更新新功能
 
-[demo https://github.com/stbui/angular-material-app](https://github.com/stbui/angular-material-app)
 ![demo image](src/assets/images-demo/20170802104620.png)
+
 
 ### 使用入门
 
@@ -72,27 +71,3 @@ docker run -d -P stbui/angular-material-app
 ```
 docker run --rm --name angular-material-app -v "$PWD":/usr/src/app -w /usr/src/app -p 4200:4200 -it node:latest bash -c "npm install && npm start"
 ```
-
-
-### 依赖模块
-
-[material-design-icons](https://github.com/google/material-design-icons)
-- material-design-icons
-
-[normalize.css](https://github.com/necolas/normalize.css) 
-- normalize.css
- 
-[angular2-perfect-scrollbar](https://github.com/ywein/angular2-perfect-scrollbar)
-- This is an Angular 2 wrapper library for perfect-scrollbar.
-
-[ngx-quill](https://github.com/KillerCodeMonkey/ngx-quill)
-- quill editor with angular and TS
-
-[screenfull](https://github.com/sindresorhus/screenfull.js/)
-- Simple wrapper for cross-browser usage of the JavaScript Fullscreen API
-
-[angular-sortablejs](https://github.com/SortableJS/angular-sortablejs)
-- This package is an Angular 2 binding for Sortable.js. Supports standard arrays and Angular FormArray
-
-[ng2-charts](https://github.com/valor-software/ng2-charts)
-- Beautiful charts for Angular2 based on Chart.js
