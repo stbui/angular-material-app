@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { LoadingDirective } from './loading.directive';
+import { LoadingComponent } from './loading.component';
 
 @NgModule({
-  exports: [LoadingDirective],
-  declarations: [LoadingDirective],
+  exports: [LoadingComponent, LoadingDirective],
+  declarations: [LoadingComponent, LoadingDirective],
 })
 export class LoadingModule {
 }

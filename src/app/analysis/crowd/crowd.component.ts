@@ -61,17 +61,21 @@ export class CrowdComponent implements OnInit {
   }
 
   setBarChart(res) {
+    let appName = [];
+    let rate = [];
     res.forEach((v, k) => {
-      this.barChartLabels.push(v.appName);
-      this.barChartData[0].data.push(v.crowdRate * 100);
+      appName.push(v.appName);
+      rate.push(v.crowdRate * 100);
     });
+    this.barChartLabels = appName;
+    this.barChartData[0].data = rate;
   }
 
   setPieChart(res) {
     // res.forEach((v, k) => {
-      // this.pieChartLabels.push(v.attrName);
-      // let rate = (v.attrValue * 100).toFixed(2);
-      // this.pieChartData.push(rate);
+    // this.pieChartLabels.push(v.attrName);
+    // let rate = (v.attrValue * 100).toFixed(2);
+    // this.pieChartData.push(rate);
     // });
   }
 

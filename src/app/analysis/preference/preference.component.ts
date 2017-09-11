@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 
 @Component({
   selector: 'app-preference',
@@ -7,20 +7,72 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PreferenceComponent implements OnInit {
 
-  public barChartOptions: any = {
-    scaleShowVerticalLines: false,
-    responsive: true
-  };
-  public barChartLabels: string[] = ['社交网络', '即时通讯', '综合视频', '动漫', '移动音乐', '移动K歌', '综合电商', '中小学类教育', '应用商店', '安全管理'];
+  public barChartOptions: any = {};
+  public barChartLabels: string[] = [];
   public barChartType: string = 'horizontalBar';
   public barChartLegend: boolean = true;
   public barChartData: any[] = [
-    {data: [15.8572, 13.5532, 10.4997, 10.1076, 8.32468, 5.50241, 4.54533, 3.59626, 3.34169, 3.33632], label: '活跃人数(万)'}
+    {data: [], label: '活跃人数(万)'}
   ];
 
-  constructor() { }
+  coverRateListDatas: any[] = [];
+  activeDatas: any[] = [];
+
+  constructor(@Inject('AnalysisService') private _service) {
+  }
 
   ngOnInit() {
+    this.getCrowdCateList();
+    this.coverRateList();
+    this.getCrowdAppList();
+  }
+
+  getCrowdCateList() {
+    this._service.getCrowdCateList();
+
+    let categoryName = [];
+    let crowdActiveNums = [];
+    this._service.crowdCateList$.subscribe(res => {
+      const list = res.list;
+      if (!list) {
+        return;
+      }
+      list.filter(v => {
+        categoryName.push(v.categoryName);
+        crowdActiveNums.push(v.crowdActiveNums);
+      });
+      this.barChartLabels = categoryName;
+      this.barChartData[0].data = crowdActiveNums;
+    });
+  }
+
+  coverRateList() {
+    this._service.crowdCateList$.subscribe(res => {
+      const coverRateList = res.coverRateList;
+      if (!coverRateList) {
+        return;
+      }
+      this.coverRateListDatas = coverRateList;
+      // coverRateList.filter(v => {
+      //   this.coverRateListDatas.push({
+      //     cateId: v.cateId,
+      //     categoryName: v.categoryName,
+      //     coverRate: (v.coverRate * 100).toFixed(2)
+      //   });
+      // });
+
+    });
+  }
+
+  getCrowdAppList() {
+    this._service.getCrowdAppList();
+    this._service.crowdApplist$.subscribe(res => {
+      const activeDatas = res.activeDatas;
+      if (!activeDatas) {
+        return;
+      }
+      this.activeDatas = activeDatas.datas
+    });
   }
 
 }
