@@ -1,8 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Http, Headers } from '@angular/http';
-import { environment } from '../../environments/environment'
-
-
+import { Http } from '@angular/http';
+import { environment } from '../../environments/environment';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 
 @Injectable()

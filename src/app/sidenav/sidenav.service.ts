@@ -71,6 +71,13 @@ export class SidenavService {
     this.addSubItem(apps, '聊天', '/apps/chats', 1);
     this.addSubItem(apps, '信箱', '/apps/mail', 1);
     this.addSubItem(apps, '码农庄园', '/apps/navigation', 1);
+
+    const analysis = this.addItem('数据分析', 'poll', null, 8);
+    this.addSubItem(analysis, '人群分布', '/analysis/crowd', 1);
+    this.addSubItem(analysis, '行为偏好', '/analysis/preference', 1);
+    this.addSubItem(analysis, '人口分布', '/analysis/population', 1);
+    this.addSubItem(analysis, '设备分布', '/analysis/equipment', 1);
+    this.addSubItem(analysis, '场景画像', '/analysis/scePortrait', 1);
   }
 
   addItem(name: string, icon: string, route: string, position: number, badge?: string, badgeColor?: string) {

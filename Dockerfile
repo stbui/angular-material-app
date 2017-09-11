@@ -1,12 +1,12 @@
 FROM node:latest
 
 RUN npm -g config set user root
-RUN npm install -g @angular/cli@latest
+RUN npm install -g @angular/cli@latest  http-server
 WORKDIR /stbui
 COPY . /stbui
-RUN npm install --quiet --production --no-progress --registry=${registry:-https://registry.npmjs.org} && \
-    npm cache clean --force
+RUN npm install && npm run build
 
-EXPOSE 4200
 
-CMD npm run start
+EXPOSE 8080
+
+CMD http-server -d ./dist

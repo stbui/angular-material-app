@@ -1,0 +1,317 @@
+{
+  "msg": "操作成功",
+  "code": "0",
+  "userStatus": 0,
+  "datas": {
+    "crowdRuntimeNums": 1120410.0,
+    "gender": [
+      {
+        "attrId": 110101,
+        "attrValue": 0.0,
+        "attrName": "男"
+      },
+      {
+        "attrId": 110102,
+        "attrValue": 1.0,
+        "attrName": "女"
+      }
+    ],
+    "md5Status": 1,
+    "actvieDatas": [
+      {
+        "activeNums": 82306.5,
+        "crowdRate": 0.763024,
+        "appName": "微信",
+        "android": 55540.4,
+        "devlopCompanyName": "腾讯科技",
+        "cateName": "社交网络",
+        "crowdPercent": 0.446682,
+        "cateId": 1191160,
+        "appId": 2028050,
+        "tgi": 1.82059,
+        "crowdDate": 1490976000000,
+        "crowdActiveNums": 24808.9
+      },
+      {
+        "activeNums": 55609.4,
+        "crowdRate": 0.678837,
+        "appName": "QQ",
+        "android": 37753.2,
+        "devlopCompanyName": "腾讯科技",
+        "cateName": "社交网络",
+        "crowdPercent": 0.58463,
+        "cateId": 1191160,
+        "appId": 2028051,
+        "tgi": 1.80161,
+        "crowdDate": 1490976000000,
+        "crowdActiveNums": 22071.7
+      },
+      {
+        "activeNums": 30022.8,
+        "crowdRate": 0.457024,
+        "appName": "淘宝",
+        "android": 20247.4,
+        "devlopCompanyName": "阿里巴巴",
+        "cateName": "综合电商",
+        "crowdPercent": 0.733905,
+        "cateId": 1201177,
+        "appId": 2027844,
+        "tgi": 1.59331,
+        "crowdDate": 1490976000000,
+        "crowdActiveNums": 14859.6
+      },
+      {
+        "activeNums": 33973.8,
+        "crowdRate": 0.39358,
+        "appName": "支付宝",
+        "android": 21396.7,
+        "devlopCompanyName": "阿里巴巴",
+        "cateName": "支付",
+        "crowdPercent": 0.598076,
+        "cateId": 1221198,
+        "appId": 2004708,
+        "tgi": 1.06484,
+        "crowdDate": 1490976000000,
+        "crowdActiveNums": 12796.8
+      },
+      {
+        "activeNums": 26475.3,
+        "crowdRate": 0.388141,
+        "appName": "爱奇艺",
+        "android": 17952.9,
+        "devlopCompanyName": "爱奇艺",
+        "cateName": "综合视频",
+        "crowdPercent": 0.702949,
+        "cateId": 1081081,
+        "appId": 2015131,
+        "tgi": 1.60261,
+        "crowdDate": 1490976000000,
+        "crowdActiveNums": 12620.0
+      },
+      {
+        "activeNums": 25586.0,
+        "crowdRate": 0.289188,
+        "appName": "腾讯视频",
+        "android": 17342.2,
+        "devlopCompanyName": "腾讯科技",
+        "cateName": "综合视频",
+        "crowdPercent": 0.542183,
+        "cateId": 1081081,
+        "appId": 2028092,
+        "tgi": 1.48971,
+        "crowdDate": 1490976000000,
+        "crowdActiveNums": 9402.63
+      },
+      {
+        "activeNums": 26483.5,
+        "crowdRate": 0.284133,
+        "appName": "手机百度",
+        "android": 17939.9,
+        "devlopCompanyName": "百度",
+        "cateName": "搜索",
+        "crowdPercent": 0.514957,
+        "cateId": 1111108,
+        "appId": 2020874,
+        "tgi": 1.4825,
+        "crowdDate": 1490976000000,
+        "crowdActiveNums": 9238.29
+      },
+      {
+        "activeNums": 16944.3,
+        "crowdRate": 0.282164,
+        "appName": "QQ音乐",
+        "android": 13975.7,
+        "devlopCompanyName": "腾讯科技",
+        "cateName": "移动音乐",
+        "crowdPercent": 0.656446,
+        "cateId": 1071073,
+        "appId": 2028095,
+        "tgi": 1.51737,
+        "crowdDate": 1490976000000,
+        "crowdActiveNums": 9174.27
+      },
+      {
+        "activeNums": 20230.0,
+        "crowdRate": 0.247485,
+        "appName": "应用宝",
+        "android": 20230.0,
+        "devlopCompanyName": "腾讯科技",
+        "cateName": "应用商店",
+        "crowdPercent": 0.397762,
+        "cateId": 1121121,
+        "appId": 2010363,
+        "tgi": 1.09419,
+        "crowdDate": 1490976000000,
+        "crowdActiveNums": 8046.72
+      },
+      {
+        "activeNums": 24579.7,
+        "crowdRate": 0.244174,
+        "appName": "酷狗音乐",
+        "android": 16699.4,
+        "devlopCompanyName": "广州酷狗",
+        "cateName": "移动音乐",
+        "crowdPercent": 0.47541,
+        "cateId": 1071073,
+        "appId": 2032042,
+        "tgi": 1.20133,
+        "crowdDate": 1490976000000,
+        "crowdActiveNums": 7939.07
+      }
+    ],
+    "crowdLaunchPerPerson": "267.13",
+    "crowdRuntimePerPerson": "34.46",
+    "crowdRuntimeRate": null,
+    "tgiSort": [
+      {
+        "crowdRuntimeNums": 0.00636947,
+        "cateType": 3,
+        "crowdLaunchNums": 0.055,
+        "cateId": 3151049,
+        "tgi": 1.35013,
+        "coverRate": 1.18198E-5,
+        "crowdDate": 1490976000000,
+        "id": 3294355,
+        "crowdActiveNums": 0.384308,
+        "categoryName": "TCG(集换式卡牌游戏)"
+      },
+      {
+        "crowdRuntimeNums": 0.0108166,
+        "cateType": 1,
+        "crowdLaunchNums": 0.0626,
+        "cateId": 1171151,
+        "tgi": 1.27728,
+        "coverRate": 2.62041E-5,
+        "crowdDate": 1490976000000,
+        "id": 3294353,
+        "crowdActiveNums": 0.852,
+        "categoryName": "路况查询"
+      },
+      {
+        "crowdRuntimeNums": 1.30332,
+        "cateType": 1,
+        "crowdLaunchNums": 29.9713,
+        "cateId": 1191162,
+        "tgi": 1.16158,
+        "coverRate": 9.83787E-4,
+        "crowdDate": 1490976000000,
+        "id": 3294285,
+        "crowdActiveNums": 31.9868,
+        "categoryName": "匿名社交"
+      },
+      {
+        "crowdRuntimeNums": 15.6907,
+        "cateType": 1,
+        "crowdLaunchNums": 322.076,
+        "cateId": 1191293,
+        "tgi": 1.12919,
+        "coverRate": 0.0112075,
+        "crowdDate": 1490976000000,
+        "id": 3294192,
+        "crowdActiveNums": 364.4,
+        "categoryName": "异性社交"
+      },
+      {
+        "crowdRuntimeNums": 0.8221,
+        "cateType": 1,
+        "crowdLaunchNums": 6.2174,
+        "cateId": 1101102,
+        "tgi": 1.06682,
+        "coverRate": 0.00144611,
+        "crowdDate": 1490976000000,
+        "id": 3294273,
+        "crowdActiveNums": 47.0186,
+        "categoryName": "时尚资讯"
+      }
+    ],
+    "crowdAbsolutePermeability": null,
+    "crowdLaunchNums": 8685540.0,
+    "operators": [
+      {
+        "attrId": 1,
+        "attrValue": 0.650193,
+        "attrName": "中国移动"
+      },
+      {
+        "attrId": 2,
+        "attrValue": 0.210978,
+        "attrName": "中国联通"
+      },
+      {
+        "attrId": 3,
+        "attrValue": 0.13883,
+        "attrName": "中国电信"
+      }
+    ],
+    "crowdLaunchRate": null,
+    "crowdActiveNums": 32513.9,
+    "region": [
+      {
+        "attrId": 233,
+        "attrValue": 0.0257821,
+        "attrName": "广州市"
+      },
+      {
+        "attrId": 271,
+        "attrValue": 0.0228785,
+        "attrName": "重庆市"
+      },
+      {
+        "attrId": 36,
+        "attrValue": 0.0202131,
+        "attrName": "北京市"
+      }
+    ],
+    "brand": [
+      {
+        "attrId": 41,
+        "attrValue": 0.158572,
+        "attrName": "OPPO"
+      },
+      {
+        "attrId": 63,
+        "attrValue": 0.135532,
+        "attrName": "vivo"
+      },
+      {
+        "attrId": 305,
+        "attrValue": 0.104997,
+        "attrName": "华为"
+      }
+    ],
+    "age": [
+      {
+        "attrId": 210101,
+        "attrValue": 0.403837,
+        "attrName": "24岁以下"
+      },
+      {
+        "attrId": 210105,
+        "attrValue": 0.234145,
+        "attrName": "24岁到30岁"
+      },
+      {
+        "attrId": 210102,
+        "attrValue": 0.139447,
+        "attrName": "41岁及以上"
+      }
+    ],
+    "consumer": [
+      {
+        "attrId": 310104,
+        "attrValue": 0.392957,
+        "attrName": "中高消费人群"
+      },
+      {
+        "attrId": 310103,
+        "attrValue": 0.229904,
+        "attrName": "中等消费人群"
+      },
+      {
+        "attrId": 310102,
+        "attrValue": 0.183679,
+        "attrName": "中低消费人群"
+      }
+    ]
+  }
+}

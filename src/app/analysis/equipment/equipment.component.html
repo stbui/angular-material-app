@@ -1,0 +1,26 @@
+  <div fxLayout="row" fxLayoutWrap>
+    <div fxFlex.gt-sm="60">
+      <md-card>
+        <md-card-title>品牌偏好</md-card-title>
+        <md-card-content>
+          <canvas baseChart height="150px"
+                  [datasets]="barChartData"
+                  [labels]="barChartLabels"
+                  [options]="barChartOptions"
+                  [legend]="barChartLegend"
+                  [chartType]="barChartType"></canvas>
+        </md-card-content>
+      </md-card>
+    </div>
+    <div fxFlex.gt-sm="40">
+      <md-card>
+        <md-card-title>运营商分布</md-card-title>
+        <md-card-content>
+          <canvas baseChart height="150px"
+                  [data]="pieChartData"
+                  [labels]="pieChartLabels"
+                  [chartType]="pieChartType"></canvas>
+        </md-card-content>
+      </md-card>
+    </div>
+  </div>
