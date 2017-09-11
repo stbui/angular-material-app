@@ -1,0 +1,9 @@
+version: '2'
+
+services:
+  colmena:
+    image: stbui/angular-material-app:latest
+    ports:
+      - 3000:8080
+    volumes:
+      - stbui:/app/storage

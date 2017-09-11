@@ -1,0 +1,8 @@
+machine:
+  node:
+    version: 8.1.0
+dependencies:
+  pre:
+    - npm install -g @angular/cli@latest
+  post:
+    - npm run build

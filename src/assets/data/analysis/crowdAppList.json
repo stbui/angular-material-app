@@ -1,0 +1,225 @@
+{
+  "msg": "操作成功",
+  "code": "0",
+  "userStatus": 0,
+  "datas": {
+    "activeDatas": {
+      "total": 1969,
+      "datas": [
+        {
+          "categorys": [
+            {
+              "cateId": "1191167",
+              "cateName": "即时通讯"
+            },
+            {
+              "cateId": "1191160",
+              "cateName": "社交网络"
+            }
+          ],
+          "activeNums": 82306.5,
+          "crowdRate": 0.763024,
+          "appName": "微信",
+          "android": 55540.4,
+          "devlopCompanyName": "腾讯科技",
+          "cateName": "社交网络",
+          "crowdPercent": 0.446682,
+          "cateId": 1191160,
+          "appId": 2028050,
+          "tgi": 1.82059,
+          "crowdDate": 1490976000000,
+          "crowdActiveNums": 24808.9
+        },
+        {
+          "categorys": [
+            {
+              "cateId": "1191167",
+              "cateName": "即时通讯"
+            },
+            {
+              "cateId": "1191160",
+              "cateName": "社交网络"
+            }
+          ],
+          "activeNums": 55609.4,
+          "crowdRate": 0.678837,
+          "appName": "QQ",
+          "android": 37753.2,
+          "devlopCompanyName": "腾讯科技",
+          "cateName": "社交网络",
+          "crowdPercent": 0.58463,
+          "cateId": 1191160,
+          "appId": 2028051,
+          "tgi": 1.80161,
+          "crowdDate": 1490976000000,
+          "crowdActiveNums": 22071.7
+        },
+        {
+          "categorys": [
+            {
+              "cateId": "1201177",
+              "cateName": "综合电商"
+            }
+          ],
+          "activeNums": 30022.8,
+          "crowdRate": 0.457024,
+          "appName": "淘宝",
+          "android": 20247.4,
+          "devlopCompanyName": "阿里巴巴",
+          "cateName": "综合电商",
+          "crowdPercent": 0.733905,
+          "cateId": 1201177,
+          "appId": 2027844,
+          "tgi": 1.59331,
+          "crowdDate": 1490976000000,
+          "crowdActiveNums": 14859.6
+        },
+        {
+          "categorys": [
+            {
+              "cateId": "1221198",
+              "cateName": "支付"
+            }
+          ],
+          "activeNums": 33973.8,
+          "crowdRate": 0.39358,
+          "appName": "支付宝",
+          "android": 21396.7,
+          "devlopCompanyName": "阿里巴巴",
+          "cateName": "支付",
+          "crowdPercent": 0.598076,
+          "cateId": 1221198,
+          "appId": 2004708,
+          "tgi": 1.06484,
+          "crowdDate": 1490976000000,
+          "crowdActiveNums": 12796.8
+        },
+        {
+          "categorys": [
+            {
+              "cateId": "1081081",
+              "cateName": "综合视频"
+            }
+          ],
+          "activeNums": 26475.3,
+          "crowdRate": 0.388141,
+          "appName": "爱奇艺",
+          "android": 17952.9,
+          "devlopCompanyName": "爱奇艺",
+          "cateName": "综合视频",
+          "crowdPercent": 0.702949,
+          "cateId": 1081081,
+          "appId": 2015131,
+          "tgi": 1.60261,
+          "crowdDate": 1490976000000,
+          "crowdActiveNums": 12620.0
+        },
+        {
+          "categorys": [
+            {
+              "cateId": "1081081",
+              "cateName": "综合视频"
+            }
+          ],
+          "activeNums": 25586.0,
+          "crowdRate": 0.289188,
+          "appName": "腾讯视频",
+          "android": 17342.2,
+          "devlopCompanyName": "腾讯科技",
+          "cateName": "综合视频",
+          "crowdPercent": 0.542183,
+          "cateId": 1081081,
+          "appId": 2028092,
+          "tgi": 1.48971,
+          "crowdDate": 1490976000000,
+          "crowdActiveNums": 9402.63
+        },
+        {
+          "categorys": [
+            {
+              "cateId": "1111108",
+              "cateName": "搜索"
+            }
+          ],
+          "activeNums": 26483.5,
+          "crowdRate": 0.284133,
+          "appName": "手机百度",
+          "android": 17939.9,
+          "devlopCompanyName": "百度",
+          "cateName": "搜索",
+          "crowdPercent": 0.514957,
+          "cateId": 1111108,
+          "appId": 2020874,
+          "tgi": 1.4825,
+          "crowdDate": 1490976000000,
+          "crowdActiveNums": 9238.29
+        },
+        {
+          "categorys": [
+            {
+              "cateId": "1071073",
+              "cateName": "移动音乐"
+            }
+          ],
+          "activeNums": 16944.3,
+          "crowdRate": 0.282164,
+          "appName": "QQ音乐",
+          "android": 13975.7,
+          "devlopCompanyName": "腾讯科技",
+          "cateName": "移动音乐",
+          "crowdPercent": 0.656446,
+          "cateId": 1071073,
+          "appId": 2028095,
+          "tgi": 1.51737,
+          "crowdDate": 1490976000000,
+          "crowdActiveNums": 9174.27
+        },
+        {
+          "categorys": [
+            {
+              "cateId": "1121121",
+              "cateName": "应用商店"
+            }
+          ],
+          "activeNums": 20230.0,
+          "crowdRate": 0.247485,
+          "appName": "应用宝",
+          "android": 20230.0,
+          "devlopCompanyName": "腾讯科技",
+          "cateName": "应用商店",
+          "crowdPercent": 0.397762,
+          "cateId": 1121121,
+          "appId": 2010363,
+          "tgi": 1.09419,
+          "crowdDate": 1490976000000,
+          "crowdActiveNums": 8046.72
+        },
+        {
+          "categorys": [
+            {
+              "cateId": "1071073",
+              "cateName": "移动音乐"
+            }
+          ],
+          "activeNums": 24579.7,
+          "crowdRate": 0.244174,
+          "appName": "酷狗音乐",
+          "android": 16699.4,
+          "devlopCompanyName": "广州酷狗",
+          "cateName": "移动音乐",
+          "crowdPercent": 0.47541,
+          "cateId": 1071073,
+          "appId": 2032042,
+          "tgi": 1.20133,
+          "crowdDate": 1490976000000,
+          "crowdActiveNums": 7939.07
+        }
+      ],
+      "page": 1,
+      "allPage": 197
+    },
+    "md5Status": 1,
+    "title": "人群应用偏好-人群渗透",
+    "crowdName": "Demo人群"
+  }
+}
