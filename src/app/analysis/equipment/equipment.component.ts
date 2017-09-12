@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 
 @Component({
   selector: 'app-equipment',
@@ -11,21 +11,62 @@ export class EquipmentComponent implements OnInit {
     scaleShowVerticalLines: false,
     responsive: true
   };
-  public barChartLabels: string[] = ['OPPO', 'vivo', '华为', '三星', '荣耀', '红米', '小米', '联想', '酷派', '金立'];
-  public barChartType: string = 'bar';
+  public barChartLabels: string[] = [];
+  public barChartType: string = 'horizontalBar';
   public barChartLegend: boolean = true;
   public barChartData: any[] = [
-    {data: [15.8572, 13.5532, 10.4997, 10.1076, 8.32468, 5.50241, 4.54533, 3.59626, 3.34169, 3.33632], label: '使用率'}
+    {data: [], label: '使用率'}
   ];
 
+  // public pieChartLabels: string[] = [];
   public pieChartLabels: string[] = ['中国移动', '中国联通', '中国电信'];
   public pieChartData: any[] = [65.0193, 21.0978, 13.883];
   public pieChartType: string = 'pie';
 
-  constructor() {
+  constructor(@Inject('AnalysisService') private _service) {
   }
 
   ngOnInit() {
+    this.crowdDevice();
+  }
+
+  crowdDevice() {
+    this._service.crowdDevice();
+    this._service.crowdDevice$.subscribe(res => {
+
+      this.operators(res.operators);
+      this.brand(res.brand);
+    });
+  }
+
+  operators(res) {
+    if (!res) {
+      return;
+    }
+    // console.log(res);
+
+    let attrValue = [];
+    let attrName = res.filter(item => {
+      attrValue.push(item.attrValue);
+      return item.attrName;
+    });
+
+    // this.pieChartLabels = attrName;
+    // this.pieChartData = attrValue;
+  }
+
+  brand(res) {
+    if (!res || !res.list) {
+      return;
+    }
+
+    let attrValue = [];
+    let attrName = res.list.map(item => {
+      attrValue.push((item.attrValue * 100).toFixed(2));
+      return item.attrName;
+    });
+    this.barChartLabels = attrName;
+    this.barChartData[0].data = attrValue;
   }
 
 }

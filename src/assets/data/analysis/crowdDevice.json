@@ -1,0 +1,83 @@
+{
+  "msg": "操作成功",
+  "code": "0",
+  "userStatus": 0,
+  "datas": {
+    "operators": [
+      {
+        "attrId": 1,
+        "attrValue": 0.650193,
+        "attrName": "中国移动"
+      },
+      {
+        "attrId": 2,
+        "attrValue": 0.210978,
+        "attrName": "中国联通"
+      },
+      {
+        "attrId": 3,
+        "attrValue": 0.13883,
+        "attrName": "中国电信"
+      }
+    ],
+    "md5Status": 1,
+    "brand": {
+      "total": 23,
+      "page": 1,
+      "list": [
+        {
+          "attrId": 41,
+          "attrValue": 0.158572,
+          "attrName": "OPPO"
+        },
+        {
+          "attrId": 63,
+          "attrValue": 0.135532,
+          "attrName": "vivo"
+        },
+        {
+          "attrId": 305,
+          "attrValue": 0.104997,
+          "attrName": "华为"
+        },
+        {
+          "attrId": 577,
+          "attrValue": 0.101076,
+          "attrName": "三星"
+        },
+        {
+          "attrId": 560,
+          "attrValue": 0.0832468,
+          "attrName": "荣耀"
+        },
+        {
+          "attrId": 283,
+          "attrValue": 0.0550241,
+          "attrName": "红米"
+        },
+        {
+          "attrId": 699,
+          "attrValue": 0.0454533,
+          "attrName": "小米"
+        },
+        {
+          "attrId": 428,
+          "attrValue": 0.0359626,
+          "attrName": "联想"
+        },
+        {
+          "attrId": 386,
+          "attrValue": 0.0334169,
+          "attrName": "酷派"
+        },
+        {
+          "attrId": 335,
+          "attrValue": 0.0333632,
+          "attrName": "金立"
+        }
+      ],
+      "allPage": 3
+    },
+    "crowdName": "Demo人群"
+  }
+}

@@ -11,6 +11,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { CollectionComponent } from './collection/collection.component';
 import { UserComponent } from './user/user.component';
 
+import { UserService } from './user/user.service';
 
 @NgModule({
   imports: [
@@ -26,6 +27,9 @@ import { UserComponent } from './user/user.component';
     BlogComponent,
     ProfileComponent,
     UserComponent
+  ],
+  providers: [
+    {provide: 'UserService', useClass: UserService},
   ]
 })
 export class PagesModule { }

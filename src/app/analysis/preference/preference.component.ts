@@ -30,17 +30,18 @@ export class PreferenceComponent implements OnInit {
   getCrowdCateList() {
     this._service.getCrowdCateList();
 
-    let categoryName = [];
-    let crowdActiveNums = [];
     this._service.crowdCateList$.subscribe(res => {
       const list = res.list;
       if (!list) {
         return;
       }
-      list.filter(v => {
-        categoryName.push(v.categoryName);
+
+      let crowdActiveNums = [];
+      let categoryName = list.map(v => {
         crowdActiveNums.push(v.crowdActiveNums);
+        return v.categoryName;
       });
+
       this.barChartLabels = categoryName;
       this.barChartData[0].data = crowdActiveNums;
     });
@@ -53,14 +54,6 @@ export class PreferenceComponent implements OnInit {
         return;
       }
       this.coverRateListDatas = coverRateList;
-      // coverRateList.filter(v => {
-      //   this.coverRateListDatas.push({
-      //     cateId: v.cateId,
-      //     categoryName: v.categoryName,
-      //     coverRate: (v.coverRate * 100).toFixed(2)
-      //   });
-      // });
-
     });
   }
 
@@ -71,7 +64,7 @@ export class PreferenceComponent implements OnInit {
       if (!activeDatas) {
         return;
       }
-      this.activeDatas = activeDatas.datas
+      this.activeDatas = activeDatas.datas;
     });
   }
 

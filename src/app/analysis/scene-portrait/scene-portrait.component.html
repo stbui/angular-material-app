@@ -1,35 +1,34 @@
-<div fxLayout="row" fxLayoutWrap>
-  <div fxFlex.gt-sm="70">
-    <md-card>
-      <md-card-title>场景概览</md-card-title>
-      <md-card-content>
-
-      </md-card-content>
-    </md-card>
-  </div>
-  <div fxFlex.gt-sm="30">
-    <md-card>
-      <md-card-title>场景偏好APP</md-card-title>
-      <md-card-content>
-      </md-card-content>
-    </md-card>
-  </div>
+<div fxLayout="column">
+  <md-card>
+    <md-card-title>场景概览</md-card-title>
+    <md-card-content>
+      <canvas baseChart height="100px"
+              [datasets]="bubbleChartData"
+              [labels]="bubbleChartLabels"
+              [options]="bubbleChartOptions"
+              [legend]="bubbleChartLegend"
+              [chartType]="bubbleChartType"></canvas>
+    </md-card-content>
+  </md-card>
 </div>
-<div fxLayout="row" fxLayoutWrap>
-  <div fxFlex.gt-sm="70">
-    <md-card>
-      <md-card-title>场景使用分布</md-card-title>
-      <md-card-content>
-
-      </md-card-content>
-    </md-card>
-  </div>
-  <div fxFlex.gt-sm="30">
-    <md-card>
-      <md-card-title>场景粘性</md-card-title>
-      <md-card-content>
-      </md-card-content>
-    </md-card>
-  </div>
+<div fxLayout="column">
+  <md-card>
+    <md-card-title>场景偏好APP</md-card-title>
+    <md-card-content>
+    </md-card-content>
+  </md-card>
 </div>
-
+<div fxLayout="column">
+  <md-card>
+    <md-card-title>场景使用分布</md-card-title>
+    <md-card-content>
+    </md-card-content>
+  </md-card>
+</div>
+<div fxLayout="column">
+  <md-card>
+    <md-card-title>场景粘性</md-card-title>
+    <md-card-content>
+    </md-card-content>
+  </md-card>
+</div>

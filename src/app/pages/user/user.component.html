@@ -1,41 +1,37 @@
-<md-sidenav-container>
-  <md-sidenav>
-
-  </md-sidenav>
-
-  <div class="user-conanier" fxLayout="column">
-    <div class="user-main" fxLayout="row">
-      <div class="navigation" fxFlex="200px" fxHide="true" fxHide.gt-md="false">
-      </div>
-      <div class="content-container">
-        <table class="table table-hover">
-          <thead>
-          <tr>
-            <th><md-checkbox class="checkbox" [(ngModel)]="checked"></md-checkbox></th>
-            <th>账号</th>
-            <th>最后登录时间</th>
-            <th>最后登录IP</th>
-            <th>登录次数</th>
-            <th>状态</th>
-            <th>管理操作</th>
-          </tr>
-          </thead>
-          <tbody>
-          <tr *ngFor="let user of users" (click)="onEditTriggered(user)">
-            <td><md-checkbox class="checkbox" [checked]="checked"></md-checkbox></td>
-            <td>{{ user.loginName }}</td>
-            <td>{{ user.lastLoginTime }}</td>
-            <td>{{ user.lastLoginIp }}</td>
-            <td>{{ user.loginCount }}</td>
-            <td>{{ user.state }}</td>
-            <td><button md-icon-button (click)="onDeleteTriggered(user)"><md-icon>delete</md-icon></button></td>
-          </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-
+<div class="user-conanier" fxLayout="column">
+  <div class="content-container">
+    <table class="table table-hover">
+      <thead>
+      <tr>
+        <th>
+          <md-checkbox class="checkbox" [(ngModel)]="checked"></md-checkbox>
+        </th>
+        <th>账号</th>
+        <th>最后登录时间</th>
+        <th>最后登录IP</th>
+        <th>登录次数</th>
+        <th>状态</th>
+        <th>管理操作</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let user of users" (click)="onEditTriggered(user)">
+        <td>
+          <md-checkbox class="checkbox" [checked]="checked"></md-checkbox>
+        </td>
+        <td>{{ user.loginName }}</td>
+        <td>{{ user.lastLoginTime }}</td>
+        <td>{{ user.lastLoginIp }}</td>
+        <td>{{ user.loginCount }}</td>
+        <td>{{ user.state }}</td>
+        <td>
+          <button md-icon-button (click)="onDeleteTriggered(user)">
+            <md-icon>delete</md-icon>
+          </button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
   </div>
-</md-sidenav-container>
 
-
+</div>

@@ -1,0 +1,2635 @@
+{
+  "msg": "操作成功",
+  "code": "0",
+  "userStatus": 0,
+  "datas": {
+    "app": {
+      "launchPosition": 10.18803109745073,
+      "md5Status": 1,
+      "minCrowdRuntimeNums": 0.12,
+      "minCrowdLaunchNums": 2.56,
+      "scenId": null,
+      "crowdIds": null,
+      "maxCrowdLaunchNums": 110.62,
+      "maxCrowdRuntimeNums": 27.5,
+      "list": [
+        {
+          "crowdRuntimeNums": 5.29,
+          "crowdLaunchNums": 47.52,
+          "appName": "淘宝",
+          "cateId": 1201177,
+          "appId": 2027844,
+          "crowdActiveNums": 14859.6
+        },
+        {
+          "crowdRuntimeNums": 0.67,
+          "crowdLaunchNums": 11.0,
+          "appName": "支付宝",
+          "cateId": 1221198,
+          "appId": 2004708,
+          "crowdActiveNums": 12796.8
+        },
+        {
+          "crowdRuntimeNums": 0.77,
+          "crowdLaunchNums": 10.43,
+          "appName": "美团",
+          "cateId": 1041033,
+          "appId": 2021969,
+          "crowdActiveNums": 4163.31
+        },
+        {
+          "crowdRuntimeNums": 2.91,
+          "crowdLaunchNums": 44.5,
+          "appName": "作业帮",
+          "cateId": 1011008,
+          "appId": 2649211,
+          "crowdActiveNums": 2299.46
+        },
+        {
+          "crowdRuntimeNums": 1.46,
+          "crowdLaunchNums": 14.47,
+          "appName": "京东",
+          "cateId": 1201177,
+          "appId": 2025145,
+          "crowdActiveNums": 1986.96
+        },
+        {
+          "crowdRuntimeNums": 1.92,
+          "crowdLaunchNums": 15.47,
+          "appName": "唯品会",
+          "cateId": 1201183,
+          "appId": 2010681,
+          "crowdActiveNums": 1753.46
+        },
+        {
+          "crowdRuntimeNums": 1.78,
+          "crowdLaunchNums": 15.24,
+          "appName": "天猫",
+          "cateId": 1201177,
+          "appId": 2028440,
+          "crowdActiveNums": 1328.46
+        },
+        {
+          "crowdRuntimeNums": 0.98,
+          "crowdLaunchNums": 13.33,
+          "appName": "滴滴出行",
+          "cateId": 1231243,
+          "appId": 2022070,
+          "crowdActiveNums": 1188.51
+        },
+        {
+          "crowdRuntimeNums": 1.21,
+          "crowdLaunchNums": 15.88,
+          "appName": "饿了么",
+          "cateId": 1041044,
+          "appId": 2013176,
+          "crowdActiveNums": 1048.77
+        },
+        {
+          "crowdRuntimeNums": 0.51,
+          "crowdLaunchNums": 6.21,
+          "appName": "百度糯米",
+          "cateId": 1041033,
+          "appId": 2013910,
+          "crowdActiveNums": 914.569
+        },
+        {
+          "crowdRuntimeNums": 2.57,
+          "crowdLaunchNums": 25.01,
+          "appName": "拼多多",
+          "cateId": 1201183,
+          "appId": 3071155,
+          "crowdActiveNums": 881.407
+        },
+        {
+          "crowdRuntimeNums": 0.39,
+          "crowdLaunchNums": 5.02,
+          "appName": "中国工商银行",
+          "cateId": 1221199,
+          "appId": 2024248,
+          "crowdActiveNums": 880.158
+        },
+        {
+          "crowdRuntimeNums": 0.35,
+          "crowdLaunchNums": 5.35,
+          "appName": "中国建设银行",
+          "cateId": 1221199,
+          "appId": 2030684,
+          "crowdActiveNums": 777.696
+        },
+        {
+          "crowdRuntimeNums": 2.02,
+          "crowdLaunchNums": 27.06,
+          "appName": "小猿搜题",
+          "cateId": 1011008,
+          "appId": 2889325,
+          "crowdActiveNums": 735.925
+        },
+        {
+          "crowdRuntimeNums": 2.66,
+          "crowdLaunchNums": 19.47,
+          "appName": "美柚",
+          "cateId": 1371271,
+          "appId": 2032520,
+          "crowdActiveNums": 721.508
+        },
+        {
+          "crowdRuntimeNums": 1.95,
+          "crowdLaunchNums": 24.4,
+          "appName": "蘑菇街",
+          "cateId": 1201177,
+          "appId": 2007740,
+          "crowdActiveNums": 708.557
+        },
+        {
+          "crowdRuntimeNums": 0.77,
+          "crowdLaunchNums": 12.53,
+          "appName": "美团外卖",
+          "cateId": 1041044,
+          "appId": 2675072,
+          "crowdActiveNums": 676.065
+        },
+        {
+          "crowdRuntimeNums": 1.08,
+          "crowdLaunchNums": 12.44,
+          "appName": "ofo共享单车",
+          "cateId": 1231243,
+          "appId": 3342340,
+          "crowdActiveNums": 624.401
+        },
+        {
+          "crowdRuntimeNums": 2.21,
+          "crowdLaunchNums": 23.0,
+          "appName": "小红书海外购物神器",
+          "cateId": 1201184,
+          "appId": 2851539,
+          "crowdActiveNums": 579.81
+        },
+        {
+          "crowdRuntimeNums": 1.52,
+          "crowdLaunchNums": 12.33,
+          "appName": "一起作业学生端",
+          "cateId": 1011008,
+          "appId": 2991528,
+          "crowdActiveNums": 555.594
+        },
+        {
+          "crowdRuntimeNums": 2.14,
+          "crowdLaunchNums": 20.95,
+          "appName": "摩拜单车",
+          "cateId": 1231243,
+          "appId": 3093191,
+          "crowdActiveNums": 553.085
+        },
+        {
+          "crowdRuntimeNums": 0.39,
+          "crowdLaunchNums": 5.83,
+          "appName": "工银融e联",
+          "cateId": 1221199,
+          "appId": 2768598,
+          "crowdActiveNums": 515.84
+        },
+        {
+          "crowdRuntimeNums": 0.41,
+          "crowdLaunchNums": 4.86,
+          "appName": "招商银行",
+          "cateId": 1221199,
+          "appId": 2003234,
+          "crowdActiveNums": 511.559
+        },
+        {
+          "crowdRuntimeNums": 27.5,
+          "crowdLaunchNums": 64.95,
+          "appName": "贝瓦儿歌",
+          "cateId": 1011007,
+          "appId": 2591013,
+          "crowdActiveNums": 446.048
+        },
+        {
+          "crowdRuntimeNums": 0.26,
+          "crowdLaunchNums": 4.59,
+          "appName": "农行掌上银行",
+          "cateId": 1221199,
+          "appId": 2011193,
+          "crowdActiveNums": 418.18
+        },
+        {
+          "crowdRuntimeNums": 6.39,
+          "crowdLaunchNums": 28.73,
+          "appName": "小伴龙",
+          "cateId": 1011007,
+          "appId": 2000790,
+          "crowdActiveNums": 415.262
+        },
+        {
+          "crowdRuntimeNums": 2.52,
+          "crowdLaunchNums": 16.17,
+          "appName": "贝贝com.husor.beibei",
+          "cateId": 1241217,
+          "appId": 2757303,
+          "crowdActiveNums": 413.543
+        },
+        {
+          "crowdRuntimeNums": 0.22,
+          "crowdLaunchNums": 2.56,
+          "appName": "掌上生活",
+          "cateId": 1221199,
+          "appId": 2030891,
+          "crowdActiveNums": 396.821
+        },
+        {
+          "crowdRuntimeNums": 1.1,
+          "crowdLaunchNums": 12.05,
+          "appName": "聚美优品",
+          "cateId": 1201183,
+          "appId": 2025285,
+          "crowdActiveNums": 390.061
+        },
+        {
+          "crowdRuntimeNums": 0.37,
+          "crowdLaunchNums": 5.89,
+          "appName": "中国银行手机银行",
+          "cateId": 1221199,
+          "appId": 2030682,
+          "crowdActiveNums": 384.248
+        },
+        {
+          "crowdRuntimeNums": 1.18,
+          "crowdLaunchNums": 11.26,
+          "appName": "Keep",
+          "cateId": 1371278,
+          "appId": 3009210,
+          "crowdActiveNums": 378.988
+        },
+        {
+          "crowdRuntimeNums": 0.25,
+          "crowdLaunchNums": 3.71,
+          "appName": "邮储银行",
+          "cateId": 1221199,
+          "appId": 2021898,
+          "crowdActiveNums": 368.846
+        },
+        {
+          "crowdRuntimeNums": 12.53,
+          "crowdLaunchNums": 110.31,
+          "appName": "百词斩",
+          "cateId": 1011004,
+          "appId": 2025165,
+          "crowdActiveNums": 355.639
+        },
+        {
+          "crowdRuntimeNums": 2.0,
+          "crowdLaunchNums": 22.36,
+          "appName": "楚楚街",
+          "cateId": 1201183,
+          "appId": 2038455,
+          "crowdActiveNums": 346.899
+        },
+        {
+          "crowdRuntimeNums": 6.04,
+          "crowdLaunchNums": 44.29,
+          "appName": "平安好医生",
+          "cateId": 1351304,
+          "appId": 2914709,
+          "crowdActiveNums": 338.385
+        },
+        {
+          "crowdRuntimeNums": 1.96,
+          "crowdLaunchNums": 20.8,
+          "appName": "互动作业",
+          "cateId": 1011008,
+          "appId": 2658010,
+          "crowdActiveNums": 324.482
+        },
+        {
+          "crowdRuntimeNums": 0.79,
+          "crowdLaunchNums": 7.15,
+          "appName": "苏宁易购",
+          "cateId": 1201177,
+          "appId": 2027607,
+          "crowdActiveNums": 314.746
+        },
+        {
+          "crowdRuntimeNums": 3.55,
+          "crowdLaunchNums": 19.39,
+          "appName": "折800",
+          "cateId": 1201183,
+          "appId": 2028807,
+          "crowdActiveNums": 286.271
+        },
+        {
+          "crowdRuntimeNums": 1.19,
+          "crowdLaunchNums": 11.03,
+          "appName": "英语趣配音",
+          "cateId": 1011004,
+          "appId": 2896691,
+          "crowdActiveNums": 273.834
+        },
+        {
+          "crowdRuntimeNums": 1.19,
+          "crowdLaunchNums": 11.13,
+          "appName": "英语流利说",
+          "cateId": 1011004,
+          "appId": 2039408,
+          "crowdActiveNums": 272.299
+        },
+        {
+          "crowdRuntimeNums": 0.74,
+          "crowdLaunchNums": 4.37,
+          "appName": "照顾小宝宝com.sinyee.babybus.care",
+          "cateId": 1011007,
+          "appId": 2040165,
+          "crowdActiveNums": 267.255
+        },
+        {
+          "crowdRuntimeNums": 0.82,
+          "crowdLaunchNums": 18.78,
+          "appName": "车来了",
+          "cateId": 1171150,
+          "appId": 2788926,
+          "crowdActiveNums": 261.934
+        },
+        {
+          "crowdRuntimeNums": 1.54,
+          "crowdLaunchNums": 27.04,
+          "appName": "学霸君",
+          "cateId": 1011008,
+          "appId": 2638427,
+          "crowdActiveNums": 251.974
+        },
+        {
+          "crowdRuntimeNums": 8.92,
+          "crowdLaunchNums": 34.62,
+          "appName": "儿歌多多",
+          "cateId": 1011007,
+          "appId": 2601273,
+          "crowdActiveNums": 247.33
+        },
+        {
+          "crowdRuntimeNums": 0.72,
+          "crowdLaunchNums": 11.14,
+          "appName": "Uber优步",
+          "cateId": 1231243,
+          "appId": 2709186,
+          "crowdActiveNums": 243.697
+        },
+        {
+          "crowdRuntimeNums": 7.37,
+          "crowdLaunchNums": 10.62,
+          "appName": "卷皮折扣",
+          "cateId": 1201183,
+          "appId": 2035749,
+          "crowdActiveNums": 239.752
+        },
+        {
+          "crowdRuntimeNums": 0.99,
+          "crowdLaunchNums": 11.24,
+          "appName": "沪江开心词场",
+          "cateId": 1011004,
+          "appId": 2023719,
+          "crowdActiveNums": 231.564
+        },
+        {
+          "crowdRuntimeNums": 0.59,
+          "crowdLaunchNums": 6.03,
+          "appName": "当当",
+          "cateId": 1201177,
+          "appId": 2031636,
+          "crowdActiveNums": 228.919
+        },
+        {
+          "crowdRuntimeNums": 0.59,
+          "crowdLaunchNums": 6.19,
+          "appName": "大姨吗",
+          "cateId": 1371271,
+          "appId": 2006093,
+          "crowdActiveNums": 225.924
+        },
+        {
+          "crowdRuntimeNums": 12.38,
+          "crowdLaunchNums": 110.62,
+          "appName": "悦动圈跑步",
+          "cateId": 1371278,
+          "appId": 2814381,
+          "crowdActiveNums": 225.786
+        },
+        {
+          "crowdRuntimeNums": 0.68,
+          "crowdLaunchNums": 17.87,
+          "appName": "掌上公交com.mygolbs.mybus",
+          "cateId": 1171150,
+          "appId": 2008376,
+          "crowdActiveNums": 209.84
+        },
+        {
+          "crowdRuntimeNums": 0.46,
+          "crowdLaunchNums": 8.8,
+          "appName": "百度外卖",
+          "cateId": 1041044,
+          "appId": 2847066,
+          "crowdActiveNums": 205.523
+        },
+        {
+          "crowdRuntimeNums": 1.35,
+          "crowdLaunchNums": 7.47,
+          "appName": "宝宝甜品店",
+          "cateId": 1011007,
+          "appId": 3394943,
+          "crowdActiveNums": 202.989
+        },
+        {
+          "crowdRuntimeNums": 0.8,
+          "crowdLaunchNums": 5.22,
+          "appName": "米家",
+          "cateId": 1261247,
+          "appId": 2910396,
+          "crowdActiveNums": 198.813
+        },
+        {
+          "crowdRuntimeNums": 4.52,
+          "crowdLaunchNums": 35.12,
+          "appName": "掌通家园",
+          "cateId": 1011007,
+          "appId": 2895759,
+          "crowdActiveNums": 198.58
+        },
+        {
+          "crowdRuntimeNums": 0.91,
+          "crowdLaunchNums": 11.27,
+          "appName": "美丽说",
+          "cateId": 1201177,
+          "appId": 2033492,
+          "crowdActiveNums": 187.842
+        },
+        {
+          "crowdRuntimeNums": 0.49,
+          "crowdLaunchNums": 4.24,
+          "appName": "小米商城官方版com.xiaomi.shop",
+          "cateId": 1201185,
+          "appId": 2000809,
+          "crowdActiveNums": 186.91
+        },
+        {
+          "crowdRuntimeNums": 1.65,
+          "crowdLaunchNums": 10.65,
+          "appName": "纳米盒",
+          "cateId": 1011008,
+          "appId": 2882200,
+          "crowdActiveNums": 184.419
+        },
+        {
+          "crowdRuntimeNums": 0.4,
+          "crowdLaunchNums": 5.07,
+          "appName": "买单吧",
+          "cateId": 1221199,
+          "appId": 3100416,
+          "crowdActiveNums": 183.789
+        },
+        {
+          "crowdRuntimeNums": 0.48,
+          "crowdLaunchNums": 6.2,
+          "appName": "翼支付",
+          "cateId": 1221198,
+          "appId": 2030690,
+          "crowdActiveNums": 182.476
+        },
+        {
+          "crowdRuntimeNums": 4.1,
+          "crowdLaunchNums": 22.52,
+          "appName": "糖豆广场舞",
+          "cateId": 1371278,
+          "appId": 3006005,
+          "crowdActiveNums": 170.226
+        },
+        {
+          "crowdRuntimeNums": 3.36,
+          "crowdLaunchNums": 14.0,
+          "appName": "宝宝巴士",
+          "cateId": 1011007,
+          "appId": 2998846,
+          "crowdActiveNums": 170.147
+        },
+        {
+          "crowdRuntimeNums": 2.72,
+          "crowdLaunchNums": 30.16,
+          "appName": "作业互助组",
+          "cateId": 1011008,
+          "appId": 2040433,
+          "crowdActiveNums": 168.997
+        },
+        {
+          "crowdRuntimeNums": 0.47,
+          "crowdLaunchNums": 5.13,
+          "appName": "家长通",
+          "cateId": 1011008,
+          "appId": 2887797,
+          "crowdActiveNums": 163.865
+        },
+        {
+          "crowdRuntimeNums": 1.13,
+          "crowdLaunchNums": 19.24,
+          "appName": "微车违章查询",
+          "cateId": 1321284,
+          "appId": 2003355,
+          "crowdActiveNums": 162.331
+        },
+        {
+          "crowdRuntimeNums": 5.05,
+          "crowdLaunchNums": 40.37,
+          "appName": "乐动力",
+          "cateId": 1371278,
+          "appId": 2037797,
+          "crowdActiveNums": 160.741
+        },
+        {
+          "crowdRuntimeNums": 2.25,
+          "crowdLaunchNums": 18.78,
+          "appName": "口语100",
+          "cateId": 1011004,
+          "appId": 2585487,
+          "crowdActiveNums": 155.118
+        },
+        {
+          "crowdRuntimeNums": 8.87,
+          "crowdLaunchNums": 36.26,
+          "appName": "儿歌点点",
+          "cateId": 1011007,
+          "appId": 3034116,
+          "crowdActiveNums": 155.034
+        },
+        {
+          "crowdRuntimeNums": 2.1,
+          "crowdLaunchNums": 22.28,
+          "appName": "智慧树",
+          "cateId": 1011007,
+          "appId": 2793587,
+          "crowdActiveNums": 153.399
+        },
+        {
+          "crowdRuntimeNums": 0.12,
+          "crowdLaunchNums": 4.91,
+          "appName": "姨妈日记",
+          "cateId": 1371271,
+          "appId": 2805844,
+          "crowdActiveNums": 152.932
+        },
+        {
+          "crowdRuntimeNums": 0.55,
+          "crowdLaunchNums": 3.61,
+          "appName": "宝宝调色屋",
+          "cateId": 1011007,
+          "appId": 2022697,
+          "crowdActiveNums": 145.827
+        },
+        {
+          "crowdRuntimeNums": 1.73,
+          "crowdLaunchNums": 22.11,
+          "appName": "乐教乐学",
+          "cateId": 1011008,
+          "appId": 2964295,
+          "crowdActiveNums": 145.16
+        },
+        {
+          "crowdRuntimeNums": 0.9,
+          "crowdLaunchNums": 9.23,
+          "appName": "洋葱数学",
+          "cateId": 1011008,
+          "appId": 2997496,
+          "crowdActiveNums": 145.149
+        },
+        {
+          "crowdRuntimeNums": 0.73,
+          "crowdLaunchNums": 5.46,
+          "appName": "宝宝来找茬",
+          "cateId": 1011007,
+          "appId": 2022685,
+          "crowdActiveNums": 143.321
+        },
+        {
+          "crowdRuntimeNums": 1.09,
+          "crowdLaunchNums": 6.11,
+          "appName": "宝宝超市",
+          "cateId": 1011007,
+          "appId": 3113573,
+          "crowdActiveNums": 134.302
+        },
+        {
+          "crowdRuntimeNums": 2.26,
+          "crowdLaunchNums": 16.89,
+          "appName": "速算总动员",
+          "cateId": 1011008,
+          "appId": 2970729,
+          "crowdActiveNums": 133.661
+        },
+        {
+          "crowdRuntimeNums": 0.93,
+          "crowdLaunchNums": 5.71,
+          "appName": "装扮小公主",
+          "cateId": 1011007,
+          "appId": 3292542,
+          "crowdActiveNums": 131.941
+        },
+        {
+          "crowdRuntimeNums": 1.1,
+          "crowdLaunchNums": 5.73,
+          "appName": "中华美食",
+          "cateId": 1011007,
+          "appId": 3083200,
+          "crowdActiveNums": 131.907
+        },
+        {
+          "crowdRuntimeNums": 1.37,
+          "crowdLaunchNums": 9.74,
+          "appName": "1号店",
+          "cateId": 1201177,
+          "appId": 2028259,
+          "crowdActiveNums": 127.006
+        },
+        {
+          "crowdRuntimeNums": 0.61,
+          "crowdLaunchNums": 4.0,
+          "appName": "宝宝医院",
+          "cateId": 1011007,
+          "appId": 2573644,
+          "crowdActiveNums": 126.335
+        },
+        {
+          "crowdRuntimeNums": 1.38,
+          "crowdLaunchNums": 12.54,
+          "appName": "网易考拉海购",
+          "cateId": 1201184,
+          "appId": 2994842,
+          "crowdActiveNums": 124.219
+        },
+        {
+          "crowdRuntimeNums": 7.35,
+          "crowdLaunchNums": 101.94,
+          "appName": "猿题库",
+          "cateId": 1011008,
+          "appId": 2744859,
+          "crowdActiveNums": 124.132
+        },
+        {
+          "crowdRuntimeNums": 0.45,
+          "crowdLaunchNums": 7.58,
+          "appName": "宝宝巴士大全",
+          "cateId": 1011007,
+          "appId": 3027024,
+          "crowdActiveNums": 122.181
+        },
+        {
+          "crowdRuntimeNums": 0.38,
+          "crowdLaunchNums": 5.6,
+          "appName": "交通银行",
+          "cateId": 1221199,
+          "appId": 2020993,
+          "crowdActiveNums": 121.668
+        },
+        {
+          "crowdRuntimeNums": 0.77,
+          "crowdLaunchNums": 4.93,
+          "appName": "乐敲方块",
+          "cateId": 1011007,
+          "appId": 3027264,
+          "crowdActiveNums": 120.353
+        },
+        {
+          "crowdRuntimeNums": 2.28,
+          "crowdLaunchNums": 16.26,
+          "appName": "安居客",
+          "cateId": 1041041,
+          "appId": 2020005,
+          "crowdActiveNums": 119.878
+        },
+        {
+          "crowdRuntimeNums": 0.46,
+          "crowdLaunchNums": 6.23,
+          "appName": "民生银行手机银行",
+          "cateId": 1221199,
+          "appId": 2003398,
+          "crowdActiveNums": 119.215
+        },
+        {
+          "crowdRuntimeNums": 0.24,
+          "crowdLaunchNums": 6.63,
+          "appName": "护眼宝",
+          "cateId": 1371274,
+          "appId": 2698269,
+          "crowdActiveNums": 119.111
+        },
+        {
+          "crowdRuntimeNums": 4.02,
+          "crowdLaunchNums": 33.26,
+          "appName": "初中数学作业答案集",
+          "cateId": 1011008,
+          "appId": 2669636,
+          "crowdActiveNums": 114.623
+        },
+        {
+          "crowdRuntimeNums": 0.95,
+          "crowdLaunchNums": 12.87,
+          "appName": "微店",
+          "cateId": 1201177,
+          "appId": 2620842,
+          "crowdActiveNums": 114.478
+        },
+        {
+          "crowdRuntimeNums": 3.5,
+          "crowdLaunchNums": 33.07,
+          "appName": "扇贝单词",
+          "cateId": 1011004,
+          "appId": 2022268,
+          "crowdActiveNums": 111.808
+        },
+        {
+          "crowdRuntimeNums": 1.13,
+          "crowdLaunchNums": 6.52,
+          "appName": "糖果工厂",
+          "cateId": 1011007,
+          "appId": 3069747,
+          "crowdActiveNums": 111.557
+        },
+        {
+          "crowdRuntimeNums": 0.81,
+          "crowdLaunchNums": 13.15,
+          "appName": "阿凡题",
+          "cateId": 1011008,
+          "appId": 2810659,
+          "crowdActiveNums": 111.034
+        },
+        {
+          "crowdRuntimeNums": 0.98,
+          "crowdLaunchNums": 9.53,
+          "appName": "TV控",
+          "cateId": 1261247,
+          "appId": 2968295,
+          "crowdActiveNums": 106.584
+        },
+        {
+          "crowdRuntimeNums": 1.27,
+          "crowdLaunchNums": 6.36,
+          "appName": "宝宝幼儿园",
+          "cateId": 1011007,
+          "appId": 2567244,
+          "crowdActiveNums": 105.125
+        },
+        {
+          "crowdRuntimeNums": 1.24,
+          "crowdLaunchNums": 11.7,
+          "appName": "跳吧",
+          "cateId": 1011009,
+          "appId": 2929411,
+          "crowdActiveNums": 103.292
+        },
+        {
+          "crowdRuntimeNums": 1.24,
+          "crowdLaunchNums": 10.81,
+          "appName": "天天练",
+          "cateId": 1011008,
+          "appId": 3031412,
+          "crowdActiveNums": 103.163
+        },
+        {
+          "crowdRuntimeNums": 0.79,
+          "crowdLaunchNums": 5.87,
+          "appName": "莉比小公主之梦幻学院",
+          "cateId": 1011007,
+          "appId": 3017175,
+          "crowdActiveNums": 102.81
+        },
+        {
+          "crowdRuntimeNums": 1.98,
+          "crowdLaunchNums": 29.97,
+          "appName": "咕咚",
+          "cateId": 1371278,
+          "appId": 2031042,
+          "crowdActiveNums": 102.335
+        },
+        {
+          "crowdRuntimeNums": 0.59,
+          "crowdLaunchNums": 3.76,
+          "appName": "宝宝当店长",
+          "cateId": 1011007,
+          "appId": 3395031,
+          "crowdActiveNums": 100.72
+        }
+      ],
+      "runtimeList": [
+        {
+          "crowdRuntimeNums": 27.5,
+          "crowdLaunchNums": 64.95,
+          "appName": "贝瓦儿歌",
+          "cateId": 1011007,
+          "appId": 2591013,
+          "crowdActiveNums": 446.048
+        },
+        {
+          "crowdRuntimeNums": 12.53,
+          "crowdLaunchNums": 110.31,
+          "appName": "百词斩",
+          "cateId": 1011004,
+          "appId": 2025165,
+          "crowdActiveNums": 355.639
+        },
+        {
+          "crowdRuntimeNums": 12.38,
+          "crowdLaunchNums": 110.62,
+          "appName": "悦动圈跑步",
+          "cateId": 1371278,
+          "appId": 2814381,
+          "crowdActiveNums": 225.786
+        },
+        {
+          "crowdRuntimeNums": 8.92,
+          "crowdLaunchNums": 34.62,
+          "appName": "儿歌多多",
+          "cateId": 1011007,
+          "appId": 2601273,
+          "crowdActiveNums": 247.33
+        },
+        {
+          "crowdRuntimeNums": 8.87,
+          "crowdLaunchNums": 36.26,
+          "appName": "儿歌点点",
+          "cateId": 1011007,
+          "appId": 3034116,
+          "crowdActiveNums": 155.034
+        },
+        {
+          "crowdRuntimeNums": 7.37,
+          "crowdLaunchNums": 10.62,
+          "appName": "卷皮折扣",
+          "cateId": 1201183,
+          "appId": 2035749,
+          "crowdActiveNums": 239.752
+        },
+        {
+          "crowdRuntimeNums": 7.35,
+          "crowdLaunchNums": 101.94,
+          "appName": "猿题库",
+          "cateId": 1011008,
+          "appId": 2744859,
+          "crowdActiveNums": 124.132
+        },
+        {
+          "crowdRuntimeNums": 6.39,
+          "crowdLaunchNums": 28.73,
+          "appName": "小伴龙",
+          "cateId": 1011007,
+          "appId": 2000790,
+          "crowdActiveNums": 415.262
+        },
+        {
+          "crowdRuntimeNums": 6.04,
+          "crowdLaunchNums": 44.29,
+          "appName": "平安好医生",
+          "cateId": 1351304,
+          "appId": 2914709,
+          "crowdActiveNums": 338.385
+        },
+        {
+          "crowdRuntimeNums": 5.29,
+          "crowdLaunchNums": 47.52,
+          "appName": "淘宝",
+          "cateId": 1201177,
+          "appId": 2027844,
+          "crowdActiveNums": 14859.6
+        },
+        {
+          "crowdRuntimeNums": 5.05,
+          "crowdLaunchNums": 40.37,
+          "appName": "乐动力",
+          "cateId": 1371278,
+          "appId": 2037797,
+          "crowdActiveNums": 160.741
+        },
+        {
+          "crowdRuntimeNums": 4.52,
+          "crowdLaunchNums": 35.12,
+          "appName": "掌通家园",
+          "cateId": 1011007,
+          "appId": 2895759,
+          "crowdActiveNums": 198.58
+        },
+        {
+          "crowdRuntimeNums": 4.1,
+          "crowdLaunchNums": 22.52,
+          "appName": "糖豆广场舞",
+          "cateId": 1371278,
+          "appId": 3006005,
+          "crowdActiveNums": 170.226
+        },
+        {
+          "crowdRuntimeNums": 4.02,
+          "crowdLaunchNums": 33.26,
+          "appName": "初中数学作业答案集",
+          "cateId": 1011008,
+          "appId": 2669636,
+          "crowdActiveNums": 114.623
+        },
+        {
+          "crowdRuntimeNums": 3.55,
+          "crowdLaunchNums": 19.39,
+          "appName": "折800",
+          "cateId": 1201183,
+          "appId": 2028807,
+          "crowdActiveNums": 286.271
+        },
+        {
+          "crowdRuntimeNums": 3.5,
+          "crowdLaunchNums": 33.07,
+          "appName": "扇贝单词",
+          "cateId": 1011004,
+          "appId": 2022268,
+          "crowdActiveNums": 111.808
+        },
+        {
+          "crowdRuntimeNums": 3.36,
+          "crowdLaunchNums": 14.0,
+          "appName": "宝宝巴士",
+          "cateId": 1011007,
+          "appId": 2998846,
+          "crowdActiveNums": 170.147
+        },
+        {
+          "crowdRuntimeNums": 2.91,
+          "crowdLaunchNums": 44.5,
+          "appName": "作业帮",
+          "cateId": 1011008,
+          "appId": 2649211,
+          "crowdActiveNums": 2299.46
+        },
+        {
+          "crowdRuntimeNums": 2.72,
+          "crowdLaunchNums": 30.16,
+          "appName": "作业互助组",
+          "cateId": 1011008,
+          "appId": 2040433,
+          "crowdActiveNums": 168.997
+        },
+        {
+          "crowdRuntimeNums": 2.66,
+          "crowdLaunchNums": 19.47,
+          "appName": "美柚",
+          "cateId": 1371271,
+          "appId": 2032520,
+          "crowdActiveNums": 721.508
+        },
+        {
+          "crowdRuntimeNums": 2.57,
+          "crowdLaunchNums": 25.01,
+          "appName": "拼多多",
+          "cateId": 1201183,
+          "appId": 3071155,
+          "crowdActiveNums": 881.407
+        },
+        {
+          "crowdRuntimeNums": 2.52,
+          "crowdLaunchNums": 16.17,
+          "appName": "贝贝com.husor.beibei",
+          "cateId": 1241217,
+          "appId": 2757303,
+          "crowdActiveNums": 413.543
+        },
+        {
+          "crowdRuntimeNums": 2.28,
+          "crowdLaunchNums": 16.26,
+          "appName": "安居客",
+          "cateId": 1041041,
+          "appId": 2020005,
+          "crowdActiveNums": 119.878
+        },
+        {
+          "crowdRuntimeNums": 2.26,
+          "crowdLaunchNums": 16.89,
+          "appName": "速算总动员",
+          "cateId": 1011008,
+          "appId": 2970729,
+          "crowdActiveNums": 133.661
+        },
+        {
+          "crowdRuntimeNums": 2.25,
+          "crowdLaunchNums": 18.78,
+          "appName": "口语100",
+          "cateId": 1011004,
+          "appId": 2585487,
+          "crowdActiveNums": 155.118
+        },
+        {
+          "crowdRuntimeNums": 2.21,
+          "crowdLaunchNums": 23.0,
+          "appName": "小红书海外购物神器",
+          "cateId": 1201184,
+          "appId": 2851539,
+          "crowdActiveNums": 579.81
+        },
+        {
+          "crowdRuntimeNums": 2.14,
+          "crowdLaunchNums": 20.95,
+          "appName": "摩拜单车",
+          "cateId": 1231243,
+          "appId": 3093191,
+          "crowdActiveNums": 553.085
+        },
+        {
+          "crowdRuntimeNums": 2.1,
+          "crowdLaunchNums": 22.28,
+          "appName": "智慧树",
+          "cateId": 1011007,
+          "appId": 2793587,
+          "crowdActiveNums": 153.399
+        },
+        {
+          "crowdRuntimeNums": 2.02,
+          "crowdLaunchNums": 27.06,
+          "appName": "小猿搜题",
+          "cateId": 1011008,
+          "appId": 2889325,
+          "crowdActiveNums": 735.925
+        },
+        {
+          "crowdRuntimeNums": 2.0,
+          "crowdLaunchNums": 22.36,
+          "appName": "楚楚街",
+          "cateId": 1201183,
+          "appId": 2038455,
+          "crowdActiveNums": 346.899
+        },
+        {
+          "crowdRuntimeNums": 1.98,
+          "crowdLaunchNums": 29.97,
+          "appName": "咕咚",
+          "cateId": 1371278,
+          "appId": 2031042,
+          "crowdActiveNums": 102.335
+        },
+        {
+          "crowdRuntimeNums": 1.96,
+          "crowdLaunchNums": 20.8,
+          "appName": "互动作业",
+          "cateId": 1011008,
+          "appId": 2658010,
+          "crowdActiveNums": 324.482
+        },
+        {
+          "crowdRuntimeNums": 1.95,
+          "crowdLaunchNums": 24.4,
+          "appName": "蘑菇街",
+          "cateId": 1201177,
+          "appId": 2007740,
+          "crowdActiveNums": 708.557
+        },
+        {
+          "crowdRuntimeNums": 1.92,
+          "crowdLaunchNums": 15.47,
+          "appName": "唯品会",
+          "cateId": 1201183,
+          "appId": 2010681,
+          "crowdActiveNums": 1753.46
+        },
+        {
+          "crowdRuntimeNums": 1.78,
+          "crowdLaunchNums": 15.24,
+          "appName": "天猫",
+          "cateId": 1201177,
+          "appId": 2028440,
+          "crowdActiveNums": 1328.46
+        },
+        {
+          "crowdRuntimeNums": 1.73,
+          "crowdLaunchNums": 22.11,
+          "appName": "乐教乐学",
+          "cateId": 1011008,
+          "appId": 2964295,
+          "crowdActiveNums": 145.16
+        },
+        {
+          "crowdRuntimeNums": 1.65,
+          "crowdLaunchNums": 10.65,
+          "appName": "纳米盒",
+          "cateId": 1011008,
+          "appId": 2882200,
+          "crowdActiveNums": 184.419
+        },
+        {
+          "crowdRuntimeNums": 1.54,
+          "crowdLaunchNums": 27.04,
+          "appName": "学霸君",
+          "cateId": 1011008,
+          "appId": 2638427,
+          "crowdActiveNums": 251.974
+        },
+        {
+          "crowdRuntimeNums": 1.52,
+          "crowdLaunchNums": 12.33,
+          "appName": "一起作业学生端",
+          "cateId": 1011008,
+          "appId": 2991528,
+          "crowdActiveNums": 555.594
+        },
+        {
+          "crowdRuntimeNums": 1.46,
+          "crowdLaunchNums": 14.47,
+          "appName": "京东",
+          "cateId": 1201177,
+          "appId": 2025145,
+          "crowdActiveNums": 1986.96
+        },
+        {
+          "crowdRuntimeNums": 1.38,
+          "crowdLaunchNums": 12.54,
+          "appName": "网易考拉海购",
+          "cateId": 1201184,
+          "appId": 2994842,
+          "crowdActiveNums": 124.219
+        },
+        {
+          "crowdRuntimeNums": 1.37,
+          "crowdLaunchNums": 9.74,
+          "appName": "1号店",
+          "cateId": 1201177,
+          "appId": 2028259,
+          "crowdActiveNums": 127.006
+        },
+        {
+          "crowdRuntimeNums": 1.35,
+          "crowdLaunchNums": 7.47,
+          "appName": "宝宝甜品店",
+          "cateId": 1011007,
+          "appId": 3394943,
+          "crowdActiveNums": 202.989
+        },
+        {
+          "crowdRuntimeNums": 1.27,
+          "crowdLaunchNums": 6.36,
+          "appName": "宝宝幼儿园",
+          "cateId": 1011007,
+          "appId": 2567244,
+          "crowdActiveNums": 105.125
+        },
+        {
+          "crowdRuntimeNums": 1.24,
+          "crowdLaunchNums": 11.7,
+          "appName": "跳吧",
+          "cateId": 1011009,
+          "appId": 2929411,
+          "crowdActiveNums": 103.292
+        },
+        {
+          "crowdRuntimeNums": 1.24,
+          "crowdLaunchNums": 10.81,
+          "appName": "天天练",
+          "cateId": 1011008,
+          "appId": 3031412,
+          "crowdActiveNums": 103.163
+        },
+        {
+          "crowdRuntimeNums": 1.21,
+          "crowdLaunchNums": 15.88,
+          "appName": "饿了么",
+          "cateId": 1041044,
+          "appId": 2013176,
+          "crowdActiveNums": 1048.77
+        },
+        {
+          "crowdRuntimeNums": 1.19,
+          "crowdLaunchNums": 11.03,
+          "appName": "英语趣配音",
+          "cateId": 1011004,
+          "appId": 2896691,
+          "crowdActiveNums": 273.834
+        },
+        {
+          "crowdRuntimeNums": 1.19,
+          "crowdLaunchNums": 11.13,
+          "appName": "英语流利说",
+          "cateId": 1011004,
+          "appId": 2039408,
+          "crowdActiveNums": 272.299
+        },
+        {
+          "crowdRuntimeNums": 1.18,
+          "crowdLaunchNums": 11.26,
+          "appName": "Keep",
+          "cateId": 1371278,
+          "appId": 3009210,
+          "crowdActiveNums": 378.988
+        },
+        {
+          "crowdRuntimeNums": 1.13,
+          "crowdLaunchNums": 19.24,
+          "appName": "微车违章查询",
+          "cateId": 1321284,
+          "appId": 2003355,
+          "crowdActiveNums": 162.331
+        },
+        {
+          "crowdRuntimeNums": 1.13,
+          "crowdLaunchNums": 6.52,
+          "appName": "糖果工厂",
+          "cateId": 1011007,
+          "appId": 3069747,
+          "crowdActiveNums": 111.557
+        },
+        {
+          "crowdRuntimeNums": 1.1,
+          "crowdLaunchNums": 12.05,
+          "appName": "聚美优品",
+          "cateId": 1201183,
+          "appId": 2025285,
+          "crowdActiveNums": 390.061
+        },
+        {
+          "crowdRuntimeNums": 1.1,
+          "crowdLaunchNums": 5.73,
+          "appName": "中华美食",
+          "cateId": 1011007,
+          "appId": 3083200,
+          "crowdActiveNums": 131.907
+        },
+        {
+          "crowdRuntimeNums": 1.09,
+          "crowdLaunchNums": 6.11,
+          "appName": "宝宝超市",
+          "cateId": 1011007,
+          "appId": 3113573,
+          "crowdActiveNums": 134.302
+        },
+        {
+          "crowdRuntimeNums": 1.08,
+          "crowdLaunchNums": 12.44,
+          "appName": "ofo共享单车",
+          "cateId": 1231243,
+          "appId": 3342340,
+          "crowdActiveNums": 624.401
+        },
+        {
+          "crowdRuntimeNums": 0.99,
+          "crowdLaunchNums": 11.24,
+          "appName": "沪江开心词场",
+          "cateId": 1011004,
+          "appId": 2023719,
+          "crowdActiveNums": 231.564
+        },
+        {
+          "crowdRuntimeNums": 0.98,
+          "crowdLaunchNums": 13.33,
+          "appName": "滴滴出行",
+          "cateId": 1231243,
+          "appId": 2022070,
+          "crowdActiveNums": 1188.51
+        },
+        {
+          "crowdRuntimeNums": 0.98,
+          "crowdLaunchNums": 9.53,
+          "appName": "TV控",
+          "cateId": 1261247,
+          "appId": 2968295,
+          "crowdActiveNums": 106.584
+        },
+        {
+          "crowdRuntimeNums": 0.95,
+          "crowdLaunchNums": 12.87,
+          "appName": "微店",
+          "cateId": 1201177,
+          "appId": 2620842,
+          "crowdActiveNums": 114.478
+        },
+        {
+          "crowdRuntimeNums": 0.93,
+          "crowdLaunchNums": 5.71,
+          "appName": "装扮小公主",
+          "cateId": 1011007,
+          "appId": 3292542,
+          "crowdActiveNums": 131.941
+        },
+        {
+          "crowdRuntimeNums": 0.91,
+          "crowdLaunchNums": 11.27,
+          "appName": "美丽说",
+          "cateId": 1201177,
+          "appId": 2033492,
+          "crowdActiveNums": 187.842
+        },
+        {
+          "crowdRuntimeNums": 0.9,
+          "crowdLaunchNums": 9.23,
+          "appName": "洋葱数学",
+          "cateId": 1011008,
+          "appId": 2997496,
+          "crowdActiveNums": 145.149
+        },
+        {
+          "crowdRuntimeNums": 0.82,
+          "crowdLaunchNums": 18.78,
+          "appName": "车来了",
+          "cateId": 1171150,
+          "appId": 2788926,
+          "crowdActiveNums": 261.934
+        },
+        {
+          "crowdRuntimeNums": 0.81,
+          "crowdLaunchNums": 13.15,
+          "appName": "阿凡题",
+          "cateId": 1011008,
+          "appId": 2810659,
+          "crowdActiveNums": 111.034
+        },
+        {
+          "crowdRuntimeNums": 0.8,
+          "crowdLaunchNums": 5.22,
+          "appName": "米家",
+          "cateId": 1261247,
+          "appId": 2910396,
+          "crowdActiveNums": 198.813
+        },
+        {
+          "crowdRuntimeNums": 0.79,
+          "crowdLaunchNums": 7.15,
+          "appName": "苏宁易购",
+          "cateId": 1201177,
+          "appId": 2027607,
+          "crowdActiveNums": 314.746
+        },
+        {
+          "crowdRuntimeNums": 0.79,
+          "crowdLaunchNums": 5.87,
+          "appName": "莉比小公主之梦幻学院",
+          "cateId": 1011007,
+          "appId": 3017175,
+          "crowdActiveNums": 102.81
+        },
+        {
+          "crowdRuntimeNums": 0.77,
+          "crowdLaunchNums": 10.43,
+          "appName": "美团",
+          "cateId": 1041033,
+          "appId": 2021969,
+          "crowdActiveNums": 4163.31
+        },
+        {
+          "crowdRuntimeNums": 0.77,
+          "crowdLaunchNums": 12.53,
+          "appName": "美团外卖",
+          "cateId": 1041044,
+          "appId": 2675072,
+          "crowdActiveNums": 676.065
+        },
+        {
+          "crowdRuntimeNums": 0.77,
+          "crowdLaunchNums": 4.93,
+          "appName": "乐敲方块",
+          "cateId": 1011007,
+          "appId": 3027264,
+          "crowdActiveNums": 120.353
+        },
+        {
+          "crowdRuntimeNums": 0.74,
+          "crowdLaunchNums": 4.37,
+          "appName": "照顾小宝宝com.sinyee.babybus.care",
+          "cateId": 1011007,
+          "appId": 2040165,
+          "crowdActiveNums": 267.255
+        },
+        {
+          "crowdRuntimeNums": 0.73,
+          "crowdLaunchNums": 5.46,
+          "appName": "宝宝来找茬",
+          "cateId": 1011007,
+          "appId": 2022685,
+          "crowdActiveNums": 143.321
+        },
+        {
+          "crowdRuntimeNums": 0.72,
+          "crowdLaunchNums": 11.14,
+          "appName": "Uber优步",
+          "cateId": 1231243,
+          "appId": 2709186,
+          "crowdActiveNums": 243.697
+        },
+        {
+          "crowdRuntimeNums": 0.68,
+          "crowdLaunchNums": 17.87,
+          "appName": "掌上公交com.mygolbs.mybus",
+          "cateId": 1171150,
+          "appId": 2008376,
+          "crowdActiveNums": 209.84
+        },
+        {
+          "crowdRuntimeNums": 0.67,
+          "crowdLaunchNums": 11.0,
+          "appName": "支付宝",
+          "cateId": 1221198,
+          "appId": 2004708,
+          "crowdActiveNums": 12796.8
+        },
+        {
+          "crowdRuntimeNums": 0.61,
+          "crowdLaunchNums": 4.0,
+          "appName": "宝宝医院",
+          "cateId": 1011007,
+          "appId": 2573644,
+          "crowdActiveNums": 126.335
+        },
+        {
+          "crowdRuntimeNums": 0.59,
+          "crowdLaunchNums": 6.03,
+          "appName": "当当",
+          "cateId": 1201177,
+          "appId": 2031636,
+          "crowdActiveNums": 228.919
+        },
+        {
+          "crowdRuntimeNums": 0.59,
+          "crowdLaunchNums": 6.19,
+          "appName": "大姨吗",
+          "cateId": 1371271,
+          "appId": 2006093,
+          "crowdActiveNums": 225.924
+        },
+        {
+          "crowdRuntimeNums": 0.59,
+          "crowdLaunchNums": 3.76,
+          "appName": "宝宝当店长",
+          "cateId": 1011007,
+          "appId": 3395031,
+          "crowdActiveNums": 100.72
+        },
+        {
+          "crowdRuntimeNums": 0.55,
+          "crowdLaunchNums": 3.61,
+          "appName": "宝宝调色屋",
+          "cateId": 1011007,
+          "appId": 2022697,
+          "crowdActiveNums": 145.827
+        },
+        {
+          "crowdRuntimeNums": 0.51,
+          "crowdLaunchNums": 6.21,
+          "appName": "百度糯米",
+          "cateId": 1041033,
+          "appId": 2013910,
+          "crowdActiveNums": 914.569
+        },
+        {
+          "crowdRuntimeNums": 0.49,
+          "crowdLaunchNums": 4.24,
+          "appName": "小米商城官方版com.xiaomi.shop",
+          "cateId": 1201185,
+          "appId": 2000809,
+          "crowdActiveNums": 186.91
+        },
+        {
+          "crowdRuntimeNums": 0.48,
+          "crowdLaunchNums": 6.2,
+          "appName": "翼支付",
+          "cateId": 1221198,
+          "appId": 2030690,
+          "crowdActiveNums": 182.476
+        },
+        {
+          "crowdRuntimeNums": 0.47,
+          "crowdLaunchNums": 5.13,
+          "appName": "家长通",
+          "cateId": 1011008,
+          "appId": 2887797,
+          "crowdActiveNums": 163.865
+        },
+        {
+          "crowdRuntimeNums": 0.46,
+          "crowdLaunchNums": 8.8,
+          "appName": "百度外卖",
+          "cateId": 1041044,
+          "appId": 2847066,
+          "crowdActiveNums": 205.523
+        },
+        {
+          "crowdRuntimeNums": 0.46,
+          "crowdLaunchNums": 6.23,
+          "appName": "民生银行手机银行",
+          "cateId": 1221199,
+          "appId": 2003398,
+          "crowdActiveNums": 119.215
+        },
+        {
+          "crowdRuntimeNums": 0.45,
+          "crowdLaunchNums": 7.58,
+          "appName": "宝宝巴士大全",
+          "cateId": 1011007,
+          "appId": 3027024,
+          "crowdActiveNums": 122.181
+        },
+        {
+          "crowdRuntimeNums": 0.41,
+          "crowdLaunchNums": 4.86,
+          "appName": "招商银行",
+          "cateId": 1221199,
+          "appId": 2003234,
+          "crowdActiveNums": 511.559
+        },
+        {
+          "crowdRuntimeNums": 0.4,
+          "crowdLaunchNums": 5.07,
+          "appName": "买单吧",
+          "cateId": 1221199,
+          "appId": 3100416,
+          "crowdActiveNums": 183.789
+        },
+        {
+          "crowdRuntimeNums": 0.39,
+          "crowdLaunchNums": 5.02,
+          "appName": "中国工商银行",
+          "cateId": 1221199,
+          "appId": 2024248,
+          "crowdActiveNums": 880.158
+        },
+        {
+          "crowdRuntimeNums": 0.39,
+          "crowdLaunchNums": 5.83,
+          "appName": "工银融e联",
+          "cateId": 1221199,
+          "appId": 2768598,
+          "crowdActiveNums": 515.84
+        },
+        {
+          "crowdRuntimeNums": 0.38,
+          "crowdLaunchNums": 5.6,
+          "appName": "交通银行",
+          "cateId": 1221199,
+          "appId": 2020993,
+          "crowdActiveNums": 121.668
+        },
+        {
+          "crowdRuntimeNums": 0.37,
+          "crowdLaunchNums": 5.89,
+          "appName": "中国银行手机银行",
+          "cateId": 1221199,
+          "appId": 2030682,
+          "crowdActiveNums": 384.248
+        },
+        {
+          "crowdRuntimeNums": 0.35,
+          "crowdLaunchNums": 5.35,
+          "appName": "中国建设银行",
+          "cateId": 1221199,
+          "appId": 2030684,
+          "crowdActiveNums": 777.696
+        },
+        {
+          "crowdRuntimeNums": 0.26,
+          "crowdLaunchNums": 4.59,
+          "appName": "农行掌上银行",
+          "cateId": 1221199,
+          "appId": 2011193,
+          "crowdActiveNums": 418.18
+        },
+        {
+          "crowdRuntimeNums": 0.25,
+          "crowdLaunchNums": 3.71,
+          "appName": "邮储银行",
+          "cateId": 1221199,
+          "appId": 2021898,
+          "crowdActiveNums": 368.846
+        },
+        {
+          "crowdRuntimeNums": 0.24,
+          "crowdLaunchNums": 6.63,
+          "appName": "护眼宝",
+          "cateId": 1371274,
+          "appId": 2698269,
+          "crowdActiveNums": 119.111
+        },
+        {
+          "crowdRuntimeNums": 0.22,
+          "crowdLaunchNums": 2.56,
+          "appName": "掌上生活",
+          "cateId": 1221199,
+          "appId": 2030891,
+          "crowdActiveNums": 396.821
+        },
+        {
+          "crowdRuntimeNums": 0.12,
+          "crowdLaunchNums": 4.91,
+          "appName": "姨妈日记",
+          "cateId": 1371271,
+          "appId": 2805844,
+          "crowdActiveNums": 152.932
+        }
+      ],
+      "runtimePosition": 10,
+      "launchList": [
+        {
+          "crowdRuntimeNums": 12.38,
+          "crowdLaunchNums": 110.62,
+          "appName": "悦动圈跑步",
+          "cateId": 1371278,
+          "appId": 2814381,
+          "crowdActiveNums": 225.786
+        },
+        {
+          "crowdRuntimeNums": 12.53,
+          "crowdLaunchNums": 110.31,
+          "appName": "百词斩",
+          "cateId": 1011004,
+          "appId": 2025165,
+          "crowdActiveNums": 355.639
+        },
+        {
+          "crowdRuntimeNums": 7.35,
+          "crowdLaunchNums": 101.94,
+          "appName": "猿题库",
+          "cateId": 1011008,
+          "appId": 2744859,
+          "crowdActiveNums": 124.132
+        },
+        {
+          "crowdRuntimeNums": 27.5,
+          "crowdLaunchNums": 64.95,
+          "appName": "贝瓦儿歌",
+          "cateId": 1011007,
+          "appId": 2591013,
+          "crowdActiveNums": 446.048
+        },
+        {
+          "crowdRuntimeNums": 5.29,
+          "crowdLaunchNums": 47.52,
+          "appName": "淘宝",
+          "cateId": 1201177,
+          "appId": 2027844,
+          "crowdActiveNums": 14859.6
+        },
+        {
+          "crowdRuntimeNums": 2.91,
+          "crowdLaunchNums": 44.5,
+          "appName": "作业帮",
+          "cateId": 1011008,
+          "appId": 2649211,
+          "crowdActiveNums": 2299.46
+        },
+        {
+          "crowdRuntimeNums": 6.04,
+          "crowdLaunchNums": 44.29,
+          "appName": "平安好医生",
+          "cateId": 1351304,
+          "appId": 2914709,
+          "crowdActiveNums": 338.385
+        },
+        {
+          "crowdRuntimeNums": 5.05,
+          "crowdLaunchNums": 40.37,
+          "appName": "乐动力",
+          "cateId": 1371278,
+          "appId": 2037797,
+          "crowdActiveNums": 160.741
+        },
+        {
+          "crowdRuntimeNums": 8.87,
+          "crowdLaunchNums": 36.26,
+          "appName": "儿歌点点",
+          "cateId": 1011007,
+          "appId": 3034116,
+          "crowdActiveNums": 155.034
+        },
+        {
+          "crowdRuntimeNums": 4.52,
+          "crowdLaunchNums": 35.12,
+          "appName": "掌通家园",
+          "cateId": 1011007,
+          "appId": 2895759,
+          "crowdActiveNums": 198.58
+        },
+        {
+          "crowdRuntimeNums": 8.92,
+          "crowdLaunchNums": 34.62,
+          "appName": "儿歌多多",
+          "cateId": 1011007,
+          "appId": 2601273,
+          "crowdActiveNums": 247.33
+        },
+        {
+          "crowdRuntimeNums": 4.02,
+          "crowdLaunchNums": 33.26,
+          "appName": "初中数学作业答案集",
+          "cateId": 1011008,
+          "appId": 2669636,
+          "crowdActiveNums": 114.623
+        },
+        {
+          "crowdRuntimeNums": 3.5,
+          "crowdLaunchNums": 33.07,
+          "appName": "扇贝单词",
+          "cateId": 1011004,
+          "appId": 2022268,
+          "crowdActiveNums": 111.808
+        },
+        {
+          "crowdRuntimeNums": 2.72,
+          "crowdLaunchNums": 30.16,
+          "appName": "作业互助组",
+          "cateId": 1011008,
+          "appId": 2040433,
+          "crowdActiveNums": 168.997
+        },
+        {
+          "crowdRuntimeNums": 1.98,
+          "crowdLaunchNums": 29.97,
+          "appName": "咕咚",
+          "cateId": 1371278,
+          "appId": 2031042,
+          "crowdActiveNums": 102.335
+        },
+        {
+          "crowdRuntimeNums": 6.39,
+          "crowdLaunchNums": 28.73,
+          "appName": "小伴龙",
+          "cateId": 1011007,
+          "appId": 2000790,
+          "crowdActiveNums": 415.262
+        },
+        {
+          "crowdRuntimeNums": 2.02,
+          "crowdLaunchNums": 27.06,
+          "appName": "小猿搜题",
+          "cateId": 1011008,
+          "appId": 2889325,
+          "crowdActiveNums": 735.925
+        },
+        {
+          "crowdRuntimeNums": 1.54,
+          "crowdLaunchNums": 27.04,
+          "appName": "学霸君",
+          "cateId": 1011008,
+          "appId": 2638427,
+          "crowdActiveNums": 251.974
+        },
+        {
+          "crowdRuntimeNums": 2.57,
+          "crowdLaunchNums": 25.01,
+          "appName": "拼多多",
+          "cateId": 1201183,
+          "appId": 3071155,
+          "crowdActiveNums": 881.407
+        },
+        {
+          "crowdRuntimeNums": 1.95,
+          "crowdLaunchNums": 24.4,
+          "appName": "蘑菇街",
+          "cateId": 1201177,
+          "appId": 2007740,
+          "crowdActiveNums": 708.557
+        },
+        {
+          "crowdRuntimeNums": 2.21,
+          "crowdLaunchNums": 23.0,
+          "appName": "小红书海外购物神器",
+          "cateId": 1201184,
+          "appId": 2851539,
+          "crowdActiveNums": 579.81
+        },
+        {
+          "crowdRuntimeNums": 4.1,
+          "crowdLaunchNums": 22.52,
+          "appName": "糖豆广场舞",
+          "cateId": 1371278,
+          "appId": 3006005,
+          "crowdActiveNums": 170.226
+        },
+        {
+          "crowdRuntimeNums": 2.0,
+          "crowdLaunchNums": 22.36,
+          "appName": "楚楚街",
+          "cateId": 1201183,
+          "appId": 2038455,
+          "crowdActiveNums": 346.899
+        },
+        {
+          "crowdRuntimeNums": 2.1,
+          "crowdLaunchNums": 22.28,
+          "appName": "智慧树",
+          "cateId": 1011007,
+          "appId": 2793587,
+          "crowdActiveNums": 153.399
+        },
+        {
+          "crowdRuntimeNums": 1.73,
+          "crowdLaunchNums": 22.11,
+          "appName": "乐教乐学",
+          "cateId": 1011008,
+          "appId": 2964295,
+          "crowdActiveNums": 145.16
+        },
+        {
+          "crowdRuntimeNums": 2.14,
+          "crowdLaunchNums": 20.95,
+          "appName": "摩拜单车",
+          "cateId": 1231243,
+          "appId": 3093191,
+          "crowdActiveNums": 553.085
+        },
+        {
+          "crowdRuntimeNums": 1.96,
+          "crowdLaunchNums": 20.8,
+          "appName": "互动作业",
+          "cateId": 1011008,
+          "appId": 2658010,
+          "crowdActiveNums": 324.482
+        },
+        {
+          "crowdRuntimeNums": 2.66,
+          "crowdLaunchNums": 19.47,
+          "appName": "美柚",
+          "cateId": 1371271,
+          "appId": 2032520,
+          "crowdActiveNums": 721.508
+        },
+        {
+          "crowdRuntimeNums": 3.55,
+          "crowdLaunchNums": 19.39,
+          "appName": "折800",
+          "cateId": 1201183,
+          "appId": 2028807,
+          "crowdActiveNums": 286.271
+        },
+        {
+          "crowdRuntimeNums": 1.13,
+          "crowdLaunchNums": 19.24,
+          "appName": "微车违章查询",
+          "cateId": 1321284,
+          "appId": 2003355,
+          "crowdActiveNums": 162.331
+        },
+        {
+          "crowdRuntimeNums": 0.82,
+          "crowdLaunchNums": 18.78,
+          "appName": "车来了",
+          "cateId": 1171150,
+          "appId": 2788926,
+          "crowdActiveNums": 261.934
+        },
+        {
+          "crowdRuntimeNums": 2.25,
+          "crowdLaunchNums": 18.78,
+          "appName": "口语100",
+          "cateId": 1011004,
+          "appId": 2585487,
+          "crowdActiveNums": 155.118
+        },
+        {
+          "crowdRuntimeNums": 0.68,
+          "crowdLaunchNums": 17.87,
+          "appName": "掌上公交com.mygolbs.mybus",
+          "cateId": 1171150,
+          "appId": 2008376,
+          "crowdActiveNums": 209.84
+        },
+        {
+          "crowdRuntimeNums": 2.26,
+          "crowdLaunchNums": 16.89,
+          "appName": "速算总动员",
+          "cateId": 1011008,
+          "appId": 2970729,
+          "crowdActiveNums": 133.661
+        },
+        {
+          "crowdRuntimeNums": 2.28,
+          "crowdLaunchNums": 16.26,
+          "appName": "安居客",
+          "cateId": 1041041,
+          "appId": 2020005,
+          "crowdActiveNums": 119.878
+        },
+        {
+          "crowdRuntimeNums": 2.52,
+          "crowdLaunchNums": 16.17,
+          "appName": "贝贝com.husor.beibei",
+          "cateId": 1241217,
+          "appId": 2757303,
+          "crowdActiveNums": 413.543
+        },
+        {
+          "crowdRuntimeNums": 1.21,
+          "crowdLaunchNums": 15.88,
+          "appName": "饿了么",
+          "cateId": 1041044,
+          "appId": 2013176,
+          "crowdActiveNums": 1048.77
+        },
+        {
+          "crowdRuntimeNums": 1.92,
+          "crowdLaunchNums": 15.47,
+          "appName": "唯品会",
+          "cateId": 1201183,
+          "appId": 2010681,
+          "crowdActiveNums": 1753.46
+        },
+        {
+          "crowdRuntimeNums": 1.78,
+          "crowdLaunchNums": 15.24,
+          "appName": "天猫",
+          "cateId": 1201177,
+          "appId": 2028440,
+          "crowdActiveNums": 1328.46
+        },
+        {
+          "crowdRuntimeNums": 1.46,
+          "crowdLaunchNums": 14.47,
+          "appName": "京东",
+          "cateId": 1201177,
+          "appId": 2025145,
+          "crowdActiveNums": 1986.96
+        },
+        {
+          "crowdRuntimeNums": 3.36,
+          "crowdLaunchNums": 14.0,
+          "appName": "宝宝巴士",
+          "cateId": 1011007,
+          "appId": 2998846,
+          "crowdActiveNums": 170.147
+        },
+        {
+          "crowdRuntimeNums": 0.98,
+          "crowdLaunchNums": 13.33,
+          "appName": "滴滴出行",
+          "cateId": 1231243,
+          "appId": 2022070,
+          "crowdActiveNums": 1188.51
+        },
+        {
+          "crowdRuntimeNums": 0.81,
+          "crowdLaunchNums": 13.15,
+          "appName": "阿凡题",
+          "cateId": 1011008,
+          "appId": 2810659,
+          "crowdActiveNums": 111.034
+        },
+        {
+          "crowdRuntimeNums": 0.95,
+          "crowdLaunchNums": 12.87,
+          "appName": "微店",
+          "cateId": 1201177,
+          "appId": 2620842,
+          "crowdActiveNums": 114.478
+        },
+        {
+          "crowdRuntimeNums": 1.38,
+          "crowdLaunchNums": 12.54,
+          "appName": "网易考拉海购",
+          "cateId": 1201184,
+          "appId": 2994842,
+          "crowdActiveNums": 124.219
+        },
+        {
+          "crowdRuntimeNums": 0.77,
+          "crowdLaunchNums": 12.53,
+          "appName": "美团外卖",
+          "cateId": 1041044,
+          "appId": 2675072,
+          "crowdActiveNums": 676.065
+        },
+        {
+          "crowdRuntimeNums": 1.08,
+          "crowdLaunchNums": 12.44,
+          "appName": "ofo共享单车",
+          "cateId": 1231243,
+          "appId": 3342340,
+          "crowdActiveNums": 624.401
+        },
+        {
+          "crowdRuntimeNums": 1.52,
+          "crowdLaunchNums": 12.33,
+          "appName": "一起作业学生端",
+          "cateId": 1011008,
+          "appId": 2991528,
+          "crowdActiveNums": 555.594
+        },
+        {
+          "crowdRuntimeNums": 1.1,
+          "crowdLaunchNums": 12.05,
+          "appName": "聚美优品",
+          "cateId": 1201183,
+          "appId": 2025285,
+          "crowdActiveNums": 390.061
+        },
+        {
+          "crowdRuntimeNums": 1.24,
+          "crowdLaunchNums": 11.7,
+          "appName": "跳吧",
+          "cateId": 1011009,
+          "appId": 2929411,
+          "crowdActiveNums": 103.292
+        },
+        {
+          "crowdRuntimeNums": 0.91,
+          "crowdLaunchNums": 11.27,
+          "appName": "美丽说",
+          "cateId": 1201177,
+          "appId": 2033492,
+          "crowdActiveNums": 187.842
+        },
+        {
+          "crowdRuntimeNums": 1.18,
+          "crowdLaunchNums": 11.26,
+          "appName": "Keep",
+          "cateId": 1371278,
+          "appId": 3009210,
+          "crowdActiveNums": 378.988
+        },
+        {
+          "crowdRuntimeNums": 0.99,
+          "crowdLaunchNums": 11.24,
+          "appName": "沪江开心词场",
+          "cateId": 1011004,
+          "appId": 2023719,
+          "crowdActiveNums": 231.564
+        },
+        {
+          "crowdRuntimeNums": 0.72,
+          "crowdLaunchNums": 11.14,
+          "appName": "Uber优步",
+          "cateId": 1231243,
+          "appId": 2709186,
+          "crowdActiveNums": 243.697
+        },
+        {
+          "crowdRuntimeNums": 1.19,
+          "crowdLaunchNums": 11.13,
+          "appName": "英语流利说",
+          "cateId": 1011004,
+          "appId": 2039408,
+          "crowdActiveNums": 272.299
+        },
+        {
+          "crowdRuntimeNums": 1.19,
+          "crowdLaunchNums": 11.03,
+          "appName": "英语趣配音",
+          "cateId": 1011004,
+          "appId": 2896691,
+          "crowdActiveNums": 273.834
+        },
+        {
+          "crowdRuntimeNums": 0.67,
+          "crowdLaunchNums": 11.0,
+          "appName": "支付宝",
+          "cateId": 1221198,
+          "appId": 2004708,
+          "crowdActiveNums": 12796.8
+        },
+        {
+          "crowdRuntimeNums": 1.24,
+          "crowdLaunchNums": 10.81,
+          "appName": "天天练",
+          "cateId": 1011008,
+          "appId": 3031412,
+          "crowdActiveNums": 103.163
+        },
+        {
+          "crowdRuntimeNums": 1.65,
+          "crowdLaunchNums": 10.65,
+          "appName": "纳米盒",
+          "cateId": 1011008,
+          "appId": 2882200,
+          "crowdActiveNums": 184.419
+        },
+        {
+          "crowdRuntimeNums": 7.37,
+          "crowdLaunchNums": 10.62,
+          "appName": "卷皮折扣",
+          "cateId": 1201183,
+          "appId": 2035749,
+          "crowdActiveNums": 239.752
+        },
+        {
+          "crowdRuntimeNums": 0.77,
+          "crowdLaunchNums": 10.43,
+          "appName": "美团",
+          "cateId": 1041033,
+          "appId": 2021969,
+          "crowdActiveNums": 4163.31
+        },
+        {
+          "crowdRuntimeNums": 1.37,
+          "crowdLaunchNums": 9.74,
+          "appName": "1号店",
+          "cateId": 1201177,
+          "appId": 2028259,
+          "crowdActiveNums": 127.006
+        },
+        {
+          "crowdRuntimeNums": 0.98,
+          "crowdLaunchNums": 9.53,
+          "appName": "TV控",
+          "cateId": 1261247,
+          "appId": 2968295,
+          "crowdActiveNums": 106.584
+        },
+        {
+          "crowdRuntimeNums": 0.9,
+          "crowdLaunchNums": 9.23,
+          "appName": "洋葱数学",
+          "cateId": 1011008,
+          "appId": 2997496,
+          "crowdActiveNums": 145.149
+        },
+        {
+          "crowdRuntimeNums": 0.46,
+          "crowdLaunchNums": 8.8,
+          "appName": "百度外卖",
+          "cateId": 1041044,
+          "appId": 2847066,
+          "crowdActiveNums": 205.523
+        },
+        {
+          "crowdRuntimeNums": 0.45,
+          "crowdLaunchNums": 7.58,
+          "appName": "宝宝巴士大全",
+          "cateId": 1011007,
+          "appId": 3027024,
+          "crowdActiveNums": 122.181
+        },
+        {
+          "crowdRuntimeNums": 1.35,
+          "crowdLaunchNums": 7.47,
+          "appName": "宝宝甜品店",
+          "cateId": 1011007,
+          "appId": 3394943,
+          "crowdActiveNums": 202.989
+        },
+        {
+          "crowdRuntimeNums": 0.79,
+          "crowdLaunchNums": 7.15,
+          "appName": "苏宁易购",
+          "cateId": 1201177,
+          "appId": 2027607,
+          "crowdActiveNums": 314.746
+        },
+        {
+          "crowdRuntimeNums": 0.24,
+          "crowdLaunchNums": 6.63,
+          "appName": "护眼宝",
+          "cateId": 1371274,
+          "appId": 2698269,
+          "crowdActiveNums": 119.111
+        },
+        {
+          "crowdRuntimeNums": 1.13,
+          "crowdLaunchNums": 6.52,
+          "appName": "糖果工厂",
+          "cateId": 1011007,
+          "appId": 3069747,
+          "crowdActiveNums": 111.557
+        },
+        {
+          "crowdRuntimeNums": 1.27,
+          "crowdLaunchNums": 6.36,
+          "appName": "宝宝幼儿园",
+          "cateId": 1011007,
+          "appId": 2567244,
+          "crowdActiveNums": 105.125
+        },
+        {
+          "crowdRuntimeNums": 0.46,
+          "crowdLaunchNums": 6.23,
+          "appName": "民生银行手机银行",
+          "cateId": 1221199,
+          "appId": 2003398,
+          "crowdActiveNums": 119.215
+        },
+        {
+          "crowdRuntimeNums": 0.51,
+          "crowdLaunchNums": 6.21,
+          "appName": "百度糯米",
+          "cateId": 1041033,
+          "appId": 2013910,
+          "crowdActiveNums": 914.569
+        },
+        {
+          "crowdRuntimeNums": 0.48,
+          "crowdLaunchNums": 6.2,
+          "appName": "翼支付",
+          "cateId": 1221198,
+          "appId": 2030690,
+          "crowdActiveNums": 182.476
+        },
+        {
+          "crowdRuntimeNums": 0.59,
+          "crowdLaunchNums": 6.19,
+          "appName": "大姨吗",
+          "cateId": 1371271,
+          "appId": 2006093,
+          "crowdActiveNums": 225.924
+        },
+        {
+          "crowdRuntimeNums": 1.09,
+          "crowdLaunchNums": 6.11,
+          "appName": "宝宝超市",
+          "cateId": 1011007,
+          "appId": 3113573,
+          "crowdActiveNums": 134.302
+        },
+        {
+          "crowdRuntimeNums": 0.59,
+          "crowdLaunchNums": 6.03,
+          "appName": "当当",
+          "cateId": 1201177,
+          "appId": 2031636,
+          "crowdActiveNums": 228.919
+        },
+        {
+          "crowdRuntimeNums": 0.37,
+          "crowdLaunchNums": 5.89,
+          "appName": "中国银行手机银行",
+          "cateId": 1221199,
+          "appId": 2030682,
+          "crowdActiveNums": 384.248
+        },
+        {
+          "crowdRuntimeNums": 0.79,
+          "crowdLaunchNums": 5.87,
+          "appName": "莉比小公主之梦幻学院",
+          "cateId": 1011007,
+          "appId": 3017175,
+          "crowdActiveNums": 102.81
+        },
+        {
+          "crowdRuntimeNums": 0.39,
+          "crowdLaunchNums": 5.83,
+          "appName": "工银融e联",
+          "cateId": 1221199,
+          "appId": 2768598,
+          "crowdActiveNums": 515.84
+        },
+        {
+          "crowdRuntimeNums": 1.1,
+          "crowdLaunchNums": 5.73,
+          "appName": "中华美食",
+          "cateId": 1011007,
+          "appId": 3083200,
+          "crowdActiveNums": 131.907
+        },
+        {
+          "crowdRuntimeNums": 0.93,
+          "crowdLaunchNums": 5.71,
+          "appName": "装扮小公主",
+          "cateId": 1011007,
+          "appId": 3292542,
+          "crowdActiveNums": 131.941
+        },
+        {
+          "crowdRuntimeNums": 0.38,
+          "crowdLaunchNums": 5.6,
+          "appName": "交通银行",
+          "cateId": 1221199,
+          "appId": 2020993,
+          "crowdActiveNums": 121.668
+        },
+        {
+          "crowdRuntimeNums": 0.73,
+          "crowdLaunchNums": 5.46,
+          "appName": "宝宝来找茬",
+          "cateId": 1011007,
+          "appId": 2022685,
+          "crowdActiveNums": 143.321
+        },
+        {
+          "crowdRuntimeNums": 0.35,
+          "crowdLaunchNums": 5.35,
+          "appName": "中国建设银行",
+          "cateId": 1221199,
+          "appId": 2030684,
+          "crowdActiveNums": 777.696
+        },
+        {
+          "crowdRuntimeNums": 0.8,
+          "crowdLaunchNums": 5.22,
+          "appName": "米家",
+          "cateId": 1261247,
+          "appId": 2910396,
+          "crowdActiveNums": 198.813
+        },
+        {
+          "crowdRuntimeNums": 0.47,
+          "crowdLaunchNums": 5.13,
+          "appName": "家长通",
+          "cateId": 1011008,
+          "appId": 2887797,
+          "crowdActiveNums": 163.865
+        },
+        {
+          "crowdRuntimeNums": 0.4,
+          "crowdLaunchNums": 5.07,
+          "appName": "买单吧",
+          "cateId": 1221199,
+          "appId": 3100416,
+          "crowdActiveNums": 183.789
+        },
+        {
+          "crowdRuntimeNums": 0.39,
+          "crowdLaunchNums": 5.02,
+          "appName": "中国工商银行",
+          "cateId": 1221199,
+          "appId": 2024248,
+          "crowdActiveNums": 880.158
+        },
+        {
+          "crowdRuntimeNums": 0.77,
+          "crowdLaunchNums": 4.93,
+          "appName": "乐敲方块",
+          "cateId": 1011007,
+          "appId": 3027264,
+          "crowdActiveNums": 120.353
+        },
+        {
+          "crowdRuntimeNums": 0.12,
+          "crowdLaunchNums": 4.91,
+          "appName": "姨妈日记",
+          "cateId": 1371271,
+          "appId": 2805844,
+          "crowdActiveNums": 152.932
+        },
+        {
+          "crowdRuntimeNums": 0.41,
+          "crowdLaunchNums": 4.86,
+          "appName": "招商银行",
+          "cateId": 1221199,
+          "appId": 2003234,
+          "crowdActiveNums": 511.559
+        },
+        {
+          "crowdRuntimeNums": 0.26,
+          "crowdLaunchNums": 4.59,
+          "appName": "农行掌上银行",
+          "cateId": 1221199,
+          "appId": 2011193,
+          "crowdActiveNums": 418.18
+        },
+        {
+          "crowdRuntimeNums": 0.74,
+          "crowdLaunchNums": 4.37,
+          "appName": "照顾小宝宝com.sinyee.babybus.care",
+          "cateId": 1011007,
+          "appId": 2040165,
+          "crowdActiveNums": 267.255
+        },
+        {
+          "crowdRuntimeNums": 0.49,
+          "crowdLaunchNums": 4.24,
+          "appName": "小米商城官方版com.xiaomi.shop",
+          "cateId": 1201185,
+          "appId": 2000809,
+          "crowdActiveNums": 186.91
+        },
+        {
+          "crowdRuntimeNums": 0.61,
+          "crowdLaunchNums": 4.0,
+          "appName": "宝宝医院",
+          "cateId": 1011007,
+          "appId": 2573644,
+          "crowdActiveNums": 126.335
+        },
+        {
+          "crowdRuntimeNums": 0.59,
+          "crowdLaunchNums": 3.76,
+          "appName": "宝宝当店长",
+          "cateId": 1011007,
+          "appId": 3395031,
+          "crowdActiveNums": 100.72
+        },
+        {
+          "crowdRuntimeNums": 0.25,
+          "crowdLaunchNums": 3.71,
+          "appName": "邮储银行",
+          "cateId": 1221199,
+          "appId": 2021898,
+          "crowdActiveNums": 368.846
+        },
+        {
+          "crowdRuntimeNums": 0.55,
+          "crowdLaunchNums": 3.61,
+          "appName": "宝宝调色屋",
+          "cateId": 1011007,
+          "appId": 2022697,
+          "crowdActiveNums": 145.827
+        },
+        {
+          "crowdRuntimeNums": 0.22,
+          "crowdLaunchNums": 2.56,
+          "appName": "掌上生活",
+          "cateId": 1221199,
+          "appId": 2030891,
+          "crowdActiveNums": 396.821
+        }
+      ]
+    },
+    "using": {
+      "runtimeNums": [
+        {
+          "scenName": "高端消费",
+          "scenId": 101,
+          "indexValue": 0.0032974614296108484
+        },
+        {
+          "scenName": "家居家饰",
+          "scenId": 106,
+          "indexValue": 0.004298259969800711
+        },
+        {
+          "scenName": "用车消费",
+          "scenId": 104,
+          "indexValue": 0.022166235372424126
+        },
+        {
+          "scenName": "医疗健康",
+          "scenId": 105,
+          "indexValue": 0.045259006321430206
+        },
+        {
+          "scenName": "移动支付",
+          "scenId": 102,
+          "indexValue": 0.05097789317369461
+        },
+        {
+          "scenName": "日常消费",
+          "scenId": 103,
+          "indexValue": 0.4003596901893616
+        },
+        {
+          "scenName": "教育学习",
+          "scenId": 107,
+          "indexValue": 0.47364145517349243
+        }
+      ],
+      "launchNums": [
+        {
+          "scenName": "家居家饰",
+          "scenId": 106,
+          "indexValue": 0.0033672628924250603
+        },
+        {
+          "scenName": "高端消费",
+          "scenId": 101,
+          "indexValue": 0.0036855509970337152
+        },
+        {
+          "scenName": "用车消费",
+          "scenId": 104,
+          "indexValue": 0.03704710677266121
+        },
+        {
+          "scenName": "医疗健康",
+          "scenId": 105,
+          "indexValue": 0.047439876943826675
+        },
+        {
+          "scenName": "移动支付",
+          "scenId": 102,
+          "indexValue": 0.09052527695894241
+        },
+        {
+          "scenName": "教育学习",
+          "scenId": 107,
+          "indexValue": 0.40012991428375244
+        },
+        {
+          "scenName": "日常消费",
+          "scenId": 103,
+          "indexValue": 0.417805016040802
+        }
+      ]
+    },
+    "md5Status": 1,
+    "scene": {
+      "tgiSort": [
+        {
+          "activeNums": 10687.701171875,
+          "activePercent": 0.34466657042503357,
+          "tgi": 1.0066558122634888,
+          "scenName": "教育学习",
+          "scenId": 107,
+          "launchNums": 2240.2080078125
+        },
+        {
+          "activeNums": 11720.02734375,
+          "activePercent": 0.3779579699039459,
+          "tgi": 0.9786215424537659,
+          "scenName": "日常消费",
+          "scenId": 103,
+          "launchNums": 2339.16552734375
+        },
+        {
+          "activeNums": 1615.97216796875,
+          "activePercent": 0.05211332067847252,
+          "tgi": 0.9031140804290771,
+          "scenName": "医疗健康",
+          "scenId": 105,
+          "launchNums": 265.6017150878906
+        },
+        {
+          "activeNums": 5341.2763671875,
+          "activePercent": 0.17225027084350586,
+          "tgi": 0.8581711053848267,
+          "scenName": "移动支付",
+          "scenId": 102,
+          "launchNums": 506.8240051269531
+        },
+        {
+          "activeNums": 213.00067138671875,
+          "activePercent": 0.006869036238640547,
+          "tgi": 0.8367424011230469,
+          "scenName": "高端消费",
+          "scenId": 101,
+          "launchNums": 20.634300231933594
+        },
+        {
+          "activeNums": 202.66738891601562,
+          "activePercent": 0.006535799708217382,
+          "tgi": 0.8154577016830444,
+          "scenName": "家居家饰",
+          "scenId": 106,
+          "launchNums": 18.8523006439209
+        },
+        {
+          "activeNums": 1228.1669921875,
+          "activePercent": 0.039607033133506775,
+          "tgi": 0.6681769490242004,
+          "scenName": "用车消费",
+          "scenId": 104,
+          "launchNums": 207.4156951904297
+        }
+      ],
+      "ratioSort": [
+        {
+          "activeNums": 11720.02734375,
+          "activePercent": 0.3779579699039459,
+          "tgi": 0.9786215424537659,
+          "scenName": "日常消费",
+          "scenId": 103,
+          "launchNums": 2339.16552734375
+        },
+        {
+          "activeNums": 10687.701171875,
+          "activePercent": 0.34466657042503357,
+          "tgi": 1.0066558122634888,
+          "scenName": "教育学习",
+          "scenId": 107,
+          "launchNums": 2240.2080078125
+        },
+        {
+          "activeNums": 5341.2763671875,
+          "activePercent": 0.17225027084350586,
+          "tgi": 0.8581711053848267,
+          "scenName": "移动支付",
+          "scenId": 102,
+          "launchNums": 506.8240051269531
+        },
+        {
+          "activeNums": 1615.97216796875,
+          "activePercent": 0.05211332067847252,
+          "tgi": 0.9031140804290771,
+          "scenName": "医疗健康",
+          "scenId": 105,
+          "launchNums": 265.6017150878906
+        },
+        {
+          "activeNums": 1228.1669921875,
+          "activePercent": 0.039607033133506775,
+          "tgi": 0.6681769490242004,
+          "scenName": "用车消费",
+          "scenId": 104,
+          "launchNums": 207.4156951904297
+        },
+        {
+          "activeNums": 213.00067138671875,
+          "activePercent": 0.006869036238640547,
+          "tgi": 0.8367424011230469,
+          "scenName": "高端消费",
+          "scenId": 101,
+          "launchNums": 20.634300231933594
+        },
+        {
+          "activeNums": 202.66738891601562,
+          "activePercent": 0.006535799708217382,
+          "tgi": 0.8154577016830444,
+          "scenName": "家居家饰",
+          "scenId": 106,
+          "launchNums": 18.8523006439209
+        }
+      ],
+      "maxActiveNums": {
+        "activeNums": 11720.02734375,
+        "activePercent": 0.3779579699039459,
+        "tgi": 0.9786215424537659,
+        "scenName": "日常消费",
+        "scenId": 103,
+        "launchNums": 2339.16552734375
+      },
+      "minActiveNums": {
+        "activeNums": 202.66738891601562,
+        "activePercent": 0.006535799708217382,
+        "tgi": 0.8154577016830444,
+        "scenName": "家居家饰",
+        "scenId": 106,
+        "launchNums": 18.8523006439209
+      }
+    }
+  }
+}
