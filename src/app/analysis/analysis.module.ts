@@ -22,7 +22,7 @@ import { AnalysisService } from './analysis.service';
   ],
   declarations: [CrowdComponent, PreferenceComponent, PopulationComponent, EquipmentComponent, ScenePortraitComponent],
   providers: [
-    {provide: 'CrowdService', useClass: CrowdService},
+    // {provide: 'CrowdService', useClass: CrowdService},
     {provide: 'AnalysisService', useClass: AnalysisService}
   ]
 })

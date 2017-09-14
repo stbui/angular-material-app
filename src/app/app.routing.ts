@@ -21,7 +21,8 @@ const routes: Routes = [
     {path: 'materials', loadChildren: './materials/materials.module#MaterialsModule'},
     {path: 'pages', loadChildren: './pages/pages.module#PagesModule'},
     {path: 'components/chart', loadChildren: './chart/chart.module#ChartModule'},
-    {path: 'analysis', loadChildren: './analysis/analysis.module#AnalysisModule'}
+    {path: 'analysis', loadChildren: './analysis/analysis.module#AnalysisModule'},
+    {path: 'crm', loadChildren: './crm/crm.module#CrmModule'}
   ]
   }
 ];

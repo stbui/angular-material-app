@@ -16,10 +16,33 @@
                 [labels]="barChartLabels"
                 [options]="barChartOptions"
                 [legend]="barChartLegend"
-                [chartType]="barChartType"
-                (chartHover)="chartHovered($event)"
-                (chartClick)="chartClicked($event)"></canvas>
+                [chartType]="barChartType"></canvas>
 
+      </md-card-content>
+    </md-card>
+  </div>
+</div>
+
+<div fxLayout="row" fxLayoutWrap>
+  <div fxFlex.gt-sm="50">
+    <md-card>
+      <md-card-title>人群年龄分布TOP3</md-card-title>
+      <md-card-content>
+        <canvas baseChart height="150px"
+                [data]="angeChartData"
+                [labels]="angeChartLabels"
+                [chartType]="doughnutChartType"></canvas>
+      </md-card-content>
+    </md-card>
+  </div>
+  <div fxFlex.gt-sm="50">
+    <md-card>
+      <md-card-title>人群消费能力分布TOP3</md-card-title>
+      <md-card-content>
+        <canvas baseChart height="150px"
+                [data]="doughnutChartData"
+                [labels]="doughnutChartLabels"
+                [chartType]="doughnutChartType"></canvas>
       </md-card-content>
     </md-card>
   </div>
@@ -47,35 +70,6 @@
 <div fxLayout="row" fxLayoutWrap>
   <div fxFlex.gt-sm="50">
     <md-card>
-      <md-card-title>人群年龄分布TOP3</md-card-title>
-      <md-card-content>
-        <canvas baseChart height="150px"
-                [data]="angeChartData"
-                [labels]="angeChartLabels"
-                [chartType]="doughnutChartType"
-                (chartHover)="chartHovered($event)"
-                (chartClick)="chartClicked($event)"></canvas>
-      </md-card-content>
-    </md-card>
-  </div>
-  <div fxFlex.gt-sm="50">
-    <md-card>
-      <md-card-title>人群消费能力分布TOP3</md-card-title>
-      <md-card-content>
-        <canvas baseChart height="150px"
-                [data]="doughnutChartData"
-                [labels]="doughnutChartLabels"
-                [chartType]="doughnutChartType"
-                (chartHover)="chartHovered($event)"
-                (chartClick)="chartClicked($event)"></canvas>
-      </md-card-content>
-    </md-card>
-  </div>
-</div>
-
-<div fxLayout="row" fxLayoutWrap>
-  <div fxFlex.gt-sm="50">
-    <md-card>
       <md-card-title>最爱设备品牌TOP3</md-card-title>
       <md-card-content>
 
@@ -89,9 +83,7 @@
         <canvas baseChart height="150px"
                 [data]="pieChartData"
                 [labels]="pieChartLabels"
-                [chartType]="pieChartType"
-                (chartHover)="chartHovered($event)"
-                (chartClick)="chartClicked($event)"></canvas>
+                [chartType]="pieChartType"></canvas>
 
       </md-card-content>
     </md-card>

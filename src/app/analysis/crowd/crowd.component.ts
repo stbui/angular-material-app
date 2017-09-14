@@ -7,10 +7,6 @@ import { Component, Inject, OnInit } from '@angular/core';
 })
 export class CrowdComponent implements OnInit {
 
-  public barChartOptions: any = {
-    scaleShowVerticalLines: false,
-    responsive: true
-  };
   public barChartLabels: string[] = [];
   public barChartType: string = 'bar';
   public barChartLegend: boolean = true;
@@ -26,8 +22,8 @@ export class CrowdComponent implements OnInit {
   public doughnutChartData: number[] = [18.3679, 22.9904, 39.2957];
   public doughnutChartType: string = 'doughnut';
 
-  public angeChartLabels: string[] = ['24岁以下', '24岁到30岁', '41岁及以上'];
-  public angeChartData: number[] = [40.3837, 23.4145, 13.9447];
+  public angeChartLabels: any[] = ["24岁以下", "24岁到30岁", "41岁及以上"];
+  public angeChartData: any[] = ["40.38", "23.41", "13.94"];
 
 
   public chartClicked(e: any): void {
@@ -38,45 +34,72 @@ export class CrowdComponent implements OnInit {
     console.log(e);
   }
 
-  constructor(@Inject('CrowdService') private _service) {
+  constructor(@Inject('AnalysisService') private _service) {
 
   }
 
   ngOnInit() {
+    this.getCrowdOverview();
+  }
+
+  getCrowdOverview() {
+    this._service.getCrowdOverview();
     this.actvieDatas();
     this.operators();
+    this.age();
   }
 
   actvieDatas() {
-    this._service.actvieDatas().subscribe(res => {
-      this.setBarChart(res);
+    this._service.crowdOverview$.subscribe(res => {
+      if (res.actvieDatas) {
+        this.setBarChart(res.actvieDatas);
+      }
     });
   }
 
   operators() {
+    this._service.crowdOverview$.subscribe(res => {
+      if (res.operators) {
+        this.setPieChart(res.operators);
+      }
+    });
+  }
 
-    this._service.operators().subscribe(res => {
-      this.setPieChart(res);
+  age() {
+    this._service.crowdOverview$.subscribe(res => {
+      if (res.age) {
+
+        let attrValue = [];
+        let attrName = res.age.map(item => {
+          attrValue.push((item.attrValue * 100).toFixed(2));
+          return item.attrName;
+        });
+        this.angeChartLabels = attrName;
+        this.angeChartData = attrValue;
+      }
     });
   }
 
   setBarChart(res) {
-    let appName = [];
     let rate = [];
-    res.forEach((v, k) => {
-      appName.push(v.appName);
-      rate.push(v.crowdRate * 100);
+    let appName = res.map(item => {
+      rate.push((item.crowdRate * 100).toFixed(2));
+      return item.appName;
     });
+
     this.barChartLabels = appName;
     this.barChartData[0].data = rate;
   }
 
   setPieChart(res) {
-    // res.forEach((v, k) => {
-    // this.pieChartLabels.push(v.attrName);
-    // let rate = (v.attrValue * 100).toFixed(2);
-    // this.pieChartData.push(rate);
-    // });
+    let attrValue = [];
+    let attrName = res.map(item => {
+      attrValue.push((item.attrValue * 100).toFixed(2));
+      return item.attrName;
+    });
+    this.pieChartLabels = attrName;
+    this.pieChartData = attrValue;
+
   }
 
 }

@@ -78,6 +78,14 @@ export class SidenavService {
     this.addSubItem(analysis, '人口分布', '/analysis/population', 1);
     this.addSubItem(analysis, '设备分布', '/analysis/equipment', 1);
     this.addSubItem(analysis, '场景画像', '/analysis/scePortrait', 1);
+
+    const crm = this.addItem('客户关系', 'business', null, 8);
+    this.addSubItem(crm, '线索', '/crm/lead', 1);
+    this.addSubItem(crm, '客户', '/crm/lead', 1);
+    this.addSubItem(crm, '公海', '/crm/lead', 1);
+    this.addSubItem(crm, '联系人', '/crm/lead', 1);
+    this.addSubItem(crm, '商机', '/crm/lead', 1);
+    this.addSubItem(crm, '产品', '/crm/lead', 1);
   }
 
   addItem(name: string, icon: string, route: string, position: number, badge?: string, badgeColor?: string) {
