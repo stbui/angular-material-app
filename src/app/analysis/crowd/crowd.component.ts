@@ -7,6 +7,10 @@ import { Component, Inject, OnInit } from '@angular/core';
 })
 export class CrowdComponent implements OnInit {
 
+  public barChartOptions: any = {
+    scaleShowVerticalLines: false,
+    responsive: true
+  };
   public barChartLabels: string[] = [];
   public barChartType: string = 'bar';
   public barChartLegend: boolean = true;

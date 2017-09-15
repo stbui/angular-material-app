@@ -41,7 +41,7 @@
 ### 使用入门
 
 ```
-git clone https://github.com/stbui/angular-material-app.git
+git clone --depth=1 https://github.com/stbui/angular-material-app.git
 cd angular-material-app
 npm install
 npm run start
@@ -71,3 +71,7 @@ docker run -d -P stbui/angular-material-app
 ```
 docker run --rm --name angular-material-app -v "$PWD":/usr/src/app -w /usr/src/app -p 4200:4200 -it node:latest bash -c "npm install && npm start"
 ```
+
+### document
+
+https://translator-rhinoceros-87537.netlify.com/

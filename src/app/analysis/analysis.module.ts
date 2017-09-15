@@ -10,7 +10,6 @@ import { PopulationComponent } from './population/population.component';
 import { EquipmentComponent } from './equipment/equipment.component';
 import { ScenePortraitComponent } from './scene-portrait/scene-portrait.component';
 
-import { CrowdService } from './crowd/crowd.service';
 import { AnalysisService } from './analysis.service';
 
 @NgModule({
@@ -22,7 +21,6 @@ import { AnalysisService } from './analysis.service';
   ],
   declarations: [CrowdComponent, PreferenceComponent, PopulationComponent, EquipmentComponent, ScenePortraitComponent],
   providers: [
-    // {provide: 'CrowdService', useClass: CrowdService},
     {provide: 'AnalysisService', useClass: AnalysisService}
   ]
 })
