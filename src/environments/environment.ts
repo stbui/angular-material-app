@@ -8,5 +8,7 @@ export const environment = {
   navigationApi: '/assets/data/navigation',
   todoApi: '/assets/data/todo/list.json',
   mailApi: '/assets/data/mail/list.json',
-  chatsApi: '/assets/data/chats/list.json'
+  chatsApi: '/assets/data/chats/list.json',
+  analysisApi: '/angular-material-app/assets/data',
+  crmApi: '/angular-material-app/assets/data'
 };
