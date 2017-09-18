@@ -55,6 +55,7 @@ export class CrowdComponent implements OnInit {
 
   actvieDatas() {
     this._service.crowdOverview$.subscribe(res => {
+      console.log(res)
       if (res.actvieDatas) {
         this.setBarChart(res.actvieDatas);
       }
@@ -80,6 +81,14 @@ export class CrowdComponent implements OnInit {
         });
         this.angeChartLabels = attrName;
         this.angeChartData = attrValue;
+      }
+    });
+  }
+
+  consumer() {
+    this._service.crowdOverview$.subscribe(res => {
+      if (res.consumer) {
+
       }
     });
   }
