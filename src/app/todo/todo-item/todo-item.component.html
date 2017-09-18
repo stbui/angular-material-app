@@ -1,8 +1,0 @@
-<div fxLayout="row" fxLayoutAlign="start center">
-  <md-radio-button [checked]="isChecked" (click)="toggle()"></md-radio-button>
-  <span>{{ todoDesc }}</span>
-  <span fxFlex></span>
-  <button md-icon-button (click)="remove(); $event.stopPropagation()">
-    <md-icon>delete</md-icon>
-  </button>
-</div>
