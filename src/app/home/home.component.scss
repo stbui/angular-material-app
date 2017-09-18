@@ -81,10 +81,11 @@
   padding: 30px 0 30px;
   background: #2f3d4a;
   color: #8f9aa5;
-}
 
-.footer-copyright {
-
+  a {
+    color: #8f9aa5;
+    cursor: pointer;
+  }
 }
 
 h2, h4 {
@@ -109,30 +110,6 @@ p {
   width: 100%;
   max-width: 1270px;
   margin: 0 auto;
-}
-
-.m-10 {
-  margin: 10px;
-}
-
-.m-20 {
-  margin: 20px;
-}
-
-.m-b-20 {
-  margin-bottom: 20px;
-}
-
-.m-t-20 {
-  margin-top: 20px;
-}
-
-.m-t-40 {
-  margin-top: 40px;
-}
-
-.text-center {
-  text-align: center;
 }
 
 .text-white {

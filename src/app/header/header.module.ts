@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { SharedModule } from '../shared/shared.module';
 import { HttpModule } from '@angular/http';
+import { RouterModule } from '@angular/router';
 
 import { HeaderComponent } from './header.component';
 import { ToolbarUserComponent } from './toolbar-user/toolbar-user.component';
@@ -15,7 +16,8 @@ import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
   imports: [
     SharedModule,
     PerfectScrollbarModule,
-    HttpModule
+    HttpModule,
+    RouterModule
   ],
   declarations: [
     HeaderComponent,

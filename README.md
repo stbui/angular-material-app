@@ -1,4 +1,4 @@
-# 通用管理系统快速开发框架 [demo](https://github.com/stbui/angular-material-app)
+# 通用管理系统快速开发框架 [demo](https://stbui.github.io/angular-material-app/)
 
 基于最新`Angular 4`框架与`Material 2`技术的企业级通用管理系统快速开发框架，涵盖了大量的常用组件和基础功能，您可以快速开发各种MIS系统，如CMS、OA、CRM、ERP、POS等，最大程度上帮助企业节省时间成本和费用开支。
 
