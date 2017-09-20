@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
+import { environment } from '../../environments/environment';
 
 @Injectable()
 export class AnalysisService {
 
-  private apiUrl = '/assets/data/analysis';
+  private apiUrl = environment.analysisApi;
   private _crowdApplist$: BehaviorSubject<any>;
   private _crowdCateList$: BehaviorSubject<any>;
   private _crowdDevice$: BehaviorSubject<any>;

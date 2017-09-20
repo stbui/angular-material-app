@@ -4,7 +4,6 @@ import { MaterialComponentsModule } from './material.module';
 import { FormsModule } from '@angular/forms';
 import { ComponentComponent } from './component.component';
 
-import { AmapComponent } from './amap/amap.component';
 import { MarkdownComponent } from './markdown/markdown.component';
 import { PaginationComponent } from './pagination/pagination.component';
 import { PopoverComponent } from './popover/popover.component';
@@ -25,7 +24,6 @@ import { BodyComponent } from './table/body/body.component';
   declarations: [
     PaginationComponent,
     ComponentComponent,
-    AmapComponent,
     MarkdownComponent,
     PopoverComponent,
     PopoverDirective,
@@ -36,7 +34,6 @@ import { BodyComponent } from './table/body/body.component';
   ],
   exports: [
     PaginationComponent,
-    AmapComponent,
     MarkdownComponent,
     PopoverComponent,
     PopoverDirective,

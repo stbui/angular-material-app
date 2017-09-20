@@ -1,7 +1,6 @@
-import { Component, OnDestroy, HostListener, ComponentRef } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
 import { NotificationConfig } from './notification.config';
 import { NotificationService } from './notification.service';
-import { ComponentPortal, PortalHostDirective } from '@angular/cdk/portal';
 import { Subscription } from 'rxjs/Subscription';
 
 @Component({
@@ -17,24 +16,8 @@ export class NotificationComponent implements OnDestroy {
   notificationClasses = '';
 
   private timeout: any;
-  private intervalId: any;
   private activate$: Subscription;
   private remove$: Subscription;
-
-  @HostListener('click')
-  onClick() {
-
-  }
-
-  @HostListener('mouseenter')
-  onMouseenter() {
-
-  }
-
-  @HostListener('mouseleave')
-  onMouseLeave() {
-
-  }
 
   constructor(protected _noticationService: NotificationService,
               public _notificationConfig: NotificationConfig) {
@@ -62,10 +45,6 @@ export class NotificationComponent implements OnDestroy {
     this.timeout = setTimeout(() => {
       this.remove();
     }, 2500);
-  }
-
-  updateProgress() {
-
   }
 
   remove() {

@@ -19,7 +19,7 @@ import { MarkdownComponent } from './markdown/markdown.component';
 import { PopoverComponent } from './popover/popover.component';
 import { CalendarComponent } from './calendar/calendar.component';
 
-import { NotificaitonModule, DatePickerModule, ButtonModule } from '../component/index';
+import { NotificaitonModule, DatePickerModule, AmpaModule, ButtonModule } from '../component/index';
 
 import { CalendarModule } from 'angular-calendar';
 
@@ -28,9 +28,10 @@ import { CalendarModule } from 'angular-calendar';
     SharedModule,
     ComponentModule,
     MaterialsRoutingModule,
-    NotificaitonModule.forRoot(),
-    DatePickerModule,
     CalendarModule.forRoot(),
+    NotificaitonModule.forRoot(),
+    AmpaModule.forRoot(),
+    DatePickerModule,
     ButtonModule
   ],
   declarations: [
