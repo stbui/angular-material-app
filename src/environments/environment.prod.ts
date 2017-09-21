@@ -5,5 +5,6 @@ export const environment = {
   mailApi: '/assets/data/mail/list.json',
   chatsApi: '/assets/data/chats/list.json',
   analysisApi: '/assets/data',
-  crmApi: '/assets/data'
+  crmApi: '/assets/data',
+  tableApi: '/assets/data'
 };

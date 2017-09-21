@@ -9,6 +9,7 @@ export const environment = {
   todoApi: '/assets/data/todo/list.json',
   mailApi: '/assets/data/mail/list.json',
   chatsApi: '/assets/data/chats/list.json',
-  analysisApi: '/angular-material-app/assets/data',
-  crmApi: '/angular-material-app/assets/data'
+  analysisApi: '/assets/data/analysis',
+  crmApi: '/assets/data/crm',
+  tableApi: '/assets/data/table'
 };
