@@ -52,38 +52,3 @@
     </table>
   </div>
 </div>
-
-<!--
-<div [ngStyle]="styles()">
-  <div class="fixed-table-header" *ngIf="height">
-    <table class="table" [class.table-hover]="disabledHover" [class.table-striped]="stripe"
-           [class.table-bordered]="border">
-      <thead>
-      <tr>
-        <th *ngFor="let column of columns">
-          <div *ngIf="column.type === 'selection'">
-            <md-checkbox (change)="onCheckBoxAllTrigger($event)" [(ngModel)]="checked"></md-checkbox>
-          </div>
-          <div *ngIf="column.type !== 'selection'">{{ column.title }}</div>
-        </th>
-      </tr>
-      </thead>
-    </table>
-  </div>
-  <div class="fixed-table-body" [ngStyle]="bodyStyle()" *ngIf="height">
-    <table class="table" [class.table-hover]="disabledHover" [class.table-striped]="stripe"
-           [class.table-bordered]="border">
-      <tbody>
-      <tr *ngFor="let row of data">
-        <td *ngFor="let column of columns">
-          <div *ngIf="column.type === 'selection'">
-            <md-checkbox (change)="onCheckBoxTrigger($event, row)" [checked]="checked"></md-checkbox>
-          </div>
-          <div *ngIf="column.type !== 'selection'">{{ row[column.key] }}</div>
-        </td>
-      </tr>
-      </tbody>
-    </table>
-  </div>
-</div>
--->

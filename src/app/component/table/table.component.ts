@@ -1,21 +1,11 @@
-import {
-  Component,
-  Input,
-  Output,
-  EventEmitter,
-  ElementRef,
-  ViewChild,
-  Renderer2,
-  OnInit,
-  ViewEncapsulation
-} from '@angular/core';
-
+import { Component, OnInit } from '@angular/core';
+import { Input, Output, EventEmitter } from '@angular/core';
+import { ElementRef, ViewChild, Renderer2 } from '@angular/core';
 
 @Component({
   selector: 'stbui-table',
   templateUrl: './table.component.html',
-  styleUrls: ['./table.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  styleUrls: ['./table.component.scss']
 })
 export class TableComponent implements OnInit {
 
@@ -124,7 +114,6 @@ export class TableComponent implements OnInit {
   }
 
   onRowClickTrigger(row) {
-    console.log(row);
     this.onRowClick.emit(row);
   }
 
