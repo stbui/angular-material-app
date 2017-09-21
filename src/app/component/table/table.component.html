@@ -1,4 +1,4 @@
-<table class="table" [ngStyle]="styles()" [class.table-hover]="disabledHover" [class.table-striped]="stripe"
+<table class="table" [class.table-hover]="disabledHover" [class.table-striped]="stripe"
        [class.table-bordered]="border" *ngIf="!height">
   <thead>
   <tr>
@@ -11,7 +11,7 @@
   </tr>
   </thead>
   <tbody>
-  <tr *ngFor="let row of data">
+  <tr *ngFor="let row of data" (click)="onRowClickTrigger(row)">
     <td *ngFor="let column of columns">
       <div *ngIf="column.type === 'selection'">
         <md-checkbox (change)="onCheckBoxTrigger($event, row)" [checked]="checked"></md-checkbox>
@@ -22,6 +22,38 @@
   </tbody>
 </table>
 
+<div class="fixed-table" [ngStyle]="{'height.px': height}" *ngIf="height">
+  <div class="table-wrapper">
+    <table class="table" [class.table-hover]="disabledHover" [class.table-striped]="stripe"
+           [class.table-bordered]="border">
+      <thead #fixedTopCell>
+      <tr>
+        <th *ngFor="let column of columns; let i= index">
+          <div *ngIf="column.type === 'selection'">
+            <md-checkbox (change)="onCheckBoxAllTrigger($event)" [(ngModel)]="checked"></md-checkbox>
+          </div>
+          {{ column?.title }}
+          <div [ngStyle]="{'width.px':cells[i]?.width, 'height.px':cells[i]?.height}" class="fixed-table-heading"
+               *ngIf="column.type !== 'selection'">{{ column.title }}
+          </div>
+        </th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let row of data" (click)="onRowClickTrigger(row)">
+        <td *ngFor="let column of columns">
+          <div *ngIf="column.type === 'selection'">
+            <md-checkbox (change)="onCheckBoxTrigger($event, row)" [checked]="checked"></md-checkbox>
+          </div>
+          <div *ngIf="column.type !== 'selection'">{{ row[column.key] }}</div>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!--
 <div [ngStyle]="styles()">
   <div class="fixed-table-header" *ngIf="height">
     <table class="table" [class.table-hover]="disabledHover" [class.table-striped]="stripe"
@@ -54,3 +86,4 @@
     </table>
   </div>
 </div>
+-->

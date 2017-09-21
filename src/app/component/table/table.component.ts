@@ -23,20 +23,20 @@ export class TableComponent implements OnInit {
   // 表格列的配置描述
   @Input() columns = [];
   // 是否显示间隔斑马纹
-  @Input() stripe: boolean = false;
+  @Input() stripe:boolean = false;
   // 是否显示纵向边框
-  @Input() border: boolean = false;
+  @Input() border:boolean = false;
   // 是否显示表头
-  @Input() showHeader: boolean = true;
+  @Input() showHeader:boolean = true;
   // 表格宽度，单位 px
-  @Input() width: string | number;
+  @Input() width:string | number;
   // 表格高度，单位 px，设置后，如果表格内容大于此值，会固定表头
-  @Input() height: string | number;
+  @Input() height:string | number;
   // 禁用鼠标悬停时的高亮
-  @Input() disabledHover: boolean = true;
+  @Input() disabledHover:boolean = true;
   // 是否支持高亮选中的行，即单选
-  @Input() highlightRow: boolean = false;
-  @Input() tableSize: string = 'default';
+  @Input() highlightRow:boolean = false;
+  @Input() tableSize:string = 'default';
 
   @Output() onCurrentChange = new EventEmitter();
   @Output() onSelect = new EventEmitter();
@@ -45,98 +45,35 @@ export class TableComponent implements OnInit {
   @Output() onSelectChange = new EventEmitter();
   @Output() onSortChange = new EventEmitter();
   @Output() onRowClick = new EventEmitter();
-  @Output() onRowDbClick = new EventEmitter();
-  @Output() onExpand = new EventEmitter();
 
-  @ViewChild('tableBody') tableBody: ElementRef;
-  @ViewChild('header') header: ElementRef;
-  @ViewChild('table') table: ElementRef;
-
-  tableCondensed = false;
-  tableHover = true;
-  isSelectAll = false;
-
-  columnsWidth = [];
-  prefixCls = 'stbui-';
-  tableWidth = 0;
   cloneColumns;
-  objData;
-  rebuildData = [];
-  columnKey = 1;
-  bodyHeight = 0;
-  scrollBarWidth = 0;
-
-  cellWidths;
 
   checkboxSelection = [];
-  checked: boolean = false;
+  checked:boolean = false;
 
+  @ViewChild('fixedTopCell') _fixedTopCell:ElementRef;
+  private cells = [];
 
-  constructor(private element: ElementRef, private renderer: Renderer2) {
+  constructor(private element:ElementRef, private renderer:Renderer2) {
 
   }
 
   ngOnInit() {
-    this.cloneColumns = this.makeColumns();
-    this.objData = this.makeObjData();
   }
 
   ngAfterViewInit() {
-  }
+    if (!this.height) return;
+    const ths = this._fixedTopCell.nativeElement.children[0].children;
 
-  setCellWidths(widths) {
-    this.cellWidths = widths;
-  }
-
-  getCellWidths() {
-    return this.cellWidths;
-  }
-
-
-  getStyle(element, property) {
-    if (element && property) {
-      return document.defaultView.getComputedStyle(element, '')[property];
-    }
-  }
-
-  tableStyle() {
-    const allWidth = !this.columns.some(cell => !cell.width);
-
-    if (allWidth) {
-      this.tableWidth = this.columns.map(cell => cell.width).reduce((a, b) => a + b);
-    } else {
-      const $element = this.table.nativeElement;
-      this.tableWidth = $element.offsetWidth - 1;
-    }
-
-    return {
-      width: `${this.tableWidth}px`
-    };
-  }
-
-
-  fixedHeader() {
-
-  }
-
-  fixedBodyStyle() {
-    let height = 0;
-    return {
-      height: `${height}px`
-    };
-  }
-
-  fixedTableStyle() {
-    let style = {};
-    let width = 0;
-    let leftFixedColumns = this.leftFixedColumns();
-    leftFixedColumns.forEach((col) => {
-      if (col.fixed && col.fixed === 'left') width += col._width;
+    setTimeout(()=> {
+      for (const th of ths) {
+        this.cells.push({
+          width: th.offsetWidth,
+          height: th.offsetHeight
+        });
+      }
+      this.border = true;
     });
-
-    return {
-      width: `${width}px`
-    };
   }
 
   fixedRightTableStyle() {
@@ -178,16 +115,6 @@ export class TableComponent implements OnInit {
     return right;
   }
 
-  onCheckedChange() {
-    const status = !this.isSelectAll;
-
-    this.isSelectAll = status;
-  }
-
-  selectAll(status) {
-
-  }
-
   isLeftFixed() {
     return this.columns.some(col => col.fixed && col.fixed === 'left');
   }
@@ -196,79 +123,11 @@ export class TableComponent implements OnInit {
     return this.columns.some(col => col.fixed && col.fixed === 'right');
   }
 
-  handleBodyScroll(event) {
-    if (this.isLeftFixed) {
-      this.header.nativeElement.scrollLeft = event.target.scrollLeft;
-    }
-
+  onRowClickTrigger(row) {
+    console.log(row);
+    this.onRowClick.emit(row);
   }
 
-  makeColumns() {
-    let columns = this.columns;
-    let left = [];
-    let center = [];
-    let right = [];
-
-    columns.forEach((column, index) => {
-      column._index = index;
-      column._columnKey = this.columnKey++;
-      column._width = column.width ? column.width : '';
-
-      if (column.fixed && column.fixed === 'left') {
-        left.push(column);
-      } else if (column.fixed && column.fixed === 'right') {
-        right.push(column);
-      } else {
-        center.push(column);
-      }
-    });
-
-    return left.concat(center).concat(right);
-  }
-
-  makeObjData() {
-    let data = {};
-    this.data.forEach((row, index) => {
-      const newRow = row;
-      newRow._isHover = false;
-      if (newRow._disabled) {
-        newRow._isDisabled = newRow._disabled;
-      } else {
-        newRow._isDisabled = false;
-      }
-      if (newRow._checked) {
-        newRow._isChecked = newRow._checked;
-      } else {
-        newRow._isChecked = false;
-      }
-
-      data[index] = newRow;
-    });
-    return data;
-  }
-
-  styles() {
-    const style = {};
-    // if (this.height) {
-    //   style['height'] = `${this.height}px`;
-    // }
-
-    if (this.width) {
-      style['width.px'] = this.width;
-    }
-
-    return style;
-  }
-
-  bodyStyle() {
-    return {
-      'height.px': this.height
-    };
-  }
-
-  /*
-   * 事件
-   * */
   onCheckBoxTrigger($event, row) {
     if ($event.checked) {
       this.checkboxSelection.push(row);

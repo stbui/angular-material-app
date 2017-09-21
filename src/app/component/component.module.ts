@@ -11,8 +11,6 @@ import { PopoverDirective } from './popover/popover.directive';
 import { SearchComponent } from './search/search.component';
 
 import { TableComponent } from './table/table.component';
-import { HeadComponent } from './table/head/head.component';
-import { BodyComponent } from './table/body/body.component';
 
 
 @NgModule({
@@ -29,8 +27,6 @@ import { BodyComponent } from './table/body/body.component';
     PopoverDirective,
     SearchComponent,
     TableComponent,
-    HeadComponent,
-    BodyComponent
   ],
   exports: [
     PaginationComponent,
