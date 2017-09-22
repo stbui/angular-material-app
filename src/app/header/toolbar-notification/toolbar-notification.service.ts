@@ -48,7 +48,7 @@ export class ToolbarNotificationService {
     return this.notifications;
   }
 
-  delete() {
+  delete(notification) {
 
   }
 

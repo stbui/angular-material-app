@@ -42,6 +42,11 @@ export class ToolbarNotificationComponent {
   }
 
   delete(notification) {
+    let i = this.notifications.indexOf(notification);
+    this.notifications = [
+      ...this.notifications.slice(0, i),
+      ...this.notifications.slice(i + 1)
+    ];
     this.service.delete(notification);
   }
 

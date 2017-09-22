@@ -11,6 +11,8 @@ import { CrmComponent } from './crm.component';
 import { ContractComponent } from './contract/contract.component';
 import { ProductComponent } from './product/product.component';
 
+import { LeadService } from './lead/lead.service';
+
 
 @NgModule({
   imports: [
@@ -28,7 +30,9 @@ import { ProductComponent } from './product/product.component';
     ContractComponent,
     ProductComponent
   ],
-  providers: []
+  providers: [
+    {provide: 'LeadService', useClass: LeadService}
+  ]
 })
 export class CrmModule {
 }

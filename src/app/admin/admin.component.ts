@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminComponent implements OnInit {
 
-  title = 'angular2 material2 web - Power by 码农庄园';
+  title = '后台管理系统 - Power by stbui';
   theme = {
     header: 'stbui-white',
     aside: 'stbui-default',

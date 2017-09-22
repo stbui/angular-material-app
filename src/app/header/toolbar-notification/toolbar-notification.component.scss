@@ -1,13 +1,10 @@
-$prefx: 'toolbar-notification';
+$prefix: 'toolbar-notification';
 
-:host {
-}
 .badge {
   background-color: #f44336;
   color: #fff;
   border-color:#f44336
 }
-
 
 .badge {
   position: absolute;
@@ -23,7 +20,7 @@ $prefx: 'toolbar-notification';
   text-align: center;
 }
 
-.#{$prefx} {
+.#{$prefix} {
   &-container {
     position: relative;
     display: flex;
@@ -51,7 +48,7 @@ $prefx: 'toolbar-notification';
 
   @media screen and (max-width: 599px) {
     min-width: 100vw;
-    right: -147px; // width of user-button + quickpanel-button
+    right: -147px;
   }
 
   &.open {

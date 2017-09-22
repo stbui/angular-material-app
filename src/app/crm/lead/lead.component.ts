@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 
 @Component({
   selector: 'app-lead',
@@ -7,31 +7,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LeadComponent implements OnInit {
 
-  pageSize = 5;
   currentPage = 1;
 
   data;
   selectData;
   num = 0;
 
-  rows = [
-    { name: 'Austin', gender: 'Male', company: 'Swimlane' },
-    { name: 'Dany', gender: 'Male', company: 'KFC' },
-    { name: 'Molly', gender: 'Female', company: 'Burger King' },
-  ];
-  columns = [
-    { prop: 'name' },
-    { name: 'Gender' },
-    { name: 'Company' }
-  ];
-
-  constructor() {
+  constructor(@Inject('LeadService') private _service) {
 
   }
 
   ngOnInit() {
     // this.select();
     this.renderTable();
+
+    this._service.getLead().then(res => {
+      console.log(res)
+    });
   }
 
 
