@@ -1,4 +1,6 @@
 import { Component, OnInit, ElementRef, HostListener } from '@angular/core';
+import { AuthService } from '../../core/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'stbui-toolbar-user',
@@ -8,6 +10,7 @@ import { Component, OnInit, ElementRef, HostListener } from '@angular/core';
 export class ToolbarUserComponent implements OnInit {
 
   isOpen: boolean = false;
+  currentUser = null;
 
   @HostListener('document:click', ['$event', '$event.target']) onClick(event: MouseEvent, targetElement: HTMLElement) {
     if (!targetElement) {
@@ -20,7 +23,10 @@ export class ToolbarUserComponent implements OnInit {
     }
   }
 
-  constructor(private _elementRef: ElementRef) {
+  constructor(private _elementRef: ElementRef,
+              private router: Router,
+              private auth:AuthService) {
+    this.currentUser = this.auth;
   }
 
   ngOnInit() {
@@ -30,4 +36,9 @@ export class ToolbarUserComponent implements OnInit {
     this.isOpen = !this.isOpen;
   }
 
+  logout() {
+    this.auth.signOut().then(()=>{
+      this.router.navigate(['/sigin']);
+    });
+  }
 }

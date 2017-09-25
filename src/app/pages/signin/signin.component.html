@@ -1,17 +1,31 @@
 <div class="sigin-conainer" fxLayout="column" fxLayoutAlign="center center">
-  <div class="sigin-main">
+  <div class="sigin-main mat-elevation-z12">
     <md-card>
-      <md-card-title>用户登录</md-card-title>
+      <md-card-title>用户登录<a class="redirect" [routerLink]="['/sigup']">注册账号</a></md-card-title>
       <md-card-content>
-        <form fxLayout="column" fxLayoutAlign="start stretch" #formRegister="ngForm">
+        <form fxLayout="column" fxLayoutAlign="start stretch" [formGroup]="userForm" (ngSubmit)="login()">
           <md-form-field class="full-width">
-            <input mdInput placeholder="请输入您的邮箱" name="email" ngModel required>
+            <input type="email" id="email" class="input" placeholder="请输入您的邮箱"
+                   formControlName="email" required mdInput>
           </md-form-field>
+          <div *ngIf="formErrors.email" class="help is-danger">
+            {{ formErrors.email }}
+          </div>
           <md-form-field class="full-width">
-            <input mdInput placeholder="请输入您的密码" name="password" ngModel required>
+            <input type="password" id="password" class="input" placeholder="请输入您的密码"
+                   formControlName="password" required mdInput>
           </md-form-field>
-          <button md-raised-button color="primary" type="submit" [disabled]="!formRegister.valid" (click)="onSubmit()">登录</button>
+          <div *ngIf="formErrors.password" class="help is-danger">
+            {{ formErrors.password }}
+          </div>
+          <button md-raised-button color="primary" type="submit" [disabled]="!userForm.valid">登录</button>
         </form>
+
+        <div class="sign-third">
+          <button md-raised-button (click)="signInWithGithub()">Github 账号登录</button>
+          <button md-raised-button (click)="signInWithGoogle()">Google 账号登录</button>
+          <button md-raised-button (click)="signInAnonymously()">游客 账号登录</button>
+        </div>
       </md-card-content>
     </md-card>
   </div>

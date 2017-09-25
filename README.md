@@ -77,3 +77,31 @@ docker run --rm --name angular-material-app -v "$PWD":/usr/src/app -w /usr/src/a
 https://translator-rhinoceros-87537.netlify.com/
 
 https://surgeon-canary-67612.netlify.com/
+
+
+### Firebase
+
+##### hosting
+
+将build后的静态资源托管到hosting
+> 安装 Firebase cli
+```
+npm install -g firebase-tools
+```
+```
+firebase login
+firebase init
+firebase deploy
+```
+
+#### Authentication
+```
+npm install firebase angularfire2 --save
+```
+
+
+
+### Electron
+
+
+### universal

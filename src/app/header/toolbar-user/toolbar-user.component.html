@@ -1,8 +1,8 @@
 <div class="toolbar-user-container">
   <button md-button (click)="toggleDropdown()" class="toolbar-user-btn" [class.open]="isOpen">
   <span fxLayout="row" fxLayoutAlign="start center">
-    <img class="avatar" src="assets/images/avatars/noavatar.png">
-    <span class="name" fxHide fxShow.gt-sm>stbui</span>
+    <img class="avatar" [src]="currentUser.currentUser?.photoURL || 'assets/images/avatars/noavatar.png'">
+    <span class="name" fxHide fxShow.gt-sm>{{currentUser.currentUserName}}</span>
     <md-icon class="icon" fxHide fxShow.gt-sm>keyboard_arrow_down</md-icon>
   </span>
   </button>
@@ -23,7 +23,7 @@
           <span class="title">帮助</span>
         </div>
         <md-divider></md-divider>
-        <div class="item" fxLayout="row" fxLayoutAlign="start center" md-ripple [routerLink]="['/sigin']">
+        <div class="item" fxLayout="row" fxLayoutAlign="start center" (click)="logout()" md-ripple>
           <md-icon class="icon">exit_to_app</md-icon>
           <span class="title">退出</span>
         </div>
