@@ -51,11 +51,10 @@ npm run start
 http://127.0.0.1:4200
 ```
 
-
 ### 发布
 
 ```
-ng build --prod --aot --env=prod --extract-css
+npm run build
 ```
 
 
@@ -105,4 +104,4 @@ npm run build:mac
 ```
 
 
-### universal
+### Universal

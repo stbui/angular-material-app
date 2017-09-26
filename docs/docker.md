@@ -1,16 +1,24 @@
-# docker中运行
+# Docker
+
+`docker build -t angular-material-app .`
+
+`docker run -d -p 4200:4200 angular-material-app`
+
 
 Dokckerfile
 
 ```
 FROM node:latest
 
-RUN npm install -g @angular/cli
+RUN npm -g config set user root
+RUN npm install -g @angular/cli@latest  http-server
 WORKDIR /stbui
 COPY . /stbui
-RUN npm install
+RUN npm install && npm run build
+RUN cd ./dist
 
-EXPOSE 4200
+EXPOSE 8080
 
-CMD ["ng", "serve"]
+CMD http-server -d
+
 ```
