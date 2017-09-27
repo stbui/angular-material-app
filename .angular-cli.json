@@ -19,10 +19,10 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "../node_modules/normalize.css/normalize.css",
-        "../node_modules/material-design-icons/iconfont/material-icons.css",
-        "../node_modules/quill/dist/quill.snow.css",
-        "styles.scss"
+        { "input": "../node_modules/normalize.css/normalize.css", "output": "lib" },
+        { "input": "../node_modules/material-design-icons/iconfont/material-icons.css", "output": "lib" },
+        { "input": "../node_modules/quill/dist/quill.snow.css", "output": "lib" },
+        { "input": "styles.scss", "output": "stbui" }
       ],
       "scripts": [
       ],

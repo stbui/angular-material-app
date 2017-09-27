@@ -1,6 +1,6 @@
 import { NgModule, SkipSelf, Optional } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MaterialComponentsModule } from '../material.module';
+import { MaterialComponentsModule } from '../../shared/material.module';
 import { DatePickerComponent } from './date-picker.component';
 import { CalendarComponent } from './calendar/calendar.component';
 import { DayButtonComponent } from './day-button/day-button.component';
