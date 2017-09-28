@@ -22,7 +22,8 @@ import {
   MdSnackBarModule,
   MdTabsModule,
   MdToolbarModule,
-  MdTooltipModule
+  MdTooltipModule,
+  MdRadioModule
 } from '@angular/material';
 
 @NgModule({
@@ -52,7 +53,8 @@ import {
     MdNativeDateModule,
     MdProgressBarModule,
     MdProgressSpinnerModule,
-    MdSelectModule
+    MdSelectModule,
+    MdRadioModule
   ]
 })
 export class MaterialComponentsModule { }

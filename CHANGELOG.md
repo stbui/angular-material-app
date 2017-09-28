@@ -7,6 +7,18 @@
 * **cdk：** 更新到`2.0.0-beta.10`
 * **flex-layout：**  更新到`2.0.0-beta.9`
 
+### 功能实现
+
+* **cli：** 优化css打包
+* **firebase：** 项目开始支持firebase
+* **登录&注册：** 接入firebase 目前支持 github 和 google 账号登录
+* **file upload：** 增加文件上传模块, 对接firebase存储
+* **electron：** 新增分支feature/electron, 进行桌面应用开发
+
+### 功能优化
+
+* 优化material模块导入
+
 
 # 0.4.9 (2017.09.8)
 
@@ -15,6 +27,7 @@
 * **持续集成：** 新增circle，新增docker-compose
 * **analysis：** 添加数据分析模块
 * **table：** 固定表头代码重些,优化部分代码
+
 
 # 0.4.8 (2017.09.1)
 
