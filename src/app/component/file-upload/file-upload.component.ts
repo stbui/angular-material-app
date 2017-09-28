@@ -1,15 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { FileUploadDirective } from './file-upload.directive';
 
 @Component({
-  selector: 'app-file-upload',
+  selector: 'stbui-file-upload',
   templateUrl: './file-upload.component.html',
   styleUrls: ['./file-upload.component.css']
 })
-export class FileUploadComponent implements OnInit {
+export class FileUploadComponent {
 
-  constructor() { }
+  currentUpload;
 
-  ngOnInit() {
+  constructor() {
+  }
+
+  uploader(event) {
+    this.currentUpload = event;
   }
 
 }

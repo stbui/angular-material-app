@@ -1,3 +1,13 @@
-<p>
-  file-upload works!
-</p>
+<div class="upload-container" (uploader)="uploader($event)" stbuiFileUpload>
+  <div *ngIf="currentUpload">
+    {{currentUpload?.name}} | {{currentUpload?.progress}}%
+  </div>
+  <div *ngIf="currentUpload">
+    <img [src]="currentUpload?.url" alt="" width="80" height="80">
+  </div>
+
+  <div *ngIf="!currentUpload">
+    将文件拖放到这来或点击上传
+  </div>
+  <input type="file" multiple="multiple" class="input-file">
+</div>

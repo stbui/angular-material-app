@@ -10,8 +10,6 @@ import { PopoverDirective } from './popover/popover.directive';
 import { SearchComponent } from './search/search.component';
 
 import { TableComponent } from './table/table.component';
-import { FileUploadComponent } from './file-upload/file-upload.component';
-import { FileUploadDirective } from './file-upload/file-upload.directive';
 
 
 @NgModule({
@@ -27,8 +25,6 @@ import { FileUploadDirective } from './file-upload/file-upload.directive';
     PopoverDirective,
     SearchComponent,
     TableComponent,
-    FileUploadComponent,
-    FileUploadDirective,
   ],
   exports: [
     PaginationComponent,

@@ -1,0 +1,25 @@
+:host {
+  position: relative;
+  overflow: hidden;
+}
+
+.upload-container {
+  border: 2px dashed #0087F7;
+  border-radius: 5px;
+  background: white;
+  min-height: 150px;
+  padding: 54px 54px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.input-file {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  font-size: 200px;
+  cursor: pointer;
+}
