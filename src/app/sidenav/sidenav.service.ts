@@ -1,4 +1,4 @@
-import { Injectable, Inject } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { SidenavItem } from './item/item.model';
 import { BehaviorSubject, Observable } from 'rxjs';
 
@@ -89,7 +89,7 @@ export class SidenavService {
     this.addSubItem(crm, '产品', '/crm/lead', 1);
   }
 
-  addItem(name: string, icon: string, route: string, position: number, badge?: string, badgeColor?: string) {
+  addItem(name: string, icon: string, route: any, position: number, badge?: string, badgeColor?: string, customClass?: string) {
     const item = new SidenavItem({
       name: name,
       icon: icon,
@@ -97,7 +97,8 @@ export class SidenavService {
       subItems: [],
       position: position || 99,
       badge: badge || null,
-      badgeColor: badgeColor || null
+      badgeColor: badgeColor || null,
+      customClass: customClass || null
     });
 
     this._items.push(item);
@@ -106,7 +107,7 @@ export class SidenavService {
     return item;
   }
 
-  addSubItem(parent: SidenavItem, name: string, route: string, position: number) {
+  addSubItem(parent: SidenavItem, name: string, route: any, position: number) {
     const item = new SidenavItem({
       name: name,
       route: route,
@@ -119,6 +120,15 @@ export class SidenavService {
     this._itemsSubject.next(this._items);
 
     return item;
+  }
+
+  removeItem(item: SidenavItem) {
+    let index = this._items.indexOf(item);
+    if (index > -1) {
+      this._items.splice(index, 1);
+    }
+
+    this._itemsSubject.next(this._items);
   }
 
   isOpen(item: SidenavItem) {
@@ -150,4 +160,56 @@ export class SidenavService {
       return currentlyOpen;
     }
   }
+
+  nextCurrentlyOpen(currentlyOpen: SidenavItem[]) {
+    this._currentlyOpen = currentlyOpen;
+    this._currentlyOpenSubject.next(currentlyOpen);
+  }
+
+  nextCurrentlyOpenByRoute(route: string) {
+    let currentlyOpen = [];
+
+    let item = this.findByRouteRecursive(route, this._items);
+
+    // if (item && item.hasParent()) {
+    //   currentlyOpen = this.getAllParents(item);
+    // } else if (item) {
+    //   currentlyOpen = [item];
+    // }
+    //
+    // this.nextCurrentlyOpen(currentlyOpen);
+  }
+
+  findByRouteRecursive(route: string, collection: SidenavItem[]) {
+    let result = collection.filter((item)=> {
+      if(item.route === route) {
+        return item;
+      }
+    });
+
+
+    if (!result) {
+      collection.forEach((item)=> {
+        if (item.hasSubItems()) {
+          let found = this.findByRouteRecursive(route, item.subItems);
+
+          if (found) {
+            result = found;
+            return false;
+          }
+        }
+      });
+    }
+
+    return result;
+  }
+
+  get currentlyOpen() {
+    return this._currentlyOpen;
+  }
+
+  getSidenavItemByRoute(route) {
+    return this.findByRouteRecursive(route, this._items);
+  }
+
 }

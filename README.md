@@ -1,4 +1,4 @@
-# 通用管理系统快速开发框架 [demo](https://stbui.github.io/angular-material-app/)
+# 通用管理系统快速开发框架 [![国内demo](https://img.shields.io/badge/%e5%9b%bd%e5%86%85-demo-brightgreen.svg?style=flat-square)](http://stbui.oss-cn-beijing.aliyuncs.com/)  [![国外demo](https://img.shields.io/badge/%e5%9b%bd%e5%a4%96-demo-brightgreen.svg?style=flat-square)](https://surgeon-canary-67612.netlify.com/)  [![github](https://img.shields.io/badge/github-demo-brightgreen.svg?style=flat-square)](https://stbui.github.io/angular-material-app/) [![国外doc](https://img.shields.io/badge/%e5%9b%bd%e5%a4%96-doc-brightgreen.svg?style=flat-square)](https://translator-rhinoceros-87537.netlify.com/)
 
 基于最新`Angular 4`框架与`Material 2`技术的企业级通用管理系统快速开发框架，涵盖了大量的常用组件和基础功能，您可以快速开发各种MIS系统，如CMS、OA、CRM、ERP、POS等，最大程度上帮助企业节省时间成本和费用开支。
 
@@ -6,8 +6,8 @@
 [![Docker Build Statu](https://img.shields.io/docker/build/stbui/angular-material-app.svg?style=flat-square)](https://hub.docker.com/r/stbui/angular-material-app/)
 [![Dependency Status](https://img.shields.io/david/stbui/angular-material-app.svg?style=flat-square)](https://david-dm.org/stbui/angular-material-app)
 [![devDependency Status](https://img.shields.io/david/stbui/angular-material-app.svg?style=flat-square)](https://david-dm.org/stbui/angular-material-app?type=dev)
-[![Github All Releases](https://img.shields.io/github/downloads/stbui/angular-material-app/total.svg)](http://www.stbui.com)
 [![Join the chat at https://gitter.im/angular-material-app](https://badges.gitter.im/stbui/angular-material-app.svg)](https://gitter.im/angular-material-app/Lobby?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
+[![Powered_by](https://img.shields.io/badge/Powered_by-stbui-green.svg?style=flat)](https://github.com/stbui/angular-material-app)
 
 
 ### 平台环境
@@ -17,12 +17,13 @@
 [![Angular Mateiral 2](https://img.shields.io/badge/Material%202-2.0.0.beta.10-brightgreen.svg?style=square)](https://github.com/angular/material2)
 [![Flex-Layout](https://img.shields.io/badge/Flex.Layout-2.0.0.beta.9-brightgreen.svg?style=square)](https://github.com/angular/flex-layout)
 
-[![Scss](https://img.shields.io/badge/Scss-latest-brightgreen.svg?style=flat-square)](https://github.com/sass/sass)
-[![Typescript](https://img.shields.io/badge/Typescript-latest-brightgreen.svg?style=flat-square)](https://github.com/Microsoft/TypeScript)
-[![rxjs](https://img.shields.io/badge/rxjs-5.4.1-brightgreen.svg?style=flat-square)](https://github.com/Reactive-Extensions/RxJS)
-
 
 ### 基本功能
+
+- 支持 docker 构建镜像
+- 支持 electron 构建桌面应用
+- 接入 firebase, 关联google账户和github账户登录
+- 真实场景mock数据
 - material design 
 - 内置3套主题，供自由切换
 - 多种颜色方案，有多个预定义的配色方案
@@ -63,19 +64,8 @@ npm run build
 快速部署
 
 ```
-docker pull stbui/angular-material-app
 docker run -d -P stbui/angular-material-app
 ```
-或
-```
-docker run --rm --name angular-material-app -v "$PWD":/usr/src/app -w /usr/src/app -p 4200:4200 -it node:latest bash -c "npm install && npm start"
-```
-
-### document
-
-https://translator-rhinoceros-87537.netlify.com/
-
-https://surgeon-canary-67612.netlify.com/
 
 
 ### Firebase

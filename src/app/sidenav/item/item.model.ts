@@ -7,6 +7,7 @@ export class SidenavItem {
   position: number;
   badge: string;
   badgeColor: string;
+  customClass: string;
 
   constructor(model: any = null) {
     if (model) {
@@ -18,6 +19,7 @@ export class SidenavItem {
       this.position = model.position;
       this.badge = model.badge;
       this.badgeColor = model.badgeColor;
+      this.customClass = model.customClass;
     }
   }
 
@@ -25,7 +27,6 @@ export class SidenavItem {
     if (this.subItems) {
       return this.subItems.length > 0;
     }
-
     return false;
   }
 

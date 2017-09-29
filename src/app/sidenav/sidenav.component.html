@@ -1,6 +1,7 @@
 <div class="sidenav-container" fxLayout="column">
 
-  <md-toolbar class="sidenav-toolbar mat-elevation-z2" [ngClass]="[theme.logo]" fxLayout="row" fxFlexAlign="center center">
+  <md-toolbar class="sidenav-toolbar mat-elevation-z2" [ngClass]="[theme.logo]" fxLayout="row"
+              fxFlexAlign="center center">
     <md-icon class="logo-icon material-icons">view_compact</md-icon>
     <a class="logo-text" href="/">Stbui</a>
     <span fxFlex></span>
@@ -11,12 +12,14 @@
   </md-toolbar>
 
   <div class="sidenav-scrollbar-container" [ngClass]="[theme.aside]" fxLayout="column">
-      <md-nav-list fxLayout="column" [perfect-scrollbar]>
-        <sidenav-item *ngFor="let item of items" [item]="item"></sidenav-item>
-      </md-nav-list>
+    <md-nav-list fxLayout="column" [perfect-scrollbar] class="sidenav-list sidenav-toplevel">
+      <sidenav-item *ngFor="let item of items" [item]="item"></sidenav-item>
+    </md-nav-list>
   </div>
 
   <div class="sidenav-footer" [ngClass]="[theme.aside]" fxLayout="row" fxFlexAligin="center center">
-    <a fxFlex="100" md-raised-button href="https://github.com/stbui/angular-material-app/issues" target="_blank"><md-icon style="font-size: 20px;">help</md-icon> 帮助与支持</a>
+    <a fxFlex="100" md-raised-button href="https://github.com/stbui/angular-material-app/issues" target="_blank">
+      <md-icon style="font-size: 20px;">help</md-icon>
+      帮助与支持</a>
   </div>
 </div>

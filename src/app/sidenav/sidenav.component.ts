@@ -1,4 +1,4 @@
-import { Component, OnInit, Inject, Input } from '@angular/core';
+import { Component, OnInit, Inject, Input, OnDestroy } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { SidenavItem } from './item/item.model';
 import { Subscription } from 'rxjs';
@@ -8,7 +8,7 @@ import { Subscription } from 'rxjs';
   templateUrl: './sidenav.component.html',
   styleUrls: ['./sidenav.component.scss']
 })
-export class SidenavComponent implements OnInit {
+export class SidenavComponent implements OnInit, OnDestroy {
 
   @Input() theme = {
     header: 'stbui-white',
@@ -18,6 +18,7 @@ export class SidenavComponent implements OnInit {
 
   items: SidenavItem[] = [];
   private _itemsSubscription: Subscription;
+  private _routerEventsSubscription: Subscription;
 
   constructor(@Inject('sidenavService') private service,
               private router: Router) {
@@ -25,21 +26,38 @@ export class SidenavComponent implements OnInit {
 
   ngOnInit() {
     this._itemsSubscription = this.service.items$.subscribe((items: SidenavItem[]) => {
-      this.items = items;
+      this.items = this.sortRecursive(items, 'position');
     });
 
-    this.router.events.subscribe((event) => {
+    this._routerEventsSubscription = this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
-        console.log(event.url);
+        this.service.nextCurrentlyOpenByRoute(event.url);
+        setTimeout(() => {
+          window.dispatchEvent(new Event('resize'));
+        }, 400);
       }
     });
-
   }
-
 
   toggleIconSidenav() {
+    setTimeout(() => {
+      window.dispatchEvent(new Event('resize'));
+    }, 300);
+
+    this.service.isIconSidenav = !this.service.isIconSidenav;
+
   }
 
-  isIconSidenav() {
+  isIconSidenav(): boolean {
+    return this.service.isIconSidenav;
+  }
+
+  sortRecursive(array: SidenavItem[], propertyName: string) {
+    return array;
+  };
+
+  ngOnDestroy() {
+    this._itemsSubscription.unsubscribe();
+    this._routerEventsSubscription.unsubscribe();
   }
 }

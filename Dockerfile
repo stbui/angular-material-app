@@ -5,7 +5,7 @@ RUN npm install -g @angular/cli@latest  http-server
 WORKDIR /stbui
 COPY . /stbui
 RUN npm install && npm run build
-RUN cd ./dist
+RUN cp ./dist ./
 
 EXPOSE 8080
 

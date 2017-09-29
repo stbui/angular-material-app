@@ -2,4 +2,7 @@
 .gitignore
 .env*
 node_modules
+docs
+documentation
+dist
 docker-compose*.yml

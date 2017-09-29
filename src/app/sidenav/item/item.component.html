@@ -1,4 +1,5 @@
 <a class="sidenav-anchor"
+   [ngClass]="item.customClass"
    *ngIf="!item.hasSubItems()"
    md-list-item md-ripple
    [routerLink]="[item.route]"
@@ -12,6 +13,7 @@
 </a>
 
 <a class="sidenav-anchor"
+   [ngClass]="item.customClass"
    *ngIf="item.hasSubItems()"
    md-list-item md-ripple
    (click)="toggleDropdown()">
@@ -19,8 +21,11 @@
   <md-icon>{{ item.icon }}</md-icon>
   <span class="sidenav-item-name fade-in-on-icon-sidenav">{{ item.name }}</span>
   <span fxFlex></span>
-  <span class="badge fade-in-on-icon-sidenav" *ngIf="item.badge" [style.background-color]="item.badgeColor" style="margin-right: 12px;">{{ item.badge }}</span>
-  <md-icon *ngIf="item.hasSubItems()" class="sidenav-item-dropdown-indicator rotate fade-in-on-icon-sidenav">expand_more</md-icon>
+  <span class="badge fade-in-on-icon-sidenav" *ngIf="item.badge" [style.background-color]="item.badgeColor"
+        style="margin-right: 12px;">{{ item.badge }}</span>
+  <md-icon *ngIf="item.hasSubItems()" class="sidenav-item-dropdown-indicator rotate fade-in-on-icon-sidenav">
+    expand_more
+  </md-icon>
 
 </a>
 

@@ -1,4 +1,8 @@
-import { Component, OnInit, Input,Inject, HostBinding, ViewEncapsulation } from '@angular/core';
+/**
+ * @author stbui <https://github.com/stbui>
+ */
+
+import { Component, OnInit, Input, Inject, HostBinding, ViewEncapsulation } from '@angular/core';
 import { SidenavItem } from './item.model';
 
 @Component({
@@ -13,36 +17,42 @@ export class ItemComponent implements OnInit {
 
   @HostBinding('class.open')
   get isOpen() {
-    return this.sidenavService.isOpen(this.item);
+    return this.service.isOpen(this.item);
   }
 
-  constructor(@Inject('sidenavService') private sidenavService) {
+  constructor(@Inject('sidenavService') private service) {
   }
 
   ngOnInit() {
   }
 
-  toggleDropdown() {
-    if(this.item.hasSubItems()) {
-      this.sidenavService.toggleCurrentlyOpen(this.item);
+  /**
+   *  菜单展开开关
+   */
+  toggleDropdown(): void {
+    if (this.item.hasSubItems()) {
+      this.service.toggleCurrentlyOpen(this.item);
     }
   }
 
-  /*
-  *  获取子菜单高度
-  * */
+  /**
+   * 获取子菜单高度
+   * @returns {string}
+   */
   getSubItemsHeight() {
     if (this.item.hasSubItems()) {
       return (this.getOpenSubItemsCount(this.item) * 56) + 'px';
     }
   }
 
-  /*
-  * 计算子菜单高度
-  * */
+  /**
+   * 计算子菜单高度
+   * @param item {SidenavItem} 菜单项
+   * @returns {number} 子菜单总数
+   */
   getOpenSubItemsCount(item: SidenavItem): number {
     let count = 0;
-    if (item.hasSubItems() && this.sidenavService.isOpen(item)) {
+    if (item.hasSubItems() && this.service.isOpen(item)) {
       count += item.subItems.length;
       item.subItems.forEach((subItem) => {
         count += this.getOpenSubItemsCount(subItem);
