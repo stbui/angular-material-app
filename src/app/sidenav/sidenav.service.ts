@@ -30,7 +30,7 @@ export class SidenavService {
     this.addSubItem(materials, 'Toast', '/materials/toast', 3);
     this.addSubItem(materials, 'Snack-Bar', '/materials/snackbar', 3);
 
-    const components = this.addItem('拓展组件', 'equalizer', null, 3);
+    const components = this.addItem('拓展组件', 'equalizer', null, 3, '1','#4CAF50');
     this.addSubItem(components, '高德地图', '/materials/amap', 1);
     this.addSubItem(components, 'Markdown', '/materials/markdown', 1);
     this.addSubItem(components, '图表', '/components/chart', 1);
@@ -87,6 +87,11 @@ export class SidenavService {
     this.addSubItem(crm, '联系人', '/crm/lead', 1);
     this.addSubItem(crm, '商机', '/crm/lead', 1);
     this.addSubItem(crm, '产品', '/crm/lead', 1);
+
+    const apm = this.addItem('前端监控', 'code', null, 9, 'new','#3F51B5');
+    this.addSubItem(apm, '脚本异常', '/apm/error', 1);
+    this.addSubItem(apm, '性能分析', '/apm/performance', 1);
+
   }
 
   addItem(name: string, icon: string, route: any, position: number, badge?: string, badgeColor?: string, customClass?: string) {

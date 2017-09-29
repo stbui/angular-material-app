@@ -4,7 +4,7 @@
     <stbui-customizer (theme)="onTheme($event)"></stbui-customizer>
   </md-sidenav>
 
-  <md-sidenav class="sidenav" align="start" mode="side" opened="true" #sidenav>
+  <md-sidenav class="sidenav" align="start" [mode]="sidenavMode" [opened]="sidenavOpen" #sidenav>
     <app-sidenav [theme]="theme"></app-sidenav>
   </md-sidenav>
 
