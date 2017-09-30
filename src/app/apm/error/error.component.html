@@ -1,3 +1,47 @@
-<p>
-  error works!
-</p>
+<div class="error-container">
+  <stbui-search placeholder="输入过滤条件"></stbui-search>
+
+  <div class="error-main mat-elevation-z2">
+    <div class="error-toolbar" fxLayout="row" fxLayoutAlign="start center">
+      <div class="start-wrapper" fxLayout="row" fxLayoutAlign="start center" fxFlex="240px">
+        <md-checkbox class="checkbox" (change)="onCheckBoxAllTrigger($event)" [(ngModel)]="checked"></md-checkbox>
+        <span>发生时间</span>
+      </div>
+      <div class="content-wrapper" fxLayout="row" fxLayoutAlign="start center" fxFlex>
+        <span>资源URL</span>
+      </div>
+      <div class="content-wrapper" fxLayout="row" fxLayoutAlign="start center" fxFlex="120px">
+        <span>事件类型</span>
+      </div>
+
+      <div class="end-wrapper" fxLayout="row" fxLayoutAlign="end center" fxFlex="80px">
+        <span>版本</span>
+      </div>
+
+    </div>
+
+    <div class="error-list">
+      <a class="error" fxLayout="row" *ngFor="let error of errors" (click)="onDetailTriggered(error)">
+        <div class="start-wrapper" fxLayout="row" fxLayoutAlign="start center" fxFlex="240px">
+          <md-checkbox class="checkbox" [checked]="checked"></md-checkbox>
+          <span>{{ error.firstSeen }}</span>
+        </div>
+
+        <div class="content-wrapper" fxLayout="row" fxLayoutAlign="start center" fxFlex>
+          <span>{{ error.src }}</span>
+        </div>
+
+        <div class="content-wrapper" fxLayout="row" fxLayoutAlign="start center" fxFlex="120px">
+          <span>{{ error.type }}</span>
+        </div>
+
+        <div class="end-wrapper" fxLayout="row" fxLayoutAlign="end center" fxFlex="80px">
+          <span *ngFor="let releaseStage of error.releaseStages">{{ releaseStage }}</span>
+        </div>
+      </a>
+    </div>
+
+  </div>
+</div>
+
+<error-detail [opened]="openDetial" (onOpened)="onOpenedTriggered($event)"></error-detail>

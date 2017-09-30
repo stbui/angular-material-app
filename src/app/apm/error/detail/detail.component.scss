@@ -1,0 +1,37 @@
+
+.error-detail-container {
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 500px;
+  padding: 10px 15px;
+  background: #fff;
+  z-index: 10;
+
+  visibility: hidden;
+  transform: translateX(110%);
+  transition: transform .4s cubic-bezier(.25, .8, .25, 1), visibility .4s cubic-bezier(.25, .8, .25, 1);
+
+  &.open {
+    transform: translateY(0);
+    visibility: visible;
+  }
+}
+
+.error-detail-main {
+  padding-bottom: 20px;
+
+  > .title {
+    padding-bottom: 8px;
+    font-weight: 500;
+    font-size: 16px;
+  }
+}
+
+.error-detail-row {
+  box-sizing: border-box;
+  border-bottom: 1px solid #eee;
+  padding: 8px 24px;
+  color: #616161;
+}

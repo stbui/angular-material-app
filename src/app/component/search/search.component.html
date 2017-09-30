@@ -1,10 +1,7 @@
-<div fxLayout="row" class="search-main">
-  <md-icon class="search-icon">search</md-icon>
-  <input type="search"
-         autocomplete="off"
-         spellcheck="false"
-         (keyup.enter)="enterUp()"
-         [(ngModel)]="inputValue"
-         class="search-input"
-         [placeholder]="placeholder">
+<div class="search mat-elevation-z2" fxLayout="row">
+  <div fxLayout="row" fxLayoutAlign="center center">
+    <md-icon>search</md-icon>
+  </div>
+  <input fxFlex type="search" autocomplete="off" spellcheck="false" [placeholder]="placeholder"
+         (keyup.enter)="enterUp()" [(ngModel)]="inputValue">
 </div>

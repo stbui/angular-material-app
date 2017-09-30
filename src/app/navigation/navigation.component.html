@@ -12,7 +12,7 @@
 
 <div fxlayout="row" fxLayoutWrap>
   <div fxFlex="100" fxFlex.gt-md="20" fxFlex.gt-sm="33.3" fxFlex.gt-xs="50" *ngFor="let navigation of navigations">
-    <md-card>
+    <md-card class="nav-item">
       <md-card-title class="nav-title"><a href="{{ navigation.link }}" target="_blank">{{ navigation.title }}</a></md-card-title>
       <md-card-content class="nav-desc">{{ navigation.description }}</md-card-content>
     </md-card>

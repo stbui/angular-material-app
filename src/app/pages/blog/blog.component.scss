@@ -1,0 +1,15 @@
+:host {
+  display: block;
+  margin: 15px;
+}
+
+.textarea {
+  min-height: 150px;
+  max-height: 150px;
+  font-size: 16px;
+  color: #333;
+  padding: 10px;
+  outline: 0;
+  border: 0;
+  box-shadow: 0 0 1px 1px #999 inset;
+}

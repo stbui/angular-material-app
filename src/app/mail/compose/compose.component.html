@@ -8,15 +8,15 @@
 
   <form #mailForm="ngForm">
     <div fxLayout="column" md-dialog-content>
-      <md-input-container fxFlex>
+      <md-form-field class="full-width">
         <input mdInput placeholder="收件人" name="name" [(ngModel)]="name" required>
-      </md-input-container>
-      <md-input-container fxFlex>
+      </md-form-field>
+      <md-form-field class="full-width">
         <input mdInput placeholder="发件人" disabled name="address" [(ngModel)]="address" required>
-      </md-input-container>
-      <md-input-container fxFlex>
+      </md-form-field>
+      <md-form-field class="full-width">
         <input mdInput placeholder="主题" name="subject" [(ngModel)]="subject" required>
-      </md-input-container>
+      </md-form-field>
       <p class="editor">
         <quill-editor name="content" [(ngModel)]="content"></quill-editor>
       </p>

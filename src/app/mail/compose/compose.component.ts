@@ -29,9 +29,9 @@ export class ComposeComponent implements OnInit {
       },
       subject: this.subject,
       content: this.content
-    }
+    };
 
-    console.log(this.mail,  this.name,this.subject)
+    console.log(this.mail,  this.name,this.subject);
     this.dialogRef.close(this.mail);
   }
 }

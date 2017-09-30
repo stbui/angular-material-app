@@ -73,12 +73,7 @@
 
     <div class="content-container" fxFlex fxLayout="column">
 
-      <div class="search mat-elevation-z2" fxLayout="row">
-        <div fxLayout="row" fxLayoutAlign="center center">
-          <md-icon>search</md-icon>
-        </div>
-        <input fxFlex type="search" placeholder="搜索...">
-      </div>
+      <stbui-search class="search" placeholder="搜索..."></stbui-search>
 
       <div class="mails-container mat-elevation-z2" fxFlex>
         <stb-toolbar [mail]="shownMailDetail" [itemCount]="shownMails.length" (onForward)="onForward($event)"></stb-toolbar>

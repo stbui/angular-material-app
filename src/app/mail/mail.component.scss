@@ -109,22 +109,7 @@ $margin-top__search__title: 42px;
     height: 100%;
 
     .search {
-      background: white;
       margin-top: $margin-top__search__title;
-      min-height: $height__search__title;
-      max-height: $height__search__title;
-
-      md-icon {
-        vertical-align: middle;
-        margin-right: 14px;
-        margin-left: 16px;
-      }
-
-      input {
-        border: 0;
-        height: $height__search__title;
-        outline: none;
-      }
     }
 
     .mails-container {
@@ -133,10 +118,6 @@ $margin-top__search__title: 42px;
       position: relative;
       height: 100%;
       overflow-y: hidden;
-
-
-
-
     }
   }
 }

@@ -14,10 +14,16 @@
 * **登录&注册：** 接入firebase 目前支持 github 和 google 账号登录
 * **file upload：** 增加文件上传模块, 对接firebase存储
 * **electron：** 新增分支feature/electron, 进行桌面应用开发
+* **apm：**  新增前端监控模块
 
 ### 功能优化
 
 * 优化material模块导入
+* 优化侧边栏菜单
+* 优化navitation模块css效果
+* 优化comment/search组件
+* 优化mail模块搜索
+
 
 
 # 0.4.9 (2017.09.8)

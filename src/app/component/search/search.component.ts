@@ -5,7 +5,7 @@ import 'rxjs/add/operator/debounceTime';
 import 'rxjs/add/operator/distinctUntilChanged';
 
 @Component({
-  selector: 'stbui-search',
+  selector: 'stbui-search, stb-search',
   templateUrl: './search.component.html',
   styleUrls: ['./search.component.scss']
 })

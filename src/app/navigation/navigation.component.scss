@@ -53,3 +53,13 @@ md-card {
 .nav-category-title {
   color: #333;
 }
+
+.nav-item {
+  transition: all 0.6s cubic-bezier(0.165,0.84,0.44,1);
+  cursor: default;
+
+  &:hover {
+    transform: translate(0,-8px);
+    box-shadow: 0 40px 40px rgba(0,0,0,.16)
+  }
+}

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { SharedModule } from '../shared/shared.module';
 import { QuillModule } from 'ngx-quill';
+import { SearchModule } from '../component/search';
 
 import { MailComponent } from './mail.component';
 import { ComposeComponent } from './compose/compose.component';
@@ -14,7 +15,8 @@ import { MailRoutingModule } from './mail.routing';
   imports: [
     SharedModule,
     MailRoutingModule,
-    QuillModule
+    QuillModule,
+    SearchModule
   ],
   entryComponents: [
     ComposeComponent
