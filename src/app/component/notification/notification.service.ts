@@ -1,5 +1,5 @@
 import { ComponentRef, Injectable, Injector, Inject } from '@angular/core';
-import { Overlay, OverlayState } from '@angular/cdk/overlay';
+import { Overlay, OverlayConfig } from '@angular/cdk/overlay';
 import { ComponentPortal } from '@angular/cdk/portal';
 import { Observable } from 'rxjs/Observable';
 
@@ -123,7 +123,7 @@ export class NotificationService {
   }
 
   private _createOverlay(config?: NotificationInterface) {
-    const state = new OverlayState();
+    const state = new OverlayConfig();
     return this._overlay.create(state);
   }
 
