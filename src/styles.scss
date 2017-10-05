@@ -1,21 +1,14 @@
 @import '~@angular/material/_theming';
+@import "scss/app-theme";
+@import "scss/index";
 
 @include mat-core();
 $candy-app-primary: mat-palette($mat-indigo);
 $candy-app-accent: mat-palette($mat-pink, A200, A100, A400);
 $candy-app-warn: mat-palette($mat-red);
-$candy-app-theme: mat-light-theme($candy-app-primary, $candy-app-accent, $candy-app-warn);
-@include angular-material-theme($candy-app-theme);
-
-@import "scss/index";
-@import "./app/sidenav/sidenav.theme";
-@import "./app/component/pagination/pagination.theme";
-@import "./app/component/date-picker/date-picker.theme";
-@import "./app/navigation/navigation.theme";
-@include theme-skin($candy-app-theme);
-@include pagination-theme($candy-app-theme);
-@include calendar-theme($candy-app-theme);
-@include navigation-theme($candy-app-theme);
+$theme: mat-light-theme($candy-app-primary, $candy-app-accent, $candy-app-warn);
+@include angular-material-theme($theme);
+@include stbui-app-theme($theme)
 
 html, body {
   min-height: 100%;

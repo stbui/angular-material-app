@@ -1,0 +1,8 @@
+@import '../../scss/app-theme';
+
+$primary: mat-palette($mat-pink);
+$accent: mat-palette($mat-blue-grey, A200, A100, A400);
+
+$theme: mat-light-theme($primary, $accent);
+@include angular-material-theme($theme);
+@include stbui-app-theme($theme);

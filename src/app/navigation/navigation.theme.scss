@@ -15,12 +15,11 @@
     }
 
     &:hover {
-      background-color: mat-color($primary, .2);
+      background-color: mat-color($background, hover);
 
       .active,
       &.active {
         background-color: mat-color($primary);
-        color: mat-color($foreground, text);
       }
     }
   }

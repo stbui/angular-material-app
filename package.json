@@ -4,16 +4,21 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --extract-css",
+    "start": "npm run build:themes && ng serve --extract-css",
     "start:api": "ng serve --extract-css --proxy-config proxy.conf.js",
-    "build": "ng build --extract-css --prod --aot --environment=prod ",
+    "build": "ng build --extract-css --prod --aot --environment=prod",
     "build:github": "ng build --extract-css --prod --aot --environment=github --base-href=https://stbui.github.io/angular-material-app/",
     "publish:github": "ngh",
     "docs": "hads ./docs -o",
     "compodoc": "./node_modules/.bin/compodoc -p tsconfig.json -s",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "build:theme:deeppurple":"$(npm bin)/node-sass src/assets/custom-themes/deeppurple-amber.scss src/assets/deeppurple-amber.css",
+    "build:theme:indigo":"$(npm bin)/node-sass src/assets/custom-themes/indigo-pink.scss src/assets/indigo-pink.css",
+    "build:theme:pink":"$(npm bin)/node-sass src/assets/custom-themes/pink-bluegrey.scss src/assets/pink-bluegrey.css",
+    "build:theme:purple":"$(npm bin)/node-sass src/assets/custom-themes/purple-green.scss src/assets/purple-green.css",
+    "build:themes":"npm run build:theme:deeppurple && npm run build:theme:indigo && npm run build:theme:pink && npm run build:theme:purple"
   },
   "private": true,
   "dependencies": {

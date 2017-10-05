@@ -1,8 +1,8 @@
 @import '~@angular/material/_theming';
+
 $navigation-font-family: Roboto, 'Helvetica Neue', sans-serif !default;
 $navigation-font-size-base: 14px !default;
 $navigation-border-radius: 2px !default;
-
 
 md-card {
   padding: 10px;
@@ -50,16 +50,12 @@ md-card {
   cursor: default;
 }
 
-.nav-category-title {
-  color: #333;
-}
-
 .nav-item {
-  transition: all 0.6s cubic-bezier(0.165,0.84,0.44,1);
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
   cursor: default;
 
   &:hover {
-    transform: translate(0,-8px);
-    box-shadow: 0 40px 40px rgba(0,0,0,.16)
+    transform: translate(0, -8px);
+    box-shadow: 0 40px 40px rgba(0, 0, 0, .16)
   }
 }

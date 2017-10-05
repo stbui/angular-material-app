@@ -1,4 +1,3 @@
-$pagination-font-family: Roboto, 'Helvetica Neue', sans-serif !default;
 $pagination-font-size-base: 14px !default;
 $pagination-size: 32px !default;
 $pagination-line-height: 32px !default;
@@ -13,35 +12,18 @@ $pagination-border-radius: 2px !default;
 
 .pagination {
   display: flex;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
   justify-content: flex-start;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
   align-items: center;
   user-select: none;
   cursor: pointer;
-  -webkit-appearance: none;
 
   li {
     box-sizing: border-box;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
     justify-content: center;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
     align-items: center;
 
     font-size: $pagination-font-size-base;
-    font-family: $pagination-font-family;
     font-weight: 500;
     text-align: center;
 
@@ -55,25 +37,16 @@ $pagination-border-radius: 2px !default;
   }
 
   &-item-wrapper {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
   }
 }
 
 .pagination-end {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   justify-content: flex-end;
 }
 
 .pagination-center {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   justify-content: center;
 }

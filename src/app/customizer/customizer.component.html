@@ -1,12 +1,16 @@
+<!--<div class="customizer-container" fxLayout="column">-->
+  <!--<md-radio-group class="customizer-radio-group">-->
+    <!--<md-radio-button class="customizer-radio-button" (change)="selectTheme($event, 'dark')" value="dark">Dark</md-radio-button>-->
+    <!--<md-radio-button class="customizer-radio-button" (change)="selectTheme($event, 'light')" value="light">light</md-radio-button>-->
+    <!--<md-radio-button class="customizer-radio-button" (change)="selectTheme($event, 'default')" value="default">Default</md-radio-button>-->
+    <!--<md-radio-button class="customizer-radio-button" (change)="selectTheme($event, 'primary')" value="primary">primary</md-radio-button>-->
+    <!--<md-radio-button class="customizer-radio-button" (change)="selectTheme($event, 'warn')" value="warn">warn</md-radio-button>-->
+    <!--<md-radio-button class="customizer-radio-button" (change)="selectTheme($event, 'accent')" value="accent">accent</md-radio-button>-->
+  <!--</md-radio-group>-->
+<!--</div>-->
+
 <div class="customizer-container" fxLayout="column">
   <md-radio-group class="customizer-radio-group">
-    <md-radio-button class="customizer-radio-button" (change)="selectTheme($event, 'dark')" value="dark">Dark</md-radio-button>
-    <md-radio-button class="customizer-radio-button" (change)="selectTheme($event, 'light')" value="light">light</md-radio-button>
-    <md-radio-button class="customizer-radio-button" (change)="selectTheme($event, 'default')" value="default">Default</md-radio-button>
-    <md-radio-button class="customizer-radio-button" (change)="selectTheme($event, 'primary')" value="primary">primary</md-radio-button>
-    <md-radio-button class="customizer-radio-button" (change)="selectTheme($event, 'warn')" value="warn">warn</md-radio-button>
-    <md-radio-button class="customizer-radio-button" (change)="selectTheme($event, 'accent')" value="accent">accent</md-radio-button>
+    <md-radio-button class="customizer-radio-button" *ngFor="let theme of themes; index as i" (change)="installTheme(theme)" [value]="theme.primary">{{theme.primary}}</md-radio-button>
   </md-radio-group>
-  <!--<md-checkbox (change)="selectTheme($event, 'dark')" [(ngModel)]="isDark">Dark</md-checkbox>-->
-  <!--<md-checkbox (change)="selectTheme($event, 'light')" [(ngModel)]="isLight">light</md-checkbox>-->
 </div>

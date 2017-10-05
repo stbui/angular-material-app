@@ -1,0 +1,20 @@
+@import '../../node_modules/@angular/material/theming';
+@import "../app/component/pagination/pagination.theme";
+@import "../app/component/date-picker/date-picker.theme";
+@import "../app/component/notification/notification.theme";
+@import "../app/sidenav/sidenav.theme";
+@import "../app/navigation/navigation.theme";
+
+@mixin stbui-app-theme($theme) {
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+  $warn: map-get($theme, warn);
+  $background: map_get($theme, background);
+  $foreground: map_get($theme, foreground);
+
+  @include theme-skin($theme);
+  @include pagination-theme($theme);
+  @include calendar-theme($theme);
+  @include navigation-theme($theme);
+  @include notification-theme($theme);
+}
