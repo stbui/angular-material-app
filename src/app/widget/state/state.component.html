@@ -1,0 +1,15 @@
+<div class="state-widget mat-elevation-z2" [ngStyle]="{background: backgroundcolor, color: textcolor}">
+  <div fxLayout="row" fxLayoutAlign="space-between">
+    <div fxLayout="column" fxLayoutAlign="end">
+      <div class="value">{{valueprefix}}{{value}}</div>
+      <div class="property">{{property}}</div>
+    </div>
+    <div fxLayout="column" fxLayoutAlign="space-between">
+      <md-icon class="icon" fxFlexAlign="end">{{icon}}</md-icon>
+      <div class="change" fxFlexAlign="end" fxlayout="row" fxLayoutAlign="end center">
+        <div class="percent">{{changepercent}}%</div>
+        <md-icon class="change-icon">{{changeicon}}</md-icon>
+      </div>
+    </div>
+  </div>
+</div>

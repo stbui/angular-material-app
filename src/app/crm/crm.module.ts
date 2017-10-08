@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { SharedModule } from '../shared/shared.module';
 import { CrmRoutingModule } from './crm.routing';
 import { LeadComponent } from './lead/lead.component';
@@ -13,12 +12,14 @@ import { ProductComponent } from './product/product.component';
 
 import { LeadService } from './lead/lead.service';
 
+import { WidgetModule } from '../widget/widget.module';
+
 
 @NgModule({
   imports: [
-    CommonModule,
     SharedModule,
-    CrmRoutingModule
+    CrmRoutingModule,
+    WidgetModule
   ],
   declarations: [
     LeadComponent,

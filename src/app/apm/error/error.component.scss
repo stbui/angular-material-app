@@ -24,6 +24,7 @@ $prefix: 'error';
     font-weight: normal;
   }
 
+  &.active,
   &:hover {
     background: #EEE;
   }

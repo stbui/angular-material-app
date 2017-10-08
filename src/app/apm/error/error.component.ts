@@ -67,7 +67,7 @@ export class ErrorComponent implements OnInit {
     }
 
     const clickedInside = this._elementRef.nativeElement.contains(targetElement);
-    if (!clickedInside && this.openDetial == true) {
+    if (!clickedInside && this.openDetial === true) {
       this.openDetial = false;
     }
   }
