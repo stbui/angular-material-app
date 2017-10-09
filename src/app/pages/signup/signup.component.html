@@ -5,22 +5,22 @@
     </div>
     <form #form="ngForm" (ngSubmit)="register()">
       <div class="register-content" fxLayout="column" fxLayoutAlign="start stretch">
-        <md-input-container>
-          <input mdInput placeholder="昵称" type="text" name="name" required [(ngModel)]="name">
-        </md-input-container>
-        <md-input-container>
-          <input mdInput placeholder="邮箱" type="text" name="email" required [(ngModel)]="email">
-        </md-input-container>
-        <md-input-container>
-          <input mdInput placeholder="密码" type="password" name="password" required [(ngModel)]="password">
-        </md-input-container>
-        <md-input-container>
-          <input mdInput placeholder="确认密码" type="password" name="password-confirm" required [(ngModel)]="passwordConfirm">
-        </md-input-container>
+        <mat-input-container>
+          <input matInput placeholder="昵称" type="text" name="name" required [(ngModel)]="name">
+        </mat-input-container>
+        <mat-input-container>
+          <input matInput placeholder="邮箱" type="text" name="email" required [(ngModel)]="email">
+        </mat-input-container>
+        <mat-input-container>
+          <input matInput placeholder="密码" type="password" name="password" required [(ngModel)]="password">
+        </mat-input-container>
+        <mat-input-container>
+          <input matInput placeholder="确认密码" type="password" name="password-confirm" required [(ngModel)]="passwordConfirm">
+        </mat-input-container>
         <div class="extra-options" fxLayout="row" fxLayoutAlign="center center">
-          <md-checkbox class="remember-me">我同意 <a href="javascript:;">注册协议</a></md-checkbox>
+          <mat-checkbox class="remember-me">我同意 <a href="javascript:;">注册协议</a></mat-checkbox>
         </div>
-        <button color="primary" md-raised-button [disabled]="!form.valid">创建账户</button>
+        <button color="primary" mat-raised-button [disabled]="!form.valid">创建账户</button>
         <p class="note">已经有账户?<br/> <a [routerLink]="['/sigin']">登录</a></p>
       </div>
     </form>

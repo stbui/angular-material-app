@@ -1,48 +1,48 @@
 <div class="main-validation" fxLayout="row" fxLayoutAlign="center">
-  <md-card fxFlex="50">
-    <md-card-title>注册</md-card-title>
-    <md-card-content>
+  <mat-card fxFlex="50">
+    <mat-card-title>注册</mat-card-title>
+    <mat-card-content>
       <form fxLayout="column" #formRegister="ngForm">
-        <md-form-field class="full-width">
-          <input mdInput placeholder="请输入您的用户名" name="username" ngModel="stbui" required minlength="4"  maxlength="10">
-        </md-form-field>
-        <md-form-field class="full-width">
-          <input mdInput placeholder="请输入您的邮箱" name="email" ngModel required>
-        </md-form-field>
-        <md-form-field class="full-width">
-          <input mdInput placeholder="请输入您的密码" name="password" ngModel required>
-        </md-form-field>
-        <md-form-field class="full-width">
-          <input mdInput placeholder="请再次输入您的密码" name="password_confirm" ngModel required>
-        </md-form-field>
-        <md-form-field class="full-width">
-          <input mdInput placeholder="请输入您的手机" name="phone" ngModel>
-        </md-form-field>
-        <md-checkbox class="extra-options">我同意</md-checkbox>
-        <button md-raised-button color="primary" type="submit" [disabled]="!formRegister.valid">提交</button>
+        <mat-form-field class="full-width">
+          <input matInput placeholder="请输入您的用户名" name="username" ngModel="stbui" required minlength="4"  maxlength="10">
+        </mat-form-field>
+        <mat-form-field class="full-width">
+          <input matInput placeholder="请输入您的邮箱" name="email" ngModel required>
+        </mat-form-field>
+        <mat-form-field class="full-width">
+          <input matInput placeholder="请输入您的密码" name="password" ngModel required>
+        </mat-form-field>
+        <mat-form-field class="full-width">
+          <input matInput placeholder="请再次输入您的密码" name="password_confirm" ngModel required>
+        </mat-form-field>
+        <mat-form-field class="full-width">
+          <input matInput placeholder="请输入您的手机" name="phone" ngModel>
+        </mat-form-field>
+        <mat-checkbox class="extra-options">我同意</mat-checkbox>
+        <button mat-raised-button color="primary" type="submit" [disabled]="!formRegister.valid">提交</button>
       </form>
-    </md-card-content>
-  </md-card>
+    </mat-card-content>
+  </mat-card>
 
-  <md-card fxFlex="50">
-    <md-card-title>联系方式</md-card-title>
-    <md-card-content>
+  <mat-card fxFlex="50">
+    <mat-card-title>联系方式</mat-card-title>
+    <mat-card-content>
       <form fxLayout="column" #formContact="ngForm">
-        <md-form-field class="full-width">
-          <input mdInput placeholder="您的名字" name="name" ngModel required minlength="4"  maxlength="10">
-        </md-form-field>
-        <md-input-container class="full-width">
-          <input mdInput placeholder="您的邮箱" name="email" ngModel required>
-        </md-input-container>
-        <md-form-field class="full-width">
-          <input mdInput placeholder="请您的网址" name="website ngModel" required>
-        </md-form-field>
-        <md-form-field class="full-width">
-          <textarea mdInput placeholder="留言" rows="3" name="message" ngModel required></textarea>
-        </md-form-field>
-        <md-checkbox class="extra-options">我同意</md-checkbox>
-        <button md-raised-button color="primary" type="submit" [disabled]="!formContact.valid">提交</button>
+        <mat-form-field class="full-width">
+          <input matInput placeholder="您的名字" name="name" ngModel required minlength="4"  maxlength="10">
+        </mat-form-field>
+        <mat-input-container class="full-width">
+          <input matInput placeholder="您的邮箱" name="email" ngModel required>
+        </mat-input-container>
+        <mat-form-field class="full-width">
+          <input matInput placeholder="请您的网址" name="website ngModel" required>
+        </mat-form-field>
+        <mat-form-field class="full-width">
+          <textarea matInput placeholder="留言" rows="3" name="message" ngModel required></textarea>
+        </mat-form-field>
+        <mat-checkbox class="extra-options">我同意</mat-checkbox>
+        <button mat-raised-button color="primary" type="submit" [disabled]="!formContact.valid">提交</button>
       </form>
-    </md-card-content>
-  </md-card>
+    </mat-card-content>
+  </mat-card>
 </div>

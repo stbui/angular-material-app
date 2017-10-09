@@ -1,39 +1,39 @@
 <div fxLayout="row" fxFlex="340px">
 <div fxFlex>
-  <md-card>
-    <md-card-content>
+  <mat-card>
+    <mat-card-content>
       <img src="" width="150">
       <h4 class="mat-card-title">stbui</h4>
       <h6 class="mat-card-subtitle">前端工程师</h6>
 
-    </md-card-content>
-    <md-card-actions align="center">
-      <button md-button><md-icon>people</md-icon> 60</button>
-    </md-card-actions>
-  </md-card>
+    </mat-card-content>
+    <mat-card-actions align="center">
+      <button mat-button><mat-icon>people</mat-icon> 60</button>
+    </mat-card-actions>
+  </mat-card>
 </div>
 </div>
 
-<md-card>
-  <md-card-title>个人资料</md-card-title>
-  <md-card-content>
+<mat-card>
+  <mat-card-title>个人资料</mat-card-title>
+  <mat-card-content>
     <form fxLayout="column" #formContact="ngForm">
-      <md-form-field class="full-width">
-        <input mdInput placeholder="您的名字" name="name" ngModel required minlength="4"  maxlength="10">
-      </md-form-field>
-      <md-form-field class="full-width">
-        <input mdInput placeholder="您的邮箱" name="email" ngModel required>
-      </md-form-field>
-      <md-form-field class="full-width">
-        <input mdInput placeholder="您的手机" name="phone" ngModel required>
-      </md-form-field>
-      <md-form-field class="full-width">
-        <input mdInput placeholder="请您的网址" name="website ngModel" required>
-      </md-form-field>
-      <md-form-field class="full-width">
-        <textarea mdInput placeholder="留言" rows="3" name="message" ngModel required></textarea>
-      </md-form-field>
-      <button md-raised-button color="primary" type="submit" [disabled]="!formContact.valid">更新资料</button>
+      <mat-form-field class="full-width">
+        <input matInput placeholder="您的名字" name="name" ngModel required minlength="4"  maxlength="10">
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <input matInput placeholder="您的邮箱" name="email" ngModel required>
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <input matInput placeholder="您的手机" name="phone" ngModel required>
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <input matInput placeholder="请您的网址" name="website ngModel" required>
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <textarea matInput placeholder="留言" rows="3" name="message" ngModel required></textarea>
+      </mat-form-field>
+      <button mat-raised-button color="primary" type="submit" [disabled]="!formContact.valid">更新资料</button>
     </form>
-  </md-card-content>
-</md-card>
+  </mat-card-content>
+</mat-card>

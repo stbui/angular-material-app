@@ -1,13 +1,13 @@
 <div class="stb-calendar-toolbar">
-  <button md-icon-button (click)="OnPrev()">
-          <md-icon>chevron_left</md-icon>
+  <button mat-icon-button (click)="OnPrev()">
+          <mat-icon>chevron_left</mat-icon>
         </button>
   <div class="stb-calendar-toolbar-title-wrapper">
     <div class="stb-calendar-toolbar-title" *ngFor="let displayDate of displayDates">
       {{ displayDate | datePicker:'formatMonth' }}
     </div>
   </div>
-  <button md-icon-button (click)="OnNext()">
-          <md-icon>chevron_right</md-icon>
+  <button mat-icon-button (click)="OnNext()">
+          <mat-icon>chevron_right</mat-icon>
         </button>
 </div>

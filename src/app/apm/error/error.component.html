@@ -4,7 +4,7 @@
   <div class="error-main mat-elevation-z2">
     <div class="error-toolbar" fxLayout="row" fxLayoutAlign="start center">
       <div class="start-wrapper" fxLayout="row" fxLayoutAlign="start center" fxFlex="240px">
-        <md-checkbox class="checkbox" (change)="onCheckBoxAllTrigger($event)" [(ngModel)]="checked"></md-checkbox>
+        <mat-checkbox class="checkbox" (change)="onCheckBoxAllTrigger($event)" [(ngModel)]="checked"></mat-checkbox>
         <span>发生时间</span>
       </div>
       <div class="content-wrapper" fxLayout="row" fxLayoutAlign="start center" fxFlex>
@@ -23,7 +23,7 @@
     <div class="error-list">
       <a class="error" fxLayout="row" *ngFor="let error of errors" (click)="onDetailTriggered(error)">
         <div class="start-wrapper" fxLayout="row" fxLayoutAlign="start center" fxFlex="240px">
-          <md-checkbox class="checkbox" [checked]="checked"></md-checkbox>
+          <mat-checkbox class="checkbox" [checked]="checked"></mat-checkbox>
           <span>{{ error.firstSeen }}</span>
         </div>
 

@@ -4,7 +4,7 @@
   <tr>
     <th *ngFor="let column of columns">
       <div *ngIf="column.type === 'selection'">
-        <md-checkbox (change)="onCheckBoxAllTrigger($event)" [(ngModel)]="checked"></md-checkbox>
+        <mat-checkbox (change)="onCheckBoxAllTrigger($event)" [(ngModel)]="checked"></mat-checkbox>
       </div>
       <div *ngIf="column.type !== 'selection'">{{ column.title }}</div>
     </th>
@@ -14,7 +14,7 @@
   <tr *ngFor="let row of data" (click)="onRowClickTrigger(row)">
     <td *ngFor="let column of columns">
       <div *ngIf="column.type === 'selection'">
-        <md-checkbox (change)="onCheckBoxTrigger($event, row)" [checked]="checked"></md-checkbox>
+        <mat-checkbox (change)="onCheckBoxTrigger($event, row)" [checked]="checked"></mat-checkbox>
       </div>
       <div *ngIf="column.type !== 'selection'">{{ row[column.key] }}</div>
     </td>
@@ -30,7 +30,7 @@
       <tr>
         <th *ngFor="let column of columns; let i= index">
           <div *ngIf="column.type === 'selection'">
-            <md-checkbox (change)="onCheckBoxAllTrigger($event)" [(ngModel)]="checked"></md-checkbox>
+            <mat-checkbox (change)="onCheckBoxAllTrigger($event)" [(ngModel)]="checked"></mat-checkbox>
           </div>
           {{ column?.title }}
           <div [ngStyle]="{'width.px':cells[i]?.width, 'height.px':cells[i]?.height}" class="fixed-table-heading"
@@ -43,7 +43,7 @@
       <tr *ngFor="let row of data" (click)="onRowClickTrigger(row)">
         <td *ngFor="let column of columns">
           <div *ngIf="column.type === 'selection'">
-            <md-checkbox (change)="onCheckBoxTrigger($event, row)" [checked]="checked"></md-checkbox>
+            <mat-checkbox (change)="onCheckBoxTrigger($event, row)" [checked]="checked"></mat-checkbox>
           </div>
           <div *ngIf="column.type !== 'selection'">{{ row[column.key] }}</div>
         </td>

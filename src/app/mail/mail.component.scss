@@ -40,7 +40,7 @@ $margin-top__search__title: 42px;
       color: white;
       font-size: 28px;
 
-      md-icon {
+      mat-icon {
         margin-right: 4px;
         height: 24px;
         width: 24px;
@@ -61,7 +61,7 @@ $margin-top__search__title: 42px;
         padding-right: 32px;
         width: 100%;
 
-        md-icon {
+        mat-icon {
           margin-right: 10px;
         }
       }
@@ -99,7 +99,7 @@ $margin-top__search__title: 42px;
       }
     }
 
-    md-divider {
+    mat-divider {
       margin: 0 16px;
     }
   }

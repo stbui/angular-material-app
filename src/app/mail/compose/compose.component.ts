@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {MdDialogRef} from "@angular/material";
+import { MatDialogRef } from '@angular/material';
 
 @Component({
   selector: 'app-compose',
@@ -14,9 +14,8 @@ export class ComposeComponent implements OnInit {
   subject;
   content;
 
-  constructor(
-    private dialogRef: MdDialogRef<ComposeComponent>
-  ) { }
+  constructor(private dialogRef: MatDialogRef<ComposeComponent>) {
+  }
 
   ngOnInit() {
   }
@@ -31,7 +30,7 @@ export class ComposeComponent implements OnInit {
       content: this.content
     };
 
-    console.log(this.mail,  this.name,this.subject);
+    console.log(this.mail, this.name, this.subject);
     this.dialogRef.close(this.mail);
   }
 }

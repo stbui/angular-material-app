@@ -4,7 +4,7 @@
  * attribute, however Chrome handles high contrast differently.
  */
 /* Theme for the ripple elements.*/
-/** The mixins below are shared between md-menu and md-select */
+/** The mixins below are shared between mat-menu and mat-select */
 /**
  * This mixin adds the correct panel transform styles based
  * on the direction that the menu panel opens.
@@ -340,8 +340,7 @@
   .mat-focused .mat-form-field-placeholder.mat-warn {
     color: #f44336; }
 
-.mat-form-field-autofill-control:-webkit-autofill + .mat-form-field-placeholder .mat-form-field-required-marker,
-.mat-focused .mat-form-field-placeholder.mat-form-field-float .mat-form-field-required-marker {
+.mat-focused .mat-form-field-required-marker {
   color: #ffd740; }
 
 .mat-form-field-underline {
@@ -361,7 +360,7 @@
 .mat-form-field-invalid .mat-form-field-placeholder {
   color: #f44336; }
   .mat-form-field-invalid .mat-form-field-placeholder.mat-accent,
-  .mat-form-field-invalid .mat-form-field-placeholder.mat-form-field-float .mat-form-field-required-marker {
+  .mat-form-field-invalid .mat-form-field-placeholder .mat-form-field-required-marker {
     color: #f44336; }
 
 .mat-form-field-invalid .mat-form-field-ripple {
@@ -468,13 +467,13 @@
 .mat-progress-bar.mat-warn .mat-progress-bar-fill::after {
   background-color: #f44336; }
 
-.mat-progress-spinner path, .mat-spinner path {
+.mat-progress-spinner circle, .mat-spinner circle {
   stroke: #673ab7; }
 
-.mat-progress-spinner.mat-accent path, .mat-spinner.mat-accent path {
+.mat-progress-spinner.mat-accent circle, .mat-spinner.mat-accent circle {
   stroke: #ffd740; }
 
-.mat-progress-spinner.mat-warn path, .mat-spinner.mat-warn path {
+.mat-progress-spinner.mat-warn circle, .mat-spinner.mat-warn circle {
   stroke: #f44336; }
 
 .mat-radio-outer-circle {
@@ -516,21 +515,8 @@
 .mat-radio-button.mat-warn .mat-radio-ripple .mat-ripple-element {
   background-color: rgba(244, 67, 54, 0.26); }
 
-.mat-select-trigger,
-.mat-select-arrow {
-  color: rgba(0, 0, 0, 0.54); }
-
-.mat-select-underline {
-  background-color: rgba(0, 0, 0, 0.42); }
-
-[aria-disabled='true'] .mat-select-underline {
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.42) 0%, rgba(0, 0, 0, 0.42) 33%, transparent 0%);
-  background-size: 4px 1px;
-  background-repeat: repeat-x; }
-
 .mat-select-disabled .mat-select-value,
-.mat-select-arrow,
-.mat-select-trigger {
+.mat-select-arrow {
   color: rgba(0, 0, 0, 0.54); }
 
 .mat-select-content, .mat-select-panel-done-animating {
@@ -542,26 +528,23 @@
 .mat-select-panel .mat-option.mat-selected:not(.mat-option-multiple) {
   background: rgba(0, 0, 0, 0.12); }
 
-.mat-select:focus:not(.mat-select-disabled).mat-primary .mat-select-trigger, .mat-select:focus:not(.mat-select-disabled).mat-primary .mat-select-arrow {
+.mat-form-field.mat-focused.mat-primary .mat-select-arrow {
   color: #673ab7; }
 
-.mat-select:focus:not(.mat-select-disabled).mat-primary .mat-select-underline {
-  background-color: #673ab7; }
-
-.mat-select:focus:not(.mat-select-disabled).mat-accent .mat-select-trigger, .mat-select:focus:not(.mat-select-disabled).mat-accent .mat-select-arrow {
+.mat-form-field.mat-focused.mat-accent .mat-select-arrow {
   color: #ffd740; }
 
-.mat-select:focus:not(.mat-select-disabled).mat-accent .mat-select-underline {
-  background-color: #ffd740; }
-
-.mat-select:focus:not(.mat-select-disabled).mat-select-required .mat-select-placeholder::after {
+.mat-form-field.mat-focused.mat-warn .mat-select-arrow {
   color: #f44336; }
 
-.mat-select:focus:not(.mat-select-disabled).mat-warn .mat-select-trigger, .mat-select:focus:not(.mat-select-disabled).mat-warn .mat-select-arrow, .mat-select-invalid .mat-select-trigger, .mat-select-invalid .mat-select-arrow {
+.mat-form-field .mat-select.mat-select-invalid .mat-select-arrow {
   color: #f44336; }
 
-.mat-select:focus:not(.mat-select-disabled).mat-warn .mat-select-underline, .mat-select-invalid .mat-select-underline {
-  background-color: #f44336; }
+.mat-form-field .mat-select.mat-select-disabled .mat-select-arrow {
+  color: rgba(0, 0, 0, 0.54); }
+
+.mat-select.mat-select-disabled .mat-select-arrow {
+  color: #f44336; }
 
 .mat-drawer-container {
   background-color: #fafafa;
@@ -697,7 +680,7 @@
 .mat-slider-vertical .mat-slider-ticks {
   background-image: repeating-linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) 2px, transparent 0, transparent); }
 
-.mat-step-header:focus, .mat-step-header:hover {
+.mat-step-header.cdk-keyboard-focused, .mat-step-header.cdk-program-focused, .mat-step-header:hover {
   background-color: rgba(0, 0, 0, 0.04); }
 
 .mat-step-header .mat-step-label,

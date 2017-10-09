@@ -4,7 +4,7 @@
       <thead>
       <tr>
         <th>
-          <md-checkbox class="checkbox" [(ngModel)]="checked"></md-checkbox>
+          <mat-checkbox class="checkbox" [(ngModel)]="checked"></mat-checkbox>
         </th>
         <th>账号</th>
         <th>最后登录时间</th>
@@ -17,7 +17,7 @@
       <tbody>
       <tr *ngFor="let user of users" (click)="onEditTriggered(user)">
         <td>
-          <md-checkbox class="checkbox" [checked]="checked"></md-checkbox>
+          <mat-checkbox class="checkbox" [checked]="checked"></mat-checkbox>
         </td>
         <td>{{ user.loginName }}</td>
         <td>{{ user.lastLoginTime }}</td>
@@ -25,8 +25,8 @@
         <td>{{ user.loginCount }}</td>
         <td>{{ user.state }}</td>
         <td>
-          <button md-icon-button (click)="onDeleteTriggered(user)">
-            <md-icon>delete</md-icon>
+          <button mat-icon-button (click)="onDeleteTriggered(user)">
+            <mat-icon>delete</mat-icon>
           </button>
         </td>
       </tr>

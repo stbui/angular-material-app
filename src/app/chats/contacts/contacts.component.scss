@@ -3,7 +3,7 @@ $height__chat-toolbar: 64px;
 $height__chat-container: calc(100% - #{$height__chat-header - $height__chat-toolbar});
 
 
-md-toolbar {
+mat-toolbar {
   border-bottom: 1px solid #EEE;
 
   .toolbar {

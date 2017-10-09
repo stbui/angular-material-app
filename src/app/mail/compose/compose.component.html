@@ -1,37 +1,37 @@
 <div class="inbox-compose">
-  <div md-dialog-content fxLayout="row" fxLayoutAlign="space-between center">
+  <div mat-dialog-content fxLayout="row" fxLayoutAlign="space-between center">
     <span>写信</span>
-    <button md-dialog-close md-icon-button>
-      <md-icon>close</md-icon>
+    <button mat-dialog-close mat-icon-button>
+      <mat-icon>close</mat-icon>
     </button>
   </div>
 
   <form #mailForm="ngForm">
-    <div fxLayout="column" md-dialog-content>
-      <md-form-field class="full-width">
-        <input mdInput placeholder="收件人" name="name" [(ngModel)]="name" required>
-      </md-form-field>
-      <md-form-field class="full-width">
-        <input mdInput placeholder="发件人" disabled name="address" [(ngModel)]="address" required>
-      </md-form-field>
-      <md-form-field class="full-width">
-        <input mdInput placeholder="主题" name="subject" [(ngModel)]="subject" required>
-      </md-form-field>
+    <div fxLayout="column" mat-dialog-content>
+      <mat-form-field class="full-width">
+        <input matInput placeholder="收件人" name="name" [(ngModel)]="name" required>
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <input matInput placeholder="发件人" disabled name="address" [(ngModel)]="address" required>
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <input matInput placeholder="主题" name="subject" [(ngModel)]="subject" required>
+      </mat-form-field>
       <p class="editor">
         <quill-editor name="content" [(ngModel)]="content"></quill-editor>
       </p>
     </div>
 
-    <div md-dialog-actions fxLayout="row">
-      <button md-dialog-close md-icon-button>
-        <md-icon>delete</md-icon>
+    <div mat-dialog-actions fxLayout="row">
+      <button mat-dialog-close mat-icon-button>
+        <mat-icon>delete</mat-icon>
       </button>
       <span fxFlex></span>
-      <button md-icon-button>
-        <md-icon>attachment</md-icon>
+      <button mat-icon-button>
+        <mat-icon>attachment</mat-icon>
       </button>
-      <button class="send" md-raised-button color="primary" [disabled]="!mailForm.valid" (click)="send()">
-        发送 <md-icon>send</md-icon>
+      <button class="send" mat-raised-button color="primary" [disabled]="!mailForm.valid" (click)="send()">
+        发送 <mat-icon>send</mat-icon>
       </button>
     </div>
 

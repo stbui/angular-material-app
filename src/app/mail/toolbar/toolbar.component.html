@@ -1,67 +1,67 @@
 <div *ngIf="!mail" class="toolbar" fxLayout="row" fxLayoutAlign="start center">
-  <md-checkbox class="checkbox"></md-checkbox>
+  <mat-checkbox class="checkbox"></mat-checkbox>
   <span fxFlex></span>
   <span>1 - 25 of {{ itemCount }}</span>
   <div class="chevrons">
-    <button md-icon-button>
-      <md-icon>chevron_left</md-icon>
+    <button mat-icon-button>
+      <mat-icon>chevron_left</mat-icon>
     </button>
-    <button md-icon-button>
-      <md-icon>chevron_right</md-icon>
+    <button mat-icon-button>
+      <mat-icon>chevron_right</mat-icon>
     </button>
   </div>
 </div>
 
 <div *ngIf="mail" class="toolbar toolbar-detail" fxLayout="row" fxLayoutAlign="start center">
   <div class="icon-group">
-    <button class="back" md-icon-button mdTooltip="返回" (click)="onForwardTriggered()">
-      <md-icon>arrow_back</md-icon>
+    <button class="back" mat-icon-button matTooltip="返回" (click)="onForwardTriggered()">
+      <mat-icon>arrow_back</mat-icon>
     </button>
   </div>
   <div class="icon-group">
-    <button class="archive" md-icon-button mdTooltip="收取">
-      <md-icon>archive</md-icon>
+    <button class="archive" mat-icon-button matTooltip="收取">
+      <mat-icon>archive</mat-icon>
     </button>
-    <button class="spam" md-icon-button mdTooltip="标记垃圾">
-      <md-icon>backspace</md-icon>
+    <button class="spam" mat-icon-button matTooltip="标记垃圾">
+      <mat-icon>backspace</mat-icon>
     </button>
-    <button class="delete" md-icon-button mdTooltip="删除">
-      <md-icon>delete</md-icon>
+    <button class="delete" mat-icon-button matTooltip="删除">
+      <mat-icon>delete</mat-icon>
     </button>
   </div>
   <div class="icon-group">
-    <button class="archive" md-icon-button mdTooltip="移动到">
-      <md-icon>folder</md-icon>
+    <button class="archive" mat-icon-button matTooltip="移动到">
+      <mat-icon>folder</mat-icon>
     </button>
-    <button class="spam" md-icon-button mdTooltip="标签" [mdMenuTriggerFor]="mailLabels">
-      <md-icon>label</md-icon>
+    <button class="spam" mat-icon-button matTooltip="标签" [matMenuTriggerFor]="mailLabels">
+      <mat-icon>label</mat-icon>
     </button>
   </div>
-  <button class="delete" md-icon-button [mdMenuTriggerFor]="mailOptions">
-    <md-icon>more_vert</md-icon>
+  <button class="delete" mat-icon-button [matMenuTriggerFor]="mailOptions">
+    <mat-icon>more_vert</mat-icon>
   </button>
   <span fxFlex></span>
   <span>1 - 25 of 0</span>
   <div class="chevrons">
-    <button md-icon-button>
-      <md-icon>chevron_left</md-icon>
+    <button mat-icon-button>
+      <mat-icon>chevron_left</mat-icon>
     </button>
-    <button md-icon-button>
-      <md-icon>chevron_right</md-icon>
+    <button mat-icon-button>
+      <mat-icon>chevron_right</mat-icon>
     </button>
   </div>
 </div>
 
-<md-menu #mailOptions="mdMenu">
-  <button md-menu-item> <md-icon>markunread_mailbox</md-icon>标记未读 </button>
-  <button md-menu-item> <md-icon>label</md-icon> 标签 </button>
-  <md-divider></md-divider>
-  <button md-menu-item> <md-icon>delete</md-icon> 删除 </button>
-</md-menu>
+<mat-menu #mailOptions="matMenu">
+  <button mat-menu-item> <mat-icon>markunread_mailbox</mat-icon>标记未读 </button>
+  <button mat-menu-item> <mat-icon>label</mat-icon> 标签 </button>
+  <mat-divider></mat-divider>
+  <button mat-menu-item> <mat-icon>delete</mat-icon> 删除 </button>
+</mat-menu>
 
-<md-menu #mailLabels="mdMenu">
-  <button md-menu-item> <md-icon>markunread_mailbox</md-icon>标记未读 </button>
-  <button md-menu-item> <md-icon>label</md-icon> 标签 </button>
-  <md-divider></md-divider>
-  <button md-menu-item> <md-icon>delete</md-icon> 删除 </button>
-</md-menu>
+<mat-menu #mailLabels="matMenu">
+  <button mat-menu-item> <mat-icon>markunread_mailbox</mat-icon>标记未读 </button>
+  <button mat-menu-item> <mat-icon>label</mat-icon> 标签 </button>
+  <mat-divider></mat-divider>
+  <button mat-menu-item> <mat-icon>delete</mat-icon> 删除 </button>
+</mat-menu>

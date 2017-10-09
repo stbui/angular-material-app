@@ -1,4 +1,4 @@
-md-toolbar.mat-toolbar.sidenav-toolbar {
+mat-toolbar.mat-toolbar.sidenav-toolbar {
   z-index: 3;
 }
 
@@ -12,7 +12,7 @@ md-toolbar.mat-toolbar.sidenav-toolbar {
   height: 100%;
 }
 
-.cdk-focus-trap-content, md-sidenav {
+.cdk-focus-trap-content, mat-sidenav {
   overflow-y: hidden !important;
   overflow-x: hidden;
 }

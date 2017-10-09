@@ -1,10 +1,10 @@
-<md-toolbar color="primary" class="todo-toolbar">
+<mat-toolbar color="primary" class="todo-toolbar">
   <span><strong>{{itemCount}}</strong> 项 </span>
-  <button md-button routerLink="/apps/todo/ALL">所有</button>
-  <button md-button routerLink="/apps/todo/ACTIVE">进行中</button>
-  <button md-button routerLink="/apps/todo/COMPLETED">完成</button>
-  <button md-button (click)="onClick()">
-    <md-icon>delete</md-icon>
+  <button mat-button routerLink="/apps/todo/ALL">所有</button>
+  <button mat-button routerLink="/apps/todo/ACTIVE">进行中</button>
+  <button mat-button routerLink="/apps/todo/COMPLETED">完成</button>
+  <button mat-button (click)="onClick()">
+    <mat-icon>delete</mat-icon>
     清除完成
   </button>
-</md-toolbar>
+</mat-toolbar>

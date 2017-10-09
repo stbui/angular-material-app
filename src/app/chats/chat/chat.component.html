@@ -1,8 +1,8 @@
 <div class="chat-inner-container">
-  <md-toolbar>
+  <mat-toolbar>
     <div class="toolbar" fxLayout="row">
-      <button md-icon-button (click)="onChatSideTriggered()">
-        <md-icon>menu</md-icon>
+      <button mat-icon-button (click)="onChatSideTriggered()">
+        <mat-icon>menu</mat-icon>
       </button>
 
       <div class="current-contact" fxLayout="row" fxLayoutAlign="start center">
@@ -16,11 +16,11 @@
 
       <span fxFlex></span>
 
-      <button md-icon-button [mdMenuTriggerFor]="chatMenu">
-        <md-icon>more_vert</md-icon>
+      <button mat-icon-button [matMenuTriggerFor]="chatMenu">
+        <mat-icon>more_vert</mat-icon>
       </button>
     </div>
-  </md-toolbar>
+  </mat-toolbar>
 
   <div class="chat-content" fxLayout="column" fxLayoutAlign="end stretch">
 
@@ -41,29 +41,29 @@
 
 
     <div class="chat-respond" fxLayout="row" fxLayoutAlign="start center">
-      <md-input-container fxFlex>
-        <textarea mdInput (keyup.enter)="onSendTriggered()" [(ngModel)]="newMessage" placeholder="输入您要发送的消息"></textarea>
-      </md-input-container>
-      <button (click)="onSendTriggered()" md-fab color="primary"><md-icon>send</md-icon></button>
+      <mat-input-container fxFlex>
+        <textarea matInput (keyup.enter)="onSendTriggered()" [(ngModel)]="newMessage" placeholder="输入您要发送的消息"></textarea>
+      </mat-input-container>
+      <button (click)="onSendTriggered()" mat-fab color="primary"><mat-icon>send</mat-icon></button>
     </div>
   </div>
 </div>
 
 
-<md-menu #chatMenu="mdMenu">
-  <button md-menu-item>
-    <md-icon> account_circle </md-icon>
+<mat-menu #chatMenu="matMenu">
+  <button mat-menu-item>
+    <mat-icon> account_circle </mat-icon>
     <span> 群聊信息 </span>
   </button>
-  <button md-menu-item>
-    <md-icon> volume_mute </md-icon>
+  <button mat-menu-item>
+    <mat-icon> volume_mute </mat-icon>
     <span> 群公告 </span>
   </button>
-  <md-divider></md-divider>
-  <button md-menu-item (click)="clearMessages(activeChat)">
-    <md-icon> clear_all </md-icon>
+  <mat-divider></mat-divider>
+  <button mat-menu-item (click)="clearMessages(activeChat)">
+    <mat-icon> clear_all </mat-icon>
     <span> 清空聊天记录 </span>
   </button>
-</md-menu>
+</mat-menu>
 
 

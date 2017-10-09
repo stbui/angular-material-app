@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MdDialog } from '@angular/material';
+import { MatDialog } from '@angular/material';
 
 @Component({
   selector: 'app-dialogs',
@@ -8,7 +8,8 @@ import { MdDialog } from '@angular/material';
 })
 export class DialogsComponent implements OnInit {
 
-  constructor(public dialog: MdDialog) { }
+  constructor(public dialog: MatDialog) {
+  }
 
   ngOnInit() {
   }
@@ -21,19 +22,3 @@ export class DialogsComponent implements OnInit {
   }
 
 }
-
-
-// @Component({
-//   selector: 'stbui-demo-dialog',
-//   template: `
-//     <h1>test</h1>
-//
-//     <md-dialog-actions align="end">
-//       <button md-button (click)="dialogRef.close('No!')">No</button>
-//       <button md-button color="primary" (click)="dialogRef.close('Yes!')">Yes</button>
-//     </md-dialog-actions>
-//   `
-// })
-// export class DemoDialog {
-//   constructor(public dialogRef: MdDialogRef<DemoDialog>) { }
-// }

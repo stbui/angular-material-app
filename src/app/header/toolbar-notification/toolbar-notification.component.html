@@ -1,6 +1,6 @@
 <div class="toolbar-notification-container">
-  <button md-icon-button (click)="toggleDropdown()" [ngClass]="[cssPrefix+'-btn']" [class.open]="isOpen">
-    <md-icon>notifications_none</md-icon>
+  <button mat-icon-button (click)="toggleDropdown()" [ngClass]="[cssPrefix+'-btn']" [class.open]="isOpen">
+    <mat-icon>notifications_none</mat-icon>
     <span class="badge" *ngIf="notifications.length !== 0">{{ notifications?.length }}</span>
   </button>
 
@@ -11,8 +11,8 @@
           <div class="name">通知</div>
           <div class="extra">您有 {{ notifications?.length }} 条新的通知</div>
         </div>
-        <button type="button" md-icon-button>
-          <md-icon class="icon">settings</md-icon>
+        <button type="button" mat-icon-button>
+          <mat-icon class="icon">settings</mat-icon>
         </button>
       </div>
       <div *ngIf="notifications.length !== 0; then thenBlock else elseBlock;"></div>
@@ -27,15 +27,15 @@
 <ng-template #thenBlock>
   <perfect-scrollbar class="content">
     <div *ngFor="let notification of notifications; last as isLast">
-      <div class="notice" fxLayout="row" fxLayoutAlign="start center" md-ripple>
-        <md-icon class="icon">notifications</md-icon>
+      <div class="notice" fxLayout="row" fxLayoutAlign="start center" mat-ripple>
+        <mat-icon class="icon">notifications</mat-icon>
         <div class="title" fxLayout="column">
           <div class="name">{{ notification.title }}</div>
           <div class="time">{{ notification.lastTime }}</div>
         </div>
         <span fxFlex></span>
-        <button type="button" md-icon-button (click)="delete(notification)">
-          <md-icon class="close">close</md-icon>
+        <button type="button" mat-icon-button (click)="delete(notification)">
+          <mat-icon class="close">close</mat-icon>
         </button>
       </div>
       <div class="divider" *ngIf="!isLast"></div>

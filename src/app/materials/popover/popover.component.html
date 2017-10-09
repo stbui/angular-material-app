@@ -1,28 +1,28 @@
-<md-card>
-  <md-card-title>Popover</md-card-title>
-  <md-card-content>
-    <button md-icon-button [popoverTriggerFor]="popover">
-      <md-icon>grade</md-icon>
+<mat-card>
+  <mat-card-title>Popover</mat-card-title>
+  <mat-card-content>
+    <button mat-icon-button [popoverTriggerFor]="popover">
+      <mat-icon>grade</mat-icon>
     </button>
     <stbui-popover #popover="stbuiPopover">
       <stbui-date-picker mode="landscape"></stbui-date-picker>
     </stbui-popover>
 
-  </md-card-content>
-</md-card>
+  </mat-card-content>
+</mat-card>
 
-<md-card>
-  <md-card-title>通知</md-card-title>
-  <md-card-content>
-    <button md-button (click)="showNotication()">显示</button>
-    <button md-button (click)="clear()">清除</button>
-  </md-card-content>
-</md-card>
+<mat-card>
+  <mat-card-title>通知</mat-card-title>
+  <mat-card-content>
+    <button mat-button (click)="showNotication()">显示</button>
+    <button mat-button (click)="clear()">清除</button>
+  </mat-card-content>
+</mat-card>
 
-<md-card>
-  <md-card-title>文件上传</md-card-title>
-  <md-card-content>
+<mat-card>
+  <mat-card-title>文件上传</mat-card-title>
+  <mat-card-content>
     <stbui-file-upload></stbui-file-upload>
-  </md-card-content>
-</md-card>
+  </mat-card-content>
+</mat-card>
 

@@ -1,5 +1,5 @@
 import { Component, Inject, OnInit } from '@angular/core';
-import { MdDialog, MdSnackBar } from '@angular/material';
+import { MatDialog, MatSnackBar } from '@angular/material';
 
 import { ComposeComponent } from './compose/compose.component';
 
@@ -14,8 +14,8 @@ export class MailComponent implements OnInit {
   shownMails = [];
   shownMailDetail;
 
-  constructor(public composeDialog: MdDialog,
-              private snackBar: MdSnackBar,
+  constructor(public composeDialog: MatDialog,
+              private snackBar: MatSnackBar,
               @Inject('mailService') private service) {
   }
 

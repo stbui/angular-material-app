@@ -1,12 +1,12 @@
-<md-sidenav-container>
+<mat-sidenav-container>
 
-  <md-sidenav class="customizer" align="end" mode="over" #customizer>
+  <mat-sidenav class="customizer" align="end" mode="over" #customizer>
     <stbui-customizer (theme)="onTheme($event)"></stbui-customizer>
-  </md-sidenav>
+  </mat-sidenav>
 
-  <md-sidenav class="sidenav" align="start" [mode]="sidenavMode" [opened]="sidenavOpen" #sidenav>
+  <mat-sidenav class="sidenav" align="start" [mode]="sidenavMode" [opened]="sidenavOpen" #sidenav>
     <app-sidenav [theme]="theme"></app-sidenav>
-  </md-sidenav>
+  </mat-sidenav>
 
   <div class="sidenav-container" fxLayout="column">
     <stbui-header [theme]="theme" [customizer]="customizer" [sidenav]="sidenav"></stbui-header>
@@ -18,4 +18,4 @@
 
   </div>
 
-</md-sidenav-container>
+</mat-sidenav-container>
