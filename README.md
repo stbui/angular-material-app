@@ -13,8 +13,8 @@
 ### 平台环境
 
 [![Angular](https://img.shields.io/badge/Angular%204-4.0.0-brightgreen.svg?style=flat-square)](https://github.com/angular/angular)
-[![Angular-cli](https://img.shields.io/badge/Angular.cli-1.2.5-brightgreen.svg?style=square)](https://github.com/angular/angular-cli)
-[![Angular Mateiral 2](https://img.shields.io/badge/Material%202-2.0.0.beta.10-brightgreen.svg?style=square)](https://github.com/angular/material2)
+[![Angular-cli](https://img.shields.io/badge/Angular.cli-1.4.2-brightgreen.svg?style=square)](https://github.com/angular/angular-cli)
+[![Angular Mateiral 2](https://img.shields.io/badge/Material%202-2.0.0.beta.12-brightgreen.svg?style=square)](https://github.com/angular/material2)
 [![Flex-Layout](https://img.shields.io/badge/Flex.Layout-2.0.0.beta.9-brightgreen.svg?style=square)](https://github.com/angular/flex-layout)
 
 
@@ -90,7 +90,7 @@ firebase deploy
 ### Electron
 
 ```
-npm run build:mac
+npm run build:electron
 ```
 
 
