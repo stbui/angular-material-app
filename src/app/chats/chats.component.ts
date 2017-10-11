@@ -16,20 +16,40 @@ export class ChatsComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.getChats();
+    this.getChatsList();
   }
 
-  getChats() {
-    this.service
-      .getChats()
-      .subscribe(res => {
-        this.chats = res;
-        this.activeChat = res[0];
-      });
+  getChatsList() {
+    this.service.getChatsList().subscribe(chats => {
+      this.chats = chats;
+      this.activeChat = chats[0];
+    });
+  }
+
+  createChat() {
+    let d = {
+      "picture": "assets/images/avatars/2.jpg",
+      "name": "Angular & Firebase",
+      "messages": [
+        {
+          "message": "这是 Angular 2 交流群",
+          "when": 1,
+          "who": "me"
+        },
+        {
+          "message": "推荐下Angular 2 有哪些开源项目？",
+          "when": 1,
+          "who": "partner"
+        }
+      ],
+      "lastMessageTime": 1,
+      "lastMessage": "技术交流"
+    };
+    this.service.createChat(d);
   }
 
   sendChat(chat) {
-    this.service.addChat(chat);
+    this.service.updateChatMessage(chat.$key, chat);
   }
 
   onActiveChat(chat) {

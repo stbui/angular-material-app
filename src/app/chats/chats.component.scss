@@ -11,8 +11,7 @@ $height__chat-container: calc(100% - #{$height__chat-header - $height__chat-tool
 .header {
   min-height: $height__chat-header;
   max-height: $height__chat-header;
-  background: #039be5 url('/assets/images/background/header-bg.png') no-repeat center center fixed;
-  background-size: cover;
+  background-color: #3f51b5;
 }
 
 .chat-container {

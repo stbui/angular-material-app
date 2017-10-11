@@ -1,29 +1,46 @@
 import { Injectable } from '@angular/core';
-import { Http, Headers } from '@angular/http';
-import { environment } from '../../environments/environment';
-
+import { AngularFireDatabase, AngularFireList, AngularFireObject } from 'angularfire2/database';
 import { Observable } from 'rxjs/Observable';
-import { Chat } from './chats.model';
 
 @Injectable()
 export class ChatsService {
-  public apiUrl = environment.chatsApi;
-  private header = new Headers({'Content-Type': 'application/json'});
 
-  constructor(private http: Http) {
+  private basePath = 'chats';
+  chatsRef: AngularFireList<any>;
+  chatRef: AngularFireObject<any>;
+
+  chats: Observable<any>;
+  chat: Observable<any>;
+
+  constructor(private db: AngularFireDatabase) {
+    this.chatsRef = this.db.list(this.basePath);
   }
 
-  addChat(chat) {
-    const url = this.apiUrl;
-
-    return this.http
-      .post(url, JSON.stringify(chat), {headers: this.header})
-      .map(res => res.json() as Chat[]);
+  getChatsList() {
+    return this.chatsRef.snapshotChanges().map(arr => {
+      return arr.map(snap => Object.assign(snap.payload.val(), {$key: snap.key}));
+    });
   }
 
-  getChats(): Observable<any> {
-    const url = this.apiUrl;
-    return this.http.get(url).map(res => res.json() as Chat[]);
+  getChat(key: string): Observable<any> {
+    const path = `${this.basePath}/${key}`;
+    this.chat = this.db.object(path).valueChanges();
+    return this.chat;
   }
 
+  createChat(chat) {
+    this.chatsRef.push(chat);
+  }
+
+  updateChatMessage(key: string, value: any) {
+    this.chatsRef.update(key, {messages: value.messages});
+  }
+
+  deleteChat(key: string) {
+    this.chatsRef.remove(key);
+  }
+
+  deleteAll() {
+    this.chatsRef.remove();
+  }
 }

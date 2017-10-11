@@ -24,7 +24,7 @@ export class ChatComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.directiveScroll.scrollToBottom();
+    // this.directiveScroll.scrollToBottom();
   }
 
   onSendTriggered() {
