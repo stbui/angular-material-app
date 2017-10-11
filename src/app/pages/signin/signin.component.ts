@@ -10,7 +10,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 })
 export class SigninComponent implements OnInit {
 
-  userForm:FormGroup;
+  userForm: FormGroup;
   formErrors = {
     'email': '',
     'password': ''
@@ -28,9 +28,9 @@ export class SigninComponent implements OnInit {
     }
   };
 
-  constructor(private router:Router,
-              private fb:FormBuilder,
-              private auth:AuthService) {
+  constructor(private router: Router,
+              private fb: FormBuilder,
+              private auth: AuthService) {
   }
 
   ngOnInit() {
@@ -56,7 +56,7 @@ export class SigninComponent implements OnInit {
     this.onValueChanged();
   }
 
-  onValueChanged(data?:any) {
+  onValueChanged(data?: any) {
     if (!this.userForm) {
       return;
     }
@@ -87,13 +87,11 @@ export class SigninComponent implements OnInit {
 
   signInWithEmail() {
     this.auth.emailLogin(this.userForm.value['email'], this.userForm.value['password'])
-      .catch(error => {
-        console.log(error);
-      });
+        .catch(error => console.log('邮箱登录出错：', error));
   }
 
   signInAnonymously() {
-    this.router.navigate(['/']);
+    this.auth.anonymousLogin().then(() => this.afterSignIn());
   }
 
   login() {

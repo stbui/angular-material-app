@@ -20,6 +20,7 @@ import { SigninComponent } from './pages/signin/signin.component';
 import { environment } from '../environments/environment';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { CoreModule } from './core/core.module';
 
 @NgModule({
@@ -42,6 +43,7 @@ import { CoreModule } from './core/core.module';
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
+    AngularFireDatabaseModule,
     CoreModule,
     ReactiveFormsModule
   ],
