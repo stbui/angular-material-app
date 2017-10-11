@@ -15,7 +15,7 @@ import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 @NgModule({
   imports: [
     SharedModule,
-    PerfectScrollbarModule,
+    PerfectScrollbarModule.forChild(),
     HttpModule,
     RouterModule
   ],

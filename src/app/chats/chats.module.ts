@@ -14,7 +14,7 @@ import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
   imports: [
     SharedModule,
     ChatRoutingModule,
-    PerfectScrollbarModule
+    PerfectScrollbarModule.forChild(),
   ],
   declarations: [
     ChatsComponent,

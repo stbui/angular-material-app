@@ -1,5 +1,4 @@
-import { Component, Input, Inject, OnInit, Output, ViewChild, EventEmitter } from '@angular/core';
-import { PerfectScrollbarComponent, PerfectScrollbarDirective, PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
+import { Component, Input, Inject, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-chat',
@@ -16,15 +15,11 @@ export class ChatComponent implements OnInit {
   newMessage: string;
   avatar: string = 'assets/images/avatars/noavatar.png';
 
-  public config: PerfectScrollbarConfigInterface = {};
-  @ViewChild(PerfectScrollbarComponent) componentScroll: PerfectScrollbarComponent;
-  @ViewChild(PerfectScrollbarDirective) directiveScroll: PerfectScrollbarDirective;
 
   constructor(@Inject('ChatsService') private service) {
   }
 
   ngOnInit() {
-    // this.directiveScroll.scrollToBottom();
   }
 
   onSendTriggered() {
@@ -40,7 +35,6 @@ export class ChatComponent implements OnInit {
       this.newMessage = '';
     }
 
-    this.directiveScroll.scrollToBottom();
   }
 
   clearMessages(activeChat) {
