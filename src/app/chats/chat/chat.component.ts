@@ -1,11 +1,13 @@
-import { Component, Input, Inject, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Inject, Output, EventEmitter } from '@angular/core';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
+import { NoticeComponent } from '../notice/notice.component';
 
 @Component({
   selector: 'app-chat',
   templateUrl: './chat.component.html',
   styleUrls: ['./chat.component.scss']
 })
-export class ChatComponent implements OnInit {
+export class ChatComponent {
 
   @Input() chatSidenav;
   @Input() activeChat;
@@ -15,11 +17,10 @@ export class ChatComponent implements OnInit {
   newMessage: string;
   avatar: string = 'assets/images/avatars/noavatar.png';
 
+  animal: string;
+  name: string;
 
-  constructor(@Inject('ChatsService') private service) {
-  }
-
-  ngOnInit() {
+  constructor(@Inject('ChatsService') private service, public dialog: MatDialog) {
   }
 
   onSendTriggered() {
@@ -43,6 +44,18 @@ export class ChatComponent implements OnInit {
 
   onChatSideTriggered() {
     this.chatSidenav.toggle();
+  }
+
+  onNoticeTriggerd() {
+    const dialogRef = this.dialog.open(NoticeComponent, {
+      width: '250px',
+      data: { name: this.name, animal: this.animal }
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+      this.animal = result;
+    });
   }
 
 }

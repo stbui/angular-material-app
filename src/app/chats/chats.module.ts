@@ -5,6 +5,7 @@ import { ChatsService } from './chats.service';
 import { ChatsComponent } from './chats.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { ChatComponent } from './chat/chat.component';
+import { NoticeComponent } from './notice/notice.component';
 import { ChatRoutingModule } from './chats.routing';
 
 import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
@@ -19,7 +20,11 @@ import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
   declarations: [
     ChatsComponent,
     ContactsComponent,
-    ChatComponent
+    ChatComponent,
+    NoticeComponent
+  ],
+  entryComponents: [
+    NoticeComponent
   ],
   providers: [
     {provide: 'ChatsService', useClass: ChatsService}
