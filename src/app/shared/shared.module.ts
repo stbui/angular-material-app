@@ -11,7 +11,6 @@ import { MaterialComponentsModule } from './material.module';
     FlexLayoutModule,
     MaterialComponentsModule
   ],
-  declarations: [],
   exports: [
     CommonModule,
     FormsModule,

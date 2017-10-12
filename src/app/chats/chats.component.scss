@@ -38,7 +38,7 @@ $height__chat-container: calc(100% - #{$height__chat-header - $height__chat-tool
 }
 
 mat-sidenav.mat-sidenav-opened.mat-elevation-z2, mat-sidenav.mat-sidenav-opening.mat-elevation-z2 {
-  box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
 }
 
 .avatar {
@@ -48,4 +48,10 @@ mat-sidenav.mat-sidenav-opened.mat-elevation-z2, mat-sidenav.mat-sidenav-opening
   line-height: 40px;
   border-radius: 50%;
   text-align: center;
+}
+
+.chat-tips {
+  color: #fff;
+  font-size: 16px;
+  padding-top: 10px;
 }

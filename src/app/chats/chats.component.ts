@@ -12,6 +12,8 @@ export class ChatsComponent implements OnInit {
   chats: any[];
   activeChat: any;
 
+  chatName: string = 'demo';
+
   constructor(@Inject('ChatsService') private service) {
   }
 
@@ -29,7 +31,7 @@ export class ChatsComponent implements OnInit {
   createChat() {
     let d = {
       "picture": "assets/images/avatars/2.jpg",
-      "name": "Angular & Firebase",
+      "name": this.chatName,
       "messages": [
         {
           "message": "这是 Angular 2 交流群",

@@ -22,11 +22,9 @@ const PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
 };
 
-import { environment } from '../environments/environment';
-import { AngularFireModule } from 'angularfire2';
-import { AngularFireAuthModule } from 'angularfire2/auth';
-import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { CoreModule } from './core/core.module';
+
+import { FireBaseComponentsModule } from './shared/firebase.module';
 
 @NgModule({
   declarations: [
@@ -46,9 +44,7 @@ import { CoreModule } from './core/core.module';
     HeaderModule,
     SidenavModule,
     AppRoutingModule,
-    AngularFireModule.initializeApp(environment.firebase),
-    AngularFireAuthModule,
-    AngularFireDatabaseModule,
+    FireBaseComponentsModule,
     CoreModule,
     ReactiveFormsModule,
     PerfectScrollbarModule.forRoot(PERFECT_SCROLLBAR_CONFIG)
