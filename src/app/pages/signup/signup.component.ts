@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from "@angular/router";
+import { Router } from '@angular/router';
 import { AuthService } from '../../core/auth.service';
 
 @Component({
@@ -9,20 +9,20 @@ import { AuthService } from '../../core/auth.service';
 })
 export class SignupComponent implements OnInit {
 
-  name:string;
-  email:string;
-  password:string;
-  passwordConfirm:string;
+  name: string;
+  email: string;
+  password: string;
+  passwordConfirm: string;
 
-  constructor(private router:Router,
-              private auth:AuthService) {
+  constructor(private router: Router,
+              private auth: AuthService) {
   }
 
   ngOnInit() {
   }
 
   signUpWithEmail() {
-    console.log(this.email,this.password);
+    console.log(this.email, this.password);
     this.auth.emailSignUp(this.email, this.password).then(() => this.afterSignIn());
   }
 

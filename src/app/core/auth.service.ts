@@ -31,9 +31,9 @@ export class AuthService {
   // 用户账号
   get currentUserName(): string {
     if (!this.authState) {
-      return 'Stbui'
+      return 'Stbui';
     } else {
-      return this.authState['displayName'] || '佚名'
+      return this.authState['displayName'] || '佚名';
     }
   }
 

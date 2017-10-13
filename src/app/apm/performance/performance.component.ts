@@ -27,59 +27,59 @@ export class PerformanceComponent implements OnInit {
     ],
     datas: [
       {
-        id:'1',
-        url:'http://127.0.0.1:4200/stbui.bundle.css',
-        dns:'225',
+        id: '1',
+        url: 'http://127.0.0.1:4200/stbui.bundle.css',
+        dns: '225',
         response: '153',
-        load:'465',
-        black_waiting_time:'545'
+        load: '465',
+        black_waiting_time: '545'
       },
       {
-        id:'1',
-        url:'http://127.0.0.1:4200/stbui.bundle.css',
-        dns:'225',
+        id: '1',
+        url: 'http://127.0.0.1:4200/stbui.bundle.css',
+        dns: '225',
         response: '153',
-        load:'465',
-        black_waiting_time:'545'
+        load: '465',
+        black_waiting_time: '545'
       },
       {
-        id:'1',
-        url:'http://127.0.0.1:4200/stbui.bundle.css',
-        dns:'225',
+        id: '1',
+        url: 'http://127.0.0.1:4200/stbui.bundle.css',
+        dns: '225',
         response: '153',
-        load:'465',
-        black_waiting_time:'545'
+        load: '465',
+        black_waiting_time: '545'
       },
       {
-        id:'1',
-        url:'http://127.0.0.1:4200/stbui.bundle.css',
-        dns:'225',
+        id: '1',
+        url: 'http://127.0.0.1:4200/stbui.bundle.css',
+        dns: '225',
         response: '153',
-        load:'465',
-        black_waiting_time:'545'
+        load: '465',
+        black_waiting_time: '545'
       },
       {
-        id:'1',
-        url:'http://127.0.0.1:4200/stbui.bundle.css',
-        dns:'225',
+        id: '1',
+        url: 'http://127.0.0.1:4200/stbui.bundle.css',
+        dns: '225',
         response: '153',
-        load:'465',
-        black_waiting_time:'545'
+        load: '465',
+        black_waiting_time: '545'
       },
       {
-        id:'1',
-        url:'http://127.0.0.1:4200/stbui.bundle.css',
-        dns:'225',
+        id: '1',
+        url: 'http://127.0.0.1:4200/stbui.bundle.css',
+        dns: '225',
         response: '153',
-        load:'465',
-        black_waiting_time:'545'
-      },{
-        id:'1',
-        url:'http://127.0.0.1:4200/stbui.bundle.css',
-        dns:'225',
+        load: '465',
+        black_waiting_time: '545'
+      }, {
+        id: '1',
+        url: 'http://127.0.0.1:4200/stbui.bundle.css',
+        dns: '225',
         response: '153',
-        load:'465',
-        black_waiting_time:'545'
+        load: '465',
+        black_waiting_time: '545'
       }
     ]
   };

@@ -56,7 +56,7 @@ export class ItemComponent implements OnInit {
       count += item.subItems.length;
       item.subItems.forEach((subItem) => {
         count += this.getOpenSubItemsCount(subItem);
-      })
+      });
     }
     return count;
   }

@@ -1,4 +1,4 @@
-import { transition, style, trigger, animate, state, group } from "@angular/core";
+import { transition, style, trigger, animate, state, group } from '@angular/core';
 
 export let transitionAnimation = trigger('transitionAnimation', [
   transition('void => *', [

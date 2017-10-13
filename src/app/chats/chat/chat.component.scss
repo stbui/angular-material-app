@@ -7,7 +7,6 @@ $height__chat-container: calc(100% - #{$height__chat-header - $height__chat-tool
 
   .chat-content {
     position: relative;
-    background: url('/assets/img/backgrounds/arch-pattern.png') repeat;
     height: calc(100% - #{$height__chat-toolbar + 1});
 
     perfect-scrollbar {
@@ -109,6 +108,7 @@ mat-toolbar {
     }
   }
 }
+
 .pointer {
   cursor: default;
 }

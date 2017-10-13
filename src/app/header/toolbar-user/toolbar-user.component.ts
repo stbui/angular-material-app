@@ -12,7 +12,8 @@ export class ToolbarUserComponent implements OnInit {
   isOpen: boolean = false;
   currentUser = null;
 
-  @HostListener('document:click', ['$event', '$event.target']) onClick(event: MouseEvent, targetElement: HTMLElement) {
+  @HostListener('document:click', ['$event', '$event.target'])
+  onClick(event: MouseEvent, targetElement: HTMLElement) {
     if (!targetElement) {
       return;
     }
@@ -25,7 +26,7 @@ export class ToolbarUserComponent implements OnInit {
 
   constructor(private _elementRef: ElementRef,
               private router: Router,
-              private auth:AuthService) {
+              private auth: AuthService) {
     this.currentUser = this.auth;
   }
 
@@ -37,7 +38,7 @@ export class ToolbarUserComponent implements OnInit {
   }
 
   logout() {
-    this.auth.signOut().then(()=>{
+    this.auth.signOut().then(() => {
       this.router.navigate(['/sigin']);
     });
   }

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { MediaChange, ObservableMedia } from "@angular/flex-layout";
-import { ReplaySubject } from "rxjs/ReplaySubject";
-import { Observable } from "rxjs/Observable";
+import { MediaChange, ObservableMedia } from '@angular/flex-layout';
+import { ReplaySubject } from 'rxjs/ReplaySubject';
+import { Observable } from 'rxjs/Observable';
 import { Subscription } from "rxjs";
 
 @Component({
@@ -35,7 +35,7 @@ export class AdminComponent implements OnInit {
 
   ngOnInit() {
     this._mediaSubscription = this.media$.subscribe((change: MediaChange) => {
-      let isMobile = (change.mqAlias == 'xs') || (change.mqAlias == 'sm');
+      let isMobile = (change.mqAlias === 'xs') || (change.mqAlias === 'sm');
 
       this.sidenavMode = (isMobile) ? 'over' : 'side';
       this.sidenavOpen = !isMobile;

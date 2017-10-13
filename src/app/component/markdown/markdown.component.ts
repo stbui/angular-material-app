@@ -10,11 +10,12 @@ export class MarkdownComponent {
 
   renderer = markdown();
   inputValue: string = '';
-  _source:string = '';
+  _source: string = '';
 
   @Output() onMarkDown = new EventEmitter();
   @Input() width: string = '';
   @Input() height: string = '';
+
   @Input()
   set source(value) {
     this._source = this.renderMarkDown(value);

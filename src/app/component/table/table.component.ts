@@ -13,20 +13,20 @@ export class TableComponent implements OnInit {
   // 表格列的配置描述
   @Input() columns = [];
   // 是否显示间隔斑马纹
-  @Input() stripe:boolean = false;
+  @Input() stripe: boolean = false;
   // 是否显示纵向边框
-  @Input() border:boolean = false;
+  @Input() border: boolean = false;
   // 是否显示表头
-  @Input() showHeader:boolean = true;
+  @Input() showHeader: boolean = true;
   // 表格宽度，单位 px
-  @Input() width:string | number;
+  @Input() width: string | number;
   // 表格高度，单位 px，设置后，如果表格内容大于此值，会固定表头
-  @Input() height:string | number;
+  @Input() height: string | number;
   // 禁用鼠标悬停时的高亮
-  @Input() disabledHover:boolean = true;
+  @Input() disabledHover: boolean = true;
   // 是否支持高亮选中的行，即单选
-  @Input() highlightRow:boolean = false;
-  @Input() tableSize:string = 'default';
+  @Input() highlightRow: boolean = false;
+  @Input() tableSize: string = 'default';
 
   @Output() onCurrentChange = new EventEmitter();
   @Output() onSelect = new EventEmitter();
@@ -39,12 +39,12 @@ export class TableComponent implements OnInit {
   cloneColumns;
 
   checkboxSelection = [];
-  checked:boolean = false;
+  checked: boolean = false;
 
-  @ViewChild('fixedTopCell') _fixedTopCell:ElementRef;
+  @ViewChild('fixedTopCell') _fixedTopCell: ElementRef;
   private cells = [];
 
-  constructor(private element:ElementRef, private renderer:Renderer2) {
+  constructor(private element: ElementRef, private renderer: Renderer2) {
 
   }
 
@@ -55,7 +55,7 @@ export class TableComponent implements OnInit {
     if (!this.height) return;
     const ths = this._fixedTopCell.nativeElement.children[0].children;
 
-    setTimeout(()=> {
+    setTimeout(() => {
       for (const th of ths) {
         this.cells.push({
           width: th.offsetWidth,
