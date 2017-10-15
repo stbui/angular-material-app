@@ -22,6 +22,8 @@
 * **electron：** 新增分支feature/electron, 进行桌面应用开发
 * **apm：**  新增前端监控模块
 * **chats：**  接入firebase 可以实时聊天
+* **moduel：**  更新crm profile user widget project
+
 
 ### 功能优化
 

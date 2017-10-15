@@ -1,16 +1,19 @@
-import {NgModule} from '@angular/core';
-import {SharedModule} from '../shared/shared.module';
-import {StateComponent} from './state/state.component';
+import { NgModule } from '@angular/core';
+import { SharedModule } from '../shared/shared.module';
+import { StateComponent } from './state/state.component';
+import { SwitchComponent } from './switch/switch.component';
 
 @NgModule({
   imports: [
     SharedModule,
   ],
   declarations: [
-    StateComponent
+    StateComponent,
+    SwitchComponent
   ],
   exports: [
-    StateComponent
+    StateComponent,
+    SwitchComponent
   ]
 })
 export class WidgetModule {

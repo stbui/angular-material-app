@@ -52,9 +52,9 @@ export class SidenavService {
     // this.addSubItem(pages, '服务', '/pages/services', 1);
     // this.addSubItem(pages, '联系', '/pages/contact', 1);
     // this.addSubItem(pages, '团队', '/pages/terms', 1);
-    // this.addSubItem(pages, '反馈', '/pages/faqs', 1);
+    this.addSubItem(pages, '文件管理', '/pages/file-manager', 1);
     this.addSubItem(pages, '团队管理', '/', 1);
-    this.addSubItem(pages, '项目管理', '/', 1);
+    this.addSubItem(pages, '项目管理', '/pages/projects', 1);
     this.addSubItem(pages, '联系人', '/', 1);
     this.addSubItem(pages, '个人资料', '/pages/profile', 1);
     this.addSubItem(pages, '博客', '/pages/blog', 1);

@@ -1,5 +1,5 @@
 import { Component, Input, Inject, Output, EventEmitter } from '@angular/core';
-import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
+import { MatDialog } from '@angular/material';
 import { NoticeComponent } from '../notice/notice.component';
 
 @Component({
@@ -46,10 +46,10 @@ export class ChatComponent {
     this.chatSidenav.toggle();
   }
 
-  onNoticeTriggerd() {
+  onNoticeTriggered() {
     const dialogRef = this.dialog.open(NoticeComponent, {
       width: '250px',
-      data: { name: this.name, animal: this.animal }
+      data: {name: this.name, animal: this.animal}
     });
 
     dialogRef.afterClosed().subscribe(result => {

@@ -1,0 +1,27 @@
+.widget-switch {
+}
+
+.icon-container {
+  margin: 10px;
+  text-align: center;
+
+  mat-icon {
+    color: #fff;
+  }
+}
+
+.widget-switch-title {
+  font-size: 20px;
+  font-weight: 900;
+}
+
+@mixin icon-size($size:24) {
+  .icon-size-#{$size} {
+    font-size: #{$size}px;
+    height: #{$size}px;
+    width: #{$size}px;
+    line-height: #{$size}px;
+  }
+}
+
+@include icon-size(60);

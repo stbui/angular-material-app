@@ -1,0 +1,122 @@
+<mat-sidenav-container class="manage-sidenav-container">
+  <mat-sidenav class="mat-elevation-z2" mode="side" [opened]="true" position="end">
+    <div class="header" fxLayout="column" fxLayoutAlign="space-between start"></div>
+
+    <div class="stbui-table-list">
+      <div class="stbui-table" fxLayout="row">
+        <div class="content-wrapper" fxLayout="row" fxLayoutAlign="start center" fxFlex="80px">
+          <span>类型</span>
+        </div>
+        <div class="start-wrapper" fxLayout="row" fxLayoutAlign="start center" fxFlex>
+          <span>txt</span>
+        </div>
+      </div>
+
+      <div class="stbui-table" fxLayout="row">
+        <div class="content-wrapper" fxLayout="row" fxLayoutAlign="start center" fxFlex="80px">
+          <span>大小</span>
+        </div>
+        <div class="start-wrapper" fxLayout="row" fxLayoutAlign="start center" fxFlex>
+          <span>txt</span>
+        </div>
+      </div>
+
+      <div class="stbui-table" fxLayout="row">
+        <div class="content-wrapper" fxLayout="row" fxLayoutAlign="start center" fxFlex="80px">
+          <span>位置</span>
+        </div>
+        <div class="start-wrapper" fxLayout="row" fxLayoutAlign="start center" fxFlex>
+          <span>txt</span>
+        </div>
+      </div>
+
+      <div class="stbui-table" fxLayout="row">
+        <div class="content-wrapper" fxLayout="row" fxLayoutAlign="start center" fxFlex="80px">
+          <span>修改时间</span>
+        </div>
+        <div class="start-wrapper" fxLayout="row" fxLayoutAlign="start center" fxFlex>
+          <span>txt</span>
+        </div>
+      </div>
+
+      <div class="stbui-table" fxLayout="row">
+        <div class="content-wrapper" fxLayout="row" fxLayoutAlign="start center" fxFlex="80px">
+          <span>创建时间</span>
+        </div>
+        <div class="start-wrapper" fxLayout="row" fxLayoutAlign="start center" fxFlex>
+          <span>txt</span>
+        </div>
+      </div>
+
+    </div>
+
+  </mat-sidenav>
+
+
+  <div fxFlex class="manage-sidenav-content">
+    <div class="header" fxLayout="column" fxLayoutAlign="space-between start">
+
+      <div class="file-uploader">
+        <input hidden type="file">
+        <button mat-fab><mat-icon>add</mat-icon></button>
+      </div>
+    </div>
+
+    <div class="stbui-table-main mat-elevation-z2">
+      <div class="stbui-table-toolbar" fxLayout="row" fxLayoutAlign="start center">
+        <div class="content-wrapper" fxLayout="row" fxLayoutAlign="start center" fxFlex="50px">
+          <span></span>
+        </div>
+        <div class="start-wrapper" fxLayout="row" fxLayoutAlign="start center" fxFlex>
+          <span>名称</span>
+        </div>
+        <div class="content-wrapper" fxLayout="row" fxLayoutAlign="start center" fxFlex>
+          <span>类型</span>
+        </div>
+        <div class="content-wrapper" fxLayout="row" fxLayoutAlign="start center" fxFlex>
+          <span>提供者</span>
+        </div>
+        <div class="content-wrapper" fxLayout="row" fxLayoutAlign="start center" fxFlex>
+          <span>大小</span>
+        </div>
+
+        <div class="end-wrapper" fxLayout="row" fxLayoutAlign="end center" fxFlex="80px">
+          <span>修改时间</span>
+        </div>
+
+      </div>
+
+      <div class="stbui-table-list">
+        <div class="stbui-table" fxLayout="row" *ngFor="let file of files.datas">
+          <div class="content-wrapper" fxLayout="row" fxLayoutAlign="start center" fxFlex="50px">
+            <mat-icon>folder</mat-icon>
+          </div>
+
+          <div class="start-wrapper" fxLayout="row" fxLayoutAlign="start center" fxFlex>
+            <span>{{ file.name }}</span>
+          </div>
+
+          <div class="content-wrapper" fxLayout="row" fxLayoutAlign="start center" fxFlex>
+            <span>{{ file.type }}</span>
+          </div>
+
+          <div class="content-wrapper" fxLayout="row" fxLayoutAlign="start center" fxFlex>
+            <span>{{ file.provide }}</span>
+          </div>
+
+          <div class="content-wrapper" fxLayout="row" fxLayoutAlign="start center" fxFlex>
+            <span>{{ file.size }}</span>
+          </div>
+
+          <div class="end-wrapper" fxLayout="row" fxLayoutAlign="end center" fxFlex="80px">
+            <span>{{ file.lastModifiedDate }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</mat-sidenav-container>
+
+

@@ -10,6 +10,8 @@ export class UserComponent implements OnInit {
   users;
   checked = false;
 
+  sideOpen: boolean = true;
+
   constructor(@Inject('UserService') private _service) {
   }
 
@@ -35,5 +37,9 @@ export class UserComponent implements OnInit {
       ...this.users.slice(0, i),
       ...this.users.slice(i + 1)
     ];
+  }
+
+  onSideTriggered() {
+    this.sideOpen = false;
   }
 }

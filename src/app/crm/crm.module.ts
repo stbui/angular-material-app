@@ -4,7 +4,7 @@ import { CrmRoutingModule } from './crm.routing';
 import { LeadComponent } from './lead/lead.component';
 import { CustomerComponent } from './customer/customer.component';
 import { CustomerCommonComponent } from './customer-common/customer-common.component';
-import { ContactComponent } from './contact/contact.component';
+import { ContactComponent, ContactUpdateComponent } from './contact/contact.component';
 import { OpportunitiesComponent } from './opportunities/opportunities.component';
 import { CrmComponent } from './crm.component';
 import { ContractComponent } from './contract/contract.component';
@@ -26,10 +26,14 @@ import { WidgetModule } from '../widget/widget.module';
     CustomerComponent,
     CustomerCommonComponent,
     ContactComponent,
+    ContactUpdateComponent,
     OpportunitiesComponent,
     CrmComponent,
     ContractComponent,
     ProductComponent
+  ],
+  entryComponents: [
+    ContactUpdateComponent,
   ],
   providers: [
     {provide: 'LeadService', useClass: LeadService}

@@ -74,24 +74,28 @@ $prefix: 'stbui-table';
 }
 
 .manage-sidenav-container {
-  height: calc(100% - 180px);
   > mat-sidenav {
-    width: 200px;
+    width: 320px;
   }
-
+  .header {
+    height: 200px;
+    background: linear-gradient(90deg, #ffa100, #fc0);
+  }
 }
 
 .manage-sidenav-content {
 
+  .header {
+    position: relative;
+    height: 200px;
+    background: linear-gradient(90deg, #fc0, #ffa100);
+    //linear-gradient(90deg,#00b3ff,#08f)
+    //linear-gradient(90deg,#00d9bf,#00d977)
+  }
 }
 
-.header {
-  height: 180px;
-  background: linear-gradient(90deg, #00b3ff, #08f);
-}
-
-.contact-add-btn {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
+.file-uploader {
+  position: absolute;
+  left: 30px;
+  bottom: -20px;
 }

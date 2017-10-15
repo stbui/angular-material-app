@@ -8,6 +8,8 @@ import { CollectionComponent } from './collection/collection.component';
 import { UserComponent } from './user/user.component';
 import { ProfileComponent } from './profile/profile.component';
 import { BlogComponent } from './blog/blog.component';
+import { FileManagerComponent } from './file-manager/file-manager.component';
+import { ProjectComponent } from './project/project.component';
 
 const routes: Routes = [
   {
@@ -41,7 +43,15 @@ const routes: Routes = [
   {
     path: 'blog',
     component: BlogComponent
-  }
+  },
+  {
+    path: 'file-manager',
+    component: FileManagerComponent
+  },
+  {
+    path: 'projects',
+    component: ProjectComponent
+  },
 ];
 
 @NgModule({
