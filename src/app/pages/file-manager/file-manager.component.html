@@ -1,6 +1,8 @@
 <mat-sidenav-container class="manage-sidenav-container">
   <mat-sidenav class="mat-elevation-z2" mode="side" [opened]="true" position="end">
-    <div class="header" fxLayout="column" fxLayoutAlign="space-between start"></div>
+    <div class="header" fxLayout="column" fxLayoutAlign="space-between start">
+
+    </div>
 
     <div class="stbui-table-list">
       <div class="stbui-table" fxLayout="row">
@@ -55,10 +57,13 @@
 
   <div fxFlex class="manage-sidenav-content">
     <div class="header" fxLayout="column" fxLayoutAlign="space-between start">
+      <div>请翻墙查看</div>
 
       <div class="file-uploader">
         <input hidden type="file">
-        <button mat-fab><mat-icon>add</mat-icon></button>
+        <button mat-fab>
+          <mat-icon>add</mat-icon>
+        </button>
       </div>
     </div>
 
@@ -87,7 +92,7 @@
       </div>
 
       <div class="stbui-table-list">
-        <div class="stbui-table" fxLayout="row" *ngFor="let file of files.datas">
+        <div class="stbui-table" fxLayout="row" *ngFor="let file of files">
           <div class="content-wrapper" fxLayout="row" fxLayoutAlign="start center" fxFlex="50px">
             <mat-icon>folder</mat-icon>
           </div>

@@ -14,6 +14,8 @@ import { UserComponent } from './user/user.component';
 import { UserService } from './user/user.service';
 
 import { FileManagerComponent } from './file-manager/file-manager.component';
+import { FileManagerFirebase } from './file-manager/file-manager.firebase';
+
 import { ProjectComponent } from './project/project.component';
 
 @NgModule({
@@ -35,6 +37,7 @@ import { ProjectComponent } from './project/project.component';
   ],
   providers: [
     {provide: 'UserService', useClass: UserService},
+    FileManagerFirebase
   ]
 })
 export class PagesModule {

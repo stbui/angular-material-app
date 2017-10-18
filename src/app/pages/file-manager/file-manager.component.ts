@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FileManagerFirebase } from './file-manager.firebase';
 
 @Component({
   selector: 'stb-file-manager',
@@ -6,32 +7,22 @@ import { Component } from '@angular/core';
   styleUrls: ['./file-manager.component.scss']
 })
 export class FileManagerComponent {
-  files = {
-    datas: [
-      {
-        icon: 'folder',
-        name: 'main',
-        type: 'js',
-        provide: 'stbui',
-        size: '10k',
-        lastModifiedDate: '20171014'
-      },
-      {
-        icon: 'folder',
-        name: 'vendor',
-        type: 'js',
-        provide: 'stbui',
-        size: '10k',
-        lastModifiedDate: '20171014'
-      },
-      {
-        icon: 'folder',
-        name: 'polyfills',
-        type: 'js',
-        provide: 'stbui',
-        size: '10k',
-        lastModifiedDate: '20171014'
-      }
-    ]
-  };
+  files;
+
+  constructor(private service: FileManagerFirebase) {
+    let f = this.service.getFilesList();
+    f.subscribe((files)=>{
+      console.log(files);
+      this.files = files;
+    });
+
+    // this.service.createFile({
+    //   icon: 'folder',
+    //   name: 'polyfills',
+    //   type: 'js',
+    //   provide: 'stbui',
+    //   size: '10k',
+    //   lastModifiedDate: '20171014'
+    // });
+  }
 }

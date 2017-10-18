@@ -7,19 +7,20 @@ import { Upload } from './file-upload.model';
 @Injectable()
 export class FileUploadService {
 
-  private basePath:string = '/uploads';
+  private basePath: string = '/uploads';
   uploadsRef: AngularFireList<Upload>;
   uploads: Observable<Upload[]>;
 
-  constructor(private db: AngularFireDatabase) { }
+  constructor(private db: AngularFireDatabase) {
+  }
 
-  getUploads(query={}) {
+  getUploads(query = {}) {
     this.uploads = this.db.list(this.basePath).valueChanges();
 
     return this.uploads;
   }
 
-  pushUpload(upload:Upload) {
+  pushUpload(upload: Upload) {
     const storageRef = firebase.storage().ref();
     const uploadTask = storageRef.child(`${this.basePath}/${upload.file.name}`).put(upload.file);
 
@@ -36,7 +37,7 @@ export class FileUploadService {
     });
   }
 
-  deleteUpload(upload:Upload) {
+  deleteUpload(upload: Upload) {
     this.deleteFileStorage(upload.name);
   }
 
