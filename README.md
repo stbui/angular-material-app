@@ -47,6 +47,8 @@ cd angular-material-app
 npm install
 npm run start
 ```
+[![步骤](https://asciinema.org/a/1lEYxaqemXl3coe9kiAvHRh7d.png)](https://asciinema.org/a/1lEYxaqemXl3coe9kiAvHRh7d)
+
 打开你的浏览器，访问
 ```
 http://127.0.0.1:4200
