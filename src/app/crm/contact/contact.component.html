@@ -31,10 +31,10 @@
 
     <div class="stbui-table-main mat-elevation-z2">
       <div class="stbui-table-toolbar" fxLayout="row" fxLayoutAlign="start center">
-        <div class="content-wrapper" fxLayout="row" fxLayoutAlign="start center" fxFlex="50px">
+        <div class="start-wrapper" fxLayout="row" fxLayoutAlign="start center" fxFlex="51px">
           <span></span>
         </div>
-        <div class="start-wrapper" fxLayout="row" fxLayoutAlign="start center" fxFlex>
+        <div class="content-wrapper" fxLayout="row" fxLayoutAlign="start center" fxFlex>
           <span>姓名</span>
         </div>
         <div class="content-wrapper" fxLayout="row" fxLayoutAlign="start center" fxFlex>
@@ -54,29 +54,29 @@
       </div>
 
       <div class="stbui-table-list">
-        <div class="stbui-table" fxLayout="row" *ngFor="let file of files.datas" (click)="onUpdateContact(file)">
-          <div class="content-wrapper" fxLayout="row" fxLayoutAlign="start center" fxFlex="50px">
-            <mat-icon>folder</mat-icon>
-          </div>
-
-          <div class="start-wrapper" fxLayout="row" fxLayoutAlign="start center" fxFlex>
-            <span>{{ file.name }}</span>
+        <div class="stbui-table" fxLayout="row" *ngFor="let data of tables.datas" (click)="onUpdateContact(data)">
+          <div class="start-wrapper" fxLayout="row" fxLayoutAlign="start center" fxFlex="51px">
+            <img [src]="data.avatar" alt="avatar" class="avatar">
           </div>
 
           <div class="content-wrapper" fxLayout="row" fxLayoutAlign="start center" fxFlex>
-            <span>{{ file.type }}</span>
+            <span>{{ data.name }}</span>
           </div>
 
           <div class="content-wrapper" fxLayout="row" fxLayoutAlign="start center" fxFlex>
-            <span>{{ file.provide }}</span>
+            <span>{{ data.phone }}</span>
           </div>
 
           <div class="content-wrapper" fxLayout="row" fxLayoutAlign="start center" fxFlex>
-            <span>{{ file.size }}</span>
+            <span>{{ data.relation }}</span>
+          </div>
+
+          <div class="content-wrapper" fxLayout="row" fxLayoutAlign="start center" fxFlex>
+            <span>{{ data.company }}</span>
           </div>
 
           <div class="end-wrapper" fxLayout="row" fxLayoutAlign="end center" fxFlex="80px">
-            <span>{{ file.lastModifiedDate }}</span>
+            <span>{{ data.mail }}</span>
           </div>
         </div>
       </div>
