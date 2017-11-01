@@ -8,17 +8,20 @@ import { Component, OnInit, Inject } from '@angular/core';
 export class NavigationComponent implements OnInit {
 
   navigations;
-  categorys;
+  categories: object;
   currentPage;
   totalPages;
   nav_id = '';
+
+  // skeleton screen
+  currentNum = new Array(20);
 
   constructor(@Inject('NavigationService') private service) {
   }
 
   ngOnInit() {
     this.getNavs();
-    this.getCategorys();
+    this.getCategories();
   }
 
   getNavs(id: any = '', page: any = '') {
@@ -27,11 +30,12 @@ export class NavigationComponent implements OnInit {
       this.navigations = res.data;
       this.totalPages = res.totalPages;
       this.currentPage = res.currentPage;
+      this.hideLoading();
     });
   }
 
-  getCategorys() {
-    this.service.getCategorys().subscribe(res => this.categorys = res.data);
+  getCategories() {
+    this.service.getCategories().subscribe(res => this.categories = res.data);
   }
 
   findNavLists(id: any) {
@@ -44,6 +48,15 @@ export class NavigationComponent implements OnInit {
   }
 
   setClassActive(id) {
-      return this.nav_id === id;
+    return this.nav_id === id;
+  }
+
+  hideLoading() {
+    // 延时显示效果
+    setTimeout(() => this.currentNum = new Array(0), 1000);
+  }
+
+  showLoading() {
+    this.currentNum = new Array(20);
   }
 }

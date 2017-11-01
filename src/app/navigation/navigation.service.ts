@@ -23,19 +23,19 @@ export class NavigationService {
       url = `${this.apiUrl}/links${topicId}${page}.json`;
     }
     this.http.get(url)
-      .map(res => res.json())
-      // .do(res => console.log(res))
-      .subscribe(res => {
-        this._navigations.next(res);
-      });
+        .map(res => res.json())
+        // .do(res => console.log(res))
+        .subscribe(res => {
+          this._navigations.next(res);
+        });
   }
 
-  getCategorys() {
+  getCategories() {
     let url = `${this.apiUrl}/topic`;
     if (!environment.production) {
       url = `${this.apiUrl}/topic.json`;
     }
     return this.http.get(url)
-      .map(res => res.json());
+               .map(res => res.json());
   }
 }
