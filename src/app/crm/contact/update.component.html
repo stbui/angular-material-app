@@ -16,20 +16,20 @@
     <div fxLayout="row" fxLayoutAlign="start start">
       <mat-icon class="form-icon">account_circle</mat-icon>
       <mat-form-field>
-        <input type="text" matInput placeholder="姓名" value="姓名">
+        <input type="text" matInput placeholder="姓名" [value]="data.name">
       </mat-form-field>
      </div>
 
     <div fxLayout="row" fxLayoutAlign="start start">
       <mat-icon class="form-icon">account_circle</mat-icon>
       <mat-form-field>
-        <input type="text" matInput placeholder="手机号码" value="手机号码">
+        <input type="text" matInput placeholder="手机号码" [value]="data.phone">
       </mat-form-field>
     </div>
     <div fxLayout="row" fxLayoutAlign="start start">
       <mat-icon class="form-icon">account_circle</mat-icon>
       <mat-form-field>
-        <input type="text" matInput placeholder="邮箱" value="邮箱">
+        <input type="text" matInput placeholder="邮箱" [value]="data.mail">
       </mat-form-field>
     </div>
 

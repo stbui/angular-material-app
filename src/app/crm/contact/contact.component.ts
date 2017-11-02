@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import { MatDialog } from '@angular/material';
+import { MAT_DIALOG_DATA } from '@angular/material';
 
 @Component({
   selector: 'app-contact',
@@ -8,31 +9,31 @@ import { MatDialog } from '@angular/material';
 })
 export class ContactComponent implements OnInit {
 
-  files = {
+  tables = {
     datas: [
       {
-        icon: 'folder',
-        name: 'main',
-        type: 'js',
-        provide: 'stbui',
-        size: '10k',
-        lastModifiedDate: '20171014'
+        avatar: 'https://lh5.googleusercontent.com/-hcRNe540rco/AAAAAAAAAAI/AAAAAAAAAAk/DfS45tpAR-A/photo.jpg',
+        name: 'stbui',
+        phone: '15890031275',
+        relation: '优质客户',
+        company: 'github',
+        mail: 'w431106@163.com'
       },
       {
-        icon: 'folder',
-        name: 'vendor',
-        type: 'js',
-        provide: 'stbui',
-        size: '10k',
-        lastModifiedDate: '20171014'
+        avatar: 'https://lh5.googleusercontent.com/-hcRNe540rco/AAAAAAAAAAI/AAAAAAAAAAk/DfS45tpAR-A/photo.jpg',
+        name: '赵日旭',
+        phone: '15890030690',
+        relation: '潜在客户',
+        company: 'google',
+        mail: '772020653@qq.com'
       },
       {
-        icon: 'folder',
-        name: 'polyfills',
-        type: 'js',
-        provide: 'stbui',
-        size: '10k',
-        lastModifiedDate: '20171014'
+        avatar: 'https://lh5.googleusercontent.com/-hcRNe540rco/AAAAAAAAAAI/AAAAAAAAAAk/DfS45tpAR-A/photo.jpg',
+        name: '赵茹君',
+        phone: '15890031290',
+        relation: '一般客户',
+        company: 'facebook',
+        mail: '4295@gmail.com'
       }
     ]
   };
@@ -44,15 +45,14 @@ export class ContactComponent implements OnInit {
   }
 
   onUpdateContact(contact) {
-    console.log(contact);
     const dialogRef = this.dialog.open(ContactUpdateComponent, {
       width: '400px',
       panelClass: 'contact-dialog-form',
-      data: {name: ''}
+      data: contact
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      console.log('dialog');
+      console.log(result);
     });
   }
 }
@@ -63,6 +63,7 @@ export class ContactComponent implements OnInit {
   styleUrls: ['./update.component.scss']
 })
 export class ContactUpdateComponent {
-
+  constructor(@Inject(MAT_DIALOG_DATA) public data: any) {
+  }
 }
 
