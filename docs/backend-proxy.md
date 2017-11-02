@@ -36,3 +36,16 @@ module.exports = proxyConfig;
 ```
 ng serve --proxy-config proxy.conf.js
 ```
+
+
+# 对接第三应用及微信配置相关
+
+* 微信认证跳转
+微信认证跳转需要验证域名，通过修改host
+```
+127.0.0.1 wx.qq.com
+```
+* 添加启动命令
+```
+ng serve --disable-host-check
+```

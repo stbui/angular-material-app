@@ -28,6 +28,8 @@ http://127.0.0.1:4200
 npm install -g @angular/cli 
 ```
 
+[![步骤](https://asciinema.org/a/1lEYxaqemXl3coe9kiAvHRh7d.png)](https://asciinema.org/a/1lEYxaqemXl3coe9kiAvHRh7d)
+
 # 参考资源
 - https://nodejs.org/en/docs/
 - https://github.com/angular/angular-cli/wiki

@@ -1,11 +1,6 @@
-# 升级
+# angular升级
 
 * 卸载老版本
-```
-npm uninstall -g angular-cli
-npm uninstall --save-dev angular-cli
-```
-
 ```
 npm uninstall -g @angular/cli
 npm uninstall --save-dev @angular/cli
@@ -21,4 +16,3 @@ npm cache clean
 npm install -g @angular/cli@latest
 npm install --save-dev @angular/cli@latest
 npm install
-```
