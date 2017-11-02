@@ -12,29 +12,25 @@
 
 ### 平台环境
 
-[![Angular](https://img.shields.io/badge/Angular%204-4.0.0-brightgreen.svg?style=flat-square)](https://github.com/angular/angular)
-[![Angular-cli](https://img.shields.io/badge/Angular.cli-1.4.2-brightgreen.svg?style=square)](https://github.com/angular/angular-cli)
+[![Angular](https://img.shields.io/badge/Angular%204-4.2.4-brightgreen.svg?style=flat-square)](https://github.com/angular/angular)
+[![Angular-cli](https://img.shields.io/badge/Angular.cli-1.4.9-brightgreen.svg?style=square)](https://github.com/angular/angular-cli)
 [![Angular Mateiral 2](https://img.shields.io/badge/Material%202-2.0.0.beta.12-brightgreen.svg?style=square)](https://github.com/angular/material2)
 [![Flex-Layout](https://img.shields.io/badge/Flex.Layout-2.0.0.beta.9-brightgreen.svg?style=square)](https://github.com/angular/flex-layout)
 
 
-### 基本功能
+### 特性
 
+- 基于 Material Design 精心设计
+- 多种颜色方案，有多个预定义的配色方案
+- Flex Layout 强大的布局,并支持响应式设计
+- 内置常用组件，提炼后台应用的典型页面和场景
+- 实用的本地数据调试方案
 - 支持 docker 构建镜像
 - 支持 electron 构建桌面应用
 - 接入 firebase, 关联google账户和github账户登录
-- 真实场景mock数据
-- material design 
-- 内置3套主题，供自由切换
-- 多种颜色方案，有多个预定义的配色方案
-- Flex Layout 强大的布局
-- 响应式设计
-- 内置常用组件
-- 1500+ 图标, 包括 900+ 官方 material design 图标
-- Sass/Scss CSS, 很容易通过改变一些变量的更新
 - 模块代码，添加和删除非常轻松
-- Webpack 2 构建项目
-- 定期更新，不断更新新功能
+- 不定期更新，不断更新新功能
+- 使用前端前沿技术开发
 
 ![demo image](src/assets/images-demo/20170802104620.png)
 
@@ -159,3 +155,11 @@ npm install firebase angularfire2 --save
 ```
 
 ### Universal
+
+
+# 参与贡献
+
+我们非常欢迎你的贡献，你可以通过以下方式和我们一起贡献：
+* 在你的公司或个人项目中使用项目。
+* 通过 [Issue](https://github.com/stbui/angular-material-app/issues) 报告 bug 或进行咨询。
+* 提交 [Pull Request](https://github.com/stbui/angular-material-app/pulls) 来改进。
