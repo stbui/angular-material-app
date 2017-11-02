@@ -1,5 +1,4 @@
 import { Component, Input, Output, EventEmitter, ViewEncapsulation } from '@angular/core';
-import { transitionAnimation } from '../transition.animation';
 import * as dateUtils from '../dateUtils';
 
 @Component({
@@ -7,7 +6,6 @@ import * as dateUtils from '../dateUtils';
   templateUrl: './calendar.component.html',
   styleUrls: ['./calendar.component.scss'],
   encapsulation: ViewEncapsulation.None,
-  animations: [transitionAnimation]
 })
 export class CalendarComponent {
 
