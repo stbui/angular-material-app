@@ -55,7 +55,6 @@ export class CrowdComponent implements OnInit {
 
   actvieDatas() {
     this._service.crowdOverview$.subscribe(res => {
-      console.log(res)
       if (res.actvieDatas) {
         this.setBarChart(res.actvieDatas);
       }
