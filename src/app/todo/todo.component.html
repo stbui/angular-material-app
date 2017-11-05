@@ -1,12 +1,30 @@
-<div fxLayout="column" class="todo">
-  <h1 class="todo-title">Todos</h1>
-  <app-todo-header placeholder="请输入您要完成的任务" (onEnterUp)="addTodo($event)"></app-todo-header>
-  <app-todo-list
-    [todos]="todos | async"
-    (onToggleAll)="toggleAll()"
-    (onRemoveTodo)="removeTodo($event)"
-    (onToggleTodo)="toggleTodo($event)"></app-todo-list>
-  <app-todo-footer
-    [itemCount]="(todos | async)?.length"
-    (onClear)="clearCompleted()"></app-todo-footer>
+<div class="page-layout">
+
+  <app-todo-header></app-todo-header>
+
+  <mat-sidenav-container>
+    <mat-sidenav class="sidenav" mode="side" align="start" opened="true">
+      <app-todo-sidenav></app-todo-sidenav>
+    </mat-sidenav>
+
+    <div class="center">
+
+      <div class="header" fxLayout="row" fxLayoutAlign="start center">
+        <app-todo-search></app-todo-search>
+      </div>
+
+      <div class="content-card mat-white-bg mat-elevation-z7">
+
+        <app-todo-toolbar></app-todo-toolbar>
+
+        <app-todo-list>
+          <app-todo-item *ngFor="let todo of todos" [todo]="todo"></app-todo-item>
+        </app-todo-list>
+
+      </div>
+
+    </div>
+
+  </mat-sidenav-container>
+
 </div>

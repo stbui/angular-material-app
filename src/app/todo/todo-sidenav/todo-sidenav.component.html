@@ -1,0 +1,36 @@
+<div class="header p-20" fxLayout="column" fxLayoutAlign="space-between start">
+  <div class="todo-logo" fxFlex fxLayout="row" fxLayoutAlign="start center">
+    <mat-icon class="mat-18 todo-logo-icon">check_box</mat-icon>
+    <span class="todo-logo-text">Todo</span>
+  </div>
+</div>
+
+<div fxLayout="column">
+  <div class="p-20">
+    <button mat-raised-button fxFlex>添加任务</button>
+  </div>
+
+  <div class="nav">
+    <div class="nav-item">
+      <a class="nav-link active" matRipple>
+        <mat-icon class="nav-link-icon">view_headline</mat-icon>
+        <span>全部</span>
+      </a>
+    </div>
+
+    <div class="nav-item">
+      <a class="nav-link" matRipple>
+        <mat-icon class="nav-link-icon">view_headline</mat-icon>
+        <span>未完成</span>
+      </a>
+    </div>
+
+    <div class="nav-item">
+      <a class="nav-link" matRipple>
+        <mat-icon class="nav-link-icon">view_headline</mat-icon>
+        <span>已完成</span>
+      </a>
+    </div>
+
+  </div>
+</div>

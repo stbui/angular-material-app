@@ -1,0 +1,55 @@
+:host {
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: column;
+  height: 100%;
+}
+
+.header {
+  height: 200px;
+  min-height: 200px;
+  max-height: 200px;
+  color: #fff;
+}
+
+.todo-logo {
+  &-icon {
+    margin-right: 16px;
+  }
+  &-text {
+    font-size: 24px;
+    line-height: 24px;
+  }
+}
+
+.nav {
+
+  &-link {
+    text-decoration: none !important;
+    display: flex;
+    align-items: center;
+    height: 48px;
+    padding: 0 24px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    user-select: none;
+    color: currentColor;
+
+    &.active {
+      background-color: #3f51b5;
+      color: #fff;
+    }
+
+    &-icon {
+      color: #fff;
+      margin-right: 16px;
+      font-size: 16px;
+      width: 16px;
+      height: 16px;
+      min-width: 16px;
+      min-height: 16px;
+      line-height: 16px;
+    }
+  }
+}

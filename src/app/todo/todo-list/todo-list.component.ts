@@ -1,5 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { TodoModel } from '../todo.model';
+import { Todo } from '../todo.model';
 
 @Component({
   selector: 'app-todo-list',
@@ -7,9 +7,9 @@ import { TodoModel } from '../todo.model';
   styleUrls: ['./todo-list.component.scss']
 })
 export class TodoListComponent {
-  _todos: TodoModel[] = [];
+  _todos: Todo[] = [];
   @Input()
-  set todos(todos: TodoModel[]) {
+  set todos(todos: Todo[]) {
     this._todos = [...todos];
   }
 
@@ -17,15 +17,15 @@ export class TodoListComponent {
     return this._todos;
   }
 
-  @Output() onRemoveTodo = new EventEmitter<TodoModel>();
-  @Output() onToggleTodo = new EventEmitter<TodoModel>();
+  @Output() onRemoveTodo = new EventEmitter<Todo>();
+  @Output() onToggleTodo = new EventEmitter<Todo>();
   @Output() onToggleAll = new EventEmitter<boolean>();
 
-  onRemoveTriggered(todo: TodoModel) {
+  onRemoveTriggered(todo: Todo) {
     this.onRemoveTodo.emit(todo);
   }
 
-  onToggleTriggered(todo: TodoModel) {
+  onToggleTriggered(todo: Todo) {
     this.onToggleTodo.emit(todo);
   }
 

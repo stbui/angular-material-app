@@ -1,5 +1,8 @@
-export class TodoModel {
+export class Todo {
   id: string;
-  desc: string;
+  title: string;
+  notes: string;
+  startDate: string;
+  endDate: string;
   completed: boolean;
 }

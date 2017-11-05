@@ -11,10 +11,6 @@
   margin-bottom: 30px;
 }
 
-mat-form-field {
-  width: 100%;
-}
-
 .contact-dialog-form {
 
 }
@@ -29,4 +25,11 @@ mat-form-field {
     right: 20px;
   }
   line-height: 40px;
+}
+.mat-dialog-container {
+  padding-top: 0 !important;
+}
+
+.full-width {
+  width: 100%;
 }

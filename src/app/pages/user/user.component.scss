@@ -79,3 +79,33 @@ $color__inactive: #616161;
     }
   }
 }
+
+.toolbar {
+  color: #616161;
+  position: absolute;
+  background: #ececec;
+  left: 70px;
+  top: 10px;
+  display: none !important;
+
+  &::before {
+    content: " ";
+    position: absolute;
+    left: -20px;
+    width:0;
+    height:0px;
+    border:10px solid transparent;
+    border-right-color:#ececec;
+  }
+}
+
+.toolbar-separator {
+  height: 48px;
+  width: 1px;
+  border-right: 1px solid rgba(0,0,0,.12);
+  margin: 0 12px;
+}
+
+.show {
+  display: flex !important;
+}

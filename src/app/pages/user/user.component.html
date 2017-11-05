@@ -35,36 +35,42 @@
     </mat-sidenav>
 
     <div class="content-container p-10">
+      <div class="toolbar mat-elevation-z2" fxLayout="row" fxLayoutAlign="start center" [ngClass]="{'show': checked}">
+        <button mat-icon-button>
+          <mat-icon>delete</mat-icon>
+        </button>
+      </div>
+
       <table class="table table-hover">
         <thead>
-        <tr>
-          <th>
-            <mat-checkbox class="checkbox" [(ngModel)]="checked"></mat-checkbox>
-          </th>
-          <th>账号</th>
-          <th>最后登录时间</th>
-          <th>最后登录IP</th>
-          <th>登录次数</th>
-          <th>状态</th>
-          <th>管理操作</th>
-        </tr>
+          <tr>
+            <th>
+              <mat-checkbox class="checkbox" [(ngModel)]="checked"></mat-checkbox>
+            </th>
+            <th>账号</th>
+            <th>最后登录时间</th>
+            <th>最后登录IP</th>
+            <th>登录次数</th>
+            <th>状态</th>
+            <th>管理操作</th>
+          </tr>
         </thead>
         <tbody>
-        <tr *ngFor="let user of users" (click)="onEditTriggered(user)">
-          <td>
-            <mat-checkbox class="checkbox" [checked]="checked"></mat-checkbox>
-          </td>
-          <td>{{ user.loginName }}</td>
-          <td>{{ user.lastLoginTime }}</td>
-          <td>{{ user.lastLoginIp }}</td>
-          <td>{{ user.loginCount }}</td>
-          <td>{{ user.state }}</td>
-          <td>
-            <button mat-icon-button (click)="onDeleteTriggered(user)">
-              <mat-icon>delete</mat-icon>
-            </button>
-          </td>
-        </tr>
+          <tr *ngFor="let user of users" (click)="onEditTriggered(user)">
+            <td>
+              <mat-checkbox class="checkbox" [checked]="checked"></mat-checkbox>
+            </td>
+            <td>{{ user.loginName }}</td>
+            <td>{{ user.lastLoginTime }}</td>
+            <td>{{ user.lastLoginIp }}</td>
+            <td>{{ user.loginCount }}</td>
+            <td>{{ user.state }}</td>
+            <td>
+              <button mat-icon-button (click)="onDeleteTriggered(user)">
+                <mat-icon>delete</mat-icon>
+              </button>
+            </td>
+          </tr>
         </tbody>
       </table>
     </div>

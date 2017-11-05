@@ -1,4 +1,4 @@
-import { Component, OnInit, Inject } from '@angular/core';
+import { Component, OnInit, Inject, ViewEncapsulation } from '@angular/core';
 import { MatDialog } from '@angular/material';
 import { MAT_DIALOG_DATA } from '@angular/material';
 
@@ -60,7 +60,8 @@ export class ContactComponent implements OnInit {
 @Component({
   selector: 'stb-contact-upate',
   templateUrl: './update.component.html',
-  styleUrls: ['./update.component.scss']
+  styleUrls: ['./update.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class ContactUpdateComponent {
   constructor(@Inject(MAT_DIALOG_DATA) public data: any) {

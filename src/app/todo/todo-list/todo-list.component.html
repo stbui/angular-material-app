@@ -1,13 +1,3 @@
-<section class="todo-wrap" *ngIf="todos?.length > 0">
-  <!--<input class="toggle-all" type="checkbox" (click)="onToggleAllTriggered()">-->
-  <mat-list class="todo-list">
-    <mat-list-item class="todo-list-item" *ngFor="let todo of todos" [class.completed]="todo.completed">
-      <app-todo-item
-        [isChecked]="todo.completed"
-        (onToggleTriggered)="onToggleTriggered(todo)"
-        (onRemoveTriggered)="onRemoveTriggered(todo)"
-        [todoDesc]="todo.desc">
-      </app-todo-item>
-    </mat-list-item>
-  </mat-list>
-</section>
+<div class="todo-list" ngxDroppable>
+  <ng-content></ng-content>
+</div>
