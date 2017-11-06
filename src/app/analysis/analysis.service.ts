@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
+import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 import { environment } from '../../environments/environment';
 
@@ -33,7 +34,7 @@ export class AnalysisService {
     return this._crowdOverview$.asObservable();
   }
 
-  constructor(private _http: Http) {
+  constructor(private _http: Http, private http: HttpClient) {
     this._crowdApplist$ = new BehaviorSubject<any>([]);
     this._crowdCateList$ = new BehaviorSubject<any>([]);
     this._crowdDevice$ = new BehaviorSubject<any>([]);
@@ -43,7 +44,7 @@ export class AnalysisService {
 
   getCrowdOverview() {
     const url = `${this.apiUrl}/crowd.json`;
-    return this._http.get(url).map(res => res.json().datas).subscribe(res => {
+    return this.http.get(url).subscribe(res => {
       this._crowdOverview$.next(res);
     });
   }
