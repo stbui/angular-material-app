@@ -1,3 +1,11 @@
+:host {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.5);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+}
 .wrapper {
   position: fixed;
   top: 50%;
@@ -24,7 +32,7 @@
 }
 
 .info {
-  color: rgba(255, 255, 255, .4);
+  color: rgba(255, 255, 255, 1);
   text-align: center
 }
 

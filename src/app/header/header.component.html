@@ -15,7 +15,6 @@
   </button>
 
   <stbui-toolbar-notification></stbui-toolbar-notification>
-
   <stbui-toolbar-user></stbui-toolbar-user>
 
   <button mat-button class="more-btn" (click)="customizer.open()">
@@ -23,3 +22,5 @@
   </button>
 
 </div>
+
+<stbui-loading *ngIf="showLoading"></stbui-loading>

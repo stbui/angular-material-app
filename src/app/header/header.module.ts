@@ -10,6 +10,7 @@ import { ToolbarNotificationComponent } from './toolbar-notification/toolbar-not
 import { ToolbarNotificationService } from './toolbar-notification/toolbar-notification.service';
 
 import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
+import { LoadingModule } from '../component/loading';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
     SharedModule,
     PerfectScrollbarModule.forChild(),
     HttpModule,
-    RouterModule
+    RouterModule,
+    LoadingModule
   ],
   declarations: [
     HeaderComponent,
