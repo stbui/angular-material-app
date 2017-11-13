@@ -9,9 +9,9 @@
 # 0.4.12
 
 ### 功能&优化
-* todo 模块重写
 * 新增惰性模块加载前显示loading效果
-
+* 优化analysis模块
+* 重写todoModule模块
 
 ### 问题修复
 * 修复升级material.12 没有导入 *matRipple*

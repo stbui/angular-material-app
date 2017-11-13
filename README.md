@@ -3,7 +3,7 @@
 基于最新`Angular 5`框架与`Material 2`技术的企业级通用管理系统快速开发框架，涵盖了大量的常用组件和基础功能，您可以快速开发各种MIS系统，如CMS、OA、CRM、ERP、POS等，最大程度上帮助企业节省时间成本和费用开支。
 
 [![Travis](https://travis-ci.org/stbui/angular-material-app.svg?branch=master)](https://travis-ci.org/stbui/angular-material-app)
-[![Docker Build Statu](https://img.shields.io/docker/build/stbui/angular-material-app.svg?style=flat-square)](https://hub.docker.com/r/stbui/angular-material-app/)
+[![Docker Build Status](https://img.shields.io/docker/build/stbui/angular-material-app.svg?style=flat-square)](https://hub.docker.com/r/stbui/angular-material-app/)
 [![Dependency Status](https://img.shields.io/david/stbui/angular-material-app.svg?style=flat-square)](https://david-dm.org/stbui/angular-material-app)
 [![devDependency Status](https://img.shields.io/david/stbui/angular-material-app.svg?style=flat-square)](https://david-dm.org/stbui/angular-material-app?type=dev)
 [![Join the chat at https://gitter.im/angular-material-app](https://badges.gitter.im/stbui/angular-material-app.svg)](https://gitter.im/angular-material-app/Lobby?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
@@ -14,8 +14,9 @@
 
 [![Angular](https://img.shields.io/badge/Angular%204-5.0.0-brightgreen.svg?style=flat-square)](https://github.com/angular/angular)
 [![Angular-cli](https://img.shields.io/badge/Angular.cli-1.5.0-brightgreen.svg?style=square)](https://github.com/angular/angular-cli)
-[![Angular Mateiral 2](https://img.shields.io/badge/Material%202-2.0.0.beta.12-brightgreen.svg?style=square)](https://github.com/angular/material2)
+[![Angular Material 2](https://img.shields.io/badge/Material%202-2.0.0.beta.12-brightgreen.svg?style=square)](https://github.com/angular/material2)
 [![Flex-Layout](https://img.shields.io/badge/Flex.Layout-2.0.0.beta.10-brightgreen.svg?style=square)](https://github.com/angular/flex-layout)
+[![Angular FireBase](https://img.shields.io/badge/Firebase-5.0.0.rc.3-brightgreen.svg?style=square)](https://github.com/angular/angularfire2)
 
 
 ### 特性
@@ -162,3 +163,7 @@ npm install firebase angularfire2 --save
 * 在你的公司或个人项目中使用项目。
 * 通过 [Issue](https://github.com/stbui/angular-material-app/issues) 报告 bug 或进行咨询。
 * 提交 [Pull Request](https://github.com/stbui/angular-material-app/pulls) 来改进。
+
+
+
+![ad image](http://stbui.oss-cn-beijing.aliyuncs.com/ad.png)
