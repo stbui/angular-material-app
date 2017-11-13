@@ -1,26 +1,8 @@
   <div fxLayout="row" fxLayoutWrap>
     <div fxFlex.gt-sm="60">
-      <mat-card>
-        <mat-card-title>品牌偏好</mat-card-title>
-        <mat-card-content>
-          <canvas baseChart height="200px"
-                  [datasets]="barChartData"
-                  [labels]="barChartLabels"
-                  [options]="barChartOptions"
-                  [legend]="barChartLegend"
-                  [chartType]="barChartType"></canvas>
-        </mat-card-content>
-      </mat-card>
+      <analysis-equipment-brand [data]="brand_data"></analysis-equipment-brand>
     </div>
     <div fxFlex.gt-sm="40">
-      <mat-card>
-        <mat-card-title>运营商分布</mat-card-title>
-        <mat-card-content>
-          <canvas baseChart height="320px"
-                  [data]="pieChartData"
-                  [labels]="pieChartLabels"
-                  [chartType]="pieChartType"></canvas>
-        </mat-card-content>
-      </mat-card>
+      <analysis-crowd-operators [data]="operator_data"></analysis-crowd-operators>
     </div>
   </div>

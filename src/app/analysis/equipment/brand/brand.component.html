@@ -1,0 +1,16 @@
+<mat-card>
+  <mat-card-title>品牌偏好</mat-card-title>
+  <mat-card-content>
+    <ngx-charts-bar-vertical *ngIf="data?.length"
+                             [scheme]="colorScheme"
+                             [results]="data"
+                             [gradient]="gradient"
+                             [xAxis]="showXAxis"
+                             [yAxis]="showYAxis"
+                             [legend]="showLegend"
+                             [showXAxisLabel]="showXAxisLabel"
+                             [showYAxisLabel]="showYAxisLabel"
+                             (select)="onSelect($event)">
+    </ngx-charts-bar-vertical>
+  </mat-card-content>
+</mat-card>

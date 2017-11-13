@@ -20,6 +20,7 @@ import { GenderComponent } from './crowd/gender/gender.component';
 import { BrandComponent } from './crowd/brand/brand.component';
 import { OperatorsComponent } from './crowd/operators/operators.component';
 import { RegionComponent } from './crowd/region/region.component';
+import { EquipmentBrandComponent } from './equipment/brand/brand.component';
 
 @NgModule({
   imports: [
@@ -41,7 +42,8 @@ import { RegionComponent } from './crowd/region/region.component';
     GenderComponent,
     BrandComponent,
     OperatorsComponent,
-    RegionComponent
+    RegionComponent,
+    EquipmentBrandComponent
   ],
   providers: [
     {provide: 'AnalysisService', useClass: AnalysisService}

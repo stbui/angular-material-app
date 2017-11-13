@@ -7,66 +7,44 @@ import { Component, OnInit, Inject } from '@angular/core';
 })
 export class EquipmentComponent implements OnInit {
 
-  public barChartOptions: any = {
-    scaleShowVerticalLines: false,
-    responsive: true
-  };
-  public barChartLabels: string[] = [];
-  public barChartType: string = 'horizontalBar';
-  public barChartLegend: boolean = true;
-  public barChartData: any[] = [
-    {data: [], label: '使用率'}
-  ];
-
-  // public pieChartLabels: string[] = [];
-  public pieChartLabels: string[] = ['中国移动', '中国联通', '中国电信'];
-  public pieChartData: any[] = [65.0193, 21.0978, 13.883];
-  public pieChartType: string = 'pie';
+  brand_data: any = [];
+  operator_data: any = [];
 
   constructor(@Inject('AnalysisService') private _service) {
   }
 
   ngOnInit() {
-    this.crowdDevice();
-  }
 
-  crowdDevice() {
     this._service.crowdDevice();
+    this.brands();
+    this.operators();
+  }
+
+  operators() {
     this._service.crowdDevice$.subscribe(res => {
-
-      this.operators(res.operators);
-      this.brand(res.brand);
+      if (res.datas) {
+        console.log(res.datas.operators)
+        res.datas.operators.map((item) => {
+          this.operator_data.push({
+            name: item.attrName,
+            value: (item.attrValue * 100).toFixed(2)
+          });
+        });
+      }
     });
   }
 
-  operators(res) {
-    if (!res) {
-      return;
-    }
-    // console.log(res);
-
-    let attrValue = [];
-    let attrName = res.filter(item => {
-      attrValue.push(item.attrValue);
-      return item.attrName;
+  brands() {
+    this._service.crowdDevice$.subscribe(res => {
+      if (res.datas) {
+        res.datas.brand.list.map((item) => {
+          this.brand_data.push({
+            name: item.attrName,
+            value: (item.attrValue * 100).toFixed(2)
+          });
+        });
+      }
     });
-
-    // this.pieChartLabels = attrName;
-    // this.pieChartData = attrValue;
-  }
-
-  brand(res) {
-    if (!res || !res.list) {
-      return;
-    }
-
-    let attrValue = [];
-    let attrName = res.list.map(item => {
-      attrValue.push((item.attrValue * 100).toFixed(2));
-      return item.attrName;
-    });
-    this.barChartLabels = attrName;
-    this.barChartData[0].data = attrValue;
   }
 
 }

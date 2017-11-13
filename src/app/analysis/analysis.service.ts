@@ -65,7 +65,7 @@ export class AnalysisService {
 
   crowdDevice() {
     const url = `${this.apiUrl}/crowdDevice.json`;
-    return this._http.get(url).map(res => res.json().datas).subscribe(res => {
+    return this.http.get(url).subscribe(res => {
       this._crowdDevice$.next(res);
     });
   }
