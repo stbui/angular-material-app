@@ -10,6 +10,7 @@ import { ListsComponent } from './lists/lists.component';
 import { MenuComponent } from './menu/menu.component';
 import { SliderComponent } from './slider/slider.component';
 import { TabsComponent } from './tabs/tabs.component';
+import { IconComponent } from './icon/icon.component';
 
 import { PaginationComponent } from './pagination/pagination.component';
 import { AmapComponent } from './amap/amap.component';
@@ -59,6 +60,10 @@ const routes: Routes = [
   {
     path: 'tabs',
     component: TabsComponent
+  },
+  {
+    path: 'icon',
+    component: IconComponent
   },
   {
     path: 'pagination',

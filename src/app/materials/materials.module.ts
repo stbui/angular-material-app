@@ -28,6 +28,7 @@ import {
 } from '../component/index';
 
 import { CalendarModule } from 'angular-calendar';
+import { IconComponent } from './icon/icon.component';
 
 @NgModule({
   imports: [
@@ -56,7 +57,8 @@ import { CalendarModule } from 'angular-calendar';
     DatePickerComponent,
     MarkdownComponent,
     PopoverComponent,
-    CalendarComponent
+    CalendarComponent,
+    IconComponent
   ]
 })
 export class MaterialsModule { }

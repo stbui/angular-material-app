@@ -29,6 +29,7 @@ export class SidenavService {
     this.addSubItem(materials, '对话框', '/materials/dialogs', 3);
     this.addSubItem(materials, 'Toast', '/materials/toast', 3);
     this.addSubItem(materials, 'Snack-Bar', '/materials/snackbar', 3);
+    this.addSubItem(materials, '图标', '/materials/icon', 3);
 
     const components = this.addItem('拓展组件', 'equalizer', null, 3, '1', '#4CAF50');
     this.addSubItem(components, '高德地图', '/materials/amap', 1);
