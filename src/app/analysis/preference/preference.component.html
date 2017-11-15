@@ -1,16 +1,6 @@
 <div fxLayout="row" fxLayoutWrap>
   <div fxFlex.gt-sm="50">
-    <mat-card>
-      <mat-card-title>人群领域偏好</mat-card-title>
-      <mat-card-content>
-        <canvas baseChart height="200px"
-                [datasets]="barChartData"
-                [labels]="barChartLabels"
-                [options]="barChartOptions"
-                [legend]="barChartLegend"
-                [chartType]="barChartType"></canvas>
-      </mat-card-content>
-    </mat-card>
+    <analysis-preference-field [data]="field_data"></analysis-preference-field>
   </div>
   <div fxFlex.gt-sm="50">
     <mat-card>

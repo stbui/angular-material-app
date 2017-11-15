@@ -21,6 +21,7 @@ import { BrandComponent } from './crowd/brand/brand.component';
 import { OperatorsComponent } from './crowd/operators/operators.component';
 import { RegionComponent } from './crowd/region/region.component';
 import { EquipmentBrandComponent } from './equipment/brand/brand.component';
+import { PreferenceFieldComponent } from './preference/field/field.component';
 
 @NgModule({
   imports: [
@@ -43,7 +44,8 @@ import { EquipmentBrandComponent } from './equipment/brand/brand.component';
     BrandComponent,
     OperatorsComponent,
     RegionComponent,
-    EquipmentBrandComponent
+    EquipmentBrandComponent,
+    PreferenceFieldComponent
   ],
   providers: [
     {provide: 'AnalysisService', useClass: AnalysisService}

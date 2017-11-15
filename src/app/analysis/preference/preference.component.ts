@@ -7,13 +7,7 @@ import { Component, OnInit, Inject } from '@angular/core';
 })
 export class PreferenceComponent implements OnInit {
 
-  public barChartOptions: any = {};
-  public barChartLabels: string[] = [];
-  public barChartType: string = 'horizontalBar';
-  public barChartLegend: boolean = true;
-  public barChartData: any[] = [
-    {data: [], label: '活跃人数(万)'}
-  ];
+  field_data: any = [];
 
   coverRateListDatas: any[] = [];
   activeDatas: any[] = [];
@@ -22,49 +16,43 @@ export class PreferenceComponent implements OnInit {
   }
 
   ngOnInit() {
+    this._service.getCrowdCateList();
     this.getCrowdCateList();
     this.coverRateList();
+
+    this._service.getCrowdAppList();
     this.getCrowdAppList();
   }
 
   getCrowdCateList() {
-    this._service.getCrowdCateList();
 
     this._service.crowdCateList$.subscribe(res => {
-      const list = res.list;
-      if (!list) {
-        return;
+
+      if (res.datas) {
+        res.datas.list.map((item) => {
+          this.field_data.push({
+            name: item.categoryName,
+            value: item.crowdActiveNums
+          });
+        });
       }
 
-      let crowdActiveNums = [];
-      let categoryName = list.map(v => {
-        crowdActiveNums.push(v.crowdActiveNums);
-        return v.categoryName;
-      });
-
-      this.barChartLabels = categoryName;
-      this.barChartData[0].data = crowdActiveNums;
     });
   }
 
   coverRateList() {
     this._service.crowdCateList$.subscribe(res => {
-      const coverRateList = res.coverRateList;
-      if (!coverRateList) {
-        return;
+      if (res.datas) {
+        this.coverRateListDatas = res.datas.coverRateList;
       }
-      this.coverRateListDatas = coverRateList;
     });
   }
 
   getCrowdAppList() {
-    this._service.getCrowdAppList();
     this._service.crowdApplist$.subscribe(res => {
-      const activeDatas = res.activeDatas;
-      if (!activeDatas) {
-        return;
+      if (res.datas) {
+        this.activeDatas = res.datas.activeDatas.datas;
       }
-      this.activeDatas = activeDatas.datas;
     });
   }
 

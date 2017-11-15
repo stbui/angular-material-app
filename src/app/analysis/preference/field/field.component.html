@@ -1,0 +1,16 @@
+<mat-card>
+  <mat-card-title>人群领域偏好</mat-card-title>
+  <mat-card-content>
+    <ngx-charts-bar-horizontal *ngIf="data?.length"
+                             [scheme]="colorScheme"
+                             [results]="data"
+                             [gradient]="gradient"
+                             [xAxis]="showXAxis"
+                             [yAxis]="showYAxis"
+                             [legend]="showLegend"
+                             [showXAxisLabel]="showXAxisLabel"
+                             [showYAxisLabel]="showYAxisLabel"
+                             (select)="onSelect($event)">
+    </ngx-charts-bar-horizontal>
+  </mat-card-content>
+</mat-card>

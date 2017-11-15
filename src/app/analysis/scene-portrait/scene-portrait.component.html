@@ -2,12 +2,17 @@
   <mat-card>
     <mat-card-title>场景概览</mat-card-title>
     <mat-card-content>
-      <canvas baseChart height="100px"
-              [datasets]="bubbleChartData"
-              [labels]="bubbleChartLabels"
-              [options]="bubbleChartOptions"
-              [legend]="bubbleChartLegend"
-              [chartType]="bubbleChartType"></canvas>
+      <ngx-charts-bubble-chart
+        [results]="bubble"
+        [legend]="showLegend"
+        [xAxis]="showXAxis"
+        [yAxis]="showYAxis"
+        [showXAxisLabel]="showXAxisLabel"
+        [showYAxisLabel]="showYAxisLabel"
+        [xAxisLabel]="xAxisLabel"
+        [yAxisLabel]="yAxisLabel"
+        [scheme]="colorScheme">
+      </ngx-charts-bubble-chart>
     </mat-card-content>
   </mat-card>
 </div>
