@@ -25,7 +25,6 @@
 
 
 <ng-template #thenBlock>
-  <perfect-scrollbar class="content">
     <div *ngFor="let notification of notifications; last as isLast">
       <div class="notice" fxLayout="row" fxLayoutAlign="start center" mat-ripple>
         <mat-icon class="icon">notifications</mat-icon>
@@ -40,7 +39,6 @@
       </div>
       <div class="divider" *ngIf="!isLast"></div>
     </div>
-  </perfect-scrollbar>
 </ng-template>
 
 <ng-template #elseBlock>

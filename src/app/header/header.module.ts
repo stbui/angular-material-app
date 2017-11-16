@@ -9,14 +9,14 @@ import { ToolbarHelpComponent } from './toolbar-help/toolbar-help.component';
 import { ToolbarNotificationComponent } from './toolbar-notification/toolbar-notification.component';
 import { ToolbarNotificationService } from './toolbar-notification/toolbar-notification.service';
 
-import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
+// import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 import { LoadingModule } from '../component/loading';
 
 
 @NgModule({
   imports: [
     SharedModule,
-    PerfectScrollbarModule.forChild(),
+    // PerfectScrollbarModule.forChild(),
     HttpModule,
     RouterModule,
     LoadingModule

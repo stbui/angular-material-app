@@ -12,7 +12,7 @@
   </mat-toolbar>
 
   <div class="sidenav-scrollbar-container" [ngClass]="[theme.aside]" fxLayout="column">
-    <mat-nav-list fxLayout="column" [perfect-scrollbar] class="sidenav-list sidenav-toplevel">
+    <mat-nav-list fxLayout="column" class="sidenav-list sidenav-toplevel">
       <sidenav-item *ngFor="let item of items" [item]="item"></sidenav-item>
     </mat-nav-list>
   </div>

@@ -8,14 +8,14 @@ import { ChatComponent } from './chat/chat.component';
 import { NoticeComponent } from './notice/notice.component';
 import { ChatRoutingModule } from './chats.routing';
 
-import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
+// import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 
 
 @NgModule({
   imports: [
     SharedModule,
     ChatRoutingModule,
-    PerfectScrollbarModule.forChild(),
+    // PerfectScrollbarModule.forChild(),
   ],
   declarations: [
     ChatsComponent,

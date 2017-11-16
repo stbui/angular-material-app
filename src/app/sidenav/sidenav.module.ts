@@ -6,14 +6,14 @@ import { SidenavComponent } from './sidenav.component';
 import { ItemComponent } from './item/item.component';
 import { SidenavService } from './sidenav.service';
 
-import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
+// import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 
 
 @NgModule({
   imports: [
     SharedModule,
     RouterModule,
-    PerfectScrollbarModule.forChild(),
+    // PerfectScrollbarModule.forChild(),
   ],
   declarations: [
     SidenavComponent,

@@ -13,7 +13,7 @@
   </mat-toolbar>
 
   <div class="chat-contacts-container" fxLayout="column">
-    <div [perfect-scrollbar] >
+    <div>
       <mat-nav-list class="chat-contacts">
         <mat-list-item class="chat-contact" (click)="setActiveChat(chat)" *ngFor="let chat of chats" mat-ripple>
           <img [src]="chat.picture" mat-list-avatar>
