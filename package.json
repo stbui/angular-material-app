@@ -42,7 +42,6 @@
     "d3": "^4.11.0",
     "firebase": "^4.6.0",
     "hammerjs": "^2.0.8",
-    "markdown-it": "^8.4.0",
     "material-design-icons": "^3.0.1",
     "ng2-charts": "^1.6.0",
     "ngx-perfect-scrollbar": "^4.5.3",

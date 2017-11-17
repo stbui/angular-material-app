@@ -29,7 +29,8 @@ export class MarkdownComponent implements OnInit {
 - 免费更新
   `;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
   }
