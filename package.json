@@ -35,7 +35,7 @@
     "@angular/platform-browser-dynamic": "^5.0.0",
     "@angular/router": "^5.0.0",
     "@swimlane/ngx-charts": "^6.1.0",
-    "@swimlane/ngx-dnd": "^3.0.0",
+    "@swimlane/ngx-dnd": "^3.1.0",
     "angular-calendar": "^0.21.3",
     "angularfire2": "^5.0.0-rc.3",
     "core-js": "^2.4.1",
