@@ -8,14 +8,20 @@ import { ChatComponent } from './chat/chat.component';
 import { NoticeComponent } from './notice/notice.component';
 import { ChatRoutingModule } from './chats.routing';
 
-// import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
+import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
+import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
+import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
+
+const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
+  suppressScrollX: true
+};
 
 
 @NgModule({
   imports: [
     SharedModule,
     ChatRoutingModule,
-    // PerfectScrollbarModule.forChild(),
+    PerfectScrollbarModule
   ],
   declarations: [
     ChatsComponent,
@@ -27,7 +33,11 @@ import { ChatRoutingModule } from './chats.routing';
     NoticeComponent
   ],
   providers: [
-    {provide: 'ChatsService', useClass: ChatsService}
+    {provide: 'ChatsService', useClass: ChatsService},
+    {
+      provide: PERFECT_SCROLLBAR_CONFIG,
+      useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG
+    }
   ]
 })
 export class ChatsModule {

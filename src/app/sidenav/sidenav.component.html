@@ -1,7 +1,7 @@
 <div class="sidenav-container" fxLayout="column">
 
   <mat-toolbar class="sidenav-toolbar mat-elevation-z2" [ngClass]="[theme.logo]" fxLayout="row"
-              fxFlexAlign="center center">
+               fxFlexAlign="center center">
     <mat-icon class="logo-icon material-icons">view_compact</mat-icon>
     <a class="logo-text" href="/">Stbui</a>
     <span fxFlex></span>
@@ -12,9 +12,11 @@
   </mat-toolbar>
 
   <div class="sidenav-scrollbar-container" [ngClass]="[theme.aside]" fxLayout="column">
-    <mat-nav-list fxLayout="column" class="sidenav-list sidenav-toplevel">
-      <sidenav-item *ngFor="let item of items" [item]="item"></sidenav-item>
-    </mat-nav-list>
+    <perfect-scrollbar>
+      <mat-nav-list fxLayout="column" class="sidenav-list sidenav-toplevel">
+        <sidenav-item *ngFor="let item of items" [item]="item"></sidenav-item>
+      </mat-nav-list>
+    </perfect-scrollbar>
   </div>
 
   <div class="sidenav-footer" [ngClass]="[theme.aside]" fxLayout="row" fxFlexAligin="center center">

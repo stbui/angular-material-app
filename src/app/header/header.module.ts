@@ -8,17 +8,23 @@ import { ToolbarUserComponent } from './toolbar-user/toolbar-user.component';
 import { ToolbarHelpComponent } from './toolbar-help/toolbar-help.component';
 import { ToolbarNotificationComponent } from './toolbar-notification/toolbar-notification.component';
 import { ToolbarNotificationService } from './toolbar-notification/toolbar-notification.service';
-
-// import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 import { LoadingModule } from '../component/loading';
+
+import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
+import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
+import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
+
+const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
+  suppressScrollX: true
+};
 
 
 @NgModule({
   imports: [
     SharedModule,
-    // PerfectScrollbarModule.forChild(),
     HttpModule,
     RouterModule,
+    PerfectScrollbarModule,
     LoadingModule
   ],
   declarations: [
@@ -28,7 +34,11 @@ import { LoadingModule } from '../component/loading';
     ToolbarNotificationComponent
   ],
   providers: [
-    {provide: 'toolbarNotificationService', useClass: ToolbarNotificationService}
+    {provide: 'toolbarNotificationService', useClass: ToolbarNotificationService},
+    {
+      provide: PERFECT_SCROLLBAR_CONFIG,
+      useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG
+    }
   ],
   exports: [
     HeaderComponent

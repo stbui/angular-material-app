@@ -23,9 +23,10 @@
   </mat-toolbar>
 
   <div class="chat-content" fxLayout="column" fxLayoutAlign="end stretch">
-
+    <perfect-scrollbar>
       <div class="messages-container" *ngIf="activeChat">
-        <div class="chat-message" *ngFor="let message of activeChat.messages" [ngSwitch]="message.who" fxLayout="column" fxLayoutAlign="end start">
+        <div class="chat-message" *ngFor="let message of activeChat.messages" [ngSwitch]="message.who" fxLayout="column"
+             fxLayoutAlign="end start">
           <div class="partner" *ngSwitchCase="'partner'" fxFlexAlign="start" fxLayout="row" fxLayoutAlign="start start">
             <img class="avatar" [src]="activeChat.picture">
             <span class="message mat-elevation-z1">{{ message.message }}</span>
@@ -36,13 +37,16 @@
           </div>
         </div>
       </div>
-
+    </perfect-scrollbar>
 
     <div class="chat-respond" fxLayout="row" fxLayoutAlign="start center">
       <mat-input-container fxFlex>
-        <textarea matInput (keyup.enter)="onSendTriggered()" [(ngModel)]="newMessage" placeholder="输入您要发送的消息"></textarea>
+        <textarea matInput (keyup.enter)="onSendTriggered()" [(ngModel)]="newMessage"
+                  placeholder="输入您要发送的消息"></textarea>
       </mat-input-container>
-      <button (click)="onSendTriggered()" mat-fab color="primary"><mat-icon>send</mat-icon></button>
+      <button (click)="onSendTriggered()" mat-fab color="primary">
+        <mat-icon>send</mat-icon>
+      </button>
     </div>
   </div>
 </div>
@@ -50,16 +54,16 @@
 
 <mat-menu #chatMenu="matMenu">
   <button mat-menu-item>
-    <mat-icon> account_circle </mat-icon>
+    <mat-icon> account_circle</mat-icon>
     <span> 群聊信息 </span>
   </button>
   <button mat-menu-item (click)="onNoticeTriggered()">
-    <mat-icon> volume_mute </mat-icon>
+    <mat-icon> volume_mute</mat-icon>
     <span> 群公告 </span>
   </button>
   <mat-divider></mat-divider>
   <button mat-menu-item (click)="clearMessages(activeChat)">
-    <mat-icon> clear_all </mat-icon>
+    <mat-icon> clear_all</mat-icon>
     <span> 清空聊天记录 </span>
   </button>
 </mat-menu>

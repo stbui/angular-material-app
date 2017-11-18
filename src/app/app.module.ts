@@ -17,11 +17,6 @@ import { AppRoutingModule } from './app.routing';
 import { SignupComponent } from './pages/signup/signup.component';
 import { SigninComponent } from './pages/signin/signin.component';
 
-// import { PerfectScrollbarModule, PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
-// const PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
-//   suppressScrollX: true
-// };
-
 import { CoreModule } from './core/core.module';
 
 import { FireBaseComponentsModule } from './shared/firebase.module';
@@ -47,7 +42,6 @@ import { FireBaseComponentsModule } from './shared/firebase.module';
     FireBaseComponentsModule,
     CoreModule,
     ReactiveFormsModule,
-    // PerfectScrollbarModule.forRoot(PERFECT_SCROLLBAR_CONFIG)
   ],
   providers: [],
   bootstrap: [AppComponent]
