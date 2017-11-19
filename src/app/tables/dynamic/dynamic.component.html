@@ -1,0 +1,32 @@
+<ngx-datatable
+  class="material"
+  [rows]="rows"
+  [loadingIndicator]="loadingIndicator"
+  [columnMode]="'force'"
+  [headerHeight]="48"
+  [footerHeight]="56"
+  [rowHeight]="'auto'"
+  [scrollbarH]="true"
+  [reorderable]="reorderable"
+  [selectionType]="'checkbox'"
+  [limit]="10">
+
+  <ngx-datatable-column [width]="48" [canAutoResize]="false" [sortable]="false">
+    <ng-template ngx-datatable-header-template let-value="value" let-allRowsSelected="allRowsSelected" let-selectFn="selectFn">
+      <mat-checkbox [checked]="allRowsSelected" (change)="selectFn(!allRowsSelected)"></mat-checkbox>
+    </ng-template>
+
+    <ng-template ngx-datatable-cell-template let-value="value" let-isSelected="isSelected" let-onCheckboxChangeFn="onCheckboxChangeFn">
+      <mat-checkbox [checked]="isSelected" (change)="onCheckboxChangeFn($event)"></mat-checkbox>
+    </ng-template>
+  </ngx-datatable-column>
+
+  <ngx-datatable-column name="Name" prop="name">
+  </ngx-datatable-column>
+
+  <ngx-datatable-column name="Gender" prop="gender">
+  </ngx-datatable-column>
+
+  <ngx-datatable-column name="Company" prop="company">
+  </ngx-datatable-column>
+</ngx-datatable>
