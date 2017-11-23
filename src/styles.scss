@@ -6,15 +6,16 @@
 @import '~@swimlane/ngx-datatable/release/assets/icons.css';
 
 @import "scss/app-theme";
-@import "scss/index";
 
 @include mat-core();
-$candy-app-primary: mat-palette($mat-indigo);
-$candy-app-accent: mat-palette($mat-pink, A200, A100, A400);
-$candy-app-warn: mat-palette($mat-red);
-$theme: mat-light-theme($candy-app-primary, $candy-app-accent, $candy-app-warn);
+$primary: mat-palette($mat-indigo);
+$accent: mat-palette($mat-pink, A200, A100, A400);
+$warn: mat-palette($mat-red);
+$theme: mat-light-theme($primary, $accent, $warn);
 @include angular-material-theme($theme);
 @include stbui-app-theme($theme)
+
+@import "scss/index";
 
 html, body {
   min-height: 100%;

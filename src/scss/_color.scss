@@ -1,0 +1,65 @@
+@import '~@angular/material/theming';
+
+$red: mat-palette($mat-red);
+$pink: mat-palette($mat-pink);
+$purple: mat-palette($mat-purple);
+$deep-purple: mat-palette($mat-deep-purple);
+$indigo: mat-palette($mat-indigo);
+$blue: mat-palette($mat-blue);
+$light-blue: mat-palette($mat-light-blue);
+$cyan: mat-palette($mat-cyan);
+$teal: mat-palette($mat-teal);
+$green: mat-palette($mat-green);
+$light-green: mat-palette($mat-light-green);
+$lime: mat-palette($mat-lime);
+$yellow: mat-palette($mat-yellow);
+$amber: mat-palette($mat-amber);
+$orange: mat-palette($mat-orange);
+$deep-orange: mat-palette($mat-deep-orange);
+$brown: mat-palette($mat-brown);
+$grey: mat-palette($mat-grey);
+$blue-grey: mat-palette($mat-blue-grey);
+
+$stbui-theme-colors: (
+  primary: $primary,
+  accent: $accent,
+  warn: $warn,
+  red: $red,
+  pink: $pink,
+  purple: $purple,
+  deep-purple: $deep-purple,
+  indigo: $indigo,
+  blue: $blue,
+  light-blue: $light-blue,
+  cyan: $cyan,
+  teal: $teal,
+  green: $green,
+  light-green: $light-green,
+  lime: $lime,
+  yellow: $yellow,
+  amber: $amber,
+  orange: $orange,
+  deep-orange: $deep-orange,
+  brown: $brown,
+  grey: $grey,
+  blue-grey: $blue-grey,
+);
+
+@mixin _stbui-background($color, $hue: default) {
+  background-color: mat-color($color) !important;
+}
+
+@mixin stbui-theme-color() {
+  @each $name, $color in $stbui-theme-colors {
+
+    .stbui-background-#{$name} {
+      @include _stbui-background($color);
+    }
+
+    .stbui-#{$name} {
+      @include _stbui-background($color);
+    }
+  }
+}
+
+@include stbui-theme-color();
