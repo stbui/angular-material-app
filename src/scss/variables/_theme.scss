@@ -1,0 +1,98 @@
+@import '~@angular/material/theming';
+
+$stbui-white: (
+  500: white,
+  contrast: (
+    500: $black-87-opacity
+  )
+);
+$stbui-black: (
+  500: black,
+  contrast: (
+    //500: white
+    500: $white-87-opacity
+  )
+);
+$stbui-dark: (
+  50: #ECECEE,
+  100: #C5C6CB,
+  200: #9EA1A9,
+  300: #7D818C,
+  400: #5C616F,
+  500: #3C4252,
+  600: #353A48,
+  700: #2D323E,
+  800: #262933,
+  900: #1E2129,
+  A100: #C5C6CB,
+  A200: #9EA1A9,
+  A400: #5C616F,
+  A700: #2D323E,
+  contrast: (
+    50: $black-87-opacity,
+    100: $black-87-opacity,
+    200: $black-87-opacity,
+    300: white,
+    400: white,
+    500: $white-87-opacity,
+    600: $white-87-opacity,
+    700: $white-87-opacity,
+    800: $white-87-opacity,
+    900: $white-87-opacity,
+    A100: $black-87-opacity,
+    A200: $white-87-opacity,
+    A400: $white-87-opacity,
+    A700: $white-87-opacity,
+  )
+);
+
+$red: mat-palette($mat-red);
+$pink: mat-palette($mat-pink);
+$purple: mat-palette($mat-purple);
+$deep-purple: mat-palette($mat-deep-purple);
+$indigo: mat-palette($mat-indigo);
+$blue: mat-palette($mat-blue);
+$light-blue: mat-palette($mat-light-blue);
+$cyan: mat-palette($mat-cyan);
+$teal: mat-palette($mat-teal);
+$green: mat-palette($mat-green);
+$light-green: mat-palette($mat-light-green);
+$lime: mat-palette($mat-lime);
+$yellow: mat-palette($mat-yellow);
+$amber: mat-palette($mat-amber);
+$orange: mat-palette($mat-orange);
+$deep-orange: mat-palette($mat-deep-orange);
+$brown: mat-palette($mat-brown);
+$grey: mat-palette($mat-grey);
+$blue-grey: mat-palette($mat-blue-grey);
+$white: mat-palette($stbui-white);
+$black: mat-palette($stbui-black);
+$dark: mat-palette($stbui-dark);
+
+$stbui-theme-colors: (
+  primary: $primary,
+  accent: $accent,
+  warn: $warn,
+  red: $red,
+  pink: $pink,
+  purple: $purple,
+  deep-purple: $deep-purple,
+  indigo: $indigo,
+  blue: $blue,
+  light-blue: $light-blue,
+  cyan: $cyan,
+  teal: $teal,
+  green: $green,
+  light-green: $light-green,
+  lime: $lime,
+  yellow: $yellow,
+  amber: $amber,
+  orange: $orange,
+  deep-orange: $deep-orange,
+  brown: $brown,
+  grey: $grey,
+  blue-grey: $blue-grey,
+  white: $white,
+  black: $black,
+  dark: $dark
+);

@@ -5,17 +5,19 @@
 @import '~@swimlane/ngx-datatable/release/themes/material.css';
 @import '~@swimlane/ngx-datatable/release/assets/icons.css';
 
-@import "scss/app-theme";
 
 @include mat-core();
 $primary: mat-palette($mat-indigo);
 $accent: mat-palette($mat-pink, A200, A100, A400);
 $warn: mat-palette($mat-red);
 $theme: mat-light-theme($primary, $accent, $warn);
+
+@import "scss/index";
+@import "scss/app-theme";
 @include angular-material-theme($theme);
 @include stbui-app-theme($theme)
 
-@import "scss/index";
+
 
 html, body {
   min-height: 100%;

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import * as screenfull from 'screenfull';
 import { NavigationStart, NavigationEnd, Router } from '@angular/router';
 
@@ -9,13 +9,9 @@ import { NavigationStart, NavigationEnd, Router } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
 
-  @Input() theme = {
-    header: 'stbui-white',
-    aside: 'stbui-default',
-    logo: 'stbui-primary'
-  };
   @Input() customizer;
   @Input() sidenav;
+
   isFullscreen: boolean = false;
   showLoading: boolean;
 

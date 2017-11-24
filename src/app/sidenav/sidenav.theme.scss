@@ -1,153 +1,33 @@
-@mixin _theme-skin-default($theme) {
-  $primary: map-get($theme, primary);
-  $accent: map-get($theme, accent);
-  $warn: map-get($theme, warn);
-  $background: map-get($theme, background);
-  $foreground: map-get($theme, foreground);
+@mixin stbui-navigation-theme() {
+  @each $name, $color in $stbui-theme-colors {
 
-  .stbui-default {
-    background: #333C44;
-    color: mat-color($foreground, text);
+    .stbui-background-#{$name} {
+      .sidenav-anchor {
+        color: mat-contrast($color, 500);
 
-    .sidenav-anchor {
-      color: #a1a1a1;
+        &:hover {
+          color: mat-contrast($color, 600);
+        }
 
-      &:hover {
-        color: #fafafa;
+        &.active {
+          background-color: rgba(white, 0.04) !important;
+        }
       }
 
-      &.active {
-        color: #fafafa;
-      }
-    }
+      sidenav-item.open {
 
-    sidenav-item.open {
+        > .sidenav-list {
+          background-color: $black-12-opacity;
+        }
 
-      > .sidenav-list {
-        background-color: rgba(0, 0, 0, .1);
-      }
+        > .sidenav-anchor {
+          background-color: $black-12-opacity;
 
-      > .sidenav-anchor {
-        background-color: rgba(0, 0, 0, .1);
-
-        &:before {
-          background: linear-gradient(180deg, rgba(0, 0, 0, .1), transparent);
+          &:before {
+            background: linear-gradient(180deg, $black-12-opacity, transparent);
+          }
         }
       }
     }
   }
-}
-
-@mixin _theme-skin-white($theme) {
-  $primary: map-get($theme, primary);
-  $accent: map-get($theme, accent);
-  $warn: map-get($theme, warn);
-  $background: map-get($theme, background);
-  $foreground: map-get($theme, foreground);
-
-  .stbui-white {
-    background: #fff;
-    color: mat-color($foreground, text);
-
-    .sidenav-anchor {
-      color: #a1a1a1;
-
-      &:hover {
-        color: #fafafa;
-      }
-
-      &.active {
-        color: #fafafa;
-      }
-    }
-  }
-}
-
-@mixin _theme-skin-primary($theme) {
-  $primary: map-get($theme, primary);
-  $accent: map-get($theme, accent);
-  $warn: map-get($theme, warn);
-  $background: map-get($theme, background);
-  $foreground: map-get($theme, foreground);
-
-  .stbui-primary {
-    background: mat-color($primary);
-    color: #fff;
-
-    .sidenav-anchor {
-      color: #a1a1a1;
-
-      &:hover {
-        color: #a1a1a1;
-      }
-
-      &.active {
-        color: #fafafa;
-      }
-    }
-  }
-}
-
-@mixin _theme-skin-accent($theme) {
-  $primary: map-get($theme, primary);
-  $accent: map-get($theme, accent);
-  $warn: map-get($theme, warn);
-  $background: map-get($theme, background);
-  $foreground: map-get($theme, foreground);
-
-  .stbui-accent {
-    background: mat-color($accent);
-    color: #fff;
-
-    .sidenav-anchor {
-      color: #a1a1a1;
-
-      &:hover {
-        color: #a1a1a1;
-      }
-
-      &.active {
-        color: #fafafa;
-      }
-    }
-  }
-}
-
-@mixin _theme-skin-warn($theme) {
-  $primary: map-get($theme, primary);
-  $accent: map-get($theme, accent);
-  $warn: map-get($theme, warn);
-  $background: map-get($theme, background);
-  $foreground: map-get($theme, foreground);
-
-  .stbui-warn {
-    background: mat-color($warn);
-    color: #fff;
-
-    .sidenav-anchor {
-      color: #a1a1a1;
-
-      &:hover {
-        color: #a1a1a1;
-      }
-
-      &.active {
-        color: #fafafa;
-      }
-    }
-  }
-}
-
-@mixin theme-skin($theme) {
-  $primary: map-get($theme, primary);
-  $accent: map-get($theme, accent);
-  $warn: map-get($theme, warn);
-  $background: map-get($theme, background);
-  $foreground: map-get($theme, foreground);
-
-  @include _theme-skin-default($theme);
-  @include _theme-skin-white($theme);
-  @include _theme-skin-primary($theme);
-  @include _theme-skin-accent($theme);
-  @include _theme-skin-warn($theme);
 }

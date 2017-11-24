@@ -1,4 +1,4 @@
-import { Component, OnInit, Inject, Input, OnDestroy } from '@angular/core';
+import { Component, OnInit, Inject, OnDestroy } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { SidenavItem } from './item/item.model';
 import { Subscription } from 'rxjs';
@@ -9,12 +9,6 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./sidenav.component.scss']
 })
 export class SidenavComponent implements OnInit, OnDestroy {
-
-  @Input() theme = {
-    header: 'stbui-white',
-    aside: 'stbui-default',
-    logo: 'stbui-primary'
-  };
 
   items: SidenavItem[] = [];
   private _itemsSubscription: Subscription;

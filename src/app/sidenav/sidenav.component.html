@@ -1,5 +1,5 @@
 <div class="sidenav-container" fxLayout="column">
-  <div class="sidenav-scrollbar-container" [ngClass]="[theme.aside]" fxLayout="column">
+  <div class="sidenav-scrollbar-container" fxLayout="column">
     <perfect-scrollbar>
       <mat-nav-list fxLayout="column" class="sidenav-list sidenav-toplevel">
         <sidenav-item *ngFor="let item of items" [item]="item"></sidenav-item>
@@ -7,7 +7,7 @@
     </perfect-scrollbar>
   </div>
 
-  <div class="sidenav-footer" [ngClass]="[theme.aside]" fxLayout="row" fxFlexAligin="center center">
+  <div class="sidenav-footer" fxLayout="row" fxFlexAligin="center center">
     <a fxFlex="100" mat-raised-button href="https://github.com/stbui/angular-material-app/issues" target="_blank">
       <mat-icon style="font-size: 20px;">help</mat-icon>
       帮助与支持</a>

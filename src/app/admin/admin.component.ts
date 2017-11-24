@@ -22,11 +22,6 @@ export class AdminComponent implements OnInit {
   sidenavMode: string = 'side';
 
   title = '后台管理系统 - Power by stbui';
-  theme = {
-    header: 'stbui-white',
-    aside: 'stbui-default',
-    logo: 'stbui-primary'
-  };
 
   get media$(): Observable<MediaChange> {
     return this._media$.asObservable();
@@ -37,7 +32,6 @@ export class AdminComponent implements OnInit {
          .subscribe(res => this._media$.next(res), err => this._media$.error(err), () => this._media$.complete());
 
     this.onSettingsChanged = this.config.onSettingsChanged.subscribe(settings => {
-      console.log(settings);
       this.settings = settings;
     });
   }
@@ -53,13 +47,6 @@ export class AdminComponent implements OnInit {
     setTimeout(() => {
       window.dispatchEvent(new Event('resize'));
     }, 2000);
-  }
-
-  /**
-   * @param theme {Object} 主题对象
-   */
-  onTheme(theme) {
-    this.theme = theme;
   }
 
   /**
