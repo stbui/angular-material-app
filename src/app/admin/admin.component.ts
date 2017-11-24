@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { MediaChange, ObservableMedia } from '@angular/flex-layout';
 import { ReplaySubject } from 'rxjs/ReplaySubject';
 import { Observable } from 'rxjs/Observable';
-import { Subscription } from "rxjs";
+import { Subscription } from 'rxjs/Subscription';
+import { ConfigService } from '../core/config.service';
 
 @Component({
   selector: 'app-admin',
@@ -10,6 +11,9 @@ import { Subscription } from "rxjs";
   styleUrls: ['./admin.component.scss']
 })
 export class AdminComponent implements OnInit {
+
+  settings: any;
+  onSettingsChanged: Subscription;
 
   private _media$: ReplaySubject<MediaChange> = new ReplaySubject(1);
   private _mediaSubscription: Subscription;
@@ -28,9 +32,14 @@ export class AdminComponent implements OnInit {
     return this._media$.asObservable();
   }
 
-  constructor(media: ObservableMedia) {
+  constructor(media: ObservableMedia, private config: ConfigService) {
     media.asObservable()
          .subscribe(res => this._media$.next(res), err => this._media$.error(err), () => this._media$.complete());
+
+    this.onSettingsChanged = this.config.onSettingsChanged.subscribe(settings => {
+      console.log(settings);
+      this.settings = settings;
+    });
   }
 
   ngOnInit() {

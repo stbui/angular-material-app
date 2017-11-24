@@ -1,16 +1,4 @@
 <div class="sidenav-container" fxLayout="column">
-
-  <mat-toolbar class="sidenav-toolbar mat-elevation-z2" [ngClass]="[theme.logo]" fxLayout="row"
-               fxFlexAlign="center center">
-    <mat-icon class="logo-icon material-icons">view_compact</mat-icon>
-    <a class="logo-text" href="/">Stbui</a>
-    <span fxFlex></span>
-    <button mat-icon-button (click)="toggleIconSidenav()" fxHide="true" [fxHide.gt-sm]="false" style="display: none">
-      <mat-icon class="icon-sidenav-toggle" [class.rotate]="isIconSidenav()">chevron_left
-      </mat-icon>
-    </button>
-  </mat-toolbar>
-
   <div class="sidenav-scrollbar-container" [ngClass]="[theme.aside]" fxLayout="column">
     <perfect-scrollbar>
       <mat-nav-list fxLayout="column" class="sidenav-list sidenav-toplevel">

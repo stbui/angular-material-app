@@ -5,11 +5,12 @@
   </mat-sidenav>
 
   <mat-sidenav class="sidenav" align="start" [mode]="sidenavMode" [opened]="sidenavOpen" #sidenav>
-    <app-sidenav [theme]="theme"></app-sidenav>
+    <app-brand [ngClass]="settings.colorClasses.brand"></app-brand>
+    <app-sidenav [theme]="theme" [ngClass]="settings.colorClasses.navigation"></app-sidenav>
   </mat-sidenav>
 
   <div class="sidenav-container" fxLayout="column">
-    <stbui-header [theme]="theme" [customizer]="customizer" [sidenav]="sidenav"></stbui-header>
+    <stbui-header [theme]="theme" [customizer]="customizer" [sidenav]="sidenav" [ngClass]="settings.colorClasses.header"></stbui-header>
 
     <div class="main-container" #scrollContainer>
       <router-outlet (activate)="onActivate($event, scrollContainer)"></router-outlet>

@@ -1,11 +1,9 @@
+:host {
+  display: block;
+  height: calc(100% - 64px);
+}
 mat-toolbar.mat-toolbar.sidenav-toolbar {
   z-index: 3;
-}
-
-.logo-text {
-  text-decoration: none;
-  margin-left: 24px;
-  line-height: normal;
 }
 
 .sidenav-container, .sidenav-scrollbar-container {
@@ -15,15 +13,6 @@ mat-toolbar.mat-toolbar.sidenav-toolbar {
 .cdk-focus-trap-content, mat-sidenav {
   overflow-y: hidden !important;
   overflow-x: hidden;
-}
-
-.icon-sidenav-toggle {
-  color: #f00;
-  transition: transform .25s;
-
-  &.rotate {
-    transform: rotate(-180deg);
-  }
 }
 
 .sidenav-footer {

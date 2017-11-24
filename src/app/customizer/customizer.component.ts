@@ -1,5 +1,7 @@
 import {Component, OnInit, Output, EventEmitter} from '@angular/core';
 import {CustomizerInterface} from './customizer.interface';
+import { ConfigService } from '../core/config.service';
+import { Subscription } from 'rxjs/Subscription';
 
 @Component({
   selector: 'stbui-customizer',
@@ -7,6 +9,9 @@ import {CustomizerInterface} from './customizer.interface';
   styleUrls: ['./customizer.component.scss']
 })
 export class CustomizerComponent implements OnInit {
+
+  settings: any;
+  onSettingsChanged: Subscription;
 
   _theme = {
     dark: {
@@ -76,7 +81,15 @@ export class CustomizerComponent implements OnInit {
 
   @Output() theme = new EventEmitter();
 
-  constructor() {
+  constructor(private config: ConfigService) {
+    this.onSettingsChanged = this.config.onSettingsChanged.subscribe(settings => {
+      this.settings = settings;
+    });
+  }
+
+  onSettingsChange() {
+    // this.settings.classes.header = 'stbui-background-grey';
+    this.config.setSettings(this.settings);
   }
 
   ngOnInit() {

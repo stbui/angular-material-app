@@ -20,6 +20,7 @@ import { SigninComponent } from './pages/signin/signin.component';
 import { CoreModule } from './core/core.module';
 
 import { FireBaseComponentsModule } from './shared/firebase.module';
+import { BrandComponent } from './admin/brand/brand.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { FireBaseComponentsModule } from './shared/firebase.module';
     CustomizerComponent,
     DashboardComponent,
     SignupComponent,
-    SigninComponent
+    SigninComponent,
+    BrandComponent
   ],
   imports: [
     BrowserModule,
