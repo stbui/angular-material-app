@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ConfigService } from '../core/config.service';
+import { ConfigService } from '../../core/config.service';
 import { Subscription } from 'rxjs/Subscription';
 
 @Component({

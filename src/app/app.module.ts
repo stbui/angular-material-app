@@ -1,48 +1,38 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { SharedModule } from './shared/shared.module';
 import 'hammerjs';
 import { ReactiveFormsModule } from '@angular/forms';
 
-import { AppComponent } from './app.component';
-import { AdminComponent } from './admin/admin.component';
-import { HeaderModule } from './header/header.module';
-import { FooterComponent } from './footer/footer.component';
-import { CustomizerComponent } from './customizer/customizer.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { SidenavModule } from './sidenav/sidenav.module';
+import { SharedModule } from './shared/shared.module';
+import { CoreModule } from './core/core.module';
+
 import { AppRoutingModule } from './app.routing';
+import { AdminModule } from './admin/admin.module';
+import { AppComponent } from './app.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 import { SignupComponent } from './pages/signup/signup.component';
 import { SigninComponent } from './pages/signin/signin.component';
 
-import { CoreModule } from './core/core.module';
-
 import { FireBaseComponentsModule } from './shared/firebase.module';
-import { BrandComponent } from './admin/brand/brand.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AdminComponent,
-    FooterComponent,
-    CustomizerComponent,
     DashboardComponent,
     SignupComponent,
-    SigninComponent,
-    BrandComponent
+    SigninComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     NoopAnimationsModule,
     SharedModule,
-    HeaderModule,
-    SidenavModule,
+    CoreModule,
+    AdminModule,
     AppRoutingModule,
     FireBaseComponentsModule,
-    CoreModule,
     ReactiveFormsModule,
   ],
   providers: [],
