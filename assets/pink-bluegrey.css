@@ -278,7 +278,8 @@
     color: rgba(0, 0, 0, 0.38); }
 
 :not(.mat-calendar-body-disabled):hover > .mat-calendar-body-cell-content:not(.mat-calendar-body-selected),
-.cdk-keyboard-focused .mat-calendar-body-active > .mat-calendar-body-cell-content:not(.mat-calendar-body-selected) {
+.cdk-keyboard-focused .mat-calendar-body-active > .mat-calendar-body-cell-content:not(.mat-calendar-body-selected),
+.cdk-program-focused .mat-calendar-body-active > .mat-calendar-body-cell-content:not(.mat-calendar-body-selected) {
   background-color: rgba(0, 0, 0, 0.04); }
 
 .mat-calendar-body-selected {
@@ -324,9 +325,6 @@
   .mat-expansion-panel-header[aria-disabled='true'] .mat-expansion-panel-header-description {
     color: inherit; }
 
-.mat-form-field {
-  width: 200px; }
-
 .mat-form-field-placeholder {
   color: rgba(0, 0, 0, 0.54); }
 
@@ -345,10 +343,11 @@
 
 .mat-form-field-underline {
   background-color: rgba(0, 0, 0, 0.42); }
-  .mat-form-field-underline.mat-disabled {
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.42) 0%, rgba(0, 0, 0, 0.42) 33%, transparent 0%);
-    background-size: 4px 1px;
-    background-repeat: repeat-x; }
+
+.mat-form-field-disabled .mat-form-field-underline {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.42) 0%, rgba(0, 0, 0, 0.42) 33%, transparent 0%);
+  background-size: 4px 1px;
+  background-repeat: repeat-x; }
 
 .mat-form-field-ripple {
   background-color: #e91e63; }
@@ -776,6 +775,9 @@
 .mat-tab-group.mat-background-primary .mat-tab-header-pagination-disabled .mat-tab-header-pagination-chevron, .mat-tab-nav-bar.mat-background-primary .mat-tab-header-pagination-disabled .mat-tab-header-pagination-chevron {
   border-color: rgba(255, 255, 255, 0.4); }
 
+.mat-tab-group.mat-background-primary .mat-ripple-element, .mat-tab-nav-bar.mat-background-primary .mat-ripple-element {
+  background-color: rgba(255, 255, 255, 0.12); }
+
 .mat-tab-group.mat-background-accent .mat-tab-label:focus, .mat-tab-group.mat-background-accent .mat-tab-link:focus, .mat-tab-nav-bar.mat-background-accent .mat-tab-label:focus, .mat-tab-nav-bar.mat-background-accent .mat-tab-link:focus {
   background-color: rgba(207, 216, 220, 0.3); }
 
@@ -793,6 +795,9 @@
 .mat-tab-group.mat-background-accent .mat-tab-header-pagination-disabled .mat-tab-header-pagination-chevron, .mat-tab-nav-bar.mat-background-accent .mat-tab-header-pagination-disabled .mat-tab-header-pagination-chevron {
   border-color: rgba(0, 0, 0, 0.4); }
 
+.mat-tab-group.mat-background-accent .mat-ripple-element, .mat-tab-nav-bar.mat-background-accent .mat-ripple-element {
+  background-color: rgba(0, 0, 0, 0.12); }
+
 .mat-tab-group.mat-background-warn .mat-tab-label:focus, .mat-tab-group.mat-background-warn .mat-tab-link:focus, .mat-tab-nav-bar.mat-background-warn .mat-tab-label:focus, .mat-tab-nav-bar.mat-background-warn .mat-tab-link:focus {
   background-color: rgba(255, 205, 210, 0.3); }
 
@@ -809,6 +814,9 @@
 
 .mat-tab-group.mat-background-warn .mat-tab-header-pagination-disabled .mat-tab-header-pagination-chevron, .mat-tab-nav-bar.mat-background-warn .mat-tab-header-pagination-disabled .mat-tab-header-pagination-chevron {
   border-color: rgba(255, 255, 255, 0.4); }
+
+.mat-tab-group.mat-background-warn .mat-ripple-element, .mat-tab-nav-bar.mat-background-warn .mat-ripple-element {
+  background-color: rgba(255, 255, 255, 0.12); }
 
 .mat-toolbar {
   background: whitesmoke;
