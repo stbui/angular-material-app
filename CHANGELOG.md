@@ -3,10 +3,17 @@
 ### 更新
 
 * **angular：** 更新到`5.0.0`
+* **material:** 更新到`5.0.0`
 * **flex-layout：**  更新到`2.0.0-beta.10`
-* 升级package依赖
+* **ng-quill：**  更新到`2.0.4`
+* **@swimlane/ngx-datatable:** 更新到`11.1.5`
+* **@swimlane/ngx-charts:** 更新到`7.0.1`
+* **ngx-perfect-scrollbar:** 更新到`^5.0.5`
 * 移除指定的三中主题色，改进主题切换方式，支持material内置颜色主题切换
 
+### 问题修复
+* 修复todo类型定义
+* 修复customizer遗留无用代码
 
 # 0.4.12
 

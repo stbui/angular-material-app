@@ -1,10 +1,4 @@
 <div class="customizer-container" fxLayout="column">
-  <mat-radio-group class="customizer-radio-group">
-    <mat-radio-button class="customizer-radio-button" *ngFor="let theme of themes; index as i"
-                      (change)="installTheme(theme)" [value]="theme.primary">{{theme.primary}}
-    </mat-radio-button>
-  </mat-radio-group>
-
   <div class="m-t-10">header</div>
   <mat-radio-group class="customizer-radio-group" [(ngModel)]="settings.colorClasses.header"
                    (ngModelChange)="onSettingsChange()">

@@ -14,9 +14,9 @@
 
 [![Angular](https://img.shields.io/badge/Angular%205-5.0.0-brightgreen.svg?style=flat-square)](https://github.com/angular/angular)
 [![Angular-cli](https://img.shields.io/badge/Angular.cli-1.5.0-brightgreen.svg?style=square)](https://github.com/angular/angular-cli)
-[![Angular Material 2](https://img.shields.io/badge/Material%202-5.0.0.rc.0-brightgreen.svg?style=square)](https://github.com/angular/material2)
+[![Angular Material 2](https://img.shields.io/badge/Material%202-5.0.1-brightgreen.svg?style=square)](https://github.com/angular/material2)
 [![Flex-Layout](https://img.shields.io/badge/Flex.Layout-2.0.0.beta.11-brightgreen.svg?style=square)](https://github.com/angular/flex-layout)
-[![Angular FireBase](https://img.shields.io/badge/Firebase-5.0.0.rc.3-brightgreen.svg?style=square)](https://github.com/angular/angularfire2)
+[![Angular FireBase](https://img.shields.io/badge/Firebase-5.0.0.rc.4-brightgreen.svg?style=square)](https://github.com/angular/angularfire2)
 
 
 ### 特性
