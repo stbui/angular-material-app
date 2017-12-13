@@ -1605,7 +1605,7 @@
 </ul>
 
 <div class="tab-content">
-    <div class="tab-pane fade active in" id="info">
+    <div class="tab-pane fade active in" id="c-info">
         <p class="comment">
             <h3>File</h3>
         </p>
@@ -1628,10 +1628,12 @@
                             <td class="col-md-4">
                                 <ul class="index-list">
                                     <li>
-                                        <span class="modifier">Private</span> <a href="#_userList$">_userList$</a>
+                                            <span class="modifier">Private</span>
+                                        <a href="#_userList$">_userList$</a>
                                     </li>
                                     <li>
-                                        <span class="modifier">Private</span> <a href="#apiUrl">apiUrl</a>
+                                            <span class="modifier">Private</span>
+                                        <a href="#apiUrl">apiUrl</a>
                                     </li>
                                 </ul>
                             </td>
@@ -1645,7 +1647,7 @@
                             <td class="col-md-4">
                                 <ul class="index-list">
                                     <li>
-                                         <a href="#getUserList">getUserList</a>
+                                        <a href="#getUserList">getUserList</a>
                                     </li>
                                 </ul>
                             </td>
@@ -1659,7 +1661,7 @@
                             <td class="col-md-4">
                                 <ul class="index-list">
                                     <li>
-                                         <a href="#userList$">userList$</a>
+                                        <a href="#userList$">userList$</a>
                                     </li>
                                 </ul>
                             </td>
@@ -1674,7 +1676,7 @@
                         <tbody>
                             <tr>
                                 <td class="col-md-4">
-                                    <code>constructor(_http: <a href="https://angular.io/docs/ts/latest/api/api/http/Http" target="_blank">Http</a>)</code>
+                                    <code>constructor(_http: <a href="https://angular.io/api/http/Http" target="_blank">Http</a>)</code>
                                 </td>
                             </tr>
                                     <tr>
@@ -1700,7 +1702,7 @@
                                                             <tr>
                                                               <td>_http</td>
                                                               <td>
-                                                                        <code><a href="https://angular.io/docs/ts/latest/api/api/http/Http" target="_blank" >Http</a></code>
+                                                                        <code><a href="https://angular.io/api/http/Http" target="_blank" >Http</a></code>
                                                               </td>
                                                               <td>
                                                               </td>
@@ -1725,7 +1727,12 @@
                             <tr>
                                 <td class="col-md-4">
                                     <a name="getUserList"></a>
-                                    <span class="name"><b> getUserList</b><a href="#getUserList"><span class="fa fa-link"></span></a></span>
+                                    <span class="name">
+                                        <b>
+                                        getUserList
+                                        </b>
+                                        <a href="#getUserList"><span class="fa fa-link"></span></a>
+                                    </span>
                                 </td>
                             </tr>
                             <tr>
@@ -1764,12 +1771,18 @@
                             <tr>
                                 <td class="col-md-4">
                                     <a name="_userList$"></a>
-                                    <span class="name"><b><span class="modifier">Private</span> _userList$</b><a href="#_userList$"><span class="fa fa-link"></span></a></span>
+                                    <span class="name">
+                                        <b>
+                                            <span class="modifier">Private</span>
+                                        _userList$
+                                        </b>
+                                        <a href="#_userList$"><span class="fa fa-link"></span></a>
+                                    </span>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <span class="modifier-icon fa fa-lock"></span><code>_userList$:     <code>BehaviorSubject&lt;any&gt;</code>
+                                    <span class="modifier-icon fa fa-reset"></span><code>_userList$:     <code>BehaviorSubject&lt;any&gt;</code>
             </code>
                                 </td>
                             </tr>
@@ -1793,18 +1806,24 @@
                             <tr>
                                 <td class="col-md-4">
                                     <a name="apiUrl"></a>
-                                    <span class="name"><b><span class="modifier">Private</span> apiUrl</b><a href="#apiUrl"><span class="fa fa-link"></span></a></span>
+                                    <span class="name">
+                                        <b>
+                                            <span class="modifier">Private</span>
+                                        apiUrl
+                                        </b>
+                                        <a href="#apiUrl"><span class="fa fa-link"></span></a>
+                                    </span>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <span class="modifier-icon fa fa-lock"></span><code>apiUrl:     <code></code>
+                                    <span class="modifier-icon fa fa-reset"></span><code>apiUrl:     <code></code>
             </code>
                                 </td>
                             </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <i>Default value : </i><code>/assets/data/pages</code>
+                                        <i>Default value : </i><code>&#x27;/assets/data/pages&#x27;</code>
                                     </td>
                                 </tr>
                                     <tr>
@@ -1848,7 +1867,7 @@
     </div>
 
 
-    <div class="tab-pane fade tab-source-code" id="source">
+    <div class="tab-pane fade tab-source-code" id="c-source">
         <pre class="line-numbers"><code class="language-typescript">import { Injectable } from &#x27;@angular/core&#x27;;
 import { Http } from &#x27;@angular/http&#x27;;
 import { BehaviorSubject } from &#x27;rxjs/BehaviorSubject&#x27;;

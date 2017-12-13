@@ -1609,7 +1609,7 @@
 </ul>
 
 <div class="tab-content">
-    <div class="tab-pane fade active in" id="info"><p class="comment">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
     <h3>File</h3>
 </p>
 <p class="comment">
@@ -1622,7 +1622,7 @@
         <h3>Implements</h3>
     </p>
     <p class="comment">
-                <code><a href="https://angular.io/docs/ts/latest/api/api/core/OnInit" target="_blank" >OnInit</a></code>
+                <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
     </p>
 
 
@@ -1677,10 +1677,10 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                 <a href="#brand_data">brand_data</a>
+                                <a href="#brand_data">brand_data</a>
                             </li>
                             <li>
-                                 <a href="#operator_data">operator_data</a>
+                                <a href="#operator_data">operator_data</a>
                             </li>
                         </ul>
                     </td>
@@ -1694,13 +1694,13 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                 <a href="#brands">brands</a>
+                                <a href="#brands">brands</a>
                             </li>
                             <li>
-                                 <a href="#ngOnInit">ngOnInit</a>
+                                <a href="#ngOnInit">ngOnInit</a>
                             </li>
                             <li>
-                                 <a href="#operators">operators</a>
+                                <a href="#operators">operators</a>
                             </li>
                         </ul>
                     </td>
@@ -1769,7 +1769,12 @@
                     <tr>
                         <td class="col-md-4">
                             <a name="brands"></a>
-                            <span class="name"><b> brands</b><a href="#brands"><span class="fa fa-link"></span></a></span>
+                            <span class="name">
+                                <b>
+                                brands
+                                </b>
+                                <a href="#brands"><span class="fa fa-link"></span></a>
+                            </span>
                         </td>
                     </tr>
                     <tr>
@@ -1801,7 +1806,12 @@
                     <tr>
                         <td class="col-md-4">
                             <a name="ngOnInit"></a>
-                            <span class="name"><b> ngOnInit</b><a href="#ngOnInit"><span class="fa fa-link"></span></a></span>
+                            <span class="name">
+                                <b>
+                                ngOnInit
+                                </b>
+                                <a href="#ngOnInit"><span class="fa fa-link"></span></a>
+                            </span>
                         </td>
                     </tr>
                     <tr>
@@ -1833,7 +1843,12 @@
                     <tr>
                         <td class="col-md-4">
                             <a name="operators"></a>
-                            <span class="name"><b> operators</b><a href="#operators"><span class="fa fa-link"></span></a></span>
+                            <span class="name">
+                                <b>
+                                operators
+                                </b>
+                                <a href="#operators"><span class="fa fa-link"></span></a>
+                            </span>
                         </td>
                     </tr>
                     <tr>
@@ -1872,7 +1887,12 @@
                     <tr>
                         <td class="col-md-4">
                             <a name="brand_data"></a>
-                            <span class="name"><b> brand_data</b><a href="#brand_data"><span class="fa fa-link"></span></a></span>
+                            <span class="name">
+                                <b>
+                                brand_data
+                                </b>
+                                <a href="#brand_data"><span class="fa fa-link"></span></a>
+                            </span>
                         </td>
                     </tr>
                     <tr>
@@ -1885,6 +1905,11 @@
                             <td class="col-md-4">
                                 <i>Type : </i>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
     
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Default value : </i><code>[]</code>
                             </td>
                         </tr>
                             <tr>
@@ -1901,7 +1926,12 @@
                     <tr>
                         <td class="col-md-4">
                             <a name="operator_data"></a>
-                            <span class="name"><b> operator_data</b><a href="#operator_data"><span class="fa fa-link"></span></a></span>
+                            <span class="name">
+                                <b>
+                                operator_data
+                                </b>
+                                <a href="#operator_data"><span class="fa fa-link"></span></a>
+                            </span>
                         </td>
                     </tr>
                     <tr>
@@ -1914,6 +1944,11 @@
                             <td class="col-md-4">
                                 <i>Type : </i>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
     
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Default value : </i><code>[]</code>
                             </td>
                         </tr>
                             <tr>
@@ -1930,7 +1965,7 @@
 </div>
 
 
-    <div class="tab-pane fade tab-source-code" id="source">
+    <div class="tab-pane fade tab-source-code" id="c-source">
         <pre class="line-numbers"><code class="language-typescript">import { Component, OnInit, Inject } from &#x27;@angular/core&#x27;;
 
 @Component({
@@ -1984,7 +2019,7 @@ export class EquipmentComponent implements OnInit {
 </code></pre>
     </div>
 
-    <div class="tab-pane fade" id="templateData">
+    <div class="tab-pane fade" id="c-templateData">
         <pre class="line-numbers"><code class="language-html">  &lt;div fxLayout&#x3D;&quot;row&quot; fxLayoutWrap&gt;
     &lt;div fxFlex.gt-sm&#x3D;&quot;60&quot;&gt;
       &lt;analysis-equipment-brand [data]&#x3D;&quot;brand_data&quot;&gt;&lt;/analysis-equipment-brand&gt;
@@ -1996,7 +2031,7 @@ export class EquipmentComponent implements OnInit {
 </code></pre>
     </div>
 
-    <div class="tab-pane fade" id="tree">
+    <div class="tab-pane fade" id="c-tree">
         <div id="tree-container"></div>
         <div class="tree-legend">
             <div class="title">

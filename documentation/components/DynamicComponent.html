@@ -1609,7 +1609,7 @@
 </ul>
 
 <div class="tab-content">
-    <div class="tab-pane fade active in" id="info"><p class="comment">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
     <h3>File</h3>
 </p>
 <p class="comment">
@@ -1622,7 +1622,7 @@
         <h3>Implements</h3>
     </p>
     <p class="comment">
-                <code><a href="https://angular.io/docs/ts/latest/api/api/core/OnInit" target="_blank" >OnInit</a></code>
+                <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
     </p>
 
 
@@ -1677,16 +1677,16 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                 <a href="#columns">columns</a>
+                                <a href="#columns">columns</a>
                             </li>
                             <li>
-                                 <a href="#loadingIndicator">loadingIndicator</a>
+                                <a href="#loadingIndicator">loadingIndicator</a>
                             </li>
                             <li>
-                                 <a href="#reorderable">reorderable</a>
+                                <a href="#reorderable">reorderable</a>
                             </li>
                             <li>
-                                 <a href="#rows">rows</a>
+                                <a href="#rows">rows</a>
                             </li>
                         </ul>
                     </td>
@@ -1700,10 +1700,10 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                 <a href="#fetch">fetch</a>
+                                <a href="#fetch">fetch</a>
                             </li>
                             <li>
-                                 <a href="#ngOnInit">ngOnInit</a>
+                                <a href="#ngOnInit">ngOnInit</a>
                             </li>
                         </ul>
                     </td>
@@ -1745,7 +1745,12 @@
                     <tr>
                         <td class="col-md-4">
                             <a name="fetch"></a>
-                            <span class="name"><b> fetch</b><a href="#fetch"><span class="fa fa-link"></span></a></span>
+                            <span class="name">
+                                <b>
+                                fetch
+                                </b>
+                                <a href="#fetch"><span class="fa fa-link"></span></a>
+                            </span>
                         </td>
                     </tr>
                     <tr>
@@ -1805,7 +1810,12 @@
                     <tr>
                         <td class="col-md-4">
                             <a name="ngOnInit"></a>
-                            <span class="name"><b> ngOnInit</b><a href="#ngOnInit"><span class="fa fa-link"></span></a></span>
+                            <span class="name">
+                                <b>
+                                ngOnInit
+                                </b>
+                                <a href="#ngOnInit"><span class="fa fa-link"></span></a>
+                            </span>
                         </td>
                     </tr>
                     <tr>
@@ -1844,7 +1854,12 @@
                     <tr>
                         <td class="col-md-4">
                             <a name="columns"></a>
-                            <span class="name"><b> columns</b><a href="#columns"><span class="fa fa-link"></span></a></span>
+                            <span class="name">
+                                <b>
+                                columns
+                                </b>
+                                <a href="#columns"><span class="fa fa-link"></span></a>
+                            </span>
                         </td>
                     </tr>
                     <tr>
@@ -1853,6 +1868,15 @@
     </code>
                         </td>
                     </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Default value : </i><code>[
+        {prop: &#x27;name&#x27;},
+        {name: &#x27;Gender&#x27;},
+        {name: &#x27;Company&#x27;, sortable: false}
+      ]</code>
+                            </td>
+                        </tr>
                             <tr>
                                 <td class="col-md-4">
                                     <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/tables/dynamic/dynamic.component.ts:14</a></div>
@@ -1867,7 +1891,12 @@
                     <tr>
                         <td class="col-md-4">
                             <a name="loadingIndicator"></a>
-                            <span class="name"><b> loadingIndicator</b><a href="#loadingIndicator"><span class="fa fa-link"></span></a></span>
+                            <span class="name">
+                                <b>
+                                loadingIndicator
+                                </b>
+                                <a href="#loadingIndicator"><span class="fa fa-link"></span></a>
+                            </span>
                         </td>
                     </tr>
                     <tr>
@@ -1895,7 +1924,12 @@
                     <tr>
                         <td class="col-md-4">
                             <a name="reorderable"></a>
-                            <span class="name"><b> reorderable</b><a href="#reorderable"><span class="fa fa-link"></span></a></span>
+                            <span class="name">
+                                <b>
+                                reorderable
+                                </b>
+                                <a href="#reorderable"><span class="fa fa-link"></span></a>
+                            </span>
                         </td>
                     </tr>
                     <tr>
@@ -1923,7 +1957,12 @@
                     <tr>
                         <td class="col-md-4">
                             <a name="rows"></a>
-                            <span class="name"><b> rows</b><a href="#rows"><span class="fa fa-link"></span></a></span>
+                            <span class="name">
+                                <b>
+                                rows
+                                </b>
+                                <a href="#rows"><span class="fa fa-link"></span></a>
+                            </span>
                         </td>
                     </tr>
                     <tr>
@@ -1952,7 +1991,7 @@
 </div>
 
 
-    <div class="tab-pane fade tab-source-code" id="source">
+    <div class="tab-pane fade tab-source-code" id="c-source">
         <pre class="line-numbers"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
 
 @Component({
@@ -1998,7 +2037,7 @@ export class DynamicComponent implements OnInit {
 </code></pre>
     </div>
 
-    <div class="tab-pane fade" id="templateData">
+    <div class="tab-pane fade" id="c-templateData">
         <pre class="line-numbers"><code class="language-html">&lt;ngx-datatable
   class&#x3D;&quot;material&quot;
   [rows]&#x3D;&quot;rows&quot;
@@ -2034,7 +2073,7 @@ export class DynamicComponent implements OnInit {
 </code></pre>
     </div>
 
-    <div class="tab-pane fade" id="tree">
+    <div class="tab-pane fade" id="c-tree">
         <div id="tree-container"></div>
         <div class="tree-legend">
             <div class="title">

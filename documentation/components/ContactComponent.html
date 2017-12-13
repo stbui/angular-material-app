@@ -1609,7 +1609,7 @@
 </ul>
 
 <div class="tab-content">
-    <div class="tab-pane fade active in" id="info"><p class="comment">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
     <h3>File</h3>
 </p>
 <p class="comment">
@@ -1622,7 +1622,7 @@
         <h3>Implements</h3>
     </p>
     <p class="comment">
-                <code><a href="https://angular.io/docs/ts/latest/api/api/core/OnInit" target="_blank" >OnInit</a></code>
+                <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
     </p>
 
 
@@ -1677,7 +1677,7 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                 <a href="#tables">tables</a>
+                                <a href="#tables">tables</a>
                             </li>
                         </ul>
                     </td>
@@ -1691,10 +1691,10 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                 <a href="#ngOnInit">ngOnInit</a>
+                                <a href="#ngOnInit">ngOnInit</a>
                             </li>
                             <li>
-                                 <a href="#onUpdateContact">onUpdateContact</a>
+                                <a href="#onUpdateContact">onUpdateContact</a>
                             </li>
                         </ul>
                     </td>
@@ -1764,7 +1764,12 @@
                     <tr>
                         <td class="col-md-4">
                             <a name="ngOnInit"></a>
-                            <span class="name"><b> ngOnInit</b><a href="#ngOnInit"><span class="fa fa-link"></span></a></span>
+                            <span class="name">
+                                <b>
+                                ngOnInit
+                                </b>
+                                <a href="#ngOnInit"><span class="fa fa-link"></span></a>
+                            </span>
                         </td>
                     </tr>
                     <tr>
@@ -1796,7 +1801,12 @@
                     <tr>
                         <td class="col-md-4">
                             <a name="onUpdateContact"></a>
-                            <span class="name"><b> onUpdateContact</b><a href="#onUpdateContact"><span class="fa fa-link"></span></a></span>
+                            <span class="name">
+                                <b>
+                                onUpdateContact
+                                </b>
+                                <a href="#onUpdateContact"><span class="fa fa-link"></span></a>
+                            </span>
                         </td>
                     </tr>
                     <tr>
@@ -1863,7 +1873,12 @@
                     <tr>
                         <td class="col-md-4">
                             <a name="tables"></a>
-                            <span class="name"><b> tables</b><a href="#tables"><span class="fa fa-link"></span></a></span>
+                            <span class="name">
+                                <b>
+                                tables
+                                </b>
+                                <a href="#tables"><span class="fa fa-link"></span></a>
+                            </span>
                         </td>
                     </tr>
                     <tr>
@@ -1872,6 +1887,38 @@
     </code>
                         </td>
                     </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Default value : </i><code>{
+        datas: [
+          {
+            avatar: &#x27;https://lh5.googleusercontent.com/-hcRNe540rco/AAAAAAAAAAI/AAAAAAAAAAk/DfS45tpAR-A/photo.jpg&#x27;,
+            name: &#x27;stbui&#x27;,
+            phone: &#x27;15890031275&#x27;,
+            relation: &#x27;优质客户&#x27;,
+            company: &#x27;github&#x27;,
+            mail: &#x27;w431106@163.com&#x27;
+          },
+          {
+            avatar: &#x27;https://lh5.googleusercontent.com/-hcRNe540rco/AAAAAAAAAAI/AAAAAAAAAAk/DfS45tpAR-A/photo.jpg&#x27;,
+            name: &#x27;赵日旭&#x27;,
+            phone: &#x27;15890030690&#x27;,
+            relation: &#x27;潜在客户&#x27;,
+            company: &#x27;google&#x27;,
+            mail: &#x27;772020653@qq.com&#x27;
+          },
+          {
+            avatar: &#x27;https://lh5.googleusercontent.com/-hcRNe540rco/AAAAAAAAAAI/AAAAAAAAAAk/DfS45tpAR-A/photo.jpg&#x27;,
+            name: &#x27;赵茹君&#x27;,
+            phone: &#x27;15890031290&#x27;,
+            relation: &#x27;一般客户&#x27;,
+            company: &#x27;facebook&#x27;,
+            mail: &#x27;4295@gmail.com&#x27;
+          }
+        ]
+      }</code>
+                            </td>
+                        </tr>
                             <tr>
                                 <td class="col-md-4">
                                     <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/app/crm/contact/contact.component.ts:12</a></div>
@@ -1886,7 +1933,7 @@
 </div>
 
 
-    <div class="tab-pane fade tab-source-code" id="source">
+    <div class="tab-pane fade tab-source-code" id="c-source">
         <pre class="line-numbers"><code class="language-typescript">import { Component, OnInit, Inject, ViewEncapsulation } from &#x27;@angular/core&#x27;;
 import { MatDialog } from &#x27;@angular/material&#x27;;
 import { MAT_DIALOG_DATA } from &#x27;@angular/material&#x27;;
@@ -1960,7 +2007,7 @@ export class ContactUpdateComponent {
 </code></pre>
     </div>
 
-    <div class="tab-pane fade" id="templateData">
+    <div class="tab-pane fade" id="c-templateData">
         <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;header&quot;&gt;&lt;/div&gt;
 
 &lt;mat-sidenav-container class&#x3D;&quot;manage-sidenav-container&quot;&gt;
@@ -2055,7 +2102,7 @@ export class ContactUpdateComponent {
 </code></pre>
     </div>
 
-    <div class="tab-pane fade" id="tree">
+    <div class="tab-pane fade" id="c-tree">
         <div id="tree-container"></div>
         <div class="tree-legend">
             <div class="title">

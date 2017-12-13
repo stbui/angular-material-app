@@ -1608,7 +1608,7 @@
 </ul>
 
 <div class="tab-content">
-    <div class="tab-pane fade active in" id="info">
+    <div class="tab-pane fade active in" id="c-info">
 
         <p class="comment">
             <h3>File</h3>
@@ -1641,7 +1641,12 @@
                             <tr>
                                 <td class="col-md-4">
                                     <a name="formatDay"></a>
-                                    <span class="name"><b> formatDay</b><a href="#formatDay"><span class="fa fa-link"></span></a></span>
+                                    <span class="name">
+                                        <b>
+                                        formatDay
+                                        </b>
+                                        <a href="#formatDay"><span class="fa fa-link"></span></a>
+                                    </span>
                                 </td>
                             </tr>
                             <tr>
@@ -1701,7 +1706,12 @@
                             <tr>
                                 <td class="col-md-4">
                                     <a name="formatDisplay"></a>
-                                    <span class="name"><b> formatDisplay</b><a href="#formatDisplay"><span class="fa fa-link"></span></a></span>
+                                    <span class="name">
+                                        <b>
+                                        formatDisplay
+                                        </b>
+                                        <a href="#formatDisplay"><span class="fa fa-link"></span></a>
+                                    </span>
                                 </td>
                             </tr>
                             <tr>
@@ -1761,7 +1771,12 @@
                             <tr>
                                 <td class="col-md-4">
                                     <a name="formatMonth"></a>
-                                    <span class="name"><b> formatMonth</b><a href="#formatMonth"><span class="fa fa-link"></span></a></span>
+                                    <span class="name">
+                                        <b>
+                                        formatMonth
+                                        </b>
+                                        <a href="#formatMonth"><span class="fa fa-link"></span></a>
+                                    </span>
                                 </td>
                             </tr>
                             <tr>
@@ -1821,7 +1836,12 @@
                             <tr>
                                 <td class="col-md-4">
                                     <a name="transform"></a>
-                                    <span class="name"><b> transform</b><a href="#transform"><span class="fa fa-link"></span></a></span>
+                                    <span class="name">
+                                        <b>
+                                        transform
+                                        </b>
+                                        <a href="#transform"><span class="fa fa-link"></span></a>
+                                    </span>
                                 </td>
                             </tr>
                             <tr>
@@ -1899,15 +1919,31 @@
                             <tr>
                                 <td class="col-md-4">
                                     <a name="localConfig"></a>
-                                    <span class="name"><b><span class="modifier">Private</span> localConfig</b><a href="#localConfig"><span class="fa fa-link"></span></a></span>
+                                    <span class="name">
+                                        <b>
+                                            <span class="modifier">Private</span>
+                                        localConfig
+                                        </b>
+                                        <a href="#localConfig"><span class="fa fa-link"></span></a>
+                                    </span>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <span class="modifier-icon fa fa-lock"></span><code>localConfig:     <code></code>
+                                    <span class="modifier-icon fa fa-reset"></span><code>localConfig:     <code></code>
             </code>
                                 </td>
                             </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <i>Default value : </i><code>{
+                dayAbbreviation: [&#x27;日&#x27;, &#x27;一&#x27;, &#x27;二&#x27;, &#x27;三&#x27;, &#x27;四&#x27;, &#x27;五&#x27;, &#x27;六&#x27;],
+                dayList: [&#x27;星期日&#x27;, &#x27;星期一&#x27;, &#x27;星期二&#x27;, &#x27;星期三&#x27;, &#x27;星期四&#x27;, &#x27;星期五&#x27;, &#x27;星期六&#x27;],
+                monthList: [&#x27;01&#x27;, &#x27;02&#x27;, &#x27;03&#x27;, &#x27;04&#x27;, &#x27;05&#x27;, &#x27;06&#x27;, &#x27;07&#x27;, &#x27;08&#x27;, &#x27;09&#x27;, &#x27;10&#x27;, &#x27;11&#x27;, &#x27;12&#x27;],
+                monthLongList: [&#x27;一月&#x27;, &#x27;二月&#x27;, &#x27;三月&#x27;, &#x27;四月&#x27;, &#x27;五月&#x27;, &#x27;六月&#x27;, &#x27;七月&#x27;, &#x27;八月&#x27;, &#x27;九月&#x27;, &#x27;十月&#x27;, &#x27;十一月&#x27;, &#x27;十二月&#x27;]
+              }</code>
+                                    </td>
+                                </tr>
                                     <tr>
                                         <td class="col-md-4">
                                             <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/app/component/date-picker/date-picker.pipe.ts:8</a></div>
@@ -1922,7 +1958,7 @@
     </div>
 
 
-    <div class="tab-pane fade tab-source-code" id="source">
+    <div class="tab-pane fade tab-source-code" id="c-source">
         <pre class="line-numbers"><code class="language-typescript">import { Pipe, PipeTransform } from &#x27;@angular/core&#x27;;
 
 @Pipe({

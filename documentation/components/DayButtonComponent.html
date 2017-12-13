@@ -1609,7 +1609,7 @@
 </ul>
 
 <div class="tab-content">
-    <div class="tab-pane fade active in" id="info"><p class="comment">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
     <h3>File</h3>
 </p>
 <p class="comment">
@@ -1671,10 +1671,10 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                 <a href="#isNow">isNow</a>
+                                <a href="#isNow">isNow</a>
                             </li>
                             <li>
-                                 <a href="#onSelectedTriggered">onSelectedTriggered</a>
+                                <a href="#onSelectedTriggered">onSelectedTriggered</a>
                             </li>
                         </ul>
                     </td>
@@ -1785,7 +1785,7 @@
                             <code>onSelected</code>
                         </td>
                         <td class="col-md-10">
-                            <em><code>$event</code> type:</em>    <code><a href="https://angular.io/docs/ts/latest/api/api/core/EventEmitter" target="_blank" >EventEmitter</a></code>
+                            <em><code>$event</code> type:</em>    <code><a href="https://angular.io/api/core/EventEmitter" target="_blank" >EventEmitter</a></code>
 
                         </td>
                     </tr>
@@ -1810,7 +1810,12 @@
                     <tr>
                         <td class="col-md-4">
                             <a name="isNow"></a>
-                            <span class="name"><b> isNow</b><a href="#isNow"><span class="fa fa-link"></span></a></span>
+                            <span class="name">
+                                <b>
+                                isNow
+                                </b>
+                                <a href="#isNow"><span class="fa fa-link"></span></a>
+                            </span>
                         </td>
                     </tr>
                     <tr>
@@ -1842,7 +1847,12 @@
                     <tr>
                         <td class="col-md-4">
                             <a name="onSelectedTriggered"></a>
-                            <span class="name"><b> onSelectedTriggered</b><a href="#onSelectedTriggered"><span class="fa fa-link"></span></a></span>
+                            <span class="name">
+                                <b>
+                                onSelectedTriggered
+                                </b>
+                                <a href="#onSelectedTriggered"><span class="fa fa-link"></span></a>
+                            </span>
                         </td>
                     </tr>
                     <tr>
@@ -1903,7 +1913,7 @@
 </div>
 
 
-    <div class="tab-pane fade tab-source-code" id="source">
+    <div class="tab-pane fade tab-source-code" id="c-source">
         <pre class="line-numbers"><code class="language-typescript">import { Component, Input, Output, EventEmitter } from &#x27;@angular/core&#x27;;
 
 @Component({
@@ -1937,14 +1947,14 @@ export class DayButtonComponent {
 </code></pre>
     </div>
 
-    <div class="tab-pane fade" id="templateData">
+    <div class="tab-pane fade" id="c-templateData">
         <pre class="line-numbers"><code class="language-html">&lt;span class&#x3D;&quot;stb-day-empty&quot; *ngIf&#x3D;&quot;!date&quot;&gt;&lt;/span&gt;
 &lt;button class&#x3D;&quot;stb-day-button&quot; [class.now]&#x3D;&quot;isNow()&quot; [class.selected]&#x3D;&quot;selected&quot; (click)&#x3D;&quot;onSelectedTriggered(date)&quot; *ngIf&#x3D;&quot;date&quot;&gt;
   &lt;div class&#x3D;&quot;stb-day-button-bg&quot;&gt;&lt;/div&gt;
   &lt;span class&#x3D;&quot;stb-day-button-text&quot;&gt;{{ date | datePicker: &#x27;formatDay&#x27; }}&lt;/span&gt;&lt;/button&gt;</code></pre>
     </div>
 
-    <div class="tab-pane fade" id="tree">
+    <div class="tab-pane fade" id="c-tree">
         <div id="tree-container"></div>
         <div class="tree-legend">
             <div class="title">

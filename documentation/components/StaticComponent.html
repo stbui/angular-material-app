@@ -1609,7 +1609,7 @@
 </ul>
 
 <div class="tab-content">
-    <div class="tab-pane fade active in" id="info"><p class="comment">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
     <h3>File</h3>
 </p>
 <p class="comment">
@@ -1622,7 +1622,7 @@
         <h3>Implements</h3>
     </p>
     <p class="comment">
-                <code><a href="https://angular.io/docs/ts/latest/api/api/core/OnInit" target="_blank" >OnInit</a></code>
+                <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
     </p>
 
 
@@ -1677,10 +1677,11 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <span class="modifier">Private</span> <a href="#apiUrl">apiUrl</a>
+                                    <span class="modifier">Private</span>
+                                <a href="#apiUrl">apiUrl</a>
                             </li>
                             <li>
-                                 <a href="#data">data</a>
+                                <a href="#data">data</a>
                             </li>
                         </ul>
                     </td>
@@ -1694,10 +1695,10 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                 <a href="#getQuery">getQuery</a>
+                                <a href="#getQuery">getQuery</a>
                             </li>
                             <li>
-                                 <a href="#ngOnInit">ngOnInit</a>
+                                <a href="#ngOnInit">ngOnInit</a>
                             </li>
                         </ul>
                     </td>
@@ -1712,7 +1713,7 @@
                 <tbody>
                     <tr>
                         <td class="col-md-4">
-                            <code>constructor(_http: <a href="https://angular.io/docs/ts/latest/api/api/http/Http" target="_blank">Http</a>)</code>
+                            <code>constructor(_http: <a href="https://angular.io/api/http/Http" target="_blank">Http</a>)</code>
                         </td>
                     </tr>
                             <tr>
@@ -1738,7 +1739,7 @@
                                                     <tr>
                                                       <td>_http</td>
                                                       <td>
-                                                                <code><a href="https://angular.io/docs/ts/latest/api/api/http/Http" target="_blank" >Http</a></code>
+                                                                <code><a href="https://angular.io/api/http/Http" target="_blank" >Http</a></code>
                                                       </td>
                                                       <td>
                                                       </td>
@@ -1767,7 +1768,12 @@
                     <tr>
                         <td class="col-md-4">
                             <a name="getQuery"></a>
-                            <span class="name"><b> getQuery</b><a href="#getQuery"><span class="fa fa-link"></span></a></span>
+                            <span class="name">
+                                <b>
+                                getQuery
+                                </b>
+                                <a href="#getQuery"><span class="fa fa-link"></span></a>
+                            </span>
                         </td>
                     </tr>
                     <tr>
@@ -1799,7 +1805,12 @@
                     <tr>
                         <td class="col-md-4">
                             <a name="ngOnInit"></a>
-                            <span class="name"><b> ngOnInit</b><a href="#ngOnInit"><span class="fa fa-link"></span></a></span>
+                            <span class="name">
+                                <b>
+                                ngOnInit
+                                </b>
+                                <a href="#ngOnInit"><span class="fa fa-link"></span></a>
+                            </span>
                         </td>
                     </tr>
                     <tr>
@@ -1838,15 +1849,26 @@
                     <tr>
                         <td class="col-md-4">
                             <a name="apiUrl"></a>
-                            <span class="name"><b><span class="modifier">Private</span> apiUrl</b><a href="#apiUrl"><span class="fa fa-link"></span></a></span>
+                            <span class="name">
+                                <b>
+                                    <span class="modifier">Private</span>
+                                apiUrl
+                                </b>
+                                <a href="#apiUrl"><span class="fa fa-link"></span></a>
+                            </span>
                         </td>
                     </tr>
                     <tr>
                         <td class="col-md-4">
-                            <span class="modifier-icon fa fa-lock"></span><code>apiUrl:     <code></code>
+                            <span class="modifier-icon fa fa-reset"></span><code>apiUrl:     <code></code>
     </code>
                         </td>
                     </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Default value : </i><code>environment.tableApi</code>
+                            </td>
+                        </tr>
                             <tr>
                                 <td class="col-md-4">
                                     <div class="io-line">Defined in <a href="" data-line="44" class="link-to-prism">src/app/tables/static/static.component.ts:44</a></div>
@@ -1861,7 +1883,12 @@
                     <tr>
                         <td class="col-md-4">
                             <a name="data"></a>
-                            <span class="name"><b> data</b><a href="#data"><span class="fa fa-link"></span></a></span>
+                            <span class="name">
+                                <b>
+                                data
+                                </b>
+                                <a href="#data"><span class="fa fa-link"></span></a>
+                            </span>
                         </td>
                     </tr>
                     <tr>
@@ -1870,6 +1897,39 @@
     </code>
                         </td>
                     </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Default value : </i><code>{
+        columns: [
+          {
+            key: &#x27;appId&#x27;,
+            title: &#x27;&#x27;
+          },
+          {
+            key: &#x27;appName&#x27;,
+            title: &#x27;APP&#x27;
+          },
+          {
+            key: &#x27;cateNames&#x27;,
+            title: &#x27;领域&#x27;
+          },
+          {
+            key: &#x27;developCompanyFullName&#x27;,
+            title: &#x27;开发商&#x27;
+          },
+          {
+            key: &#x27;activeNums&#x27;,
+            title: &#x27;活跃人数(万)&#x27;
+          },
+          {
+            key: &#x27;activeNumsRatio&#x27;,
+            title: &#x27;环比增幅(%)&#x27;
+          }
+        ],
+        data: []
+      }</code>
+                            </td>
+                        </tr>
                             <tr>
                                 <td class="col-md-4">
                                     <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/tables/static/static.component.ts:14</a></div>
@@ -1884,7 +1944,7 @@
 </div>
 
 
-    <div class="tab-pane fade tab-source-code" id="source">
+    <div class="tab-pane fade tab-source-code" id="c-source">
         <pre class="line-numbers"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
 import { Http } from &#x27;@angular/http&#x27;;
 import { environment } from &#x27;../../../environments/environment&#x27;;
@@ -1947,7 +2007,7 @@ export class StaticComponent implements OnInit {
 </code></pre>
     </div>
 
-    <div class="tab-pane fade" id="templateData">
+    <div class="tab-pane fade" id="c-templateData">
         <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;main-static&quot;&gt;
   &lt;mat-card&gt;
     &lt;mat-card-title&gt;Base Table&lt;/mat-card-title&gt;
@@ -1988,7 +2048,7 @@ export class StaticComponent implements OnInit {
 </code></pre>
     </div>
 
-    <div class="tab-pane fade" id="tree">
+    <div class="tab-pane fade" id="c-tree">
         <div id="tree-container"></div>
         <div class="tree-legend">
             <div class="title">

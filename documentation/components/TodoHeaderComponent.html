@@ -1609,7 +1609,7 @@
 </ul>
 
 <div class="tab-content">
-    <div class="tab-pane fade active in" id="info"><p class="comment">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
     <h3>File</h3>
 </p>
 <p class="comment">
@@ -1671,7 +1671,7 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                 <a href="#inputValue">inputValue</a>
+                                <a href="#inputValue">inputValue</a>
                             </li>
                         </ul>
                     </td>
@@ -1685,7 +1685,7 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                 <a href="#enterUp">enterUp</a>
+                                <a href="#enterUp">enterUp</a>
                             </li>
                         </ul>
                     </td>
@@ -1734,7 +1734,7 @@
                 <tbody>
                     <tr>
                         <td class="col-md-4">
-                            <code>constructor(elementRef: <a href="https://angular.io/docs/ts/latest/api/api/core/ElementRef" target="_blank">ElementRef</a>)</code>
+                            <code>constructor(elementRef: <a href="https://angular.io/api/core/ElementRef" target="_blank">ElementRef</a>)</code>
                         </td>
                     </tr>
                             <tr>
@@ -1760,7 +1760,7 @@
                                                     <tr>
                                                       <td>elementRef</td>
                                                       <td>
-                                                                <code><a href="https://angular.io/docs/ts/latest/api/api/core/ElementRef" target="_blank" >ElementRef</a></code>
+                                                                <code><a href="https://angular.io/api/core/ElementRef" target="_blank" >ElementRef</a></code>
                                                       </td>
                                                       <td>
                                                       </td>
@@ -1814,7 +1814,7 @@
 
                               </p>
                             <p>
-                              <em>Default value: </em><code>您的任务完成了吗？</code>
+                              <em>Default value: </em><code>&#x27;您的任务完成了吗？&#x27;</code>
                             </p>
                         </td>
                     </tr>
@@ -1837,7 +1837,7 @@
                             <code>onEnterUp</code>
                         </td>
                         <td class="col-md-10">
-                            <em><code>$event</code> type:</em>    <code><a href="https://angular.io/docs/ts/latest/api/api/core/EventEmitter" target="_blank" >EventEmitter</a></code>
+                            <em><code>$event</code> type:</em>    <code><a href="https://angular.io/api/core/EventEmitter" target="_blank" >EventEmitter</a></code>
 
                         </td>
                     </tr>
@@ -1856,7 +1856,7 @@
                             <code>textChanges</code>
                         </td>
                         <td class="col-md-10">
-                            <em><code>$event</code> type:</em>    <code><a href="https://angular.io/docs/ts/latest/api/api/core/EventEmitter" target="_blank" >EventEmitter</a></code>
+                            <em><code>$event</code> type:</em>    <code><a href="https://angular.io/api/core/EventEmitter" target="_blank" >EventEmitter</a></code>
 
                         </td>
                     </tr>
@@ -1881,7 +1881,12 @@
                     <tr>
                         <td class="col-md-4">
                             <a name="enterUp"></a>
-                            <span class="name"><b> enterUp</b><a href="#enterUp"><span class="fa fa-link"></span></a></span>
+                            <span class="name">
+                                <b>
+                                enterUp
+                                </b>
+                                <a href="#enterUp"><span class="fa fa-link"></span></a>
+                            </span>
                         </td>
                     </tr>
                     <tr>
@@ -1920,7 +1925,12 @@
                     <tr>
                         <td class="col-md-4">
                             <a name="inputValue"></a>
-                            <span class="name"><b> inputValue</b><a href="#inputValue"><span class="fa fa-link"></span></a></span>
+                            <span class="name">
+                                <b>
+                                inputValue
+                                </b>
+                                <a href="#inputValue"><span class="fa fa-link"></span></a>
+                            </span>
                         </td>
                     </tr>
                     <tr>
@@ -1933,6 +1943,11 @@
                             <td class="col-md-4">
                                 <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
     
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Default value : </i><code>&#x27;&#x27;</code>
                             </td>
                         </tr>
                             <tr>
@@ -1949,7 +1964,7 @@
 </div>
 
 
-    <div class="tab-pane fade tab-source-code" id="source">
+    <div class="tab-pane fade tab-source-code" id="c-source">
         <pre class="line-numbers"><code class="language-typescript">import { Component, Input, Output, EventEmitter, ElementRef } from &#x27;@angular/core&#x27;;
 import { Observable } from &#x27;rxjs/Rx&#x27;;
 import &#x27;rxjs/Observable&#x27;;
@@ -1985,12 +2000,12 @@ export class TodoHeaderComponent {
 </code></pre>
     </div>
 
-    <div class="tab-pane fade" id="templateData">
+    <div class="tab-pane fade" id="c-templateData">
         <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;top-bg mat-primary-bg&quot;&gt;&lt;/div&gt;
 </code></pre>
     </div>
 
-    <div class="tab-pane fade" id="tree">
+    <div class="tab-pane fade" id="c-tree">
         <div id="tree-container"></div>
         <div class="tree-legend">
             <div class="title">

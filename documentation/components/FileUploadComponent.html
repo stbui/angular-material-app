@@ -1609,7 +1609,7 @@
 </ul>
 
 <div class="tab-content">
-    <div class="tab-pane fade active in" id="info"><p class="comment">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
     <h3>File</h3>
 </p>
 <p class="comment">
@@ -1671,7 +1671,7 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                 <a href="#currentUpload">currentUpload</a>
+                                <a href="#currentUpload">currentUpload</a>
                             </li>
                         </ul>
                     </td>
@@ -1685,7 +1685,7 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                 <a href="#uploader">uploader</a>
+                                <a href="#uploader">uploader</a>
                             </li>
                         </ul>
                     </td>
@@ -1727,7 +1727,12 @@
                     <tr>
                         <td class="col-md-4">
                             <a name="uploader"></a>
-                            <span class="name"><b> uploader</b><a href="#uploader"><span class="fa fa-link"></span></a></span>
+                            <span class="name">
+                                <b>
+                                uploader
+                                </b>
+                                <a href="#uploader"><span class="fa fa-link"></span></a>
+                            </span>
                         </td>
                     </tr>
                     <tr>
@@ -1794,7 +1799,12 @@
                     <tr>
                         <td class="col-md-4">
                             <a name="currentUpload"></a>
-                            <span class="name"><b> currentUpload</b><a href="#currentUpload"><span class="fa fa-link"></span></a></span>
+                            <span class="name">
+                                <b>
+                                currentUpload
+                                </b>
+                                <a href="#currentUpload"><span class="fa fa-link"></span></a>
+                            </span>
                         </td>
                     </tr>
                     <tr>
@@ -1817,7 +1827,7 @@
 </div>
 
 
-    <div class="tab-pane fade tab-source-code" id="source">
+    <div class="tab-pane fade tab-source-code" id="c-source">
         <pre class="line-numbers"><code class="language-typescript">import { Component } from &#x27;@angular/core&#x27;;
 import { FileUploadDirective } from &#x27;./file-upload.directive&#x27;;
 
@@ -1841,7 +1851,7 @@ export class FileUploadComponent {
 </code></pre>
     </div>
 
-    <div class="tab-pane fade" id="templateData">
+    <div class="tab-pane fade" id="c-templateData">
         <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;upload-container&quot; (uploader)&#x3D;&quot;uploader($event)&quot; stbuiFileUpload&gt;
   &lt;div *ngIf&#x3D;&quot;currentUpload&quot;&gt;
     {{currentUpload?.name}} | {{currentUpload?.progress}}%
@@ -1858,7 +1868,7 @@ export class FileUploadComponent {
 </code></pre>
     </div>
 
-    <div class="tab-pane fade" id="tree">
+    <div class="tab-pane fade" id="c-tree">
         <div id="tree-container"></div>
         <div class="tree-legend">
             <div class="title">
