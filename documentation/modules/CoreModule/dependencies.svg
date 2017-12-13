@@ -22,29 +22,41 @@
 <text text-anchor="start" x="429.7258" y="-15.4" font-family="sans-serif" font-size="14.00" fill="#000000"> &#160;Exports</text>
 <g id="clust1" class="cluster">
 <title>cluster_CoreModule</title>
-<polygon fill="none" stroke="#000000" stroke-dasharray="1,5" points="173,-70 173,-195 323,-195 323,-70 173,-70"/>
+<polygon fill="none" stroke="#000000" stroke-dasharray="1,5" points="97,-70 97,-195 399,-195 399,-70 97,-70"/>
 </g>
 <g id="clust6" class="cluster">
 <title>cluster_CoreModule_providers</title>
-<polygon fill="none" stroke="#000000" points="181,-78 181,-130 315,-130 315,-78 181,-78"/>
+<polygon fill="none" stroke="#000000" points="105,-78 105,-130 391,-130 391,-78 105,-78"/>
 </g>
 <!-- AuthService -->
 <g id="node1" class="node">
 <title>AuthService</title>
-<ellipse fill="#fdb462" stroke="#000000" cx="248" cy="-104" rx="59.1083" ry="18"/>
-<text text-anchor="middle" x="248" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">AuthService</text>
+<ellipse fill="#fdb462" stroke="#000000" cx="324" cy="-104" rx="59.1083" ry="18"/>
+<text text-anchor="middle" x="324" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">AuthService</text>
 </g>
 <!-- CoreModule -->
-<g id="node2" class="node">
+<g id="node3" class="node">
 <title>CoreModule</title>
-<polygon fill="#8dd3c7" stroke="#000000" points="291.2619,-187 288.2619,-191 267.2619,-191 264.2619,-187 204.7381,-187 204.7381,-151 291.2619,-151 291.2619,-187"/>
-<text text-anchor="middle" x="248" y="-164.8" font-family="Times,serif" font-size="14.00" fill="#000000">CoreModule</text>
+<polygon fill="#8dd3c7" stroke="#000000" points="295.2619,-187 292.2619,-191 271.2619,-191 268.2619,-187 208.7381,-187 208.7381,-151 295.2619,-151 295.2619,-187"/>
+<text text-anchor="middle" x="252" y="-164.8" font-family="Times,serif" font-size="14.00" fill="#000000">CoreModule</text>
 </g>
 <!-- AuthService&#45;&gt;CoreModule -->
 <g id="edge1" class="edge">
 <title>AuthService&#45;&gt;CoreModule</title>
-<path fill="none" stroke="#000000" d="M248,-122.1061C248,-122.1061 248,-140.991 248,-140.991"/>
-<polygon fill="#000000" stroke="#000000" points="244.5001,-140.9909 248,-150.991 251.5001,-140.991 244.5001,-140.9909"/>
+<path fill="none" stroke="#000000" d="M280.0385,-116.226C280.0385,-116.226 280.0385,-140.683 280.0385,-140.683"/>
+<polygon fill="#000000" stroke="#000000" points="276.5386,-140.683 280.0385,-150.683 283.5386,-140.683 276.5386,-140.683"/>
+</g>
+<!-- ConfigService -->
+<g id="node2" class="node">
+<title>ConfigService</title>
+<ellipse fill="#fdb462" stroke="#000000" cx="180" cy="-104" rx="66.6325" ry="18"/>
+<text text-anchor="middle" x="180" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">ConfigService</text>
+</g>
+<!-- ConfigService&#45;&gt;CoreModule -->
+<g id="edge2" class="edge">
+<title>ConfigService&#45;&gt;CoreModule</title>
+<path fill="none" stroke="#000000" d="M227.7176,-116.8419C227.7176,-116.8419 227.7176,-140.5231 227.7176,-140.5231"/>
+<polygon fill="#000000" stroke="#000000" points="224.2177,-140.523 227.7176,-150.5231 231.2177,-140.5231 224.2177,-140.523"/>
 </g>
 </g>
 </svg>
