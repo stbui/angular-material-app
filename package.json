@@ -1,6 +1,9 @@
 {
   "name": "angular-material-app",
-  "version": "0.4.5",
+  "description": "基于最新Angular 5框架与Material 2技术的企业级通用管理系统快速开发框架，涵盖了大量的常用组件和基础功能，您可以快速开发各种MIS系统，如CMS、OA、CRM、ERP、POS等，最大程度上帮助企业节省时间成本和费用开支。",
+  "homepage": "https://github.com/stbui/angular-material-app",
+  "bugs": "https://github.com/stbui/angular-material-app/issues",
+  "version": "0.5.0",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
