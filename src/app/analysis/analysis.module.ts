@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { SharedModule } from '../shared/shared.module';
 import { HttpClientModule } from '@angular/common/http';
 
-import { ChartsModule } from 'ng2-charts';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { AnalysisRoutingModule } from './analysis.routing';
 
@@ -28,7 +27,6 @@ import { PreferenceFieldComponent } from './preference/field/field.component';
     SharedModule,
     HttpClientModule,
     AnalysisRoutingModule,
-    ChartsModule,
     NgxChartsModule
   ],
   declarations: [
