@@ -33,7 +33,6 @@ export class SidenavService {
 
     const components = this.addItem('拓展组件', 'equalizer', null, 3, '1', '#4CAF50');
     this.addSubItem(components, '高德地图', '/materials/amap', 1);
-    this.addSubItem(components, 'Markdown', '/materials/markdown', 1);
     this.addSubItem(components, '图表', '/components/chart', 1);
     this.addSubItem(components, '通知', '/materials/popover', 1);
     this.addSubItem(components, '日历', '/materials/calendar', 1);
@@ -50,17 +49,12 @@ export class SidenavService {
     this.addSubItem(tables, '动态表格', '/tables/dynamic', 3);
 
     const pages = this.addItem('页面', 'content_copy', null, 7);
-    // this.addSubItem(pages, '关于', '/pages/about', 1);
-    // this.addSubItem(pages, '服务', '/pages/services', 1);
-    // this.addSubItem(pages, '联系', '/pages/contact', 1);
-    // this.addSubItem(pages, '团队', '/pages/terms', 1);
     this.addSubItem(pages, '文件管理', '/pages/file-manager', 1);
     this.addSubItem(pages, '团队管理', '/', 1);
     this.addSubItem(pages, '项目管理', '/pages/projects', 1);
     this.addSubItem(pages, '联系人', '/', 1);
     this.addSubItem(pages, '个人资料', '/pages/profile', 1);
     this.addSubItem(pages, '博客', '/pages/blog', 1);
-    // this.addSubItem(pages, '收藏神器', '/pages/collection', 1);
     this.addSubItem(pages, '用户管理', '/pages/user', 1);
 
     const extraPages = this.addItem('扩展页面', 'more_horiz', null, 8);
@@ -84,16 +78,15 @@ export class SidenavService {
 
     const crm = this.addItem('客户关系', 'business', null, 8);
     this.addSubItem(crm, '线索', '/crm/lead', 1);
+    this.addSubItem(crm, '联系人', '/crm/contacts', 1);
     this.addSubItem(crm, '客户', '/crm/lead', 1);
     this.addSubItem(crm, '公海', '/crm/lead', 1);
-    this.addSubItem(crm, '联系人', '/crm/lead', 1);
     this.addSubItem(crm, '商机', '/crm/lead', 1);
     this.addSubItem(crm, '产品', '/crm/lead', 1);
 
     const apm = this.addItem('前端监控', 'code', null, 9, 'new', '#3F51B5');
     this.addSubItem(apm, '脚本异常', '/apm/error', 1);
     this.addSubItem(apm, '性能分析', '/apm/performance', 1);
-
   }
 
   addItem(name: string, icon: string, route: any, position: number, badge?: string, badgeColor?: string, customClass?: string) {
