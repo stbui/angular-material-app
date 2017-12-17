@@ -8,7 +8,6 @@ import { ContactComponent } from './contact/contact.component';
 import { ServicesComponent } from './services/services.component';
 import { BlogComponent } from './blog/blog.component';
 import { ProfileComponent } from './profile/profile.component';
-import { CollectionComponent } from './collection/collection.component';
 
 import { UserComponent } from './user/user.component';
 import { UserService } from './user/user.service';
@@ -17,18 +16,19 @@ import { FileManagerComponent } from './file-manager/file-manager.component';
 import { FileManagerFirebase } from './file-manager/file-manager.firebase';
 
 import { ProjectComponent } from './project/project.component';
+import { BaseLayoutModule } from '../layouts/index';
 
 @NgModule({
   imports: [
     SharedModule,
-    PagesRoutingModule
+    PagesRoutingModule,
+    BaseLayoutModule
   ],
   declarations: [
     PagesComponent,
     AboutComponent,
     ContactComponent,
     ServicesComponent,
-    CollectionComponent,
     BlogComponent,
     ProfileComponent,
     UserComponent,

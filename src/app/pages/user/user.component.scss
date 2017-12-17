@@ -4,11 +4,6 @@ $height__user-container: calc(100% - #{$height__header-toolbar - $padding__conta
 
 $color__inactive: #616161;
 
-:host {
-  display: block;
-  padding: $padding__container;
-  height: $height__user-container;
-}
 
 .user-container {
   height: 100%;

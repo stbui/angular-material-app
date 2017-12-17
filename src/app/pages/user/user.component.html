@@ -1,48 +1,50 @@
-<div class="user-container mat-elevation-z4">
+<stbui-base-layout>
 
-  <mat-sidenav-container>
-    <mat-sidenav class="mat-elevation-z2" mode="side" [opened]="sideOpen">
+  <div class="user-container mat-elevation-z4">
 
-      <mat-nav-list class="nav-list">
-        <h3 mat-subheader>
-          <span>用户权限</span>
-          <span fxFlex></span>
-          <button mat-icon-button (click)="onSideTriggered()">
-            <mat-icon>menu</mat-icon>
+    <mat-sidenav-container>
+      <mat-sidenav class="mat-elevation-z2" mode="side" [opened]="sideOpen">
+
+        <mat-nav-list class="nav-list">
+          <h3 mat-subheader>
+            <span>用户权限</span>
+            <span fxFlex></span>
+            <button mat-icon-button (click)="onSideTriggered()">
+              <mat-icon>menu</mat-icon>
+            </button>
+          </h3>
+          <a class="nav-item" mat-list-item>
+            <h3 class="nav-title" mat-line>
+              <mat-icon class="icon">mail</mat-icon>
+              <span class="text">管理员 (1)</span>
+            </h3>
+          </a>
+          <a class="nav-item" mat-list-item>
+            <h3 class="nav-title" mat-line>
+              <mat-icon class="icon">group</mat-icon>
+              <span class="text">普通用户 ({{users.length}})</span>
+            </h3>
+          </a>
+          <mat-divider></mat-divider>
+          <a class="nav-item" mat-list-item>
+            <h3 class="nav-title" mat-line>
+              <mat-icon class="icon">local_offer</mat-icon>
+              <span class="text">标签用户 </span>
+            </h3>
+          </a>
+        </mat-nav-list>
+
+      </mat-sidenav>
+
+      <div class="content-container p-10">
+        <div class="toolbar mat-elevation-z2" fxLayout="row" fxLayoutAlign="start center" [ngClass]="{'show': checked}">
+          <button mat-icon-button>
+            <mat-icon>delete</mat-icon>
           </button>
-        </h3>
-        <a class="nav-item" mat-list-item>
-          <h3 class="nav-title" mat-line>
-            <mat-icon class="icon">mail</mat-icon>
-            <span class="text">管理员 (1)</span>
-          </h3>
-        </a>
-        <a class="nav-item" mat-list-item>
-          <h3 class="nav-title" mat-line>
-            <mat-icon class="icon">group</mat-icon>
-            <span class="text">普通用户 ({{users.length}})</span>
-          </h3>
-        </a>
-        <mat-divider></mat-divider>
-        <a class="nav-item" mat-list-item>
-          <h3 class="nav-title" mat-line>
-            <mat-icon class="icon">local_offer</mat-icon>
-            <span class="text">标签用户 </span>
-          </h3>
-        </a>
-      </mat-nav-list>
+        </div>
 
-    </mat-sidenav>
-
-    <div class="content-container p-10">
-      <div class="toolbar mat-elevation-z2" fxLayout="row" fxLayoutAlign="start center" [ngClass]="{'show': checked}">
-        <button mat-icon-button>
-          <mat-icon>delete</mat-icon>
-        </button>
-      </div>
-
-      <table class="table table-hover">
-        <thead>
+        <table class="table table-hover">
+          <thead>
           <tr>
             <th>
               <mat-checkbox class="checkbox" [(ngModel)]="checked"></mat-checkbox>
@@ -54,8 +56,8 @@
             <th>状态</th>
             <th>管理操作</th>
           </tr>
-        </thead>
-        <tbody>
+          </thead>
+          <tbody>
           <tr *ngFor="let user of users" (click)="onEditTriggered(user)">
             <td>
               <mat-checkbox class="checkbox" [checked]="checked"></mat-checkbox>
@@ -71,9 +73,11 @@
               </button>
             </td>
           </tr>
-        </tbody>
-      </table>
-    </div>
-  </mat-sidenav-container>
+          </tbody>
+        </table>
+      </div>
+    </mat-sidenav-container>
 
-</div>
+  </div>
+
+</stbui-base-layout>
