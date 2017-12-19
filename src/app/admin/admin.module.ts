@@ -10,13 +10,15 @@ import { BrandComponent } from './brand/brand.component';
 import { CustomizerComponent } from './customizer/customizer.component';
 import { FooterComponent } from './footer/footer.component';
 
+import { NavigationModule } from './navigation/navigation.module';
 
 @NgModule({
   imports: [
     RouterModule,
     SharedModule,
     HeaderModule,
-    SidenavModule
+    SidenavModule,
+    NavigationModule
   ],
   declarations: [
     AdminComponent,
