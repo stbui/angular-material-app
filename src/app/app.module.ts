@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import 'hammerjs';
 import { ReactiveFormsModule } from '@angular/forms';
 
@@ -27,7 +27,6 @@ import { FireBaseComponentsModule } from './shared/firebase.module';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    NoopAnimationsModule,
     SharedModule,
     CoreModule,
     AdminModule,
