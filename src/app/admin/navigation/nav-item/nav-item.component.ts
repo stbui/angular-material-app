@@ -1,4 +1,4 @@
-import { Component, Input, ViewEncapsulation } from '@angular/core';
+import { Component, HostBinding, Input, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'stbui-nav-item',
@@ -9,5 +9,5 @@ import { Component, Input, ViewEncapsulation } from '@angular/core';
 export class NavItemComponent {
 
   @Input() item: any;
-
+  // @HostBinding('style.color') color = '#f0f';
 }

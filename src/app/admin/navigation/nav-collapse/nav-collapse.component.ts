@@ -21,7 +21,6 @@ export class NavCollapseComponent implements OnInit {
       (event) => {
 
         if (event instanceof NavigationEnd) {
-          console.log(this.item, event.urlAfterRedirects);
           if (this.isUrlInChildren(this.item, event.urlAfterRedirects)) {
             this.expand();
           } else {
