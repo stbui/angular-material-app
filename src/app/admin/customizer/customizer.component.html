@@ -19,4 +19,34 @@
     <mat-radio-button class="customizer-radio-button" *ngFor="let color of _colors" [value]="'stbui-background-'+color">{{color}}
     </mat-radio-button>
   </mat-radio-group>
+
+  <div class="m-t-10">layout</div>
+  <mat-radio-group class="customizer-radio-group" [(ngModel)]="settings.layout.mode"
+                   (ngModelChange)="onSettingsChange()" fxLayout="row">
+    <mat-radio-button class="customizer-radio-button" value="boxed">固定宽度</mat-radio-button>
+    <mat-radio-button class="customizer-radio-button" value="fullwidth">满屏宽度</mat-radio-button>
+  </mat-radio-group>
+
+  <div class="m-t-10">navigation</div>
+  <mat-radio-group class="customizer-radio-group" [(ngModel)]="settings.layout.navigation"
+                   (ngModelChange)="onSettingsChange()" fxLayout="row">
+    <mat-radio-button class="customizer-radio-button" value="left">左侧</mat-radio-button>
+    <mat-radio-button class="customizer-radio-button" value="right">右侧</mat-radio-button>
+    <mat-radio-button class="customizer-radio-button" value="none">隐藏</mat-radio-button>
+  </mat-radio-group>
+
+  <div class="m-t-10">header</div>
+  <mat-radio-group class="customizer-radio-group" [(ngModel)]="settings.layout.header"
+                   (ngModelChange)="onSettingsChange()" fxLayout="row">
+    <mat-radio-button class="customizer-radio-button" value="below">显示</mat-radio-button>
+    <mat-radio-button class="customizer-radio-button" value="none">隐藏</mat-radio-button>
+  </mat-radio-group>
+
+  <div class="m-t-10">footer</div>
+  <mat-radio-group class="customizer-radio-group" [(ngModel)]="settings.layout.footer"
+                   (ngModelChange)="onSettingsChange()" fxLayout="row">
+    <mat-radio-button class="customizer-radio-button" value="below">显示</mat-radio-button>
+    <mat-radio-button class="customizer-radio-button" value="none">隐藏</mat-radio-button>
+  </mat-radio-group>
+
 </div>

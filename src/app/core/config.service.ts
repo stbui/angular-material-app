@@ -19,8 +19,8 @@ export class ConfigService {
       layout: {
         mode: 'fullwidth',
         navigation: 'left',
-        header: '',
-        footer: ''
+        header: 'below',
+        footer: 'below'
       }
     };
 

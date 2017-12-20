@@ -14,12 +14,15 @@ export class AdminComponent implements OnInit {
 
   settings: any;
   onSettingsChanged: Subscription;
+  layoutMode = false;
 
   private _media$: ReplaySubject<MediaChange> = new ReplaySubject(1);
   private _mediaSubscription: Subscription;
 
   sidenavOpen: boolean = true;
   sidenavMode: string = 'side';
+  sidenavAlign: string = 'start';
+  customizerSidenavAlign: string = 'end';
 
   title = '后台管理系统 - Power by stbui';
 
@@ -29,10 +32,28 @@ export class AdminComponent implements OnInit {
 
   constructor(media: ObservableMedia, private config: ConfigService) {
     media.asObservable()
-         .subscribe(res => this._media$.next(res), err => this._media$.error(err), () => this._media$.complete());
+      .subscribe(res => this._media$.next(res), err => this._media$.error(err), () => this._media$.complete());
 
     this.onSettingsChanged = this.config.onSettingsChanged.subscribe(settings => {
       this.settings = settings;
+
+      if (this.settings.layout.mode === 'boxed') {
+        this.layoutMode = true;
+      } else {
+        this.layoutMode = false;
+      }
+
+      if (this.settings.layout.navigation === 'left') {
+        this.sidenavAlign = 'start';
+        this.customizerSidenavAlign = 'end';
+      } else if (this.settings.layout.navigation === 'right') {
+        this.sidenavAlign = 'end';
+        this.customizerSidenavAlign = 'start';
+      } else {
+        this.sidenavAlign = 'start';
+        this.customizerSidenavAlign = 'end';
+        this.sidenavOpen = false;
+      }
     });
   }
 

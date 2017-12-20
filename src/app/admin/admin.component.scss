@@ -1,5 +1,27 @@
 $height__main-toolbar: 64px;
 
+:host {
+  display: block;
+  height: 100%;
+  background: #2f3d4a;
+  &:before,
+  &:after {
+    content: 'STBUI';
+    position: absolute;
+    top: 0;
+    color: rgba(255, 255, 255, 0.12);
+    overflow-wrap: break-word;
+    text-align: center;
+    transform: translate(0, 50%);
+    padding: 0 20px;
+    font-size: 62px;
+    width: 46px;
+  }
+  &:after {
+    right: 0;
+  }
+}
+
 .sidenav {
   width: 250px;
   max-width: 250px;

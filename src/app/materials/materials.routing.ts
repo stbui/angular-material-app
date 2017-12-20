@@ -74,7 +74,7 @@ const routes: Routes = [
     component: AmapComponent
   },
   {
-    path: 'datepicker',
+    path: 'date-picker',
     component: DatePickerComponent
   },
   {
