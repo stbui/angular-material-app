@@ -27,7 +27,7 @@
     <div class="error-list">
       <div class="error" fxLayout="row" *ngFor="let data of data.datas" (click)="onDetailTriggered(data)">
         <div class="content-wrapper" fxLayout="row" fxLayoutAlign="start center" fxFlex>
-          <span><a class="link" target="_blank" [href]="data.url">{{ data.url }}</a></span>
+          <span><a class="link" target="blank" [href]="data.url">{{ data.url }}</a></span>
         </div>
 
         <div class="start-wrapper" fxLayout="row" fxLayoutAlign="start center" fxFlex="240px">
