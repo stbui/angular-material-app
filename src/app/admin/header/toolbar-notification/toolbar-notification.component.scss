@@ -1,9 +1,8 @@
 $prefix: 'toolbar-notification';
 
 .badge {
-  background-color: #f44336;
+  background: #2196f3;
   color: #fff;
-  border-color:#f44336
 }
 
 .badge {
@@ -11,8 +10,12 @@ $prefix: 'toolbar-notification';
   top: 0;
   left: 50%;
   font-weight: 700;
-  line-height: 13px;
-  height: 13px;
+  border-radius: 20px;
+  box-sizing: border-box;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  font-size: 11px;
 }
 
 .#{$prefix} {
