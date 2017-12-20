@@ -17,7 +17,8 @@ export class CustomizerComponent implements OnInit {
     'accent',
     'red',
     'blue',
-    'orange'
+    'orange',
+    'material'
   ];
 
   constructor(private config: ConfigService) {

@@ -46,6 +46,17 @@ $stbui-dark: (
   )
 );
 
+$stbui-material: (
+  500: #263238,
+  contrast: (
+    500: #80CBC4,
+    600: #82B1FF,
+    700: #C3E88D,
+    800: rgba(199, 146, 234, 1),
+    900: #546E7A
+  )
+);
+
 $red: mat-palette($mat-red);
 $pink: mat-palette($mat-pink);
 $purple: mat-palette($mat-purple);
@@ -68,6 +79,7 @@ $blue-grey: mat-palette($mat-blue-grey);
 $white: mat-palette($stbui-white);
 $black: mat-palette($stbui-black);
 $dark: mat-palette($stbui-dark);
+$material: mat-palette($stbui-material);
 
 $stbui-theme-colors: (
   primary: $primary,
@@ -94,5 +106,6 @@ $stbui-theme-colors: (
   blue-grey: $blue-grey,
   white: $white,
   black: $black,
-  dark: $dark
+  dark: $dark,
+  material: $material
 );

@@ -1,5 +1,4 @@
 @import '~@angular/material/theming';
-@import "../app/sidenav/sidenav.theme";
 @import "../app/component/pagination/pagination.theme";
 @import "../app/component/date-picker/date-picker.theme";
 @import "../app/component/notification/notification.theme";
@@ -12,7 +11,6 @@
   $background: map_get($theme, background);
   $foreground: map_get($theme, foreground);
 
-  @include stbui-navigation-theme();
   @include pagination-theme($theme);
   @include calendar-theme($theme);
   @include navigation-theme($theme);

@@ -16,7 +16,7 @@ $theme: mat-light-theme($primary, $accent, $warn);
 @import "scss/app-theme";
 @include angular-material-theme($theme);
 @include stbui-app-theme($theme)
-
+@include stbui-theme-color();
 
 
 html, body {
