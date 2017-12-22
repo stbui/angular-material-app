@@ -8,11 +8,11 @@ export const environment = {
     storageBucket: 'angular-material-app-stbui.appspot.com',
     messagingSenderId: '974351057659'
   },
-  navigationApi: 'http://stbui.com:8360/api',
+  navigationApi: '/assets/data/navigation',
   todoApi: '/assets/data/todo/list.json',
   mailApi: '/assets/data/mail/list.json',
   chatsApi: '/assets/data/chats/list.json',
-  analysisApi: '/assets/data',
-  crmApi: '/assets/data',
-  tableApi: '/assets/data'
+  analysisApi: '/assets/data/analysis',
+  crmApi: '/assets/data/crm',
+  tableApi: '/assets/data/table'
 };
