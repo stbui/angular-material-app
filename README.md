@@ -28,7 +28,7 @@
 - 实用的本地数据调试方案
 - 支持 docker 构建镜像
 - 支持 electron 构建桌面应用
-_ 支持 pwa
+- 支持 pwa
 - 接入 firebase, 关联google账户和github账户登录
 - 模块代码，添加和删除非常轻松
 - 不定期更新，不断更新新功能
