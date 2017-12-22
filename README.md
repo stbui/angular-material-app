@@ -12,10 +12,10 @@
 
 ### 平台环境
 
-[![Angular](https://img.shields.io/badge/Angular%205-5.0.0-brightgreen.svg?style=flat-square)](https://github.com/angular/angular)
-[![Angular-cli](https://img.shields.io/badge/Angular.cli-1.5.0-brightgreen.svg?style=square)](https://github.com/angular/angular-cli)
-[![Angular Material 2](https://img.shields.io/badge/Material%202-5.0.1-brightgreen.svg?style=square)](https://github.com/angular/material2)
-[![Flex-Layout](https://img.shields.io/badge/Flex.Layout-2.0.0.beta.11-brightgreen.svg?style=square)](https://github.com/angular/flex-layout)
+[![Angular](https://img.shields.io/badge/Angular%205-5.1.2-brightgreen.svg?style=flat-square)](https://github.com/angular/angular)
+[![Angular-cli](https://img.shields.io/badge/Angular.cli-1.6.2-brightgreen.svg?style=square)](https://github.com/angular/angular-cli)
+[![Angular Material 2](https://img.shields.io/badge/Material%202-5.0.2-brightgreen.svg?style=square)](https://github.com/angular/material2)
+[![Flex-Layout](https://img.shields.io/badge/Flex.Layout-2.0.0.beta.12-brightgreen.svg?style=square)](https://github.com/angular/flex-layout)
 [![Angular FireBase](https://img.shields.io/badge/Firebase-5.0.0.rc.4-brightgreen.svg?style=square)](https://github.com/angular/angularfire2)
 
 
@@ -28,6 +28,7 @@
 - 实用的本地数据调试方案
 - 支持 docker 构建镜像
 - 支持 electron 构建桌面应用
+_ 支持 pwa
 - 接入 firebase, 关联google账户和github账户登录
 - 模块代码，添加和删除非常轻松
 - 不定期更新，不断更新新功能

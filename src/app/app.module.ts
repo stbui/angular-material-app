@@ -17,6 +17,9 @@ import { SigninComponent } from './pages/signin/signin.component';
 
 import { FireBaseComponentsModule } from './shared/firebase.module';
 
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,8 +36,10 @@ import { FireBaseComponentsModule } from './shared/firebase.module';
     AppRoutingModule,
     FireBaseComponentsModule,
     ReactiveFormsModule,
+    environment.production ? ServiceWorkerModule.register('/ngsw-worker.js') : []
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
