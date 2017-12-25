@@ -36,7 +36,7 @@ import { environment } from '../environments/environment';
     AppRoutingModule,
     FireBaseComponentsModule,
     ReactiveFormsModule,
-    environment.production ? ServiceWorkerModule.register('./ngsw-worker.js') : []
+    environment['ngsw'] ? ServiceWorkerModule.register('./ngsw-worker.js') : []
   ],
   providers: [],
   bootstrap: [AppComponent]
