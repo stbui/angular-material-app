@@ -115,42 +115,15 @@ npm run build-pack-electron
 * 文件上传模块
 * 聊天应用模块
 
-## 项目分支
-```
-feature/firebase
-```
+* [docs](docs/firebase.md)
 
-## 起步（教程）
+# PWA
 
-### hosting
-
-* 安装 Firebase cli
-```
-npm install -g firebase-tools
-```
-
-* 登录firebase
-```
-firebase login
-```
-
-* 初始化成firebase
-```
-firebase init
-```
-
-* 推送到firebase
-```
-firebase deploy
-```
-
-### Authentication
-```
-npm install firebase angularfire2 --save
-```
+* [docs](docs/pwa.md)
 
 ### Universal
 
+* [docs](docs/universal.md)
 
 # 参与贡献
 
@@ -158,7 +131,3 @@ npm install firebase angularfire2 --save
 * 在你的公司或个人项目中使用项目。
 * 通过 [Issue](https://github.com/stbui/angular-material-app/issues) 报告 bug 或进行咨询。
 * 提交 [Pull Request](https://github.com/stbui/angular-material-app/pulls) 来改进。
-
-
-
-![ad image](http://stbui.oss-cn-beijing.aliyuncs.com/ad.png)
