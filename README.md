@@ -83,32 +83,26 @@ docker run -d -P stbui/angular-material-app
 
 使用Electron构建桌面应用
 
-## 项目分支
-```
-feature/electron
-```
-
 ## 起步
+
+* 安装依赖环境
+node ./scripts/electron/install.js
 
 * 构建静态资源
 ```
-npm run build:electron
+npm run build-prod-electron
 ```
+
 * 启动项目
 ```
-npm run electron
+npm run start:electron
 ```
 
 ## 打包
-
-* mac 平台
 ```
-npm run build:darwin
+npm run build-pack-electron
 ```
-* window 平台
-```
-npm run build:win32
-```
+文件生成在*packager*目录中
 
 
 # Firebase
