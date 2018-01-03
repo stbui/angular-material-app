@@ -20,7 +20,7 @@
     "start:electron": "electron .",
     "electron-copy": "cp ./scripts/electron/electron.js dist/",
     "build-prod-electron": "ng build --extract-css --prod --aot --environment=prod --base-href=./ && npm run electron-copy",
-    "build-pack-electron":"node ./scripts/electron/build.js",
+    "build-pack-electron": "node ./scripts/electron/build.js",
     "docs": "hads ./docs -o",
     "compodoc": "./node_modules/.bin/compodoc -p tsconfig.json -s",
     "test": "ng test",
