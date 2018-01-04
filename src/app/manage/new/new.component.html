@@ -1,0 +1,18 @@
+<h2 mat-dialog-title>新建</h2>
+<mat-dialog-content>
+  <form fxLayout="column" fxLayoutAlign="start stretch">
+    <mat-form-field class="full-width">
+      <input type="email" id="email" class="input" placeholder="请输入您的应用名称" required matInput>
+    </mat-form-field>
+
+    <mat-form-field class="full-width">
+      <input type="text" id="password" class="input" placeholder="嵌入代码" value="12345" required matInput>
+    </mat-form-field>
+
+  </form>
+
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button mat-dialog-close>取消</button>
+  <button mat-button [mat-dialog-close]="true">保存</button>
+</mat-dialog-actions>
