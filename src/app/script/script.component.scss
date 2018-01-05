@@ -1,0 +1,26 @@
+:host {
+    display: block;
+    margin: 24px;
+}
+
+
+.error-detail-main {
+    padding-bottom: 20px;
+  
+    > .title {
+      padding-bottom: 8px;
+      font-weight: 500;
+      font-size: 16px;
+    }
+  }
+  
+  .error-detail-row {
+    box-sizing: border-box;
+    border-bottom: 1px solid #eee;
+    padding: 8px 24px;
+    color: #616161;
+  }
+
+.row-selected {
+    background: #f00;
+}

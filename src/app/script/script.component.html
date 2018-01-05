@@ -1,3 +1,145 @@
-<p>
-  script works!
-</p>
+<stbui-search placeholder="过滤条件"></stbui-search>
+<br>
+<ngx-datatable class="material" [rows]="rows" [loadingIndicator]="loadingIndicator" [columns]="columns" [columnMode]="'force'"
+  [headerHeight]="50" [footerHeight]="0" [rowHeight]="50" [scrollbarV]="true" [scrollbarH]="true" [limit]="10"
+  [reorderable]="reorderable" [rowClass]="getRowClass" [selected]="selected"
+  [selectionType]="'single'"
+  (activate)="onActivate($event)"
+  (select)='onSelect($event)'>
+
+  <ngx-datatable-column name="发生时间" prop="cb" [width]="100"></ngx-datatable-column>
+  <ngx-datatable-column name="版本" prop="releaseStage" [width]="100"></ngx-datatable-column>
+  <ngx-datatable-column name="错误类型" prop="name" [width]="100"></ngx-datatable-column>
+  <ngx-datatable-column name="错误信息" prop="message" [width]="280"></ngx-datatable-column>
+  <ngx-datatable-column name="出错文件" prop="file" [width]="300"></ngx-datatable-column>
+  <ngx-datatable-column name="出错行号" prop="lineNumber"></ngx-datatable-column>
+  <ngx-datatable-column name="出错列号" prop="columnNumber"></ngx-datatable-column>
+</ngx-datatable>
+
+<apm-script-detail [opened]="openDetial" (onOpened)="onOpenedTriggered($event)">
+  <div class="error-detail-main">
+    <div class="title">事件详情</div>
+    <div class="error-detail-row">
+      <div class="start-wrapper" fxLayout="row" fxLayoutAlign="start center" fxFlex="100px">
+        <span>时间</span>
+      </div>
+      <div class="content-wrapper" fxLayout="row" fxLayoutAlign="start center" fxFlex>
+        <span>{{detail?.cb}}</span>
+      </div>
+    </div>
+    <div class="error-detail-row">
+      <div class="start-wrapper" fxLayout="row" fxLayoutAlign="start center" fxFlex="100px">
+        <span>错误类型</span>
+      </div>
+      <div class="content-wrapper" fxLayout="row" fxLayoutAlign="start center" fxFlex>
+        <span>{{detail?.name}}</span>
+      </div>
+    </div>
+    <div class="error-detail-row">
+      <div class="start-wrapper" fxLayout="row" fxLayoutAlign="start center" fxFlex="100px">
+        <span>错误信息</span>
+      </div>
+      <div class="content-wrapper" fxLayout="row" fxLayoutAlign="start center" fxFlex>
+        <span>{{detail?.message}}</span>
+      </div>
+    </div>
+    <div class="error-detail-row">
+      <div class="start-wrapper" fxLayout="row" fxLayoutAlign="start center" fxFlex="100px">
+        <span>出错文件</span>
+      </div>
+      <div class="content-wrapper" fxLayout="row" fxLayoutAlign="start center" fxFlex>
+        <span>{{detail?.file}}</span>
+      </div>
+    </div>
+    <div class="error-detail-row">
+      <div class="start-wrapper" fxLayout="row" fxLayoutAlign="start center" fxFlex="100px">
+        <span>出错行号</span>
+      </div>
+      <div class="content-wrapper" fxLayout="row" fxLayoutAlign="start center" fxFlex>
+        <span>{{detail?.lineNumber}}</span>
+      </div>
+    </div>
+    <div class="error-detail-row">
+      <div class="start-wrapper" fxLayout="row" fxLayoutAlign="start center" fxFlex="100px">
+        <span>出错列号</span>
+      </div>
+      <div class="content-wrapper" fxLayout="row" fxLayoutAlign="start center" fxFlex>
+        <span>{{detail?.columnNumber}}</span>
+      </div>
+    </div>
+    <div class="error-detail-row">
+      <div class="start-wrapper" fxLayout="row" fxLayoutAlign="start center" fxFlex="100px">
+        <span>错误详情</span>
+      </div>
+      <div class="content-wrapper" fxLayout="row" fxLayoutAlign="start center" fxFlex>
+        <span>{{detail?.stacktrace}}</span>
+      </div>
+    </div>
+    <div class="error-detail-row">
+      <div class="start-wrapper" fxLayout="row" fxLayoutAlign="start center" fxFlex="100px">
+        <span>metaData[script][content]</span>
+      </div>
+      <div class="content-wrapper" fxLayout="row" fxLayoutAlign="start center" fxFlex>
+        <span>{{detail?.metaData?.script?.content}}</span>
+      </div>
+    </div>
+    <div class="error-detail-row">
+      <div class="start-wrapper" fxLayout="row" fxLayoutAlign="start center" fxFlex="100px">
+        <span>metaData[script][src]</span>
+      </div>
+      <div class="content-wrapper" fxLayout="row" fxLayoutAlign="start center" fxFlex>
+        <span>{{detail?.metaData?.script.src}}</span>
+      </div>
+    </div>
+    
+
+  </div>
+
+  <div class="error-detail-main">
+    <div class="title">设备详情</div>
+    <div class="error-detail-row">
+      <div class="start-wrapper" fxLayout="row" fxLayoutAlign="start center" fxFlex="100px">
+        <span>IP</span>
+      </div>
+      <div class="content-wrapper" fxLayout="row" fxLayoutAlign="start center" fxFlex>
+        <span>127.0.0.1</span>
+      </div>
+    </div>
+    
+    <div class="error-detail-row">
+      <div class="start-wrapper" fxLayout="row" fxLayoutAlign="start center" fxFlex="100px">
+        <span>浏览器</span>
+      </div>
+      <div class="content-wrapper" fxLayout="row" fxLayoutAlign="start center" fxFlex>
+        <span>{{ detail?.device.browser}} {{ detail?.device.version}} {{ detail?.device.engine}}</span>
+      </div>
+    </div>
+    <div class="error-detail-row">
+      <div class="start-wrapper" fxLayout="row" fxLayoutAlign="start center" fxFlex="100px">
+        <span>os</span>
+      </div>
+      <div class="content-wrapper" fxLayout="row" fxLayoutAlign="start center" fxFlex>
+        <span>{{ detail?.device.os}} {{ detail?.device.osVersion}} </span>
+      </div>
+    </div>
+
+    <div class="error-detail-row">
+      <div class="start-wrapper" fxLayout="row" fxLayoutAlign="start center" fxFlex="100px">
+        <span>language</span>
+      </div>
+      <div class="content-wrapper" fxLayout="row" fxLayoutAlign="start center" fxFlex>
+        <span>{{ detail?.language }}</span>
+      </div>
+    </div>
+    <div class="error-detail-row">
+      <div class="start-wrapper" fxLayout="row" fxLayoutAlign="start center" fxFlex="100px">
+        <span>userAgent</span>
+      </div>
+      <div class="content-wrapper" fxLayout="row" fxLayoutAlign="start center" fxFlex>
+        <span>{{ detail?.userAgent }}</span>
+      </div>
+    </div>
+
+
+  </div>
+</apm-script-detail>

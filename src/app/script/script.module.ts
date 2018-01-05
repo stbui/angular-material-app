@@ -1,14 +1,19 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { SharedModule } from '../shared/shared.module';
+import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 
 import { ScriptRoutingModule } from './script-routing.module';
 import { ScriptComponent } from './script.component';
+import { SearchModule } from '../component/search/index';
+import { DetailComponent } from './detail/detail.component';
 
 @NgModule({
   imports: [
-    CommonModule,
-    ScriptRoutingModule
+    SharedModule,
+    ScriptRoutingModule,
+    NgxDatatableModule,
+    SearchModule
   ],
-  declarations: [ScriptComponent]
+  declarations: [ScriptComponent, DetailComponent]
 })
 export class ScriptModule { }

@@ -19,12 +19,12 @@
     </ng-template>
   </ngx-datatable-column>
 
-  <ngx-datatable-column name="名称" prop="name"></ngx-datatable-column>
-  <ngx-datatable-column name="标识" prop="apiKey"></ngx-datatable-column>
+  <ngx-datatable-column name="名称" prop="name" [canAutoResize]="false"></ngx-datatable-column>
+  <ngx-datatable-column name="标识" prop="apiKey" [canAutoResize]="false"></ngx-datatable-column>
 
   <ngx-datatable-column name="代码">
     <ng-template let-value="value" ngx-datatable-cell-template>
-      {{ value.url }}{{ value.apiKey }}
+      {{ value.url }}/{{ value.apiKey }}
     </ng-template>
   </ngx-datatable-column>
 </ngx-datatable>
