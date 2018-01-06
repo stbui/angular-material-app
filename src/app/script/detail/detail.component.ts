@@ -1,52 +1,43 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core'
+import { Component, OnInit, Input, Output, EventEmitter, ElementRef, ViewChild, Renderer2, HostBinding } from '@angular/core'
 
 @Component({
   selector: 'apm-script-detail',
   templateUrl: './detail.component.html',
-  styleUrls: ['./detail.component.scss']
+  styleUrls: ['./detail.component.scss'],
+  host: {
+    '[class.mat-elevation-z10]': 'true'
+  }
 })
 export class DetailComponent implements OnInit {
 
-  @Input() opened: boolean = false;
+  @Input()
+  set opened(val) {
+    this.open = val;
+  }
+  get opened() {
+    return this.open;
+  }
+
   @Output() onOpened = new EventEmitter();
+  @ViewChild('overlay') overlay: ElementRef;
+  @HostBinding('class.open') open: boolean;
 
-  count = 0;
-
-  constructor() {
+  constructor(
+    private _element: ElementRef,
+    private _renderer: Renderer2
+  ) {
+    this.open = true;
   }
 
   ngOnInit() {
-
-  }
-
-  // 自定义的方法，检测和处理值的改变
-  ngDoCheck() {
-    this.count += 1;
-  }
-
-  // 在组件内容初始化之后调用
-  ngAfterContentInit() {
-
-  }
-
-  // 组件每次检查内容时调用
-  ngAfterContentChecked() {
-
-  }
-
-  // 组件相应的视图初始化之后调用
-  ngAfterViewInit() {
-
-  }
-
-  // 组件每次检查视图时调用
-  ngAfterViewChecked() {
-
+    // this._renderer.listen(this._element.nativeElement, 'click', () => {
+    //   this.onCloseTriggered();
+    // });
   }
 
   onCloseTriggered() {
-    this.opened = false;
-    this.onOpened.emit(this.opened);
+    this.open = false;
+    this.onOpened.emit(this.open);
   }
 
 }

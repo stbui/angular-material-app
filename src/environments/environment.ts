@@ -13,11 +13,6 @@ export const environment = {
     storageBucket: 'angular-material-app-stbui.appspot.com',
     messagingSenderId: '974351057659'
   },
-  navigationApi: '/assets/data/navigation',
-  todoApi: '/assets/data/todo/list.json',
-  mailApi: '/assets/data/mail/list.json',
-  chatsApi: '/assets/data/chats/list.json',
-  analysisApi: '/assets/data/analysis',
-  crmApi: '/assets/data/crm',
-  tableApi: '/assets/data/table'
+  apm: '/assets/data/apm',
+  // apm:'http://127.0.0.1:3000'
 };

@@ -17,11 +17,13 @@ import { FireBaseComponentsModule } from './shared/firebase.module';
 
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { ViewComponent } from './performace/view/view.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
+    ViewComponent,
   ],
   imports: [
     BrowserModule,

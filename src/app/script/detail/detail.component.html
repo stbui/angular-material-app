@@ -1,12 +1,8 @@
-<div class="error-detail-container mat-elevation-z10" [class.open]="opened">
-    <div fxLayout="row" fxLayoutAlign="space-between center">
-      <span fxFlex></span>
-      <button mat-icon-button (click)="onCloseTriggered()">
-        <mat-icon>close</mat-icon>
-      </button>
-    </div>
+<div fxLayout="row" fxLayoutAlign="space-between center">
+  <span fxFlex></span>
+  <button mat-icon-button (click)="onCloseTriggered()" #overlay>
+    <mat-icon>close</mat-icon>
+  </button>
+</div>
 
-    <ng-content></ng-content>
-  
-    
-  </div>
+<ng-content></ng-content>

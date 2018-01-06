@@ -1,3 +1,29 @@
-<p>
-  collection works!
-</p>
+<stbui-search placeholder="过滤条件"></stbui-search>
+
+<div class="m-t-20" (clickOutside)="onClickOutside($event)">
+
+  <ngx-datatable *ngIf="rows?.length"
+  class="material"
+  [rows]="rows"
+  [loadingIndicator]="loadingIndicator"
+  [columnMode]="'force'"
+  [columns]="columns"
+  [headerHeight]="50"
+  [rowHeight]="50"
+  [footerHeight]="50"
+  [scrollbarV]="true"
+  [scrollbarH]="true"
+  [limit]="10"
+  [selected]="selected"
+  [selectionType]="'single'"
+  (select)='onSelect($event)'>
+
+  <ngx-datatable-column name="id" prop="id" width="20"></ngx-datatable-column>
+  <ngx-datatable-column name="版本" prop="releaseStage" [width]="50"></ngx-datatable-column>
+  <ngx-datatable-column name="类型" prop="type" [width]="50"></ngx-datatable-column>
+    <ngx-datatable-column name="请求方法" prop="method" [width]="50"></ngx-datatable-column>
+    <ngx-datatable-column name="域名" prop="domain" [minWidth]="100"></ngx-datatable-column>
+    <ngx-datatable-column name="请求链接" prop="url" minWidth="400"></ngx-datatable-column>
+  </ngx-datatable>
+
+</div>
