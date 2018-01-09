@@ -2,7 +2,7 @@ import { Component, OnInit, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 
 @Component({
-  selector: 'app-new',
+  selector: 'apm-manage-new',
   templateUrl: './new.component.html',
   styleUrls: ['./new.component.scss'],
 })

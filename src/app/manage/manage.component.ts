@@ -3,7 +3,7 @@ import { MatDialog } from '@angular/material';
 import { NewComponent } from './new/new.component';
 
 @Component({
-  selector: 'app-manage',
+  selector: 'apm-manage',
   templateUrl: './manage.component.html',
   styleUrls: ['./manage.component.scss']
 })
