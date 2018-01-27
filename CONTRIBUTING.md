@@ -1,166 +1,75 @@
-# Contributing to angular-material-app
+# 代码贡献规范
 
-We would love for you to contribute to Angular and help make it even better than it is
-today! As a contributor, here are the guidelines we would like you to follow:
+有任何疑问，欢迎提交 [issue](https://github.com/stbui/angular-material-app/issues)，
+或者直接修改提交 [PR](https://github.com/stbui/angular-material-app/pulls)!
 
- - [Code of Conduct](#coc)
- - [Question or Problem?](#question)
- - [Issues and Bugs](#issue)
- - [Feature Requests](#feature)
- - [Submission Guidelines](#submit)
- - [Coding Rules](#rules)
- - [Commit Message Guidelines](#commit)
- - [Signing the CLA](#cla)
+## 提交 issue
 
-## <a name="coc"></a> Code of Conduct
-Help us keep Angular open and inclusive. Please read and follow our [Code of Conduct][coc].
+- 请确定 issue 的类型。
+- 请避免提交重复的 issue，在提交之前搜索现有的 issue。
+- 在标签(分类参考**标签分类**), 标题 或者内容中体现明确的意图。
 
-## <a name="question"></a> Got a Question or Problem?
+标签可分为两类，type 和 scope
 
-Do not open issues for general support questions as we want to keep GitHub issues for bug reports and feature requests. You've got much better chances of getting your question answered on [Stack Overflow](https://stackoverflow.com/questions/tagged/angular) where the questions should be tagged with tag `angular`.
+- type: issue 的类型，如 `feature`, `bug`, `documentation`, `performance`, `support` ...
+- scope: 修改文件的范围，如 `core: xx`，`plugin: xx`，`deps: xx`
 
-Stack Overflow is a much better place to ask questions since:
+### 常用标签说明
 
-- there are thousands of people willing to help on Stack Overflow
-- questions and answers stay available for public viewing so your question / answer might help someone else
-- Stack Overflow's voting system assures that the best answers are prominently visible.
+- `support`: issue 提出的问题需要开发者协作排查，咨询，调试等等日常技术支持。
+- `bug`: 一旦发现可能是 bug 的问题，请打上 `bug`，然后等待确认，一旦确认是 bug，此 issue 会被再打上 `confirmed`。
+  - 此时 issue 会被非常高的优先级进行处理。
+  - 如果此 bug 是正在影响线上应用正常运行，会再打上 `critical`，代表是最高优先级，需要马上立刻处理！
+  - bug 会在最低需要修复的版本进行修复，如是在 `0.9.x` 要修复的，而当前最新版本是 `1.1.x`，
+  那么此 issue 还会被打上 `0.9`，`0.10`，`1.0`，`1.1`，代表需要修复到这些版本。
 
-To save your and our time, we will systematically close all issues that are requests for general support and redirect people to Stack Overflow.
+## 编写文档
 
-If you would like to chat about the question in real-time, you can reach out via [our gitter channel][gitter].
+所有功能点必须提交配套文档，文档须满足以下要求
 
-## <a name="issue"></a> Found a Bug?
-If you find a bug in the source code, you can help us by
-[submitting an issue](#submit-issue) to our [GitHub Repository][github]. Even better, you can
-[submit a Pull Request](#submit-pr) with a fix.
+- 必须说清楚问题的几个方面：what（是什么），why（为什么），how（怎么做），可根据问题的特性有所侧重。
+- how 部分必须包含详尽完整的操作步骤，必要时附上 **足够简单，可运行** 的范例代码，
+- 提供必要的链接，如申请流程，术语解释和参考文档等。
 
-## <a name="feature"></a> Missing a Feature?
-You can *request* a new feature by [submitting an issue](#submit-issue) to our GitHub
-Repository. If you would like to *implement* a new feature, please submit an issue with
-a proposal for your work first, to be sure that we can use it.
-Please consider what kind of change it is:
+## 提交代码
 
-* For a **Major Feature**, first open an issue and outline your proposal so that it can be
-discussed. This will also allow us to better coordinate our efforts, prevent duplication of work,
-and help you to craft the change so that it is successfully accepted into the project.
-* **Small Features** can be crafted and directly [submitted as a Pull Request](#submit-pr).
+### 提交 Pull Request
 
-## <a name="submit"></a> Submission Guidelines
+如果你有仓库的开发者权限，而且希望贡献代码，那么你可以创建分支修改代码提交 PR，egg 开发团队会 review 代码合并到主干。
 
-### <a name="submit-issue"></a> Submitting an Issue
+```bash
+# 先创建开发分支开发，分支名应该有含义，避免使用 update、tmp 之类的
+$ git checkout -b branch-name
 
-Before you submit an issue, please search the issue tracker, maybe an issue for your problem already exists and the discussion might inform you of workarounds readily available.
+# 开发完成后跑下测试是否通过，必要时需要新增或修改测试用例
+$ npm test
 
-We want to fix all the issues as soon as possible, but before fixing a bug we need to reproduce and confirm it. In order to reproduce bugs we will systematically ask you to provide a minimal reproduction scenario using http://plnkr.co. Having a live, reproducible scenario gives us wealth of important information without going back & forth to you with additional questions like:
+# 测试通过后，提交代码，message 见下面的规范
 
-- version of Angular used
-- 3rd-party libraries and their versions
-- and most importantly - a use-case that fails
-
-A minimal reproduce scenario using http://plnkr.co/ allows us to quickly confirm a bug (or point out coding problem) as well as confirm that we are fixing the right problem. If plunker is not a suitable way to demonstrate the problem (for example for issues related to our npm packaging), please create a standalone git repository demonstrating the problem.
-
-We will be insisting on a minimal reproduce scenario in order to save maintainers time and ultimately be able to fix more bugs. Interestingly, from our experience users often find coding problems themselves while preparing a minimal plunk. We understand that sometimes it might be hard to extract essentials bits of code from a larger code-base but we really need to isolate the problem before we can fix it.
-
-Unfortunately we are not able to investigate / fix bugs without a minimal reproduction, so if we don't hear back from you we are going to close an issue that don't have enough info to be reproduced.
-
-You can file new issues by filling out our [new issue form](https://github.com/angular/angular/issues/new).
-
-
-### <a name="submit-pr"></a> Submitting a Pull Request (PR)
-Before you submit your Pull Request (PR) consider the following guidelines:
-
-1. Search [GitHub](https://github.com/angular/angular/pulls) for an open or closed PR
-  that relates to your submission. You don't want to duplicate effort.
-1. Please sign our [Contributor License Agreement (CLA)](#cla) before sending PRs.
-  We cannot accept code without this. Make sure you sign with the primary email address of the Git identity that has been granted access to the Angular repository.
-1. Fork the angular/angular repo.
-1. Make your changes in a new git branch:
-
-     ```shell
-     git checkout -b my-fix-branch master
-     ```
-
-1. Create your patch, **including appropriate test cases**.
-1. Follow our [Coding Rules](#rules).
-1. Run the full Angular test suite, as described in the [developer documentation][dev-doc],
-  and ensure that all tests pass.
-1. Commit your changes using a descriptive commit message that follows our
-  [commit message conventions](#commit). Adherence to these conventions
-  is necessary because release notes are automatically generated from these messages.
-
-     ```shell
-     git commit -a
-     ```
-    Note: the optional commit `-a` command line option will automatically "add" and "rm" edited files.
-
-1. Push your branch to GitHub:
-
-    ```shell
-    git push origin my-fix-branch
-    ```
-
-1. In GitHub, send a pull request to `angular:master`.
-* If we suggest changes then:
-  * Make the required updates.
-  * Re-run the Angular test suites to ensure tests are still passing.
-  * Rebase your branch and force push to your GitHub repository (this will update your Pull Request):
-
-    ```shell
-    git rebase master -i
-    git push -f
-    ```
-
-That's it! Thank you for your contribution!
-
-#### After your pull request is merged
-
-After your pull request is merged, you can safely delete your branch and pull the changes
-from the main (upstream) repository:
-
-* Delete the remote branch on GitHub either through the GitHub web UI or your local shell as follows:
-
-    ```shell
-    git push origin --delete my-fix-branch
-    ```
-
-* Check out the master branch:
-
-    ```shell
-    git checkout master -f
-    ```
-
-* Delete the local branch:
-
-    ```shell
-    git branch -D my-fix-branch
-    ```
-
-* Update your master with the latest upstream version:
-
-    ```shell
-    git pull --ff upstream master
-    ```
-
-## <a name="rules"></a> Coding Rules
-To ensure consistency throughout the source code, keep these rules in mind as you are working:
-
-* All features or bug fixes **must be tested** by one or more specs (unit-tests).
-* All public API methods **must be documented**. (Details TBC).
-* We follow [Google's JavaScript Style Guide][js-style-guide], but wrap all code at
-  **100 characters**. An automated formatter is available, see
-  [DEVELOPER.md](docs/DEVELOPER.md#clang-format).
-
-## <a name="commit"></a> Commit Message Guidelines
-
-We have very precise rules over how our git commit messages can be formatted.  This leads to **more
-readable messages** that are easy to follow when looking through the **project history**.  But also,
-we use the git commit messages to **generate the Angular change log**.
-
-### Commit Message Format
-Each commit message consists of a **header**, a **body** and a **footer**.  The header has a special
-format that includes a **type**, a **scope** and a **subject**:
-
+$ git add . # git add -u 删除文件
+$ git commit -m "fix(role): role.use must xxx"
+$ git push origin branch-name
 ```
+
+提交后就可以在 [angular-material-app](https://github.com/stbui/angular-material-app/pulls) 创建 Pull Request 了。
+
+由于谁也无法保证过了多久之后还记得多少，为了后期回溯历史的方便，请在提交 MR 时确保提供了以下信息。
+
+1. 需求点（一般关联 issue 或者注释都算）
+2. 升级原因（不同于 issue，可以简要描述下为什么要处理）
+3. 框架测试点（可以关联到测试文件，不用详细描述，关键点即可）
+4. 关注点（针对用户而言，可以没有，一般是不兼容更新等，需要额外提示）
+
+### 代码风格
+
+你的代码风格必须通过 eslint，你可以运行 `$ npm run lint` 本地测试。
+
+### Commit 提交规范
+
+根据 [angular 规范](https://github.com/angular/angular.js/blob/master/CONTRIBUTING.md#commit-message-format)提交 commit，
+这样 history 看起来更加清晰，还可以自动生成 changelog。
+
+```xml
 <type>(<scope>): <subject>
 <BLANK LINE>
 <body>
@@ -168,122 +77,99 @@ format that includes a **type**, a **scope** and a **subject**:
 <footer>
 ```
 
-The **header** is mandatory and the **scope** of the header is optional.
+（1）type
 
-Any line of the commit message cannot be longer 100 characters! This allows the message to be easier
-to read on GitHub as well as in various git tools.
+提交 commit 的类型，包括以下几种
 
-Footer should contain a [closing reference to an issue](https://help.github.com/articles/closing-issues-via-commit-messages/) if any.
+- feat: 新功能
+- fix: 修复问题
+- docs: 修改文档
+- style: 修改代码格式，不影响代码逻辑
+- refactor: 重构代码，理论上不影响现有功能
+- perf: 提升性能
+- test: 增加修改测试用例
+- chore: 修改工具相关（包括但不限于文档、代码生成等）
+- deps: 升级依赖
 
-Samples: (even more [samples](https://github.com/angular/angular/commits/master))
+（2）scope
+
+修改文件的范围（包括但不限于 doc, middleware, core, config, plugin）
+
+（3）subject
+
+用一句话清楚的描述这次提交做了什么
+
+（4）body
+
+补充 subject，适当增加原因、目的等相关因素，也可不写。
+
+（5）footer
+
+- **当有非兼容修改(Breaking Change)时必须在这里描述清楚**
+- 关联相关 issue，如 `Closes #1, Closes #2, #3`
+- 如果功能点有新增或修改的，还需要关联文档 `doc`
+
+示例
 
 ```
-docs(changelog): update change log to beta.5
+fix($compile): [BREAKING_CHANGE] couple of unit tests for IE9
+
+Older IEs serialize html uppercased, but IE9 does not...
+Would be better to expect case insensitive, unfortunately jasmine does
+not allow to user regexps for throw expectations.
+
+Document change on #123
+
+Closes #392
+
+BREAKING CHANGE:
+
+  Breaks foo.bar api, foo.baz should be used instead
 ```
+
+查看具体[文档](https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y/edit)
+
+## 发布管理
+
+
+### 分支策略
+
+`master` 分支为当前稳定发布的版本，`next` 分支为下一个开发中的大版本。
+
+- 只维护两个版本，除非有安全问题，否则修复只会 patch 到 `master` 和 `next` 分支，其他更新推动上层框架升级到稳定大版本的最新版本。
+- 所有 API 的废弃都需要在当前的稳定版本上 `deprecate` 提示，并保证在当前的稳定版本上一直兼容到新版本的发布。
+- `master` 分支不设置 publish tag，上层框架基于 semver 依赖稳定版本。
+- `next` 分支设置 tag 为 `next`，上层框架可以通过 `angular-material-app@next` 引用开发中的版本进行测试。
+
+### 发布策略
+
+每个大版本都有一个发布经理管理（PM），他/她要做的事情
+
+#### 准备工作：
+
+- 建立 milestone，确认需求关联 milestone，指派和更新 issues，如 [1.x milestone]。
+- 从 `master` 分支新建 `next` 分支，并设置 tag 为 `next`。
+
+#### 发布前：
+
+- 确认当前 Milestone 所有的 issue 都已关闭或可延期，完成性能测试。
+- 发起一个新的 [Release Proposal MR]，按照 [node CHANGELOG] 进行 `History` 的编写，修正文档中与版本相关的内容，commits 可以自动生成。
+    ```bash
+    $ npm run commits
+    ```
+- 指定下一个大版本的 PM。
+
+#### 发布时：
+
+- 将老的稳定版本（master）备份到以当前大版本为名字的分支上（例如 `1.x`），并设置 tag 为 `release-{v}.x`（ v 为当前版本，例如 `release-1.x`）。
+- 将 `next` 分支推送到 `master`，成为新的稳定版本分支，并去除 `next` tag，修改 README 中与分支相关的内容。
+- 发布新的稳定版本到 [npm]，并通知上层框架进行更新。
+- `npm publish` 之前，请先阅读[『我是如何发布一个 npm 包的』]。
+
+上述描述中所有的设置 tag 都是指在 `package.json` 中设置 npm 的 tag。
+
+```json
+"publishConfig": {
+  "tag": "next"
+}
 ```
-fix(release): need to depend on latest rxjs and zone.js
-
-The version in our package.json gets copied to the one we publish, and users need the latest of these.
-```
-
-### Revert
-If the commit reverts a previous commit, it should begin with `revert: `, followed by the header of the reverted commit. In the body it should say: `This reverts commit <hash>.`, where the hash is the SHA of the commit being reverted.
-
-### Type
-Must be one of the following:
-
-* **build**: Changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm)
-* **ci**: Changes to our CI configuration files and scripts (example scopes: Travis, Circle, BrowserStack, SauceLabs)
-* **docs**: Documentation only changes
-* **feat**: A new feature
-* **fix**: A bug fix
-* **perf**: A code change that improves performance
-* **refactor**: A code change that neither fixes a bug nor adds a feature
-* **style**: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
-* **test**: Adding missing tests or correcting existing tests
-* **chore**: Other changes that don't modify src or test files
-
-### Scope
-The scope should be the name of the npm package affected (as perceived by person reading changelog generated from commit messages.
-
-The following is the list of supported scopes:
-
-* **animations**
-* **common**
-* **compiler**
-* **compiler-cli**
-* **core**
-* **forms**
-* **http**
-* **language-service**
-* **platform-browser**
-* **platform-browser-dynamic**
-* **platform-server**
-* **platform-webworker**
-* **platform-webworker-dynamic**
-* **router**
-* **service-worker**
-* **upgrade**
-
-There are currently a few exceptions to the "use package name" rule:
-
-* **packaging**: used for changes that change the npm package layout in all of our packages, e.g. public path changes, package.json changes done to all packages, d.ts file/format changes, changes to bundles, etc.
-* **changelog**: used for updating the release notes in CHANGELOG.md
-* **aio**: used for docs-app (angular.io) related changes within the /aio directory of the repo
-* none/empty string: useful for `style`, `test` and `refactor` changes that are done across all packages (e.g. `style: add missing semicolons`)
-
-### Subject
-The subject contains succinct description of the change:
-
-* use the imperative, present tense: "change" not "changed" nor "changes"
-* don't capitalize first letter
-* no dot (.) at the end
-
-### Body
-Just as in the **subject**, use the imperative, present tense: "change" not "changed" nor "changes".
-The body should include the motivation for the change and contrast this with previous behavior.
-
-### Footer
-The footer should contain any information about **Breaking Changes** and is also the place to
-reference GitHub issues that this commit **Closes**.
-
-**Breaking Changes** should start with the word `BREAKING CHANGE:` with a space or two newlines. The rest of the commit message is then used for this.
-
-A detailed explanation can be found in this [document][commit-message-format].
-
-## <a name="cla"></a> Signing the CLA
-
-Please sign our Contributor License Agreement (CLA) before sending pull requests. For any code
-changes to be accepted, the CLA must be signed. It's a quick process, we promise!
-
-* For individuals we have a [simple click-through form][individual-cla].
-* For corporations we'll need you to
-  [print, sign and one of scan+email, fax or mail the form][corporate-cla].
-
-<hr>
-
-  If you have more than one Git identity, you must make sure that you sign the CLA using the primary email address associated with the ID that has been granted access to the Angular repository. Git identities can be associated with more than one email address, and only one is primary. Here are some links to help you sort out multiple Git identities and email addresses:
-
-  * https://help.github.com/articles/setting-your-commit-email-address-in-git/
-  * https://stackoverflow.com/questions/37245303/what-does-usera-committed-with-userb-13-days-ago-on-github-mean
-  * https://help.github.com/articles/about-commit-email-addresses/
-  * https://help.github.com/articles/blocking-command-line-pushes-that-expose-your-personal-email-address/ 
-
-  Note that if you have more than one Git identity, it is important to verify that you are logged in with the same ID with which you signed the CLA, before you commit changes. If not, your PR will fail the CLA check.  
-
-<hr>
-
-
-[angular-group]: https://groups.google.com/forum/#!forum/angular
-[coc]: https://github.com/angular/code-of-conduct/blob/master/CODE_OF_CONDUCT.md
-[commit-message-format]: https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y/edit#
-[corporate-cla]: http://code.google.com/legal/corporate-cla-v1.0.html
-[dev-doc]: https://github.com/angular/angular/blob/master/docs/DEVELOPER.md
-[github]: https://github.com/angular/angular
-[gitter]: https://gitter.im/angular/angular
-[individual-cla]: http://code.google.com/legal/individual-cla-v1.0.html
-[js-style-guide]: https://google.github.io/styleguide/jsguide.html
-[jsfiddle]: http://jsfiddle.net
-[plunker]: http://plnkr.co/edit
-[runnable]: http://runnable.com
-[stackoverflow]: http://stackoverflow.com/questions/tagged/angular
