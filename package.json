@@ -49,8 +49,6 @@
     "angularfire2": "^5.0.0-rc.6.0",
     "core-js": "^2.5.3",
     "d3": "^4.12.2",
-    "electron": "^1.8.1",
-    "electron-packager": "^10.1.2",
     "firebase": "^4.9.0",
     "hammerjs": "^2.0.8",
     "material-design-icons": "^3.0.1",
