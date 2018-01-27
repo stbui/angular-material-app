@@ -1,3 +1,8 @@
+# 0.5.4 (2018.01.27)
+
+### Upate
+* **package:** upgrade dependencies
+
 # 0.5.3 (2017.12.*)
 
 ### 更新
