@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { MaterialComponentsModule } from '../shared/material.module';
 
-import { PaginationComponent } from './pagination/pagination.component';
 import { PopoverComponent } from './popover/popover.component';
 import { PopoverDirective } from './popover/popover.directive';
 
@@ -17,13 +16,11 @@ import { TableComponent } from './table/table.component';
     FormsModule
   ],
   declarations: [
-    PaginationComponent,
     PopoverComponent,
     PopoverDirective,
     TableComponent,
   ],
   exports: [
-    PaginationComponent,
     PopoverComponent,
     PopoverDirective,
     TableComponent
