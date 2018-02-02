@@ -5,14 +5,14 @@ import { SharedModule } from '../shared/shared.module';
 import { NavigationComponent } from './navigation.component';
 import { NavigationRoutingModule } from './navigation.routing';
 import { NavigationService } from './navigation.service';
-import { ComponentModule } from '../component/component.module';
+import { PaginationModule } from '../component';
 
 @NgModule({
   imports: [
     HttpModule,
     SharedModule,
     NavigationRoutingModule,
-    ComponentModule
+    PaginationModule
   ],
   declarations: [NavigationComponent],
   providers: [

@@ -24,7 +24,8 @@ import {
   DatePickerModule,
   AmpaModule,
   ButtonModule,
-  FileUploadModule
+  FileUploadModule,
+  PaginationModule
 } from '../component/index';
 
 import { CalendarModule } from 'angular-calendar';
@@ -40,7 +41,8 @@ import { IconComponent } from './icon/icon.component';
     AmpaModule.forRoot(),
     DatePickerModule,
     ButtonModule,
-    FileUploadModule
+    FileUploadModule,
+    PaginationModule
   ],
   declarations: [
     ToastComponent,
