@@ -7,10 +7,10 @@ import * as dateUtils from '../dateUtils';
   styleUrls: ['./month.component.scss']
 })
 export class MonthComponent {
-
   weeksArray;
+  selected = false;
 
-  @Output() selected = new EventEmitter();
+  @Output() selectValueChange: EventEmitter<any> = new EventEmitter<any>();
 
   @Input()
   set displayDate(val) {
@@ -20,13 +20,9 @@ export class MonthComponent {
     return this.weeksArray;
   }
 
+  constructor() {}
 
-  constructor() { }
-
-  onSelectedTrigger(date) {
-    if (date) {
-      this.selected.emit(date);
-    }
+  onselectValueChange(event) {
+    this.selectValueChange.emit(event.value);
   }
-
 }

@@ -1,4 +1,5 @@
-<span class="stb-day-empty" *ngIf="!date"></span>
-<button class="stb-day-button" [class.now]="isNow()" [class.selected]="selected" (click)="onSelectedTriggered(date)" *ngIf="date">
+<span class="stb-day-empty" *ngIf="!value"></span>
+<button class="stb-day-button" [class.now]="isNow(value)" [class.selected]="selected" (click)="onSelectValueChange(value)" *ngIf="value">
   <div class="stb-day-button-bg"></div>
-  <span class="stb-day-button-text">{{ date | datePicker: 'formatDay' }}</span></button>
+  <span class="stb-day-button-text">{{ value | datePicker: 'formatDay' }}</span>
+</button>

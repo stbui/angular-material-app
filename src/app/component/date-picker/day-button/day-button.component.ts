@@ -6,25 +6,52 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./day-button.component.scss']
 })
 export class DayButtonComponent {
-
-  @Input() date: any;
-  @Output() onSelected = new EventEmitter();
+  @Input()
+  set value(value) {
+    this._value = value;
+  }
+  get value() {
+    return this._value;
+  }
 
   @Input()
+  set selected(value) {
+    const state = this.coerceBooleanProperty(value);
+    if (this._selected != state) {
+      this._selected = state;
+    }
+  }
   get selected() {
-    return this.isNow();
+    return this._selected;
   }
 
+  @Input() disabled: boolean = false;
+  @Output() selectValueChange: EventEmitter<any> = new EventEmitter<any>();
 
-  constructor() {
-  }
+  private _value;
+  private _selected: boolean = false;
 
-  isNow() {
+  constructor() {}
+
+  isNow(date) {
     const now = new Date();
-    return this.date && this.date.getFullYear() === now.getFullYear() && this.date.getMonth() === now.getMonth() && this.date.getDate() === now.getDate();
+    return (
+      date &&
+      date.getFullYear() === now.getFullYear() &&
+      date.getMonth() === now.getMonth() &&
+      date.getDate() === now.getDate()
+    );
   }
 
-  onSelectedTriggered(day) {
-    this.onSelected.emit(day);
+  onSelectValueChange(day: Date) {
+    this.selected = !this.selected;
+    this.selectValueChange.emit({
+      selected: this.selected,
+      value: day
+    });
+  }
+
+  coerceBooleanProperty(value) {
+    return value != null && `${value}` !== 'false';
   }
 }

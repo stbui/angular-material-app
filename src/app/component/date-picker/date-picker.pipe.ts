@@ -31,6 +31,6 @@ export class DatePickerPipe implements PipeTransform {
   }
 
   formatDay(date) {
-    return date.getDate();
+    return date && date.getDate();
   }
 }

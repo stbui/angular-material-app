@@ -6,8 +6,7 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./date-display.component.scss']
 })
 export class DateDisplayComponent {
-
-  displayDates = [];
+  displayDates: any[] = [];
   @Input()
   set selectedDate(val) {
     this.displayDates = [val];
@@ -16,6 +15,5 @@ export class DateDisplayComponent {
     return this.displayDates;
   }
 
-  constructor() { }
-
+  constructor() {}
 }

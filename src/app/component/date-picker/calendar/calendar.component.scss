@@ -25,9 +25,7 @@ $calendar-background-color: #7e57c2;
   font-size: 12px;
   font-weight: 400;
   padding: 0px 8px;
-  -webkit-transition: all .45s cubic-bezier(.23, 1, .32, 1);
   transition: all .45s cubic-bezier(.23, 1, .32, 1);
-  //transition: all .45s cubic-bezier(.23,1,.32,1);
 }
 
 .stb-calendar-week {
@@ -76,7 +74,6 @@ $calendar-background-color: #7e57c2;
 .stb-calendar-slide-next-leave-active,
 .stb-calendar-slide-prev-enter-active,
 .stb-calendar-slide-prev-leave-active {
-  //transition: transform 450ms cubic-bezier(.23,1,.32,1), opacity 450ms cubic-bezier(.23,1,.32,1);
   backface-visibility: hidden;
 }
 
@@ -165,7 +162,6 @@ $calendar-background-color: #7e57c2;
   line-height: 35px;
   overflow-x: hidden;
   overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
   position: relative;
 }
 
@@ -203,7 +199,6 @@ $calendar-background-color: #7e57c2;
   line-height: 16px;
   height: 16px;
   opacity: 0.7;
-  //transition: all .45s cubic-bezier(.23,1,.32,1);
   margin-bottom: 10px;
   .stb-date-display.selected-year & {
     opacity: 1;
@@ -227,7 +222,6 @@ $calendar-background-color: #7e57c2;
   font-size: 36px;
   line-height: 36px;
   height: 38px;
-  //transition: all .45s cubic-bezier(.23,1,.32,1);
   width: 100%;
   font-weight: 500;
   .stb-date-display.selected-year & {
@@ -259,7 +253,6 @@ $calendar-background-color: #7e57c2;
 .stb-date-display-next-leave-active,
 .stb-date-display-prev-enter-active,
 .stb-date-display-prev-leave-active {
-  //transition: transform 450ms cubic-bezier(.23,1,.32,1), opacity 450ms cubic-bezier(.23,1,.32,1);
   backface-visibility: hidden;
 }
 
