@@ -1,4 +1,10 @@
-import { Component, Input, Output, EventEmitter, ViewEncapsulation } from '@angular/core';
+import {
+  Component,
+  Input,
+  Output,
+  EventEmitter,
+  ViewEncapsulation
+} from '@angular/core';
 
 @Component({
   selector: 'stbui-pagination',
@@ -6,14 +12,23 @@ import { Component, Input, Output, EventEmitter, ViewEncapsulation } from '@angu
   styleUrls: ['./pagination.component.scss'],
   host: {
     '[class.pagination-end]': '_isEnd',
-    '[class.pagination-center]': '_isCenter',
+    '[class.pagination-center]': '_isCenter'
   },
   encapsulation: ViewEncapsulation.None
 })
 export class PaginationComponent {
+  // @Input() total: number = 10;
+  @Input()
+  set total(value) {
+    this.totalPages = value;
+    this.setPage();
+    this._total = value;
+  }
+  get total() {
+    return this._total;
+  }
 
-  @Output() onPage = new EventEmitter<void>();
-  @Input() total: number = 10;
+  @Output() onPage: EventEmitter<any> = new EventEmitter<any>();
 
   private _align: 'start' | 'center' | 'end' = 'start';
   @Input()
@@ -22,7 +37,7 @@ export class PaginationComponent {
   }
 
   set align(value) {
-    value = (value == 'end') ? 'end' : (value == 'center') ? 'center' : 'start';
+    value = value == 'end' ? 'end' : value == 'center' ? 'center' : 'start';
     if (value != this._align) {
       this._align = value;
     }
@@ -36,22 +51,17 @@ export class PaginationComponent {
     return this._align == 'center';
   }
 
-  currentPage: number;
+  private _total: number = 10;
+
+  currentPage: number = 1;
   totalPages: number;
-  pages = [];
+  pages: number[] = [];
 
-  constructor() {
-  }
-
-  ngOnChanges() {
-    this.totalPages = this.total;
-    this.currentPage = 1;
-    this.setPage();
-  }
+  constructor() {}
 
   setPage() {
-    let start = 0;
-    let end = 0;
+    let start: number = 0;
+    let end: number = 0;
 
     if (this.currentPage - 5 <= 0) {
       start = 0;
@@ -72,13 +82,16 @@ export class PaginationComponent {
     this.pages = pages.slice(start, end);
   }
 
-  onPageTriggered(page) {
+  onPageTriggered(page: number) {
     if (this.currentPage == page) {
       return false;
     }
 
-    this.onPage.emit(page);
     this.currentPage = page;
-    this.setPage();
+
+    if (page > 5) {
+      this.setPage();
+    }
+    this.onPage.emit(page);
   }
 }
