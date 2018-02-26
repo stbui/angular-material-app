@@ -18,7 +18,7 @@
 
       <div class="stb-calendar-monthday">
         <div class="stb-calendar-monthday-slide">
-          <stbui-calendar-month (selected)="onSelected($event)" [displayDate]="displayDate" *ngFor="let displayDate of displayDates"></stbui-calendar-month>
+          <stbui-calendar-month (selectValueChange)="onSelectValueChange($event)" [displayDate]="displayDate" *ngFor="let displayDate of displayDates"></stbui-calendar-month>
         </div>
       </div>
 

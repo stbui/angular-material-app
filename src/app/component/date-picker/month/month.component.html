@@ -1,5 +1,12 @@
 <div class="stb-calendar-monthday-content">
-  <div class="stb-calendar-monthday-row" *ngFor="let week of weeksArray">
-    <stbui-day-button (click)="onSelectedTrigger(date)" [date]="date" *ngFor="let date of week"></stbui-day-button>
+  <div class="stb-calendar-monthday-row" *ngFor="let weeks of weeksArray">
+
+    <ng-container *ngFor="let week of weeks">
+      <button *ngIf="isNow(week.day)" mat-mini-fab color="primary">{{ week.day | datePicker: 'formatDay' }}</button>
+      <button *ngIf="!isNow(week.day) && week.selected" [class.selected]="week.selected" (click)="onSelectValueChange(week)" mat-mini-fab color="primary">{{ week.day | datePicker: 'formatDay' }}</button>
+      <button class="stb-day-button" mat-ripple *ngIf="!isNow(week.day) && !week.selected&&week.day" (click)="onSelectValueChange(week)">{{ week.day | datePicker: 'formatDay' }}</button>
+      <button class="stb-day-button empty" *ngIf="!week.day">{{ week.day | datePicker: 'formatDay' }}</button>
+    </ng-container>
+
   </div>
 </div>

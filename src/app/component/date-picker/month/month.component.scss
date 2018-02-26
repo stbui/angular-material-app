@@ -1,0 +1,21 @@
+.stb-day-button {
+  display: inline-block;
+  background: none;
+  user-select: none;
+  outline: none;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 400;
+  position: relative;
+  border: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  &.disabled {
+    opacity: 0.4;
+  }
+
+  &.empty {
+    cursor: default
+  }
+}

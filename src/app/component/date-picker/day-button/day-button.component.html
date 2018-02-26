@@ -1,4 +1,0 @@
-<span class="stb-day-empty" *ngIf="!date"></span>
-<button class="stb-day-button" [class.now]="isNow()" [class.selected]="selected" (click)="onSelectedTriggered(date)" *ngIf="date">
-  <div class="stb-day-button-bg"></div>
-  <span class="stb-day-button-text">{{ date | datePicker: 'formatDay' }}</span></button>

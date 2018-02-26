@@ -6,11 +6,10 @@ import { Component, Output, Input, EventEmitter } from '@angular/core';
   styleUrls: ['./toolbar.component.scss']
 })
 export class ToolbarComponent {
-
   @Input() displayDates;
-  @Output() monthChange = new EventEmitter();
+  @Output() monthChange: EventEmitter<any> = new EventEmitter();
 
-  constructor() { }
+  constructor() {}
 
   OnPrev() {
     this.monthChange.emit(-1);
@@ -19,5 +18,4 @@ export class ToolbarComponent {
   OnNext() {
     this.monthChange.emit(1);
   }
-
 }
