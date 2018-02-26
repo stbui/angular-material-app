@@ -1,20 +1,18 @@
 import { NgModule, SkipSelf, Optional } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MaterialComponentsModule } from '../../shared/material.module';
+import { MatRippleModule, MatButtonModule, MatIconModule } from "@angular/material";
 import { DatePickerComponent } from './date-picker.component';
 import { CalendarComponent } from './calendar/calendar.component';
-import { DayButtonComponent } from './day-button/day-button.component';
 import { DatePickerPipe } from './date-picker.pipe';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { DateDisplayComponent } from './date-display/date-display.component';
 import { MonthComponent } from './month/month.component';
 
 @NgModule({
-  imports: [CommonModule, MaterialComponentsModule],
+  imports: [CommonModule, MatRippleModule, MatButtonModule, MatIconModule],
   declarations: [
     DatePickerComponent,
     CalendarComponent,
-    DayButtonComponent,
     DatePickerPipe,
     ToolbarComponent,
     DateDisplayComponent,
