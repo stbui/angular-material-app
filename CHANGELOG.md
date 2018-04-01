@@ -1,3 +1,24 @@
+# 0.6.0
+
+### Update
+
+* **angular:** 升级到`6.0.0`
+* **Material2:** 升级到`6.0.0`
+* **RxJS:** 升级到`6.0.0`
+
+### BREAKING CHANGES
+
+* **RxJS:**: - ChangeLog：https://github.com/ReactiveX/rxjs/blob/master/CHANGELOG.md
+    - BehaviorSubject 从rxjs导出
+    - 升级至6.0.0，升级指南：https://goo.gl/osWFzo
+    - Angular升级至RxJS v6 ahpla的commit：https://github.com/angular/angular/commit/b43f8bc7d3d101af3fcf02180c54007bb1e8c4ca
+    - Angular升级至RxJS v6 beta的commit： https://github.com/angular/angular/commit/3cc5c2e4d09b7ba0ff31a9f804a8ae654af6c796
+
+* **Material2:** - ChangeLog: https://github.com/angular/material2/blob/master/CHANGELOG.md
+    - mat-sidenav: aligin -> position
+    - form-field: mat-input-container -> mat-form-field
+
+
 # 0.5.4 (2018.01.27)
 
 ### Upate

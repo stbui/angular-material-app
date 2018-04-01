@@ -5,7 +5,7 @@ import {
   EventEmitter,
   ElementRef
 } from "@angular/core";
-import { Observable } from "rxjs/Observable";
+import { Observable } from "rxjs";
 import { debounceTime, distinctUntilChanged } from "rxjs/operators";
 
 @Component({

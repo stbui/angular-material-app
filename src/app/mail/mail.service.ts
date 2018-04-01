@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import { environment } from '../../environments/environment';
-import { BehaviorSubject } from 'rxjs/BehaviorSubject';
+import { BehaviorSubject } from 'rxjs';
 
 
 @Injectable()
@@ -21,7 +21,6 @@ export class MailService {
   getMails() {
     const url = this.apiUrl;
     this.http.get(url)
-      .map(res => res.json())
       .subscribe(res => this._mails.next(res));
   }
 

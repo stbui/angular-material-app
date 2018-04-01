@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import { environment } from '../../environments/environment';
-import { BehaviorSubject } from 'rxjs/BehaviorSubject';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable()
 export class NavigationService {
@@ -23,7 +23,6 @@ export class NavigationService {
       url = `${this.apiUrl}/links${topicId}${page}.json`;
     }
     this.http.get(url)
-        .map(res => res.json())
         // .do(res => console.log(res))
         .subscribe(res => {
           this._navigations.next(res);
@@ -36,6 +35,5 @@ export class NavigationService {
       url = `${this.apiUrl}/topic.json`;
     }
     return this.http.get(url)
-               .map(res => res.json());
   }
 }

@@ -1,8 +1,6 @@
 import { Component, Input, Output, EventEmitter, ElementRef } from '@angular/core';
-import { Observable } from 'rxjs/Rx';
-import 'rxjs/Observable';
-import 'rxjs/add/operator/debounceTime';
-import 'rxjs/add/operator/distinctUntilChanged';
+import { Observable } from 'rxjs';
+import { debounceTime, distinctUntilChanged } from 'rxjs/operators';
 
 @Component({
   selector: 'app-todo-header',
@@ -18,7 +16,7 @@ export class TodoHeaderComponent {
   @Output() onEnterUp = new EventEmitter<string>();
 
   constructor(private elementRef: ElementRef) {
-    const event$ = Observable.fromEvent(elementRef.nativeElement, 'keyup')
+    const event$ =Observable.fromEvent(elementRef.nativeElement, 'keyup')
       .map(() => this.inputValue)
       .debounceTime(this.delay)
       .distinctUntilChanged();
