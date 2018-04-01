@@ -1,10 +1,11 @@
-<div id="notification-container" [ngClass]="config.positionClass">
-  <div [ngClass]="notificationClasses">
-    <button (click)="remove()" class="notification-close-button">&times;</button>
-    <div *ngIf="title" class="notification-title" [attr.aria-label]="title" [ngClass]="config.titleClass">
-      {{title}}
-    </div>
-    <div *ngIf="message" [innerHTML]="message"  [ngClass]="config.messageClass">
-    </div>
-  </div>
-</div>
+<mat-card class="notification">
+  <mat-card-subtitle class="notification-title">
+    {{data.title}}
+    <span style="flex: 1 1 1e-09px;"></span>
+    <button mat-icon-button>
+      <mat-icon>close</mat-icon>
+    </button>
+  </mat-card-subtitle>
+  <mat-card-content class="notification-content" [innerHTML]="data.message"></mat-card-content>
+</mat-card>
+<!--&times;-->

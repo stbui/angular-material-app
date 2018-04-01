@@ -26,7 +26,7 @@ import {
   ButtonModule,
   FileUploadModule,
   PaginationModule
-} from '../component/index';
+} from '../component';
 
 import { CalendarModule } from 'angular-calendar';
 import { IconComponent } from './icon/icon.component';
@@ -37,7 +37,7 @@ import { IconComponent } from './icon/icon.component';
     ComponentModule,
     MaterialsRoutingModule,
     CalendarModule.forRoot(),
-    NotificaitonModule.forRoot(),
+    NotificaitonModule,
     AmpaModule.forRoot(),
     DatePickerModule,
     ButtonModule,

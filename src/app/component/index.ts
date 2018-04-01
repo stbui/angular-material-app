@@ -1,4 +1,4 @@
-export * from './notification/index';
+export * from './notification';
 export * from './date-picker';
 export * from './pagination';
 export * from './amap';

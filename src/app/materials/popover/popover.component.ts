@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NotificationService } from '../../component/index';
+import { NotificationService } from '../../component';
 
 @Component({
   selector: 'app-popover',
@@ -15,11 +15,10 @@ export class PopoverComponent implements OnInit {
   }
 
   showNotication() {
-    this._notification.show('测试消息', '测试标题');
+    this._notification.open('测试消息', '测试标题');
   }
 
   clear() {
-    this._notification.clear();
   }
 
 }

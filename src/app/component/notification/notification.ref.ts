@@ -1,46 +1,40 @@
+/**
+ * @license
+ * Copyright Stbui All Rights Reserved.
+ */
+
 import { OverlayRef } from '@angular/cdk/overlay';
 import { Observable } from 'rxjs/Observable';
 import { Subject } from 'rxjs/Subject';
 
+
 export class NotificationRef<T> {
-  componentInstance: T;
+  instance: T;
 
-  private _afterClosed: Subject<any> = new Subject();
-  private _activate: Subject<any> = new Subject();
-  private _manualClose: Subject<any> = new Subject();
+  containerInstance;
 
-  constructor(private _overlayRef: OverlayRef) {
-  }
+  private readonly _afterClosed = new Subject();
+  private readonly _afterOpened = new Subject<void>();
+  private readonly _onAction = new Subject<void>();
 
-  manualClose() {
-    this._manualClose.next();
-    this._manualClose.complete();
-  }
+  private _durationTimeroutId: number;
 
-  manualClosed(): Observable<any> {
-    return this._manualClose.asObservable();
+  constructor(containerInstance, private _overlayRef: OverlayRef) {
+    this.containerInstance = containerInstance;
   }
 
   close(): void {
-    this._overlayRef.dispose();
-    this._afterClosed.next();
-    this._afterClosed.complete();
+
   }
 
-  afterClosed(): Observable<any> {
-    return this._afterClosed.asObservable();
+  _open(): void {
+
   }
 
-  isInactive() {
-    return this._activate.isStopped;
+  afterClosed() {
   }
 
-  activate() {
-    this._activate.next();
-    this._activate.complete();
+  afterOpened() {
   }
 
-  afterActivate(): Observable<any> {
-    return this._activate.asObservable();
-  }
 }

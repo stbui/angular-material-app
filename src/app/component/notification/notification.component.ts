@@ -1,54 +1,28 @@
-import { Component, OnDestroy } from '@angular/core';
-import { NotificationConfig } from './notification.config';
-import { NotificationService } from './notification.service';
-import { Subscription } from 'rxjs/Subscription';
+/**
+ * @license
+ * Copyright Stbui All Rights Reserved.
+ */
+
+import { Component, ViewEncapsulation, ChangeDetectionStrategy, Inject } from '@angular/core';
+import { NotificationConfig, STBUI_NOTIFICATION_DATA } from './notification.config';
+import { NotificationRef } from './notification.ref';
 
 @Component({
+  moduleId: module.id,
   selector: 'stbui-notification',
   templateUrl: './notification.component.html',
-  styleUrls: ['./notification.component.scss']
+  styleUrls: ['./notification.component.scss'],
+  encapsulation: ViewEncapsulation.None,
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class NotificationComponent implements OnDestroy {
+export class NotificationComponent {
 
-  message?: string | null;
-  title?: string;
-  config?;
-  notificationClasses = '';
+  data: { message: string, title: string };
 
-  private timeout: any;
-  private activate$: Subscription;
-  private remove$: Subscription;
-
-  constructor(protected _noticationService: NotificationService,
-              public _notificationConfig: NotificationConfig) {
-
-    this.message = _notificationConfig.message;
-    this.title = _notificationConfig.title;
-    this.config = _notificationConfig.config;
-    this.notificationClasses = `${_notificationConfig.type} ${_notificationConfig.config.notificationClass}`;
-
-    this.activate$ = _notificationConfig.notificationRef.afterActivate().subscribe(() => {
-      this.activate();
-    });
-    this.remove$ = _notificationConfig.notificationRef.manualClosed().subscribe(() => {
-      this.remove();
-    });
+  constructor(
+    public notificationRef: NotificationRef<NotificationComponent>,
+    @Inject(STBUI_NOTIFICATION_DATA) data: any
+  ) {
+    this.data = data;
   }
-
-  ngOnDestroy() {
-    this.activate$.unsubscribe();
-    this.remove$.unsubscribe();
-    clearTimeout(this.timeout);
-  }
-
-  activate() {
-    this.timeout = setTimeout(() => {
-      this.remove();
-    }, 2500);
-  }
-
-  remove() {
-    this._noticationService.remove(this._notificationConfig.id);
-  }
-
 }

@@ -1,39 +1,22 @@
-import { NotificationInterface } from './notification.interface';
-import { Subject } from 'rxjs/Subject';
-import { Observable } from 'rxjs/Observable';
-import { NotificationRef } from './notification.ref';
+/**
+ * @license
+ * Copyright Stbui All Rights Reserved.
+ */
 
-export class NotificationConfig {
-  private _onTap: Subject<any> = new Subject();
-  private _onAction: Subject<any> = new Subject();
+import { ViewContainerRef, InjectionToken } from '@angular/core';
+import { Direction } from '@angular/cdk/bidi';
 
-  constructor(public id: number,
-              public config: NotificationInterface,
-              public message: string | null | undefined,
-              public title: string | undefined,
-              public type: string,
-              public notificationRef: NotificationRef<any>) {
+export const STBUI_NOTIFICATION_DATA = new InjectionToken<any>('StbuiNonticationData');
 
-  }
+export type HorizontalPosition = 'start' | 'center' | 'end' | 'left' | 'right';
+export type VerticalPosition = 'top' | 'bottom';
 
-  triggerTap() {
-    this._onTap.next();
-    this._onTap.complete();
-  }
+export class NotificationConfig<D = any> {
+  viewContainerRef?: ViewContainerRef;
+  duration?: number = 0;
+  direction?: Direction;
+  data?: D | null = null;
 
-  onTap(): Observable<any> {
-    return this._onTap.asObservable();
-  }
-
-  triggerAction(action?: any) {
-    this._onAction.next(action);
-    this._onAction.complete();
-  }
-
-  onAction(): Observable<any> {
-    return this._onAction.asObservable();
-  }
+  horizontalPosition?: HorizontalPosition = 'right';
+  verticalPosition?: VerticalPosition = 'top';
 }
-
-
-
