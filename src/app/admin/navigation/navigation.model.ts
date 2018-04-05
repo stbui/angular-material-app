@@ -98,10 +98,10 @@ export class NavigationModel {
             'type': 'item',
             'url': '/materials/amap'
           }, {
-            'id': 'popover',
+            'id': 'notification',
             'title': '通知',
             'type': 'item',
-            'url': '/materials/popover'
+            'url': '/materials/notification'
           }, {
             'id': 'calendar',
             'title': '日历',

@@ -30,6 +30,7 @@ import {
 
 import { CalendarModule } from 'angular-calendar';
 import { IconComponent } from './icon/icon.component';
+import { NotificationComponent } from './notification/notification.component';
 
 @NgModule({
   imports: [
@@ -60,7 +61,8 @@ import { IconComponent } from './icon/icon.component';
     MarkdownComponent,
     PopoverComponent,
     CalendarComponent,
-    IconComponent
+    IconComponent,
+    NotificationComponent
   ]
 })
 export class MaterialsModule { }

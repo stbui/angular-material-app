@@ -18,7 +18,7 @@ import { DatePickerComponent } from './date-picker/date-picker.component';
 import { MarkdownComponent } from './markdown/markdown.component';
 import { PopoverComponent } from './popover/popover.component';
 import { CalendarComponent } from './calendar/calendar.component';
-
+import { NotificationComponent } from './notification/notification.component';
 
 const routes: Routes = [
   {
@@ -84,6 +84,10 @@ const routes: Routes = [
   {
     path: 'popover',
     component: PopoverComponent
+  },
+  {
+    path: 'notification',
+    component: NotificationComponent
   },
   {
     path: 'calendar',
