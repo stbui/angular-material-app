@@ -49,9 +49,29 @@ export class NotificationService {
     }
   }
 
-  open(message: string, title: string, config?: NotificationConfig): NotificationRef<NotificationComponent> {
+  success(message: string, title: string, config?: NotificationConfig): NotificationRef<NotificationComponent> {
+    const type = 'success';
+    return this.open(message, title, config, type);
+  }
+
+  error(message: string, title: string, config?: NotificationConfig): NotificationRef<NotificationComponent> {
+    const type = 'error';
+    return this.open(message, title, config, type);
+  }
+
+  info(message: string, title: string, config?: NotificationConfig): NotificationRef<NotificationComponent> {
+    const type = 'info';
+    return this.open(message, title, config, type);
+  }
+
+  warn(message: string, title: string, config?: NotificationConfig): NotificationRef<NotificationComponent> {
+    const type = 'warn';
+    return this.open(message, title, config, type);
+  }
+
+  open(message: string, title: string, config?: NotificationConfig, type?: string): NotificationRef<NotificationComponent> {
     const _config = {...this._defaultConfig, ...config};
-    _config.data = {message, title};
+    _config.data = {message, title, type};
     return this.openFromComponent(NotificationComponent, _config);
   }
 

@@ -77,7 +77,6 @@ export class NotificationRef<T> {
   }
 
   afterOpened(): Observable<void> {
-    console.log('afterOpened');
     return this.containerInstance._onEnter;
   }
 

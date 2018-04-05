@@ -7,18 +7,17 @@
 
   .notification {
     background-color: mat-color($primary);
-    pointer-events: auto;
-  }
-  .notification-success {
-    background-color: mat-color($accent);
-  }
-  .notification-error {
-    background-color: mat-color($accent);
   }
   .notification-info {
     background-color: mat-color($primary);
   }
-  .notification-warning {
+  .notification-primary {
+    background-color: mat-color($primary);
+  }
+  .notification-success {
+    background-color: mat-color($accent);
+  }
+  .notification-warn {
     background-color: mat-color($warn);
   }
 }

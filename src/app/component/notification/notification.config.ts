@@ -16,7 +16,6 @@ export class NotificationConfig<D = any> {
   duration?: number = 2000;
   direction?: Direction;
   data?: D | null = null;
-  tpye?: string = 'primary';
 
   horizontalPosition?: HorizontalPosition = 'right';
   verticalPosition?: VerticalPosition = 'top';

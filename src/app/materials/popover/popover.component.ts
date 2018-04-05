@@ -15,7 +15,13 @@ export class PopoverComponent implements OnInit {
   }
 
   show() {
-    this._notification.open('测试消息', '测试标题');
+    this._notification.info('测试消息', '测试标题', {
+      duration: 0
+    });
+  }
+
+  warn() {
+    this._notification.warn('测试消息', '测试标题');
   }
 
   clear() {

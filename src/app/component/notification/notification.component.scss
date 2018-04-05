@@ -4,7 +4,7 @@ $notification-color: #fff !default;
 .notification {
   min-width: 300px;
   color: #fff;
-  opacity: 0.8;
+  font-weight: 700;
 
   &-title {
     display: flex;
@@ -16,8 +16,4 @@ $notification-color: #fff !default;
     color: #fff;
   }
 
-  &:hover {
-    opacity: 1;
-    cursor: pointer;
-  }
 }
