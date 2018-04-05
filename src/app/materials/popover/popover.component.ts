@@ -14,11 +14,12 @@ export class PopoverComponent implements OnInit {
   ngOnInit() {
   }
 
-  showNotication() {
+  show() {
     this._notification.open('测试消息', '测试标题');
   }
 
   clear() {
+    this._notification.dismiss();
   }
 
 }

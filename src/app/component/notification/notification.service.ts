@@ -16,17 +16,13 @@ import {
 } from '@angular/core';
 import { Overlay, OverlayConfig, OverlayRef } from '@angular/cdk/overlay';
 import { ComponentPortal, TemplatePortal, ComponentType, PortalInjector } from '@angular/cdk/portal';
-import { Observable } from 'rxjs/Observable';
 
-import { NotificationRef } from './notification.ref';
 import { STBUI_NOTIFICATION_DATA, NotificationConfig } from './notification.config';
+import { NotificationRef } from './notification.ref';
 import { NotificationComponent } from './notification.component';
 import { NotificationContainer } from './notification-container';
-import { NotificationInterface } from './notification.interface';
-import { NotificationInjector } from './notification.injector';
 
 export const STBUI_NOTIFICATION_DEFAULT_OPTIONS = new InjectionToken<NotificationConfig>('notification-default-options');
-
 
 @Injectable()
 export class NotificationService {
@@ -38,10 +34,31 @@ export class NotificationService {
     @Inject(STBUI_NOTIFICATION_DEFAULT_OPTIONS) private _defaultConfig: NotificationConfig) {
   }
 
+  private _notificationRefAtThisLevel: NotificationRef<any> | null = null;
+
+  get _openedNotificationRef(): NotificationRef<any> | null {
+    const parent = this._parentNotication;
+    return parent ? parent._openedNotificationRef : this._notificationRefAtThisLevel;
+  }
+
+  set _openedNotificationRef(value: NotificationRef<any> | null) {
+    if (this._parentNotication) {
+      this._parentNotication._openedNotificationRef = value;
+    } else {
+      this._notificationRefAtThisLevel = value;
+    }
+  }
+
   open(message: string, title: string, config?: NotificationConfig): NotificationRef<NotificationComponent> {
     const _config = {...this._defaultConfig, ...config};
     _config.data = {message, title};
     return this.openFromComponent(NotificationComponent, _config);
+  }
+
+  dismiss(): void {
+    if (this._openedNotificationRef) {
+      this._openedNotificationRef.dismiss();
+    }
   }
 
   openFromComponent<T>(component: ComponentType<T>, config?: NotificationConfig): NotificationRef<T> {
@@ -77,12 +94,29 @@ export class NotificationService {
       notificationRef.instance = contentRef.instance;
     }
 
-    return notificationRef;
+    this._animateNotification(notificationRef, config);
+    this._openedNotificationRef = notificationRef;
+    return this._openedNotificationRef;
   }
 
   private _animateNotification(notificationRef: NotificationRef<any>, config: NotificationConfig) {
-    if(config.duration && config.duration > 0) {
+    notificationRef.afterDismissed().subscribe(() => {
+      if (this._openedNotificationRef === notificationRef) {
+        this._openedNotificationRef = null;
+      }
+    });
 
+    if (this._openedNotificationRef) {
+      this._openedNotificationRef.afterDismissed().subscribe(() => {
+        notificationRef.containerInstance.enter();
+      });
+      this._openedNotificationRef.dismiss();
+    } else {
+      notificationRef.containerInstance.enter();
+    }
+
+    if (config.duration && config.duration > 0) {
+      notificationRef.afterOpened().subscribe(() => notificationRef._dismissAfter(config.duration!));
     }
   }
 
@@ -90,7 +124,7 @@ export class NotificationService {
     const overlayConfig = new OverlayConfig();
     overlayConfig.direction = config.direction;
 
-    let positionStrategy = this._overlay.position().global();
+    const positionStrategy = this._overlay.position().global();
     const isRtl = config.direction === 'rtl';
     const isLeft = (
       config.horizontalPosition === 'left' ||

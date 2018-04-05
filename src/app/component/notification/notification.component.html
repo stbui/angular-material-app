@@ -3,9 +3,8 @@
     {{data.title}}
     <span style="flex: 1 1 1e-09px;"></span>
     <button mat-icon-button>
-      <mat-icon>close</mat-icon>
+      <mat-icon (click)="action()">close</mat-icon>
     </button>
   </mat-card-subtitle>
   <mat-card-content class="notification-content" [innerHTML]="data.message"></mat-card-content>
 </mat-card>
-<!--&times;-->

@@ -4,8 +4,9 @@
  */
 
 import { Component, ViewEncapsulation, ChangeDetectionStrategy, Inject } from '@angular/core';
-import { NotificationConfig, STBUI_NOTIFICATION_DATA } from './notification.config';
+import { STBUI_NOTIFICATION_DATA } from './notification.config';
 import { NotificationRef } from './notification.ref';
+import { NotificationAnimations } from './notification.animation';
 
 @Component({
   moduleId: module.id,
@@ -14,6 +15,10 @@ import { NotificationRef } from './notification.ref';
   styleUrls: ['./notification.component.scss'],
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,
+  animations: [NotificationAnimations.contentFade],
+  host: {
+    '[@contentFade]': '',
+  }
 })
 export class NotificationComponent {
 
@@ -24,5 +29,9 @@ export class NotificationComponent {
     @Inject(STBUI_NOTIFICATION_DATA) data: any
   ) {
     this.data = data;
+  }
+
+  action() {
+    this.notificationRef.dismissWithAction();
   }
 }
