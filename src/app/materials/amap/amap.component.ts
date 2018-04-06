@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AmapComponent implements OnInit {
 
+  lat: number = 121.47;
+  lng: number = 31.23;
+
+  isView: boolean = false;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  view() {
+    this.isView = true;
   }
 
 }

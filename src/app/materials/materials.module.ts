@@ -22,7 +22,7 @@ import { CalendarComponent } from './calendar/calendar.component';
 import {
   NotificaitonModule,
   DatePickerModule,
-  AmpaModule,
+  AmapModule,
   ButtonModule,
   FileUploadModule,
   PaginationModule
@@ -39,7 +39,7 @@ import { NotificationComponent } from './notification/notification.component';
     MaterialsRoutingModule,
     CalendarModule.forRoot(),
     NotificaitonModule,
-    AmpaModule.forRoot(),
+    AmapModule.forRoot({apiKey: '5ca4be36897408ccfacadf90df1c5f91'}),
     DatePickerModule,
     ButtonModule,
     FileUploadModule,

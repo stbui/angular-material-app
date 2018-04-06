@@ -6,8 +6,18 @@
 </mat-card>
 
 <mat-card>
-  <mat-card-title>指定经纬度 高德地图</mat-card-title>
+  <mat-card-title>指定经纬度</mat-card-title>
   <mat-card-content>
-    <stbui-amap lat="121.47" lng="31.23"></stbui-amap>
+    <mat-form-field>
+      <input matInput placeholder="经度" [(ngModel)]="lat">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="纬度" [(ngModel)]="lng">
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" (click)="view()">查看</button>
+
+    <stbui-amap *ngIf="isView" [lat]="lat" [lng]="lng"></stbui-amap>
   </mat-card-content>
 </mat-card>
