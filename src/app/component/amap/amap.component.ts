@@ -1,4 +1,10 @@
-import { Component, Input } from '@angular/core';
+/**
+ * @license
+ * Copyright Stbui All Rights Reserved.
+ */
+
+import { Component, Input, ElementRef, OnInit, OnDestroy } from '@angular/core';
+import { AmapService } from './amap.service';
 
 declare var AMap: any;
 
@@ -7,59 +13,40 @@ declare var AMap: any;
   templateUrl: './amap.component.html',
   styleUrls: ['./amap.component.scss']
 })
-export class AmapComponent {
-
-  @Input() width: string = '1000px';
-  @Input() height: string = '500px';
+export class AmapComponent implements OnInit, OnDestroy {
+  @Input() width: string;
+  @Input() height: string;
   @Input() lat: number = 116.397428;
   @Input() lng: number = 39.90923;
+  @Input() zoom: number = 11;
+  @Input() options: object = {};
 
-  zoom: number = 11;
-  id;
+  constructor(private api: AmapService, private elementRef: ElementRef) {}
 
-  constructor() {
-    this.setMapId();
-    this.getAmapStyles();
-    this.loadScript(this.getSrc());
-  }
+  ngOnInit() {
+    const container = this.elementRef.nativeElement.querySelector(
+      '.amp-container'
+    );
 
-  setMapId() {
-    let random = Math.floor(Math.random() * 100);
-    this.id = `container_${random}`;
-  }
-
-  getAmapStyles() {
-    return {
-      width: this.width,
-      heigiht: this.height
-    };
-  }
-
-  loadScript(url: string) {
-    let node = document.createElement('script');
-    node.src = url;
-    node.type = 'text/javascript';
-    node.async = true;
-    node.charset = 'utf-8';
-
-    node.onload = () => {
-      this.loadMap();
-    };
-
-    document.getElementsByTagName('head')[0].appendChild(node);
-  }
-
-  loadMap() {
-    new AMap.Map(this.id, {
+    let options = {
       resizeEnable: true,
       zoom: this.zoom,
       center: [this.lat, this.lng]
-    });
+    };
+
+    options = Object.assign(options, this.options);
+
+    const map = this.api.createMap(container, options);
   }
 
-  getSrc() {
-    const url = 'http://webapi.amap.com/maps?v=1.3&key=5ca4be36897408ccfacadf90df1c5f91';
+  getStyles() {
+    return {
+      width: this.width,
+      height: this.height
+    };
+  }
 
-    return url;
+  ngOnDestroy() {
+    this.api.destoryMap();
   }
 }

@@ -1,9 +1,20 @@
+/**
+ * @license
+ * Copyright Stbui All Rights Reserved.
+ */
+
 import { InjectionToken } from '@angular/core';
 
-export interface IMapAPILoaderConfig {
-  apiKey?: string;
-  apiVersion?: string;
-  urlPath?: string;
-}
+import { AmapConfig } from './amap.config';
 
-export const MAP_API_CONFIG = new InjectionToken<IMapAPILoaderConfig>('StbuiAmapData');
+export const STBUI_AMAP_USER_OPTIONS = new InjectionToken<AmapConfig>(
+  'amap-user-options'
+);
+
+export const STBUI_AMAP_DEFAULT_OPTIONS = new InjectionToken<AmapConfig>(
+  'amap-default-options'
+);
+
+export function STBUI_AMAP_DEFAULT_OPTIONS_PROVIDER_FACTORY() {
+  return new AmapConfig();
+}
