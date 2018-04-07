@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { SharedModule } from '../shared/shared.module';
-import { ComponentModule } from '../component/component.module';
 
 import { MaterialsRoutingModule } from './materials.routing';
 import { ToastComponent } from './toast/toast.component';
@@ -26,7 +25,7 @@ import {
   ButtonModule,
   FileUploadModule,
   PaginationModule,
-  PopoverModule
+  PopoverModule,
 } from '../component';
 
 import { CalendarModule } from 'angular-calendar';
@@ -36,7 +35,6 @@ import { NotificationComponent } from './notification/notification.component';
 @NgModule({
   imports: [
     SharedModule,
-    ComponentModule,
     MaterialsRoutingModule,
     CalendarModule.forRoot(),
     NotificaitonModule,

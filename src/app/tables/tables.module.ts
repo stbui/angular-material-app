@@ -7,7 +7,7 @@ import { TablesRoutingModule } from './tables.routing';
 import { StaticComponent } from './static/static.component';
 import { DatatableComponent } from './datatable/datatable.component';
 import { DataTableService } from './datatable/datatable.service';
-import { ComponentModule } from '../component/component.module';
+import { TableModule } from '../component';
 import { DynamicComponent } from './dynamic/dynamic.component';
 
 
@@ -16,7 +16,7 @@ import { DynamicComponent } from './dynamic/dynamic.component';
     SharedModule,
     TablesRoutingModule,
     NgxDatatableModule,
-    ComponentModule
+    TableModule
   ],
   declarations: [
     TablesComponent,
