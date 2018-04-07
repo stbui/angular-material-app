@@ -25,7 +25,8 @@ import {
   AmapModule,
   ButtonModule,
   FileUploadModule,
-  PaginationModule
+  PaginationModule,
+  PopoverModule
 } from '../component';
 
 import { CalendarModule } from 'angular-calendar';
@@ -43,7 +44,8 @@ import { NotificationComponent } from './notification/notification.component';
     DatePickerModule,
     ButtonModule,
     FileUploadModule,
-    PaginationModule
+    PaginationModule,
+    PopoverModule
   ],
   declarations: [
     ToastComponent,

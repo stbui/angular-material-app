@@ -8,3 +8,4 @@ export * from './file-upload';
 export * from './search';
 export * from './count-down';
 export * from './mobile-input';
+export * from './popover';

@@ -1,3 +1,8 @@
+/**
+ * @license
+ * Copyright Stbui All Rights Reserved.
+ */
+
 import { Directive, Input, ElementRef, AfterViewInit } from '@angular/core';
 
 @Directive({
