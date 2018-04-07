@@ -9,6 +9,6 @@ export const STBUI_AMAP_DATA = new InjectionToken<any>('StbuiAmapData');
 
 export class AmapConfig {
   apiKey?: string;
-  apiVersion?: string = '1.4.3';
+  apiVersion?: string = '1.4.5';
   urlPath?: string = 'http://webapi.amap.com/maps';
 }

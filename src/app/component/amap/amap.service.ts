@@ -19,19 +19,16 @@ declare var AMap: any;
 
 @Injectable()
 export class AmapService {
-  private _mapLoaded: boolean = false;
   private _mapSdk: any;
 
-  onLoad: Subject<any> = new Subject();
-  readonly onCreate: Subject<any> = new Subject();
+  readonly onLoad: Subject<any> = new Subject();
+  readonly onMap: Subject<any> = new Subject();
 
   constructor(
     @Inject(STBUI_AMAP_DEFAULT_OPTIONS) private _defaultConfig: AmapConfig,
     @Inject(STBUI_AMAP_USER_OPTIONS) private _userConfig: AmapConfig
   ) {
-    if (!this._mapLoaded) {
-      this.load();
-    }
+    this.load()
   }
 
   load() {
@@ -42,31 +39,36 @@ export class AmapService {
     script.src = this._getSrc();
 
     script.onload = event => {
-      this._mapLoaded = true;
       this.onLoad.next(event);
+      this.onLoad.complete();
     };
 
-    script.onerror = event => this.onLoad.next(event);
+    script.onerror = event => {
+      this.onLoad.error(event);
+    };
 
     document.getElementsByTagName('head')[0].appendChild(script);
-
-    return this._mapLoaded;
   }
 
   createMap(element?, options?) {
     if (this._mapSdk) {
       this._mapSdk = new AMap.Map(element, options);
+      this.onMap.next(this._mapSdk);
     }
 
     this.onLoad.subscribe(() => {
       this._mapSdk = new AMap.Map(element, options);
+      this.onMap.next(this._mapSdk);
+      this.onMap.complete();
     });
+
+    return this.onMap;
   }
 
-  destoryMap() {
-    this.onCreate.subscribe(map => {
+  destroyMap() {
+    this.onMap.subscribe(map => {
       map.clearMap();
-      map.destory();
+      // map.destroy();
     });
   }
 

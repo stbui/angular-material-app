@@ -36,7 +36,7 @@ export class AmapComponent implements OnInit, OnDestroy {
 
     options = Object.assign(options, this.options);
 
-    const map = this.api.createMap(container, options);
+    this.api.createMap(container, options).subscribe(map => console.log(map));
   }
 
   getStyles() {
@@ -47,6 +47,6 @@ export class AmapComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    this.api.destoryMap();
+    this.api.destroyMap();
   }
 }
