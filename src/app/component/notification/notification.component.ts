@@ -22,7 +22,7 @@ import { NotificationAnimations } from './notification.animation';
 })
 export class NotificationComponent {
 
-  data: { message: string, title: string };
+  data: { message: string, title: string, type: string };
 
   constructor(
     public notificationRef: NotificationRef<NotificationComponent>,
