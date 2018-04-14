@@ -1,18 +1,22 @@
 :host {
   display: block;
-  margin: 15px 0;
+  padding: 15px;
 }
 
-.main-validation {
-  mat-card {
-    margin: 15px;
-  }
-}
-
-.extra-options {
+.form-check {
+  display: block;
   margin: 16px 0 32px;
 }
 
-.full-width {
-  width: 100%;
+.display-block {
+  display: block;
+}
+
+.divide {
+  padding: 0 15px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  margin-top: 15px;
 }
