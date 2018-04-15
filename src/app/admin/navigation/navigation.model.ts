@@ -16,11 +16,6 @@ export class NavigationModel {
         'title': 'UI元素',
         'type': 'collapse',
         'icon': 'bubble_chart',
-        'badge': {
-          'title': '2',
-          'bg': '#ff6f00',
-          'fg': '#fff'
-        },
         'children': [
           {
             'id': 'pagination',
@@ -91,6 +86,11 @@ export class NavigationModel {
         'title': '拓展组件',
         'type': 'collapse',
         'icon': 'equalizer',
+        'badge': {
+          'title': 'new',
+          'bg': '#3F51B5',
+          'fg': '#fff'
+        },
         'children': [
           {
             'id': 'amap',
@@ -120,6 +120,11 @@ export class NavigationModel {
         'title': '表单',
         'type': 'collapse',
         'icon': 'format_color_text',
+        'badge': {
+          'title': '2',
+          'bg': '#ff6f00',
+          'fg': '#fff'
+        },
         'children': [
           {
             'id': 'elements',
@@ -136,6 +141,11 @@ export class NavigationModel {
             'title': '编辑器',
             'type': 'item',
             'url': '/forms/editor'
+          }, {
+            'id': 'json-schema',
+            'title': 'json-schema',
+            'type': 'item',
+            'url': '/forms/json-schema-form'
           }
         ]
       },
@@ -302,11 +312,6 @@ export class NavigationModel {
         'title': '前端监控',
         'type': 'collapse',
         'icon': 'code',
-        'badge': {
-          'title': 'new',
-          'bg': '#3F51B5',
-          'fg': '#fff'
-        },
         'children': [
           {
             'id': 'error',

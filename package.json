@@ -46,6 +46,7 @@
     "@swimlane/ngx-datatable": "^11.1.7",
     "@swimlane/ngx-dnd": "^3.1.2",
     "angular-calendar": "^0.22.3",
+    "angular2-json-schema-form": "^0.7.0-alpha.1",
     "angularfire2": "^5.0.0-rc.6.0",
     "core-js": "^2.5.3",
     "d3": "^4.12.2",
