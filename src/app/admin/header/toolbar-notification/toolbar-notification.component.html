@@ -34,7 +34,7 @@
           <div class="time">{{ notification.lastTime }}</div>
         </div>
         <span fxFlex></span>
-        <button type="button" mat-icon-button (click)="delete(notification)">
+        <button type="button" mat-icon-button (click)="delete($event, notification)">
           <mat-icon class="close">close</mat-icon>
         </button>
       </div>

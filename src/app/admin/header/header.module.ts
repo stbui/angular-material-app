@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { SharedModule } from '../../shared/shared.module';
-import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 
 import { HeaderComponent } from './header.component';
@@ -22,7 +22,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
 @NgModule({
   imports: [
     SharedModule,
-    HttpModule,
+    HttpClientModule,
     RouterModule,
     PerfectScrollbarModule,
     LoadingModule
