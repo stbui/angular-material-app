@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
+
 import { SharedModule } from '../shared/shared.module';
+import { TagSelectModule, LoadingModule } from '../component';
 
 import { NavigationComponent } from './navigation.component';
 import { NavigationRoutingModule } from './navigation.routing';
@@ -12,11 +14,11 @@ import { PaginationModule } from '../component';
     HttpModule,
     SharedModule,
     NavigationRoutingModule,
-    PaginationModule
+    PaginationModule,
+    TagSelectModule,
+    LoadingModule
   ],
   declarations: [NavigationComponent],
-  providers: [
-  { provide: 'NavigationService', useClass: NavigationService }
-]
+  providers: [{ provide: 'NavigationService', useClass: NavigationService }]
 })
-export class NavigationModule { }
+export class NavigationModule {}

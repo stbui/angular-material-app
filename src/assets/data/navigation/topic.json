@@ -47,28 +47,6 @@
       "pv": null
     },
     {
-      "id": 5,
-      "name": "github精选",
-      "description": "最受欢迎开源项目",
-      "user_id": 1,
-      "create_time": 2147483647,
-      "status_is": "Y",
-      "sort_order": 2,
-      "top_is": "Y",
-      "pv": null
-    },
-    {
-      "id": 6,
-      "name": "移动开发",
-      "description": "",
-      "user_id": 1,
-      "create_time": 2147483647,
-      "status_is": "Y",
-      "sort_order": 2,
-      "top_is": "Y",
-      "pv": null
-    },
-    {
       "id": 7,
       "name": "推荐书籍",
       "description": "",
@@ -93,6 +71,28 @@
     {
       "id": 9,
       "name": "文档手册",
+      "description": "",
+      "user_id": 1,
+      "create_time": 2147483647,
+      "status_is": "Y",
+      "sort_order": 2,
+      "top_is": "Y",
+      "pv": null
+    },
+    {
+      "id": 5,
+      "name": "github精选",
+      "description": "最受欢迎开源项目",
+      "user_id": 1,
+      "create_time": 2147483647,
+      "status_is": "Y",
+      "sort_order": 2,
+      "top_is": "Y",
+      "pv": null
+    },
+    {
+      "id": 6,
+      "name": "移动开发",
       "description": "",
       "user_id": 1,
       "create_time": 2147483647,

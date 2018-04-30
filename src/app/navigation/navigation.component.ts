@@ -16,12 +16,18 @@ export class NavigationComponent implements OnInit {
   // skeleton screen
   currentNum = new Array(20);
 
+  lists
+
   constructor(@Inject('NavigationService') private service) {
   }
 
   ngOnInit() {
     this.getNavs();
     this.getCategories();
+
+    this.service.getList().subscribe(res => {
+      this.lists = res;
+    })
   }
 
   getNavs(id: any = '', page: any = '') {
@@ -58,5 +64,10 @@ export class NavigationComponent implements OnInit {
 
   showLoading() {
     this.currentNum = new Array(20);
+  }
+
+  selectedTagChange(tag) {
+    console.log(tag);
+    this.findNavLists(tag.id);
   }
 }
