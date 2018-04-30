@@ -1,10 +1,6 @@
-import { NgModule } from '@angular/core';
-import { LoadingDirective } from './loading.directive';
-import { LoadingComponent } from './loading.component';
+/**
+ * @license
+ * Copyright Stbui All Rights Reserved.
+ */
 
-@NgModule({
-  exports: [LoadingComponent, LoadingDirective],
-  declarations: [LoadingComponent, LoadingDirective],
-})
-export class LoadingModule {
-}
+export * from './public-api';

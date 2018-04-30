@@ -1,0 +1,53 @@
+mat-card {
+  margin: 10px;
+}
+
+.card-loading-content p {
+  margin: 0;
+}
+.card-loading-block {
+  display: inline-block;
+  margin: 5px 2% 0 0;
+  height: 14px;
+  border-radius: 2px;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(rgba(207, 216, 220, 0.2)),
+    color-stop(rgba(207, 216, 220, 0.4)),
+    to(rgba(207, 216, 220, 0.2))
+  );
+  background: -webkit-linear-gradient(
+    left,
+    rgba(207, 216, 220, 0.2),
+    rgba(207, 216, 220, 0.4),
+    rgba(207, 216, 220, 0.2)
+  );
+  background: linear-gradient(
+    90deg,
+    rgba(207, 216, 220, 0.2),
+    rgba(207, 216, 220, 0.4),
+    rgba(207, 216, 220, 0.2)
+  );
+  animation: card-loading 1.4s ease infinite;
+  background-size: 600% 600%;
+}
+@-webkit-keyframes card-loading {
+  0%,
+  100% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+@keyframes card-loading {
+  0%,
+  100% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
