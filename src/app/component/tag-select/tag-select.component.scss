@@ -1,0 +1,69 @@
+.tag-select {
+  position: relative;
+  font-size: 14px;
+  line-height: 28px;
+
+  > label {
+    position: absolute;
+  }
+
+  &.expand {
+    height: 28px;
+    overflow: hidden;
+  }
+
+  &-wrap {
+    display: block;
+    margin: 0 84px;
+    padding: 0;
+  }
+
+  &-item {
+    display: inline-block;
+
+    > a {
+      position: relative;
+      display: inline-block;
+      padding: 0 12px;
+      margin-left: 4px;
+      text-align: center;
+      cursor: default;
+      border-radius: 2px;
+    }
+
+    > a:hover {
+      background-color: #ccc;
+    }
+  }
+
+  &-extra {
+    padding: 0 8px;
+    margin-left: 4px;
+    position: absolute;
+    top: 0;
+    right: 6px;
+    cursor: pointer;
+
+    .mat-icon {
+      float: right;
+      transform: rotate(-180deg);
+      transition: transform 0.25s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+
+    &.active {
+      .mat-icon {
+        transform: rotate(0);
+      }
+    }
+  }
+}
+
+// theme
+.tag-select {
+  &-item {
+    > a.active {
+      background-color: #3f51b5;
+      color: white;
+    }
+  }
+}

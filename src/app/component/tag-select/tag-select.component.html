@@ -1,0 +1,12 @@
+<div class="tag-select" [class.expand]="isExpand">
+  <label>{{ label }}</label>
+  <ul class="tag-select-wrap">
+    <li class="tag-select-item" *ngFor="let tag of tags">
+      <a mat-ripple [class.active]="selectedIndex === tag" (click)="onTagTriggered(tag)">{{ tag.name }}</a>
+    </li>
+  </ul>
+  <a mat-ripple class="tag-select-extra" [class.active]="isExpand" (click)="onMoreTriggered()">
+    <span>更多</span>
+    <mat-icon class="mat-icon">expand_more</mat-icon>
+  </a>
+</div>
