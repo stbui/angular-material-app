@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 
 import { SharedModule } from '../shared/shared.module';
-import { TagSelectModule, LoadingModule } from '../component';
+import { TagSelectModule, LoadingModule, GithubButtonModule } from '../component';
 
 import { NavigationComponent } from './navigation.component';
 import { NavigationRoutingModule } from './navigation.routing';
@@ -16,7 +16,8 @@ import { PaginationModule } from '../component';
     NavigationRoutingModule,
     PaginationModule,
     TagSelectModule,
-    LoadingModule
+    LoadingModule,
+    GithubButtonModule
   ],
   declarations: [NavigationComponent],
   providers: [{ provide: 'NavigationService', useClass: NavigationService }]

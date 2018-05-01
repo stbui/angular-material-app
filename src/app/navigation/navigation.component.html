@@ -6,6 +6,7 @@
   </mat-card>
 </div>
 
+
 <div fxLayout="row" fxLayoutWrap>
   <div fxFlex="100" fxFlex.gt-md="20" fxFlex.gt-sm="33.3" fxFlex.gt-xs="50" *ngFor="let navigation of currentNum">
     <stbui-loading-skeleton></stbui-loading-skeleton>
@@ -14,7 +15,7 @@
   <div fxFlex="100" fxFlex.gt-md="20" fxFlex.gt-sm="33.3" fxFlex.gt-xs="50" *ngFor="let list of lists">
     <mat-card class="nav-item">
       <div class="nav-item-mask">
-        <div class="nav-item-logo" style=""></div>
+        <div class="nav-item-logo" [ngStyle]="{'background-image': ''}"></div>
       </div>
 
       <mat-card-header>
