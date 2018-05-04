@@ -16,3 +16,12 @@ npm cache clean
 npm install -g @angular/cli@latest
 npm install --save-dev @angular/cli@latest
 npm install
+
+
+```
+npm install --save @angular/{animations,common,compiler,core,forms,http,platform-browser,platform-browser-dynamic,router,service-worker}
+
+npm install --save @angular/{cdk,material,flex-layout}
+
+npm install --save-dev @angular/{compiler-cli,language-service}
+```
