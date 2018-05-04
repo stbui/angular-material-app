@@ -12,6 +12,7 @@ import { PopoverDirective } from './popover.directive';
 @NgModule({
   imports: [CommonModule],
   declarations: [PopoverComponent, PopoverDirective],
-  exports: [PopoverComponent, PopoverDirective]
+  exports: [PopoverComponent, PopoverDirective],
+  entryComponents: [PopoverComponent]
 })
 export class PopoverModule {}

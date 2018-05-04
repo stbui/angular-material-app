@@ -1,4 +1,5 @@
-<div class="stbui-popover" [ngStyle]="setStyle()" *ngIf="_popoverOpen">
+<ng-template>
+  <div class="stbui-popover-container" #focusTrapElement>
     <ng-content></ng-content>
-</div>
-
+  </div>
+</ng-template>

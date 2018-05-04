@@ -9,7 +9,8 @@ import {
   ButtonModule,
   FileUploadModule,
   PaginationModule,
-  PopoverModule
+  PopoverModule,
+  GithubButtonModule
 } from '../component';
 
 import { MaterialsRoutingModule } from './materials.routing';
@@ -43,7 +44,8 @@ import { NotificationComponent } from './notification/notification.component';
     ButtonModule,
     FileUploadModule,
     PaginationModule,
-    PopoverModule
+    PopoverModule,
+    GithubButtonModule
   ],
   declarations: [
     ToastComponent,
