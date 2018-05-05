@@ -35,7 +35,7 @@
             "scripts": []
           },
           "configurations": {
-            "dev": {
+            "development": {
               "extractCss": true
             },
             "github": {
@@ -45,7 +45,32 @@
                   "with": "src/environments/environment.github.ts"
                 }
               ],
-              "extractCss": true
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true
+            },
+            "ngsw": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.ngsw.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true
             },
             "production": {
               "fileReplacements": [
@@ -72,6 +97,15 @@
             "browserTarget": "angular-material-app:build"
           },
           "configurations": {
+            "development": {
+              "browserTarget": "angular-material-app:build:development"
+            },
+            "github": {
+              "browserTarget": "angular-material-app:build:github"
+            },
+            "ngsw": {
+              "browserTarget": "angular-material-app:build:ngsw"
+            },
             "production": {
               "browserTarget": "angular-material-app:build:production"
             }
