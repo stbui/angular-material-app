@@ -3,6 +3,7 @@ import { SharedModule } from '../shared/shared.module';
 import { HttpClientModule } from '@angular/common/http';
 import { NgxDnDModule } from '@swimlane/ngx-dnd';
 
+import { SearchModule } from '../component';
 import { TodoRoutingModule } from './todo.routing';
 import { TodoComponent } from './todo.component';
 import { TodoService } from './todo.service';
@@ -19,7 +20,8 @@ import { TodoSearchComponent } from './todo-search/todo-search.component';
     SharedModule,
     HttpClientModule,
     NgxDnDModule,
-    TodoRoutingModule
+    TodoRoutingModule,
+    SearchModule
   ],
   declarations: [
     TodoComponent,

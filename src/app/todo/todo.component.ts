@@ -2,7 +2,7 @@ import { Component, OnInit, OnDestroy, Inject, ViewEncapsulation } from '@angula
 import { Router, ActivatedRoute, Params } from '@angular/router';
 import { Todo } from './todo.model';
 
-import { Subscription } from 'rxjs/Subscription';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-todo',

@@ -2,15 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../../environments/environment';
 
-import 'rxjs/add/operator/toPromise';
-
 @Component({
   selector: 'app-static',
   templateUrl: './static.component.html',
   styleUrls: ['./static.component.scss']
 })
 export class StaticComponent implements OnInit {
-
   data = {
     columns: [
       {
@@ -38,13 +35,12 @@ export class StaticComponent implements OnInit {
         title: '环比增幅(%)'
       }
     ],
-    data: <any>[] 
+    data: <any>[]
   };
 
   private apiUrl = environment.tableApi;
 
-  constructor(private _http: HttpClient) {
-  }
+  constructor(private _http: HttpClient) {}
 
   ngOnInit() {
     this.getQuery();
@@ -52,8 +48,11 @@ export class StaticComponent implements OnInit {
 
   getQuery() {
     const url = `${this.apiUrl}/static.json`;
-    this._http.get(url).toPromise().then(res => {
-      this.data.data = res;
-    });
+    this._http
+      .get(url)
+      .toPromise()
+      .then(res => {
+        this.data.data = res;
+      });
   }
 }

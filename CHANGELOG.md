@@ -11,7 +11,7 @@
 
 * **RxJS**: - ChangeLog：https://github.com/ReactiveX/rxjs/blob/master/CHANGELOG.md
     - BehaviorSubject 从rxjs导出
-    - 升级至6.0.0，升级指南：https://goo.gl/osWFzo
+    - 升级至6.0.0，升级指南：https://github.com/ReactiveX/rxjs/blob/master/MIGRATION.md
     - Angular升级至RxJS v6 ahpla的commit：https://github.com/angular/angular/commit/b43f8bc7d3d101af3fcf02180c54007bb1e8c4ca
     - Angular升级至RxJS v6 beta的commit： https://github.com/angular/angular/commit/3cc5c2e4d09b7ba0ff31a9f804a8ae654af6c796
 

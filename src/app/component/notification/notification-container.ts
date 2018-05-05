@@ -13,22 +13,20 @@ import {
   ElementRef,
   ChangeDetectionStrategy,
   ViewEncapsulation,
-  ChangeDetectorRef,
+  ChangeDetectorRef
 } from '@angular/core';
 import { AnimationEvent } from '@angular/animations';
 import {
   BasePortalOutlet,
   ComponentPortal,
   CdkPortalOutlet,
-  TemplatePortal,
+  TemplatePortal
 } from '@angular/cdk/portal';
-import { take } from 'rxjs/operators/take';
-import { Observable } from 'rxjs/Observable';
-import { Subject } from 'rxjs/Subject';
+import { take } from 'rxjs/operators';
+import { Observable, Subject } from 'rxjs';
 
 import { NotificationConfig } from './notification.config';
 import { NotificationAnimations } from './notification.animation';
-
 
 @Component({
   moduleId: module.id,
@@ -39,12 +37,13 @@ import { NotificationAnimations } from './notification.animation';
   encapsulation: ViewEncapsulation.None,
   animations: [NotificationAnimations.notificationState],
   host: {
-    'class': 'notification-container',
+    class: 'notification-container',
     '[@state]': '_animationState',
     '(@state.done)': 'onAnimationEnd($event)'
-  },
+  }
 })
-export class NotificationContainer extends BasePortalOutlet implements OnDestroy {
+export class NotificationContainer extends BasePortalOutlet
+  implements OnDestroy {
   private _destroyed = false;
 
   @ViewChild(CdkPortalOutlet) _portalOutlet: CdkPortalOutlet;
@@ -58,7 +57,8 @@ export class NotificationContainer extends BasePortalOutlet implements OnDestroy
   constructor(
     private _ngZone: NgZone,
     private _elementRef: ElementRef,
-    private _changeDetectorRef: ChangeDetectorRef) {
+    private _changeDetectorRef: ChangeDetectorRef
+  ) {
     super();
   }
 
@@ -71,9 +71,12 @@ export class NotificationContainer extends BasePortalOutlet implements OnDestroy
   }
 
   onAnimationEnd(event: AnimationEvent) {
-    const {fromState, toState} = event;
+    const { fromState, toState } = event;
 
-    if ((toState === 'void' && fromState !== 'void') || toState.startsWith('hidden')) {
+    if (
+      (toState === 'void' && fromState !== 'void') ||
+      toState.startsWith('hidden')
+    ) {
       this._completeExit();
     }
 
@@ -85,12 +88,13 @@ export class NotificationContainer extends BasePortalOutlet implements OnDestroy
         onEnter.complete();
       });
     }
-
   }
 
   enter(): void {
     if (!this._destroyed) {
-      this._animationState = `visible-${this.notificationConfig.verticalPosition}`;
+      this._animationState = `visible-${
+        this.notificationConfig.verticalPosition
+      }`;
       this._changeDetectorRef.detectChanges();
     }
   }
@@ -106,10 +110,13 @@ export class NotificationContainer extends BasePortalOutlet implements OnDestroy
   }
 
   private _completeExit() {
-    this._ngZone.onMicrotaskEmpty.asObservable().pipe(take(1)).subscribe(() => {
-      this._onExit.next();
-      this._onExit.complete();
-    });
+    this._ngZone.onMicrotaskEmpty
+      .asObservable()
+      .pipe(take(1))
+      .subscribe(() => {
+        this._onExit.next();
+        this._onExit.complete();
+      });
   }
 
   private _assertNotAttached() {

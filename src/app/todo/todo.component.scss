@@ -77,11 +77,9 @@ mat-sidenav-container {
     margin-right: 32px;
 
     .header {
-      display: flex;
       height: $content__header__height;
       min-height: $content__header__height;
       max-height: $content__header__height;;
-
     }
 
     .content-card {

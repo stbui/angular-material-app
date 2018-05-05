@@ -4,9 +4,7 @@
  */
 
 import { Injectable, InjectionToken, Inject } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
-import { BehaviorSubject } from 'rxjs/BehaviorSubject';
-import { Subject } from 'rxjs/Subject';
+import { Observable, BehaviorSubject, Subject } from 'rxjs';
 
 import { AmapConfig, STBUI_AMAP_DATA } from './amap.config';
 
@@ -28,7 +26,7 @@ export class AmapService {
     @Inject(STBUI_AMAP_DEFAULT_OPTIONS) private _defaultConfig: AmapConfig,
     @Inject(STBUI_AMAP_USER_OPTIONS) private _userConfig: AmapConfig
   ) {
-    this.load()
+    this.load();
   }
 
   load() {

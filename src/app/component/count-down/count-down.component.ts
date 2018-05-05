@@ -1,5 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { Observable } from 'rxjs/Rx';
+import { interval } from 'rxjs';
 
 @Component({
   selector: 'stbui-count-down',
@@ -17,24 +17,24 @@ export class CountDownComponent {
   constructor() {}
 
   onClickTrigger() {
-    const interval$ = Observable.interval(1000)
-      .mapTo(-1)
-      .startWith(this.delay)
-      .scan((acc, curr) => {
-        return curr + acc;
-      })
-      .take(this.delay + 1)
-      .do(timer => {
-        this.disabled = true;
-      });
+    // const interval$ = interval(1000)
+    //   .mapTo(-1)
+    //   .startWith(this.delay)
+    //   .scan((acc, curr) => {
+    //     return curr + acc;
+    //   })
+    //   .take(this.delay + 1)
+    //   .do(timer => {
+    //     this.disabled = true;
+    //   });
 
-    interval$.subscribe(state => {
-      this.text = `${state}s`;
-      if (state == 0) {
-        this.disabled = false;
-        this.text = '获取验证码';
-        this.onEnd.emit();
-      }
-    });
+    // interval$.subscribe(state => {
+    //   this.text = `${state}s`;
+    //   if (state == 0) {
+    //     this.disabled = false;
+    //     this.text = '获取验证码';
+    //     this.onEnd.emit();
+    //   }
+    // });
   }
 }

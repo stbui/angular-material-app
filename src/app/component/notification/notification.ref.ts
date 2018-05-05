@@ -4,8 +4,7 @@
  */
 
 import { OverlayRef } from '@angular/cdk/overlay';
-import { Observable } from 'rxjs/Observable';
-import { Subject } from 'rxjs/Subject';
+import { Observable, Subject } from 'rxjs';
 import { NotificationContainer } from './notification-container';
 
 export interface NotificationDismiss {
@@ -24,7 +23,10 @@ export class NotificationRef<T> {
   private _durationTimeoutId: number;
   private _dismissedByAction = false;
 
-  constructor(containerInstance: NotificationContainer, private _overlayRef: OverlayRef) {
+  constructor(
+    containerInstance: NotificationContainer,
+    private _overlayRef: OverlayRef
+  ) {
     this.containerInstance = containerInstance;
     this.onAction().subscribe(() => this.dismiss());
     containerInstance._onExit.subscribe(() => this._finishDismiss());
@@ -67,7 +69,7 @@ export class NotificationRef<T> {
       this._onAction.complete();
     }
 
-    this._afterDismissed.next({dismissedByAction: this._dismissedByAction});
+    this._afterDismissed.next({ dismissedByAction: this._dismissedByAction });
     this._afterDismissed.complete();
     this._dismissedByAction = false;
   }
@@ -83,5 +85,4 @@ export class NotificationRef<T> {
   onAction(): Observable<void> {
     return this._onAction.asObservable();
   }
-
 }

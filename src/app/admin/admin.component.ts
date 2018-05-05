@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MediaChange, ObservableMedia } from '@angular/flex-layout';
-import { ReplaySubject } from 'rxjs/ReplaySubject';
-import { Observable } from 'rxjs/Observable';
-import { Subscription } from 'rxjs/Subscription';
+import { Observable, ReplaySubject, Subscription } from 'rxjs';
 import { ConfigService } from '../core/config.service';
 
 @Component({
@@ -11,7 +9,6 @@ import { ConfigService } from '../core/config.service';
   styleUrls: ['./admin.component.scss']
 })
 export class AdminComponent implements OnInit {
-
   settings: any;
   onSettingsChanged: Subscription;
   layoutMode = false;
@@ -24,44 +21,51 @@ export class AdminComponent implements OnInit {
   sidenavAlign: string = 'start';
   customizerSidenavAlign: string = 'end';
 
-  title = '后台管理系统 - Power by stbui';
+  title = '中后台前端应用框架 - Power by stbui';
 
   get media$(): Observable<MediaChange> {
     return this._media$.asObservable();
   }
 
   constructor(media: ObservableMedia, private config: ConfigService) {
-    media.asObservable()
-      .subscribe(res => this._media$.next(res), err => this._media$.error(err), () => this._media$.complete());
+    media
+      .asObservable()
+      .subscribe(
+        res => this._media$.next(res),
+        err => this._media$.error(err),
+        () => this._media$.complete()
+      );
 
-    this.onSettingsChanged = this.config.onSettingsChanged.subscribe(settings => {
-      this.settings = settings;
+    this.onSettingsChanged = this.config.onSettingsChanged.subscribe(
+      settings => {
+        this.settings = settings;
 
-      if (this.settings.layout.mode === 'boxed') {
-        this.layoutMode = true;
-      } else {
-        this.layoutMode = false;
+        if (this.settings.layout.mode === 'boxed') {
+          this.layoutMode = true;
+        } else {
+          this.layoutMode = false;
+        }
+
+        if (this.settings.layout.navigation === 'left') {
+          this.sidenavAlign = 'start';
+          this.customizerSidenavAlign = 'end';
+        } else if (this.settings.layout.navigation === 'right') {
+          this.sidenavAlign = 'end';
+          this.customizerSidenavAlign = 'start';
+        } else {
+          this.sidenavAlign = 'start';
+          this.customizerSidenavAlign = 'end';
+          this.sidenavOpen = false;
+        }
       }
-
-      if (this.settings.layout.navigation === 'left') {
-        this.sidenavAlign = 'start';
-        this.customizerSidenavAlign = 'end';
-      } else if (this.settings.layout.navigation === 'right') {
-        this.sidenavAlign = 'end';
-        this.customizerSidenavAlign = 'start';
-      } else {
-        this.sidenavAlign = 'start';
-        this.customizerSidenavAlign = 'end';
-        this.sidenavOpen = false;
-      }
-    });
+    );
   }
 
   ngOnInit() {
     this._mediaSubscription = this.media$.subscribe((change: MediaChange) => {
-      let isMobile = (change.mqAlias === 'xs') || (change.mqAlias === 'sm');
+      let isMobile = change.mqAlias === 'xs' || change.mqAlias === 'sm';
 
-      this.sidenavMode = (isMobile) ? 'over' : 'side';
+      this.sidenavMode = isMobile ? 'over' : 'side';
       this.sidenavOpen = !isMobile;
     });
 
