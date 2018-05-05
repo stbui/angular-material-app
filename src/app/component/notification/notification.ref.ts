@@ -20,7 +20,7 @@ export class NotificationRef<T> {
   private readonly _afterOpened = new Subject<void>();
   private readonly _onAction = new Subject<void>();
 
-  private _durationTimeoutId: number;
+  private _durationTimeoutId: any;
   private _dismissedByAction = false;
 
   constructor(

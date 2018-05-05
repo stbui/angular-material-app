@@ -13,29 +13,29 @@ google 浏览器桌面快捷方式后面加上(空一格，再加上)
 ```
 
 
-* 方法二：在项目根目录下添加 *proxy.conf.js* 文件，内容如下
+* 方法二：在项目根目录下添加 *proxy.conf.jsson* 文件，内容如下
 
 ```
-'use strict';
-
-const proxyConfig = [
-  {
-    context: '/api',
-    pathRewrite: { '^/api': '' },
-    target: 'http://api.stbui.com',
-    changeOrigin: true,
-    secure: false
+{
+  "/api": {
+    "target": "http://api.stbui.com",
+    "secure": false
   }
-];
-
-module.exports = proxyConfig;
+}
 ```
 
 通过ng server 来代理请求
 
 ```
-ng serve --proxy-config proxy.conf.js
+"architect": {
+  "serve": {
+    "builder": "@angular-devkit/build-angular:dev-server",
+    "options": {
+      "browserTarget": "angular-material-ape:build",
+      "proxyConfig": "src/proxy.conf.json"
+    },
 ```
+ng serve
 
 
 # 对接第三应用及微信配置相关

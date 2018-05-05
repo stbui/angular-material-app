@@ -12,11 +12,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
 };
 
 @NgModule({
-  imports: [
-    SharedModule,
-    PageLayoutsRoutingModule,
-    PerfectScrollbarModule
-  ],
+  imports: [SharedModule, PageLayoutsRoutingModule, PerfectScrollbarModule],
   declarations: [FullwidthComponent],
   providers: [
     {
@@ -25,4 +21,4 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     }
   ]
 })
-export class PageLayoutsModule { }
+export class PageLayoutsModule {}

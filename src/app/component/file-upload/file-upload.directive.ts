@@ -1,9 +1,9 @@
-import { Directive, HostListener, Output, EventEmitter } from "@angular/core";
-import { FileUploadService } from "./file-upload.service";
-import { Upload } from "./file-upload.model";
+import { Directive, HostListener, Output, EventEmitter } from '@angular/core';
+import { FileUploadService } from './file-upload.service';
+import { Upload } from './file-upload.model';
 
 @Directive({
-  selector: "[stbFileUpload],[stbuiFileUpload]"
+  selector: '[stbFileUpload],[stbuiFileUpload]'
 })
 export class FileUploadDirective {
   public currentUpload: Upload;
@@ -11,25 +11,25 @@ export class FileUploadDirective {
 
   @Output() uploader: EventEmitter<any> = new EventEmitter<any>();
 
-  @HostListener("change", ["$event"])
+  @HostListener('change', ['$event'])
   onChange(event: Event) {
     this.detectFiles(event);
     this.uploadSingle();
   }
 
-  @HostListener("drop", ["$event"])
+  @HostListener('drop', ['$event'])
   onDrop(event: Event) {
     this.stopEvent(event);
     this.dataTransfer(event);
     this.uploadSingle();
   }
 
-  @HostListener("dragenter", ["$event"])
+  @HostListener('dragenter', ['$event'])
   onDragEnter(event) {
     this.stopEvent(event);
   }
 
-  @HostListener("dragover", ["$event"])
+  @HostListener('dragover', ['$event'])
   onDragOver(event) {
     this.stopEvent(event);
   }

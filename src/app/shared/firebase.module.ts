@@ -9,13 +9,8 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
   imports: [
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
-    AngularFireDatabaseModule,
-  ],
-  exports: [
-    AngularFireModule,
-    AngularFireAuthModule,
     AngularFireDatabaseModule
-  ]
+  ],
+  exports: [AngularFireModule, AngularFireAuthModule, AngularFireDatabaseModule]
 })
-export class FireBaseComponentsModule {
-}
+export class FireBaseComponentsModule {}

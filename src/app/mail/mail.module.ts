@@ -20,9 +20,7 @@ import { MailRoutingModule } from './mail.routing';
     QuillModule,
     SearchModule
   ],
-  entryComponents: [
-    ComposeComponent
-  ],
+  entryComponents: [ComposeComponent],
   declarations: [
     MailComponent,
     ComposeComponent,
@@ -30,9 +28,6 @@ import { MailRoutingModule } from './mail.routing';
     ListComponent,
     ToolbarComponent
   ],
-  providers: [
-    { provide: 'mailService', useClass: MailService }
-  ]
+  providers: [{ provide: 'mailService', useClass: MailService }]
 })
-export class MailModule {
-}
+export class MailModule {}

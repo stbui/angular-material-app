@@ -19,11 +19,7 @@ import { ProjectComponent } from './project/project.component';
 import { BaseLayoutModule } from '../layouts/index';
 
 @NgModule({
-  imports: [
-    SharedModule,
-    PagesRoutingModule,
-    BaseLayoutModule
-  ],
+  imports: [SharedModule, PagesRoutingModule, BaseLayoutModule],
   declarations: [
     PagesComponent,
     AboutComponent,
@@ -36,9 +32,8 @@ import { BaseLayoutModule } from '../layouts/index';
     ProjectComponent
   ],
   providers: [
-    {provide: 'UserService', useClass: UserService},
+    { provide: 'UserService', useClass: UserService },
     FileManagerFirebase
   ]
 })
-export class PagesModule {
-}
+export class PagesModule {}

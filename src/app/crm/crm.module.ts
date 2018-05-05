@@ -4,7 +4,10 @@ import { CrmRoutingModule } from './crm.routing';
 import { LeadComponent } from './lead/lead.component';
 import { CustomerComponent } from './customer/customer.component';
 import { CustomerCommonComponent } from './customer-common/customer-common.component';
-import { ContactComponent, ContactUpdateComponent } from './contact/contact.component';
+import {
+  ContactComponent,
+  ContactUpdateComponent
+} from './contact/contact.component';
 import { OpportunitiesComponent } from './opportunities/opportunities.component';
 import { CrmComponent } from './crm.component';
 import { ContractComponent } from './contract/contract.component';
@@ -14,13 +17,8 @@ import { LeadService } from './lead/lead.service';
 
 import { WidgetModule } from '../widget/widget.module';
 
-
 @NgModule({
-  imports: [
-    SharedModule,
-    CrmRoutingModule,
-    WidgetModule
-  ],
+  imports: [SharedModule, CrmRoutingModule, WidgetModule],
   declarations: [
     LeadComponent,
     CustomerComponent,
@@ -32,12 +30,7 @@ import { WidgetModule } from '../widget/widget.module';
     ContractComponent,
     ProductComponent
   ],
-  entryComponents: [
-    ContactUpdateComponent,
-  ],
-  providers: [
-    {provide: 'LeadService', useClass: LeadService}
-  ]
+  entryComponents: [ContactUpdateComponent],
+  providers: [{ provide: 'LeadService', useClass: LeadService }]
 })
-export class CrmModule {
-}
+export class CrmModule {}
