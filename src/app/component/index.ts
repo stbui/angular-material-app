@@ -13,3 +13,4 @@ export * from './table';
 export * from './tag-select';
 export * from './github-button';
 export * from './speed-dial';
+export * from './chat-widget';
