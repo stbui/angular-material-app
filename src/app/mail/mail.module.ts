@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { SharedModule } from '../shared/shared.module';
+import { HttpClientModule } from '@angular/common/http';
 import { QuillModule } from 'ngx-quill';
 import { SearchModule } from '../component/search';
 
@@ -14,6 +15,7 @@ import { MailRoutingModule } from './mail.routing';
 @NgModule({
   imports: [
     SharedModule,
+    HttpClientModule,
     MailRoutingModule,
     QuillModule,
     SearchModule

@@ -4,7 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { ElementsComponent } from './elements/elements.component';
 import { ValidationComponent } from './validation/validation.component';
 import { EditorComponent } from './editor/editor.component';
-import { JsonSchemaFormComponent } from './json-schema-form/json-schema-form.component';
+// import { JsonSchemaFormComponent } from './json-schema-form/json-schema-form.component';
 
 const routes: Routes = [
   {
@@ -23,10 +23,10 @@ const routes: Routes = [
     path: 'editor',
     component: EditorComponent
   },
-  {
-    path: 'json-schema-form',
-    component: JsonSchemaFormComponent
-  }
+  // {
+  //   path: 'json-schema-form',
+  //   component: JsonSchemaFormComponent
+  // }
 ];
 
 @NgModule({

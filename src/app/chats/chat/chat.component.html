@@ -40,10 +40,10 @@
     </perfect-scrollbar>
 
     <div class="chat-respond" fxLayout="row" fxLayoutAlign="start center">
-      <mat-input-container fxFlex>
+      <mat-form-field fxFlex>
         <textarea matInput (keyup.enter)="onSendTriggered()" [(ngModel)]="newMessage"
                   placeholder="输入您要发送的消息"></textarea>
-      </mat-input-container>
+      </mat-form-field>
       <button (click)="onSendTriggered()" mat-fab color="primary">
         <mat-icon>send</mat-icon>
       </button>

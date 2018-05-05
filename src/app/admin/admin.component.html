@@ -1,10 +1,10 @@
 <mat-sidenav-container [class.boxed]="layoutMode">
 
-  <mat-sidenav class="customizer" [align]="customizerSidenavAlign" mode="over" #customizer>
+  <mat-sidenav class="customizer" [position]="customizerSidenavAlign" mode="over" #customizer>
     <stbui-customizer></stbui-customizer>
   </mat-sidenav>
 
-  <mat-sidenav class="sidenav" [align]="sidenavAlign" [mode]="sidenavMode" [opened]="sidenavOpen" #sidenav>
+  <mat-sidenav class="sidenav" [position]="sidenavAlign" [mode]="sidenavMode" [opened]="sidenavOpen" #sidenav>
     <app-brand [ngClass]="settings.colorClasses.brand"></app-brand>
     <stbui-navigation [ngClass]="settings.colorClasses.navigation"></stbui-navigation>
   </mat-sidenav>
