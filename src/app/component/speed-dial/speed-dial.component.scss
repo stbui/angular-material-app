@@ -1,0 +1,31 @@
+:host {
+  display: block;
+  position: fixed;
+  right: 32px;
+  bottom: 32px;
+  margin-bottom: 0 !important;
+}
+
+.mat-fab .mat-icon {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+}
+
+.dial {
+  margin-bottom: 8px;
+  display: flex;
+  flex-direction: column-reverse;
+  .mat-mini-fab {
+    margin: 8px 0;
+  }
+}
+
+.tooltip {
+  padding: 4px 8px;
+  background: rgba(50, 50, 50, 0.9);
+  color: white;
+  border-radius: 2px;
+  margin: 8px;
+  font-size: 12px;
+}
