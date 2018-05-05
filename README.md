@@ -4,7 +4,7 @@
   <a href="./" target="blank"><img src="src/assets/logo.png" alt="stbui Logo" width="128" /></a>
 </p>
 
-基于最新`Angular 5`框架与`Material 2`技术的企业级通用管理系统快速开发框架，涵盖了大量的常用组件和基础功能，您可以快速开发各种MIS系统，如CMS、OA、CRM、ERP、POS等，最大程度上帮助企业节省时间成本和费用开支。
+基于最新`Angular 6`框架与`Material 2`技术的企业级通用管理系统快速开发框架，涵盖了大量的常用组件和基础功能，您可以快速开发各种MIS系统，如CMS、OA、CRM、ERP、POS等，最大程度上帮助企业节省时间成本和费用开支。
 
 [![Travis](https://travis-ci.org/stbui/angular-material-app.svg?branch=master)](https://travis-ci.org/stbui/angular-material-app)
 [![Docker Build Status](https://img.shields.io/docker/build/stbui/angular-material-app.svg?style=flat-square)](https://hub.docker.com/r/stbui/angular-material-app/)
@@ -14,16 +14,16 @@
 [![Powered_by](https://img.shields.io/badge/Powered_by-stbui-green.svg?style=flat)](https://github.com/stbui/angular-material-app)
 
 
-### 平台环境
+### Plaform 
 
-[![Angular](https://img.shields.io/badge/Angular%205-5.2.2-brightgreen.svg?style=flat-square)](https://github.com/angular/angular)
-[![Angular-cli](https://img.shields.io/badge/Angular.cli-1.6.6-brightgreen.svg?style=square)](https://github.com/angular/angular-cli)
-[![Angular Material 2](https://img.shields.io/badge/Material%202-5.1.0-brightgreen.svg?style=square)](https://github.com/angular/material2)
-[![Flex-Layout](https://img.shields.io/badge/Flex.Layout-2.0.0.beta.12-brightgreen.svg?style=square)](https://github.com/angular/flex-layout)
+[![Angular](https://img.shields.io/badge/Angular%205-6.0.0-brightgreen.svg?style=flat-square)](https://github.com/angular/angular)
+[![Angular-cli](https://img.shields.io/badge/Angular.cli-1.7.3-brightgreen.svg?style=square)](https://github.com/angular/angular-cli)
+[![Angular Material 2](https://img.shields.io/badge/Material%202-6.0.0-brightgreen.svg?style=square)](https://github.com/angular/material2)
+[![Flex-Layout](https://img.shields.io/badge/Flex.Layout-5.0.0-brightgreen.svg?style=square)](https://github.com/angular/flex-layout)
 [![Angular FireBase](https://img.shields.io/badge/Firebase-5.0.0.rc.6-brightgreen.svg?style=square)](https://github.com/angular/angularfire2)
 
 
-### 特性
+### Feature
 
 - 基于 Material Design 精心设计
 - 多种颜色方案，有多个预定义的配色方案
@@ -41,7 +41,7 @@
 ![demo image](src/assets/images-demo/20170802104620.png)
 
 
-### 使用入门
+### Get Start
 
 ```
 git clone --depth=1 https://github.com/stbui/angular-material-app.git
@@ -55,81 +55,35 @@ npm run start
 http://127.0.0.1:4200
 ```
 
-### 发布
+### Pubilsh
 
 ```
 npm run build
 ```
 
 
-# Docker
+### Integration
+##### Docker
 
-## 起步
+* [docs](docs/docker.md)
 
-* 构建镜像
-```
-docker build -t angular-material-app .
-```
+##### Electron
 
-* 运行容器
-```
-docker run -d -p 8080:8080 --name angular-material-app --restart always angular-material-app
-```
+* [docs](docs/electron.md)
 
-## 快速部署
-拉取docker仓库中的镜像
-```
-docker run -d -P stbui/angular-material-app
-```
-
-
-# Electron
-
-使用Electron构建桌面应用
-
-## 起步
-
-* 安装依赖环境
-node ./scripts/electron/install.js
-
-* 构建静态资源
-```
-npm run build-prod-electron
-```
-
-* 启动项目
-```
-npm run start:electron
-```
-
-## 打包
-```
-npm run build-pack-electron
-```
-文件生成在*packager*目录中
-
-
-# Firebase
-
-主要对接功能：
-* google 登录
-* github 登录
-* 游客登录
-* 邮箱登录与注册
-* 文件上传模块
-* 聊天应用模块
+##### Firebase
 
 * [docs](docs/firebase.md)
 
-# PWA
+##### PWA
 
 * [docs](docs/pwa.md)
 
-### Universal
+##### Universal
 
 * [docs](docs/universal.md)
 
-# 参与贡献
+# Contrubuting
 
 我们非常欢迎你的贡献，你可以通过以下方式和我们一起贡献：
 * 在你的公司或个人项目中使用项目。
