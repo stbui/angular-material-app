@@ -1,4 +1,9 @@
-import {
+/**
+ * @license
+ * Copyright Stbui All Rights Reserved.
+ */
+
+ import {
   Component,
   ComponentRef,
   EmbeddedViewRef,
