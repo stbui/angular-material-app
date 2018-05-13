@@ -87,7 +87,7 @@ export class NavigationModel {
         'type': 'collapse',
         'icon': 'equalizer',
         'badge': {
-          'title': '5',
+          'title': '6',
           'bg': '#ff4081',
           'fg': '#fff'
         },
@@ -115,6 +115,11 @@ export class NavigationModel {
           }, {
             'id': 'chat-widget',
             'title': 'chat-widget',
+            'type': 'item',
+            'url': '/materials/chat-widget'
+          }, {
+            'id': 'speed-dial',
+            'title': 'speed-dial',
             'type': 'item',
             'url': '/materials/chat-widget'
           }
@@ -146,11 +151,6 @@ export class NavigationModel {
             'title': '编辑器',
             'type': 'item',
             'url': '/forms/editor'
-          }, {
-            'id': 'json-schema',
-            'title': 'json-schema',
-            'type': 'item',
-            'url': '/forms/json-schema-form'
           }
         ]
       },
