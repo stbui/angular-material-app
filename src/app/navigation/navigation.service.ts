@@ -2,57 +2,85 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../environments/environment';
 import { BehaviorSubject } from 'rxjs';
+import { localStorageDb } from './localStorageDb';
 
 @Injectable()
 export class NavigationService {
-  private _navigations: BehaviorSubject<any>;
   private apiUrl = environment.navigationApi;
 
   get navigations() {
-    return this._navigations.asObservable();
+    return new localStorageDb('nav');
   }
 
-  constructor(private http: HttpClient) {
-    this._navigations = new BehaviorSubject<any>([]);
+  get categories() {
+    return new localStorageDb('nav_category');
   }
 
-  getNavs(topicId: any = '', page: any = 1) {
+  constructor(private http: HttpClient) {}
+
+  syncLocalNavigaitons() {
+    this.syncGithubNavigations().subscribe(res => {
+      this.navigations.add(res);
+    });
+  }
+
+  getLocalNavigations() {
+    if (!this.categories.hasCollections()) {
+      this.syncNavigations().subscribe(res => {
+        this.navigations.add(res['data']);
+      });
+    }
+
+    return this.navigations.select();
+  }
+
+  updateLocalNavigation(id, item) {
+    this.navigations.where({ id }).update(item);
+  }
+
+  select() {
+    return this.getLocalNavigations();
+  }
+
+  update(id, item) {
+    this.updateLocalNavigation(id, item);
+  }
+
+  selectCategories() {
+    if (!this.categories.hasCollections()) {
+      this.syncCategories().subscribe(res => {
+        this.categories.add(res['data']);
+      });
+    }
+
+    return this.categories.select();
+  }
+
+  syncNavigations(topicId: any = '', page: any = 1) {
     let url = `${this.apiUrl}/links/?topicId=${topicId}&page=${page}`;
     if (!environment.production) {
       url = `${this.apiUrl}/links${topicId}${page}.json`;
     }
-    this.http
-      .get(url)
-      // .do(res => console.log(res))
-      .subscribe(res => {
-        this._navigations.next(res);
-      });
+
+    return this.http.get(url);
   }
 
-  getCategories() {
+  syncCategories() {
     let url = `${this.apiUrl}/topic`;
     if (!environment.production) {
       url = `${this.apiUrl}/topic.json`;
     }
+
     return this.http.get(url);
   }
 
-  getList() {
+  /**
+   * 从github中获取数据
+   */
+  syncGithubNavigations() {
     const url =
       'https://gist.githubusercontent.com/stbui/f68385d17d5d10e8db58f749297e68fe/raw/61ced92c95c17bf8acb6220255662cdc53cad6fd/navigation.json';
 
-    return this.http.get(url)
-    // .map(res => {
-      // console.log(res);
-      // return res.map(item => {
-      //   return {
-      //     title: item.title,
-      //     description: item.description,
-      //     url: item.link,
-      //     github_url: item.link_github,
-      //     image_url: item.image_link
-      //   };
-      // });
-    // });
+    return this.http.get(url);
   }
 }

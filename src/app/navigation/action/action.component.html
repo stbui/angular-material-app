@@ -1,0 +1,30 @@
+<form [formGroup]="actionFrom" (ngSubmit)="onSubmit()">
+  <mat-dialog-content>
+
+    <mat-form-field class="display-block">
+      <input type="text" matInput placeholder="标题" formControlName="title" required>
+      <mat-error *ngIf="formErrors.title">{{formErrors.title}}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="display-block">
+      <input type="text" matInput placeholder="链接" formControlName="url" required>
+      <mat-error *ngIf="formErrors.url">{{formErrors.url}}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="display-block">
+      <textarea matInput placeholder="介绍" formControlName="description"></textarea>
+      <mat-error *ngIf="formErrors.description">{{formErrors.description}}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="display-block">
+      <input type="text" matInput placeholder="logo" formControlName="image_url">
+      <mat-error *ngIf="formErrors.image_url">{{formErrors.image_url}}</mat-error>
+    </mat-form-field>
+
+  </mat-dialog-content>
+
+  <mat-dialog-actions fxLayout="row" fxLayoutAlign="space-between center">
+    <button mat-raised-button type="reset" mat-dialog-close>取消</button>
+    <button mat-raised-button color="primary" type="submit" [disabled]="!actionFrom.valid">提交</button>
+  </mat-dialog-actions>
+</form>

@@ -1,4 +1,6 @@
 import { Component, OnInit, Inject } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { ActionComponent } from './action/action.component';
 
 @Component({
   selector: 'app-navigation',
@@ -6,54 +8,29 @@ import { Component, OnInit, Inject } from '@angular/core';
   styleUrls: ['./navigation.component.scss']
 })
 export class NavigationComponent implements OnInit {
-  navigations;
   categories: object;
-  currentPage;
-  totalPages;
-  nav_id = '';
+  lists;
 
   // skeleton screen
   currentNum = new Array(20);
 
-  lists;
-
-  constructor(@Inject('NavigationService') private service) {}
+  constructor(
+    @Inject('NavigationService') private service,
+    private dialog: MatDialog
+  ) {}
 
   ngOnInit() {
-    this.getNavs();
     this.getCategories();
-
-    // this.service.getList().subscribe(res => {
-    //   this.lists = res;
-    // })
-  }
-
-  getNavs(id: any = '', page: any = '') {
-    this.service.getNavs(id, page);
-    this.service.navigations.subscribe(res => {
-      // this.navigations = res.data;
-      this.lists = res.data;
-      this.totalPages = res.totalPages;
-      this.currentPage = res.currentPage;
-      this.hideLoading();
-    });
+    this.getNavigations();
   }
 
   getCategories() {
-    this.service.getCategories().subscribe(res => (this.categories = res.data));
+    this.categories = this.service.selectCategories();
   }
 
-  findNavLists(id: any) {
-    this.nav_id = id;
-    this.getNavs(id, '');
-  }
-
-  page(current) {
-    this.getNavs(this.nav_id, current);
-  }
-
-  setClassActive(id) {
-    return this.nav_id === id;
+  getNavigations() {
+    this.lists = this.service.select();
+    this.hideLoading();
   }
 
   hideLoading() {
@@ -65,7 +42,12 @@ export class NavigationComponent implements OnInit {
     this.currentNum = new Array(20);
   }
 
-  selectedTagChange(tag) {
-    this.findNavLists(tag.id);
+  selectedTagChange(tag) {}
+
+  editorItem(item) {
+    const dialogRef = this.dialog.open(ActionComponent, {
+      data: item,
+      width: '600px'
+    });
   }
 }

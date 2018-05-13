@@ -15,17 +15,15 @@
   <div fxFlex="100" fxFlex.gt-md="20" fxFlex.gt-sm="33.3" fxFlex.gt-xs="50" *ngFor="let list of lists">
     <mat-card class="nav-item">
       <div class="nav-item-mask">
-        <div class="nav-item-logo" [ngStyle]="{'background-image': ''}"></div>
+        <div class="nav-item-logo" [ngStyle]="{'background-image': list.image_link}"></div>
       </div>
 
       <mat-card-header>
         <mat-card-title class="nav-title">
-          <a href="{{ list.url }}" target="blank">{{ list.title }}</a>
+          <a href="{{ list.link }}" target="blank">{{ list.title }}</a>
         </mat-card-title>
         <mat-card-subtitle class="nav-desc">{{ list.description }}</mat-card-subtitle>
       </mat-card-header>
     </mat-card>
   </div>
 </div>
-
-<stbui-pagination align="center" [total]="totalPages" (onPage)="page($event)"></stbui-pagination>
