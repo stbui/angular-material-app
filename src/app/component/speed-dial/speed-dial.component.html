@@ -1,3 +1,20 @@
-<button mat-fab color="primary">
-  <mat-icon>edit</mat-icon>
-</button>
+<div class="speed-dial-container">
+
+  <div class="speed-dial-trigger" (click)="toggle()">
+    <button mat-fab>
+      <mat-icon>add</mat-icon>
+    </button>
+  </div>
+
+  <div class="speed-dial-actions" #actions>
+    <button mat-mini-fab>
+      <mat-icon>search</mat-icon>
+    </button>
+    <button mat-mini-fab>
+      <mat-icon>edit</mat-icon>
+    </button>
+    <button mat-mini-fab>
+      <mat-icon>home</mat-icon>
+    </button>
+  </div>
+</div>

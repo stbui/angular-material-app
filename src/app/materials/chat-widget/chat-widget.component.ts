@@ -7,7 +7,7 @@ import { ChatWidgetService } from '../../component/chat-widget';
   styleUrls: ['./chat-widget.component.scss']
 })
 export class ChatWidgetComponent implements OnInit {
-  constructor(private chatWidgetService:ChatWidgetService) {}
+  constructor(private chatWidgetService: ChatWidgetService) {}
 
   ngOnInit() {
     this.chatWidgetService.open();

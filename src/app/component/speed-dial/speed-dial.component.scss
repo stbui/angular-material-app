@@ -1,31 +1,37 @@
 :host {
-  display: block;
-  position: fixed;
-  right: 32px;
-  bottom: 32px;
-  margin-bottom: 0 !important;
+  display: inline-block;
 }
 
-.mat-fab .mat-icon {
-  position: absolute;
-  top: 16px;
-  left: 16px;
+.speed-dial-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.dial {
-  margin-bottom: 8px;
+.speed-dial-trigger {
+  z-index: 20;
+  order: 2;
+}
+
+.speed-dial-actions {
   display: flex;
   flex-direction: column-reverse;
-  .mat-mini-fab {
-    margin: 8px 0;
+  order: 1;
+  >button {
+    margin-bottom: 10px;
+    transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2);
   }
 }
 
-.tooltip {
-  padding: 4px 8px;
-  background: rgba(50, 50, 50, 0.9);
-  color: white;
-  border-radius: 2px;
-  margin: 8px;
-  font-size: 12px;
+.speed-dial-container.down {
+  .speed-dial-trigger {
+    order: 1;
+  }
+  .speed-dial-actions {
+    flex-direction: column;
+  }
+  .speed-dial-actions button {
+    margin-top: 10px;
+  }
 }

@@ -1,0 +1,21 @@
+<mat-card class="fab-demo-actions">
+  <mat-card-title>speed dial</mat-card-title>
+  <mat-card-subtitle>Options</mat-card-subtitle>
+  <p>
+    Direction:
+    <mat-radio-group [(ngModel)]="direction" name="direction">
+      <mat-radio-button value="up">Up</mat-radio-button>
+      <mat-radio-button value="down">Down</mat-radio-button>
+      <mat-radio-button value="left">Left</mat-radio-button>
+      <mat-radio-button value="right">Right</mat-radio-button>
+    </mat-radio-group>
+  </p>
+  <p>
+    <mat-slide-toggle [(ngModel)]="open">Open</mat-slide-toggle>
+  </p>
+</mat-card>
+
+<mat-card>
+  <mat-card-title>Click me</mat-card-title>
+  <stbui-speed-dial></stbui-speed-dial>
+</mat-card>
