@@ -87,8 +87,8 @@ export class NavigationModel {
         'type': 'collapse',
         'icon': 'equalizer',
         'badge': {
-          'title': 'new',
-          'bg': '#3F51B5',
+          'title': '5',
+          'bg': '#ff4081',
           'fg': '#fff'
         },
         'children': [
@@ -112,6 +112,11 @@ export class NavigationModel {
             'title': '文件上传',
             'type': 'item',
             'url': '/materials/popover'
+          }, {
+            'id': 'chat-widget',
+            'title': 'chat-widget',
+            'type': 'item',
+            'url': '/materials/chat-widget'
           }
         ]
       },

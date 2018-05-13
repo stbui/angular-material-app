@@ -34,6 +34,7 @@ import { CalendarComponent } from './calendar/calendar.component';
 
 import { IconComponent } from './icon/icon.component';
 import { NotificationComponent } from './notification/notification.component';
+import { ChatWidgetComponent } from './chat-widget/chat-widget.component';
 
 @NgModule({
   imports: [
@@ -68,7 +69,8 @@ import { NotificationComponent } from './notification/notification.component';
     PopoverComponent,
     CalendarComponent,
     IconComponent,
-    NotificationComponent
+    NotificationComponent,
+    ChatWidgetComponent
   ]
 })
 export class MaterialsModule {}
