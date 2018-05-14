@@ -1,6 +1,12 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { registerLocaleData } from '@angular/common';
+import localeZh from '@angular/common/locales/zh';
+
 import { CalendarEvent, CalendarEventTimesChangedEvent } from 'angular-calendar';
 import { Subject } from 'rxjs';
+
+
+registerLocaleData(localeZh);
 
 @Component({
   selector: 'app-calendar',
