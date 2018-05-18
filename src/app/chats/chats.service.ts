@@ -1,10 +1,14 @@
 import { Injectable } from '@angular/core';
-import { AngularFireDatabase, AngularFireList, AngularFireObject } from 'angularfire2/database';
+import {
+  AngularFireDatabase,
+  AngularFireList,
+  AngularFireObject
+} from 'angularfire2/database';
 import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 @Injectable()
 export class ChatsService {
-
   private basePath = 'chats';
   chatsRef: AngularFireList<any>;
   chatRef: AngularFireObject<any>;
@@ -17,9 +21,13 @@ export class ChatsService {
   }
 
   getChatsList() {
-    return this.chatsRef.snapshotChanges().map(arr => {
-      return arr.map(snap => Object.assign(snap.payload.val(), {$key: snap.key}));
-    });
+    return this.chatRef
+      .snapshotChanges()
+      .pipe(
+        map(actions =>
+          Object.assign(actions.payload.val(), { $key: actions.key })
+        )
+      );
   }
 
   getChat(key: string): Observable<any> {
@@ -33,7 +41,7 @@ export class ChatsService {
   }
 
   updateChatMessage(key: string, value: any) {
-    this.chatsRef.update(key, {messages: value.messages});
+    this.chatsRef.update(key, { messages: value.messages });
   }
 
   deleteChat(key: string) {
