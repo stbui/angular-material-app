@@ -20,23 +20,21 @@
 [![Angular-cli](https://img.shields.io/badge/Angular.cli-6.0.0-brightgreen.svg?style=square)](https://github.com/angular/angular-cli)
 [![Angular Material 2](https://img.shields.io/badge/Material%202-6.0.0-brightgreen.svg?style=square)](https://github.com/angular/material2)
 [![Flex-Layout](https://img.shields.io/badge/Flex.Layout-6.0.0-brightgreen.svg?style=square)](https://github.com/angular/flex-layout)
-[![Angular FireBase](https://img.shields.io/badge/Firebase-5.0.0.rc.7-brightgreen.svg?style=square)](https://github.com/angular/angularfire2)
+[![Angular FireBase](https://img.shields.io/badge/Firebase-5.0.0.rc.9-brightgreen.svg?style=square)](https://github.com/angular/angularfire2)
 
 
 ### Feature
 
 - 基于 Material Design 精心设计
 - 多种颜色方案，有多个预定义的配色方案
-- Flex Layout 强大的布局,并支持响应式设计
-- 内置常用组件，提炼后台应用的典型页面和场景
-- 实用的本地数据调试方案
-- 支持 docker 构建镜像
-- 支持 electron 构建桌面应用
-- 支持 pwa
-- 接入 firebase, 关联google账户和github账户登录
+- Flex Layout 强大的布局，并支持响应式设计
+- 组件丰富，提炼后台应用的典型页面和场景
 - 模块代码，添加和删除非常轻松
-- 不定期更新，不断更新新功能
-- 使用前端前沿技术开发
+- 渐进式应用(PWA)，更接近原生应用体验
+- 支持 docker 构建镜像， 急速部署，轻松使用
+- 支持 electron 构建桌面应用
+- 接入 firebase， 构建应用提供良好的用户体验
+- 不定期更新，使用前端前沿技术开发新功能
 
 ![demo image](src/assets/images-demo/20170802104620.png)
 
