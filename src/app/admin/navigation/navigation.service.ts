@@ -4,12 +4,10 @@ import { NavigationModel } from './navigation.model';
 
 @Injectable()
 export class NavigationService {
-
   onNavigationCollapseToggle = new EventEmitter<any>();
   onNavigationCollapseToggled = new EventEmitter<any>();
   onNavigationModelChange: BehaviorSubject<any> = new BehaviorSubject({});
   navigationModel: NavigationModel;
-
 
   constructor() {
     this.navigationModel = new NavigationModel();
@@ -25,12 +23,40 @@ export class NavigationService {
     this.onNavigationModelChange.next(this.navigationModel.model);
   }
 
-  addNavigationItem() {
+  addNavigationItem(location, item) {
+    const locationArr = location.split('.');
 
+    if (locationArr.length === 0) {
+      return;
+    }
+
+    const navItem = this.findNavigationItemById(locationArr);
+
+    switch (navItem.type) {
+      case 'item':
+        navItem.children = [];
+        navItem.children.push(item);
+        navItem.type = 'collapse';
+        break;
+      case 'collapse':
+        navItem.children.push(item);
+        break;
+      case 'group':
+        navItem.children.push(item);
+        break;
+      default:
+        break;
+    }
   }
 
-  getNavigationItem() {
+  getNavigationItem(location) {
+    const locationArr = location.split('.');
 
+    if (locationArr.length === 0) {
+      return;
+    }
+
+    return this.findNavigationItemById(locationArr);
   }
 
   findNavigationItemById(location, navigation?) {
