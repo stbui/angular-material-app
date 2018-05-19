@@ -12,7 +12,6 @@ export class NavigationComponent implements OnInit, OnDestroy {
   navigationModelChangeSubscription: Subscription;
 
   constructor(private service: NavigationService) {
-    console.log(1)
     this.navigationModelChangeSubscription = this.service.onNavigationModelChange.subscribe(
       navigation => {
         this.navigationModel = navigation;

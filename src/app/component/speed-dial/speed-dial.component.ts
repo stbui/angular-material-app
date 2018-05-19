@@ -5,61 +5,44 @@
 
 import {
   Component,
-  OnInit,
   Input,
-  Output,
-  EventEmitter,
-  HostListener,
   ContentChildren,
   QueryList,
   ViewChild,
   ElementRef,
-  Renderer2
+  Renderer2,
+  AfterContentInit,
+  ViewEncapsulation
 } from '@angular/core';
 import { MatButton } from '@angular/material/button';
 
-export type Direction = 'up' | 'down' | 'left' | 'right';
+export type Position = 'up' | 'down' | 'left' | 'right';
 
 @Component({
+  moduleId: module.id,
   selector: 'stbui-speed-dial',
   templateUrl: './speed-dial.component.html',
-  styleUrls: ['./speed-dial.component.scss']
+  styleUrls: ['./speed-dial.component.scss'],
+  encapsulation: ViewEncapsulation.None,
+  exportAs: 'stbuiSpeedDial',
+  host: {
+    class: 'speed-dial'
+  }
 })
-export class SpeedDialComponent implements OnInit {
-  private _direction: Direction = 'up';
-  private _open: boolean = false;
-
-  @Input()
-  get open(): boolean {
-    return this._open;
-  }
-
-  set open(open: boolean) {
-    this._open = open;
-  }
-
-  @Input()
-  get direction(): Direction {
-    return this._direction;
-  }
-
-  set direction(direction: Direction) {
-    this._direction = direction;
-  }
-
-  @Output() openChange: EventEmitter<boolean> = new EventEmitter<boolean>();
+export class SpeedDialComponent implements AfterContentInit {
+  @Input() position: Position = 'up';
+  @Input() open: boolean = false;
 
   @ContentChildren(MatButton) _buttons: QueryList<MatButton>;
   @ViewChild('actions') _actions: ElementRef;
 
   constructor(private renderer: Renderer2) {}
 
-  ngOnInit() {}
-
-  dialTrigger() {
-    if (this.open) {
-      this.open = false;
-    }
+  ngAfterContentInit() {
+    this.toggle();
+    this._buttons.toArray().forEach(button => {
+      this.renderer.addClass(button._getHostElement(), 'spped-dial-action');
+    });
   }
 
   toggle(): void {
@@ -73,28 +56,25 @@ export class SpeedDialComponent implements OnInit {
   }
 
   show() {
-    const _buttons = this._actions.nativeElement.children;
-
-    for (let i = 0; i < _buttons.length; i++) {
-      const transform = 0;
-      this.renderer.setStyle(
-        _buttons[i],
-        'transform',
-        `translateY(${transform})`
-      );
-    }
+    this._buttons.toArray().forEach(button => {
+      const transform = this._getOrigin('0');
+      this.renderer.setStyle(button._getHostElement(), 'transform', transform);
+    });
   }
 
   hide() {
-    const _buttons = this._actions.nativeElement.children;
+    this._buttons.toArray().forEach((button, index) => {
+      const pos = 55 * (index + 1) - index * 5;
+      const transform = this._getOrigin(pos + 'px');
+      this.renderer.setStyle(button._getHostElement(), 'transform', transform);
+    });
+  }
 
-    for (let i = 0; i < _buttons.length; i++) {
-      const transform = 55 * (i + 1) - i * 5 + 'px';
-      this.renderer.setStyle(
-        _buttons[i],
-        'transform',
-        `translateY(${transform})`
-      );
-    }
+  _getOrigin(value) {
+    let position = this.position;
+    let translateFn =
+      position === 'up' || position === 'down' ? 'translateY' : 'translateX';
+    let sign = position === 'down' || position === 'right' ? '-' : '';
+    return translateFn + '(' + sign + value + ')';
   }
 }

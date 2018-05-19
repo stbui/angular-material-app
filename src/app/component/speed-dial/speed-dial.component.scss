@@ -1,37 +1,73 @@
-:host {
+.speed-dial {
   display: inline-block;
-}
-
-.speed-dial-container {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.speed-dial-trigger {
-  z-index: 20;
-  order: 2;
-}
-
-.speed-dial-actions {
-  display: flex;
-  flex-direction: column-reverse;
-  order: 1;
-  >button {
-    margin-bottom: 10px;
+  &-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  &-trigger {
+    z-index: 20;
+    order: 2;
+  }
+  &-actions {
+    display: flex;
+    order: 1;
+  }
+  &-action,
+  button {
     transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2);
   }
 }
 
+.speed-dial-container.up {
+  flex-direction: column;
+  .speed-dial-actions {
+    flex-direction: column-reverse;
+    .spped-dial-action {
+      margin-bottom: 10px;
+    }
+  }
+}
+
 .speed-dial-container.down {
+  flex-direction: column;
   .speed-dial-trigger {
     order: 1;
   }
   .speed-dial-actions {
     flex-direction: column;
+    .spped-dial-action {
+      margin-top: 10px;
+    }
   }
   .speed-dial-actions button {
     margin-top: 10px;
+  }
+}
+
+.speed-dial-container.left {
+  flex-direction: row;
+  .speed-dial-trigger {
+    order: 2;
+  }
+  .speed-dial-actions {
+    flex-direction: row-reverse;
+    order: 1;
+    .spped-dial-action {
+      margin-right: 10px;
+    }
+  }
+}
+
+.speed-dial-container.right {
+  flex-direction: row;
+  .speed-dial-trigger {
+    order: 1;
+  }
+  .speed-dial-actions {
+    order: 2;
+    .spped-dial-action {
+      margin-left: 10px;
+    }
   }
 }
