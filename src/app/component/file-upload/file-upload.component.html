@@ -1,13 +1,14 @@
-<div class="upload-container" (uploader)="uploader($event)" stbuiFileUpload>
-  <div *ngIf="currentUpload">
-    {{currentUpload?.name}} | {{currentUpload?.progress}}%
-  </div>
-  <div *ngIf="currentUpload">
-    <img [src]="currentUpload?.url" alt="" width="80" height="80">
+<div class="stbui-upload-container">
+  <div class="stbui-upload-select" *ngIf="!previewUrl">
+    <mat-icon class="stbui-upload-icon">add</mat-icon>
+    <div class="stbui-upload-text">Upload</div>
+    <div class="stbui-upload-inner">
+      <input type="file" class="stbui-upload-input" (change)="onFileSelect($event)">
+    </div>
   </div>
 
-  <div *ngIf="!currentUpload">
-    将文件拖放到这来或点击上传
+  <div class="stbui-upload-preview" (click)="removePreview()" *ngIf="previewUrl">
+    <img [src]="this.previewUrl" />
   </div>
-  <input type="file" multiple="multiple" class="input-file">
+
 </div>

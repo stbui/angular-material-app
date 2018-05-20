@@ -1,6 +1,26 @@
+/**
+ * @license
+ * Copyright Stbui All Rights Reserved.
+ */
+
 import { Directive, HostListener, Output, EventEmitter } from '@angular/core';
 import { FileUploadService } from './file-upload.service';
 import { Upload } from './file-upload.model';
+
+@Directive({
+  selector: '[stbuiFileDrop], [stbFileDrop]'
+})
+export class FileUploadDropDirective {
+  @Output() dropped = new EventEmitter();
+
+  constructor() {}
+
+  @HostListener('drop', ['$event'])
+  onDrop($event) {
+    $event.preventDefault();
+    this.dropped.emit($event.dataTransfer.files);
+  }
+}
 
 @Directive({
   selector: '[stbFileUpload],[stbuiFileUpload]'
@@ -52,7 +72,7 @@ export class FileUploadDirective {
   uploadSingle() {
     let file = this.selectedFiles.item(0);
     this.currentUpload = new Upload(file);
-    this.service.pushUpload(this.currentUpload);
+    // this.service.startUpload(this.currentUpload);
     this.uploader.emit(this.currentUpload);
   }
 }
