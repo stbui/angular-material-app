@@ -3,20 +3,29 @@
  * Copyright Stbui All Rights Reserved.
  */
 
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import {
+  Component,
+  Input,
+  Output,
+  EventEmitter,
+  ViewEncapsulation
+} from '@angular/core';
 
 @Component({
   selector: 'stbui-date-picker',
   templateUrl: './date-picker.component.html',
-  styleUrls: ['./date-picker.component.scss']
+  styleUrls: ['./date-picker.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class DatePickerComponent {
   _mode: 'portrait' | 'landscape' = 'portrait';
   landscape: boolean = false;
 
+  @Input() action: boolean = false;
+
   @Input()
   set mode(value) {
-    value = (value == 'portrait') ? 'portrait' : 'landscape';
+    value = value == 'portrait' ? 'portrait' : 'landscape';
     if (value != this._mode) {
       this._mode = value;
     }
@@ -32,9 +41,9 @@ export class DatePickerComponent {
 
   @Output() onCanel = new EventEmitter<any>();
   @Output() onConfirm = new EventEmitter<any>();
+  @Output() selectValueChange = new EventEmitter();
 
-  constructor() {
-  }
+  constructor() {}
 
   onCancelDatePicker(value) {
     this.onCanel.emit(value);
@@ -44,4 +53,7 @@ export class DatePickerComponent {
     this.onConfirm.emit(value);
   }
 
+  onSelectValueChange(value) {
+    this.selectValueChange.emit(value);
+  }
 }

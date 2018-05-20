@@ -26,8 +26,9 @@ export class CalendarComponent {
   slideType = 'next';
   displayMonthDay = true;
 
-  private _mode;
+  @Input() action: boolean = false;
 
+  private _mode;
   @Input()
   set mode(value) {
     this._mode = value == 'portrait' ? false : true;
@@ -38,6 +39,7 @@ export class CalendarComponent {
 
   @Output() onCancelDatePicker = new EventEmitter<any>();
   @Output() onConfirmDatePicker = new EventEmitter<any>();
+  @Output() selectValueChange = new EventEmitter();
 
   constructor() {
     const displayDate = dateUtils.cloneDate(new Date());
@@ -77,10 +79,11 @@ export class CalendarComponent {
   onSelectValueChange(event) {
     this.selectedDate = event;
     this.changeDislayDate(event);
+    this.selectValueChange.emit(event);
   }
 
   onCancelDatePickerTriggered() {
-    this.onCancelDatePicker.emit('取消');
+    this.onCancelDatePicker.emit('cancel');
   }
 
   onConfirmDatePickerTriggered() {

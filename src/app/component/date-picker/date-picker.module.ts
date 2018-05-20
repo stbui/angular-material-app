@@ -3,7 +3,7 @@
  * Copyright Stbui All Rights Reserved.
  */
 
-import { NgModule, SkipSelf, Optional } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {
   MatRippleModule,
@@ -30,16 +30,4 @@ import { MonthComponent } from './month/month.component';
   exports: [DatePickerComponent],
   entryComponents: [DatePickerComponent]
 })
-export class DatePickerModule {
-  constructor(
-    @Optional()
-    @SkipSelf()
-    parentModule: DatePickerModule
-  ) {
-    if (parentModule) {
-      throw new Error(
-        "DatePickerModule is already loaded. It should only be imported in your application's main module."
-      );
-    }
-  }
-}
+export class DatePickerModule {}

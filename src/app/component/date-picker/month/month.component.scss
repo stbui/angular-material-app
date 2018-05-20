@@ -1,20 +1,36 @@
+.stb-calendar-monthday-content {
+  position: relative;
+  &-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 2px;
+  }
+}
+
 .stb-day-button {
   display: inline-block;
   background: none;
-  user-select: none;
   outline: none;
-  text-decoration: none;
-  cursor: pointer;
   font-weight: 400;
   position: relative;
-  border: 10px;
   width: 40px;
   height: 40px;
+  line-height: 36px;
+  margin: 0;
+  border: 0;
   border-radius: 50%;
+  box-sizing: border-box;
+  white-space: nowrap;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: top;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
   &.disabled {
     opacity: 0.4;
   }
-
   &.empty {
     cursor: default
   }

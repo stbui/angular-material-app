@@ -3,13 +3,20 @@
  * Copyright Stbui All Rights Reserved.
  */
 
-import { Component, Input, Output, EventEmitter } from '@angular/core';
-import * as dateUtils from '../dateUtils';
+import {
+  Component,
+  Input,
+  Output,
+  EventEmitter,
+  ViewEncapsulation
+} from '@angular/core';
+import { getWeekArray } from '../dateUtils';
 
 @Component({
   selector: 'stbui-calendar-month',
   templateUrl: './month.component.html',
-  styleUrls: ['./month.component.scss']
+  styleUrls: ['./month.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class MonthComponent {
   weeksArray;
@@ -18,7 +25,7 @@ export class MonthComponent {
 
   @Input()
   set displayDate(val) {
-    this.weeksArray = dateUtils.getWeekArray(val || new Date(), 1);
+    this.weeksArray = getWeekArray(val || new Date(), 1);
     this.weeksArray = this.weeksArray.map(weeks => {
       return weeks.map(day => {
         return { selected: false, day };
@@ -31,7 +38,7 @@ export class MonthComponent {
 
   constructor() {}
 
-  isNow(date) {
+  isNow(date: Date): boolean {
     const now = new Date();
     return (
       date &&
@@ -41,12 +48,12 @@ export class MonthComponent {
     );
   }
 
-  coerceBooleanProperty(value) {
+  coerceBooleanProperty(value): boolean {
     return value != null && `${value}` !== 'false';
   }
 
   onSelectValueChange(event) {
-    if(!this.coerceBooleanProperty(event.day)) {
+    if (!this.coerceBooleanProperty(event.day)) {
       return false;
     }
     for (let weeks of this.weeksArray) {

@@ -1,6 +1,7 @@
 <div class="stb-date-picker mat-elevation-z4" [class.landspace]="landscape">
-  <stbui-calendar [mode]="mode" 
+  <stbui-calendar [mode]="mode" [action]="action"
     (onCancelDatePicker)="onCancelDatePicker($event)"
     (onConfirmDatePicker)="onConfirmDatePicker($event)"
+    (selectValueChange)="onSelectValueChange($event)"
   ></stbui-calendar>
 </div>

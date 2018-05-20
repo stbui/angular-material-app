@@ -24,7 +24,7 @@
 
     </div>
 
-    <div class="stb-calendar-actions">
+    <div class="stb-calendar-actions" *ngIf="action">
       <button mat-button color="primary" (click)="onCancelDatePickerTriggered()">取消</button>
       <button mat-button color="primary" (click)="onConfirmDatePickerTriggered()">确定</button>
     </div>
