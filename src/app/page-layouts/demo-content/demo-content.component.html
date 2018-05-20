@@ -1,0 +1,32 @@
+<h2>Building Custom Elements / Web Components with Angular 6</h2>
+
+<p>With the newest Angular CLI (version 6, released 2018–04–03) and the new addition to Angular family — the Angular Elements
+  package it’s extremely easy to create native custom elements.</p>
+<p>If you don’t know what custom elements are or what is the connection to Angular, there are several great talks that introduce
+  to these concepts, I highly encourage you to watch one of these.</p>
+<p>So now, without further ado, let’s see some code!</p>
+<p>1. Install Angular CLI 6 and initialize the project</p>
+<p>
+  npm i -g @angular/cli ng
+  <br/> new elements-demo --prefix custom
+</p>
+
+<p>We’re not doing anything special yet, so all the normal ng new parameters apply, you could add sass or anything to the mix,
+  but here we’ll stop at setting a custom prefix to, well, “custom”.
+</p>
+
+<p>2. Add elements & polyfill</p>
+<p>In order to have elements functionality available we need the Angular library and a polyfill — with the new CLI it’s just
+  a matter of one(!) simple command:
+</p>
+<p>ng add @angular/elements</p>
+
+<p>3. Create a component
+</p>
+<p>Let’s create one with Input and Output to see how they translate to custom elements that are understood by browsers:</p>
+<p>ng g component button --inline-style --inline-template -v Native</p>
+<p>We use ViewEncapsulation.Native so that the styles are bundled with the template and the component’s class into one file.</p>
+<p>After adding some style & template our button.component.ts looks like this:</p>
+<p>4. Registering component in NgModule</p>
+<p>This is the vital part: we use the Angular’s createCustomElement function to create a class that can be used with browsers’
+  native customElements.define functionality.</p>
