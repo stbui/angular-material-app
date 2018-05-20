@@ -1,3 +1,8 @@
+/**
+ * @license
+ * Copyright Stbui All Rights Reserved.
+ */
+
 import { Component, Input } from '@angular/core';
 
 @Component({

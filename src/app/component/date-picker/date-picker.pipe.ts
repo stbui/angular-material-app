@@ -1,3 +1,8 @@
+/**
+ * @license
+ * Copyright Stbui All Rights Reserved.
+ */
+
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({

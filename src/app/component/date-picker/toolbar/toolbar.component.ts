@@ -1,3 +1,8 @@
+/**
+ * @license
+ * Copyright Stbui All Rights Reserved.
+ */
+
 import { Component, Output, Input, EventEmitter } from '@angular/core';
 
 @Component({

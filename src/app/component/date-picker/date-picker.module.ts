@@ -1,3 +1,8 @@
+/**
+ * @license
+ * Copyright Stbui All Rights Reserved.
+ */
+
 import { NgModule, SkipSelf, Optional } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {

@@ -1,7 +1,8 @@
 /**
- * material-ui dateUtils.js
- * https://github.com/callemall/material-ui/blob/master/src/DatePicker/dateUtils.js
+ * @license
+ * Copyright Stbui All Rights Reserved.
  */
+
 let localConfig = {
   dayAbbreviation: ['日', '一', '二', '三', '四', '五', '六'],
   dayList: ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'],
