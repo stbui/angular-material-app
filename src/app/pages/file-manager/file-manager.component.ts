@@ -11,18 +11,9 @@ export class FileManagerComponent {
 
   constructor(private service: FileManagerFirebase) {
     let f = this.service.getFilesList();
-    f.subscribe((files)=>{
+    f.subscribe(files => {
       console.log(files);
       this.files = files;
     });
-
-    // this.service.createFile({
-    //   icon: 'folder',
-    //   name: 'polyfills',
-    //   type: 'js',
-    //   provide: 'stbui',
-    //   size: '10k',
-    //   lastModifiedDate: '20171014'
-    // });
   }
 }

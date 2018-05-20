@@ -1,8 +1,11 @@
 import { Injectable } from '@angular/core';
 import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
+import {
+  AngularFireStorage,
+  AngularFireUploadTask
+} from 'angularfire2/storage';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-import * as firebase from 'firebase';
 
 @Injectable()
 export class FileManagerFirebase {
@@ -10,7 +13,10 @@ export class FileManagerFirebase {
   filesRef: AngularFireList<any>;
   file: Observable<any>;
 
-  constructor(private db: AngularFireDatabase) {
+  constructor(
+    private db: AngularFireDatabase,
+    private storage: AngularFireStorage
+  ) {
     this.filesRef = this.db.list(this.basePath);
   }
 
@@ -40,13 +46,7 @@ export class FileManagerFirebase {
     this.filesRef.push(file);
   }
 
-  private saveFileStorage(name) {
-    const storageRef = firebase.storage().ref();
-    storageRef.child(`${this.basePath}/${name}`).put(name);
-  }
+  private saveFileStorage(name) {}
 
-  private deleteFileStorage(name) {
-    const storageRef = firebase.storage().ref();
-    storageRef.child(`${this.basePath}/${name}`).delete();
-  }
+  private deleteFileStorage(name) {}
 }
