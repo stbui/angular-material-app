@@ -15,6 +15,7 @@ $calendar-background-color: #7e57c2;
 .stb-calendar-container {
   display: flex;
   flex-direction: column;
+  background: #fff;
 }
 
 .stb-calendar-monthday-container {
@@ -183,7 +184,7 @@ $calendar-background-color: #7e57c2;
   padding: 20px;
   .stb-calendar-landspace & {
     width: 165px;
-    height: 330px;
+    height: 318px;
     float: left;
     border-top-right-radius: 0;
     border-bottom-left-radius: 2px;
