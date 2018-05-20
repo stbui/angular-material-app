@@ -229,6 +229,24 @@ export class NavigationModel {
           }
         ]
       }, {
+        'id': 'page-layouts',
+        'title': '页面布局',
+        'type': 'collapse',
+        'icon': 'view_quilt',
+        'badge': {
+          'title': 'new',
+          'bg': '#ff9800',
+          'fg': '#fff'
+        },
+        'children': [
+          {
+            'id': 'carded-full-width',
+            'title': '卡片式',
+            'type': 'item',
+            'url': '/page-layouts/carded/full-width'
+          }
+        ]
+      }, {
         'id': 'apps',
         'title': '应用',
         'type': 'collapse',
