@@ -1,12 +1,18 @@
+/**
+ * @license
+ * Copyright Stbui All Rights Reserved.
+ */
+
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { BaseLayoutComponent } from './base-layout.component';
+import {
+  BaseLayoutComponent,
+  BaseLayoutHeaderComponent
+} from './base-layout.component';
 
 @NgModule({
-  imports: [
-    CommonModule
-  ],
-  declarations: [BaseLayoutComponent],
-  exports: [BaseLayoutComponent]
+  imports: [CommonModule],
+  declarations: [BaseLayoutComponent, BaseLayoutHeaderComponent],
+  exports: [BaseLayoutComponent, BaseLayoutHeaderComponent]
 })
-export class BaseLayoutModule { }
+export class BaseLayoutModule {}

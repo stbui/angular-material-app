@@ -1,1 +1,16 @@
-<ng-content></ng-content>
+<div class="page-layout">
+  <div class="top-bg"></div>
+
+  <div class="wrapper">
+    <div class="header" fxLayout="row" fxLayoutAlign="start center">
+      <ng-content select="base-layout-header"></ng-content>
+    </div>
+
+    <div class="card">
+      <div class="toolbar" fxLayout="row" fxLayoutAlign="start center"></div>
+      <div class="content">
+        <ng-content></ng-content>
+      </div>
+    </div>
+  </div>
+</div>

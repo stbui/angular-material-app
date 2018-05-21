@@ -1,1 +1,1 @@
-export * from './base-layout/base-layout.module';
+export * from './base-layout';

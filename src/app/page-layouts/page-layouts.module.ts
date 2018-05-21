@@ -12,13 +12,27 @@ import { LeftSidenavComponent } from './carded/left-sidenav/left-sidenav.compone
 import { LeftSidenavTabbedComponent } from './carded/left-sidenav-tabbed/left-sidenav-tabbed.component';
 import { RightSidenavComponent } from './carded/right-sidenav/right-sidenav.component';
 
+import { BaseLayoutModule } from '../layouts';
+
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
 };
 
 @NgModule({
-  imports: [SharedModule, PageLayoutsRoutingModule, PerfectScrollbarModule],
-  declarations: [FullwidthComponent, Fullwidth2Component, DemoContentComponent, LeftSidenavComponent, LeftSidenavTabbedComponent, RightSidenavComponent],
+  imports: [
+    SharedModule,
+    PageLayoutsRoutingModule,
+    PerfectScrollbarModule,
+    BaseLayoutModule
+  ],
+  declarations: [
+    FullwidthComponent,
+    Fullwidth2Component,
+    DemoContentComponent,
+    LeftSidenavComponent,
+    LeftSidenavTabbedComponent,
+    RightSidenavComponent
+  ],
   providers: [
     {
       provide: PERFECT_SCROLLBAR_CONFIG,
