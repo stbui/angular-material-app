@@ -38,7 +38,6 @@
   max-width: 100%;
   max-height: 100%;
   box-sizing: border-box;
-
   >.header {
     height: 136px;
     min-height: 136px;
@@ -51,6 +50,12 @@
     overflow: hidden;
     background: #fff;
     box-shadow: 0 4px 5px -2px rgba(0, 0, 0, .2), 0 7px 10px 1px rgba(0, 0, 0, .14), 0 2px 16px 1px rgba(0, 0, 0, .12);
+    .content {
+      display: flex;
+      flex: 1;
+      padding: 24px;
+      overflow: auto
+    }
   }
 }
 
@@ -62,12 +67,6 @@
   padding: 0 24px;
 }
 
-.content {
-  display: flex;
-  flex: 1;
-  padding: 24px;
-  overflow: auto
-} 
 // left-sidnav
 .sidenav {
   display: flex;
@@ -80,4 +79,8 @@
   z-index: 4;
   overflow-y: hidden;
   box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.2), 0px 7px 10px 1px rgba(0, 0, 0, 0.14), 0px 2px 16px 1px rgba(0, 0, 0, 0.12);
+  .content {
+    padding: 24px;
+    overflow: auto
+  }
 }

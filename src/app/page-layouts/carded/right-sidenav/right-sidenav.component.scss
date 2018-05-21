@@ -1,0 +1,87 @@
+:host {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    min-width: 100%;
+    height: 100%;
+  }
+  
+  .page-layout {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+    width: 100%;
+    min-width: 100%;
+    position: relative;
+  }
+  
+  .top-bg {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 200px;
+    background: #c471f3;
+    background-size: cover;
+  }
+  
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    position: relative;
+    z-index: 2;
+    padding: 0 32px;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    box-sizing: border-box;
+    >.header {
+      height: 136px;
+      min-height: 136px;
+      max-height: 136px;
+    }
+    >.card {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 0 4px 5px -2px rgba(0, 0, 0, .2), 0 7px 10px 1px rgba(0, 0, 0, .14), 0 2px 16px 1px rgba(0, 0, 0, .12);
+      .content {
+        display: flex;
+        flex: 1;
+        padding: 24px;
+        overflow: auto
+      }
+    }
+  }
+  
+  .toolbar {
+    border-bottom: 1px solid rgba(0, 0, 0, .12);
+    height: 64px;
+    min-height: 64px;
+    max-height: 64px;
+    padding: 0 24px;
+  }
+  
+  // left-sidnav
+  .sidenav {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    width: 240px;
+    min-width: 240px;
+    max-width: 240px;
+    height: auto;
+    z-index: 4;
+    overflow-y: hidden;
+    box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.2), 0px 7px 10px 1px rgba(0, 0, 0, 0.14), 0px 2px 16px 1px rgba(0, 0, 0, 0.12);
+    .content {
+      padding: 24px;
+      overflow: auto
+    }
+  }
+  
