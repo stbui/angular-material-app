@@ -12,7 +12,7 @@ import { AngularFireStorageModule } from 'angularfire2/storage';
 
 import { FileUploadService } from './file-upload.service';
 import { FileUploadComponent } from './file-upload.component';
-import { FileUploadDirective } from './file-upload.directive';
+import { FileUploadDirective, FileUploadDropDirective } from './file-upload.directive';
 import { FileSizePipe } from './file-size.pipe';
 
 @NgModule({
@@ -23,8 +23,8 @@ import { FileSizePipe } from './file-size.pipe';
     AngularFireDatabaseModule,
     AngularFireStorageModule
   ],
-  declarations: [FileUploadDirective, FileUploadComponent, FileSizePipe],
-  exports: [FileUploadDirective, FileUploadComponent],
+  declarations: [FileUploadDirective, FileUploadDropDirective, FileUploadComponent, FileSizePipe],
+  exports: [FileUploadDirective, FileUploadDropDirective, FileUploadComponent],
   providers: [FileUploadService]
 })
 export class FileUploadModule {}
