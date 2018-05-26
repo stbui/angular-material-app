@@ -86,41 +86,41 @@
 <path fill="none" stroke="#000000" d="M463,-122.1061C463,-122.1061 463,-140.991 463,-140.991"/>
 <polygon fill="#000000" stroke="#000000" points="459.5001,-140.9909 463,-150.991 466.5001,-140.991 459.5001,-140.9909"/>
 </g>
-<!-- SharedModule -->
-<g id="node6" class="node">
-<title>SharedModule</title>
-<polygon fill="#8dd3c7" stroke="#000000" points="380.4231,-122 377.4231,-126 356.4231,-126 353.4231,-122 281.5769,-122 281.5769,-86 380.4231,-86 380.4231,-122"/>
-<text text-anchor="middle" x="331" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">SharedModule</text>
-</g>
-<!-- SharedModule&#45;&gt;AdminModule -->
-<g id="edge5" class="edge">
-<title>SharedModule&#45;&gt;AdminModule</title>
-<path fill="none" stroke="#000000" d="M331,-122.027C331,-138.3976 331,-160 331,-160 331,-160 403.4725,-160 403.4725,-160"/>
-<polygon fill="#000000" stroke="#000000" points="403.4726,-163.5001 413.4725,-160 403.4725,-156.5001 403.4726,-163.5001"/>
-</g>
 <!-- HeaderModule -->
-<g id="node7" class="node">
+<g id="node6" class="node">
 <title>HeaderModule</title>
-<polygon fill="#8dd3c7" stroke="#000000" points="263.9608,-122 260.9608,-126 239.9608,-126 236.9608,-122 164.0392,-122 164.0392,-86 263.9608,-86 263.9608,-122"/>
-<text text-anchor="middle" x="214" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">HeaderModule</text>
+<polygon fill="#8dd3c7" stroke="#000000" points="379.9608,-122 376.9608,-126 355.9608,-126 352.9608,-122 280.0392,-122 280.0392,-86 379.9608,-86 379.9608,-122"/>
+<text text-anchor="middle" x="330" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">HeaderModule</text>
 </g>
 <!-- HeaderModule&#45;&gt;AdminModule -->
-<g id="edge6" class="edge">
+<g id="edge5" class="edge">
 <title>HeaderModule&#45;&gt;AdminModule</title>
-<path fill="none" stroke="#000000" d="M214,-122.1061C214,-141.3391 214,-169 214,-169 214,-169 403.5079,-169 403.5079,-169"/>
-<polygon fill="#000000" stroke="#000000" points="403.5079,-172.5001 413.5079,-169 403.5079,-165.5001 403.5079,-172.5001"/>
+<path fill="none" stroke="#000000" d="M330,-122.027C330,-138.3976 330,-160 330,-160 330,-160 403.4757,-160 403.4757,-160"/>
+<polygon fill="#000000" stroke="#000000" points="403.4757,-163.5001 413.4757,-160 403.4757,-156.5001 403.4757,-163.5001"/>
 </g>
 <!-- NavigationModule -->
-<g id="node8" class="node">
+<g id="node7" class="node">
 <title>NavigationModule</title>
-<polygon fill="#8dd3c7" stroke="#000000" points="145.7576,-122 142.7576,-126 121.7576,-126 118.7576,-122 24.2424,-122 24.2424,-86 145.7576,-86 145.7576,-122"/>
-<text text-anchor="middle" x="85" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">NavigationModule</text>
+<polygon fill="#8dd3c7" stroke="#000000" points="261.7576,-122 258.7576,-126 237.7576,-126 234.7576,-122 140.2424,-122 140.2424,-86 261.7576,-86 261.7576,-122"/>
+<text text-anchor="middle" x="201" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">NavigationModule</text>
 </g>
 <!-- NavigationModule&#45;&gt;AdminModule -->
-<g id="edge7" class="edge">
+<g id="edge6" class="edge">
 <title>NavigationModule&#45;&gt;AdminModule</title>
-<path fill="none" stroke="#000000" d="M85,-122.2921C85,-144.2057 85,-178 85,-178 85,-178 403.5831,-178 403.5831,-178"/>
-<polygon fill="#000000" stroke="#000000" points="403.5831,-181.5001 413.5831,-178 403.5831,-174.5001 403.5831,-181.5001"/>
+<path fill="none" stroke="#000000" d="M201,-122.1061C201,-141.3391 201,-169 201,-169 201,-169 403.7198,-169 403.7198,-169"/>
+<polygon fill="#000000" stroke="#000000" points="403.7198,-172.5001 413.7198,-169 403.7198,-165.5001 403.7198,-172.5001"/>
+</g>
+<!-- SharedModule -->
+<g id="node8" class="node">
+<title>SharedModule</title>
+<polygon fill="#8dd3c7" stroke="#000000" points="122.4231,-122 119.4231,-126 98.4231,-126 95.4231,-122 23.5769,-122 23.5769,-86 122.4231,-86 122.4231,-122"/>
+<text text-anchor="middle" x="73" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">SharedModule</text>
+</g>
+<!-- SharedModule&#45;&gt;AdminModule -->
+<g id="edge7" class="edge">
+<title>SharedModule&#45;&gt;AdminModule</title>
+<path fill="none" stroke="#000000" d="M73,-122.2921C73,-144.2057 73,-178 73,-178 73,-178 403.6062,-178 403.6062,-178"/>
+<polygon fill="#000000" stroke="#000000" points="403.6063,-181.5001 413.6062,-178 403.6062,-174.5001 403.6063,-181.5001"/>
 </g>
 </g>
 </svg>

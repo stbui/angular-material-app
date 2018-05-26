@@ -30,49 +30,49 @@
 </g>
 <g id="clust6" class="cluster">
 <title>cluster_ButtonModule_exports</title>
-<polygon fill="none" stroke="#000000" points="187,-208 187,-260 313,-260 313,-208 187,-208"/>
+<polygon fill="none" stroke="#000000" points="182,-208 182,-260 308,-260 308,-208 182,-208"/>
 </g>
-<!-- ButtonDirective -->
+<!-- ButtonComponent -->
 <g id="node1" class="node">
-<title>ButtonDirective</title>
-<polygon fill="#ffffb3" stroke="#000000" points="370.2008,-122 263.7992,-122 263.7992,-86 370.2008,-86 370.2008,-122"/>
-<text text-anchor="middle" x="317" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">ButtonDirective</text>
+<title>ButtonComponent</title>
+<polygon fill="#ffffb3" stroke="#000000" points="369.9511,-122 250.0489,-122 250.0489,-86 369.9511,-86 369.9511,-122"/>
+<text text-anchor="middle" x="310" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">ButtonComponent</text>
 </g>
 <!-- ButtonModule -->
 <g id="node3" class="node">
 <title>ButtonModule</title>
-<polygon fill="#8dd3c7" stroke="#000000" points="298.6682,-187 295.6682,-191 274.6682,-191 271.6682,-187 201.3318,-187 201.3318,-151 298.6682,-151 298.6682,-187"/>
-<text text-anchor="middle" x="250" y="-164.8" font-family="Times,serif" font-size="14.00" fill="#000000">ButtonModule</text>
-</g>
-<!-- ButtonDirective&#45;&gt;ButtonModule -->
-<g id="edge1" class="edge">
-<title>ButtonDirective&#45;&gt;ButtonModule</title>
-<path fill="none" stroke="#000000" d="M281.3668,-122.1061C281.3668,-122.1061 281.3668,-140.991 281.3668,-140.991"/>
-<polygon fill="#000000" stroke="#000000" points="277.8668,-140.9909 281.3668,-150.991 284.8668,-140.991 277.8668,-140.9909"/>
-</g>
-<!-- ButtonComponent -->
-<g id="node2" class="node">
-<title>ButtonComponent</title>
-<polygon fill="#ffffb3" stroke="#000000" points="245.9511,-122 126.0489,-122 126.0489,-86 245.9511,-86 245.9511,-122"/>
-<text text-anchor="middle" x="186" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">ButtonComponent</text>
+<polygon fill="#8dd3c7" stroke="#000000" points="293.6682,-187 290.6682,-191 269.6682,-191 266.6682,-187 196.3318,-187 196.3318,-151 293.6682,-151 293.6682,-187"/>
+<text text-anchor="middle" x="245" y="-164.8" font-family="Times,serif" font-size="14.00" fill="#000000">ButtonModule</text>
 </g>
 <!-- ButtonComponent&#45;&gt;ButtonModule -->
-<g id="edge2" class="edge">
+<g id="edge1" class="edge">
 <title>ButtonComponent&#45;&gt;ButtonModule</title>
-<path fill="none" stroke="#000000" d="M223.4457,-122.1061C223.4457,-122.1061 223.4457,-140.991 223.4457,-140.991"/>
-<polygon fill="#000000" stroke="#000000" points="219.9457,-140.9909 223.4457,-150.991 226.9457,-140.991 219.9457,-140.9909"/>
+<path fill="none" stroke="#000000" d="M272.0544,-122.1061C272.0544,-122.1061 272.0544,-140.991 272.0544,-140.991"/>
+<polygon fill="#000000" stroke="#000000" points="268.5544,-140.9909 272.0544,-150.991 275.5544,-140.991 268.5544,-140.9909"/>
+</g>
+<!-- ButtonDirective -->
+<g id="node2" class="node">
+<title>ButtonDirective</title>
+<polygon fill="#ffffb3" stroke="#000000" points="232.2008,-122 125.7992,-122 125.7992,-86 232.2008,-86 232.2008,-122"/>
+<text text-anchor="middle" x="179" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">ButtonDirective</text>
+</g>
+<!-- ButtonDirective&#45;&gt;ButtonModule -->
+<g id="edge2" class="edge">
+<title>ButtonDirective&#45;&gt;ButtonModule</title>
+<path fill="none" stroke="#000000" d="M214.1333,-122.1061C214.1333,-122.1061 214.1333,-140.991 214.1333,-140.991"/>
+<polygon fill="#000000" stroke="#000000" points="210.6333,-140.9909 214.1333,-150.991 217.6333,-140.991 210.6333,-140.9909"/>
 </g>
 <!-- ButtonDirective  -->
 <g id="node4" class="node">
 <title>ButtonDirective </title>
-<polygon fill="#fb8072" stroke="#000000" points="304.701,-252 195.299,-252 195.299,-216 304.701,-216 304.701,-252"/>
-<text text-anchor="middle" x="250" y="-229.8" font-family="Times,serif" font-size="14.00" fill="#000000">ButtonDirective </text>
+<polygon fill="#fb8072" stroke="#000000" points="299.701,-252 190.299,-252 190.299,-216 299.701,-216 299.701,-252"/>
+<text text-anchor="middle" x="245" y="-229.8" font-family="Times,serif" font-size="14.00" fill="#000000">ButtonDirective </text>
 </g>
 <!-- ButtonModule&#45;&gt;ButtonDirective  -->
 <g id="edge3" class="edge">
 <title>ButtonModule&#45;&gt;ButtonDirective </title>
-<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M250,-187.1061C250,-187.1061 250,-205.991 250,-205.991"/>
-<polygon fill="#000000" stroke="#000000" points="246.5001,-205.9909 250,-215.991 253.5001,-205.991 246.5001,-205.9909"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M245,-187.1061C245,-187.1061 245,-205.991 245,-205.991"/>
+<polygon fill="#000000" stroke="#000000" points="241.5001,-205.9909 245,-215.991 248.5001,-205.991 241.5001,-205.9909"/>
 </g>
 </g>
 </svg>

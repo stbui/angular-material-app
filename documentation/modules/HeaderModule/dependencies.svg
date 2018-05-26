@@ -34,7 +34,7 @@
 </g>
 <g id="clust8" class="cluster">
 <title>cluster_HeaderModule_exports</title>
-<polygon fill="none" stroke="#000000" points="391,-208 391,-260 533,-260 533,-208 391,-208"/>
+<polygon fill="none" stroke="#000000" points="370,-208 370,-260 512,-260 512,-208 370,-208"/>
 </g>
 <!-- HeaderComponent -->
 <g id="node1" class="node">
@@ -45,86 +45,86 @@
 <!-- HeaderModule -->
 <g id="node5" class="node">
 <title>HeaderModule</title>
-<polygon fill="#8dd3c7" stroke="#000000" points="511.9608,-187 508.9608,-191 487.9608,-191 484.9608,-187 412.0392,-187 412.0392,-151 511.9608,-151 511.9608,-187"/>
-<text text-anchor="middle" x="462" y="-164.8" font-family="Times,serif" font-size="14.00" fill="#000000">HeaderModule</text>
+<polygon fill="#8dd3c7" stroke="#000000" points="490.9608,-187 487.9608,-191 466.9608,-191 463.9608,-187 391.0392,-187 391.0392,-151 490.9608,-151 490.9608,-187"/>
+<text text-anchor="middle" x="441" y="-164.8" font-family="Times,serif" font-size="14.00" fill="#000000">HeaderModule</text>
 </g>
 <!-- HeaderComponent&#45;&gt;HeaderModule -->
 <g id="edge1" class="edge">
 <title>HeaderComponent&#45;&gt;HeaderModule</title>
-<path fill="none" stroke="#000000" d="M883,-122.2843C883,-143.3211 883,-175 883,-175 883,-175 522.3643,-175 522.3643,-175"/>
-<polygon fill="#000000" stroke="#000000" points="522.3643,-171.5001 512.3643,-175 522.3642,-178.5001 522.3643,-171.5001"/>
-</g>
-<!-- ToolbarUserComponent -->
-<g id="node2" class="node">
-<title>ToolbarUserComponent</title>
-<polygon fill="#ffffb3" stroke="#000000" points="804.0772,-122 651.9228,-122 651.9228,-86 804.0772,-86 804.0772,-122"/>
-<text text-anchor="middle" x="728" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">ToolbarUserComponent</text>
-</g>
-<!-- ToolbarUserComponent&#45;&gt;HeaderModule -->
-<g id="edge2" class="edge">
-<title>ToolbarUserComponent&#45;&gt;HeaderModule</title>
-<path fill="none" stroke="#000000" d="M728,-122.0225C728,-139.3734 728,-163 728,-163 728,-163 522.0326,-163 522.0326,-163"/>
-<polygon fill="#000000" stroke="#000000" points="522.0326,-159.5001 512.0326,-163 522.0325,-166.5001 522.0326,-159.5001"/>
+<path fill="none" stroke="#000000" d="M883,-122.2843C883,-143.3211 883,-175 883,-175 883,-175 501.2727,-175 501.2727,-175"/>
+<polygon fill="#000000" stroke="#000000" points="501.2727,-171.5001 491.2727,-175 501.2727,-178.5001 501.2727,-171.5001"/>
 </g>
 <!-- ToolbarHelpComponent -->
-<g id="node3" class="node">
+<g id="node2" class="node">
 <title>ToolbarHelpComponent</title>
-<polygon fill="#ffffb3" stroke="#000000" points="634.3627,-122 481.6373,-122 481.6373,-86 634.3627,-86 634.3627,-122"/>
-<text text-anchor="middle" x="558" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">ToolbarHelpComponent</text>
+<polygon fill="#ffffb3" stroke="#000000" points="804.3627,-122 651.6373,-122 651.6373,-86 804.3627,-86 804.3627,-122"/>
+<text text-anchor="middle" x="728" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">ToolbarHelpComponent</text>
 </g>
 <!-- ToolbarHelpComponent&#45;&gt;HeaderModule -->
-<g id="edge3" class="edge">
+<g id="edge2" class="edge">
 <title>ToolbarHelpComponent&#45;&gt;HeaderModule</title>
-<path fill="none" stroke="#000000" d="M496.7746,-122.1061C496.7746,-122.1061 496.7746,-140.991 496.7746,-140.991"/>
-<polygon fill="#000000" stroke="#000000" points="493.2746,-140.9909 496.7746,-150.991 500.2746,-140.991 493.2746,-140.9909"/>
+<path fill="none" stroke="#000000" d="M728,-122.0225C728,-139.3734 728,-163 728,-163 728,-163 500.9916,-163 500.9916,-163"/>
+<polygon fill="#000000" stroke="#000000" points="500.9916,-159.5001 490.9916,-163 500.9915,-166.5001 500.9916,-159.5001"/>
 </g>
 <!-- ToolbarNotificationComponent -->
-<g id="node4" class="node">
+<g id="node3" class="node">
 <title>ToolbarNotificationComponent</title>
-<polygon fill="#ffffb3" stroke="#000000" points="463.8004,-122 270.1996,-122 270.1996,-86 463.8004,-86 463.8004,-122"/>
-<text text-anchor="middle" x="367" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">ToolbarNotificationComponent</text>
+<polygon fill="#ffffb3" stroke="#000000" points="633.8004,-122 440.1996,-122 440.1996,-86 633.8004,-86 633.8004,-122"/>
+<text text-anchor="middle" x="537" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">ToolbarNotificationComponent</text>
 </g>
 <!-- ToolbarNotificationComponent&#45;&gt;HeaderModule -->
-<g id="edge4" class="edge">
+<g id="edge3" class="edge">
 <title>ToolbarNotificationComponent&#45;&gt;HeaderModule</title>
-<path fill="none" stroke="#000000" d="M437.8349,-122.1061C437.8349,-122.1061 437.8349,-140.991 437.8349,-140.991"/>
-<polygon fill="#000000" stroke="#000000" points="434.3349,-140.9909 437.8349,-150.991 441.3349,-140.991 434.3349,-140.9909"/>
+<path fill="none" stroke="#000000" d="M465.6652,-122.1061C465.6652,-122.1061 465.6652,-140.991 465.6652,-140.991"/>
+<polygon fill="#000000" stroke="#000000" points="462.1652,-140.9909 465.6652,-150.991 469.1652,-140.991 462.1652,-140.9909"/>
+</g>
+<!-- ToolbarUserComponent -->
+<g id="node4" class="node">
+<title>ToolbarUserComponent</title>
+<polygon fill="#ffffb3" stroke="#000000" points="422.0772,-122 269.9228,-122 269.9228,-86 422.0772,-86 422.0772,-122"/>
+<text text-anchor="middle" x="346" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">ToolbarUserComponent</text>
+</g>
+<!-- ToolbarUserComponent&#45;&gt;HeaderModule -->
+<g id="edge4" class="edge">
+<title>ToolbarUserComponent&#45;&gt;HeaderModule</title>
+<path fill="none" stroke="#000000" d="M406.5291,-122.1061C406.5291,-122.1061 406.5291,-140.991 406.5291,-140.991"/>
+<polygon fill="#000000" stroke="#000000" points="403.0292,-140.9909 406.5291,-150.991 410.0292,-140.991 403.0292,-140.9909"/>
 </g>
 <!-- HeaderComponent  -->
 <g id="node8" class="node">
 <title>HeaderComponent </title>
-<polygon fill="#fb8072" stroke="#000000" points="524.7436,-252 399.2564,-252 399.2564,-216 524.7436,-216 524.7436,-252"/>
-<text text-anchor="middle" x="462" y="-229.8" font-family="Times,serif" font-size="14.00" fill="#000000">HeaderComponent </text>
+<polygon fill="#fb8072" stroke="#000000" points="503.7436,-252 378.2564,-252 378.2564,-216 503.7436,-216 503.7436,-252"/>
+<text text-anchor="middle" x="441" y="-229.8" font-family="Times,serif" font-size="14.00" fill="#000000">HeaderComponent </text>
 </g>
 <!-- HeaderModule&#45;&gt;HeaderComponent  -->
 <g id="edge7" class="edge">
 <title>HeaderModule&#45;&gt;HeaderComponent </title>
-<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M462,-187.1061C462,-187.1061 462,-205.991 462,-205.991"/>
-<polygon fill="#000000" stroke="#000000" points="458.5001,-205.9909 462,-215.991 465.5001,-205.991 458.5001,-205.9909"/>
-</g>
-<!-- SharedModule -->
-<g id="node6" class="node">
-<title>SharedModule</title>
-<polygon fill="#8dd3c7" stroke="#000000" points="246.4231,-122 243.4231,-126 222.4231,-126 219.4231,-122 147.5769,-122 147.5769,-86 246.4231,-86 246.4231,-122"/>
-<text text-anchor="middle" x="197" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">SharedModule</text>
-</g>
-<!-- SharedModule&#45;&gt;HeaderModule -->
-<g id="edge5" class="edge">
-<title>SharedModule&#45;&gt;HeaderModule</title>
-<path fill="none" stroke="#000000" d="M197,-122.0225C197,-139.3734 197,-163 197,-163 197,-163 401.844,-163 401.844,-163"/>
-<polygon fill="#000000" stroke="#000000" points="401.844,-166.5001 411.844,-163 401.8439,-159.5001 401.844,-166.5001"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M441,-187.1061C441,-187.1061 441,-205.991 441,-205.991"/>
+<polygon fill="#000000" stroke="#000000" points="437.5001,-205.9909 441,-215.991 444.5001,-205.991 437.5001,-205.9909"/>
 </g>
 <!-- LoadingModule -->
-<g id="node7" class="node">
+<g id="node6" class="node">
 <title>LoadingModule</title>
-<polygon fill="#8dd3c7" stroke="#000000" points="130.2078,-122 127.2078,-126 106.2078,-126 103.2078,-122 23.7922,-122 23.7922,-86 130.2078,-86 130.2078,-122"/>
-<text text-anchor="middle" x="77" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">LoadingModule</text>
+<polygon fill="#8dd3c7" stroke="#000000" points="246.2078,-122 243.2078,-126 222.2078,-126 219.2078,-122 139.7922,-122 139.7922,-86 246.2078,-86 246.2078,-122"/>
+<text text-anchor="middle" x="193" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">LoadingModule</text>
 </g>
 <!-- LoadingModule&#45;&gt;HeaderModule -->
-<g id="edge6" class="edge">
+<g id="edge5" class="edge">
 <title>LoadingModule&#45;&gt;HeaderModule</title>
-<path fill="none" stroke="#000000" d="M77,-122.2843C77,-143.3211 77,-175 77,-175 77,-175 401.668,-175 401.668,-175"/>
-<polygon fill="#000000" stroke="#000000" points="401.668,-178.5001 411.668,-175 401.6679,-171.5001 401.668,-178.5001"/>
+<path fill="none" stroke="#000000" d="M193,-122.0225C193,-139.3734 193,-163 193,-163 193,-163 380.8135,-163 380.8135,-163"/>
+<polygon fill="#000000" stroke="#000000" points="380.8135,-166.5001 390.8135,-163 380.8135,-159.5001 380.8135,-166.5001"/>
+</g>
+<!-- SharedModule -->
+<g id="node7" class="node">
+<title>SharedModule</title>
+<polygon fill="#8dd3c7" stroke="#000000" points="122.4231,-122 119.4231,-126 98.4231,-126 95.4231,-122 23.5769,-122 23.5769,-86 122.4231,-86 122.4231,-122"/>
+<text text-anchor="middle" x="73" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">SharedModule</text>
+</g>
+<!-- SharedModule&#45;&gt;HeaderModule -->
+<g id="edge6" class="edge">
+<title>SharedModule&#45;&gt;HeaderModule</title>
+<path fill="none" stroke="#000000" d="M73,-122.2843C73,-143.3211 73,-175 73,-175 73,-175 380.9869,-175 380.9869,-175"/>
+<polygon fill="#000000" stroke="#000000" points="380.9869,-178.5001 390.9869,-175 380.9869,-171.5001 380.9869,-178.5001"/>
 </g>
 </g>
 </svg>

@@ -32,59 +32,59 @@
 <title>cluster_MailModule_imports</title>
 <polygon fill="none" stroke="#000000" points="16,-78 16,-130 395,-130 395,-78 16,-78"/>
 </g>
-<!-- MailComponent -->
+<!-- ComposeComponent -->
 <g id="node1" class="node">
-<title>MailComponent</title>
-<polygon fill="#ffffb3" stroke="#000000" points="1068.773,-122 961.227,-122 961.227,-86 1068.773,-86 1068.773,-122"/>
-<text text-anchor="middle" x="1015" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">MailComponent</text>
+<title>ComposeComponent</title>
+<polygon fill="#ffffb3" stroke="#000000" points="1069.219,-122 934.781,-122 934.781,-86 1069.219,-86 1069.219,-122"/>
+<text text-anchor="middle" x="1002" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">ComposeComponent</text>
 </g>
 <!-- MailModule -->
 <g id="node6" class="node">
 <title>MailModule</title>
-<polygon fill="#8dd3c7" stroke="#000000" points="582.9902,-187 579.9902,-191 558.9902,-191 555.9902,-187 497.0098,-187 497.0098,-151 582.9902,-151 582.9902,-187"/>
-<text text-anchor="middle" x="540" y="-164.8" font-family="Times,serif" font-size="14.00" fill="#000000">MailModule</text>
-</g>
-<!-- MailComponent&#45;&gt;MailModule -->
-<g id="edge1" class="edge">
-<title>MailComponent&#45;&gt;MailModule</title>
-<path fill="none" stroke="#000000" d="M1015,-122.2921C1015,-144.2057 1015,-178 1015,-178 1015,-178 592.9908,-178 592.9908,-178"/>
-<polygon fill="#000000" stroke="#000000" points="592.9909,-174.5001 582.9908,-178 592.9908,-181.5001 592.9909,-174.5001"/>
-</g>
-<!-- ComposeComponent -->
-<g id="node2" class="node">
-<title>ComposeComponent</title>
-<polygon fill="#ffffb3" stroke="#000000" points="943.219,-122 808.781,-122 808.781,-86 943.219,-86 943.219,-122"/>
-<text text-anchor="middle" x="876" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">ComposeComponent</text>
+<polygon fill="#8dd3c7" stroke="#000000" points="583.9902,-187 580.9902,-191 559.9902,-191 556.9902,-187 498.0098,-187 498.0098,-151 583.9902,-151 583.9902,-187"/>
+<text text-anchor="middle" x="541" y="-164.8" font-family="Times,serif" font-size="14.00" fill="#000000">MailModule</text>
 </g>
 <!-- ComposeComponent&#45;&gt;MailModule -->
-<g id="edge2" class="edge">
+<g id="edge1" class="edge">
 <title>ComposeComponent&#45;&gt;MailModule</title>
-<path fill="none" stroke="#000000" d="M876,-122.1061C876,-141.3391 876,-169 876,-169 876,-169 593.2383,-169 593.2383,-169"/>
-<polygon fill="#000000" stroke="#000000" points="593.2383,-165.5001 583.2383,-169 593.2382,-172.5001 593.2383,-165.5001"/>
+<path fill="none" stroke="#000000" d="M1002,-122.2921C1002,-144.2057 1002,-178 1002,-178 1002,-178 594.3698,-178 594.3698,-178"/>
+<polygon fill="#000000" stroke="#000000" points="594.3698,-174.5001 584.3698,-178 594.3697,-181.5001 594.3698,-174.5001"/>
 </g>
 <!-- DetailComponent -->
-<g id="node3" class="node">
+<g id="node2" class="node">
 <title>DetailComponent</title>
-<polygon fill="#ffffb3" stroke="#000000" points="790.5409,-122 675.4591,-122 675.4591,-86 790.5409,-86 790.5409,-122"/>
-<text text-anchor="middle" x="733" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">DetailComponent</text>
+<polygon fill="#ffffb3" stroke="#000000" points="916.5409,-122 801.4591,-122 801.4591,-86 916.5409,-86 916.5409,-122"/>
+<text text-anchor="middle" x="859" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">DetailComponent</text>
 </g>
 <!-- DetailComponent&#45;&gt;MailModule -->
-<g id="edge3" class="edge">
+<g id="edge2" class="edge">
 <title>DetailComponent&#45;&gt;MailModule</title>
-<path fill="none" stroke="#000000" d="M733,-122.027C733,-138.3976 733,-160 733,-160 733,-160 593.313,-160 593.313,-160"/>
-<polygon fill="#000000" stroke="#000000" points="593.313,-156.5001 583.313,-160 593.3129,-163.5001 593.313,-156.5001"/>
+<path fill="none" stroke="#000000" d="M859,-122.1061C859,-141.3391 859,-169 859,-169 859,-169 594.2178,-169 594.2178,-169"/>
+<polygon fill="#000000" stroke="#000000" points="594.2179,-165.5001 584.2178,-169 594.2178,-172.5001 594.2179,-165.5001"/>
 </g>
 <!-- ListComponent -->
-<g id="node4" class="node">
+<g id="node3" class="node">
 <title>ListComponent</title>
-<polygon fill="#ffffb3" stroke="#000000" points="657.6109,-122 554.3891,-122 554.3891,-86 657.6109,-86 657.6109,-122"/>
-<text text-anchor="middle" x="606" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">ListComponent</text>
+<polygon fill="#ffffb3" stroke="#000000" points="783.6109,-122 680.3891,-122 680.3891,-86 783.6109,-86 783.6109,-122"/>
+<text text-anchor="middle" x="732" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">ListComponent</text>
 </g>
 <!-- ListComponent&#45;&gt;MailModule -->
-<g id="edge4" class="edge">
+<g id="edge3" class="edge">
 <title>ListComponent&#45;&gt;MailModule</title>
-<path fill="none" stroke="#000000" d="M568.7198,-122.1061C568.7198,-122.1061 568.7198,-140.991 568.7198,-140.991"/>
-<polygon fill="#000000" stroke="#000000" points="565.2199,-140.9909 568.7198,-150.991 572.2199,-140.991 565.2199,-140.9909"/>
+<path fill="none" stroke="#000000" d="M732,-122.027C732,-138.3976 732,-160 732,-160 732,-160 594.3409,-160 594.3409,-160"/>
+<polygon fill="#000000" stroke="#000000" points="594.3409,-156.5001 584.3409,-160 594.3408,-163.5001 594.3409,-156.5001"/>
+</g>
+<!-- MailComponent -->
+<g id="node4" class="node">
+<title>MailComponent</title>
+<polygon fill="#ffffb3" stroke="#000000" points="662.773,-122 555.227,-122 555.227,-86 662.773,-86 662.773,-122"/>
+<text text-anchor="middle" x="609" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">MailComponent</text>
+</g>
+<!-- MailComponent&#45;&gt;MailModule -->
+<g id="edge4" class="edge">
+<title>MailComponent&#45;&gt;MailModule</title>
+<path fill="none" stroke="#000000" d="M569.5544,-122.1061C569.5544,-122.1061 569.5544,-140.991 569.5544,-140.991"/>
+<polygon fill="#000000" stroke="#000000" points="566.0544,-140.9909 569.5544,-150.991 573.0544,-140.991 566.0544,-140.9909"/>
 </g>
 <!-- ToolbarComponent -->
 <g id="node5" class="node">
@@ -95,44 +95,44 @@
 <!-- ToolbarComponent&#45;&gt;MailModule -->
 <g id="edge5" class="edge">
 <title>ToolbarComponent&#45;&gt;MailModule</title>
-<path fill="none" stroke="#000000" d="M516.9152,-122.1061C516.9152,-122.1061 516.9152,-140.991 516.9152,-140.991"/>
-<polygon fill="#000000" stroke="#000000" points="513.4152,-140.9909 516.9152,-150.991 520.4152,-140.991 513.4152,-140.9909"/>
-</g>
-<!-- SharedModule -->
-<g id="node7" class="node">
-<title>SharedModule</title>
-<polygon fill="#8dd3c7" stroke="#000000" points="387.4231,-122 384.4231,-126 363.4231,-126 360.4231,-122 288.5769,-122 288.5769,-86 387.4231,-86 387.4231,-122"/>
-<text text-anchor="middle" x="338" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">SharedModule</text>
-</g>
-<!-- SharedModule&#45;&gt;MailModule -->
-<g id="edge6" class="edge">
-<title>SharedModule&#45;&gt;MailModule</title>
-<path fill="none" stroke="#000000" d="M338,-122.027C338,-138.3976 338,-160 338,-160 338,-160 486.6659,-160 486.6659,-160"/>
-<polygon fill="#000000" stroke="#000000" points="486.666,-163.5001 496.6659,-160 486.6659,-156.5001 486.666,-163.5001"/>
+<path fill="none" stroke="#000000" d="M517.4152,-122.1061C517.4152,-122.1061 517.4152,-140.991 517.4152,-140.991"/>
+<polygon fill="#000000" stroke="#000000" points="513.9152,-140.9909 517.4152,-150.991 520.9152,-140.991 513.9152,-140.9909"/>
 </g>
 <!-- MailRoutingModule -->
-<g id="node8" class="node">
+<g id="node7" class="node">
 <title>MailRoutingModule</title>
-<polygon fill="#8dd3c7" stroke="#000000" points="270.608,-122 267.608,-126 246.608,-126 243.608,-122 139.392,-122 139.392,-86 270.608,-86 270.608,-122"/>
-<text text-anchor="middle" x="205" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">MailRoutingModule</text>
+<polygon fill="#8dd3c7" stroke="#000000" points="386.608,-122 383.608,-126 362.608,-126 359.608,-122 255.392,-122 255.392,-86 386.608,-86 386.608,-122"/>
+<text text-anchor="middle" x="321" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">MailRoutingModule</text>
 </g>
 <!-- MailRoutingModule&#45;&gt;MailModule -->
-<g id="edge7" class="edge">
+<g id="edge6" class="edge">
 <title>MailRoutingModule&#45;&gt;MailModule</title>
-<path fill="none" stroke="#000000" d="M205,-122.1061C205,-141.3391 205,-169 205,-169 205,-169 486.8904,-169 486.8904,-169"/>
-<polygon fill="#000000" stroke="#000000" points="486.8905,-172.5001 496.8904,-169 486.8904,-165.5001 486.8905,-172.5001"/>
+<path fill="none" stroke="#000000" d="M321,-122.027C321,-138.3976 321,-160 321,-160 321,-160 487.7976,-160 487.7976,-160"/>
+<polygon fill="#000000" stroke="#000000" points="487.7976,-163.5001 497.7976,-160 487.7975,-156.5001 487.7976,-163.5001"/>
 </g>
 <!-- SearchModule -->
-<g id="node9" class="node">
+<g id="node8" class="node">
 <title>SearchModule</title>
-<polygon fill="#8dd3c7" stroke="#000000" points="121.6375,-122 118.6375,-126 97.6375,-126 94.6375,-122 24.3625,-122 24.3625,-86 121.6375,-86 121.6375,-122"/>
-<text text-anchor="middle" x="73" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">SearchModule</text>
+<polygon fill="#8dd3c7" stroke="#000000" points="237.6375,-122 234.6375,-126 213.6375,-126 210.6375,-122 140.3625,-122 140.3625,-86 237.6375,-86 237.6375,-122"/>
+<text text-anchor="middle" x="189" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">SearchModule</text>
 </g>
 <!-- SearchModule&#45;&gt;MailModule -->
-<g id="edge8" class="edge">
+<g id="edge7" class="edge">
 <title>SearchModule&#45;&gt;MailModule</title>
-<path fill="none" stroke="#000000" d="M73,-122.2921C73,-144.2057 73,-178 73,-178 73,-178 486.9028,-178 486.9028,-178"/>
-<polygon fill="#000000" stroke="#000000" points="486.9029,-181.5001 496.9028,-178 486.9028,-174.5001 486.9029,-181.5001"/>
+<path fill="none" stroke="#000000" d="M189,-122.1061C189,-141.3391 189,-169 189,-169 189,-169 487.8379,-169 487.8379,-169"/>
+<polygon fill="#000000" stroke="#000000" points="487.8379,-172.5001 497.8379,-169 487.8379,-165.5001 487.8379,-172.5001"/>
+</g>
+<!-- SharedModule -->
+<g id="node9" class="node">
+<title>SharedModule</title>
+<polygon fill="#8dd3c7" stroke="#000000" points="122.4231,-122 119.4231,-126 98.4231,-126 95.4231,-122 23.5769,-122 23.5769,-86 122.4231,-86 122.4231,-122"/>
+<text text-anchor="middle" x="73" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">SharedModule</text>
+</g>
+<!-- SharedModule&#45;&gt;MailModule -->
+<g id="edge8" class="edge">
+<title>SharedModule&#45;&gt;MailModule</title>
+<path fill="none" stroke="#000000" d="M73,-122.2921C73,-144.2057 73,-178 73,-178 73,-178 487.8105,-178 487.8105,-178"/>
+<polygon fill="#000000" stroke="#000000" points="487.8106,-181.5001 497.8105,-178 487.8105,-174.5001 487.8106,-181.5001"/>
 </g>
 </g>
 </svg>

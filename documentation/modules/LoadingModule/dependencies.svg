@@ -22,21 +22,21 @@
 <text text-anchor="start" x="429.7258" y="-15.4" font-family="sans-serif" font-size="14.00" fill="#000000"> &#160;Exports</text>
 <g id="clust1" class="cluster">
 <title>cluster_LoadingModule</title>
-<polygon fill="none" stroke="#000000" stroke-dasharray="1,5" points="98,-70 98,-268 398,-268 398,-70 98,-70"/>
+<polygon fill="none" stroke="#000000" stroke-dasharray="1,5" points="90,-70 90,-268 406,-268 406,-70 90,-70"/>
 </g>
 <g id="clust2" class="cluster">
 <title>cluster_LoadingModule_declarations</title>
-<polygon fill="none" stroke="#000000" points="110,-78 110,-130 386,-130 386,-78 110,-78"/>
+<polygon fill="none" stroke="#000000" points="102,-78 102,-130 394,-130 394,-78 102,-78"/>
 </g>
 <g id="clust6" class="cluster">
 <title>cluster_LoadingModule_exports</title>
-<polygon fill="none" stroke="#000000" points="106,-208 106,-260 390,-260 390,-208 106,-208"/>
+<polygon fill="none" stroke="#000000" points="98,-208 98,-260 398,-260 398,-208 98,-208"/>
 </g>
 <!-- LoadingComponent -->
 <g id="node1" class="node">
 <title>LoadingComponent</title>
-<polygon fill="#ffffb3" stroke="#000000" points="377.9902,-122 250.0098,-122 250.0098,-86 377.9902,-86 377.9902,-122"/>
-<text text-anchor="middle" x="314" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">LoadingComponent</text>
+<polygon fill="#ffffb3" stroke="#000000" points="385.9902,-122 258.0098,-122 258.0098,-86 385.9902,-86 385.9902,-122"/>
+<text text-anchor="middle" x="322" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">LoadingComponent</text>
 </g>
 <!-- LoadingModule -->
 <g id="node3" class="node">
@@ -47,42 +47,42 @@
 <!-- LoadingComponent&#45;&gt;LoadingModule -->
 <g id="edge1" class="edge">
 <title>LoadingComponent&#45;&gt;LoadingModule</title>
-<path fill="none" stroke="#000000" d="M335.415,-122.0225C335.415,-139.3734 335.415,-163 335.415,-163 335.415,-163 239.5264,-163 239.5264,-163"/>
-<polygon fill="#000000" stroke="#000000" points="239.5264,-159.5001 229.5264,-163 239.5263,-166.5001 239.5264,-159.5001"/>
+<path fill="none" stroke="#000000" d="M343.415,-122.0225C343.415,-139.3734 343.415,-163 343.415,-163 343.415,-163 239.4315,-163 239.4315,-163"/>
+<polygon fill="#000000" stroke="#000000" points="239.4315,-159.5001 229.4315,-163 239.4314,-166.5001 239.4315,-159.5001"/>
 </g>
-<!-- LoadingDirective -->
+<!-- SkeletonComponent -->
 <g id="node2" class="node">
-<title>LoadingDirective</title>
-<polygon fill="#ffffb3" stroke="#000000" points="232.2409,-122 117.7591,-122 117.7591,-86 232.2409,-86 232.2409,-122"/>
-<text text-anchor="middle" x="175" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">LoadingDirective</text>
+<title>SkeletonComponent</title>
+<polygon fill="#ffffb3" stroke="#000000" points="240.3258,-122 109.6742,-122 109.6742,-86 240.3258,-86 240.3258,-122"/>
+<text text-anchor="middle" x="175" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">SkeletonComponent</text>
 </g>
-<!-- LoadingDirective&#45;&gt;LoadingModule -->
+<!-- SkeletonComponent&#45;&gt;LoadingModule -->
 <g id="edge2" class="edge">
-<title>LoadingDirective&#45;&gt;LoadingModule</title>
+<title>SkeletonComponent&#45;&gt;LoadingModule</title>
 <path fill="none" stroke="#000000" d="M176,-122.1061C176,-122.1061 176,-140.991 176,-140.991"/>
 <polygon fill="#000000" stroke="#000000" points="172.5001,-140.9909 176,-150.991 179.5001,-140.991 172.5001,-140.9909"/>
 </g>
 <!-- LoadingComponent  -->
 <g id="node4" class="node">
 <title>LoadingComponent </title>
-<polygon fill="#fb8072" stroke="#000000" points="381.9911,-252 250.0089,-252 250.0089,-216 381.9911,-216 381.9911,-252"/>
-<text text-anchor="middle" x="316" y="-229.8" font-family="Times,serif" font-size="14.00" fill="#000000">LoadingComponent </text>
+<polygon fill="#fb8072" stroke="#000000" points="389.9911,-252 258.0089,-252 258.0089,-216 389.9911,-216 389.9911,-252"/>
+<text text-anchor="middle" x="324" y="-229.8" font-family="Times,serif" font-size="14.00" fill="#000000">LoadingComponent </text>
 </g>
 <!-- LoadingModule&#45;&gt;LoadingComponent  -->
 <g id="edge3" class="edge">
 <title>LoadingModule&#45;&gt;LoadingComponent </title>
-<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M229.289,-175C260.103,-175 292.835,-175 292.835,-175 292.835,-175 292.835,-205.9775 292.835,-205.9775"/>
-<polygon fill="#000000" stroke="#000000" points="289.3351,-205.9774 292.835,-215.9775 296.3351,-205.9775 289.3351,-205.9774"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M229.3034,-175C263.2331,-175 300.835,-175 300.835,-175 300.835,-175 300.835,-205.9775 300.835,-205.9775"/>
+<polygon fill="#000000" stroke="#000000" points="297.3351,-205.9774 300.835,-215.9775 304.3351,-205.9775 297.3351,-205.9774"/>
 </g>
-<!-- LoadingDirective  -->
+<!-- SkeletonComponent  -->
 <g id="node5" class="node">
-<title>LoadingDirective </title>
-<polygon fill="#fb8072" stroke="#000000" points="232.2408,-252 113.7592,-252 113.7592,-216 232.2408,-216 232.2408,-252"/>
-<text text-anchor="middle" x="173" y="-229.8" font-family="Times,serif" font-size="14.00" fill="#000000">LoadingDirective </text>
+<title>SkeletonComponent </title>
+<polygon fill="#fb8072" stroke="#000000" points="239.8255,-252 106.1745,-252 106.1745,-216 239.8255,-216 239.8255,-252"/>
+<text text-anchor="middle" x="173" y="-229.8" font-family="Times,serif" font-size="14.00" fill="#000000">SkeletonComponent </text>
 </g>
-<!-- LoadingModule&#45;&gt;LoadingDirective  -->
+<!-- LoadingModule&#45;&gt;SkeletonComponent  -->
 <g id="edge4" class="edge">
-<title>LoadingModule&#45;&gt;LoadingDirective </title>
+<title>LoadingModule&#45;&gt;SkeletonComponent </title>
 <path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M176,-187.1061C176,-187.1061 176,-205.991 176,-205.991"/>
 <polygon fill="#000000" stroke="#000000" points="172.5001,-205.9909 176,-215.991 179.5001,-205.991 172.5001,-205.9909"/>
 </g>
