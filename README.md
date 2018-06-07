@@ -58,33 +58,3 @@ http://127.0.0.1:4200
 ```
 npm run build
 ```
-
-
-### Integration
-##### Docker
-
-* [docs](docs/docker.md)
-
-##### Electron
-
-* [docs](docs/electron.md)
-
-##### Firebase
-
-* [docs](docs/firebase.md)
-
-##### PWA
-
-* [docs](docs/pwa.md)
-
-##### Universal
-
-* [docs](docs/universal.md)
-
-# Contrubuting
-
-我们非常欢迎你的贡献，你可以通过以下方式和我们一起贡献：
-* 在你的公司或个人项目中使用项目。
-* 通过 [Issue](https://github.com/stbui/angular-material-app/issues) 报告 bug 或进行咨询。
-* 提交 [Pull Request](https://github.com/stbui/angular-material-app/pulls) 来改进。
-
