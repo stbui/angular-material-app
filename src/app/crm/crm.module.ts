@@ -15,7 +15,7 @@ import { ProductComponent } from './product/product.component';
 
 import { LeadService } from './lead/lead.service';
 
-import { WidgetModule } from '../widget/widget.module';
+import { WidgetModule } from '../component/widget/widget.module';
 
 @NgModule({
   imports: [SharedModule, CrmRoutingModule, WidgetModule],

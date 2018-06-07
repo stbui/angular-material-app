@@ -1,13 +1,11 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'stb-widget-state',
+  selector: 'stbui-widget-state,stb-widget-state',
   templateUrl: './state.component.html',
   styleUrls: ['./state.component.scss']
 })
-
 export class StateComponent {
-
   @Input() icon: string;
   @Input() backgroundcolor: string;
   @Input() changeicon: string;
@@ -17,8 +15,5 @@ export class StateComponent {
   @Input() value: string;
   @Input() valueprefix: string;
 
-  constructor() {
-
-  }
-
+  constructor() {}
 }

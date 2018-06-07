@@ -15,7 +15,7 @@
   font-weight: 900;
 }
 
-@mixin icon-size($size:24) {
+@mixin icon-size($size: 24) {
   .icon-size-#{$size} {
     font-size: #{$size}px;
     height: #{$size}px;
