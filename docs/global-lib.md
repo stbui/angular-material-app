@@ -1,31 +1,25 @@
 # 全局库使用
 
-```
-npm install normalize --save
-npm install material-icons --save
-npm install Chart --save
-```
-
-* .angular-cli.json *
+- angular.json \*
 
 ```
-"styles": [
-  "../node_modules/normalize.css/normalize.css",
-  "../node_modules/material-design-icons/iconfont/material-icons.css",
-  "../node_modules/quill/dist/quill.snow.css",
-  "styles.scss"
-],
-      
+{
+  projects: {
+    architect: {
+      build: {
+        options: {
+          styles: "styles": [
+              { "input": "node_modules/normalize.css/normalize.css", "bundleName": "lib" },
+              { "input": "node_modules/material-design-icons/iconfont/material-icons.css", "bundleName": "lib" },
+              { "input": "node_modules/quill/dist/quill.snow.css", "bundleName": "lib" },
+              { "input": "src/styles.scss", "bundleName": "stbui" }
+            ],
+          scripts: [
+            "../node_modules/chart.js/dist/Chart.js"
+          ]
+        }
+      }
+    }
+  }
+}
 ```
-
-```
-"scripts": [
-  "../node_modules/chart.js/dist/Chart.js"
-  ],
-```
-
-# 第三方库
-
-"scripts": [
-  {"input": "../node_modules/chart.js/dist/Chart.js", "lazy": true}
-],
