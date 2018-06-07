@@ -8,7 +8,7 @@
   "main": "dist/electron.js",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --configuration=development",
+    "start": "ng serve --hmr --open --configuration=development",
     "build": "ng build --configuration=production",
     "build:github": "ng build --configuration=github --base-href=/angular-material-app/",
     "publish:github": "ngh",
