@@ -1,22 +1,132 @@
-.sigin {
-  &-conainer {
-    min-height: 100%;
-    background: #eceeef url('/assets/images/background/login.jpg') no-repeat center center fixed;
-    background-size: cover;
+.signin {
+  &-container {
+    height: 100vh;
   }
-  &-main {
-    position: relative;
-    margin: 0 auto;
-    width: 500px;
+
+  &-cover {
+    height: 100%;
+  }
+
+  &-content {
+    height: 100%;
+    padding: 70px 60px;
+    border-left: 1px solid #d9ddf6;
+    background: #f3fcff;
   }
 }
 
 .redirect {
   font-size: 14px;
   margin-left: 10px;
-  color: #00AAAA;
+  color: #00aaaa;
 }
 
 .display-block {
   display: block;
+}
+
+.other-sign {
+  color: #a1a6a8;
+  padding: 50px 0 60px;
+}
+.m-b-15 {
+  margin-bottom: 15px;
+}
+
+.capsule-button {
+  width: 100%;
+  color: #fff;
+  padding: 0;
+  border-radius: 3px;
+  min-height: 48px;
+
+  &-wrapper {
+    justify-content: flex-start;
+    display: flex;
+    width: 100%;
+  }
+
+  &-icon {
+    height: 48px;
+    border-radius: 3px;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    > img {
+      width: 25px;
+      height: auto;
+    }
+  }
+
+  &-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  &-ripple {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    z-index: 0;
+    position: absolute;
+    overflow: hidden;
+    pointer-events: none;
+    justify-content: flex-start;
+    display: flex;
+    width: 100%;
+  }
+}
+
+.facebook-button {
+  background-color: #4267b2;
+
+  &:hover {
+    background-color: #385490;
+  }
+
+  .capsule-button-icon {
+    background: #3b5a99;
+  }
+}
+
+.google-button {
+  background-color: #dd4b39;
+
+  &:hover {
+    background-color: #dd4b39;
+  }
+
+  .capsule-button-icon {
+    background: #c9481f;
+  }
+}
+
+.github-button {
+  background-color: #eb5424;
+
+  &:hover {
+    background-color: #eb5424;
+  }
+
+  .capsule-button-icon {
+    background: #ca3f12;
+  }
+}
+
+.any-button {
+  background-color: #ffca28;
+
+  &:hover {
+    background-color: #ffca28;
+  }
+
+  .capsule-button-icon {
+    background: #e89d1e;
+  }
 }

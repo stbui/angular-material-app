@@ -1,8 +1,14 @@
-<div fxLayout="row" fxLayoutAlign="center center" style="height: 100%;">
-  <div class="register mat-elevation-z12">
-    <div class="register-header" fxLayout="column" fxLayoutAlign="center center">
-      注册账号
+<div class="signin-container" fxLayout="row">
+  <div class="signin-cover" fxFlex="100" fxFlex.gt-xs="50">
+    <div fxLayout="column" fxLayoutAlign="center center" style="height: 100%;">
+      <img src="assets/images/signup.svg" alt="">
     </div>
+  </div>
+  <div class="signin-content mat-elevation-z12" fxFlex="100" fxFlex.gt-xs="50">
+    <mat-card-title>注册账号
+      <a class="redirect" [routerLink]="['/sigin']">用户登录</a>
+    </mat-card-title>
+
     <form #form="ngForm" (ngSubmit)="register()">
       <div class="register-content" fxLayout="column" fxLayoutAlign="start stretch">
         <mat-form-field>
@@ -17,12 +23,55 @@
         <mat-form-field>
           <input matInput placeholder="确认密码" type="password" name="password-confirm" required [(ngModel)]="passwordConfirm">
         </mat-form-field>
-        <div class="extra-options" fxLayout="row" fxLayoutAlign="center center">
-          <mat-checkbox class="remember-me">我同意 <a href="javascript:;">注册协议</a></mat-checkbox>
+        <div class="m-b-15" fxLayout="row" fxLayoutAlign="center center">
+          <mat-checkbox class="remember-me">我同意
+            <a href="javascript:;">注册协议</a>
+          </mat-checkbox>
         </div>
         <button color="primary" mat-raised-button [disabled]="!form.valid">创建账户</button>
-        <p class="note">已经有账户?<br/> <a [routerLink]="['/sigin']">登录</a></p>
+
       </div>
     </form>
+
+    <div class="other-sign">
+      我要登陆
+    </div>
+
+    <button class="mat-raised-button capsule-button google-button m-b-15" (click)="signInWithGoogle()">
+      <span class="capsule-button-wrapper">
+        <div class="capsule-button-icon">
+          <img src="assets/icon/google-plus.svg">
+        </div>
+        <span class="capsule-button-text">Google 账号登录</span>
+      </span>
+    </button>
+
+    <button class="mat-raised-button capsule-button github-button m-b-15" (click)="signInWithGithub()">
+      <span class="capsule-button-wrapper">
+        <div class="capsule-button-icon">
+          <img src="assets/icon/github-logo.svg">
+        </div>
+        <span class="capsule-button-text">Github 账号登录</span>
+      </span>
+    </button>
+
+    <button class="mat-raised-button capsule-button facebook-button m-b-15">
+      <span class="capsule-button-wrapper">
+        <div class="capsule-button-icon">
+          <img src="assets/icon/facebook.svg">
+        </div>
+        <span class="capsule-button-text">Facebook 账号登录</span>
+      </span>
+    </button>
+
+    <button class="mat-raised-button capsule-button any-button" (click)="signInAnonymously()">
+      <span class="capsule-button-wrapper">
+        <div class="capsule-button-icon">
+          <img src="assets/icon/firebase.svg">
+        </div>
+        <span class="capsule-button-text">游客 账号登录</span>
+      </span>
+    </button>
+
   </div>
 </div>
