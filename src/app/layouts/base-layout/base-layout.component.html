@@ -3,11 +3,13 @@
 
   <div class="wrapper">
     <div class="header" fxLayout="row" fxLayoutAlign="start center">
-      <ng-content select="base-layout-header"></ng-content>
+      <ng-content select="stbui-base-layout-header"></ng-content>
     </div>
 
     <div class="card">
-      <div class="toolbar" fxLayout="row" fxLayoutAlign="start center"></div>
+      <div class="toolbar" fxLayout="row" fxLayoutAlign="start center">
+        <ng-content select="stbui-base-layout-toolbar"></ng-content>
+      </div>
       <div class="content">
         <ng-content></ng-content>
       </div>

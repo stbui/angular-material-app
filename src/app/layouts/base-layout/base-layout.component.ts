@@ -3,10 +3,16 @@
  * Copyright Stbui All Rights Reserved.
  */
 
-import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  Input,
+  ViewEncapsulation,
+  Injector
+} from '@angular/core';
 
 @Component({
-  selector: 'stbui-base-layout',
+  selector: 'stbui-base-layout, stbui-base-layout-container',
   templateUrl: './base-layout.component.html',
   styleUrls: ['./base-layout.component.scss'],
   encapsulation: ViewEncapsulation.None,
@@ -30,7 +36,24 @@ export class BaseLayoutComponent implements OnInit {
   }
 })
 export class BaseLayoutHeaderComponent implements OnInit {
-  constructor() {}
+  constructor(private injector: Injector) {
+    injector.get(BaseLayoutComponent);
+  }
+
+  ngOnInit() {}
+}
+
+@Component({
+  selector: 'stbui-base-layout-toolbar',
+  template: '<ng-content></ng-content>',
+  host: {
+    class: 'base-layout-toolbar'
+  }
+})
+export class BaseLayoutToolbarComponent implements OnInit {
+  constructor(private injector: Injector) {
+    injector.get(BaseLayoutComponent);
+  }
 
   ngOnInit() {}
 }
