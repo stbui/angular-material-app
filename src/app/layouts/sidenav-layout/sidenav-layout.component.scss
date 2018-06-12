@@ -17,7 +17,7 @@
   position: relative;
 }
 
-.base-layout {
+.sidenav-layout {
   &-toolbar {
     display: flex;
     flex-direction: row;
@@ -102,5 +102,23 @@
   }
   &.warn {
     background: #f44336;
+  }
+}
+
+.sidenav {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 240px;
+  min-width: 240px;
+  max-width: 240px;
+  height: auto;
+  z-index: 4;
+  overflow-y: hidden;
+  box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.2),
+    0px 7px 10px 1px rgba(0, 0, 0, 0.14), 0px 2px 16px 1px rgba(0, 0, 0, 0.12);
+  .content {
+    padding: 24px;
+    overflow: auto;
   }
 }

@@ -14,6 +14,7 @@ import {
 @Component({
   selector: 'stbui-base-layout-header',
   template: '<ng-content></ng-content>',
+  encapsulation: ViewEncapsulation.None,
   host: {
     class: 'base-layout-header'
   }
@@ -28,7 +29,7 @@ export class BaseLayoutHeaderComponent implements OnInit {
 @Component({
   selector: 'stbui-base-layout-toolbar',
   template: '<ng-content></ng-content>',
-
+  encapsulation: ViewEncapsulation.None,
   host: {
     class: 'base-layout-toolbar'
   }
@@ -42,6 +43,7 @@ export class BaseLayoutToolbarComponent implements OnInit {
 @Component({
   selector: 'stbui-base-layout-content',
   template: '<ng-content></ng-content>',
+  encapsulation: ViewEncapsulation.None,
   host: {
     class: 'base-layout-content'
   }

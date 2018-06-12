@@ -12,7 +12,7 @@ import { LeftSidenavComponent } from './carded/left-sidenav/left-sidenav.compone
 import { LeftSidenavTabbedComponent } from './carded/left-sidenav-tabbed/left-sidenav-tabbed.component';
 import { RightSidenavComponent } from './carded/right-sidenav/right-sidenav.component';
 
-import { BaseLayoutModule } from '../layouts';
+import { BaseLayoutModule, SidenavLayoutModule } from '../layouts';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
@@ -23,7 +23,8 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     SharedModule,
     PageLayoutsRoutingModule,
     PerfectScrollbarModule,
-    BaseLayoutModule
+    BaseLayoutModule,
+    SidenavLayoutModule
   ],
   declarations: [
     FullwidthComponent,

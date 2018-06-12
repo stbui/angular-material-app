@@ -1,0 +1,22 @@
+<div class="page-layout">
+    <div class="sidenav-layout-header-background" [ngClass]="_header?.color"></div>
+
+    <mat-sidenav-container>
+        <mat-sidenav class="sidenav" position="start" opened="true" mode="side" #sidenav>
+            <div class="content">
+                <ng-content select="stbui-sidenav-layout-side"></ng-content>
+            </div>
+        </mat-sidenav>
+
+        <div class="sidenav-layout-wrapper">
+            <ng-content select="stbui-sidenav-layout-header"></ng-content>
+
+            <div class="sidenav-layout-card">
+                <ng-content select="stbui-sidenav-layout-toolbar"></ng-content>
+                <div class="sidenav-layout-content">
+                    <ng-content></ng-content>
+                </div>
+            </div>
+        </div>
+    </mat-sidenav-container>
+</div>
