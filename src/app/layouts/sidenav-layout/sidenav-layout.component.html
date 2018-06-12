@@ -2,7 +2,7 @@
     <div class="sidenav-layout-header-background" [ngClass]="_header?.color"></div>
 
     <mat-sidenav-container>
-        <mat-sidenav class="sidenav" position="start" opened="true" mode="side" #sidenav>
+        <mat-sidenav class="sidenav" [position]="position" opened="true" mode="side" #sidenav>
             <div class="content">
                 <ng-content select="stbui-sidenav-layout-side"></ng-content>
             </div>

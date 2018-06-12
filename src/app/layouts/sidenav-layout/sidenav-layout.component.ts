@@ -80,6 +80,7 @@ export class SidenavLayoutSideComponent implements OnInit {
   }
 })
 export class SidenavLayoutComponent implements OnInit {
+  @Input() position: 'start' | 'end' = 'start';
   @Input() scrollStrategy;
   @ContentChild(SidenavLayoutHeaderComponent)
   _header: SidenavLayoutHeaderComponent;
