@@ -1,6 +1,75 @@
 <stbui-base-layout>
+    <stbui-base-layout-header color="primary" class="title">
+        Angular Ivy change detection execution: are you prepared?
+    </stbui-base-layout-header>
+
+    <stbui-base-layout-toolbar class="toolbar toolbar-detail">
+        <div class="icon-group">
+            <button class="back" mat-icon-button matTooltip="返回">
+                <mat-icon>arrow_back</mat-icon>
+            </button>
+        </div>
+        <div class="icon-group">
+            <button class="archive" mat-icon-button matTooltip="喜欢">
+                <mat-icon>favorite_border</mat-icon>
+            </button>
+            <button class="spam" mat-icon-button matTooltip="评论">
+                <mat-icon>announcement</mat-icon>
+            </button>
+            <button class="delete" mat-icon-button matTooltip="分享" [matMenuTriggerFor]="shareOptions">
+                <mat-icon>share</mat-icon>
+            </button>
+        </div>
+        <div class="icon-group">
+            <button class="archive" mat-icon-button matTooltip="移动到">
+                <mat-icon>folder</mat-icon>
+            </button>
+            <button class="spam" mat-icon-button matTooltip="标签" [matMenuTriggerFor]="mailLabels">
+                <mat-icon>label</mat-icon>
+            </button>
+            <button class="delete" mat-icon-button matTooltip="删除">
+                <mat-icon>delete</mat-icon>
+            </button>
+        </div>
+        <button class="delete" mat-icon-button matTooltip="更多">
+            <mat-icon>more_vert</mat-icon>
+        </button>
+        <span fxFlex></span>
+        <span>1 - 25 of 0</span>
+        <div class="chevrons">
+            <button mat-icon-button>
+                <mat-icon>chevron_left</mat-icon>
+            </button>
+            <button mat-icon-button>
+                <mat-icon>chevron_right</mat-icon>
+            </button>
+        </div>
+
+        <mat-menu #shareOptions="matMenu">
+            <button mat-menu-item>
+                <mat-icon>label</mat-icon>QQ </button>
+            <button mat-menu-item>
+                <mat-icon>label</mat-icon>微博 </button>
+            <mat-divider></mat-divider>
+            <button mat-menu-item>
+                <mat-icon>label</mat-icon>facebook </button>
+            <button mat-menu-item>
+                <mat-icon>label</mat-icon>twitter </button>
+        </mat-menu>
+
+        <mat-menu #mailLabels="matMenu">
+            <button mat-menu-item>
+                <mat-icon>markunread_mailbox</mat-icon>标记未读 </button>
+            <button mat-menu-item>
+                <mat-icon>label</mat-icon> 标签 </button>
+            <mat-divider></mat-divider>
+            <button mat-menu-item>
+                <mat-icon>delete</mat-icon> 删除 </button>
+        </mat-menu>
+
+    </stbui-base-layout-toolbar>
+
     <div class="main">
-        <p>Angular Ivy change detection execution: are you prepared?</p>
         <p>Let’s see what Angular cooks for us</p>
         <p>While new Ivy renderer is not feature completely yet, many people wonder how it will work and what changes it prepares
             for us.

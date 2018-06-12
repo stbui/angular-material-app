@@ -9,4 +9,8 @@ export class BlogArticleComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {}
+
+  onForwardTriggered() {
+    
+  }
 }
