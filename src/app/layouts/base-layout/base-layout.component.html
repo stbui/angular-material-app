@@ -1,16 +1,12 @@
 <div class="page-layout">
-  <div class="top-bg"></div>
+  <div class="base-layout-header-background" [ngClass]="_header?.color"></div>
 
-  <div class="wrapper">
-    <div class="header" fxLayout="row" fxLayoutAlign="start center">
-      <ng-content select="stbui-base-layout-header"></ng-content>
-    </div>
+  <div class="base-layout-wrapper">
+    <ng-content select="stbui-base-layout-header"></ng-content>
 
-    <div class="card">
-      <div class="toolbar" fxLayout="row" fxLayoutAlign="start center">
-        <ng-content select="stbui-base-layout-toolbar"></ng-content>
-      </div>
-      <div class="content">
+    <div class="base-layout-card">
+      <ng-content select="stbui-base-layout-toolbar"></ng-content>
+      <div class="base-layout-content">
         <ng-content></ng-content>
       </div>
     </div>

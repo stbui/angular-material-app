@@ -5,7 +5,6 @@
 
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FlexLayoutModule } from '@angular/flex-layout';
 import {
   BaseLayoutComponent,
   BaseLayoutHeaderComponent,
@@ -14,7 +13,7 @@ import {
 } from './base-layout.component';
 
 @NgModule({
-  imports: [CommonModule, FlexLayoutModule],
+  imports: [CommonModule],
   declarations: [
     BaseLayoutComponent,
     BaseLayoutHeaderComponent,
