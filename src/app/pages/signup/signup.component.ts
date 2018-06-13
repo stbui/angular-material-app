@@ -8,22 +8,32 @@ import { AuthService } from '../../core/auth.service';
   styleUrls: ['./signup.component.scss']
 })
 export class SignupComponent implements OnInit {
-
   name: string;
   email: string;
   password: string;
   passwordConfirm: string;
 
-  constructor(private router: Router,
-              private auth: AuthService) {
-  }
+  constructor(private router: Router, private auth: AuthService) {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   signUpWithEmail() {
     console.log(this.email, this.password);
-    this.auth.emailSignUp(this.email, this.password).then(() => this.afterSignIn());
+    this.auth
+      .emailSignUp(this.email, this.password)
+      .then(() => this.afterSignIn());
+  }
+
+  signInWithGoogle() {
+    this.auth.googleLogin().then(() => this.afterSignIn());
+  }
+
+  signInWithGithub() {
+    this.auth.githubLogin().then(() => this.afterSignIn());
+  }
+
+  signInAnonymously() {
+    this.auth.anonymousLogin().then(() => this.afterSignIn());
   }
 
   register() {
