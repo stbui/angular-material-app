@@ -2,12 +2,12 @@ $color__inactive: #616161;
 $color__primary: #3F51B5;
 $color__read: #9F9F9F;
 $color__checkbox__star: #616161;
-
+$header__toolbar__height: 64px;
 $prefix: 'stbui-table';
 
 :host {
   display: block;
-  height: 100%;
+  height: calc(100% - #{$header__toolbar__height});
 }
 
 .#{$prefix} {
@@ -74,7 +74,7 @@ $prefix: 'stbui-table';
 }
 
 .manage-sidenav-container {
-  height: calc(100% - 180px);
+  height: calc(100% - 116px);
   > mat-sidenav {
     width: 200px;
   }
