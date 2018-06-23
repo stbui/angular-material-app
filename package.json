@@ -57,7 +57,6 @@
     "ngx-quill": "^3.0.0",
     "normalize.css": "^8.0.0",
     "rxjs": "^6.0.0",
-    "rxjs-compat": "^6.1.0",
     "screenfull": "^3.3.2",
     "zone.js": "^0.8.26"
   },
