@@ -1,7 +1,7 @@
 import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'stb-toolbar',
+  selector: 'app-mail-toolbar',
   templateUrl: './toolbar.component.html',
   styleUrls: ['./toolbar.component.scss']
 })
@@ -17,7 +17,6 @@ export class ToolbarComponent implements OnInit {
   }
 
   onForwardTriggered() {
-    // this.shownMailDetail = null;
     this.onForward.emit(true);
   }
 

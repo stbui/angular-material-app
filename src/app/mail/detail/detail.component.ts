@@ -1,7 +1,7 @@
 import { Component,Input, Output, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'stb-detail',
+  selector: 'app-mail-detail',
   templateUrl: './detail.component.html',
   styleUrls: ['./detail.component.scss']
 })

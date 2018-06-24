@@ -1,7 +1,11 @@
-<div class="inbox" fxLayout="column">
-  <div class="header mat-elevation-z2"></div>
-  <div class="container" fxLayout="row">
-    <div class="navigation" fxFlex="250px" [fxHide]="true" [fxHide.gt-md]="false">
+<stbui-layout>
+
+  <stbui-layout-header>
+    <stbui-search class="search" placeholder="搜索..."></stbui-search>
+  </stbui-layout-header>
+
+  <stbui-layout-sidenav>
+    <div class="sidenav-content" [fxHide]="true" [fxHide.gt-md]="false">
 
       <div class="title-container">
         <mat-icon>mail</mat-icon>
@@ -15,84 +19,51 @@
         </button>
       </div>
 
-      <mat-nav-list class="nav-list">
+      <mat-nav-list>
         <h3 mat-subheader>Inbox</h3>
-        <a class="nav-item mt0" mat-list-item>
-          <h3 class="nav-title" mat-line>
-            <mat-icon class="icon">mail</mat-icon>
-            <span class="text">收件箱 </span>
-          </h3>
-        </a>
-        <a class="nav-item" mat-list-item>
-          <h3 class="nav-title" mat-line>
-            <mat-icon class="icon">group</mat-icon>
-            <span class="text">联系人 </span>
-          </h3>
-        </a>
-        <a class="nav-item" mat-list-item>
-          <h3 class="nav-title" mat-line>
-            <mat-icon class="icon">local_offer</mat-icon>
-            <span class="text">标签 </span>
-          </h3>
-        </a>
+        <mat-list-item>
+          <mat-icon mat-list-icon>mail</mat-icon>
+          <h4 mat-line>收件箱</h4>
+        </mat-list-item>
+        <mat-list-item>
+          <mat-icon mat-list-icon>group</mat-icon>
+          <h4 mat-line>联系人</h4>
+        </mat-list-item>
+        <mat-list-item>
+          <mat-icon mat-list-icon>local_offer</mat-icon>
+          <h4 mat-line>标签</h4>
+        </mat-list-item>
         <mat-divider></mat-divider>
-        <a class="nav-item" mat-list-item>
-          <h3 class="nav-title" mat-line>
-            <mat-icon class="icon">star</mat-icon>
-            <span class="text">星标邮件</span>
-          </h3>
-        </a>
-        <a class="nav-item" mat-list-item>
-          <h3 class="nav-title" mat-line>
-            <mat-icon class="icon">send</mat-icon>
-            <span class="text">已发送</span>
-          </h3>
-        </a>
-        <a class="nav-item" mat-list-item>
-          <h3 class="nav-title" mat-line>
-            <mat-icon class="icon">drafts</mat-icon>
-            <span class="text">草稿箱</span>
-          </h3>
-        </a>
-        <mat-divider></mat-divider>
-        <a class="nav-item" mat-list-item>
-          <h3 class="nav-title" mat-line>
-            <mat-icon class="icon">backspace</mat-icon>
-            <span class="text">垃圾邮件</span>
-          </h3>
-        </a>
-        <a class="nav-item" mat-list-item>
-          <h3 class="nav-title" mat-line>
-            <mat-icon class="icon">delete</mat-icon>
-            <span class="text">回收站</span>
-          </h3>
-        </a>
+        <mat-list-item>
+          <mat-icon mat-list-icon>star</mat-icon>
+          <h4 mat-line>星标邮件</h4>
+        </mat-list-item>
+        <mat-list-item>
+          <mat-icon mat-list-icon>send</mat-icon>
+          <h4 mat-line>已发送</h4>
+        </mat-list-item>
+        <mat-list-item>
+          <mat-icon mat-list-icon>drafts</mat-icon>
+          <h4 mat-line>草稿箱</h4>
+        </mat-list-item>
+        <mat-list-item>
+          <mat-icon mat-list-icon>backspace</mat-icon>
+          <h4 mat-line>垃圾邮件</h4>
+        </mat-list-item>
+        <mat-list-item>
+          <mat-icon mat-list-icon>delete</mat-icon>
+          <h4 mat-line>回收站</h4>
+        </mat-list-item>
       </mat-nav-list>
 
     </div>
+  </stbui-layout-sidenav>
 
-    <div class="content-container" fxFlex fxLayout="column">
+  <app-mail-toolbar [mail]="shownMailDetail" [itemCount]="shownMails.length" (onForward)="onForward($event)"></app-mail-toolbar>
 
-      <stbui-search class="search" placeholder="搜索..."></stbui-search>
-
-      <div class="mails-container mat-elevation-z2" fxFlex>
-        <stb-toolbar [mail]="shownMailDetail" [itemCount]="shownMails.length" (onForward)="onForward($event)"></stb-toolbar>
-
-        <div class="mails">
-          <stb-list *ngIf="!shownMailDetail" [mails]="shownMails | async" (onOpenMailDetial)="openMailDetial($event)"></stb-list>
-          <stb-detail *ngIf="shownMailDetail" [mail]="shownMailDetail"></stb-detail>
-        </div>
-
-      </div>
-
-    </div>
-
+  <div class="mails">
+    <app-mail-list *ngIf="!shownMailDetail" [mails]="shownMails | async" (onOpenMailDetial)="openMailDetial($event)"></app-mail-list>
+    <app-mail-detail *ngIf="shownMailDetail" [mail]="shownMailDetail"></app-mail-detail>
   </div>
-</div>
 
-<mat-menu #mailOptions="matMenu">
-  <button mat-menu-item> <mat-icon>markunread_mailbox</mat-icon>标记未读 </button>
-  <button mat-menu-item> <mat-icon>label</mat-icon> 标签 </button>
-  <mat-divider></mat-divider>
-  <button mat-menu-item> <mat-icon>delete</mat-icon> 删除 </button>
-</mat-menu>
+</stbui-layout>

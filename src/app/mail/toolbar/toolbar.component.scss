@@ -1,17 +1,10 @@
 $color__inactive: #616161;
-$color__primary: #3F51B5;
-$color__read: #9F9F9F;
-$color__checkbox__star: #616161;
-
-$height__search__title: 56px;
-$margin-top__search__title: 42px;
-
 
 .toolbar {
   box-sizing: border-box;
   min-height: 60px;
   max-height: 60px;
-  border-bottom: 1px solid #EEE;
+  border-bottom: 1px solid #eee;
   padding: 8px 24px;
   color: $color__inactive;
 
@@ -22,7 +15,7 @@ $margin-top__search__title: 42px;
 
 .toolbar-detail {
   .icon-group {
-    border-right: 1px solid #EEE;
+    border-right: 1px solid #eee;
   }
 
   .back {

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialogRef } from '@angular/material';
 
 @Component({
-  selector: 'app-compose',
+  selector: 'app-mail-compose',
   templateUrl: './compose.component.html',
   styleUrls: ['./compose.component.scss']
 })
