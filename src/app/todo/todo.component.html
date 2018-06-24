@@ -1,30 +1,17 @@
-<div class="page-layout">
+<stbui-layout>
 
-  <app-todo-header></app-todo-header>
+  <stbui-layout-header>
+    <stbui-search class="search" placeholder="搜索..."></stbui-search>
+  </stbui-layout-header>
 
-  <mat-sidenav-container>
-    <mat-sidenav class="sidenav" mode="side" align="start" opened="true">
-      <app-todo-sidenav></app-todo-sidenav>
-    </mat-sidenav>
+  <stbui-layout-sidenav>
+    <app-todo-sidenav></app-todo-sidenav>
+  </stbui-layout-sidenav>
 
-    <div class="center">
+  <app-todo-toolbar></app-todo-toolbar>
 
-      <div class="header">
-        <stbui-search class="search" placeholder="搜索..."></stbui-search>
-      </div>
+  <app-todo-list>
+    <app-todo-item *ngFor="let todo of todos" [todo]="todo"></app-todo-item>
+  </app-todo-list>
 
-      <div class="content-card stbui-background-white mat-elevation-z7">
-
-        <app-todo-toolbar></app-todo-toolbar>
-
-        <app-todo-list>
-          <app-todo-item *ngFor="let todo of todos" [todo]="todo"></app-todo-item>
-        </app-todo-list>
-
-      </div>
-
-    </div>
-
-  </mat-sidenav-container>
-
-</div>
+</stbui-layout>
