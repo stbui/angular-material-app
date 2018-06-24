@@ -1,0 +1,24 @@
+<div class="page-layout">
+
+  <div class="layout-header-background" [ngClass]="_headerComponent?.color"></div>
+
+  <mat-sidenav-container>
+    <mat-sidenav class="sidenav" mode="side" align="start" opened="true">
+      <ng-content select="stbui-layout-sidenav"></ng-content>
+    </mat-sidenav>
+
+    <div class="center">
+
+      <div class="header">
+        <ng-content select="stbui-layout-header"></ng-content>
+      </div>
+
+      <div class="content-card stbui-background-white mat-elevation-z7">
+        <ng-content></ng-content>
+      </div>
+
+    </div>
+
+  </mat-sidenav-container>
+
+</div>

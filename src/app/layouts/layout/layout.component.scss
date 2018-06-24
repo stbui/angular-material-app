@@ -1,0 +1,88 @@
+$header__height: 200px;
+$content__header__height: 140px;
+
+.page-layout {
+  position: relative;
+  height: 100%;
+
+  > mat-sidenav-container {
+    display: flex;
+    flex: 1;
+    background: none;
+    z-index: 2;
+    width: 100%;
+
+    mat-sidenav {
+      background: none;
+    }
+
+    .sidenav {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      width: 240px;
+      min-width: 240px;
+      max-width: 240px;
+      height: auto;
+      z-index: 4;
+      overflow-y: hidden;
+    }
+
+    > .mat-sidenav-content,
+    > .mat-drawer-content {
+      display: flex;
+      flex: 1;
+      height: auto;
+      overflow: visible;
+    }
+  }
+
+  .center {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    position: relative;
+    z-index: 3;
+    margin-right: 32px;
+
+    .header {
+      height: $content__header__height;
+      min-height: $content__header__height;
+      max-height: $content__header__height;
+    }
+
+    .content-card {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      overflow: hidden;
+      margin-bottom: 16px;
+    }
+  }
+}
+
+.stbui-layout-header {
+  height: $content__header__height;
+  min-height: $content__header__height;
+  max-height: $content__header__height;
+}
+
+.layout-header-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 200px;
+}
+
+.layout-header-background {
+  &.primary {
+    background: #3f51b5;
+  }
+  &.accent {
+    background: #ff4081;
+  }
+  &.warn {
+    background: #f44336;
+  }
+}
