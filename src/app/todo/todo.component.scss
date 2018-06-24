@@ -1,18 +1,6 @@
 $header__height: 200px;
 $content__header__height: 140px;
-
-//
-.mat-primary-bg {
-  background-color: #3f51b5 !important;
-}
-
-.mat-accent-bg {
-  background-color: #03a9f4 !important;
-}
-
-.mat-white-bg {
-  background-color: #fff !important;
-}
+$margin-top__search__title: 42px;
 
 mat-sidenav-container {
   background: none;
@@ -26,14 +14,6 @@ mat-sidenav-container {
 .page-layout {
   position: relative;
   height: 100%;
-
-  .top-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: $header__height;
-  }
 
   > mat-sidenav-container {
     display: flex;
@@ -65,7 +45,6 @@ mat-sidenav-container {
       height: auto;
       overflow: visible;
     }
-
   }
 
   .center {
@@ -79,7 +58,7 @@ mat-sidenav-container {
     .header {
       height: $content__header__height;
       min-height: $content__header__height;
-      max-height: $content__header__height;;
+      max-height: $content__header__height;
     }
 
     .content-card {
@@ -89,40 +68,13 @@ mat-sidenav-container {
       overflow: hidden;
       margin-bottom: 16px;
     }
-
   }
-
 }
 
-//
-.search-wrapper {
-
-  .sidenav-toggle {
-    margin: 0;
-    width: 56px;
-    height: 56px;
-    border-radius: 0;
-    border-right: 1px solid rgba(0, 0, 0, .12);
-  }
-
-  .search {
-    width: 100%;
-    height: 56px;
-    line-height: 56px;
-    padding: 18px;
-
-    input {
-      height: 56px;
-      padding-left: 16px;
-      color: rgba(0, 0, 0, 0.54);
-      border: none;
-      outline: none;
-    }
-  }
-
+.search {
+  margin-top: $margin-top__search__title;
 }
 
-//
 .todo-list {
   overflow: scroll;
 }
@@ -131,7 +83,7 @@ mat-sidenav-container {
   display: block;
   position: relative;
   padding: 16px 16px 16px 24px;
-  border-bottom: 1px solid rgba(0, 0, 0, .08);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
   text-transform: none;
   cursor: pointer;
   flex-shrink: 0;
@@ -172,9 +124,10 @@ mat-sidenav-container {
   margin: 0 !important;
   z-index: 9999 !important;
   opacity: 0.8;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=80)';
   filter: alpha(opacity=80);
-  box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.2), 0px 7px 10px 1px rgba(0, 0, 0, 0.14), 0px 2px 16px 1px rgba(0, 0, 0, 0.12)
+  box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.2),
+    0px 7px 10px 1px rgba(0, 0, 0, 0.14), 0px 2px 16px 1px rgba(0, 0, 0, 0.12);
 }
 
 .gu-hide {
@@ -187,6 +140,6 @@ mat-sidenav-container {
 
 .gu-transit {
   opacity: 0.2;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=20)';
   filter: alpha(opacity=20);
 }

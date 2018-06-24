@@ -22,34 +22,19 @@
   }
 }
 
-.nav {
+.todo-add-button {
+  margin: 20px;
+}
 
-  &-link {
-    text-decoration: none !important;
-    display: flex;
-    align-items: center;
-    height: 48px;
-    padding: 0 24px;
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-    user-select: none;
-    color: currentColor;
+.nav-list {
+}
+.nav-list-item {
+  &.active {
+    background-color: #3f51b5;
+    color: #fff;
+  }
 
-    &.active {
-      background-color: #3f51b5;
-      color: #fff;
-    }
-
-    &-icon {
-      color: #fff;
-      margin-right: 16px;
-      font-size: 16px;
-      width: 16px;
-      height: 16px;
-      min-width: 16px;
-      min-height: 16px;
-      line-height: 16px;
-    }
+  mat-icon {
+    padding-right: 16px;
   }
 }
