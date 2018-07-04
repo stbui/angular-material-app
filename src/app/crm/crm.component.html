@@ -1,3 +1,323 @@
-<p>
-  crm works!
-</p>
+<div fxLayout="column" fxLayout.gt-sm="row" fxLayoutAlign.gt-sm="start start" class="m-b-20">
+  <div fxLayout="column" fxLayout.gt-xs="row" fxLayoutAlign.gt-xs="start start" fxFlex.gt-xs="calc(50% - 24px)">
+    <div class="widget" fxFlex.gt-xs>
+      <stb-widget-state value="142" icon="group_add" backgroundcolor="linear-gradient(60deg, #8C99E0, #6572B8)" textcolor="white"
+        property="新增客户数" changepercent="77" changeicon="trending_up"></stb-widget-state>
+    </div>
+    <div class="widget" fxFlex.gt-xs>
+      <stb-widget-state value="595" icon="pageview" backgroundcolor="linear-gradient(60deg, #4DD0E2, #4CA8BA)" textcolor="white"
+        property="跟进次数" changepercent="30" changeicon="trending_up"></stb-widget-state>
+    </div>
+  </div>
+
+  <div fxLayout="column" fxLayout.gt-xs="row" fxLayoutAlign.gt-xs="start start" fxFlex.gt-xs="calc(50% - 24px)">
+    <div class="widget" fxFlex.gt-xs>
+      <stb-widget-state value="30232" icon="monetization_on" backgroundcolor="linear-gradient(60deg, #81C683, #62A864)" textcolor="white"
+        property="成交总额" changepercent="77" changeicon="trending_down"></stb-widget-state>
+    </div>
+    <div class="widget" fxFlex.gt-xs>
+      <stb-widget-state value="5" icon="playlist_add" backgroundcolor="linear-gradient(60deg, #EAC459, #DCAC3F)" textcolor="white"
+        property="成交单数" changepercent="77" changeicon="trending_up" valueprefix="$"></stb-widget-state>
+    </div>
+  </div>
+
+</div>
+
+
+<div fxLayout="row wrap">
+  <div fxFlex="50">
+
+    <div class="card mat-elevation-z2 m-b-20">
+      <div class="card-header" fxLayout="row" fxLayoutAlign="space-between center">
+        <div>我的任务</div>
+        <div fxLayout="row">
+          <button mat-icon-button>
+            <mat-icon>more_vert</mat-icon>
+          </button>
+        </div>
+      </div>
+      <div class="card-content" fxLayout="column">
+        <div class="task-container" fxLayout="column">
+          <div class="task" fxLayout="row" fxLayoutAlign="space-between center">
+            <div fxLayout="row" fxLayoutAlign="start center">
+              <mat-checkbox class="checkbox" color="primary"></mat-checkbox>
+              <div>拜访客户了解需求</div>
+            </div>
+
+            <div fxLayout="row" fxLayoutAlign="end center">
+              <div>2018.01.01</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="task-container" fxLayout="column">
+          <div class="task" fxLayout="row" fxLayoutAlign="space-between center">
+            <div fxLayout="row" fxLayoutAlign="start center">
+              <mat-checkbox class="checkbox" color="primary"></mat-checkbox>
+              <div>组织客户进行产品培训</div>
+            </div>
+
+            <div fxLayout="row" fxLayoutAlign="end center">
+              <div>2018.02.01</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="task-container" fxLayout="column">
+          <div class="task" fxLayout="row" fxLayoutAlign="space-between center">
+            <div fxLayout="row" fxLayoutAlign="start center">
+              <mat-checkbox class="checkbox" color="primary"></mat-checkbox>
+              <div>跟踪客户反馈的问题</div>
+            </div>
+
+            <div fxLayout="row" fxLayoutAlign="end center">
+              <div>2018.03.01</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="task-container" fxLayout="column">
+          <div class="task" fxLayout="row" fxLayoutAlign="space-between center">
+            <div fxLayout="row" fxLayoutAlign="start center">
+              <mat-checkbox class="checkbox" color="primary"></mat-checkbox>
+              <div>与stbui达成合作意向</div>
+            </div>
+
+            <div fxLayout="row" fxLayoutAlign="end center">
+              <div>2018.04.01</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="card-footer" fxLayout="row">
+        <div fxLayout="row" fxLayoutAlign="start center">
+          <button mat-raised-button color="primary" disabled>
+            <mat-icon>flag</mat-icon>
+            标记完成
+          </button>
+        </div>
+
+        <span fxFlex></span>
+
+        <div fxLayout="row" fxLayoutAlign="end center">
+          <button mat-button>查看所有任务</button>
+          <button mat-button>添加任务</button>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <div fxFlex="50">
+    <div class="card mat-elevation-z2">
+      <div class="card-header" fxLayout="row" fxLayoutAlign="space-between center">
+        <div>我的审批</div>
+        <div fxLayout="row">
+          <button mat-icon-button>
+            <mat-icon>more_vert</mat-icon>
+          </button>
+        </div>
+      </div>
+      <div class="card-content" fxLayout="column">
+        <div class="task-container" fxLayout="column">
+          <div class="task" fxLayout="row" fxLayoutAlign="space-between center">
+            <div fxLayout="row" fxLayoutAlign="start center">
+              <div>请假申请</div>
+            </div>
+
+            <div fxLayout="row" fxLayoutAlign="end center">
+              <div>2018.04.01</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="task-container" fxLayout="column">
+          <div class="task" fxLayout="row" fxLayoutAlign="space-between center">
+            <div fxLayout="row" fxLayoutAlign="start center">
+              <div>出差申请</div>
+            </div>
+
+            <div fxLayout="row" fxLayoutAlign="end center">
+              <div>2018.04.01</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="task-container" fxLayout="column">
+          <div class="task" fxLayout="row" fxLayoutAlign="space-between center">
+            <div fxLayout="row" fxLayoutAlign="start center">
+              <div>报销申请</div>
+            </div>
+
+            <div fxLayout="row" fxLayoutAlign="end center">
+              <div>2018.04.01</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="task-container" fxLayout="column">
+          <div class="task" fxLayout="row" fxLayoutAlign="space-between center">
+            <div fxLayout="row" fxLayoutAlign="start center">
+              <div>客户拜访申请</div>
+            </div>
+
+            <div fxLayout="row" fxLayoutAlign="end center">
+              <div>2018.04.01</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="card-footer" fxLayout="row" fxLayoutAlign="end center">
+        <button mat-button>查看所有审批</button>
+        <button mat-button>添加审批</button>
+      </div>
+    </div>
+  </div>
+
+  <div fxFlex="50">
+    <div class="card mat-elevation-z2 m-b-20">
+      <div class="card-header" fxLayout="row" fxLayoutAlign="space-between center">
+        <div>我的项目</div>
+        <div fxLayout="row">
+          <button mat-icon-button>
+            <mat-icon>more_vert</mat-icon>
+          </button>
+        </div>
+      </div>
+      <div class="card-content" fxLayout="column">
+        <div class="task-container" fxLayout="column">
+          <div class="task" fxLayout="row" fxLayoutAlign="space-between center">
+            <div fxLayout="row" fxLayoutAlign="start center">
+              <div>社区卫生服务中心改建项目</div>
+            </div>
+
+            <div fxLayout="row" fxLayoutAlign="end center">
+              <div>2018.04.01</div>
+            </div>
+          </div>
+        </div>
+        <div class="task-container" fxLayout="column">
+          <div class="task" fxLayout="row" fxLayoutAlign="space-between center">
+            <div fxLayout="row" fxLayoutAlign="start center">
+              <div>家居保护垫及塑料挂钩生产线建设项目</div>
+            </div>
+
+            <div fxLayout="row" fxLayoutAlign="end center">
+              <div>2018.04.01</div>
+            </div>
+          </div>
+        </div>
+        <div class="task-container" fxLayout="column">
+          <div class="task" fxLayout="row" fxLayoutAlign="space-between center">
+            <div fxLayout="row" fxLayoutAlign="start center">
+              <div>生态公益林建设工程</div>
+            </div>
+
+            <div fxLayout="row" fxLayoutAlign="end center">
+              <div>2018.04.01</div>
+            </div>
+          </div>
+        </div>
+        <div class="task-container" fxLayout="column">
+          <div class="task" fxLayout="row" fxLayoutAlign="space-between center">
+            <div fxLayout="row" fxLayoutAlign="start center">
+              <div>天燃气报警系统改造工程</div>
+            </div>
+
+            <div fxLayout="row" fxLayoutAlign="end center">
+              <div>2018.04.01</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer" fxLayout="row" fxLayoutAlign="end center">
+        <button mat-button>查看所有项目</button>
+      </div>
+    </div>
+  </div>
+
+  <div fxFlex="50">
+
+    <div class="card mat-elevation-z2 m-b-20">
+      <div class="card-header" fxLayout="row" fxLayoutAlign="space-between center">
+        <div>我的消息</div>
+        <div fxLayout="row">
+          <button mat-icon-button>
+            <mat-icon>more_vert</mat-icon>
+          </button>
+        </div>
+      </div>
+      <div class="card-content" fxLayout="column">
+        <mat-list>
+          <mat-list-item>
+            <img mat-list-avatar src="assets/images/avatars/noavatar.png">
+            <h3 mat-line>小姐姐</h3>
+            <p mat-line>
+              人家有的是背景儿，我有的只是背影儿。
+            </p>
+          </mat-list-item>
+          <mat-divider></mat-divider>
+          <mat-list-item>
+            <img mat-list-avatar src="assets/images/avatars/noavatar.png">
+            <h3 mat-line>小哥哥</h3>
+            <p mat-line>
+              时间过的真快，刚起床就天黑了。
+            </p>
+          </mat-list-item>
+          <mat-divider></mat-divider>
+          <mat-list-item>
+            <img mat-list-avatar src="assets/images/avatars/noavatar.png">
+            <h3 mat-line>小李</h3>
+            <p mat-line>
+              从小学到大学，唯一不变的就是一颗不想念书的心。
+            </p>
+          </mat-list-item>
+        </mat-list>
+      </div>
+      <div class="card-footer" fxLayout="row" fxLayoutAlign="end center">
+        <button mat-button>最新消息</button>
+      </div>
+    </div>
+
+  </div>
+
+  <div fxFlex="50">
+    <div class="card mat-elevation-z2">
+      <div class="card-header" fxLayout="row" fxLayoutAlign="space-between center">
+        <div>我的日志</div>
+        <div fxLayout="row">
+          <button mat-icon-button>
+            <mat-icon>more_vert</mat-icon>
+          </button>
+        </div>
+      </div>
+      <div class="card-content" fxLayout="column">
+      </div>
+      <div class="card-footer" fxLayout="row" fxLayoutAlign="end center">
+        <button mat-button>最新日志</button>
+      </div>
+    </div>
+  </div>
+
+  <div fxFlex="50">
+    <div class="card mat-elevation-z2">
+      <div class="card-header" fxLayout="row" fxLayoutAlign="space-between center">
+        <div>我的会议</div>
+        <div fxLayout="row">
+          <button mat-icon-button>
+            <mat-icon>more_vert</mat-icon>
+          </button>
+        </div>
+      </div>
+      <div class="card-content" fxLayout="column">
+      </div>
+      <div class="card-footer" fxLayout="row" fxLayoutAlign="end center">
+        <button mat-button>最新会议</button>
+      </div>
+    </div>
+  </div>
+
+</div>
