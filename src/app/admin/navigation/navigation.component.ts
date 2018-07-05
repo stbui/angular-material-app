@@ -20,7 +20,7 @@ export class NavigationComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-    this.addSubitemToNavigation()
+    // this.addSubitemToNavigation()
   }
 
   ngOnDestroy() {
