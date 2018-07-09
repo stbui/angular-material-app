@@ -5,6 +5,7 @@
 
 export const environment = {
   production: false,
+  serverUrl:'/',
   firebase: {
     apiKey: 'AIzaSyAGcYsQtc9xqqEKstnoO3WasuZxJmKTwNc',
     authDomain: 'angular-material-app-stbui.firebaseapp.com',
