@@ -34,7 +34,8 @@
 - 接入 firebase， 构建应用提供良好的用户体验
 - 不定期更新，使用前端前沿技术开发新功能
 
-![demo image](src/assets/images-demo/20170802104620.png)
+![demo image](src/assets/cover-home.png)
+![demo image](src/assets/cover-app.png)
 
 ### Get Start
 
