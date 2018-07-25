@@ -1,6 +1,6 @@
 # FAQ
 
-##### window 上安装angular cli 依赖报错
+##### window 上安装 angular cli 依赖报错
 
 ```
 execSync@1.0.2 install C:\Users\User\AppData\Roaming\npm\node_modules\angu
@@ -40,6 +40,13 @@ npm install -g node-gyp
 ```
 npm install --global windows-build-tools
 ```
+
 ```
 npm install -g angular-cli
+```
+
+##### npm install 命令时报错
+
+```
+npm cache clean --force
 ```

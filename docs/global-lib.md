@@ -1,6 +1,6 @@
 # 全局库使用
 
-- angular.json \*
+- angular.json
 
 ```
 {

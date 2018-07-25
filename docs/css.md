@@ -36,6 +36,7 @@ stbui-background-material
 > 修改默认主题:
 
 /src/app/core/config.service.ts
+
 ```
 constructor() {
     this.defaultSettings = {
