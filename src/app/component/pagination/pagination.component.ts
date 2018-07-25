@@ -1,4 +1,10 @@
-import {
+/**
+ * @license
+ * Copyright Stbui All Rights Reserved.
+ * https://github.com/stbui
+ */
+
+ import {
   Component,
   Input,
   Output,
@@ -17,7 +23,6 @@ import {
   encapsulation: ViewEncapsulation.None
 })
 export class PaginationComponent {
-  // @Input() total: number = 10;
   @Input()
   set total(value) {
     this.totalPages = value;
