@@ -1,0 +1,49 @@
+<h2 mat-dialog-title>添加</h2>
+<mat-dialog-content>
+  <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+    <mat-form-field class="display-block">
+      <input matInput placeholder="请输入姓名" formControlName="username" required maxlength="10">
+      <mat-error *ngIf="formErrors.username">{{formErrors.username}}</mat-error>
+    </mat-form-field>
+    <mat-form-field class="display-block">
+      <input matInput placeholder="请输入邮箱" formControlName="email">
+      <mat-error *ngIf="formErrors.email">{{formErrors.email}}</mat-error>
+    </mat-form-field>
+    <mat-form-field class="display-block">
+      <input matInput placeholder="请输入电话" formControlName="email">
+      <mat-error *ngIf="formErrors.email">{{formErrors.email}}</mat-error>
+    </mat-form-field>
+    <mat-form-field class="display-block">
+      <input matInput placeholder="请输入手机" formControlName="phone" minlength="11" maxlength="11">
+      <mat-hint align="end">{{addForm.value.phone?.length || 0}}/11</mat-hint>
+    </mat-form-field>
+
+    <mat-form-field class="display-block">
+      <input matInput placeholder="请输入地区" formControlName="email">
+      <mat-error *ngIf="formErrors.email">{{formErrors.email}}</mat-error>
+    </mat-form-field>
+    <mat-form-field class="display-block">
+      <input matInput placeholder="请输入地址" formControlName="email">
+      <mat-error *ngIf="formErrors.email">{{formErrors.email}}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="display-block">
+      <input matInput placeholder="请输入职务" formControlName="email">
+      <mat-error *ngIf="formErrors.email">{{formErrors.email}}</mat-error>
+    </mat-form-field>
+    <mat-form-field class="display-block">
+      <input matInput placeholder="请输入公司名称" formControlName="email">
+      <mat-error *ngIf="formErrors.email">{{formErrors.email}}</mat-error>
+    </mat-form-field>
+    <mat-form-field class="display-block">
+      <input matInput placeholder="请输入网址" formControlName="email">
+      <mat-error *ngIf="formErrors.email">{{formErrors.email}}</mat-error>
+    </mat-form-field>
+    <mat-form-field class="display-block">
+      <input matInput placeholder="请输入跟进状态" formControlName="email">
+      <mat-error *ngIf="formErrors.email">{{formErrors.email}}</mat-error>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" type="submit" [disabled]="!addForm.valid">提交</button>
+  </form>
+</mat-dialog-content>

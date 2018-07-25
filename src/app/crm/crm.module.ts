@@ -1,4 +1,7 @@
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
+import { NgxDatatableModule } from '@swimlane/ngx-datatable';
+
 import { SharedModule } from '../shared/shared.module';
 import { WidgetModule } from '../component/widget/widget.module';
 import { CrmRoutingModule } from './crm.routing';
@@ -14,13 +17,21 @@ import {
 import { OpportunitiesComponent } from './opportunities/opportunities.component';
 import { ContractComponent } from './contract/contract.component';
 import { ProductComponent } from './product/product.component';
+import { NewComponent } from './lead/new/new.component';
 
 import { LeadService } from './lead/lead.service';
 
 @NgModule({
-  imports: [SharedModule, CrmRoutingModule, WidgetModule],
+  imports: [
+    ReactiveFormsModule,
+    NgxDatatableModule,
+    SharedModule,
+    CrmRoutingModule,
+    WidgetModule
+  ],
   declarations: [
     LeadComponent,
+    NewComponent,
     CustomerComponent,
     CustomerCommonComponent,
     ContactComponent,
@@ -30,7 +41,7 @@ import { LeadService } from './lead/lead.service';
     ContractComponent,
     ProductComponent
   ],
-  entryComponents: [ContactUpdateComponent],
+  entryComponents: [ContactUpdateComponent, NewComponent],
   providers: [{ provide: 'LeadService', useClass: LeadService }]
 })
 export class CrmModule {}
