@@ -1,3 +1,41 @@
+<a name="0.6.1"></a>
+# [0.6.1]()
+
+
+### Bug Fixes
+
+* [#30](https://github.com/stbui/angular-material-app/issues/30) calendar bug ([73973bc](https://github.com/stbui/angular-material-app/commit/73973bc))
+* **component:** specify default color ([848ac82](https://github.com/stbui/angular-material-app/commit/848ac82))
+* **materials:** 修复calendar locale ([b08d832](https://github.com/stbui/angular-material-app/commit/b08d832))
+* [#39](https://github.com/stbui/angular-material-app/issues/39) ([fc7e933](https://github.com/stbui/angular-material-app/commit/fc7e933))
+* add material divider ([883976d](https://github.com/stbui/angular-material-app/commit/883976d))
+* build compiler error ([4f5ccad](https://github.com/stbui/angular-material-app/commit/4f5ccad))
+* 修复在注册页按钮事件添加 ([7916abd](https://github.com/stbui/angular-material-app/commit/7916abd))
+* 修改footer日期 ([57fbc71](https://github.com/stbui/angular-material-app/commit/57fbc71))
+
+
+### Features
+
+* blog页面增加toolbar ([bf21d3a](https://github.com/stbui/angular-material-app/commit/bf21d3a))
+* 新增 chat-widget 组件 ([286f67f](https://github.com/stbui/angular-material-app/commit/286f67f))
+* 新增 speed dial ([cc60691](https://github.com/stbui/angular-material-app/commit/cc60691))
+* 完善blog页面 ([7c338c7](https://github.com/stbui/angular-material-app/commit/7c338c7))
+* **layout:** 新增页面布局示例 ([2cd453a](https://github.com/stbui/angular-material-app/commit/2cd453a))
+* 新增http拦截器缓存数据 ([743cba8](https://github.com/stbui/angular-material-app/commit/743cba8))
+* **component:** 完善speed-dial组件功能 ([3d549d5](https://github.com/stbui/angular-material-app/commit/3d549d5))
+* 新增layout组件 ([dae2615](https://github.com/stbui/angular-material-app/commit/dae2615))
+* 新增layout组件页面 ([5d89206](https://github.com/stbui/angular-material-app/commit/5d89206))
+* 更新crm页面 ([f6cda24](https://github.com/stbui/angular-material-app/commit/f6cda24))
+* 添加导航菜单动态创建菜单项 ([90eae28](https://github.com/stbui/angular-material-app/commit/90eae28))
+* **compoent:** 新增 websocket 组件 ([58e52d6](https://github.com/stbui/angular-material-app/commit/58e52d6))
+* **component:** 更新speed dial组件功能 ([5590276](https://github.com/stbui/angular-material-app/commit/5590276))
+* **core:** 新增api前缀service ([382a072](https://github.com/stbui/angular-material-app/commit/382a072))
+* **core:** 新增httpCache service ([c1cf88a](https://github.com/stbui/angular-material-app/commit/c1cf88a))
+* **demo:** 增加chatWidget组件demo ([b78dcda](https://github.com/stbui/angular-material-app/commit/b78dcda))
+* **layout:** 增加布局页面组件 ([1376ace](https://github.com/stbui/angular-material-app/commit/1376ace))
+* **layout:** 新增页面布局示例 ([7b60d18](https://github.com/stbui/angular-material-app/commit/7b60d18))
+
+
 # 0.6.0
 
 ### Update

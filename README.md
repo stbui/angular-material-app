@@ -1,10 +1,10 @@
-# 中后台前端应用框架 [![国内demo](https://img.shields.io/badge/%e5%9b%bd%e5%86%85-demo-brightgreen.svg?style=flat-square)](http://stbui.oss-cn-beijing.aliyuncs.com/angular-material-app/index.html)  [![国外demo](https://img.shields.io/badge/%e5%9b%bd%e5%a4%96-demo-brightgreen.svg?style=flat-square)](https://surgeon-canary-67612.netlify.com/)  [![github](https://img.shields.io/badge/github-demo-brightgreen.svg?style=flat-square)](https://stbui.github.io/angular-material-app/) [![国外doc](https://img.shields.io/badge/%e5%9b%bd%e5%a4%96-doc-brightgreen.svg?style=flat-square)](https://translator-rhinoceros-87537.netlify.com/)
+# 中后台前端应用框架 [![国内demo](https://img.shields.io/badge/%e5%9b%bd%e5%86%85-demo-brightgreen.svg?style=flat-square)](http://stbui.oss-cn-beijing.aliyuncs.com/angular-material-app/index.html) [![国外demo](https://img.shields.io/badge/%e5%9b%bd%e5%a4%96-demo-brightgreen.svg?style=flat-square)](https://surgeon-canary-67612.netlify.com/) [![github](https://img.shields.io/badge/github-demo-brightgreen.svg?style=flat-square)](https://stbui.github.io/angular-material-app/) [![国外doc](https://img.shields.io/badge/%e5%9b%bd%e5%a4%96-doc-brightgreen.svg?style=flat-square)](https://translator-rhinoceros-87537.netlify.com/)
 
 <p align="center">
   <a href="./" target="blank"><img src="src/assets/logo.png" alt="stbui Logo" width="128" /></a>
 </p>
 
-基于最新`Angular 6`框架与`Material 2`技术的企业级中后台前端应用框架，涵盖了大量的常用组件和基础功能，您可以快速开发各种MIS系统，如CMS、OA、CRM、ERP、POS等，最大程度上帮助企业节省时间成本和费用开支。
+基于最新`Angular 6`框架与`Material 2`技术的企业级中后台前端应用框架，涵盖了大量的常用组件和基础功能，您可以快速开发各种后台系统，最大程度上帮助企业节省时间成本和费用开支。
 
 [![Travis](https://travis-ci.org/stbui/angular-material-app.svg?branch=master)](https://travis-ci.org/stbui/angular-material-app)
 [![Docker Build Status](https://img.shields.io/docker/build/stbui/angular-material-app.svg?style=flat-square)](https://hub.docker.com/r/stbui/angular-material-app/)
@@ -13,15 +13,13 @@
 [![Join the chat at https://gitter.im/angular-material-app](https://badges.gitter.im/stbui/angular-material-app.svg)](https://gitter.im/angular-material-app/Lobby?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
 [![Powered_by](https://img.shields.io/badge/Powered_by-stbui-green.svg?style=flat)](https://github.com/stbui/angular-material-app)
 
-
-### Plaform 
+### Plaform
 
 [![Angular](https://img.shields.io/badge/Angular-6.0.0-brightgreen.svg?style=flat-square)](https://github.com/angular/angular)
 [![Angular-cli](https://img.shields.io/badge/Angular.cli-6.0.0-brightgreen.svg?style=square)](https://github.com/angular/angular-cli)
-[![Angular Material 2](https://img.shields.io/badge/Material%202-6.0.0-brightgreen.svg?style=square)](https://github.com/angular/material2)
+[![Angular Material 2](https://img.shields.io/badge/Material%202-6.4.1-brightgreen.svg?style=square)](https://github.com/angular/material2)
 [![Flex-Layout](https://img.shields.io/badge/Flex.Layout-6.0.0-brightgreen.svg?style=square)](https://github.com/angular/flex-layout)
 [![Angular FireBase](https://img.shields.io/badge/Firebase-5.0.0.rc.9-brightgreen.svg?style=square)](https://github.com/angular/angularfire2)
-
 
 ### Feature
 
@@ -38,17 +36,19 @@
 
 ![demo image](src/assets/images-demo/20170802104620.png)
 
-
 ### Get Start
 
 ```
 git clone --depth=1 https://github.com/stbui/angular-material-app.git
+
 cd angular-material-app
+
 npm install
 npm run start
 ```
 
 打开你的浏览器，访问
+
 ```
 http://127.0.0.1:4200
 ```
@@ -58,3 +58,5 @@ http://127.0.0.1:4200
 ```
 npm run build
 ```
+
+在项目中将生成 dist 文件夹，包含了发布的静态资源
