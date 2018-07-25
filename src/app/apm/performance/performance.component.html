@@ -1,52 +1,18 @@
-<div class="error-container">
-  <perf-view></perf-view>
+<apm-performance-view></apm-performance-view>
 
-  <stbui-search placeholder="输入过滤条件"></stbui-search>
+<div class="m-t-20" (clickOutside)="onClickOutside($event)">
 
-  <div class="error-main mat-elevation-z2">
-    <div class="error-toolbar" fxLayout="row" fxLayoutAlign="start center">
-      <div class="start-wrapper" fxLayout="row" fxLayoutAlign="start center" fxFlex>
-        <span>资源地址</span>
-      </div>
-      <div class="content-wrapper" fxLayout="row" fxLayoutAlign="start center" fxFlex="240px">
-        <span>响应时间</span>
-      </div>
-      <div class="content-wrapper" fxLayout="row" fxLayoutAlign="start center" fxFlex="120px">
-        <span>DNS时间</span>
-      </div>
-      <div class="content-wrapper" fxLayout="row" fxLayoutAlign="start center" fxFlex="120px">
-        <span>资源加载时间</span>
-      </div>
+  <ngx-datatable *ngIf="rows?.length" class="material" [rows]="rows" [selectionType]="'checkbox'" [loadingIndicator]="loadingIndicator"
+    [columnMode]="'force'" [headerHeight]="50" [footerHeight]="50" [rowHeight]="'auto'" [limit]="10" (select)='onSelect($event)'
+    [selected]="selected" [reorderable]="reorderable" [scrollbarH]="true">
 
-      <div class="end-wrapper" fxLayout="row" fxLayoutAlign="end center" fxFlex="80px">
-        <span>白屏时间</span>
-      </div>
+    <ngx-datatable-column name="id" prop="id" width="80" [canAutoResize]="false"></ngx-datatable-column>
+    <ngx-datatable-column name="版本" prop="releaseStage" [width]="50"></ngx-datatable-column>
+    <ngx-datatable-column name="响应时间" prop="connect" width="80" [canAutoResize]="false"></ngx-datatable-column>
+    <ngx-datatable-column name="DNS查询时间" prop="dns" width="100" [canAutoResize]="false"></ngx-datatable-column>
+    <ngx-datatable-column name="白屏时间" prop="black_waiting_time" width="100" [canAutoResize]="false"></ngx-datatable-column>
+    <ngx-datatable-column name="资源加载时间" prop="total_time" width="100" [canAutoResize]="false"></ngx-datatable-column>
+    <ngx-datatable-column name="访问地址" prop="url" width="500"></ngx-datatable-column>
+  </ngx-datatable>
 
-    </div>
-
-    <div class="error-list">
-      <div class="error" fxLayout="row" *ngFor="let data of data.datas" (click)="onDetailTriggered(data)">
-        <div class="content-wrapper" fxLayout="row" fxLayoutAlign="start center" fxFlex>
-          <span><a class="link" target="blank" [href]="data.url">{{ data.url }}</a></span>
-        </div>
-
-        <div class="start-wrapper" fxLayout="row" fxLayoutAlign="start center" fxFlex="240px">
-          <span>{{ data.response }}</span>
-        </div>
-
-        <div class="content-wrapper" fxLayout="row" fxLayoutAlign="start center" fxFlex="120px">
-          <span>{{ data.dns }}</span>
-        </div>
-
-        <div class="content-wrapper" fxLayout="row" fxLayoutAlign="start center" fxFlex="120px">
-          <span>{{ data.load }}</span>
-        </div>
-
-        <div class="end-wrapper" fxLayout="row" fxLayoutAlign="end center" fxFlex="80px">
-          <span>{{ data.black_waiting_time }}</span>
-        </div>
-      </div>
-    </div>
-
-  </div>
 </div>
