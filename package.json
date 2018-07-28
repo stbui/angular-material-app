@@ -9,8 +9,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --hmr --open --configuration=development",
-    "build": "ng build --configuration=production",
-    "build:github": "ng build --configuration=github --base-href=/angular-material-app/",
+    "build": "ng build --configuration=production --stats-json",
+    "build:github": "ng build --configuration=github --stats-json --base-href=/angular-material-app/",
     "publish:github": "gh-pages -d dist",
     "ngsw-config": "./node_modules/.bin/ngsw-config dist src/ngsw-config.json",
     "ngsw-copy": "cp node_modules/@angular/service-worker/ngsw-worker.js dist/",
@@ -25,7 +25,8 @@
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "webpack-bundle-analyzer": "webpack-bundle-analyzer dist/stats.json"
   },
   "private": true,
   "dependencies": {
@@ -83,6 +84,7 @@
     "protractor": "~5.3.0",
     "ts-node": "~5.0.1",
     "tslint": "~5.9.1",
-    "typescript": "~2.7.2"
+    "typescript": "~2.7.2",
+    "webpack-bundle-analyzer": "^2.13.1"
   }
 }
