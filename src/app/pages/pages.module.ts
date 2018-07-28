@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { SharedModule } from '../shared/shared.module';
-import { PaginationModule } from '../component/pagination';
+import { PaginationModule, GithubButtonModule } from '../component';
 import { FileSizePipe } from '../component/file-upload/file-size.pipe';
 import { BaseLayoutModule } from '../layouts';
 
@@ -24,7 +24,8 @@ import { ProjectComponent } from './project/project.component';
     SharedModule,
     PaginationModule,
     PagesRoutingModule,
-    BaseLayoutModule
+    BaseLayoutModule,
+    GithubButtonModule
   ],
   declarations: [
     PagesComponent,

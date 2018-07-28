@@ -37,7 +37,6 @@ export class GithubButtonComponent implements OnInit {
   ngOnInit() {
     const url = `${this.baseApi}/${this.user}/${this.repo}`;
     this.http.get(url).subscribe(res => {
-      console.log(res);
       this.repository = res;
     });
   }
