@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { SharedModule } from '../shared/shared.module';
 import { PaginationModule } from '../component/pagination';
-import { BaseLayoutModule } from '../layouts/index';
+import { FileSizePipe } from '../component/file-upload/file-size.pipe';
+import { BaseLayoutModule } from '../layouts';
 
 import { PagesRoutingModule } from './pages.routing';
 import { PagesComponent } from './pages.component';
@@ -15,6 +16,7 @@ import { UserComponent } from './user/user.component';
 import { UserService } from './user/user.service';
 import { FileManagerComponent } from './file-manager/file-manager.component';
 import { FileManagerFirebase } from './file-manager/file-manager.firebase';
+import { FileManagerService } from './file-manager/file-manager.service';
 import { ProjectComponent } from './project/project.component';
 
 @NgModule({
@@ -34,11 +36,13 @@ import { ProjectComponent } from './project/project.component';
     ProfileComponent,
     UserComponent,
     FileManagerComponent,
-    ProjectComponent
+    ProjectComponent,
+    FileSizePipe
   ],
   providers: [
     { provide: 'UserService', useClass: UserService },
-    FileManagerFirebase
+    FileManagerFirebase,
+    FileManagerService
   ]
 })
 export class PagesModule {}

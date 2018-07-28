@@ -1,6 +1,6 @@
 $color__inactive: #616161;
-$color__primary: #3F51B5;
-$color__read: #9F9F9F;
+$color__primary: #3f51b5;
+$color__read: #9f9f9f;
 $color__checkbox__star: #616161;
 
 $prefix: 'stbui-table';
@@ -20,8 +20,8 @@ $prefix: 'stbui-table';
   font-size: 15px;
   text-decoration: none;
   color: $color__inactive;
-  transition: background .1s ease-in-out;
-  border-bottom: 1px solid #EEE;
+  transition: background 0.1s ease-in-out;
+  border-bottom: 1px solid #eee;
   cursor: pointer;
 
   &.read {
@@ -30,18 +30,15 @@ $prefix: 'stbui-table';
   }
 
   &:hover {
-    background: #EEE;
+    background: #eee;
   }
-}
-
-.#{$prefix}-container {
-  margin: 15px;
 }
 
 .#{$prefix}-main {
   margin-top: 10px;
-  max-height: 420px;
-  overflow: hidden;
+  max-height: 500px;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .#{$prefix}-toolbar {
@@ -64,33 +61,20 @@ $prefix: 'stbui-table';
 
 .content-wrapper {
   white-space: nowrap;
-  overflow-x: hidden;
-  display: block;
-  margin: 0;
 }
 
 .end-wrapper {
   margin-left: 16px;
 }
 
-.manage-sidenav-container {
-  > mat-sidenav {
-    width: 320px;
-  }
-  .header {
-    height: 200px;
-    background: linear-gradient(90deg, #ffa100, #fc0);
-  }
-}
+.header {
+  position: relative;
+  height: 200px;
+  background: linear-gradient(90deg, #fc0, #ffa100);
+  padding: 16px;
 
-.manage-sidenav-content {
-
-  .header {
-    position: relative;
-    height: 200px;
-    background: linear-gradient(90deg, #fc0, #ffa100);
-    //linear-gradient(90deg,#00b3ff,#08f)
-    //linear-gradient(90deg,#00d9bf,#00d977)
+  > button {
+    margin-right: 16px;
   }
 }
 
