@@ -1,0 +1,8 @@
+<div class="stbui-message-wrapper" *ngIf="opened">
+  <mat-icon class="stbui-message-icon">{{icon}}</mat-icon>
+  <div class="stbui-message-labels">
+    <div class="stbui-message-label" *ngIf="label">{{label}}</div>
+    <div class="stbui-message-sublabel" *ngIf="sublabel">{{sublabel}}</div>
+  </div>
+  <ng-content select="[stbui-message-actions]"></ng-content>
+</div>

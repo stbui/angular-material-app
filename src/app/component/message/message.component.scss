@@ -1,0 +1,30 @@
+:host {
+  display: block;
+}
+
+.stbui-message {
+  &-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: start;
+    padding: 8px 16px;
+    min-height: 52px;
+    max-width: 100%;
+  }
+
+  &-icon {
+    margin-right: 16px;
+  }
+
+  &-labels {
+    flex: 1;
+  }
+
+  &-label {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 24px;
+  }
+}
