@@ -1,9 +1,14 @@
+:host {
+  display: block;
+  margin: 24px;
+}
 
-.profile {
+.display-block {
+  display: block;
 }
 
 .profile-image {
-  background: linear-gradient(90deg,#00d9bf,#00d977);
+  background: linear-gradient(90deg, #00d9bf, #00d977);
   height: 180px;
 }
 .profile-image-avatar {
@@ -16,8 +21,4 @@
     height: 100px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   }
-}
-
-.full-width {
-  width: 100%;
 }

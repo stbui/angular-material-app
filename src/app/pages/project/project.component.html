@@ -1,19 +1,19 @@
 <div class="projects-container" fxLayout="row wrap">
 
-  <div class="project mat-elevation-z4" fxFlex="calc(33.3333% - 24px)">
+  <div class="project mat-elevation-z4 divide" fxFlex="calc(33.3333% - 12px)" *ngFor="let project of projects">
 
     <div class="header" style="background: linear-gradient(to left, rgb(203, 173, 109), rgb(213, 51, 105));">
       <div class="content">
         <div fxFlex="auto" fxLayout="column">
           <div class="top-row" fxLayout="row" fxLayoutAlign="space-between center">
-            <div class="">2017年10月01日</div>
+            <div class="">{{project.date | date:"yyyy年MM月dd日"}}</div>
             <button mat-icon-button>
               <mat-icon>more_horiz</mat-icon>
             </button>
 
           </div>
           <div class="codename" fxFlex="auto" fxLayout="row" fxLayoutAlign="center center">
-            angular项目
+            {{project.name}}
           </div>
         </div>
       </div>
@@ -33,8 +33,7 @@
 
     <div class="overlay">
       <div class="overlay-content" fxLayout="column" fxLayoutAlign="space-between">
-        <div class="overlay-actions" fxLayout="row" fxLayoutgap="16px"
-            >
+        <div class="overlay-actions" fxLayout="row" fxLayoutgap="16px">
           <button mat-icon-button>
             <mat-icon>edit</mat-icon>
           </button>
@@ -47,7 +46,9 @@
 
         </div>
 
-        <button mat-raised-button><span class="mat-button-wrapper">查看详情</span></button>
+        <button mat-raised-button>
+          <span class="mat-button-wrapper">查看详情</span>
+        </button>
 
       </div>
     </div>

@@ -1,22 +1,29 @@
 :host {
   display: block;
-  margin: 24px;
+  padding: 12px;
+}
+
+.divide {
+  margin: {
+    left: 12px;
+    right: 12px;
+    top: 12px;
+    bottom: 12px;
+  }
 }
 
 .project {
   background: #fff;
-  margin-top: 24px;
   border-radius: 2px;
   overflow: hidden;
   position: relative;
-  margin-right: 24px;
 
   .header {
     position: relative;
 
     &:before {
       display: block;
-      content: "";
+      content: '';
       width: 100%;
       padding-top: 42.85714286%;
     }
@@ -74,10 +81,10 @@
     bottom: 0;
     height: 100%;
     width: 100%;
-    background: rgba(0, 0, 0, .7);
+    background: rgba(0, 0, 0, 0.7);
     opacity: 0;
     visibility: hidden;
-    transition: all .25s;
+    transition: all 0.25s;
 
     .overlay-content {
       padding: 20px 24px 24px;
@@ -88,7 +95,8 @@
           margin-right: 16px;
           background: #fff;
           color: #666;
-          box-shadow: 0 2px 4px -1px rgba(0, 0, 0, .2), 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12);
+          box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2),
+            0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
         }
       }
     }
@@ -99,8 +107,5 @@
       visibility: visible;
       opacity: 1;
     }
-
   }
-
 }
-
