@@ -20,6 +20,7 @@ import { PopoverComponent } from './popover/popover.component';
 import { CalendarComponent } from './calendar/calendar.component';
 import { NotificationComponent } from './notification/notification.component';
 import { ChatWidgetComponent } from './chat-widget/chat-widget.component';
+import { MessageComponent } from './message/message.component';
 
 const routes: Routes = [
   {
@@ -97,6 +98,10 @@ const routes: Routes = [
   {
     path: 'chat-widget',
     component: ChatWidgetComponent
+  },
+  {
+    path: 'message',
+    component: MessageComponent
   }
 ];
 

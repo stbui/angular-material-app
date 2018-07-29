@@ -12,7 +12,8 @@ import {
   PopoverModule,
   GithubButtonModule,
   SpeedDialModule,
-  ChatWidgetModule
+  ChatWidgetModule,
+  MessageModule
 } from '../component';
 
 import { MaterialsRoutingModule } from './materials.routing';
@@ -35,6 +36,7 @@ import { CalendarComponent } from './calendar/calendar.component';
 import { IconComponent } from './icon/icon.component';
 import { NotificationComponent } from './notification/notification.component';
 import { ChatWidgetComponent } from './chat-widget/chat-widget.component';
+import { MessageComponent } from './message/message.component';
 
 @NgModule({
   imports: [
@@ -50,7 +52,8 @@ import { ChatWidgetComponent } from './chat-widget/chat-widget.component';
     PopoverModule,
     GithubButtonModule,
     SpeedDialModule,
-    ChatWidgetModule
+    ChatWidgetModule,
+    MessageModule
   ],
   declarations: [
     ToastComponent,
@@ -70,7 +73,8 @@ import { ChatWidgetComponent } from './chat-widget/chat-widget.component';
     CalendarComponent,
     IconComponent,
     NotificationComponent,
-    ChatWidgetComponent
+    ChatWidgetComponent,
+    MessageComponent
   ]
 })
 export class MaterialsModule {}

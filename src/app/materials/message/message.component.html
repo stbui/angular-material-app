@@ -1,0 +1,24 @@
+<h3>message</h3>
+<stbui-message label="紧急通知" sublabel="这是一条消息" color="primary" icon="info"></stbui-message>
+
+<h3>message</h3>
+<stbui-message label="紧急通知" sublabel="这是一条消息" color="accent" icon="warning"></stbui-message>
+
+<h3>message</h3>
+<stbui-message label="紧急通知" sublabel="这是一条消息" color="warn" icon="error"></stbui-message>
+
+<h3>message</h3>
+<mat-card style="padding: 0">
+  <stbui-message label="紧急通知" sublabel="这是一条消息" color="primary" icon="info">
+    <button stbui-message-actions mat-button>查看</button>
+  </stbui-message>
+</mat-card>
+
+<h3>message</h3>
+<mat-card style="padding: 0">
+  <stbui-message #message label="紧急通知" sublabel="这是一条消息" color="primary" icon="info">
+    <button stbui-message-actions mat-icon-button (click)="message.close()">
+      <mat-icon>cancel</mat-icon>
+    </button>
+  </stbui-message>
+</mat-card>

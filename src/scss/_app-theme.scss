@@ -1,8 +1,8 @@
 @import '~@angular/material/theming';
-@import "../app/component/pagination/pagination.theme";
-@import "../app/component/date-picker/date-picker.theme";
-@import "../app/component/notification/notification.theme";
-@import "../app/navigation/navigation.theme";
+@import '../app/component/pagination/pagination.theme';
+@import '../app/component/date-picker/date-picker.theme';
+@import '../app/component/notification/notification.theme';
+@import '../app/component/message/message.theme';
 
 @mixin stbui-app-theme($theme) {
   $primary: map-get($theme, primary);
@@ -12,7 +12,7 @@
   $foreground: map_get($theme, foreground);
 
   @include pagination-theme($theme);
-  @include calendar-theme($theme);
-  @include navigation-theme($theme);
+  @include date-picker-theme($theme);
   @include notification-theme($theme);
+  @include message-theme($theme);
 }
