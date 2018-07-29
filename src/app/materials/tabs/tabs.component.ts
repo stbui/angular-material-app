@@ -6,23 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tabs.component.scss']
 })
 export class TabsComponent implements OnInit {
+  navLinks = [
+    { label: 'test1', path: '/materials/tabs' },
+    { label: 'test2', path: '/materials/tabs' }
+  ];
 
-  step1:boolean=false;
-  step2:boolean=false;
-  selectedIndex:number = 0;
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
-  onNextStepTriggered() {
-    this.step1 = true;
-    this.selectedIndex += 1;
-  }
-
-  onPreviousStepTriggered() {
-    this.step1 = false;
-    this.selectedIndex -= 1;
-  }
+  ngOnInit() {}
 }
