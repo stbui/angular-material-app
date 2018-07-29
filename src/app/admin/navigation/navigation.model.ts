@@ -87,7 +87,7 @@ export class NavigationModel {
         'type': 'collapse',
         'icon': 'equalizer',
         'badge': {
-          'title': '6',
+          'title': '7',
           'bg': '#ff4081',
           'fg': '#fff'
         },
@@ -122,6 +122,11 @@ export class NavigationModel {
             'title': 'speed-dial',
             'type': 'item',
             'url': '/materials/chat-widget'
+          }, {
+            'id': 'message',
+            'title': 'message',
+            'type': 'item',
+            'url': '/materials/message'
           }
         ]
       },
