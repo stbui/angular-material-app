@@ -1,59 +1,22 @@
 <div class="header" fxLayout="column" fxLayoutAlign="center start">
     <h1>Stbui's Blog</h1>
     <h5 class="header-desc">学习弯道超车的技巧！</h5>
+    <stbui-github-button type="link|star|fork"></stbui-github-button>
 </div>
 
-<mat-card>
-    <div class="timer">2018年04月17日</div>
+<div *ngIf="!items.length">
+    <stbui-loading-skeleton></stbui-loading-skeleton>
+    <stbui-loading-skeleton></stbui-loading-skeleton>
+    <stbui-loading-skeleton></stbui-loading-skeleton>
+</div>
+
+<mat-card *ngFor="let item of items">
+    <div class="timer">{{items.updated}}</div>
     <mat-card-title>
-        <a class="title" href="/pages/blog/1" target="blank">Angular Ivy change detection execution: are you prepared?</a>
+        <a class="title" href="/pages/blog/1" target="blank">{{item.title}}</a>
     </mat-card-title>
     <mat-card-content>
-        <p>Angular Ivy change detection execution: are you prepared?</p>
-        <p>Let’s see what Angular cooks for us</p>
-        <p>While new Ivy renderer is not feature completely yet, many people wonder how it will work and what changes it prepares
-            for us.
-        </p>
-        <p>In this article I am going to visualize Ivy change detection mechanism, show some things I am really excited about
-            and also build simple app based on instructions, similar to angular Ivy instructions, from scratch.</p>
-        <button mat-button color="primary">阅读全文...</button>
-    </mat-card-content>
-</mat-card>
-
-<mat-card>
-    <mat-card-title>
-        <a class="title" href="/pages/blog/2" target="blank">What you always wanted to know about Angular Dependency Injection tree
-        </a>
-    </mat-card-title>
-    <mat-card-content>
-        <p>If you didn’t dive deep into angular dependency injection mechanism, your mental model should be that in angular
-            application we have some root injector with all merged providers, every component has its own injector and lazy
-            loaded module introduces new injector.</p>
-        <p>But maybe there is some more you should be aware of?
-
-        </p>
-        <p>Also a while ago, so-called Tree-Shakeable Tokens feature was merged into master branch. If you are like me, you
-            probably want to know what has changed.</p>
-        <p>So it’s time to examine all these things and maybe find something new...
-        </p>
-        <button mat-button color="primary">阅读全文...</button>
-    </mat-card-content>
-</mat-card>
-
-
-<mat-card>
-    <mat-card-title>
-        <a class="title" href="/pages/blog/3" target="blank">Everything you need to know about change detection in Angular
-        </a>
-    </mat-card-title>
-    <mat-card-content>
-        If like me and want to have a comprehensive understanding of the change detection mechanism in Angular you’ll have to explore
-        the sources since there is not much information available on the web. Most articles mention that each component has
-        its own change detector which is responsible for checking the component, but they don’t go beyond that and mostly
-        focus on use cases for immutables and change detection strategy. This article provides you with the information required
-        to understand why use cases with immutables work and how change detection strategy affects the check. Also, what
-        you will learn from this article will enable you to come up with various scenarios for performance optimization on
-        your own.
+        <pre><code>{{item.body}}</code></pre>
         <button mat-button color="primary">阅读全文...</button>
     </mat-card-content>
 </mat-card>
