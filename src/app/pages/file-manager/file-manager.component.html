@@ -2,11 +2,11 @@
   <div class="header">
     <button mat-raised-button color="primary">
       <mat-icon>add</mat-icon> 上传</button>
-    <button mat-raised-button *ngIf="checkboxSelection.length">
+    <button mat-raised-button *ngIf="fileSelected.length">
       <mat-icon>share</mat-icon> 分享</button>
-    <button mat-raised-button *ngIf="checkboxSelection.length" (click)="onDeleteTrigger()">
+    <button mat-raised-button *ngIf="fileSelected.length" (click)="onDeleteTrigger()">
       <mat-icon>delete</mat-icon> 删除</button>
-    <button mat-raised-button *ngIf="checkboxSelection.length">
+    <button mat-raised-button *ngIf="fileSelected.length">
       <mat-icon>file_download</mat-icon> 下载</button>
   </div>
 
@@ -15,7 +15,7 @@
     <div class="stbui-table-toolbar" fxLayout="row" fxLayoutAlign="start center">
       <div class="content-wrapper" fxLayout="row" fxLayoutAlign="start center" fxFlex="50px">
         <span>
-          <mat-checkbox [(ngModel)]="checked" (change)="onCheckBoxAllTrigger($event)"></mat-checkbox>
+          <mat-checkbox (change)="onCheckBoxAllTrigger($event)"></mat-checkbox>
         </span>
       </div>
       <div class="start-wrapper" fxLayout="row" fxLayoutAlign="start center" fxFlex>

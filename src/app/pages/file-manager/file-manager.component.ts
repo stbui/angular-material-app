@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { FileManagerFirebase } from './file-manager.firebase';
 import { FileManagerService } from './file-manager.service';
 
@@ -7,43 +7,45 @@ import { FileManagerService } from './file-manager.service';
   templateUrl: './file-manager.component.html',
   styleUrls: ['./file-manager.component.scss']
 })
-export class FileManagerComponent {
-  files;
-  checkboxSelection: any[] = [];
+export class FileManagerComponent implements OnInit, OnDestroy {
+  files: any;
+  fileSelected: any[] = [];
 
-  constructor(private service: FileManagerService) {
+  constructor(private service: FileManagerService) {}
+
+  ngOnInit() {
     this.service.getFilesList().subscribe(files => {
       this.files = files;
     });
   }
 
+  ngOnDestroy() {}
+
   onShareTrigger() {
-    console.log(this.checkboxSelection);
+    console.log(this.fileSelected);
   }
 
   onDownLoadTrigger() {
-    console.log(this.checkboxSelection);
+    console.log(this.fileSelected);
   }
 
   onDeleteTrigger() {
-    console.log(this.checkboxSelection);
+    console.log(this.fileSelected);
   }
 
   onCheckBoxAllTrigger({ checked }) {
     if (checked) {
-      this.checkboxSelection = this.files;
+      this.fileSelected = this.files;
     } else {
-      this.checkboxSelection = [];
+      this.fileSelected = [];
     }
   }
 
   onCheckBoxTrigger({ checked }, file) {
     if (checked) {
-      this.checkboxSelection.push(file);
+      this.fileSelected.push(file);
     } else {
-      this.checkboxSelection = this.checkboxSelection.filter(
-        source => source !== file
-      );
+      this.fileSelected = this.fileSelected.filter(source => source !== file);
     }
   }
 }
