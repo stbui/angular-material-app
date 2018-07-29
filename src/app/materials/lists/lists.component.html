@@ -1,64 +1,93 @@
 <mat-card>
-  <mat-card-title>1行 Lists</mat-card-title>
+  <mat-card-title>Simple lists</mat-card-title>
   <mat-card-content>
-    <mat-list class="list-ripple mat-elevation-z2">
-      <mat-list-item mat-ripple>
-        <h3 mat-line>滚动头条</h3>
+    <mat-list>
+      <mat-list-item> Pepper </mat-list-item>
+      <mat-list-item> Salt </mat-list-item>
+      <mat-list-item> Paprika </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</mat-card>
+
+<mat-card>
+  <mat-card-title>Navigation lists</mat-card-title>
+  <mat-card-content>
+    <mat-nav-list>
+      <a mat-list-item *ngFor="let link of links"> {{ link }} </a>
+    </mat-nav-list>
+
+    <mat-nav-list>
+      <mat-list-item *ngFor="let link of links">
+        <a matLine>{{ link }}</a>
+        <button mat-icon-button>
+          <mat-icon>info</mat-icon>
+        </button>
       </mat-list-item>
-      <mat-list-item mat-ripple>
-        <h3 mat-line>读心方程式</h3>
-      </mat-list-item>
-      <mat-list-item mat-ripple>
-        <h3 mat-line>话说天下事</h3>
+    </mat-nav-list>
+  </mat-card-content>
+</mat-card>
+
+<mat-card>
+  <mat-card-title>Selection lists</mat-card-title>
+  <mat-selection-list #shoes>
+    <mat-list-option *ngFor="let shoe of typesOfShoes">
+      {{shoe}}
+    </mat-list-option>
+  </mat-selection-list>
+
+  <p>
+    Options selected: {{shoes.selectedOptions.selected.length}}
+  </p>
+</mat-card>
+
+<mat-card>
+  <mat-card-title>Multi-line lists</mat-card-title>
+  <mat-list>
+    <mat-list-item *ngFor="let message of messages">
+      <h3 matLine> {{message.from}} </h3>
+      <p matLine>
+        <span> {{message.subject}} </span>
+        <span class="demo-2"> -- {{message.content}} </span>
+      </p>
+    </mat-list-item>
+  </mat-list>
+
+  <mat-list>
+    <mat-list-item *ngFor="let message of messages">
+      <h3 matLine> {{message.from}} </h3>
+      <p matLine> {{message.subject}} </p>
+      <p matLine class="demo-2"> {{message.content}} </p>
+    </mat-list-item>
+  </mat-list>
+</mat-card>
+
+
+<mat-card>
+  <mat-card-title> Lists with icons</mat-card-title>
+  <mat-card-content>
+    <mat-list>
+      <mat-list-item *ngFor="let message of messages">
+        <mat-icon matListIcon>folder</mat-icon>
+        <h3 matLine> {{message.from}} </h3>
+        <p matLine>
+          <span> {{message.subject}} </span>
+          <span class="demo-2"> -- {{message.content}} </span>
+        </p>
       </mat-list-item>
     </mat-list>
   </mat-card-content>
 </mat-card>
 
 <mat-card>
-  <mat-card-title>1行 Lists</mat-card-title>
+  <mat-card-title> Lists with avatars </mat-card-title>
   <mat-card-content>
-    <mat-list class="mat-elevation-z2">
-      <mat-list-item>
-        <h3 mat-line>滚动头条</h3>
-      </mat-list-item>
-      <mat-list-item>
-        <h3 mat-line>读心方程式</h3>
-      </mat-list-item>
-      <mat-list-item>
-        <h3 mat-line>话说天下事</h3>
-      </mat-list-item>
-    </mat-list>
-  </mat-card-content>
-</mat-card>
-
-
-<mat-card>
-  <mat-card-title>2行 Lists</mat-card-title>
-  <mat-card-content>
-    <mat-list class="mat-elevation-z2">
-      <mat-list-item>
-        <img mat-list-avatar src="assets/images/avatars/1.jpg">
-        <h3 mat-line>滚动头条</h3>
-        <p mat-line>
-          <span>热点君</span>
-          <span class="subline">-- 每时每刻滚动更新，轻松纵览天下头条！</span>
-        </p>
-      </mat-list-item>
-      <mat-list-item>
-        <img mat-list-avatar src="assets/images/avatars/2.jpg">
-        <h3 mat-line>读心方程式</h3>
-        <p mat-line>
-          <span>东广新闻台</span>
-          <span class="subline">-- 生活中的心理学，新闻里的小科学，读心方程式，解开你的疑惑。我们不喝鸡汤，只聊干货！节目来源上海东广新闻台《新闻实验室》栏目。</span>
-        </p>
-      </mat-list-item>
-      <mat-list-item>
-        <img mat-list-avatar src="assets/images/avatars/3.jpg">
-        <h3 mat-line>话说天下事</h3>
-        <p mat-line>
-          <span>天津</span>
-          <span class="subline">-- 天津人民广播电台新闻台《话说天下事》节目，充分利用新闻台讯信资源的强势，快速点击、精辟分析国际焦点、热点问题、广罗各类新闻。天津味儿的不止有相声，还有《话说天下事》！</span>
+    <mat-list>
+      <mat-list-item *ngFor="let message of messages">
+        <img matListAvatar src="assets/images/avatars/noavatar.png" alt="assets/images/avatars/noavatar.png">
+        <h3 matLine> {{message.from}} </h3>
+        <p matLine>
+          <span> {{message.subject}} </span>
+          <span class="demo-2"> -- {{message.content}} </span>
         </p>
       </mat-list-item>
     </mat-list>
@@ -66,30 +95,32 @@
 </mat-card>
 
 <mat-card>
-  <mat-card-title>3行 Lists</mat-card-title>
+  <mat-card-title> Dense lists </mat-card-title>
   <mat-card-content>
-    <mat-list class="mat-elevation-z2">
-      <mat-list-item>
-        <img mat-list-avatar src="assets/images/avatars/1.jpg">
-        <h3 mat-line>滚动头条</h3>
-        <p mat-line>热点君</p>
-        <p mat-line class="subline">-- 每时每刻滚动更新，轻松纵览天下头条！</p>
+    <mat-list dense>
+      <mat-list-item> Pepper </mat-list-item>
+      <mat-list-item> Salt </mat-list-item>
+      <mat-list-item> Paprika </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</mat-card>
+
+<mat-card>
+  <mat-card-title> Lists with multiple sections </mat-card-title>
+  <mat-card-content>
+    <mat-list>
+      <h3 matSubheader>Folders</h3>
+      <mat-list-item *ngFor="let folder of folders">
+        <mat-icon matListIcon>folder</mat-icon>
+        <h4 matLine>{{folder.name}}</h4>
+        <p matLine class="demo-2"> {{folder.updated}} </p>
       </mat-list-item>
-      <mat-list-item>
-        <img mat-list-avatar src="assets/images/avatars/2.jpg">
-        <h3 mat-line>读心方程式</h3>
-        <p mat-line>东广新闻台</p>
-        <p mat-line class="subline">
-          -- 生活中的心理学，新闻里的小科学，读心方程式，解开你的疑惑。我们不喝鸡汤，只聊干货！节目来源上海东广新闻台《新闻实验室》栏目。
-        </p>
-      </mat-list-item>
-      <mat-list-item>
-        <img mat-list-avatar src="assets/images/avatars/3.jpg">
-        <h3 mat-line>话说天下事</h3>
-        <p mat-line>天津</p>
-        <p mat-line class="subline">
-          -- 天津人民广播电台新闻台《话说天下事》节目，充分利用新闻台讯信资源的强势，快速点击、精辟分析国际焦点、热点问题、广罗各类新闻。天津味儿的不止有相声，还有《话说天下事》！
-        </p>
+      <mat-divider></mat-divider>
+      <h3 matSubheader>Notes</h3>
+      <mat-list-item *ngFor="let note of notes">
+        <mat-icon matListIcon>note</mat-icon>
+        <h4 matLine>{{note.name}}</h4>
+        <p matLine class="demo-2"> {{note.updated}} </p>
       </mat-list-item>
     </mat-list>
   </mat-card-content>
