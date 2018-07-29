@@ -1,22 +1,36 @@
 <mat-card>
-  <mat-card-title>Slider</mat-card-title>
+  <mat-card-title> Basic slider </mat-card-title>
   <mat-card-content>
-    <mat-slider min="1" max="10"></mat-slider>
+    <mat-slider></mat-slider>
   </mat-card-content>
 </mat-card>
 
-
 <mat-card>
-  <mat-card-title>带有标签和刻度 Slider</mat-card-title>
+  <mat-card-title>Selecting a value</mat-card-title>
   <mat-card-content>
-    <mat-slider min="1" max="10" thumbLabel tickInterval="1"></mat-slider>
+    <mat-slider min="1" max="10" step="0.5" value="1.5"></mat-slider>
   </mat-card-content>
 </mat-card>
 
+<mat-card>
+  <mat-card-title> Orientation slider </mat-card-title>
+  <mat-card-content>
+    <mat-slider vertical></mat-slider>
+
+    <mat-slider invert></mat-slider>
+  </mat-card-content>
+</mat-card>
 
 <mat-card>
-  <mat-card-title>垂直 Slider</mat-card-title>
+  <mat-card-title> Thumb label slider </mat-card-title>
   <mat-card-content>
-    <mat-slider vertical min="1" max="10" thumbLabel tickInterval="1"></mat-slider>
+    <mat-slider thumbLabel tickInterval="1"></mat-slider>
+  </mat-card-content>
+</mat-card>
+
+<mat-card>
+  <mat-card-title> Formatting the thumb label slider </mat-card-title>
+  <mat-card-content>
+    <mat-slider thumbLabel [displayWith]="formatLabel" tickInterval="1000" min="1" max="100000"></mat-slider>
   </mat-card-content>
 </mat-card>
