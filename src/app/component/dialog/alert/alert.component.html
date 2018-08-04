@@ -1,0 +1,11 @@
+<stbui-dialog>
+  <stbui-dialog-title *ngIf="title">
+    {{title}}
+  </stbui-dialog-title>
+  <stbui-dialog-content>
+    {{message}}
+  </stbui-dialog-content>
+  <stbui-dialog-actions>
+      <button mat-button color="accent" (click)="close()">{{closeButton}}</button>
+  </stbui-dialog-actions>
+</stbui-dialog>

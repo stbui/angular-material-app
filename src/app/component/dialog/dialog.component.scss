@@ -1,0 +1,41 @@
+:host {
+  display: block;
+  .stbui-dialog-actions {
+    flex-direction: row;
+    box-sizing: border-box;
+    display: flex;
+    .stbui-dialog-spacer {
+      flex: 1;
+    }
+    ::ng-deep button {
+      text-transform: uppercase;
+      margin-left: 8px;
+      [dir='rtl'] & {
+        margin-right: 8px;
+        margin-left: inherit;
+      }
+      padding-left: 8px;
+      padding-right: 8px;
+      min-width: 64px;
+    }
+  }
+}
+
+.stbui-dialog-title {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.stbui-dialog-content {
+  margin-bottom: 16px;
+}
+
+.stbui-dialog-actions {
+  position: relative;
+  top: 16px;
+  left: 16px;
+  ::ng-deep [dir='rtl'] & {
+    right: 16px;
+    left: auto;
+  }
+}

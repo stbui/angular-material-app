@@ -1,0 +1,12 @@
+<div class="stbui-dialog-wrapper">
+  <h3 class="stbui-dialog-title" *ngIf="dialogTitle.length > 0">
+    <ng-content select="stbui-dialog-title"></ng-content>
+  </h3>
+  <div class="stbui-dialog-content" *ngIf="dialogContent.length > 0">
+    <ng-content select="stbui-dialog-content"></ng-content>
+  </div>
+  <div class="stbui-dialog-actions" *ngIf="dialogActions.length > 0">
+    <span class="stbui-dialog-spacer"></span>
+    <ng-content select="stbui-dialog-actions"></ng-content>
+  </div>
+</div>
