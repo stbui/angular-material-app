@@ -13,7 +13,8 @@ import {
   GithubButtonModule,
   SpeedDialModule,
   ChatWidgetModule,
-  MessageModule
+  MessageModule,
+  DialogModule
 } from '../component';
 
 import { MaterialsRoutingModule } from './materials.routing';
@@ -53,7 +54,8 @@ import { MessageComponent } from './message/message.component';
     GithubButtonModule,
     SpeedDialModule,
     ChatWidgetModule,
-    MessageModule
+    MessageModule,
+    DialogModule
   ],
   declarations: [
     ToastComponent,

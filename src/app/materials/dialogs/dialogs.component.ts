@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MatDialog } from '@angular/material';
+import { DialogService } from '../../component/dialog';
 
 @Component({
   selector: 'app-dialogs',
@@ -7,18 +7,30 @@ import { MatDialog } from '@angular/material';
   styleUrls: ['./dialogs.component.scss']
 })
 export class DialogsComponent implements OnInit {
+  constructor(private dialog: DialogService) {}
 
-  constructor(public dialog: MatDialog) {
-  }
-
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   openDialog() {
     this.dialog.open(DialogsComponent, {
-      height: '50%',
-      width: '60%'
+      width: '400px'
     });
   }
 
+  openAlert() {
+    this.dialog.alert({
+      title: 'title',
+      message: 'message',
+      closeButton: '确定'
+    });
+  }
+
+  openConfirm() {
+    this.dialog.confirm({
+      title: 'title',
+      message: 'message',
+      cancelButton: '取消',
+      acceptButton: '确定'
+    });
+  }
 }
