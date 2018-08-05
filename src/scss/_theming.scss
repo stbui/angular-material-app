@@ -1,6 +1,7 @@
+@import './variables/palette';
+
 @mixin stbui-theme-color() {
   @each $name, $color in $stbui-theme-colors {
-
     .stbui-background-#{$name} {
       color: mat-color($color, default-contrast) !important;
       background-color: mat-color($color, default) !important;

@@ -1,9 +1,4 @@
-<mat-card class="notification"
-          [class.notification-success]="data.type==='success'"
-          [class.notification-info]="data.type==='info'"
-          [class.notification-warn]="data.type==='warn'"
-          [class.notification-error]="data.type==='error'"
->
+<mat-card class="notification" [class.mat-accent]="data.type==='success'" [class.mat-primary]="data.type==='info'" [class.mat-warn]="data.type==='warn'">
   <mat-card-subtitle class="notification-title">
     {{data.title}}
     <span style="flex: 1 1 1e-09px;"></span>

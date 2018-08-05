@@ -9,4 +9,4 @@ export * from './notification-container';
 export * from './notification.component';
 export * from './notification.config';
 export * from './notification.ref';
-export  * from './notification.animation';
+export * from './notification.animation';

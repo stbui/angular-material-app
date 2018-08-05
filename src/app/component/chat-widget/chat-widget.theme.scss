@@ -1,0 +1,22 @@
+@mixin stbui-chat-widget-theme($theme) {
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+  $warn: map-get($theme, warn);
+  $background: map-get($theme, background);
+  $foreground: map-get($theme, foreground);
+
+  .chat-box {
+    background-color: mat-color($primary);
+
+    &.mat-primary {
+      background-color: mat-color($primary);
+    }
+
+    &.mat-accent {
+      background-color: mat-color($accent);
+    }
+    &.mat-warn {
+      background-color: mat-color($warn);
+    }
+  }
+}

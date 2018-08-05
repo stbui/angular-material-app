@@ -43,3 +43,11 @@ npm install -g @angular/cli
 
 - https://nodejs.org/en/docs/
 - https://github.com/angular/angular-cli/wiki
+
+## Material Resources
+
+- [Material Palette](https://www.materialpalette.com/)
+- [Material Design Colors](https://www.materialui.co/colors)
+- [Material Design Dark Color Palette](https://designguidelines.withgoogle.com/wearos/style/color.html)
+- [Material Colors OSX Desktop App](https://github.com/romannurik/MaterialColorsApp)
+- [official resource](https://material.io/design/)

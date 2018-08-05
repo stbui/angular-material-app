@@ -1,0 +1,19 @@
+@import '../../pagination/pagination.theme';
+@import '../../date-picker/date-picker.theme';
+@import '../../notification/notification.theme';
+@import '../../message/message.theme';
+@import '../../dialog/dialog.theme';
+@import '../../chat-widget/chat-widget.theme';
+@import '../../tag-select/tag-select.theme';
+@import '../../loading/loading.theme';
+
+@mixin stbui-theme($theme) {
+  @include stbui-pagination-theme($theme);
+  @include stbui-date-picker-theme($theme);
+  @include stbui-chat-widget-theme($theme);
+  @include stbui-notification-theme($theme);
+  @include stbui-tag-select-theme($theme);
+  @include stbui-message-theme($theme);
+  @include stbui-dialog-theme($theme);
+  @include stbui-loading-theme($theme);
+}

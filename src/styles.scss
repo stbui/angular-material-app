@@ -1,4 +1,5 @@
-@import '~@angular/material/_theming';
+@import '~@angular/material/theming';
+@import './app/component/core/theming/all-theme';
 
 // ngx-datatable
 @import '~@swimlane/ngx-datatable/release/index.css';
@@ -7,21 +8,20 @@
 // ngx-dnd
 @import '~@swimlane/ngx-dnd/release/index.css';
 
-
 @include mat-core();
 $primary: mat-palette($mat-indigo);
 $accent: mat-palette($mat-pink, A200, A100, A400);
 $warn: mat-palette($mat-red);
 $theme: mat-light-theme($primary, $accent, $warn);
 
-@import "scss/index";
-@import "scss/app-theme";
+@import './scss/index';
+@import './scss/theming';
 @include angular-material-theme($theme);
-@include stbui-app-theme($theme)
+@include stbui-theme($theme);
 @include stbui-theme-color();
 
-
-html, body {
+html,
+body {
   min-height: 100%;
   height: 100%;
   line-height: normal;
@@ -39,16 +39,25 @@ mat-sidenav-container {
   height: 100%;
 }
 
-.mat-sidenav-content::-webkit-scrollbar, body::-webkit-scrollbar, mat-sidenav.sidenav::-webkit-scrollbar, .main-container::-webkit-scrollbar {
+.mat-sidenav-content::-webkit-scrollbar,
+body::-webkit-scrollbar,
+mat-sidenav.sidenav::-webkit-scrollbar,
+.main-container::-webkit-scrollbar {
   height: 6px;
-  width: 6px
+  width: 6px;
 }
 
-.mat-sidenav-content::-webkit-scrollbar-trac, body::-webkit-scrollbar-track, mat-sidenav.sidenav::-webkit-scrollbar-trac, .main-container::-webkit-scrollbar-trac {
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3)
+.mat-sidenav-content::-webkit-scrollbar-trac,
+body::-webkit-scrollbar-track,
+mat-sidenav.sidenav::-webkit-scrollbar-trac,
+.main-container::-webkit-scrollbar-trac {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 }
 
-.mat-sidenav-content::-webkit-scrollbar-thumb, body::-webkit-scrollbar-thumb, mat-sidenav.sidenav::-webkit-scrollbar-thumb, .main-container::-webkit-scrollbar-thumb {
+.mat-sidenav-content::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb,
+mat-sidenav.sidenav::-webkit-scrollbar-thumb,
+.main-container::-webkit-scrollbar-thumb {
   background-color: #6e6e6e;
-  outline: 1px solid #333
+  outline: 1px solid #333;
 }
