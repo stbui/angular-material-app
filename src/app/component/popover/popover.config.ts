@@ -1,7 +1,9 @@
 /**
  * @license
  * Copyright Stbui All Rights Reserved.
+ * https://github.com/stbui
  */
+
 import { Direction } from '@angular/cdk/bidi';
 import { ScrollStrategy } from '@angular/cdk/overlay';
 
