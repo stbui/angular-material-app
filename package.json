@@ -3,7 +3,7 @@
   "description": "基于最新`Angular 6`框架与`Material 2`技术的企业级中后台前端应用框架，涵盖了大量的常用组件和基础功能，您可以快速开发各种后台系统，最大程度上帮助企业节省时间成本和费用开支。",
   "homepage": "https://github.com/stbui/angular-material-app",
   "bugs": "https://github.com/stbui/angular-material-app/issues",
-  "version": "0.6.0",
+  "version": "0.6.3",
   "license": "MIT",
   "main": "dist/electron.js",
   "scripts": {
