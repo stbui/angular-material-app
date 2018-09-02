@@ -205,7 +205,7 @@ export class NavigationModel {
             'url': '/pages/profile'
           }, {
             'id': 'blog',
-            'title': '博客',
+            'title': '博客(graphql)',
             'type': 'item',
             'url': '/pages/blog'
           }, {
