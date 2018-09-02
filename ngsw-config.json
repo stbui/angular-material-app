@@ -1,23 +1,15 @@
 {
   "index": "/index.html",
   "appData": {
-    "name": "angular-material-app-pwa",
-    "description": "pwa"
+    "name": "angular-material-app",
+    "description": "基于最新`Angular 6`框架与`Material 2`技术的企业级中后台前端应用框架，涵盖了大量的常用组件和基础功能，您可以快速开发各种后台系统，最大程度上帮助企业节省时间成本和费用开支。"
   },
   "assetGroups": [
     {
       "name": "app",
       "installMode": "prefetch",
       "resources": {
-        "files": [
-          "/favicon.ico",
-          "/index.html"
-        ],
-        "versionedFiles": [
-          "/*.bundle.css",
-          "/*.bundle.js",
-          "/*.chunk.js"
-        ]
+        "files": ["/favicon.ico", "/index.html", "/*.css", "/*.js"]
       }
     },
     {
@@ -25,18 +17,14 @@
       "installMode": "lazy",
       "updateMode": "prefetch",
       "resources": {
-        "files": [
-          "/assets/**"
-        ]
+        "files": ["/assets/**"]
       }
     }
   ],
   "dataGroups": [
     {
       "name": "api-freshness",
-      "urls": [
-        "/stbui"
-      ],
+      "urls": ["/stbui"],
       "cacheConfig": {
         "strategy": "freshness",
         "maxSize": 100,
