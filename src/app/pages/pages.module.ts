@@ -13,8 +13,11 @@ import { PagesComponent } from './pages.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { ServicesComponent } from './services/services.component';
+
 import { BlogComponent } from './blog/blog.component';
 import { BlogArticleComponent } from './blog/article/article.component';
+import { BlogService } from './blog/blog.grahql';
+
 import { ProfileComponent } from './profile/profile.component';
 import { UserComponent } from './user/user.component';
 import { UserService } from './user/user.service';
@@ -23,6 +26,8 @@ import { FileManagerFirebase } from './file-manager/file-manager.firebase';
 import { FileManagerService } from './file-manager/file-manager.service';
 import { ProjectComponent } from './project/project.component';
 
+import { GraphQLModule } from '../shared/graphql.module';
+
 @NgModule({
   imports: [
     SharedModule,
@@ -30,7 +35,8 @@ import { ProjectComponent } from './project/project.component';
     PagesRoutingModule,
     BaseLayoutModule,
     GithubButtonModule,
-    LoadingModule
+    LoadingModule,
+    GraphQLModule
   ],
   declarations: [
     PagesComponent,
@@ -48,7 +54,8 @@ import { ProjectComponent } from './project/project.component';
   providers: [
     { provide: 'UserService', useClass: UserService },
     FileManagerFirebase,
-    FileManagerService
+    FileManagerService,
+    BlogService
   ]
 })
 export class PagesModule {}

@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { BlogService } from './blog.service';
+// rest
+// import { BlogService } from './blog.service';
+// graphql
+import { BlogService } from './blog.grahql';
 
 @Component({
   selector: 'app-blog',
@@ -11,9 +14,23 @@ export class BlogComponent implements OnInit {
 
   constructor(private service: BlogService) {}
 
+  // graphql
   ngOnInit() {
     this.service.getIssues().subscribe(items => {
-      this.items = items;
+      this.items = items.issues.edges.map(item => {
+        return {
+          title: item.node.title,
+          body: item.node.body,
+          updated: item.node.updatedAt
+        };
+      });
     });
   }
+
+  // rest
+  // ngOnInit() {
+  //   this.service.getIssues().subscribe(items => {
+  //     this.items = items;
+  //   });
+  // }
 }
