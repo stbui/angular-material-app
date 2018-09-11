@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import { AngularFireDatabase, AngularFireObject } from 'angularfire2/database';
-import { AngularFireAuth } from 'angularfire2/auth';
-import { firebase } from '@firebase/app';
+import { AngularFireDatabase, AngularFireObject } from '@angular/fire/database';
+import { AngularFireAuth } from '@angular/fire/auth';
+import { auth } from 'firebase';
 
 @Injectable()
 export class AuthService {
@@ -50,7 +50,7 @@ export class AuthService {
   }
 
   githubLogin() {
-    const provide = new firebase.auth.GithubAuthProvider();
+    const provide = new auth.GithubAuthProvider();
     return this.afAuth.auth
       .signInWithPopup(provide)
       .then(credential => {
@@ -61,7 +61,7 @@ export class AuthService {
   }
 
   googleLogin() {
-    const provider = new firebase.auth.GoogleAuthProvider();
+    const provider = new auth.GoogleAuthProvider();
     return this.afAuth.auth
       .signInWithPopup(provider)
       .then(credential => {
@@ -72,7 +72,7 @@ export class AuthService {
   }
 
   twitterLogin() {
-    const provider = new firebase.auth.TwitterAuthProvider();
+    const provider = new auth.TwitterAuthProvider();
     return this.afAuth.auth
       .signInWithPopup(provider)
       .then(credential => {
@@ -115,7 +115,7 @@ export class AuthService {
   }
 
   resetPassword(email: string) {
-    const fbAuth = firebase.auth();
+    const fbAuth = auth();
     return fbAuth
       .sendPasswordResetEmail(email)
       .then(() => {

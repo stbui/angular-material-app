@@ -5,11 +5,11 @@
 
 import { Injectable } from '@angular/core';
 import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
-import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
+import { AngularFireDatabase, AngularFireList } from '@angular/fire/database';
 import {
   AngularFireStorage,
   AngularFireUploadTask
-} from 'angularfire2/storage';
+} from '@angular/fire/storage';
 import { Observable } from 'rxjs';
 import { map, tap, finalize } from 'rxjs/operators';
 import { FileUploadRef } from './file-upload.ref';

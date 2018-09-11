@@ -19,7 +19,7 @@
 [![Angular-cli](https://img.shields.io/badge/Angular.cli-6.1.5-brightgreen.svg?style=square)](https://github.com/angular/angular-cli)
 [![Angular Material 2](https://img.shields.io/badge/Material%202-6.4.7-brightgreen.svg?style=square)](https://github.com/angular/material2)
 [![Flex-Layout](https://img.shields.io/badge/Flex.Layout-6.0.0-brightgreen.svg?style=square)](https://github.com/angular/flex-layout)
-[![Angular FireBase](https://img.shields.io/badge/Firebase-5.0.0.rc.12-brightgreen.svg?style=square)](https://github.com/angular/angularfire2)
+[![Angular FireBase](https://img.shields.io/badge/Firebase-5.0.0-brightgreen.svg?style=square)](https://github.com/angular/angularfire2)
 
 ### Feature
 

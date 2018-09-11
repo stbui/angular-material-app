@@ -3,7 +3,7 @@ import {
   AngularFireDatabase,
   AngularFireList,
   AngularFireObject
-} from 'angularfire2/database';
+} from '@angular/fire/database';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
