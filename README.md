@@ -15,8 +15,8 @@
 
 ### Plaform
 
-[![Angular](https://img.shields.io/badge/Angular-6.1.6-brightgreen.svg?style=flat-square)](https://github.com/angular/angular)
-[![Angular-cli](https://img.shields.io/badge/Angular.cli-6.1.5-brightgreen.svg?style=square)](https://github.com/angular/angular-cli)
+[![Angular](https://img.shields.io/badge/Angular-6.1.7-brightgreen.svg?style=flat-square)](https://github.com/angular/angular)
+[![Angular-cli](https://img.shields.io/badge/Angular.cli-6.2.2-brightgreen.svg?style=square)](https://github.com/angular/angular-cli)
 [![Angular Material 2](https://img.shields.io/badge/Material%202-6.4.7-brightgreen.svg?style=square)](https://github.com/angular/material2)
 [![Flex-Layout](https://img.shields.io/badge/Flex.Layout-6.0.0-brightgreen.svg?style=square)](https://github.com/angular/flex-layout)
 [![Angular FireBase](https://img.shields.io/badge/Firebase-5.0.0-brightgreen.svg?style=square)](https://github.com/angular/angularfire2)
