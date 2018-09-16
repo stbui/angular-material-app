@@ -54,6 +54,7 @@
     "apollo-link": "^1.2.2",
     "apollo-link-context": "^1.0.8",
     "core-js": "^2.5.4",
+    "date-fns": "^1.29.0",
     "firebase": "^5.4.2",
     "graphql": "^0.13.2",
     "graphql-tag": "^2.9.2",

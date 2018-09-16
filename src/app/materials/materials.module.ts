@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
-import { CalendarModule } from 'angular-calendar';
+import { CalendarModule, DateAdapter } from 'angular-calendar';
+import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 
 import { SharedModule } from '../shared/shared.module';
 import {
@@ -43,7 +44,10 @@ import { MessageComponent } from './message/message.component';
   imports: [
     SharedModule,
     MaterialsRoutingModule,
-    CalendarModule.forRoot(),
+    CalendarModule.forRoot({
+      provide: DateAdapter,
+      useFactory: adapterFactory
+    }),
     NotificaitonModule,
     AmapModule.forRoot({ apiKey: '5ca4be36897408ccfacadf90df1c5f91' }),
     DatePickerModule,
