@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
-import { QuillModule } from 'ngx-quill';
+// import { QuillModule } from 'ngx-quill';
 import { SharedModule } from '../shared/shared.module';
 import { SearchModule } from '../component/search';
 import { LayoutModule } from '../layouts';
@@ -16,7 +16,7 @@ import { MailService } from './mail.service';
 @NgModule({
   imports: [
     HttpClientModule,
-    QuillModule,
+    // QuillModule,
     SharedModule,
     SearchModule,
     LayoutModule,
