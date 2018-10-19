@@ -1,5 +1,76 @@
+<a name="0.6.3"></a>
+## [0.6.3](https://github.com/stbui/angular-material-app/compare/0.6.5...0.6.3) (2018-10-19)
+
+
+
+<a name="0.6.5"></a>
+## [0.6.5](https://github.com/stbui/angular-material-app/compare/0.6.4...0.6.5) (2018-09-28)
+
+
+### Bug Fixes
+
+* 修复angular-calendar模块没有导入date-fns ([195a7da](https://github.com/stbui/angular-material-app/commit/195a7da))
+* 删除environment.ngsw文件 ([539c83b](https://github.com/stbui/angular-material-app/commit/539c83b))
+* 添加core模块，并导入管道 ([20b38ad](https://github.com/stbui/angular-material-app/commit/20b38ad))
+
+
+### Features
+
+* **blog:** 使用graphql获取github接口数据 ([ef4b072](https://github.com/stbui/angular-material-app/commit/ef4b072))
+* **shared:** 添加graphql模块 ([a8cf2a7](https://github.com/stbui/angular-material-app/commit/a8cf2a7))
+
+
+
+<a name="0.6.4"></a>
+## [0.6.4](https://github.com/stbui/angular-material-app/compare/0.6.3...0.6.4) (2018-09-02)
+
+
+### Bug Fixes
+
+* **dialog:** 没有定于模版变量 ([ce4a6ae](https://github.com/stbui/angular-material-app/commit/ce4a6ae))
+
+
+### Features
+
+* **pipe:** 新增字符截取管道 ([29a53d7](https://github.com/stbui/angular-material-app/commit/29a53d7))
+* **pipes:** 新增时间管道 ([2860946](https://github.com/stbui/angular-material-app/commit/2860946))
+
+
+
+<a name="0.6.3"></a>
+## [0.6.3](https://github.com/stbui/angular-material-app/compare/0.6.2...0.6.3) (2018-08-05)
+
+
+### Bug Fixes
+
+* [#39](https://github.com/stbui/angular-material-app/issues/39) ([fc7e933](https://github.com/stbui/angular-material-app/commit/fc7e933))
+
+
+### Features
+
+* **crm:** 更新线索模块 ([1602bf7](https://github.com/stbui/angular-material-app/commit/1602bf7))
+* add layout ([24f4308](https://github.com/stbui/angular-material-app/commit/24f4308))
+* **blog:** 对接github issues接口 ([8f7aca8](https://github.com/stbui/angular-material-app/commit/8f7aca8))
+* **compoent:** add websocket ([58e52d6](https://github.com/stbui/angular-material-app/commit/58e52d6))
+* **core:** 新增api前缀service ([382a072](https://github.com/stbui/angular-material-app/commit/382a072))
+* **core:** 新增httpCache service ([c1cf88a](https://github.com/stbui/angular-material-app/commit/c1cf88a))
+* **dialog:** dialog增加alert&confirm组件 ([1f3cd11](https://github.com/stbui/angular-material-app/commit/1f3cd11))
+* **file-manager:** 修改service，替换firebase ([f5430c7](https://github.com/stbui/angular-material-app/commit/f5430c7))
+* 新增http拦截器缓存数据 ([743cba8](https://github.com/stbui/angular-material-app/commit/743cba8))
+* **material:** 增加dialog demo ([94286dc](https://github.com/stbui/angular-material-app/commit/94286dc))
+* **message:** 新增message组件 ([3eb9a03](https://github.com/stbui/angular-material-app/commit/3eb9a03))
+* 更新crm页面 ([f6cda24](https://github.com/stbui/angular-material-app/commit/f6cda24))
+* 添加message链接 ([ce03ea4](https://github.com/stbui/angular-material-app/commit/ce03ea4))
+
+
+
+<a name="0.6.2"></a>
+## [0.6.2](https://github.com/stbui/angular-material-app/compare/0.6.1...0.6.2) (2018-06-23)
+
+
+
 <a name="0.6.1"></a>
-# [0.6.1]()
+## [0.6.1](https://github.com/stbui/angular-material-app/compare/0.6.0...0.6.1) (2018-06-07)
 
 
 ### Bug Fixes
