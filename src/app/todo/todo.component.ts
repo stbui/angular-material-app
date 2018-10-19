@@ -1,5 +1,6 @@
 import { Component, OnInit, OnDestroy, Inject, ViewEncapsulation } from '@angular/core';
 import { Router, ActivatedRoute, Params } from '@angular/router';
+import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 import { Todo } from './todo.model';
 
 import { Subscription } from 'rxjs';
@@ -54,5 +55,9 @@ export class TodoComponent implements OnInit, OnDestroy {
 
   ngOnDestroy() {
     this.onTodosChangedSubscrition.unsubscribe();
+  }
+
+  drop(event: CdkDragDrop<string[]>) {
+    moveItemInArray(this.todos, event.previousIndex, event.currentIndex);
   }
 }

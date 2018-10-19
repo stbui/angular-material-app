@@ -10,8 +10,8 @@
 
   <app-todo-toolbar></app-todo-toolbar>
 
-  <app-todo-list>
-    <app-todo-item *ngFor="let todo of todos" [todo]="todo"></app-todo-item>
+  <app-todo-list class="todo-list" cdkDropList (cdkDropListDropped)="drop($event)">
+    <app-todo-item class="todo-list-box" cdkDrag *ngFor="let todo of todos" [todo]="todo"></app-todo-item>
   </app-todo-list>
 
 </stbui-layout>
