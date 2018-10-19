@@ -1,0 +1,8 @@
+<mat-card>
+  <mat-card-title>drap list</mat-card-title>
+  <mat-card-content>
+    <div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
+      <div class="example-box" *ngFor="let movie of movies" cdkDrag>{{movie}}</div>
+    </div>
+  </mat-card-content>
+</mat-card>

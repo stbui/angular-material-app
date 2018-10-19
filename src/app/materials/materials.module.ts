@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 import { CalendarModule, DateAdapter } from 'angular-calendar';
 import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 
@@ -39,10 +40,12 @@ import { IconComponent } from './icon/icon.component';
 import { NotificationComponent } from './notification/notification.component';
 import { ChatWidgetComponent } from './chat-widget/chat-widget.component';
 import { MessageComponent } from './message/message.component';
+import { DragDropComponent } from './drag-drop/drag-drop.component';
 
 @NgModule({
   imports: [
     SharedModule,
+    DragDropModule,
     MaterialsRoutingModule,
     CalendarModule.forRoot({
       provide: DateAdapter,
@@ -80,7 +83,8 @@ import { MessageComponent } from './message/message.component';
     IconComponent,
     NotificationComponent,
     ChatWidgetComponent,
-    MessageComponent
+    MessageComponent,
+    DragDropComponent
   ]
 })
 export class MaterialsModule {}
