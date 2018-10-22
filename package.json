@@ -42,6 +42,7 @@
     "@angular/pwa": "^0.10.1",
     "@angular/router": "^7.0.0",
     "@angular/service-worker": "^7.0.0",
+    "@ngx-translate/core": "^10.0.2",
     "@swimlane/dragula": "^3.7.3",
     "@swimlane/ngx-charts": "^9.0.0",
     "@swimlane/ngx-datatable": "^13.1.0",
