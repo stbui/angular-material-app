@@ -1,52 +1,49 @@
 <div class="customizer-container" fxLayout="column">
-  <div class="m-t-10">header</div>
-  <mat-radio-group class="customizer-radio-group" [(ngModel)]="settings.colorClasses.header"
-                   (ngModelChange)="onSettingsChange()">
+  <div class="m-t-10">{{'settings.header.title' | translate}}</div>
+  <mat-radio-group class="customizer-radio-group" [(ngModel)]="settings.colorClasses.header" (ngModelChange)="onSettingsChange()">
     <mat-radio-button class="customizer-radio-button" *ngFor="let color of _colors" [value]="'stbui-background-'+color">{{color}}
     </mat-radio-button>
   </mat-radio-group>
 
-  <div class="m-t-10">brand</div>
-  <mat-radio-group class="customizer-radio-group" [(ngModel)]="settings.colorClasses.brand"
-                   (ngModelChange)="onSettingsChange()">
+  <div class="m-t-10">{{'settings.brand' | translate}}</div>
+  <mat-radio-group class="customizer-radio-group" [(ngModel)]="settings.colorClasses.brand" (ngModelChange)="onSettingsChange()">
     <mat-radio-button class="customizer-radio-button" *ngFor="let color of _colors" [value]="'stbui-background-'+color">{{color}}
     </mat-radio-button>
   </mat-radio-group>
 
-  <div class="m-t-10">navigation</div>
-  <mat-radio-group class="customizer-radio-group" [(ngModel)]="settings.colorClasses.navigation"
-                   (ngModelChange)="onSettingsChange()">
+  <div class="m-t-10">{{'settings.navigation.title' | translate}}</div>
+  <mat-radio-group class="customizer-radio-group" [(ngModel)]="settings.colorClasses.navigation" (ngModelChange)="onSettingsChange()">
     <mat-radio-button class="customizer-radio-button" *ngFor="let color of _colors" [value]="'stbui-background-'+color">{{color}}
     </mat-radio-button>
   </mat-radio-group>
 
-  <div class="m-t-10">layout</div>
-  <mat-radio-group class="customizer-radio-group" [(ngModel)]="settings.layout.mode"
-                   (ngModelChange)="onSettingsChange()" fxLayout="row">
-    <mat-radio-button class="customizer-radio-button" value="boxed">固定宽度</mat-radio-button>
-    <mat-radio-button class="customizer-radio-button" value="fullwidth">满屏宽度</mat-radio-button>
+  <div class="m-t-10">{{'settings.layout.title' | translate}}</div>
+  <mat-radio-group class="customizer-radio-group" [(ngModel)]="settings.layout.mode" (ngModelChange)="onSettingsChange()"
+    fxLayout="row">
+    <mat-radio-button class="customizer-radio-button" value="boxed">{{'settings.layout.boxed' | translate}}</mat-radio-button>
+    <mat-radio-button class="customizer-radio-button" value="fullwidth">{{'settings.layout.fullwidth' | translate}}</mat-radio-button>
   </mat-radio-group>
 
-  <div class="m-t-10">navigation</div>
-  <mat-radio-group class="customizer-radio-group" [(ngModel)]="settings.layout.navigation"
-                   (ngModelChange)="onSettingsChange()" fxLayout="row">
-    <mat-radio-button class="customizer-radio-button" value="left">左侧</mat-radio-button>
-    <mat-radio-button class="customizer-radio-button" value="right">右侧</mat-radio-button>
-    <mat-radio-button class="customizer-radio-button" value="none">隐藏</mat-radio-button>
+  <div class="m-t-10">{{'settings.navigation.title' | translate}}</div>
+  <mat-radio-group class="customizer-radio-group" [(ngModel)]="settings.layout.navigation" (ngModelChange)="onSettingsChange()"
+    fxLayout="row">
+    <mat-radio-button class="customizer-radio-button" value="left">{{'settings.navigation.left' | translate}}</mat-radio-button>
+    <mat-radio-button class="customizer-radio-button" value="right">{{'settings.navigation.right' | translate}}</mat-radio-button>
+    <mat-radio-button class="customizer-radio-button" value="none">{{'settings.navigation.none' | translate}}</mat-radio-button>
   </mat-radio-group>
 
-  <div class="m-t-10">header</div>
-  <mat-radio-group class="customizer-radio-group" [(ngModel)]="settings.layout.header"
-                   (ngModelChange)="onSettingsChange()" fxLayout="row">
-    <mat-radio-button class="customizer-radio-button" value="below">显示</mat-radio-button>
-    <mat-radio-button class="customizer-radio-button" value="none">隐藏</mat-radio-button>
+  <div class="m-t-10">{{'settings.header.title' | translate}}</div>
+  <mat-radio-group class="customizer-radio-group" [(ngModel)]="settings.layout.header" (ngModelChange)="onSettingsChange()"
+    fxLayout="row">
+    <mat-radio-button class="customizer-radio-button" value="below">{{'settings.header.below' | translate}}</mat-radio-button>
+    <mat-radio-button class="customizer-radio-button" value="none">{{'settings.header.none' | translate}}</mat-radio-button>
   </mat-radio-group>
 
-  <div class="m-t-10">footer</div>
-  <mat-radio-group class="customizer-radio-group" [(ngModel)]="settings.layout.footer"
-                   (ngModelChange)="onSettingsChange()" fxLayout="row">
-    <mat-radio-button class="customizer-radio-button" value="below">显示</mat-radio-button>
-    <mat-radio-button class="customizer-radio-button" value="none">隐藏</mat-radio-button>
+  <div class="m-t-10">{{'settings.footer.title' | translate}}</div>
+  <mat-radio-group class="customizer-radio-group" [(ngModel)]="settings.layout.footer" (ngModelChange)="onSettingsChange()"
+    fxLayout="row">
+    <mat-radio-button class="customizer-radio-button" value="below">{{'settings.footer.below' | translate}}</mat-radio-button>
+    <mat-radio-button class="customizer-radio-button" value="none">{{'settings.footer.none' | translate}}</mat-radio-button>
   </mat-radio-group>
 
 </div>

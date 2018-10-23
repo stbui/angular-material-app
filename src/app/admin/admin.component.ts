@@ -3,10 +3,15 @@ import { MediaChange, ObservableMedia } from '@angular/flex-layout';
 import { Observable, ReplaySubject, Subscription } from 'rxjs';
 import { ConfigService } from '../core/config.service';
 
+import { TranslateService } from '@ngx-translate/core';
+import { TranslationService } from '../core/translation.service';
+import { locale as english } from './i18n/en';
+import { locale as chinese } from './i18n/zh';
+
 @Component({
   selector: 'app-admin',
   templateUrl: './admin.component.html',
-  styleUrls: ['./admin.component.scss']
+  styleUrls: ['./admin.component.scss'],
 })
 export class AdminComponent implements OnInit {
   settings: any;
@@ -27,17 +32,22 @@ export class AdminComponent implements OnInit {
     return this._media$.asObservable();
   }
 
-  constructor(media: ObservableMedia, private config: ConfigService) {
+  constructor(
+    media: ObservableMedia,
+    private config: ConfigService,
+    private translateService: TranslateService,
+    private translationService: TranslationService,
+  ) {
     media
       .asObservable()
       .subscribe(
-        res => this._media$.next(res),
-        err => this._media$.error(err),
-        () => this._media$.complete()
+        (res) => this._media$.next(res),
+        (err) => this._media$.error(err),
+        () => this._media$.complete(),
       );
 
     this.onSettingsChanged = this.config.onSettingsChanged.subscribe(
-      settings => {
+      (settings) => {
         this.settings = settings;
 
         if (this.settings.layout.mode === 'boxed') {
@@ -57,8 +67,13 @@ export class AdminComponent implements OnInit {
           this.customizerSidenavAlign = 'end';
           this.sidenavOpen = false;
         }
-      }
+      },
     );
+
+    this.translateService.addLangs(['en', 'zh']);
+    this.translateService.setDefaultLang('en');
+
+    this.translationService.loadTranslations(english, chinese);
   }
 
   ngOnInit() {

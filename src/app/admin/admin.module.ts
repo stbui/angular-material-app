@@ -9,22 +9,21 @@ import { BrandComponent } from './brand/brand.component';
 import { CustomizerComponent } from './customizer/customizer.component';
 import { FooterComponent } from './footer/footer.component';
 
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   imports: [
     RouterModule,
     SharedModule,
     HeaderModule,
-    NavigationModule
+    NavigationModule,
+    TranslateModule.forRoot(),
   ],
   declarations: [
     AdminComponent,
     BrandComponent,
     CustomizerComponent,
-    FooterComponent
+    FooterComponent,
   ],
-  providers: [],
-  exports: []
 })
-export class AdminModule {
-}
+export class AdminModule {}
