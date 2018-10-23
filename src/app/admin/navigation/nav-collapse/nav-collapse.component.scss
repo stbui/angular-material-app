@@ -1,4 +1,3 @@
-
 .navigation-collapse-arrow {
   font-size: 16px;
   width: 16px;
@@ -7,7 +6,7 @@
   min-height: 16px;
   line-height: 16px;
 
-  transition: transform .25s;
+  transition: transform 0.25s;
   transform: rotate(0);
 }
 
@@ -19,18 +18,18 @@
 
 .navigation-collapse {
   display: block;
-  transition: transform .25s;
+  transition: transform 0.25s;
 
   &.open {
     > .navigation-link {
       &:before {
-        content: " ";
+        content: ' ';
         position: absolute;
         left: 0;
         right: 0;
         bottom: 0;
         height: 2px;
-        background: linear-gradient(180deg, rgba(0, 0, 0, .2), transparent);
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.2), transparent);
       }
     }
 
@@ -38,5 +37,4 @@
       transform: rotate(90deg);
     }
   }
-
 }

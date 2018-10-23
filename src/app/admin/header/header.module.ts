@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
-import { SharedModule } from '../../shared/shared.module';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
+import { SharedModule } from '../../shared/shared.module';
 
 import { HeaderComponent } from './header.component';
 import { ToolbarUserComponent } from './toolbar-user/toolbar-user.component';
@@ -15,9 +15,8 @@ import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
 import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
-  suppressScrollX: true
+  suppressScrollX: true,
 };
-
 
 @NgModule({
   imports: [
@@ -25,24 +24,24 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     HttpClientModule,
     RouterModule,
     PerfectScrollbarModule,
-    LoadingModule
+    LoadingModule,
   ],
   declarations: [
     HeaderComponent,
     ToolbarUserComponent,
     ToolbarHelpComponent,
-    ToolbarNotificationComponent
+    ToolbarNotificationComponent,
   ],
   providers: [
-    {provide: 'toolbarNotificationService', useClass: ToolbarNotificationService},
+    {
+      provide: 'toolbarNotificationService',
+      useClass: ToolbarNotificationService,
+    },
     {
       provide: PERFECT_SCROLLBAR_CONFIG,
-      useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG
-    }
+      useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG,
+    },
   ],
-  exports: [
-    HeaderComponent
-  ]
+  exports: [HeaderComponent],
 })
-export class HeaderModule {
-}
+export class HeaderModule {}

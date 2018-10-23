@@ -1,10 +1,10 @@
 <div class="toolbar-user-container">
   <button mat-button (click)="toggleDropdown()" class="toolbar-user-btn" [class.open]="isOpen">
-  <span fxLayout="row" fxLayoutAlign="start center">
-    <img class="avatar" [src]="currentUser.currentUser?.photoURL || 'assets/images/avatars/noavatar.png'">
-    <span class="name" fxHide fxShow.gt-sm>{{currentUser.currentUserName}}</span>
-    <mat-icon class="icon" fxHide fxShow.gt-sm>keyboard_arrow_down</mat-icon>
-  </span>
+    <span fxLayout="row" fxLayoutAlign="start center">
+      <img class="avatar" [src]="currentUser.currentUser?.photoURL || 'assets/images/avatars/noavatar.png'">
+      <span class="name" fxHide fxShow.gt-sm>{{currentUser.currentUserName}}</span>
+      <mat-icon class="icon" fxHide fxShow.gt-sm>keyboard_arrow_down</mat-icon>
+    </span>
   </button>
 
   <div class="dropdown mat-elevation-z1" [class.open]="isOpen">

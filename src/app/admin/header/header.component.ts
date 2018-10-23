@@ -5,12 +5,13 @@ import { NavigationStart, NavigationEnd, Router } from '@angular/router';
 @Component({
   selector: 'stbui-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-
-  @Input() customizer;
-  @Input() sidenav;
+  @Input()
+  customizer;
+  @Input()
+  sidenav;
 
   isFullscreen: boolean = false;
   showLoading: boolean;
@@ -25,8 +26,7 @@ export class HeaderComponent implements OnInit {
     });
   }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   toggleFullscreen() {
     if (screenfull.enabled) {
@@ -34,5 +34,4 @@ export class HeaderComponent implements OnInit {
       this.isFullscreen = !this.isFullscreen;
     }
   }
-
 }

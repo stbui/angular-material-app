@@ -23,7 +23,7 @@
   flex-direction: row;
   box-sizing: border-box;
   display: flex;
-  border-top: 1px solid rgba(0, 0, 0, .1);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
 
   > a {
     display: flex;
@@ -31,8 +31,8 @@
     flex: 1 1 100%;
     box-sizing: border-box;
     max-width: 100%;
-    background-color: rgba(0, 0, 0, .12);
-    color: rgba(255, 255, 255, .8);
+    background-color: rgba(0, 0, 0, 0.12);
+    color: rgba(255, 255, 255, 0.8);
     text-decoration: none;
     text-align: center;
     min-width: 88px;
