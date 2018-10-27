@@ -17,9 +17,12 @@ export class TodoListComponent {
     return this._todos;
   }
 
-  @Output() onRemoveTodo = new EventEmitter<Todo>();
-  @Output() onToggleTodo = new EventEmitter<Todo>();
-  @Output() onToggleAll = new EventEmitter<boolean>();
+  @Output()
+  onRemoveTodo = new EventEmitter<Todo>();
+  @Output()
+  onToggleTodo = new EventEmitter<Todo>();
+  @Output()
+  onToggleAll = new EventEmitter<boolean>();
 
   onRemoveTriggered(todo: Todo) {
     this.onRemoveTodo.emit(todo);

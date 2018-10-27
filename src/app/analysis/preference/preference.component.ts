@@ -6,14 +6,12 @@ import { Component, OnInit, Inject } from '@angular/core';
   styleUrls: ['./preference.component.scss']
 })
 export class PreferenceComponent implements OnInit {
-
   field_data: any = [];
 
   coverRateListDatas: any[] = [];
   activeDatas: any[] = [];
 
-  constructor(@Inject('AnalysisService') private _service) {
-  }
+  constructor(@Inject('AnalysisService') private _service) {}
 
   ngOnInit() {
     this._service.getCrowdCateList();
@@ -25,18 +23,15 @@ export class PreferenceComponent implements OnInit {
   }
 
   getCrowdCateList() {
-
     this._service.crowdCateList$.subscribe(res => {
-
       if (res.datas) {
-        res.datas.list.map((item) => {
+        res.datas.list.map(item => {
           this.field_data.push({
             name: item.categoryName,
             value: item.crowdActiveNums
           });
         });
       }
-
     });
   }
 
@@ -55,5 +50,4 @@ export class PreferenceComponent implements OnInit {
       }
     });
   }
-
 }

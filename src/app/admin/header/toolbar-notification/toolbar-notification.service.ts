@@ -1,13 +1,11 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-
 import { ToolbarNotificationModel } from './toolbar-notification.model';
 
 @Injectable()
 export class ToolbarNotificationService {
-  notifications: ToolbarNotificationModel[];
+  private notifications: ToolbarNotificationModel[];
 
-  constructor(private http: HttpClient) {
+  constructor() {
     this.notifications = [
       {
         id: '1',
@@ -42,11 +40,11 @@ export class ToolbarNotificationService {
     ];
   }
 
-  select() {
+  select(): ToolbarNotificationModel[] {
     return this.notifications;
   }
 
-  delete(notification) {
+  delete(notification): ToolbarNotificationModel[] {
     const i = this.notifications.indexOf(notification);
     this.notifications = [
       ...this.notifications.slice(0, i),

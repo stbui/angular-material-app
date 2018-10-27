@@ -5,7 +5,7 @@ import { AuthService } from '../../../core/auth.service';
 @Component({
   selector: 'stbui-toolbar-user',
   templateUrl: './toolbar-user.component.html',
-  styleUrls: ['./toolbar-user.component.scss'],
+  styleUrls: ['./toolbar-user.component.scss']
 })
 export class ToolbarUserComponent implements OnInit {
   isOpen: boolean = false;
@@ -18,7 +18,7 @@ export class ToolbarUserComponent implements OnInit {
     }
 
     const clickedInside = this._elementRef.nativeElement.contains(
-      targetElement,
+      targetElement
     );
     if (!clickedInside) {
       this.isOpen = false;
@@ -28,7 +28,7 @@ export class ToolbarUserComponent implements OnInit {
   constructor(
     private _elementRef: ElementRef,
     private router: Router,
-    private auth: AuthService,
+    private auth: AuthService
   ) {
     this.currentUser = this.auth;
   }

@@ -6,14 +6,12 @@ import { Component, OnInit, Inject } from '@angular/core';
   styleUrls: ['./user.component.scss']
 })
 export class UserComponent implements OnInit {
-
   users;
   checked = false;
 
   sideOpen: boolean = true;
 
-  constructor(@Inject('UserService') private _service) {
-  }
+  constructor(@Inject('UserService') private _service) {}
 
   ngOnInit() {
     this.getUserList();
@@ -33,10 +31,7 @@ export class UserComponent implements OnInit {
   onDeleteTriggered(user) {
     let i = this.users.indexOf(user);
 
-    this.users = [
-      ...this.users.slice(0, i),
-      ...this.users.slice(i + 1)
-    ];
+    this.users = [...this.users.slice(0, i), ...this.users.slice(i + 1)];
   }
 
   onSideTriggered() {

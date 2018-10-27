@@ -1,7 +1,7 @@
 .section-container {
-  background: #FC5C7D;
-  background: -webkit-linear-gradient(to right, #6A82FB, #FC5C7D);
-  background: linear-gradient(to right, #6A82FB, #FC5C7D);
+  background: #fc5c7d;
+  background: -webkit-linear-gradient(to right, #6a82fb, #fc5c7d);
+  background: linear-gradient(to right, #6a82fb, #fc5c7d);
   height: 500px;
   color: #fff;
   padding: 0 20px;
@@ -53,7 +53,6 @@
   }
   .product-title {
     font-size: 26px;
-
   }
 
   mat-card {
@@ -63,14 +62,31 @@
   .list-avatar-icon {
     font-size: 40px;
   }
-
 }
 
 .dual-bg {
   background: #474d5d;
-  background: -moz-linear-gradient(left, #474d5d 0%, #383c49 50%, #474d5d 50%, #383c49 100%);
-  background: -webkit-linear-gradient(left, #474d5d 0%, #383c49 50%, #474d5d 50%, #383c49 100%);
-  background: linear-gradient(to right, #474d5d 0%, #383c49 50%, #474d5d 50%, #383c49 100%);
+  background: -moz-linear-gradient(
+    left,
+    #474d5d 0%,
+    #383c49 50%,
+    #474d5d 50%,
+    #383c49 100%
+  );
+  background: -webkit-linear-gradient(
+    left,
+    #474d5d 0%,
+    #383c49 50%,
+    #474d5d 50%,
+    #383c49 100%
+  );
+  background: linear-gradient(
+    to right,
+    #474d5d 0%,
+    #383c49 50%,
+    #474d5d 50%,
+    #383c49 100%
+  );
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#474d5d', endColorstr='#383c49', GradientType=1);
 }
 
@@ -93,15 +109,16 @@
 .footer {
   padding: 30px 0 30px;
   background: #263238;
-  color: #80CBC4;
+  color: #80cbc4;
 
   a {
-    color: #80CBC4;
+    color: #80cbc4;
     cursor: pointer;
   }
 }
 
-h2, h4 {
+h2,
+h4 {
   color: #313743;
   margin: 10px 0;
 }

@@ -6,8 +6,8 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./age.component.scss']
 })
 export class AgeComponent implements OnInit {
-
-  @Input() data: any;
+  @Input()
+  data: any;
 
   // options
   showLegend = true;
@@ -21,14 +21,11 @@ export class AgeComponent implements OnInit {
   explodeSlices = false;
   doughnut = true;
 
-  constructor() {
-  }
+  constructor() {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   onSelect(event) {
     console.log(event);
   }
-
 }

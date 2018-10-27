@@ -1,13 +1,15 @@
-.customizer-container {
-  width: 250px;
-  padding: 10px;
-}
+.customizer {
+  &-container {
+    width: 250px;
+    padding: 10px;
+  }
 
-.customizer-radio-group {
-  display: inline-flex;
-  flex-direction: column;
-}
+  &-radio-group {
+    display: inline-flex;
+    flex-direction: column;
+  }
 
-.customizer-radio-button {
-  margin: 5px;
+  &-radio-button {
+    margin: 5px;
+  }
 }

@@ -6,17 +6,16 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./contacts.component.scss']
 })
 export class ContactsComponent {
-
-  @Input() chats;
-  @Output() onActiveChat = new EventEmitter();
+  @Input()
+  chats;
+  @Output()
+  onActiveChat = new EventEmitter();
 
   avatar: string = 'assets/images/avatars/noavatar.png';
 
-  constructor() {
-  }
+  constructor() {}
 
   setActiveChat(chat) {
     this.onActiveChat.emit(chat);
   }
-
 }

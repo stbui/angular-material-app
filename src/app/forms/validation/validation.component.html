@@ -13,7 +13,8 @@
             <mat-error *ngIf="formErrors.email">{{formErrors.email}}</mat-error>
           </mat-form-field>
           <mat-form-field class="display-block">
-            <input matInput placeholder="请输入您的密码" formControlName="password" [type]="hide ? 'password' : 'text'" required>
+            <input matInput placeholder="请输入您的密码" formControlName="password" [type]="hide ? 'password' : 'text'"
+              required>
             <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
           </mat-form-field>
           <mat-form-field class="display-block">
@@ -57,7 +58,3 @@
     </mat-card>
   </div>
 </div>
-<!-- 
-<button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
-    <mat-icon>close</mat-icon>
-  </button> -->

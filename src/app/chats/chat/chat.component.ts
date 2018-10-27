@@ -8,11 +8,14 @@ import { NoticeComponent } from '../notice/notice.component';
   styleUrls: ['./chat.component.scss']
 })
 export class ChatComponent {
-
-  @Input() chatSidenav;
-  @Input() activeChat;
-  @Input() messages;
-  @Output() onSendChat = new EventEmitter();
+  @Input()
+  chatSidenav;
+  @Input()
+  activeChat;
+  @Input()
+  messages;
+  @Output()
+  onSendChat = new EventEmitter();
 
   newMessage: string;
   avatar: string = 'assets/images/avatars/noavatar.png';
@@ -20,8 +23,10 @@ export class ChatComponent {
   animal: string;
   name: string;
 
-  constructor(@Inject('ChatsService') private service, public dialog: MatDialog) {
-  }
+  constructor(
+    @Inject('ChatsService') private service,
+    public dialog: MatDialog
+  ) {}
 
   onSendTriggered() {
     if (this.newMessage) {
@@ -35,7 +40,6 @@ export class ChatComponent {
       this.onSendChat.emit(this.activeChat);
       this.newMessage = '';
     }
-
   }
 
   clearMessages(activeChat) {
@@ -49,7 +53,7 @@ export class ChatComponent {
   onNoticeTriggered() {
     const dialogRef = this.dialog.open(NoticeComponent, {
       width: '250px',
-      data: {name: this.name, animal: this.animal}
+      data: { name: this.name, animal: this.animal }
     });
 
     dialogRef.afterClosed().subscribe(result => {
@@ -57,5 +61,4 @@ export class ChatComponent {
       this.animal = result;
     });
   }
-
 }

@@ -6,22 +6,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dynamic.component.scss']
 })
 export class DynamicComponent implements OnInit {
-
   rows: any[];
   loadingIndicator = true;
   reorderable = true;
 
   columns = [
-    {prop: 'name'},
-    {name: 'Gender'},
-    {name: 'Company', sortable: false}
+    { prop: 'name' },
+    { name: 'Gender' },
+    { name: 'Company', sortable: false }
   ];
 
-  constructor() {
-  }
+  constructor() {}
 
   ngOnInit() {
-    this.fetch((data) => {
+    this.fetch(data => {
       this.rows = data;
       setTimeout(() => {
         this.loadingIndicator = false;
@@ -31,7 +29,10 @@ export class DynamicComponent implements OnInit {
 
   fetch(cb) {
     const req = new XMLHttpRequest();
-    req.open('GET', `http://swimlane.github.io/ngx-datatable/assets/data/company.json`);
+    req.open(
+      'GET',
+      `http://swimlane.github.io/ngx-datatable/assets/data/company.json`
+    );
 
     req.onload = () => {
       cb(JSON.parse(req.response));

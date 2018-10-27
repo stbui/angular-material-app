@@ -1,4 +1,10 @@
-import { Component, OnInit, Input, HostBinding, ViewEncapsulation } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  Input,
+  HostBinding,
+  ViewEncapsulation
+} from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { NavigationService } from '../navigation.service';
 import { NavigationAnimation } from '../navigation.animation';
@@ -11,42 +17,39 @@ import { NavigationAnimation } from '../navigation.animation';
   encapsulation: ViewEncapsulation.None
 })
 export class NavCollapseComponent implements OnInit {
-
-  @Input() item: any;
-  @HostBinding('class') classes = 'navigation-collapse navigation-item';
-  @HostBinding('class.open') public isOpen = false;
+  @Input()
+  item: any;
+  @HostBinding('class')
+  classes = 'navigation-collapse navigation-item';
+  @HostBinding('class.open')
+  public isOpen = false;
 
   constructor(private service: NavigationService, private router: Router) {
-    router.events.subscribe(
-      (event) => {
-
-        if (event instanceof NavigationEnd) {
-          if (this.isUrlInChildren(this.item, event.urlAfterRedirects)) {
-            this.expand();
-          } else {
-            this.collapse();
-          }
+    router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        if (this.isUrlInChildren(this.item, event.urlAfterRedirects)) {
+          this.expand();
+        } else {
+          this.collapse();
         }
       }
-    );
+    });
 
-    this.service.onNavigationCollapseToggled.subscribe(
-      (clickedItem) => {
-        if (clickedItem && clickedItem.children) {
-          if (this.isChildrenOf(this.item, clickedItem)) {
-            return;
-          }
+    this.service.onNavigationCollapseToggled.subscribe(clickedItem => {
+      if (clickedItem && clickedItem.children) {
+        if (this.isChildrenOf(this.item, clickedItem)) {
+          return;
+        }
 
-          if (this.isUrlInChildren(this.item, this.router.url)) {
-            return;
-          }
+        if (this.isUrlInChildren(this.item, this.router.url)) {
+          return;
+        }
 
-          if (this.item !== clickedItem) {
-            this.collapse();
-          }
+        if (this.item !== clickedItem) {
+          this.collapse();
         }
       }
-    );
+    });
   }
 
   ngOnInit() {
@@ -110,7 +113,10 @@ export class NavCollapseComponent implements OnInit {
         }
       }
 
-      if (parent.children[i].url === url || url.includes(parent.children[i].url)) {
+      if (
+        parent.children[i].url === url ||
+        url.includes(parent.children[i].url)
+      ) {
         return true;
       }
     }

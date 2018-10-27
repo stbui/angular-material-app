@@ -1,6 +1,8 @@
 $height__chat-header: 150px;
 $height__chat-toolbar: 64px;
-$height__chat-container: calc(100% - #{$height__chat-header - $height__chat-toolbar});
+$height__chat-container: calc(
+  100% - #{$height__chat-header - $height__chat-toolbar}
+);
 
 :host {
   display: block;
@@ -29,16 +31,18 @@ $height__chat-container: calc(100% - #{$height__chat-header - $height__chat-tool
       width: 320px;
     }
   }
-
 }
 
-.cdk-focus-trap-content, mat-sidenav {
+.cdk-focus-trap-content,
+mat-sidenav {
   overflow-y: hidden !important;
   overflow-x: hidden;
 }
 
-mat-sidenav.mat-sidenav-opened.mat-elevation-z2, mat-sidenav.mat-sidenav-opening.mat-elevation-z2 {
-  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
+mat-sidenav.mat-sidenav-opened.mat-elevation-z2,
+mat-sidenav.mat-sidenav-opening.mat-elevation-z2 {
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 1px 5px 0 rgba(0, 0, 0, 0.12);
 }
 
 .avatar {

@@ -13,46 +13,16 @@ import { FileManagerComponent } from './file-manager/file-manager.component';
 import { ProjectComponent } from './project/project.component';
 
 const routes: Routes = [
-  {
-    path: '',
-    component: PagesComponent
-  },
-  {
-    path: 'about',
-    component: AboutComponent
-  },
-  {
-    path: 'contact',
-    component: ContactComponent
-  },
-  {
-    path: 'services',
-    component: ServicesComponent
-  },
-  {
-    path: 'user',
-    component: UserComponent
-  },
-  {
-    path: 'profile',
-    component: ProfileComponent
-  },
-  {
-    path: 'blog',
-    component: BlogComponent
-  },
-  {
-    path: 'blog/:id',
-    component: BlogArticleComponent
-  },
-  {
-    path: 'file-manager',
-    component: FileManagerComponent
-  },
-  {
-    path: 'projects',
-    component: ProjectComponent
-  }
+  { path: '', component: PagesComponent },
+  { path: 'about', component: AboutComponent },
+  { path: 'contact', component: ContactComponent },
+  { path: 'services', component: ServicesComponent },
+  { path: 'user', component: UserComponent },
+  { path: 'profile', component: ProfileComponent },
+  { path: 'blog', component: BlogComponent },
+  { path: 'blog/:id', component: BlogArticleComponent },
+  { path: 'file-manager', component: FileManagerComponent },
+  { path: 'projects', component: ProjectComponent }
 ];
 
 @NgModule({

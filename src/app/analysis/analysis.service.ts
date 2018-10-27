@@ -5,7 +5,6 @@ import { environment } from '../../environments/environment';
 
 @Injectable()
 export class AnalysisService {
-
   private apiUrl = environment.analysisApi;
   private _crowdApplist$: BehaviorSubject<any>;
   private _crowdCateList$: BehaviorSubject<any>;

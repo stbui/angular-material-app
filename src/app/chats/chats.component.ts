@@ -1,21 +1,18 @@
 import { Component, OnInit, ViewEncapsulation, Inject } from '@angular/core';
 
-
 @Component({
   selector: 'app-chats',
   templateUrl: './chats.component.html',
   styleUrls: ['./chats.component.scss'],
-  encapsulation: ViewEncapsulation.None,
+  encapsulation: ViewEncapsulation.None
 })
 export class ChatsComponent implements OnInit {
-
   chats: any[];
   activeChat: any;
 
   chatName: string = 'demo';
 
-  constructor(@Inject('ChatsService') private service) {
-  }
+  constructor(@Inject('ChatsService') private service) {}
 
   ngOnInit() {
     this.getChatsList();
@@ -30,22 +27,22 @@ export class ChatsComponent implements OnInit {
 
   createChat() {
     let d = {
-      "picture": "assets/images/avatars/2.jpg",
-      "name": this.chatName,
-      "messages": [
+      picture: 'assets/images/avatars/2.jpg',
+      name: this.chatName,
+      messages: [
         {
-          "message": "这是 Angular 2 交流群",
-          "when": 1,
-          "who": "me"
+          message: '这是 Angular 2 交流群',
+          when: 1,
+          who: 'me'
         },
         {
-          "message": "推荐下Angular 2 有哪些开源项目？",
-          "when": 1,
-          "who": "partner"
+          message: '推荐下Angular 2 有哪些开源项目？',
+          when: 1,
+          who: 'partner'
         }
       ],
-      "lastMessageTime": 1,
-      "lastMessage": "技术交流"
+      lastMessageTime: 1,
+      lastMessage: '技术交流'
     };
     this.service.createChat(d);
   }
@@ -57,5 +54,4 @@ export class ChatsComponent implements OnInit {
   onActiveChat(chat) {
     this.activeChat = chat;
   }
-
 }

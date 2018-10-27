@@ -9,15 +9,15 @@ import { ComposeComponent } from './compose/compose.component';
   styleUrls: ['./mail.component.scss']
 })
 export class MailComponent implements OnInit {
-
   allMails;
   shownMails = [];
   shownMailDetail;
 
-  constructor(public composeDialog: MatDialog,
-              private snackBar: MatSnackBar,
-              @Inject('mailService') private service) {
-  }
+  constructor(
+    public composeDialog: MatDialog,
+    private snackBar: MatSnackBar,
+    @Inject('mailService') private service
+  ) {}
 
   ngOnInit() {
     this.getMails();
@@ -27,7 +27,6 @@ export class MailComponent implements OnInit {
     this.service.getMails();
     this.shownMails = this.service.mails;
   }
-
 
   openMailDetial(mail) {
     this.shownMailDetail = mail;
@@ -42,8 +41,7 @@ export class MailComponent implements OnInit {
     dialogRef.afterClosed().subscribe(result => {
       console.log(result);
 
-      this.snackBar.open('邮件已发送', '', {duration: 3000});
+      this.snackBar.open('邮件已发送', '', { duration: 3000 });
     });
   }
-
 }

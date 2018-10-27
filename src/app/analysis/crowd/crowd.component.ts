@@ -3,17 +3,15 @@ import { Component, Inject, OnInit } from '@angular/core';
 @Component({
   selector: 'app-crowd',
   templateUrl: './crowd.component.html',
-  styleUrls: ['./crowd.component.scss'],
+  styleUrls: ['./crowd.component.scss']
 })
 export class CrowdComponent implements OnInit {
-
   permeability: any = [];
   ageData: any = [];
   consumerData: any = [];
   operatorData: any = [];
 
-  constructor(@Inject('AnalysisService') private _service) {
-  }
+  constructor(@Inject('AnalysisService') private _service) {}
 
   ngOnInit() {
     this.getCrowdOverview();
@@ -32,7 +30,7 @@ export class CrowdComponent implements OnInit {
     this._service.crowdOverview$.subscribe(res => {
       if (res.datas) {
         console.log(res.datas);
-        res.datas.actvieDatas.map((item) => {
+        res.datas.actvieDatas.map(item => {
           this.permeability.push({
             name: item.appName,
             value: (item.crowdRate * 100).toFixed(2)
@@ -45,7 +43,7 @@ export class CrowdComponent implements OnInit {
   operators() {
     this._service.crowdOverview$.subscribe(res => {
       if (res.datas) {
-        res.datas.operators.map((item) => {
+        res.datas.operators.map(item => {
           this.operatorData.push({
             name: item.attrName,
             value: (item.attrValue * 100).toFixed(2)
@@ -58,7 +56,7 @@ export class CrowdComponent implements OnInit {
   age() {
     this._service.crowdOverview$.subscribe(res => {
       if (res.datas) {
-        res.datas.age.map((item) => {
+        res.datas.age.map(item => {
           this.ageData.push({
             name: item.attrName,
             value: (item.attrValue * 100).toFixed(2)
@@ -71,7 +69,7 @@ export class CrowdComponent implements OnInit {
   consumer() {
     this._service.crowdOverview$.subscribe(res => {
       if (res.datas) {
-        res.datas.consumer.map((item) => {
+        res.datas.consumer.map(item => {
           this.consumerData.push({
             name: item.attrName,
             value: (item.attrValue * 100).toFixed(2)

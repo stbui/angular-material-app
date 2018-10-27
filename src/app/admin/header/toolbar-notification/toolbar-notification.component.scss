@@ -42,7 +42,8 @@ $prefix: 'toolbar-notification';
   transform: translateY(-110%) scale(0);
   transform-origin: top right;
   visibility: hidden;
-  transition: transform .4s cubic-bezier(.25, .8, .25, 1), visibility .4s cubic-bezier(.25, .8, .25, 1);
+  transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1),
+    visibility 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
 
   @media screen and (max-width: 599px) {
     min-width: 100vw;
@@ -55,9 +56,8 @@ $prefix: 'toolbar-notification';
   }
 
   .card {
-
     .header {
-      background: #EEEEEE;
+      background: #eeeeee;
       min-height: 54px;
       padding-left: 16px;
       padding-right: 8px;
@@ -93,9 +93,9 @@ $prefix: 'toolbar-notification';
           margin-right: 13px;
           text-align: center;
           border-radius: 50%;
-          background: #FFF;
+          background: #fff;
           color: #888;
-          border: 1px solid #EEE;
+          border: 1px solid #eee;
         }
 
         .title {
@@ -147,11 +147,11 @@ $prefix: 'toolbar-notification';
 
     .footer {
       min-height: 42px;
-      border-top: 1px solid #EEE;
+      border-top: 1px solid #eee;
 
       .action {
         cursor: pointer;
-        color: #AAA;
+        color: #aaa;
         text-align: center;
         font-size: 13px;
       }
@@ -160,7 +160,7 @@ $prefix: 'toolbar-notification';
     .divider {
       width: calc(100% - 30px);
       height: 1px;
-      background: #EEE;
+      background: #eee;
       margin: 0 16px 0 14px;
     }
   }

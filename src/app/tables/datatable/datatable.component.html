@@ -5,6 +5,7 @@
 <stbui-table height="200" width="800" [columns]="columnsDemo.columns1" [data]="columnsDemo.data"></stbui-table>
 
 <h4>事件</h4>
-<stbui-table (onSelectChange)="onSelectChange($event)" (onSelectAll)="onSelectChange($event)" [columns]="columnsDemo.columns2" [data]="columnsDemo.data"></stbui-table>
+<stbui-table (onSelectChange)="onSelectChange($event)" (onSelectAll)="onSelectChange($event)" [columns]="columnsDemo.columns2"
+    [data]="columnsDemo.data"></stbui-table>
 
 <div>{{ selectData | json }}</div>

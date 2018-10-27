@@ -1,4 +1,4 @@
-import { Component, OnInit, Inject } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { NewComponent } from './new/new.component';
 
@@ -16,10 +16,7 @@ export class LeadComponent implements OnInit {
 
   selected = [];
 
-  constructor(
-    @Inject('LeadService') private service,
-    private dialog: MatDialog
-  ) {}
+  constructor(private dialog: MatDialog) {}
 
   ngOnInit() {
     for (let i = 0; i < 50; i++) {

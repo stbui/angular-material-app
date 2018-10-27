@@ -16,29 +16,21 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
 };
 
-
 @NgModule({
-  imports: [
-    SharedModule,
-    ChatRoutingModule,
-    PerfectScrollbarModule
-  ],
+  imports: [SharedModule, ChatRoutingModule, PerfectScrollbarModule],
   declarations: [
     ChatsComponent,
     ContactsComponent,
     ChatComponent,
     NoticeComponent
   ],
-  entryComponents: [
-    NoticeComponent
-  ],
+  entryComponents: [NoticeComponent],
   providers: [
-    {provide: 'ChatsService', useClass: ChatsService},
+    { provide: 'ChatsService', useClass: ChatsService },
     {
       provide: PERFECT_SCROLLBAR_CONFIG,
       useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG
     }
   ]
 })
-export class ChatsModule {
-}
+export class ChatsModule {}

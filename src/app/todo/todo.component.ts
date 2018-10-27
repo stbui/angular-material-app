@@ -1,9 +1,13 @@
-import { Component, OnInit, OnDestroy, Inject, ViewEncapsulation } from '@angular/core';
-import { Router, ActivatedRoute, Params } from '@angular/router';
+import {
+  Component,
+  OnInit,
+  OnDestroy,
+  Inject,
+  ViewEncapsulation
+} from '@angular/core';
 import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
-import { Todo } from './todo.model';
-
 import { Subscription } from 'rxjs';
+import { Todo } from './todo.model';
 
 @Component({
   selector: 'app-todo',
@@ -12,25 +16,18 @@ import { Subscription } from 'rxjs';
   encapsulation: ViewEncapsulation.None
 })
 export class TodoComponent implements OnInit, OnDestroy {
-
   todos: Todo[];
   onTodosChangedSubscrition: Subscription;
 
-  constructor(@Inject('todoService') private service,
-              private router: ActivatedRoute) {
-  }
+  constructor(@Inject('todoService') private service) {}
 
   ngOnInit() {
-    // this.router.params
-    //   .pluck('filter')
-    //   .subscribe(filter => {
-    //     this.service.filterTodos(filter);
-    //     this.todos = this.service.todos;
-    //   });
     this.service.getTodosByParams();
-    this.onTodosChangedSubscrition = this.service.onTodosChangedSubject.subscribe((todo) => {
-      this.todos = todo;
-    });
+    this.onTodosChangedSubscrition = this.service.onTodosChangedSubject.subscribe(
+      todo => {
+        this.todos = todo;
+      }
+    );
   }
 
   addTodo(todo: Todo) {

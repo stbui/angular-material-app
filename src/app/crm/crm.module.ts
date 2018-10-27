@@ -42,6 +42,6 @@ import { LeadService } from './lead/lead.service';
     ProductComponent
   ],
   entryComponents: [ContactUpdateComponent, NewComponent],
-  providers: [{ provide: 'LeadService', useClass: LeadService }]
+  providers: [LeadService]
 })
 export class CrmModule {}

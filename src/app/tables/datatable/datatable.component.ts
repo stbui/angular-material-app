@@ -3,10 +3,9 @@ import { Component, OnInit, Inject } from '@angular/core';
 @Component({
   selector: 'app-datatable',
   templateUrl: './datatable.component.html',
-  styleUrls: ['./datatable.component.scss'],
+  styleUrls: ['./datatable.component.scss']
 })
 export class DatatableComponent implements OnInit {
-
   columnsDemo;
   selectData;
 
@@ -17,28 +16,28 @@ export class DatatableComponent implements OnInit {
       columns: [
         {
           title: '姓名',
-          key: 'name',
+          key: 'name'
           // fixed: 'left'
         },
         {
           title: '年龄',
-          key: 'age',
+          key: 'age'
         },
         {
           title: '省份',
-          key: 'province',
+          key: 'province'
         },
         {
           title: '市区',
-          key: 'city',
+          key: 'city'
         },
         {
           title: '地址',
-          key: 'address',
+          key: 'address'
         },
         {
           title: '邮编',
-          key: 'zip',
+          key: 'zip'
         }
       ],
       columns1: [
@@ -49,28 +48,28 @@ export class DatatableComponent implements OnInit {
         // },
         {
           title: '姓名',
-          key: 'name',
+          key: 'name'
           // fixed: 'left'
         },
         {
           title: '年龄',
-          key: 'age',
+          key: 'age'
         },
         {
           title: '省份',
-          key: 'province',
+          key: 'province'
         },
         {
           title: '市区',
-          key: 'city',
+          key: 'city'
         },
         {
           title: '地址',
-          key: 'address',
+          key: 'address'
         },
         {
           title: '邮编',
-          key: 'zip',
+          key: 'zip'
         }
       ],
       columns2: [
@@ -109,11 +108,12 @@ export class DatatableComponent implements OnInit {
           title: '邮编',
           key: 'zip',
           width: 100
-        }, {
+        },
+        {
           title: '操作',
           key: 'action',
           fixed: 'right',
-          width: 120,
+          width: 120
         }
       ],
       data: [
@@ -169,11 +169,9 @@ export class DatatableComponent implements OnInit {
     };
   }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   onSelectChange($event) {
     this.selectData = $event;
   }
-
 }

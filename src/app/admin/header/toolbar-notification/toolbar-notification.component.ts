@@ -1,4 +1,5 @@
 import { Component, ElementRef, HostListener, Inject } from '@angular/core';
+import { ToolbarNotificationModel } from './toolbar-notification.model';
 
 @Component({
   selector: 'stbui-toolbar-notification',
@@ -6,9 +7,9 @@ import { Component, ElementRef, HostListener, Inject } from '@angular/core';
   styleUrls: ['./toolbar-notification.component.scss']
 })
 export class ToolbarNotificationComponent {
-  cssPrefix = 'toolbar-notification';
+  cssPrefix: string = 'toolbar-notification';
   isOpen: boolean = false;
-  notifications = [];
+  notifications: ToolbarNotificationModel[] = [];
 
   @HostListener('document:click', ['$event', '$event.target'])
   onClick(event: MouseEvent, targetElement: HTMLElement) {

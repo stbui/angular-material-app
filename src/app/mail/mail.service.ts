@@ -3,10 +3,8 @@ import { HttpClient } from '@angular/common/http';
 import { environment } from '../../environments/environment';
 import { BehaviorSubject } from 'rxjs';
 
-
 @Injectable()
 export class MailService {
-
   private _mails: BehaviorSubject<any>;
   private apiUrl = environment.mailApi;
 
@@ -20,17 +18,6 @@ export class MailService {
 
   getMails() {
     const url = this.apiUrl;
-    this.http.get(url)
-      .subscribe(res => this._mails.next(res));
+    this.http.get(url).subscribe(res => this._mails.next(res));
   }
-
-  send() {
-  }
-
-  delete() {
-  }
-
-  save() {
-  }
-
 }

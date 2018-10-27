@@ -6,13 +6,18 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./todo-item.component.scss']
 })
 export class TodoItemComponent {
-
-  @Input() todo: any;
-  @Input() isChecked: boolean = false;
-  @Output() onToggleTriggered = new EventEmitter<boolean>();
-  @Output() onRemoveTriggered = new EventEmitter<boolean>();
-  @Input() title: string = '';
-  @Input() notes: string = '';
+  @Input()
+  todo: any;
+  @Input()
+  isChecked: boolean = false;
+  @Output()
+  onToggleTriggered = new EventEmitter<boolean>();
+  @Output()
+  onRemoveTriggered = new EventEmitter<boolean>();
+  @Input()
+  title: string = '';
+  @Input()
+  notes: string = '';
 
   toggle(todo) {
     this.onToggleTriggered.emit(todo);

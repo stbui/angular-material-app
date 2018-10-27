@@ -4,11 +4,9 @@ import { environment } from '../../../environments/environment';
 
 @Injectable()
 export class LeadService {
-
   private apiUrl = environment.crmApi;
 
-  constructor(private _http: HttpClient) {
-  }
+  constructor(private _http: HttpClient) {}
 
   getLead() {
     const url = `${this.apiUrl}/contacts.json`;

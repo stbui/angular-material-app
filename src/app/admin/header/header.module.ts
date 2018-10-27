@@ -15,7 +15,7 @@ import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
 import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
-  suppressScrollX: true,
+  suppressScrollX: true
 };
 
 @NgModule({
@@ -24,24 +24,24 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     HttpClientModule,
     RouterModule,
     PerfectScrollbarModule,
-    LoadingModule,
+    LoadingModule
   ],
   declarations: [
     HeaderComponent,
     ToolbarUserComponent,
     ToolbarHelpComponent,
-    ToolbarNotificationComponent,
+    ToolbarNotificationComponent
   ],
   providers: [
     {
       provide: 'toolbarNotificationService',
-      useClass: ToolbarNotificationService,
+      useClass: ToolbarNotificationService
     },
     {
       provide: PERFECT_SCROLLBAR_CONFIG,
-      useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG,
-    },
+      useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG
+    }
   ],
-  exports: [HeaderComponent],
+  exports: [HeaderComponent]
 })
 export class HeaderModule {}

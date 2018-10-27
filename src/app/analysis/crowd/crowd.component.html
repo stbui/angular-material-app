@@ -1,5 +1,5 @@
 <div fxLayout="row wrap">
-    <analysis-crowd-permeability [data]="permeability" fxFlex></analysis-crowd-permeability>
+  <analysis-crowd-permeability [data]="permeability" fxFlex></analysis-crowd-permeability>
 </div>
 
 <div fxLayout="row wrap">
@@ -13,19 +13,18 @@
 
 <div fxLayout="row wrap">
   <div fxFlex.gt-sm="50">
+    <analysis-crowd-operators [data]="operatorData"></analysis-crowd-operators>
+  </div>
+  <div fxFlex.gt-sm="50">
+    <analysis-crowd-brand></analysis-crowd-brand>
+  </div>
+</div>
+
+<div fxLayout="row wrap">
+  <div fxFlex.gt-sm="50">
     <analysis-crowd-gender></analysis-crowd-gender>
   </div>
   <div fxFlex.gt-sm="50">
     <analysis-crowd-region></analysis-crowd-region>
   </div>
 </div>
-
-<div fxLayout="row wrap">
-  <div fxFlex.gt-sm="50">
-    <analysis-crowd-brand></analysis-crowd-brand>
-  </div>
-  <div fxFlex.gt-sm="50">
-    <analysis-crowd-operators [data]="operatorData"></analysis-crowd-operators>
-  </div>
-</div>
-

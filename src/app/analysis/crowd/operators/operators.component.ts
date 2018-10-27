@@ -6,7 +6,8 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./operators.component.scss']
 })
 export class OperatorsComponent implements OnInit {
-  @Input() data: any;
+  @Input()
+  data: any;
 
   // options
   showLegend = true;
@@ -20,14 +21,11 @@ export class OperatorsComponent implements OnInit {
   explodeSlices = false;
   doughnut = false;
 
-  constructor() {
-  }
+  constructor() {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   onSelect(event) {
     console.log(event);
   }
-
 }

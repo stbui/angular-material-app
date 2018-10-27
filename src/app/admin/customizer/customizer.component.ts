@@ -5,7 +5,7 @@ import { Subscription } from 'rxjs';
 @Component({
   selector: 'stbui-customizer',
   templateUrl: './customizer.component.html',
-  styleUrls: ['./customizer.component.scss'],
+  styleUrls: ['./customizer.component.scss']
 })
 export class CustomizerComponent implements OnInit {
   settings: any;
@@ -15,9 +15,9 @@ export class CustomizerComponent implements OnInit {
 
   constructor(private config: ConfigService) {
     this.onSettingsChanged = this.config.onSettingsChanged.subscribe(
-      (settings) => {
+      settings => {
         this.settings = settings;
-      },
+      }
     );
   }
 

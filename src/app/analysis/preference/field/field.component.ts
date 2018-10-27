@@ -6,8 +6,8 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./field.component.scss']
 })
 export class PreferenceFieldComponent implements OnInit {
-
-  @Input() data: any;
+  @Input()
+  data: any;
 
   // options
   showXAxis = true;
@@ -23,14 +23,11 @@ export class PreferenceFieldComponent implements OnInit {
     domain: ['#5AA454', '#A10A28', '#C7B42C', '#AAAAAA']
   };
 
-  constructor() {
-  }
+  constructor() {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   onSelect(event) {
     console.log(event);
   }
-
 }

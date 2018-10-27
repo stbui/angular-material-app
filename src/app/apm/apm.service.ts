@@ -2,7 +2,5 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class ApmService {
-
-  constructor() { }
-
+  constructor() {}
 }

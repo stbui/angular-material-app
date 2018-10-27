@@ -6,8 +6,8 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./consumer.component.scss']
 })
 export class ConsumerComponent implements OnInit {
-
-  @Input() data: any;
+  @Input()
+  data: any;
 
   // options
   showLegend = true;
@@ -21,14 +21,11 @@ export class ConsumerComponent implements OnInit {
   explodeSlices = false;
   doughnut = true;
 
-  constructor() {
-  }
+  constructor() {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   onSelect(event) {
     console.log(event);
   }
-
 }

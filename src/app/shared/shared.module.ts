@@ -18,5 +18,4 @@ import { MaterialComponentsModule } from './material.module';
     MaterialComponentsModule
   ]
 })
-export class SharedModule {
-}
+export class SharedModule {}

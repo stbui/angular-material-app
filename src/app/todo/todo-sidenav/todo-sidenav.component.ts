@@ -5,6 +5,4 @@ import { Component } from '@angular/core';
   templateUrl: './todo-sidenav.component.html',
   styleUrls: ['./todo-sidenav.component.scss']
 })
-export class TodoSidenavComponent {
-
-}
+export class TodoSidenavComponent {}

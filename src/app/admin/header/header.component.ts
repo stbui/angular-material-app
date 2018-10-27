@@ -1,13 +1,13 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import * as screenfull from 'screenfull';
 import { NavigationStart, NavigationEnd, Router } from '@angular/router';
 
 @Component({
   selector: 'stbui-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss'],
+  styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
   @Input()
   customizer;
   @Input()
@@ -17,7 +17,7 @@ export class HeaderComponent implements OnInit {
   showLoading: boolean;
 
   constructor(private router: Router) {
-    router.events.subscribe((event) => {
+    this.router.events.subscribe(event => {
       if (event instanceof NavigationStart) {
         this.showLoading = true;
       } else if (event instanceof NavigationEnd) {
@@ -25,8 +25,6 @@ export class HeaderComponent implements OnInit {
       }
     });
   }
-
-  ngOnInit() {}
 
   toggleFullscreen() {
     if (screenfull.enabled) {

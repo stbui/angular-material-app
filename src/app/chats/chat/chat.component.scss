@@ -1,6 +1,8 @@
 $height__chat-header: 150px;
 $height__chat-toolbar: 64px;
-$height__chat-container: calc(100% - #{$height__chat-header - $height__chat-toolbar});
+$height__chat-container: calc(
+  100% - #{$height__chat-header - $height__chat-toolbar}
+);
 
 .chat-inner-container {
   height: 100%;
@@ -22,7 +24,8 @@ $height__chat-container: calc(100% - #{$height__chat-header - $height__chat-tool
         .message {
           padding: 8px;
           position: relative;
-          box-shadow: 0 0 0 -1px rgba(0, 0, 0, .2), 0 1px 1px 0 rgba(0, 0, 0, .14), 0 1px 3px 0 rgba(0, 0, 0, .12);
+          box-shadow: 0 0 0 -1px rgba(0, 0, 0, 0.2),
+            0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
         }
 
         .partner {
@@ -32,7 +35,7 @@ $height__chat-container: calc(100% - #{$height__chat-header - $height__chat-tool
 
             &:after {
               position: absolute;
-              content: "";
+              content: '';
               width: 0;
               height: 0;
               border-style: solid;
@@ -46,12 +49,12 @@ $height__chat-container: calc(100% - #{$height__chat-header - $height__chat-tool
 
         .me {
           .message {
-            background: #E1FFC7;
+            background: #e1ffc7;
             margin-right: 12px;
 
             &:after {
               position: absolute;
-              content: "";
+              content: '';
               width: 0;
               height: 0;
               border-style: solid;
@@ -72,7 +75,7 @@ $height__chat-container: calc(100% - #{$height__chat-header - $height__chat-tool
       bottom: 0;
       left: 0;
       padding: 12px 24px;
-      border-top: 1px solid #EEE;
+      border-top: 1px solid #eee;
 
       textarea {
         resize: none;
@@ -86,7 +89,7 @@ $height__chat-container: calc(100% - #{$height__chat-header - $height__chat-tool
 }
 
 mat-toolbar {
-  border-bottom: 1px solid #EEE;
+  border-bottom: 1px solid #eee;
 
   .toolbar {
     width: 100%;

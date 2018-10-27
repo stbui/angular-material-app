@@ -7,22 +7,10 @@ import { ValidationComponent } from './validation/validation.component';
 import { EditorComponent } from './editor/editor.component';
 
 const routes: Routes = [
-  {
-    path: '',
-    component: FormsComponent
-  },
-  {
-    path: 'elements',
-    component: ElementsComponent
-  },
-  {
-    path: 'validation',
-    component: ValidationComponent
-  },
-  {
-    path: 'editor',
-    component: EditorComponent
-  }
+  { path: '', component: FormsComponent },
+  { path: 'elements', component: ElementsComponent },
+  { path: 'validation', component: ValidationComponent },
+  { path: 'editor', component: EditorComponent }
 ];
 
 @NgModule({

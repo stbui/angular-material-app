@@ -4,14 +4,12 @@ import { BehaviorSubject } from 'rxjs';
 
 @Injectable()
 export class UserService {
-
   private apiUrl = '/assets/data/pages';
   private _userList$: BehaviorSubject<any>;
 
   get userList$() {
     return this._userList$.asObservable();
   }
-
 
   constructor(private _http: HttpClient) {
     this._userList$ = new BehaviorSubject<any>([]);
@@ -23,5 +21,4 @@ export class UserService {
       this._userList$.next(res);
     });
   }
-
 }

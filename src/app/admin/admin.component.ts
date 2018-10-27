@@ -11,12 +11,12 @@ import { locale as chinese } from './i18n/zh';
 @Component({
   selector: 'app-admin',
   templateUrl: './admin.component.html',
-  styleUrls: ['./admin.component.scss'],
+  styleUrls: ['./admin.component.scss']
 })
 export class AdminComponent implements OnInit {
   settings: any;
   onSettingsChanged: Subscription;
-  layoutMode = false;
+  layoutMode: boolean = false;
 
   private _media$: ReplaySubject<MediaChange> = new ReplaySubject(1);
   private _mediaSubscription: Subscription;
@@ -36,18 +36,18 @@ export class AdminComponent implements OnInit {
     media: ObservableMedia,
     private config: ConfigService,
     private translateService: TranslateService,
-    private translationService: TranslationService,
+    private translationService: TranslationService
   ) {
     media
       .asObservable()
       .subscribe(
-        (res) => this._media$.next(res),
-        (err) => this._media$.error(err),
-        () => this._media$.complete(),
+        res => this._media$.next(res),
+        err => this._media$.error(err),
+        () => this._media$.complete()
       );
 
     this.onSettingsChanged = this.config.onSettingsChanged.subscribe(
-      (settings) => {
+      settings => {
         this.settings = settings;
 
         if (this.settings.layout.mode === 'boxed') {
@@ -67,7 +67,7 @@ export class AdminComponent implements OnInit {
           this.customizerSidenavAlign = 'end';
           this.sidenavOpen = false;
         }
-      },
+      }
     );
 
     this.translateService.addLangs(['en', 'zh']);

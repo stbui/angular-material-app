@@ -7,38 +7,31 @@ import { BehaviorSubject } from 'rxjs';
 
 @Injectable()
 export class TodoService {
-
   private apiUrl = environment.todoApi;
 
   todos;
 
   onTodosChangedSubject: BehaviorSubject<any> = new BehaviorSubject([]);
 
-  constructor(private http: HttpClient) {
-  }
+  constructor(private http: HttpClient) {}
 
   getTodos() {
     return this.getTodosByParams();
   }
 
   getTodosByParams() {
-    return this.http.get(this.apiUrl).subscribe((todo) => {
+    return this.http.get(this.apiUrl).subscribe(todo => {
       this.onTodosChangedSubject.next(todo);
     });
   }
 
-  getTodosByFilter() {
-
-  }
+  getTodosByFilter() {}
 
   addTodo(todo) {
-    this.http.post(this.apiUrl, {...todo}).subscribe(res => {
+    this.http.post(this.apiUrl, { ...todo }).subscribe(res => {
       this.onTodosChangedSubject.next(res);
     });
   }
 
-  toggleTodo(todo) {
-
-  }
-
+  toggleTodo(todo) {}
 }

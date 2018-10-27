@@ -6,7 +6,6 @@ import { Component, OnInit, Inject } from '@angular/core';
   styleUrls: ['./scene-portrait.component.scss']
 })
 export class ScenePortraitComponent implements OnInit {
-
   bubble: any = [];
   // options
   showXAxis = true;
@@ -22,8 +21,7 @@ export class ScenePortraitComponent implements OnInit {
     domain: ['#5AA454', '#A10A28', '#C7B42C', '#AAAAAA']
   };
 
-  constructor(@Inject('AnalysisService') private _service) {
-  }
+  constructor(@Inject('AnalysisService') private _service) {}
 
   ngOnInit() {
     this._service.scenesData();
@@ -33,9 +31,7 @@ export class ScenePortraitComponent implements OnInit {
   scenes() {
     this._service.scenes$.subscribe(res => {
       if (res.datas) {
-
       }
     });
   }
-
 }
