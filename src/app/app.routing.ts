@@ -32,10 +32,6 @@ const routes: Routes = [
       },
       { path: 'pages', loadChildren: './pages/pages.module#PagesModule' },
       {
-        path: 'components/chart',
-        loadChildren: './chart/chart.module#ChartModule'
-      },
-      {
         path: 'analysis',
         loadChildren: './analysis/analysis.module#AnalysisModule'
       },
