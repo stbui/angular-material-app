@@ -1,11 +1,11 @@
 FROM node:latest
 
 RUN npm -g config set user root
-RUN npm install -g @angular/cli@latest  http-server
+RUN npm install -g http-server
 WORKDIR /stbui
 COPY . /stbui
 RUN npm install && npm run build
-RUN cp ./dist ./
+RUN cd ./dist
 
 EXPOSE 8080
 
