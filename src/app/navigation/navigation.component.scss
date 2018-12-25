@@ -25,16 +25,12 @@ mat-card {
     box-shadow: 0 20px 20px rgba(0, 0, 0, 0.16);
   }
 
-  > img {
-    height: 120px;
-  }
-
   &-mask {
     position: relative;
     height: 144px;
-    width: calc(100% + 48px);
-    top: -24px;
-    left: -24px;
+    width: calc(100% + 32px);
+    top: -16px;
+    left: -16px;
     border-radius: 4px 4px 0 0;
     background: #1956ef;
     background: linear-gradient(90deg, #1956ef, #30a0f8);
@@ -45,9 +41,11 @@ mat-card {
     width: 56%;
     margin: 0 22%;
     text-align: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    background-image: url(/assets/logo.png);
+    background: {
+      repeat: no-repeat;
+      size: contain;
+      position: center;
+      image: url(/assets/logo.png);
+    }
   }
 }
