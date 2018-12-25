@@ -1,4 +1,4 @@
-<stbui-layout>
+<!-- <stbui-layout>
 
   <stbui-layout-header>
     <stbui-search class="search" placeholder="搜索..."></stbui-search>
@@ -66,4 +66,41 @@
     <app-mail-detail *ngIf="shownMailDetail" [mail]="shownMailDetail"></app-mail-detail>
   </div>
 
-</stbui-layout>
+</stbui-layout> -->
+
+<div class="mail">
+  <div class="sidenav">
+    <div class="compose-container">
+      <div class="compose" matRipple>写邮件</div>
+    </div>
+
+    <div class="nav-list">
+      <div>
+        <div class="nav-list-item active">
+          <mat-icon class="icon">mail</mat-icon>
+          <div class="nav-list-item-name">
+            <span class="name"><a href="#">收件箱</a></span>
+            <div class="number">14</div>
+          </div>
+        </div>
+
+        <div class="nav-list-item">
+          <mat-icon class="icon">mail</mat-icon>
+          <div class="nav-list-item-name">
+            <span class="name"><a href="#">收件箱</a></span>
+            <div class="number">14</div>
+          </div>
+        </div>
+
+        <div class="nav-list-item">
+          <mat-icon class="icon">mail</mat-icon>
+          <div class="nav-list-item-name">
+            <span class="name"><a href="#">收件箱</a></span>
+            <div class="number">14</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="mail-list"><mat-checkbox class="checkbox"></mat-checkbox></div>
+</div>

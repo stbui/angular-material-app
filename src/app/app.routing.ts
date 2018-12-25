@@ -11,15 +11,15 @@ const routes: Routes = [
   { path: 'sigin', component: SigninComponent },
   { path: 'sigup', component: SignupComponent },
   {
+    path: 'apps/navigation',
+    loadChildren: './navigation/navigation.module#NavigationModule'
+  },
+  { path: 'apps/mail', loadChildren: './mail/mail.module#MailModule' },
+  {
     path: '',
     component: AdminComponent,
     children: [
-      {
-        path: 'apps/navigation',
-        loadChildren: './navigation/navigation.module#NavigationModule'
-      },
       { path: 'apps/chats', loadChildren: './chats/chats.module#ChatsModule' },
-      { path: 'apps/mail', loadChildren: './mail/mail.module#MailModule' },
       {
         path: 'apps/todo/:filter',
         loadChildren: './todo/todo.module#TodoModule'
