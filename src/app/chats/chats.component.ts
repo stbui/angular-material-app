@@ -1,4 +1,6 @@
-import { Component, OnInit, ViewEncapsulation, Inject } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { ChatsFirebase } from './chats.firebase';
+import { ChatsService } from './chats.service';
 
 @Component({
   selector: 'app-chats',
@@ -7,12 +9,12 @@ import { Component, OnInit, ViewEncapsulation, Inject } from '@angular/core';
   encapsulation: ViewEncapsulation.None
 })
 export class ChatsComponent implements OnInit {
-  chats: any[];
+  chats: any;
   activeChat: any;
 
   chatName: string = 'demo';
 
-  constructor(@Inject('ChatsService') private service) {}
+  constructor(private service: ChatsService) {}
 
   ngOnInit() {
     this.getChatsList();

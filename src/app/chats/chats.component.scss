@@ -20,7 +20,7 @@ $height__chat-container: calc(
   height: $height__chat-container;
   position: relative;
   max-width: 1200px;
-  margin: -$height__chat-toolbar auto 0;
+  margin: 0 auto 0;
   padding: 0 32px 64px;
 
   .chat {

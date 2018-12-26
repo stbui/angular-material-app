@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { SharedModule } from '../shared/shared.module';
 
 import { ChatsService } from './chats.service';
+import { ChatsFirebase } from './chats.firebase';
 import { ChatsComponent } from './chats.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { ChatComponent } from './chat/chat.component';
@@ -26,7 +27,8 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   ],
   entryComponents: [NoticeComponent],
   providers: [
-    { provide: 'ChatsService', useClass: ChatsService },
+    ChatsFirebase,
+    ChatsService,
     {
       provide: PERFECT_SCROLLBAR_CONFIG,
       useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG

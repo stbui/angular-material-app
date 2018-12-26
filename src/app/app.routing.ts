@@ -15,11 +15,11 @@ const routes: Routes = [
     loadChildren: './navigation/navigation.module#NavigationModule'
   },
   { path: 'apps/mail', loadChildren: './mail/mail.module#MailModule' },
+  { path: 'apps/chats', loadChildren: './chats/chats.module#ChatsModule' },
   {
     path: '',
     component: AdminComponent,
     children: [
-      { path: 'apps/chats', loadChildren: './chats/chats.module#ChatsModule' },
       {
         path: 'apps/todo/:filter',
         loadChildren: './todo/todo.module#TodoModule'

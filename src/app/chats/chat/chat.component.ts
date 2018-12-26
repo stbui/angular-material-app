@@ -23,10 +23,7 @@ export class ChatComponent {
   animal: string;
   name: string;
 
-  constructor(
-    @Inject('ChatsService') private service,
-    public dialog: MatDialog
-  ) {}
+  constructor(public dialog: MatDialog) {}
 
   onSendTriggered() {
     if (this.newMessage) {
