@@ -1,28 +1,54 @@
 <div class="sidenav-container">
-  <mat-toolbar>
+  <!-- <mat-toolbar>
     <div class="toolbar" fxLayout="row" fxLayoutAlign="start center">
-      <img class="avatar pointer" [src]="avatar">
-      <span fxFlex></span>
-      <button mat-icon-button>
-        <mat-icon>phone</mat-icon>
-      </button>
+      <img class="avatar pointer" [src]="avatar" /> <span fxFlex></span>
+      <button mat-icon-button><mat-icon>phone</mat-icon></button>
       <button mat-icon-button [matMenuTriggerFor]="userMenu">
         <mat-icon>more_vert</mat-icon>
       </button>
     </div>
-  </mat-toolbar>
+  </mat-toolbar> -->
 
-  <div class="chat-contacts-container" fxLayout="column">
-    <div>
+  <mat-accordion>
+    <mat-expansion-panel expanded>
+      <mat-expansion-panel-header>
+        <mat-panel-title> 我的对话 </mat-panel-title>
+      </mat-expansion-panel-header>
+
       <mat-nav-list class="chat-contacts">
-        <mat-list-item class="chat-contact" (click)="setActiveChat(chat)" *ngFor="let chat of chats" mat-ripple>
-          <img [src]="chat.picture" mat-list-avatar>
-          <h3 class="name" mat-line>{{chat.name}}</h3>
-          <p class="last-message" mat-line> {{chat.lastMessage}}</p>
+        <mat-list-item
+          class="chat-contact"
+          (click)="setActiveChat(chat)"
+          *ngFor="let chat of chats"
+          mat-ripple
+        >
+          <img [src]="chat.picture" mat-list-avatar />
+          <h3 class="name" mat-line>{{ chat.name }}</h3>
+          <p class="last-message" mat-line>{{ chat.lastMessage }}</p>
         </mat-list-item>
       </mat-nav-list>
-    </div>
-  </div>
+    </mat-expansion-panel>
+    <mat-expansion-panel
+      (opened)="panelOpenState = true"
+      (closed)="panelOpenState = false"
+    >
+      <mat-expansion-panel-header>
+        <mat-panel-title> 同事的对话 </mat-panel-title>
+      </mat-expansion-panel-header>
+      <mat-nav-list class="chat-contacts">
+        <mat-list-item
+          class="chat-contact"
+          (click)="setActiveChat(chat)"
+          *ngFor="let chat of chats"
+          mat-ripple
+        >
+          <img [src]="chat.picture" mat-list-avatar />
+          <h3 class="name" mat-line>{{ chat.name }}</h3>
+          <p class="last-message" mat-line>{{ chat.lastMessage }}</p>
+        </mat-list-item>
+      </mat-nav-list>
+    </mat-expansion-panel>
+  </mat-accordion>
 </div>
 
 <mat-menu #userMenu="matMenu">

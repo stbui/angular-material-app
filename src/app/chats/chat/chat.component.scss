@@ -6,33 +6,23 @@ $height__chat-container: calc(
 
 .chat-inner-container {
   height: 100%;
-
   .chat-content {
     position: relative;
     height: calc(100% - #{$height__chat-toolbar + 1});
-
-    perfect-scrollbar {
-      //margin-bottom: 103px;
-    }
-
     .messages-container {
       padding: 24px;
-
       .chat-message {
         margin: 24px 0;
-
         .message {
           padding: 8px;
           position: relative;
           box-shadow: 0 0 0 -1px rgba(0, 0, 0, 0.2),
             0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
         }
-
         .partner {
           .message {
             background: white;
             margin-left: 12px;
-
             &:after {
               position: absolute;
               content: '';
@@ -46,12 +36,10 @@ $height__chat-container: calc(
             }
           }
         }
-
         .me {
           .message {
             background: #e1ffc7;
             margin-right: 12px;
-
             &:after {
               position: absolute;
               content: '';
@@ -67,7 +55,6 @@ $height__chat-container: calc(
         }
       }
     }
-
     .chat-respond {
       background: white;
       width: 100%;
@@ -76,42 +63,34 @@ $height__chat-container: calc(
       left: 0;
       padding: 12px 24px;
       border-top: 1px solid #eee;
-
       textarea {
         resize: none;
       }
-
       button {
         margin-left: 24px;
       }
     }
   }
 }
-
 mat-toolbar {
   border-bottom: 1px solid #eee;
-
   .toolbar {
     width: 100%;
   }
-
   .current-contact {
     .avatar {
       margin: 0 14px 0 10px;
     }
-
     .name {
       font-size: 18px;
       font-weight: 500;
     }
-
     .status {
       font-size: 14px;
       color: #888;
     }
   }
 }
-
 .pointer {
   cursor: default;
 }
