@@ -1,6 +1,12 @@
 <mat-toolbar class="mat-elevation-z1" style="background-color:#fff">
   <mat-toolbar-row>
-    <a href="/" class="header-brand" fxFlex="248px">Mail</a>
+    <div class="header-brand" fxLayout="row" fxLayoutAlign="start center">
+      <img class="logo-img" src="assets/logo.png" />
+      <a class="logo-text" href="/"
+        >Mail <span style="font-size:16px">Stbui</span></a
+      >
+    </div>
+
     <div fxFlex="auto"><stbui-search placeholder="搜索..."></stbui-search></div>
     <div class="header-setting">
       <button mat-icon-button><mat-icon>apps</mat-icon></button>

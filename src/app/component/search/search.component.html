@@ -1,7 +1,13 @@
-<div class="search mat-elevation-z2" fxLayout="row">
-  <div fxLayout="row" fxLayoutAlign="center center">
-    <mat-icon>search</mat-icon>
-  </div>
-  <input #inputRef fxFlex type="search" autocomplete="off" spellcheck="false" [placeholder]="placeholder" (keyup.enter)="enterUp()"
-    [(ngModel)]="inputValue">
+<div class="search" fxLayout="row" fxLayoutAlign="start center">
+  <div><mat-icon>search</mat-icon></div>
+  <input
+    #inputRef
+    fxFlex
+    type="search"
+    autocomplete="off"
+    spellcheck="false"
+    [placeholder]="placeholder"
+    (keyup.enter)="enterUp()"
+    [(ngModel)]="inputValue"
+  />
 </div>

@@ -2,10 +2,15 @@ $prefix: 'search';
 $search-height: 56px;
 $search-background: #fff;
 
+:host {
+  display: block;
+}
+
 .#{$prefix} {
   background: $search-background;
   min-height: $search-height;
   max-height: $search-height;
+  background: rgba(0, 0, 0, 0.04);
 
   mat-icon {
     vertical-align: middle;
@@ -14,8 +19,10 @@ $search-background: #fff;
   }
 
   input {
+    height: 46px;
     border: 0;
-    height: $search-height;
     outline: none;
+    margin-right: 10px;
+    background: transparent;
   }
 }

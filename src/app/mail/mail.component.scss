@@ -1,9 +1,16 @@
 .header {
   &-brand {
     font-size: 40px;
+    font: 500 32px/32px Roboto, 'Helvetica Neue', sans-serif;
     padding-left: 40px;
     color: #3c4043;
     text-decoration: none;
+    color: white !important;
+    background-color: #2196f3 !important;
+    padding: 0 16px;
+    width: 250px;
+    height: 64px;
+    margin-left: -16px;
   }
 
   &-setting {
@@ -11,6 +18,16 @@
     padding-left: 32px;
     flex: 0 0 auto;
   }
+}
+
+.logo-img {
+  width: 32px;
+}
+.logo-text {
+  text-decoration: none;
+  margin-left: 24px;
+  line-height: 1;
+  color: #fff;
 }
 
 .mail-list {
