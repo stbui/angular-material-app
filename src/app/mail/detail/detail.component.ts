@@ -1,4 +1,4 @@
-import { Component,Input, Output, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-mail-detail',
@@ -6,13 +6,10 @@ import { Component,Input, Output, OnInit } from '@angular/core';
   styleUrls: ['./detail.component.scss']
 })
 export class DetailComponent implements OnInit {
-
   @Input() mail;
   shownMailDetail;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

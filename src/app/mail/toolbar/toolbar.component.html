@@ -1,20 +1,28 @@
 <div *ngIf="!mail" class="toolbar" fxLayout="row" fxLayoutAlign="start center">
   <mat-checkbox class="checkbox"></mat-checkbox>
-  <span fxFlex></span>
-  <span>1 - 25 of {{ itemCount }}</span>
+  <button mat-icon-button><mat-icon>refresh</mat-icon></button>
+  <button mat-icon-button><mat-icon>more_vert</mat-icon></button>
+  <span fxFlex></span> <span>第1 - 30行, 共{{ itemCount }}行 </span>
   <div class="chevrons">
-    <button mat-icon-button>
-      <mat-icon>chevron_left</mat-icon>
-    </button>
-    <button mat-icon-button>
-      <mat-icon>chevron_right</mat-icon>
-    </button>
+    <button mat-icon-button><mat-icon>chevron_left</mat-icon></button>
+    <button mat-icon-button><mat-icon>chevron_right</mat-icon></button>
   </div>
+  <button mat-icon-button><mat-icon>settings</mat-icon></button>
 </div>
 
-<div *ngIf="mail" class="toolbar toolbar-detail" fxLayout="row" fxLayoutAlign="start center">
+<div
+  *ngIf="mail"
+  class="toolbar toolbar-detail"
+  fxLayout="row"
+  fxLayoutAlign="start center"
+>
   <div class="icon-group">
-    <button class="back" mat-icon-button matTooltip="返回" (click)="onForwardTriggered()">
+    <button
+      class="back"
+      mat-icon-button
+      matTooltip="返回"
+      (click)="onForwardTriggered()"
+    >
       <mat-icon>arrow_back</mat-icon>
     </button>
   </div>
@@ -23,7 +31,7 @@
       <mat-icon>archive</mat-icon>
     </button>
     <button class="spam" mat-icon-button matTooltip="标记垃圾">
-      <mat-icon>backspace</mat-icon>
+      <mat-icon>error</mat-icon>
     </button>
     <button class="delete" mat-icon-button matTooltip="删除">
       <mat-icon>delete</mat-icon>
@@ -33,35 +41,35 @@
     <button class="archive" mat-icon-button matTooltip="移动到">
       <mat-icon>folder</mat-icon>
     </button>
-    <button class="spam" mat-icon-button matTooltip="标签" [matMenuTriggerFor]="mailLabels">
+    <button
+      class="spam"
+      mat-icon-button
+      matTooltip="标签"
+      [matMenuTriggerFor]="mailLabels"
+    >
       <mat-icon>label</mat-icon>
     </button>
   </div>
   <button class="delete" mat-icon-button [matMenuTriggerFor]="mailOptions">
     <mat-icon>more_vert</mat-icon>
   </button>
-  <span fxFlex></span>
-  <span>1 - 25 of 0</span>
+  <span fxFlex></span> <span>第 1 个会话，共 30 个</span>
   <div class="chevrons">
-    <button mat-icon-button>
-      <mat-icon>chevron_left</mat-icon>
-    </button>
-    <button mat-icon-button>
-      <mat-icon>chevron_right</mat-icon>
-    </button>
+    <button mat-icon-button><mat-icon>chevron_left</mat-icon></button>
+    <button mat-icon-button><mat-icon>chevron_right</mat-icon></button>
   </div>
 </div>
 
 <mat-menu #mailOptions="matMenu">
-  <button mat-menu-item> <mat-icon>markunread_mailbox</mat-icon>标记未读 </button>
-  <button mat-menu-item> <mat-icon>label</mat-icon> 标签 </button>
+  <button mat-menu-item><mat-icon>markunread_mailbox</mat-icon>标记未读</button>
+  <button mat-menu-item><mat-icon>label</mat-icon> 标签</button>
   <mat-divider></mat-divider>
-  <button mat-menu-item> <mat-icon>delete</mat-icon> 删除 </button>
+  <button mat-menu-item><mat-icon>delete</mat-icon> 删除</button>
 </mat-menu>
 
 <mat-menu #mailLabels="matMenu">
-  <button mat-menu-item> <mat-icon>markunread_mailbox</mat-icon>标记未读 </button>
-  <button mat-menu-item> <mat-icon>label</mat-icon> 标签 </button>
+  <button mat-menu-item><mat-icon>markunread_mailbox</mat-icon>标记未读</button>
+  <button mat-menu-item><mat-icon>label</mat-icon> 标签</button>
   <mat-divider></mat-divider>
-  <button mat-menu-item> <mat-icon>delete</mat-icon> 删除 </button>
+  <button mat-menu-item><mat-icon>delete</mat-icon> 删除</button>
 </mat-menu>

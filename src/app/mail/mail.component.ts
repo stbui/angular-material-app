@@ -10,7 +10,7 @@ import { ComposeComponent } from './compose/compose.component';
 })
 export class MailComponent implements OnInit {
   allMails;
-  shownMails = [];
+  shownMails: any[] = [];
   shownMailDetail;
 
   constructor(

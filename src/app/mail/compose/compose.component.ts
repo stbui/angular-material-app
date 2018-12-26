@@ -8,10 +8,10 @@ import { MatDialogRef } from '@angular/material';
 })
 export class ComposeComponent implements OnInit {
   mail;
-  name;
-  address = 'stbui@stbui.com';
-  subject;
-  content;
+  name: string;
+  address: string = 'stbui@stbui.com';
+  subject: string;
+  content: string;
 
   constructor(private dialogRef: MatDialogRef<ComposeComponent>) {}
 

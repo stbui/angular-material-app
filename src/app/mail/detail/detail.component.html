@@ -1,17 +1,18 @@
 <div class="mail-detail" *ngIf="mail">
-
   <div class="mail-subject">{{ mail.subject }}</div>
 
   <div class="mail-header" fxLayout="row">
-    <img class="avatar" src="assets/images/avatars/7.jpg">
+    <img class="avatar" src="assets/images/avatars/noavatar.png" />
     <div class="mail-info" fxLayout="column">
       <span class="from">{{ mail.from.name }}</span>
-      <span class="to">to me <mat-icon>arrow_drop_down</mat-icon></span>
+      <span class="to">发送至 我<mat-icon>arrow_drop_down</mat-icon></span>
     </div>
     <span fxFlex></span>
     <div class="mail-extra">
       <span class="when">{{ mail.when }}</span>
-      <button class="options" [matMenuTriggerFor]="mailOptions" mat-icon-button>
+      <button mat-icon-button><mat-icon>start</mat-icon></button>
+      <button mat-icon-button><mat-icon>reply</mat-icon></button>
+      <button mat-icon-button [matMenuTriggerFor]="mailOptions">
         <mat-icon>more_vert</mat-icon>
       </button>
     </div>
@@ -22,8 +23,12 @@
       <p>{{ mail.content }}</p>
     </div>
 
-    <div class="attachments-container">
-      <div class="attachments-header" fxLayout="row" fxLayoutAlign="start center">
+    <div class="attachments-container" *ngIf="mail.attach">
+      <div
+        class="attachments-header"
+        fxLayout="row"
+        fxLayoutAlign="start center"
+      >
         <span class="title">附件</span>
         <mat-divider fxFlex></mat-divider>
         <button class="download" mat-icon-button>
@@ -32,35 +37,36 @@
       </div>
 
       <div class="attachments" fxLayout="row wrap">
-        <div class="attachment">
-          <img class="pointer">
-        </div>
+        <div class="attachment"><img class="pointer" /></div>
       </div>
     </div>
   </div>
 
   <div class="respond" fxLayout="row" fxLayoutAlign="start center">
-    <img class="avatar" src="assets/images/avatars/7.jpg">
-    <span class="click-reply">点击 <span class="semi-bold">回复</span> or <span class="semi-bold">后退</span></span>
-    <span fxFlex></span>
-    <mat-icon class="reply">reply</mat-icon>
-    <mat-icon class="forward">forward</mat-icon>
+    <button mat-raised-button class="respond-button">
+      <mat-icon>reply</mat-icon> 回复
+    </button>
+    <button mat-raised-button><mat-icon>forward</mat-icon> 转发</button>
   </div>
 
   <div style="display: none" class="respond respond-active">
     <quill-editor></quill-editor>
     <div class="respond-buttons" fxLayout="row" fxLayoutAlign="end stretch">
       <button mat-button>Cancel</button>
-      <button mat-raised-button color="primary">Send <mat-icon>send</mat-icon></button>
+      <button mat-raised-button color="primary">
+        Send <mat-icon>send</mat-icon>
+      </button>
     </div>
   </div>
-
 </div>
 
-
 <mat-menu #mailOptions="matMenu">
-  <button mat-menu-item> <mat-icon>markunread_mailbox</mat-icon>标记未读 </button>
-  <button mat-menu-item> <mat-icon>label</mat-icon> 标签 </button>
-  <mat-divider></mat-divider>
-  <button mat-menu-item> <mat-icon>delete</mat-icon> 删除 </button>
+  <button mat-menu-item><mat-icon>reply</mat-icon>回复</button>
+  <button mat-menu-item><mat-icon>forward</mat-icon>转发</button>
+  <button mat-menu-item><mat-icon>filter_list</mat-icon>过滤此类邮件</button>
+  <button mat-menu-item><mat-icon>delete</mat-icon>删除此邮件</button>
+  <button mat-menu-item><mat-icon>error</mat-icon>列为垃圾邮件</button>
+  <button mat-menu-item>
+    <mat-icon>markunread_mailbox</mat-icon>标记为未读
+  </button>
 </mat-menu>

@@ -6,18 +6,15 @@ import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
   styleUrls: ['./toolbar.component.scss']
 })
 export class ToolbarComponent implements OnInit {
-
   @Input() mail;
-  @Input() itemCount;
+  @Input() itemCount: number = 0;
   @Output() onForward = new EventEmitter();
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   onForwardTriggered() {
     this.onForward.emit(true);
   }
-
 }

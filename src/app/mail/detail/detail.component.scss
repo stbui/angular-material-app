@@ -1,12 +1,13 @@
 .mail-detail {
+  position: relative;
   padding: 24px 32px;
 
   .mail-header {
-
     .avatar {
       height: 45px;
       width: 45px;
       margin-right: 20px;
+      border-radius: 50%;
     }
 
     .from {
@@ -36,11 +37,6 @@
       .when {
         vertical-align: middle;
       }
-
-      .options {
-        vertical-align: middle;
-        margin-left: 16px;
-      }
     }
   }
 
@@ -53,10 +49,6 @@
   .mail-content {
     margin-top: 32px;
     margin-bottom: 240px;
-
-    .mail-content-text {
-
-    }
   }
 
   .attachments-container {
@@ -90,28 +82,15 @@
   }
 
   .respond {
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    padding: 24px 32px;
-    border-top: 1px solid #EEE;
-    cursor: pointer;
+    padding: 24px 0;
+    border-top: 1px solid #eee;
 
-    .avatar {
-      margin-right: 28px;
-    }
-
-    .click-reply {
-      color: #999;
-
-      .semi-bold {
-        font-weight: 500;
-      }
+    &-button {
+      margin-right: 16px;
     }
 
     .reply {
-      color: #2B303B;
+      color: #2b303b;
       margin-right: 24px;
     }
 

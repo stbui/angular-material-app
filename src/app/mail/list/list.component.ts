@@ -6,19 +6,14 @@ import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
   styleUrls: ['./list.component.scss']
 })
 export class ListComponent implements OnInit {
-
-  @Input()  mails;
+  @Input() mails;
   @Output() onOpenMailDetial = new EventEmitter();
 
+  constructor() {}
 
-  constructor() {
-  }
-
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   onOpenMailDetialTriggered(mail) {
     this.onOpenMailDetial.emit(mail);
   }
-
 }

@@ -1,106 +1,99 @@
-<!-- <stbui-layout>
+<div class="header" fxLayout="row" fxLayoutAlign="start center">
+  <div class="header-brand" fxFlex="248px">Mail</div>
+  <div fxFlex="auto"><stbui-search placeholder="搜索..."></stbui-search></div>
 
-  <stbui-layout-header>
-    <stbui-search class="search" placeholder="搜索..."></stbui-search>
-  </stbui-layout-header>
-
-  <stbui-layout-sidenav>
-    <div class="sidenav-content" [fxHide]="true" [fxHide.gt-md]="false">
-
-      <div class="title-container">
-        <mat-icon>mail</mat-icon>
-        <span class="title">Mail</span>
-      </div>
-
-      <div class="compose-container">
-        <button class="compose" mat-raised-button (click)="openComposeDialog()">
-          <mat-icon>mode_edit</mat-icon>
-          <span>写信</span>
-        </button>
-      </div>
-
-      <mat-nav-list>
-        <h3 mat-subheader>Inbox</h3>
-        <mat-list-item>
-          <mat-icon mat-list-icon>mail</mat-icon>
-          <h4 mat-line>收件箱</h4>
-        </mat-list-item>
-        <mat-list-item>
-          <mat-icon mat-list-icon>group</mat-icon>
-          <h4 mat-line>联系人</h4>
-        </mat-list-item>
-        <mat-list-item>
-          <mat-icon mat-list-icon>local_offer</mat-icon>
-          <h4 mat-line>标签</h4>
-        </mat-list-item>
-        <mat-divider></mat-divider>
-        <mat-list-item>
-          <mat-icon mat-list-icon>star</mat-icon>
-          <h4 mat-line>星标邮件</h4>
-        </mat-list-item>
-        <mat-list-item>
-          <mat-icon mat-list-icon>send</mat-icon>
-          <h4 mat-line>已发送</h4>
-        </mat-list-item>
-        <mat-list-item>
-          <mat-icon mat-list-icon>drafts</mat-icon>
-          <h4 mat-line>草稿箱</h4>
-        </mat-list-item>
-        <mat-list-item>
-          <mat-icon mat-list-icon>backspace</mat-icon>
-          <h4 mat-line>垃圾邮件</h4>
-        </mat-list-item>
-        <mat-list-item>
-          <mat-icon mat-list-icon>delete</mat-icon>
-          <h4 mat-line>回收站</h4>
-        </mat-list-item>
-      </mat-nav-list>
-
-    </div>
-  </stbui-layout-sidenav>
-
-  <app-mail-toolbar [mail]="shownMailDetail" [itemCount]="shownMails.length" (onForward)="onForward($event)"></app-mail-toolbar>
-
-  <div class="mails">
-    <app-mail-list *ngIf="!shownMailDetail" [mails]="shownMails | async" (onOpenMailDetial)="openMailDetial($event)"></app-mail-list>
-    <app-mail-detail *ngIf="shownMailDetail" [mail]="shownMailDetail"></app-mail-detail>
+  <div class="header-setting">
+    <button mat-icon-button><mat-icon>apps</mat-icon></button>
+    <button mat-icon-button><mat-icon>notifications</mat-icon></button>
   </div>
+</div>
 
-</stbui-layout> -->
-
-<div class="mail">
-  <div class="sidenav">
+<div fxLayout="row" fxLayoutAlign="start start">
+  <div class="sidenav" fxFlex="256px">
     <div class="compose-container">
-      <div class="compose" matRipple>写邮件</div>
+      <div class="compose" matRipple (click)="openComposeDialog()">写邮件</div>
     </div>
 
     <div class="nav-list">
-      <div>
-        <div class="nav-list-item active">
-          <mat-icon class="icon">mail</mat-icon>
-          <div class="nav-list-item-name">
-            <span class="name"><a href="#">收件箱</a></span>
-            <div class="number">14</div>
-          </div>
-        </div>
+      <mat-nav-list>
+        <mat-list-item class="active">
+          <mat-icon class="nav-list-icon">mail</mat-icon> <span>收件箱</span
+          ><span fxFlex></span> <span>14</span></mat-list-item
+        >
+        <mat-list-item>
+          <mat-icon class="nav-list-icon">start</mat-icon>
+          <span>已加星标</span><span fxFlex></span>
+        </mat-list-item>
 
-        <div class="nav-list-item">
-          <mat-icon class="icon">mail</mat-icon>
-          <div class="nav-list-item-name">
-            <span class="name"><a href="#">收件箱</a></span>
-            <div class="number">14</div>
-          </div>
-        </div>
+        <mat-list-item>
+          <mat-icon class="nav-list-icon">query_builder</mat-icon>
+          <span>已延后</span><span fxFlex></span>
+        </mat-list-item>
+        <mat-list-item>
+          <mat-icon class="nav-list-icon">label_important</mat-icon>
+          <span>重要邮件</span><span fxFlex></span>
+        </mat-list-item>
+        <mat-list-item>
+          <mat-icon class="nav-list-icon">send</mat-icon>
+          <span>已发邮件</span><span fxFlex></span>
+        </mat-list-item>
 
-        <div class="nav-list-item">
-          <mat-icon class="icon">mail</mat-icon>
-          <div class="nav-list-item-name">
-            <span class="name"><a href="#">收件箱</a></span>
-            <div class="number">14</div>
-          </div>
-        </div>
-      </div>
+        <mat-list-item>
+          <mat-icon class="nav-list-icon">insert_drive_file</mat-icon>
+          <span>草稿</span><span fxFlex></span>
+        </mat-list-item>
+      </mat-nav-list>
+
+      <mat-nav-list>
+        <mat-list-item>
+          <mat-icon class="nav-list-icon">mail</mat-icon>
+          <span>所有邮件</span>
+        </mat-list-item>
+
+        <mat-list-item>
+          <mat-icon class="nav-list-icon">error</mat-icon>
+          <span>垃圾邮件</span>
+        </mat-list-item>
+        <mat-list-item>
+          <mat-icon class="nav-list-icon">delete</mat-icon>
+          <span>已删除邮件</span>
+        </mat-list-item>
+        <mat-list-item>
+          <mat-icon class="nav-list-icon">start</mat-icon>
+          <span>Receipts</span>
+        </mat-list-item>
+        <mat-list-item>
+          <mat-icon class="nav-list-icon">label</mat-icon>
+          <span>Work</span>
+        </mat-list-item>
+        <mat-list-item>
+          <mat-icon class="nav-list-icon">label</mat-icon>
+          <span>管理标签</span>
+        </mat-list-item>
+        <mat-list-item>
+          <mat-icon class="nav-list-icon">settings</mat-icon>
+          <span>创建新标签</span>
+        </mat-list-item>
+      </mat-nav-list>
     </div>
   </div>
-  <div class="mail-list"><mat-checkbox class="checkbox"></mat-checkbox></div>
+
+  <div class="mail-list" fxFlex>
+    <app-mail-toolbar
+      [mail]="shownMailDetail"
+      [itemCount]="shownMails.length"
+      (onForward)="onForward($event)"
+    ></app-mail-toolbar>
+
+    <app-mail-list
+      *ngIf="!shownMailDetail"
+      [mails]="shownMails | async"
+      (onOpenMailDetial)="openMailDetial($event)"
+    ></app-mail-list>
+
+    <app-mail-detail
+      *ngIf="shownMailDetail"
+      [mail]="shownMailDetail"
+    ></app-mail-detail>
+  </div>
 </div>
