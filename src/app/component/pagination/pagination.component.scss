@@ -14,8 +14,11 @@ $pagination-border-radius: 2px !default;
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  flex-wrap: wrap;
   user-select: none;
   cursor: pointer;
+  margin: 0;
+  padding: 0;
 
   li {
     box-sizing: border-box;
@@ -34,19 +37,16 @@ $pagination-border-radius: 2px !default;
     line-height: $pagination-line-height;
     position: relative;
     border-radius: $pagination-border-radius;
+    list-style: none;
   }
 
-  &-item-wrapper {
+  &-end {
     display: flex;
+    justify-content: flex-end;
   }
-}
 
-.pagination-end {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.pagination-center {
-  display: flex;
-  justify-content: center;
+  &-center {
+    display: flex;
+    justify-content: center;
+  }
 }
