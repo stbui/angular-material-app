@@ -4,7 +4,7 @@
  * https://github.com/stbui
  */
 
- import {
+import {
   Component,
   Input,
   Output,
@@ -58,7 +58,7 @@ export class PaginationComponent {
 
   private _total: number = 10;
 
-  currentPage: number = 1;
+  @Input() currentPage: number = 1;
   totalPages: number;
   pages: number[] = [];
 
@@ -94,7 +94,7 @@ export class PaginationComponent {
 
     this.currentPage = page;
 
-    if (page > 5) {
+    if (page > 5 || page === 1) {
       this.setPage();
     }
     this.onPage.emit(page);
