@@ -9,17 +9,24 @@ import { CustomerCommonComponent } from './customer-common/customer-common.compo
 import { OpportunitiesComponent } from './opportunities/opportunities.component';
 import { ContractComponent } from './contract/contract.component';
 import { ProductComponent } from './product/product.component';
+import { LayoutComponent } from './layout/layout.component';
 
 const routes: Routes = [
-  { path: '', component: CrmComponent },
-  { path: 'crm', component: CrmComponent },
-  { path: 'lead', component: LeadComponent },
-  { path: 'customer', component: CustomerComponent },
-  { path: 'contacts', component: ContactComponent },
-  { path: 'customer', component: CustomerCommonComponent },
-  { path: 'opportunities', component: OpportunitiesComponent },
-  { path: 'contract', component: ContractComponent },
-  { path: 'product', component: ProductComponent }
+  {
+    path: '',
+    component: LayoutComponent,
+    children: [
+      { path: '', component: CrmComponent },
+      { path: 'crm', component: CrmComponent },
+      { path: 'lead', component: LeadComponent },
+      { path: 'customer', component: CustomerComponent },
+      { path: 'contacts', component: ContactComponent },
+      { path: 'customer', component: CustomerCommonComponent },
+      { path: 'opportunities', component: OpportunitiesComponent },
+      { path: 'contract', component: ContractComponent },
+      { path: 'product', component: ProductComponent }
+    ]
+  }
 ];
 
 @NgModule({

@@ -18,8 +18,12 @@ import { OpportunitiesComponent } from './opportunities/opportunities.component'
 import { ContractComponent } from './contract/contract.component';
 import { ProductComponent } from './product/product.component';
 import { NewComponent } from './lead/new/new.component';
-
 import { LeadService } from './lead/lead.service';
+
+import { LayoutComponent } from './layout/layout.component';
+import { BrandModule } from '../admin';
+import { NavigationModule } from '../component/navigation';
+import { NavigationService } from './navigation.service';
 
 @NgModule({
   imports: [
@@ -27,7 +31,9 @@ import { LeadService } from './lead/lead.service';
     NgxDatatableModule,
     SharedModule,
     CrmRoutingModule,
-    WidgetModule
+    WidgetModule,
+    BrandModule,
+    NavigationModule
   ],
   declarations: [
     LeadComponent,
@@ -39,9 +45,10 @@ import { LeadService } from './lead/lead.service';
     OpportunitiesComponent,
     CrmComponent,
     ContractComponent,
-    ProductComponent
+    ProductComponent,
+    LayoutComponent
   ],
   entryComponents: [ContactUpdateComponent, NewComponent],
-  providers: [LeadService]
+  providers: [NavigationService, LeadService]
 })
 export class CrmModule {}
