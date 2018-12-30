@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { MediaChange, ObservableMedia } from '@angular/flex-layout';
 import { Observable, ReplaySubject, Subscription } from 'rxjs';
 import { ConfigService } from '../core/config.service';
+import { NavigationService } from '../component/navigation';
 
 import { TranslateService } from '@ngx-translate/core';
 import { TranslationService } from '../core/translation.service';
@@ -13,10 +14,13 @@ import { locale as chinese } from './i18n/zh';
   templateUrl: './admin.component.html',
   styleUrls: ['./admin.component.scss']
 })
-export class AdminComponent implements OnInit {
+export class AdminComponent implements OnInit, OnDestroy {
   settings: any;
   onSettingsChanged: Subscription;
   layoutMode: boolean = false;
+
+  navigationModel;
+  navigationModelChangeSubscription: Subscription;
 
   private _media$: ReplaySubject<MediaChange> = new ReplaySubject(1);
   private _mediaSubscription: Subscription;
@@ -36,8 +40,15 @@ export class AdminComponent implements OnInit {
     media: ObservableMedia,
     private config: ConfigService,
     private translateService: TranslateService,
-    private translationService: TranslationService
+    private translationService: TranslationService,
+    private navigationService: NavigationService
   ) {
+    this.navigationModelChangeSubscription = this.navigationService.onNavigationModelChange.subscribe(
+      navigation => {
+        this.navigationModel = navigation;
+      }
+    );
+
     media
       .asObservable()
       .subscribe(
@@ -87,6 +98,10 @@ export class AdminComponent implements OnInit {
     setTimeout(() => {
       window.dispatchEvent(new Event('resize'));
     }, 2000);
+  }
+
+  ngOnDestroy() {
+    this.navigationModelChangeSubscription.unsubscribe();
   }
 
   /**

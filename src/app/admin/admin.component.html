@@ -6,7 +6,7 @@
 
   <mat-sidenav class="sidenav" [position]="sidenavAlign" [mode]="sidenavMode" [opened]="sidenavOpen" #sidenav>
     <stbui-brand [ngClass]="settings.colorClasses.brand"></stbui-brand>
-    <stbui-navigation [ngClass]="settings.colorClasses.navigation"></stbui-navigation>
+    <stbui-navigation [ngClass]="settings.colorClasses.navigation" [navigationModel]="navigationModel"></stbui-navigation>
   </mat-sidenav>
 
   <div class="sidenav-container" fxLayout="column">

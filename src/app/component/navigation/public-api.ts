@@ -8,3 +8,4 @@ export * from './navigation.module';
 export * from './navigation.service';
 export * from './navigation.component';
 export * from './navigation.animation';
+export * from './navigation.model';

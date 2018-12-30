@@ -357,42 +357,16 @@ export class NavigationModel {
       {
         id: 'crm',
         title: '客户关系',
-        type: 'collapse',
+        type: 'item',
         icon: 'business',
-        children: [
-          {
-            id: 'lead',
-            title: '线索',
-            type: 'item',
-            url: '/crm'
-          },
-          {
-            id: 'contacts',
-            title: '联系人',
-            type: 'item',
-            url: '/crm/contacts'
-          }
-        ]
+        url: '/crm'
       },
       {
         id: 'apm',
         title: '前端监控',
-        type: 'collapse',
+        type: 'item',
         icon: 'code',
-        children: [
-          {
-            id: 'error',
-            title: '脚本异常',
-            type: 'item',
-            url: '/apm/error'
-          },
-          {
-            id: 'performance',
-            title: '性能分析',
-            type: 'item',
-            url: '/apm/performance'
-          }
-        ]
+        url: '/apm'
       }
     ];
   }
