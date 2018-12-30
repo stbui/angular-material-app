@@ -7,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class BrandComponent implements OnInit {
   @Input() brand: string = 'Stbui';
-  @Input() link: string = '/';
+  @Input() link: any = ['/'];
 
   constructor() {}
 
