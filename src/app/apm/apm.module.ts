@@ -11,20 +11,28 @@ import { PerformanceComponent } from './performance/performance.component';
 import { ViewComponent } from './performance/view/view.component';
 import { PerformanceService } from './performance/performance.service';
 
+import { LayoutComponent } from './layout/layout.component';
+import { BrandModule } from '../admin';
+import { NavigationModule } from '../component/navigation';
+import { NavigationService } from './navigation.service';
+
 @NgModule({
   imports: [
     NgxDatatableModule,
     NgxChartsModule,
     SharedModule,
     ApmRoutingModule,
-    SearchModule
+    SearchModule,
+    BrandModule,
+    NavigationModule
   ],
   declarations: [
     ErrorComponent,
     PerformanceComponent,
     DetailComponent,
-    ViewComponent
+    ViewComponent,
+    LayoutComponent
   ],
-  providers: [PerformanceService]
+  providers: [NavigationService, PerformanceService]
 })
 export class ApmModule {}

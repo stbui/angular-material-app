@@ -1,0 +1,10 @@
+<mat-sidenav-container>
+  <mat-sidenav class="sidenav" mode="side" opened>
+    <stbui-brand class="stbui-background-accent" brand="Apm"></stbui-brand>
+    <stbui-navigation [navigationModel]="navigationModel"></stbui-navigation>
+  </mat-sidenav>
+
+  <div class="sidenav-container">
+    <div class="main-container"><router-outlet></router-outlet></div>
+  </div>
+</mat-sidenav-container>
