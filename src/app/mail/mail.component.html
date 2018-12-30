@@ -1,22 +1,17 @@
-<mat-toolbar class="mat-elevation-z1" style="background-color:#fff">
+<mat-toolbar class="mat-elevation-z1 stbui-background-white">
   <mat-toolbar-row>
-    <div class="header-brand" fxLayout="row" fxLayoutAlign="start center">
-      <img class="logo-img" src="assets/logo.png" />
-      <a class="logo-text" href="/"
-        >Mail <span style="font-size:16px">Stbui</span></a
-      >
-    </div>
+    <stbui-brand class="stbui-background-blue" style="margin-left:-16px;" brand="Mail"></stbui-brand>
 
     <div fxFlex="auto"><stbui-search placeholder="搜索..."></stbui-search></div>
-    <div class="header-setting">
-      <button mat-icon-button><mat-icon>apps</mat-icon></button>
-      <button mat-icon-button><mat-icon>notifications</mat-icon></button>
-    </div></mat-toolbar-row
-  >
+    <span fxFlex></span>
+    <button mat-icon-button><mat-icon>apps</mat-icon></button>
+    <stbui-toolbar-notification></stbui-toolbar-notification>
+    <stbui-toolbar-user></stbui-toolbar-user>
+    </mat-toolbar-row>
 </mat-toolbar>
 
 <div fxLayout="row" fxLayoutAlign="start start">
-  <div class="sidenav" fxFlex="256px">
+  <div class="sidenav" fxFlex="250px">
     <div class="compose-container">
       <div class="compose" matRipple (click)="openComposeDialog()">写邮件</div>
     </div>
@@ -24,62 +19,63 @@
     <div class="nav-list">
       <mat-nav-list>
         <mat-list-item class="active">
-          <mat-icon class="nav-list-icon">mail</mat-icon> <span>收件箱</span
-          ><span fxFlex></span> <span>14</span></mat-list-item
-        >
+          <mat-icon matListIcon>mail</mat-icon>
+           <span matLine>收件箱</span>
+           <span>14</span>
+          </mat-list-item>
         <mat-list-item>
-          <mat-icon class="nav-list-icon">start</mat-icon>
-          <span>已加星标</span><span fxFlex></span>
+          <mat-icon matListIcon>start</mat-icon>
+          <span matLine>已加星标</span>
         </mat-list-item>
 
         <mat-list-item>
-          <mat-icon class="nav-list-icon">query_builder</mat-icon>
-          <span>已延后</span><span fxFlex></span>
+          <mat-icon matListIcon>query_builder</mat-icon>
+          <span matLine>已延后</span>
         </mat-list-item>
         <mat-list-item>
-          <mat-icon class="nav-list-icon">label_important</mat-icon>
-          <span>重要邮件</span><span fxFlex></span>
+          <mat-icon matListIcon>label_important</mat-icon>
+          <span matLine>重要邮件</span>
         </mat-list-item>
         <mat-list-item>
-          <mat-icon class="nav-list-icon">send</mat-icon>
-          <span>已发邮件</span><span fxFlex></span>
+          <mat-icon matListIcon>send</mat-icon>
+          <span matLine>已发邮件</span>
         </mat-list-item>
 
         <mat-list-item>
-          <mat-icon class="nav-list-icon">insert_drive_file</mat-icon>
-          <span>草稿</span><span fxFlex></span>
+          <mat-icon matListIcon>insert_drive_file</mat-icon>
+          <span matLine>草稿</span>
         </mat-list-item>
       </mat-nav-list>
 
       <mat-nav-list>
         <mat-list-item>
-          <mat-icon class="nav-list-icon">mail</mat-icon>
-          <span>所有邮件</span>
+          <mat-icon matListIcon>mail</mat-icon>
+          <span matLine>所有邮件</span>
         </mat-list-item>
 
         <mat-list-item>
-          <mat-icon class="nav-list-icon">error</mat-icon>
-          <span>垃圾邮件</span>
+          <mat-icon matListIcon>error</mat-icon>
+          <span matLine>垃圾邮件</span>
         </mat-list-item>
         <mat-list-item>
-          <mat-icon class="nav-list-icon">delete</mat-icon>
-          <span>已删除邮件</span>
+          <mat-icon matListIcon>delete</mat-icon>
+          <span matLine>已删除邮件</span>
         </mat-list-item>
         <mat-list-item>
-          <mat-icon class="nav-list-icon">start</mat-icon>
-          <span>Receipts</span>
+          <mat-icon matListIcon>start</mat-icon>
+          <span matLine>Receipts</span>
         </mat-list-item>
         <mat-list-item>
-          <mat-icon class="nav-list-icon">label</mat-icon>
-          <span>Work</span>
+          <mat-icon matListIcon>label</mat-icon>
+          <span matLine>Work</span>
         </mat-list-item>
         <mat-list-item>
-          <mat-icon class="nav-list-icon">label</mat-icon>
-          <span>管理标签</span>
+          <mat-icon matListIcon>label</mat-icon>
+          <span matLine>管理标签</span>
         </mat-list-item>
         <mat-list-item>
-          <mat-icon class="nav-list-icon">settings</mat-icon>
-          <span>创建新标签</span>
+          <mat-icon matListIcon>settings</mat-icon>
+          <span matLine>创建新标签</span>
         </mat-list-item>
       </mat-nav-list>
     </div>

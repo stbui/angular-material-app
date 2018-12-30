@@ -96,4 +96,8 @@ export class AdminComponent implements OnInit {
   onActivate(event, scrollContainer) {
     scrollContainer.scrollTop = 0;
   }
+
+  onSettingsChange(settings) {
+    // this.config.setSettings(settings);
+  }
 }

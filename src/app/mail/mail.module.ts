@@ -4,6 +4,11 @@ import { QuillModule } from 'ngx-quill';
 import { SharedModule } from '../shared/shared.module';
 import { SearchModule } from '../component/search';
 import { LayoutModule } from '../layouts';
+import {
+  BrandModule,
+  ToolbarUserModule,
+  ToolbarNotificationModule
+} from '../admin';
 
 import { MailRoutingModule } from './mail.routing';
 import { MailComponent } from './mail.component';
@@ -20,7 +25,10 @@ import { MailService } from './mail.service';
     SharedModule,
     SearchModule,
     LayoutModule,
-    MailRoutingModule
+    MailRoutingModule,
+    BrandModule,
+    ToolbarUserModule,
+    ToolbarNotificationModule
   ],
   entryComponents: [ComposeComponent],
   declarations: [

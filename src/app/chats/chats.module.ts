@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 import { SharedModule } from '../shared/shared.module';
 
 import { ChatsService } from './chats.service';
@@ -18,7 +19,12 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
 };
 
 @NgModule({
-  imports: [SharedModule, ChatRoutingModule, PerfectScrollbarModule],
+  imports: [
+    SharedModule,
+    ChatRoutingModule,
+    PerfectScrollbarModule,
+    HttpClientModule
+  ],
   declarations: [
     ChatsComponent,
     ContactsComponent,
