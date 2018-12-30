@@ -9,28 +9,26 @@
       <a class="redirect" [routerLink]="['/sigin']">用户登录</a>
     </mat-card-title>
 
-    <form #form="ngForm" (ngSubmit)="register()">
-      <div class="register-content" fxLayout="column" fxLayoutAlign="start stretch">
-        <mat-form-field>
-          <input matInput placeholder="昵称" type="text" name="name" required [(ngModel)]="name">
-        </mat-form-field>
-        <mat-form-field>
-          <input matInput placeholder="邮箱" type="text" name="email" required [(ngModel)]="email">
-        </mat-form-field>
-        <mat-form-field>
-          <input matInput placeholder="密码" type="password" name="password" required [(ngModel)]="password">
-        </mat-form-field>
-        <mat-form-field>
-          <input matInput placeholder="确认密码" type="password" name="password-confirm" required [(ngModel)]="passwordConfirm">
-        </mat-form-field>
-        <div class="m-b-15" fxLayout="row" fxLayoutAlign="center center">
-          <mat-checkbox class="remember-me">我同意
-            <a href="javascript:;">注册协议</a>
-          </mat-checkbox>
-        </div>
-        <button color="primary" mat-raised-button [disabled]="!form.valid">创建账户</button>
+    <form [formGroup]="userForm" (ngSubmit)="register()">
+      <mat-form-field class="display-block">
+        <input type="email" placeholder="请输入您的邮箱" formControlName="email" required matInput>
+        <mat-error *ngIf="formErrors.email">{{formErrors.email}}</mat-error>
+      </mat-form-field>
 
-      </div>
+      <mat-form-field class="display-block">
+        <input type="password" placeholder="请输入您的密码" formControlName="password" required matInput>
+        <mat-error *ngIf="formErrors.password">{{formErrors.password}}</mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="display-block">
+        <input type="password" placeholder="请重复输入您的密码" formControlName="passwordConfirm" required matInput>
+        <mat-error *ngIf="formErrors.passwordConfirm">{{formErrors.passwordConfirm}}</mat-error>
+      </mat-form-field>
+
+      <mat-checkbox class="display-block form-check">我同意<a href="javascript:;">注册协议</a></mat-checkbox>
+      
+      <button color="primary" mat-raised-button [disabled]="!userForm.valid">创建账户</button>
+      <mat-error *ngIf="formErrors.signUpFailure">{{formErrors.signUpFailure}}</mat-error>
     </form>
 
     <div class="other-sign">

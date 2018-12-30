@@ -5,9 +5,7 @@
     </div>
   </div>
   <div class="signin-content mat-elevation-z12" fxFlex="100" fxFlex.gt-xs="50">
-    <mat-card-title>用户登录
-      <a class="redirect" [routerLink]="['/sigup']">注册账号</a>
-    </mat-card-title>
+    <mat-card-title>用户登录</mat-card-title>
 
     <form [formGroup]="userForm" (ngSubmit)="login()">
       <mat-form-field class="display-block">
@@ -20,7 +18,12 @@
         <mat-error *ngIf="formErrors.password">{{formErrors.password}}</mat-error>
       </mat-form-field>
 
-      <button mat-raised-button color="primary" type="submit" [disabled]="!userForm.valid">登录</button>
+      <div class="signin-button" fxLayout="row" fxLayoutAlign="space-between center">
+        <button mat-raised-button color="primary" type="submit" style="width: 48%;">登录</button>
+        <button mat-raised-button [routerLink]="['/sigup']" style="width: 48%;">注册</button>
+      </div>
+
+      <mat-error *ngIf="formErrors.loginFailure">{{formErrors.loginFailure}}</mat-error>
     </form>
 
     <div class="other-sign">
