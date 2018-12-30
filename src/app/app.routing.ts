@@ -17,13 +17,23 @@ const routes: Routes = [
     canActivate: [AuthGuard]
   },
   {
-    path: 'apps/mail',
+    path: 'mail',
     loadChildren: './mail/mail.module#MailModule',
     canActivate: [AuthGuard]
   },
   {
     path: 'apps/chats',
     loadChildren: './chats/chats.module#ChatsModule',
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'crm',
+    loadChildren: './crm/crm.module#CrmModule',
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'apm',
+    loadChildren: './apm/apm.module#ApmModule',
     canActivate: [AuthGuard]
   },
   {
@@ -45,8 +55,6 @@ const routes: Routes = [
         path: 'analysis',
         loadChildren: './analysis/analysis.module#AnalysisModule'
       },
-      { path: 'crm', loadChildren: './crm/crm.module#CrmModule' },
-      { path: 'apm', loadChildren: './apm/apm.module#ApmModule' },
       {
         path: 'page-layouts',
         loadChildren: './page-layouts/page-layouts.module#PageLayoutsModule'

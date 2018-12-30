@@ -301,7 +301,7 @@ export class NavigationModel {
             id: 'mail',
             title: '信箱',
             type: 'item',
-            url: '/apps/mail'
+            url: '/mail'
           },
           {
             id: 'navigation',
@@ -364,7 +364,7 @@ export class NavigationModel {
             id: 'lead',
             title: '线索',
             type: 'item',
-            url: '/crm/lead'
+            url: '/crm'
           },
           {
             id: 'contacts',
