@@ -1,0 +1,42 @@
+<div class="toolbar-user-container">
+  <div *ngIf="(auth.user | async); then authenticated; else guest"></div>
+</div>
+
+<ng-template class="guest" #guest>
+  <button class="dropdown-toggle" mat-button (click)="logout()">
+    <img class="dropdown-avatar" [src]="'assets/images/avatars/noavatar.png'" />
+    <span class="dropdown-displayName" fxHide fxShow.gt-sm>登陆</span>
+  </button>
+</ng-template>
+
+<ng-template class="authenticated" #authenticated>
+  <ng-container *ngIf="(auth.user | async) as user">
+    <button class="dropdown-toggle" mat-button (click)="toggleDropdown()">
+      <img class="dropdown-avatar" [src]="user.photoURL || 'assets/images/avatars/noavatar.png'" />
+      <span class="dropdown-displayName" fxHide fxShow.gt-sm>{{ user.displayName }}</span>
+      <mat-icon class="dropdown-icon-arrow" fxHide fxShow.gt-sm [class.open]="isOpen">keyboard_arrow_down</mat-icon>
+    </button>
+
+    <div class="dropdown-list-wrapper mat-elevation-z1" [class.open]="isOpen">
+      <mat-nav-list>
+        <mat-list-item>
+          <mat-icon>account_circle</mat-icon>
+          <span class="m-l-10">个人</span>
+        </mat-list-item>
+        <mat-list-item>
+          <mat-icon>settings</mat-icon>
+          <span class="m-l-10">设置</span>
+        </mat-list-item>
+        <mat-list-item>
+          <mat-icon>help</mat-icon>
+          <span class="m-l-10">帮助</span>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item (click)="logout()">
+          <mat-icon>exit_to_app</mat-icon>
+          <span class="m-l-10">退出</span>
+        </mat-list-item>
+      </mat-nav-list>
+    </div>
+  </ng-container>
+</ng-template>

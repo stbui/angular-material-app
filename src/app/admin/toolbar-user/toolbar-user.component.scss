@@ -1,0 +1,56 @@
+$height: 64px;
+$width: 140px;
+$background: #fff;
+
+.toolbar-user-container {
+  position: relative;
+}
+
+.dropdown {
+  &-toggle {
+    display: flex;
+    justify-content: center;
+    height: $height;
+    min-width: $width;
+    z-index: 21;
+  }
+
+  &-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  &-displayName {
+    margin-right: 10px;
+  }
+
+  &-icon-arrow {
+    width: 16px;
+    height: 16px;
+    font-size: 16px;
+    transform: rotate(0);
+    transition: transform 0.25s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+    &.open {
+      transform: rotate(-180deg);
+    }
+  }
+
+  &-list-wrapper {
+    background: $background;
+    position: absolute;
+    top: $height + 2px;
+    min-width: $width;
+    z-index: 20;
+    visibility: hidden;
+    transform: translateY(-135%);
+    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1),
+      visibility 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+    &.open {
+      visibility: visible;
+      transform: translateY(0);
+    }
+  }
+}

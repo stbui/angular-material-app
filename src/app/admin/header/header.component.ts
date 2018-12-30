@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
-import * as screenfull from 'screenfull';
 import { NavigationStart, NavigationEnd, Router } from '@angular/router';
+import * as screenfull from 'screenfull';
 
 @Component({
   selector: 'stbui-header',
@@ -8,10 +8,8 @@ import { NavigationStart, NavigationEnd, Router } from '@angular/router';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-  @Input()
-  customizer;
-  @Input()
-  sidenav;
+  @Input() customizer: any;
+  @Input() sidenav: any;
 
   isFullscreen: boolean = false;
   showLoading: boolean;

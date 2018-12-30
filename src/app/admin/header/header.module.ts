@@ -1,47 +1,29 @@
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { SharedModule } from '../../shared/shared.module';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { MatIconModule } from '@angular/material/icon';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
 
+import { ToolbarUserModule } from '../toolbar-user/toolbar-user.module';
+import { ToolbarNotificationModule } from '../toolbar-notification/toolbar-notification.module';
 import { HeaderComponent } from './header.component';
-import { ToolbarUserComponent } from './toolbar-user/toolbar-user.component';
-import { ToolbarHelpComponent } from './toolbar-help/toolbar-help.component';
-import { ToolbarNotificationComponent } from './toolbar-notification/toolbar-notification.component';
-import { ToolbarNotificationService } from './toolbar-notification/toolbar-notification.service';
 import { LoadingModule } from '../../component/loading';
-
-import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
-import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
-import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
-
-const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
-  suppressScrollX: true
-};
 
 @NgModule({
   imports: [
-    SharedModule,
-    HttpClientModule,
+    CommonModule,
     RouterModule,
-    PerfectScrollbarModule,
-    LoadingModule
+    FlexLayoutModule,
+    MatIconModule,
+    MatToolbarModule,
+    MatButtonModule,
+    LoadingModule,
+    ToolbarUserModule,
+    ToolbarNotificationModule
   ],
-  declarations: [
-    HeaderComponent,
-    ToolbarUserComponent,
-    ToolbarHelpComponent,
-    ToolbarNotificationComponent
-  ],
-  providers: [
-    {
-      provide: 'toolbarNotificationService',
-      useClass: ToolbarNotificationService
-    },
-    {
-      provide: PERFECT_SCROLLBAR_CONFIG,
-      useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG
-    }
-  ],
+  declarations: [HeaderComponent],
   exports: [HeaderComponent]
 })
 export class HeaderModule {}

@@ -1,4 +1,11 @@
-import { Component, ElementRef, HostListener, Inject } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  HostListener,
+  Input,
+  Output,
+  EventEmitter
+} from '@angular/core';
 import { ToolbarNotificationModel } from './toolbar-notification.model';
 
 @Component({
@@ -7,9 +14,9 @@ import { ToolbarNotificationModel } from './toolbar-notification.model';
   styleUrls: ['./toolbar-notification.component.scss']
 })
 export class ToolbarNotificationComponent {
-  cssPrefix: string = 'toolbar-notification';
+  @Input() notifications: ToolbarNotificationModel[] = [];
+  @Output() delete = new EventEmitter();
   isOpen: boolean = false;
-  notifications: ToolbarNotificationModel[] = [];
 
   @HostListener('document:click', ['$event', '$event.target'])
   onClick(event: MouseEvent, targetElement: HTMLElement) {
@@ -25,24 +32,15 @@ export class ToolbarNotificationComponent {
     }
   }
 
-  constructor(
-    private _elementRef: ElementRef,
-    @Inject('toolbarNotificationService') private service
-  ) {
-    this.select();
-  }
+  constructor(private _elementRef: ElementRef) {}
 
   toggleDropdown() {
     this.isOpen = !this.isOpen;
   }
 
-  select() {
-    this.notifications = this.service.select();
-  }
-
-  delete(event, notification) {
+  onDelete(event, notification) {
     event.stopPropagation();
 
-    this.notifications = this.service.delete(notification);
+    this.delete.emit(notification);
   }
 }
