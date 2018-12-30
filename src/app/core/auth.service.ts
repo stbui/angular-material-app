@@ -1,103 +1,80 @@
 import { Injectable } from '@angular/core';
-import { AngularFireDatabase, AngularFireObject } from '@angular/fire/database';
 import { AngularFireAuth } from '@angular/fire/auth';
+import {
+  AngularFirestore,
+  AngularFirestoreDocument
+} from '@angular/fire/firestore';
 import { auth } from 'firebase/app';
+import { Observable, of } from 'rxjs';
+import { switchMap, startWith, tap, filter } from 'rxjs/operators';
+
+import { NotifyService } from './notify.service';
+
+interface User {
+  uid: string;
+  email?: string | null;
+  photoURL?: string;
+  displayName?: string;
+}
 
 @Injectable()
 export class AuthService {
-  authState: any = null; // 用户信息
-  userRef: AngularFireObject<any>;
-
-  get authenticated() {
-    return this.authState !== null;
-  }
-
-  // 当前用户
-  get currentUser() {
-    return this.authenticated ? this.authState : null;
-  }
-
-  get currentUserObservable() {
-    return this.afAuth.authState;
-  }
-
-  // 当前登录用户id
-  get currentUserId(): string {
-    return this.authenticated ? this.authState.uid : '';
-  }
-
-  // 用户账号
-  get currentUserName(): string {
-    if (!this.authState) {
-      return 'Stbui';
-    } else {
-      return this.authState['displayName'] || '佚名';
-    }
-  }
-
-  // 匿名用户
-  get currentUserAnonymous(): boolean {
-    return this.authenticated ? this.authState.anonymous : false;
-  }
+  user: Observable<User | null>;
 
   constructor(
     private afAuth: AngularFireAuth,
-    private db: AngularFireDatabase
+    private afs: AngularFirestore,
+    private notify: NotifyService
   ) {
-    this.afAuth.authState.subscribe(auth => {
-      this.authState = auth;
-    });
+    this.user = this.afAuth.authState.pipe(
+      switchMap(user => {
+        if (user) {
+          return this.afs.doc(`users/${user.uid}`).valueChanges();
+        } else {
+          return of(null);
+        }
+      })
+      // tap(user => localStorage.setItem('user', JSON.stringify(user))),
+      // startWith(JSON.parse(localStorage.getItem('user')))
+    );
   }
 
   githubLogin() {
-    const provide = new auth.GithubAuthProvider();
-    return this.afAuth.auth
-      .signInWithPopup(provide)
-      .then(credential => {
-        this.authState = credential.user;
-        this.updateUserData();
-      })
-      .catch(error => console.log(error));
+    const provider = new auth.GithubAuthProvider();
+    return this.oAuthLogin(provider);
   }
 
   googleLogin() {
     const provider = new auth.GoogleAuthProvider();
-    return this.afAuth.auth
-      .signInWithPopup(provider)
-      .then(credential => {
-        this.authState = credential.user;
-        this.updateUserData();
-      })
-      .catch(error => console.log(error));
+    return this.oAuthLogin(provider);
   }
 
   twitterLogin() {
     const provider = new auth.TwitterAuthProvider();
-    return this.afAuth.auth
-      .signInWithPopup(provider)
-      .then(credential => {
-        this.authState = credential.user;
-        this.updateUserData();
-      })
-      .catch(error => console.log(error));
+    return this.oAuthLogin(provider);
+  }
+
+  facebookLogin() {
+    const provider = new auth.FacebookAuthProvider();
+    return this.oAuthLogin(provider);
   }
 
   anonymousLogin() {
     return this.afAuth.auth
       .signInAnonymously()
-      .then(user => {
-        this.authState = user;
-        this.updateUserData();
+      .then(credential => {
+        this.notify.update('欢迎回来!', 'success');
+        return this.updateUserData(credential.user);
       })
-      .catch(error => console.log(error));
+      .catch(error => this.handleError(error));
   }
 
   emailLogin(email: string, password: string) {
     return this.afAuth.auth
       .signInWithEmailAndPassword(email, password)
-      .then(user => {
-        this.authState = user;
-        this.updateUserData();
+      .then(credential => {
+        this.notify.update('欢迎回来!', 'success');
+        return this.updateUserData(credential.user);
       });
   }
 
@@ -107,45 +84,55 @@ export class AuthService {
   emailSignUp(email: string, password: string) {
     return this.afAuth.auth
       .createUserWithEmailAndPassword(email, password)
-      .then(user => {
-        this.authState = user;
-        this.updateUserData();
+      .then(credential => {
+        this.notify.update('注册成功!', 'success');
+        return this.updateUserData(credential.user);
       })
-      .catch(error => console.log(error));
+      .catch(error => this.handleError(error));
   }
 
   resetPassword(email: string) {
     const fbAuth = auth();
     return fbAuth
       .sendPasswordResetEmail(email)
-      .then(() => {
-        console.log('密码已发到你的邮箱中');
-      })
-      .catch(error => console.log('密码重置出错', error));
+      .then(() => this.notify.update('密码已发到你的邮箱中!', 'info'))
+      .catch(error => this.handleError(error));
   }
 
   /**
    *  退出登录
    * */
   signOut() {
-    return this.afAuth.auth
-      .signOut()
-      .then(() => {
-        this.authState = null;
-      })
-      .catch(error => console.log(error));
+    return this.afAuth.auth.signOut();
   }
 
-  private updateUserData() {
-    const path = `users/${this.currentUserId}`;
-    this.userRef = this.db.object(path);
-    const data = {
-      email: this.authState.email,
-      name: this.authState.displayName
+  private oAuthLogin(provider: any) {
+    return this.afAuth.auth
+      .signInWithPopup(provider)
+      .then(credential => {
+        this.notify.update('欢迎回来!', 'success');
+        return this.updateUserData(credential.user);
+      })
+      .catch(error => this.handleError(error));
+  }
+
+  private updateUserData(user: User) {
+    const userRef: AngularFirestoreDocument<User> = this.afs.doc(
+      `users/${user.uid}`
+    );
+
+    const data: User = {
+      uid: user.uid,
+      email: user.email || null,
+      displayName: user.displayName || '佚名',
+      photoURL: user.photoURL
     };
 
-    this.userRef
-      .update(data)
-      .catch(error => console.log('更新用户数据：', error));
+    return userRef.set(data);
+  }
+
+  private handleError(error: Error) {
+    console.log(error);
+    this.notify.update(error.message, 'error');
   }
 }

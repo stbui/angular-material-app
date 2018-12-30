@@ -1,34 +1,80 @@
 <div class="toolbar-user-container">
-  <button mat-button (click)="toggleDropdown()" class="toolbar-user-btn" [class.open]="isOpen">
+  <div *ngIf="(auth.user | async); then authenticated; else guest"></div>
+</div>
+
+<ng-template #guest class="guest">
+  <button mat-button (click)="logout()" class="toolbar-user-btn">
     <span fxLayout="row" fxLayoutAlign="start center">
-      <img class="avatar" [src]="currentUser.currentUser?.photoURL || 'assets/images/avatars/noavatar.png'">
-      <span class="name" fxHide fxShow.gt-sm>{{currentUser.currentUserName}}</span>
-      <mat-icon class="icon" fxHide fxShow.gt-sm>keyboard_arrow_down</mat-icon>
+      <img class="avatar" [src]="'assets/images/avatars/noavatar.png'" />
+      <span class="name" fxHide fxShow.gt-sm>未登陆</span>
     </span>
   </button>
+</ng-template>
 
-  <div class="dropdown mat-elevation-z1" [class.open]="isOpen">
-    <div class="content">
-      <div class="list">
-        <div class="item" fxLayout="row" fxLayoutAlign="start center" routerLink="/pages/profile" mat-ripple>
-          <mat-icon class="icon">account_circle</mat-icon>
-          <span class="title">个人</span>
-        </div>
-        <div class="item" fxLayout="row" fxLayoutAlign="start center" mat-ripple>
-          <mat-icon class="icon">settings</mat-icon>
-          <span class="title">设置</span>
-        </div>
-        <div class="item" fxLayout="row" fxLayoutAlign="start center" mat-ripple>
-          <mat-icon class="icon">help</mat-icon>
-          <span class="title">帮助</span>
-        </div>
-        <mat-divider></mat-divider>
-        <div class="item" fxLayout="row" fxLayoutAlign="start center" (click)="logout()" mat-ripple>
-          <mat-icon class="icon">exit_to_app</mat-icon>
-          <span class="title">退出</span>
+<ng-template #authenticated class="authenticated">
+  <span *ngIf="(auth.user | async) as user">
+    <button
+      mat-button
+      (click)="toggleDropdown()"
+      class="toolbar-user-btn"
+      [class.open]="isOpen"
+    >
+      <span fxLayout="row" fxLayoutAlign="start center">
+        <img
+          class="avatar"
+          [src]="user.photoURL || 'assets/images/avatars/noavatar.png'"
+        />
+        <span class="name" fxHide fxShow.gt-sm>{{ user.displayName }}</span>
+        <mat-icon class="icon" fxHide fxShow.gt-sm
+          >keyboard_arrow_down</mat-icon
+        >
+      </span>
+    </button>
+
+    <div class="dropdown mat-elevation-z1" [class.open]="isOpen">
+      <div class="content">
+        <div class="list">
+          <div
+            class="item"
+            fxLayout="row"
+            fxLayoutAlign="start center"
+            routerLink="/pages/profile"
+            mat-ripple
+          >
+            <mat-icon class="icon">account_circle</mat-icon>
+            <span class="title">个人</span>
+          </div>
+          <div
+            class="item"
+            fxLayout="row"
+            fxLayoutAlign="start center"
+            mat-ripple
+          >
+            <mat-icon class="icon">settings</mat-icon>
+            <span class="title">设置</span>
+          </div>
+          <div
+            class="item"
+            fxLayout="row"
+            fxLayoutAlign="start center"
+            mat-ripple
+          >
+            <mat-icon class="icon">help</mat-icon>
+            <span class="title">帮助</span>
+          </div>
+          <mat-divider></mat-divider>
+          <div
+            class="item"
+            fxLayout="row"
+            fxLayoutAlign="start center"
+            (click)="logout()"
+            mat-ripple
+          >
+            <mat-icon class="icon">exit_to_app</mat-icon>
+            <span class="title">退出</span>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-
-</div>
+  </span>
+</ng-template>

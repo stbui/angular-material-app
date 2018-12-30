@@ -9,7 +9,6 @@ import { AuthService } from '../../../core/auth.service';
 })
 export class ToolbarUserComponent implements OnInit {
   isOpen: boolean = false;
-  currentUser = null;
 
   @HostListener('document:click', ['$event', '$event.target'])
   onClick(event: MouseEvent, targetElement: HTMLElement) {
@@ -29,9 +28,7 @@ export class ToolbarUserComponent implements OnInit {
     private _elementRef: ElementRef,
     private router: Router,
     private auth: AuthService
-  ) {
-    this.currentUser = this.auth;
-  }
+  ) {}
 
   ngOnInit() {}
 

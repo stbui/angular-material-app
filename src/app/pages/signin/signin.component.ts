@@ -75,22 +75,35 @@ export class SigninComponent implements OnInit {
     }
   }
 
-  signInWithGoogle() {
-    this.auth.googleLogin().then(() => this.afterSignIn());
+  async signInWithGoogle() {
+    await this.auth.googleLogin();
+    return await this.afterSignIn();
   }
 
-  signInWithGithub() {
-    this.auth.githubLogin().then(() => this.afterSignIn());
+  async signInWithGithub() {
+    await this.auth.githubLogin();
+    return await this.afterSignIn();
+  }
+
+  async signInWithFacebook() {
+    await this.auth.facebookLogin();
+    await this.afterSignIn();
+  }
+
+  async signInWithTwitter() {
+    await this.auth.twitterLogin();
+    return await this.afterSignIn();
+  }
+
+  async signInAnonymously() {
+    await this.auth.anonymousLogin();
+    return await this.afterSignIn();
   }
 
   signInWithEmail() {
     this.auth
       .emailLogin(this.userForm.value['email'], this.userForm.value['password'])
       .catch(error => console.log('邮箱登录出错：', error));
-  }
-
-  signInAnonymously() {
-    this.auth.anonymousLogin().then(() => this.afterSignIn());
   }
 
   login() {
