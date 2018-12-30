@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
+import { AuthGuard } from './core/auth.guard';
 import { AdminComponent } from './admin/admin.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { SigninComponent } from './pages/signin/signin.component';
@@ -12,10 +13,19 @@ const routes: Routes = [
   { path: 'sigup', component: SignupComponent },
   {
     path: 'apps/navigation',
-    loadChildren: './navigation/navigation.module#NavigationModule'
+    loadChildren: './navigation/navigation.module#NavigationModule',
+    canActivate: [AuthGuard]
   },
-  { path: 'apps/mail', loadChildren: './mail/mail.module#MailModule' },
-  { path: 'apps/chats', loadChildren: './chats/chats.module#ChatsModule' },
+  {
+    path: 'apps/mail',
+    loadChildren: './mail/mail.module#MailModule',
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'apps/chats',
+    loadChildren: './chats/chats.module#ChatsModule',
+    canActivate: [AuthGuard]
+  },
   {
     path: '',
     component: AdminComponent,

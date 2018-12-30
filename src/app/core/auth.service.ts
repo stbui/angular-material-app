@@ -59,6 +59,9 @@ export class AuthService {
     return this.oAuthLogin(provider);
   }
 
+  /**
+   * 匿名登陆
+   */
   anonymousLogin() {
     return this.afAuth.auth
       .signInAnonymously()
@@ -69,6 +72,11 @@ export class AuthService {
       .catch(error => this.handleError(error));
   }
 
+  /**
+   * 邮箱登陆
+   * @param email
+   * @param password
+   */
   emailLogin(email: string, password: string) {
     return this.afAuth.auth
       .signInWithEmailAndPassword(email, password)
@@ -79,18 +87,23 @@ export class AuthService {
   }
 
   /**
-   *  邮箱注册
-   * */
+   * 邮箱注册
+   * @param email 邮箱
+   * @param password 密码
+   */
   emailSignUp(email: string, password: string) {
     return this.afAuth.auth
       .createUserWithEmailAndPassword(email, password)
       .then(credential => {
         this.notify.update('注册成功!', 'success');
         return this.updateUserData(credential.user);
-      })
-      .catch(error => this.handleError(error));
+      });
   }
 
+  /**
+   * 重置密码
+   * @param email 邮箱
+   */
   resetPassword(email: string) {
     const fbAuth = auth();
     return fbAuth
@@ -100,8 +113,8 @@ export class AuthService {
   }
 
   /**
-   *  退出登录
-   * */
+   * 退出登录
+   */
   signOut() {
     return this.afAuth.auth.signOut();
   }
