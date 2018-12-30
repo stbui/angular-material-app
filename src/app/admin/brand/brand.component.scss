@@ -2,16 +2,29 @@
   display: block;
 }
 
-.brand-toolbar {
+.brand {
+  position: relative;
+  width: 250px;
   height: 64px;
-  font: 500 20px/32px Roboto, 'Helvetica Neue', sans-serif;
   padding: 0 16px;
-  width: 100%;
-}
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
 
-.logo-text {
-  text-decoration: none;
-  margin-left: 24px;
-  line-height: 1;
-  color: #fff;
+  &::before {
+    content: 'STBUI';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    color: rgba(255, 255, 255, 0.12);
+    font-size: 32px;
+  }
+
+  &-logo {
+    font-size: 24px;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 24px;
+    color: #fff;
+  }
 }
