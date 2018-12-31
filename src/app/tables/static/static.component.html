@@ -1,37 +1,256 @@
-<div class="main-static">
-  <mat-card>
-    <mat-card-title>Base Table</mat-card-title>
-    <mat-card-content>
-      <stbui-table height="500" [columns]="data.columns" [data]="data.data"></stbui-table>
-    </mat-card-content>
-  </mat-card>
+<mat-card>
+  <mat-card-title>Base Table</mat-card-title>
+  <mat-card-content>
+    <table mat-table [dataSource]="dataSource">
+      <ng-container matColumnDef="appName">
+        <th mat-header-cell *matHeaderCellDef>APP</th>
+        <td mat-cell *matCellDef="let element">{{ element.appName }}</td>
+      </ng-container>
 
-  <mat-card>
-    <mat-card-title>Hover Table</mat-card-title>
-    <mat-card-content>
-      <stbui-table height="500" [columns]="data.columns" [data]="data.data"></stbui-table>
-    </mat-card-content>
-  </mat-card>
+      <ng-container matColumnDef="cateNames">
+        <th mat-header-cell *matHeaderCellDef>领域</th>
+        <td mat-cell *matCellDef="let element">{{ element.cateNames }}</td>
+      </ng-container>
 
-  <mat-card>
-    <mat-card-title>Striped Table</mat-card-title>
-    <mat-card-content>
-      <stbui-table height="500" stripe="true" [columns]="data.columns" [data]="data.data"></stbui-table>
-    </mat-card-content>
-  </mat-card>
+      <ng-container matColumnDef="developCompanyFullName">
+        <th mat-header-cell *matHeaderCellDef>开发商</th>
+        <td mat-cell *matCellDef="let element">
+          {{ element.developCompanyFullName }}
+        </td>
+      </ng-container>
 
-  <mat-card>
-    <mat-card-title>Bordered Table</mat-card-title>
-    <mat-card-content>
-      <stbui-table height="500" border="true" [columns]="data.columns" [data]="data.data"></stbui-table>
-    </mat-card-content>
-  </mat-card>
+      <ng-container matColumnDef="activeNums">
+        <th mat-header-cell *matHeaderCellDef>活跃人数(万)</th>
+        <td mat-cell *matCellDef="let element">{{ element.activeNums }}</td>
+      </ng-container>
 
-  <mat-card>
-    <mat-card-title>All Table</mat-card-title>
-    <mat-card-content>
-      <stbui-table height="500" stripe="true" border="true" [columns]="data.columns" [data]="data.data"></stbui-table>
-    </mat-card-content>
-  </mat-card>
+      <ng-container matColumnDef="activeNumsRatio">
+        <th mat-header-cell *matHeaderCellDef>环比增幅(%)</th>
+        <td mat-cell *matCellDef="let element">
+          {{ element.activeNumsRatio }}
+        </td>
+      </ng-container>
 
-</div>
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+  </mat-card-content>
+</mat-card>
+
+<mat-card>
+  <mat-card-title>Table with sticky header </mat-card-title>
+  <mat-card-content
+    ><div class="example-container mat-elevation-z8">
+      <table mat-table [dataSource]="dataSource">
+        <ng-container matColumnDef="appName">
+          <th mat-header-cell *matHeaderCellDef>APP</th>
+          <td mat-cell *matCellDef="let element">{{ element.appName }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="cateNames">
+          <th mat-header-cell *matHeaderCellDef>领域</th>
+          <td mat-cell *matCellDef="let element">{{ element.cateNames }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="developCompanyFullName">
+          <th mat-header-cell *matHeaderCellDef>开发商</th>
+          <td mat-cell *matCellDef="let element">
+            {{ element.developCompanyFullName }}
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="activeNums">
+          <th mat-header-cell *matHeaderCellDef>活跃人数(万)</th>
+          <td mat-cell *matCellDef="let element">{{ element.activeNums }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="activeNumsRatio">
+          <th mat-header-cell *matHeaderCellDef>环比增幅(%)</th>
+          <td mat-cell *matCellDef="let element">
+            {{ element.activeNumsRatio }}
+          </td>
+        </ng-container>
+
+        <tr
+          mat-header-row
+          *matHeaderRowDef="displayedColumns; sticky: true"
+        ></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+      </table>
+    </div>
+  </mat-card-content>
+</mat-card>
+
+<mat-card>
+  <mat-card-title>Table with a sticky footer </mat-card-title>
+  <mat-card-content
+    ><div class="example-container mat-elevation-z8">
+      <table mat-table [dataSource]="dataSource">
+        <ng-container matColumnDef="appName">
+          <th mat-header-cell *matHeaderCellDef>APP</th>
+          <td mat-cell *matCellDef="let element">{{ element.appName }}</td>
+          <td mat-footer-cell *matFooterCellDef>APP</td>
+        </ng-container>
+
+        <ng-container matColumnDef="cateNames">
+          <th mat-header-cell *matHeaderCellDef>领域</th>
+          <td mat-cell *matCellDef="let element">{{ element.cateNames }}</td>
+          <td mat-footer-cell *matFooterCellDef>领域</td>
+        </ng-container>
+
+        <ng-container matColumnDef="developCompanyFullName">
+          <th mat-header-cell *matHeaderCellDef>开发商</th>
+          <td mat-cell *matCellDef="let element">
+            {{ element.developCompanyFullName }}
+          </td>
+          <td mat-footer-cell *matFooterCellDef>领开发商域</td>
+        </ng-container>
+
+        <ng-container matColumnDef="activeNums">
+          <th mat-header-cell *matHeaderCellDef>活跃人数(万)</th>
+          <td mat-cell *matCellDef="let element">{{ element.activeNums }}</td>
+          <td mat-footer-cell *matFooterCellDef>活跃人数(万)</td>
+        </ng-container>
+
+        <ng-container matColumnDef="activeNumsRatio">
+          <th mat-header-cell *matHeaderCellDef>环比增幅(%)</th>
+          <td mat-cell *matCellDef="let element">
+            {{ element.activeNumsRatio }}
+          </td>
+          <td mat-footer-cell *matFooterCellDef>环比增幅(%)</td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+        <tr
+          mat-footer-row
+          *matFooterRowDef="displayedColumns; sticky: true"
+        ></tr>
+      </table>
+    </div>
+  </mat-card-content>
+</mat-card>
+
+<mat-card>
+  <mat-card-title>Table with a sticky columns </mat-card-title>
+  <mat-card-content>
+    <div class="table-sticky mat-elevation-z8">
+      <table mat-table [dataSource]="dataSource" class="table-sticky-colums">
+        <ng-container matColumnDef="appName" sticky>
+          <th mat-header-cell *matHeaderCellDef>APP</th>
+          <td mat-cell *matCellDef="let element">{{ element.appName }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="cateNames">
+          <th mat-header-cell *matHeaderCellDef>领域</th>
+          <td mat-cell *matCellDef="let element">{{ element.cateNames }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="developCompanyFullName">
+          <th mat-header-cell *matHeaderCellDef>开发商</th>
+          <td mat-cell *matCellDef="let element">
+            {{ element.developCompanyFullName }}
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="activeNums">
+          <th mat-header-cell *matHeaderCellDef>活跃人数(万)</th>
+          <td mat-cell *matCellDef="let element">{{ element.activeNums }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="activeNumsRatio">
+          <th mat-header-cell *matHeaderCellDef>环比增幅(%)</th>
+          <td mat-cell *matCellDef="let element">
+            {{ element.activeNumsRatio }}
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="star" stickyEnd>
+          <th mat-header-cell *matHeaderCellDef></th>
+          <td mat-cell *matCellDef="let element">
+            <mat-icon>more_vert</mat-icon>
+          </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="columns"></tr>
+        <tr mat-row *matRowDef="let row; columns: columns"></tr>
+      </table>
+    </div>
+  </mat-card-content>
+</mat-card>
+
+<mat-card>
+  <mat-card-title>Table with expandable rows </mat-card-title>
+  <mat-card-content>
+    <table mat-table [dataSource]="dataSource" multiTemplateDataRows>
+      <ng-container
+        matColumnDef="{{ column }}"
+        *ngFor="let column of columnsToDisplay"
+      >
+        <th mat-header-cell *matHeaderCellDef>{{ column }}</th>
+        <td mat-cell *matCellDef="let element">{{ element[column] }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="expandedDetail">
+        <td
+          mat-cell
+          *matCellDef="let element"
+          [attr.colspan]="columnsToDisplay.length"
+        >
+          <div
+            class="example-element-detail"
+            [@detailExpand]="
+              element == expandedElement ? 'expanded' : 'collapsed'
+            "
+          >
+            <div class="example-element-diagram">
+              <div class="example-element-position">{{ element.appName }}</div>
+              <div class="example-element-symbol">{{ element.appName }}</div>
+              <div class="example-element-name">{{ element.appName }}</div>
+              <div class="example-element-weight">{{ element.appName }}</div>
+            </div>
+            <div class="example-element-description">{{ element.appName }}</div>
+          </div>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+      <tr
+        mat-row
+        *matRowDef="let element; columns: columnsToDisplay"
+        class="example-element-row"
+        [class.example-expanded-row]="expandedElement === element"
+        (click)="expandedElement = expandedElement === element ? null : element"
+      ></tr>
+      <tr
+        mat-row
+        *matRowDef="let row; columns: ['expandedDetail']"
+        class="example-detail-row"
+      ></tr>
+    </table>
+  </mat-card-content>
+</mat-card>
+
+<mat-card>
+  <mat-card-title
+    >Table dynamically changing the columns displayed</mat-card-title
+  >
+  <mat-card-content>
+    <button mat-raised-button (click)="addColumn()">Add column</button>
+    <button mat-raised-button (click)="removeColumn()">Remove column</button>
+    <button mat-raised-button (click)="shuffle()">Shuffle</button>
+
+    <table mat-table [dataSource]="dataSource">
+      <ng-container
+        [matColumnDef]="column"
+        *ngFor="let column of displayedColumns"
+      >
+        <th mat-header-cell *matHeaderCellDef>{{ column }}</th>
+        <td mat-cell *matCellDef="let element">{{ element[column] }}</td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+      <tr mat-row *matRowDef="let row; columns: columnsToDisplay"></tr>
+    </table>
+  </mat-card-content>
+</mat-card>

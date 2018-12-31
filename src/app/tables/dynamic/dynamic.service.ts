@@ -1,32 +1,32 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+
+export interface Users {
+  id: string;
+  name: string;
+}
+
+export interface UsersApi {
+  items: Users[];
+  total_count: number;
+}
 
 @Injectable()
-export class DataTableService {
+export class DynamicService {
+  private apiUrl = '/assets/data/pages';
   private dataStore;
 
   get data() {
     return this.dataStore;
   }
 
-  constructor() {}
+  constructor(private http: HttpClient) {}
 
-  select(options) {
-    const d = [
-      { id: '1', name: '李彦龙' },
-      { id: '2', name: '郁梦寒' },
-      { id: '3', name: '亥夏真' },
-      { id: '4', name: '汗水凡' },
-      { id: '5', name: '歧骏桀' },
-      { id: '6', name: '潜云溪' },
-      { id: '7', name: '无夜春' },
-      { id: '6', name: '鄂叶彤' },
-      { id: '8', name: '鲁文彬' },
-      { id: '9', name: '寻涵阳' },
-      { id: '10', name: '董晨风' },
-      { id: '11', name: '蒙白梅' },
-      { id: '12', name: '纪沛春' }
-    ];
-    this.dataStore = d;
+  select(active?: any, direction?: any, pageIndex?: any) {
+    console.log(active, direction, pageIndex);
+    const url = `${this.apiUrl}/userList.json`;
+    return this.http.get(url);
   }
 
   add(data) {

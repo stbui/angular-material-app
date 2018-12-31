@@ -1,18 +1,84 @@
-:host {
-  display: block;
-  margin: 36px;
-  position: relative;
+mat-card {
+  margin: 24px;
 }
 
-.main-static {
-  mat-card {
-    margin: 15px;
+.example-container {
+  height: 400px;
+  overflow: auto;
+}
+
+table {
+  width: 100%;
+}
+
+tr.example-detail-row {
+  height: 0;
+}
+
+tr.example-element-row:not(.example-expanded-row):hover {
+  background: #f5f5f5;
+}
+
+tr.example-element-row:not(.example-expanded-row):active {
+  background: #efefef;
+}
+
+.example-element-row td {
+  border-bottom-width: 0;
+}
+
+.example-element-detail {
+  overflow: hidden;
+  display: flex;
+}
+
+.example-element-diagram {
+  min-width: 80px;
+  border: 2px solid black;
+  padding: 8px;
+  font-weight: lighter;
+  margin: 8px 0;
+  height: 104px;
+}
+
+.example-element-symbol {
+  font-weight: bold;
+  font-size: 40px;
+  line-height: normal;
+}
+
+.example-element-description {
+  padding: 16px;
+}
+
+.example-element-description-attribution {
+  opacity: 0.5;
+}
+
+// Table with a sticky columns
+.table-sticky {
+  width: 500px;
+  height: 400px;
+  overflow: auto;
+}
+.table-sticky-colums {
+  width: 800px;
+
+  td.mat-column-star {
+    width: 20px;
+    padding-right: 8px;
   }
-}
 
-.avatar-cell {
-  width: 34px;
-  height: 34px;
-  line-height: 34px;
-  text-align: center;
+  th.mat-column-cateNames,
+  td.mat-column-cateNames {
+    padding-left: 8px;
+  }
+
+  .mat-table-sticky:first-child {
+    border-right: 1px solid #e0e0e0;
+  }
+
+  .mat-table-sticky:last-child {
+    border-left: 1px solid #e0e0e0;
+  }
 }

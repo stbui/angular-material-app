@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { MatPaginator, MatSort } from '@angular/material';
+import { merge, Observable, of as observableOf } from 'rxjs';
+import { catchError, map, startWith, switchMap } from 'rxjs/operators';
+import { DynamicService } from './dynamic.service';
 
 @Component({
   selector: 'app-dynamic',
@@ -6,38 +10,48 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dynamic.component.scss']
 })
 export class DynamicComponent implements OnInit {
-  rows: any[];
-  loadingIndicator = true;
-  reorderable = true;
-
-  columns = [
-    { prop: 'name' },
-    { name: 'Gender' },
-    { name: 'Company', sortable: false }
+  displayedColumns: string[] = [
+    'userId',
+    'loginName',
+    'loginCount',
+    'lastLoginTime',
+    'lastLoginIp'
   ];
+  exampleDatabase: any;
+  data: any = [];
 
-  constructor() {}
+  resultsLength = 0;
+  isLoadingResults = true;
+  isRateLimitReached = false;
+
+  @ViewChild(MatPaginator) paginator: MatPaginator;
+  @ViewChild(MatSort) sort: MatSort;
+
+  constructor(private service: DynamicService) {}
 
   ngOnInit() {
-    this.fetch(data => {
-      this.rows = data;
-      setTimeout(() => {
-        this.loadingIndicator = false;
-      }, 1500);
-    });
-  }
+    this.sort.sortChange.subscribe(() => (this.paginator.pageIndex = 0));
 
-  fetch(cb) {
-    const req = new XMLHttpRequest();
-    req.open(
-      'GET',
-      `http://swimlane.github.io/ngx-datatable/assets/data/company.json`
-    );
+    merge(this.sort.sortChange, this.paginator.page)
+      .pipe(
+        startWith({}),
+        switchMap(() => {
+          this.isLoadingResults = true;
+          return this.service.select(this.sort.active, this.sort.direction, this.paginator.pageIndex);
+        }),
+        map(data => {
+          this.isLoadingResults = false;
+          this.isRateLimitReached = false;
+          this.resultsLength = 100;
 
-    req.onload = () => {
-      cb(JSON.parse(req.response));
-    };
-
-    req.send();
+          return data;
+        }),
+        catchError(() => {
+          this.isLoadingResults = false;
+          this.isRateLimitReached = true;
+          return observableOf([]);
+        })
+      )
+      .subscribe(data => (this.data = data));
   }
 }
