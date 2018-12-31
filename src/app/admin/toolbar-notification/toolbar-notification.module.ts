@@ -4,6 +4,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatListModule } from '@angular/material/list';
+import { MatBadgeModule } from '@angular/material/badge';
 
 import { ToolbarNotificationComponent } from './toolbar-notification.component';
 
@@ -22,6 +23,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     MatIconModule,
     MatDividerModule,
     MatListModule,
+    MatBadgeModule,
     PerfectScrollbarModule
   ],
   declarations: [ToolbarNotificationComponent],

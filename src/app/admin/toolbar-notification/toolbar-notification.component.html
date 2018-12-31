@@ -1,10 +1,10 @@
 <div class="toolbar-notification-container">
-  <button class="toolbar-notification-btn" mat-icon-button (click)="toggleDropdown()" [class.open]="isOpen">
-    <mat-icon>notifications_none</mat-icon>
-    <span class="badge" *ngIf="notifications.length !== 0">{{ notifications?.length }}</span>
+  <button mat-icon-button (click)="toggleDropdown()">
+    <mat-icon *ngIf="!notifications.length">notifications_none</mat-icon>
+    <mat-icon [matBadge]="notifications?.length" matBadgeColor="primay" *ngIf="notifications.length">notifications_none</mat-icon>
   </button>
 
-  <div class="dropdown mat-elevation-z1" [class.open]="isOpen">
+  <div class="dropdown mat-elevation-z2" [class.open]="isOpen">
     <div class="card">
       <div class="card-header">
         <div class="title">

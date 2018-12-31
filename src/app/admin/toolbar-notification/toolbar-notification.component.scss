@@ -1,32 +1,8 @@
-.badge {
-  background: #2196f3;
-  color: #fff;
-}
-
-.badge {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  font-weight: 700;
-  border-radius: 50%;
-  box-sizing: border-box;
-  width: 20px;
-  height: 20px;
-  line-height: 20px;
-  font-size: 11px;
-}
-
 .toolbar-notification {
   &-container {
     position: relative;
     display: flex;
     align-items: center;
-  }
-
-  &-btn {
-    display: flex;
-    justify-content: center;
-    margin-right: 10px;
   }
 }
 
