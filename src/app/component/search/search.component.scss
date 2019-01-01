@@ -1,28 +1,26 @@
-$prefix: 'search';
-$search-height: 56px;
-$search-background: #fff;
+$stbui-search-height: 56px;
 
-:host {
+.stbui-search {
   display: block;
-}
 
-.#{$prefix} {
-  background: $search-background;
-  min-height: $search-height;
-  max-height: $search-height;
-  background: rgba(0, 0, 0, 0.04);
+  &-container {
+    display: flex;
+    align-items: center;
+    min-height: $stbui-search-height;
+    max-height: $stbui-search-height;
 
-  mat-icon {
-    vertical-align: middle;
-    margin-right: 14px;
-    margin-left: 16px;
-  }
+    > mat-icon {
+      margin-right: 12px;
+      margin-left: 12px;
+    }
 
-  input {
-    height: 46px;
-    border: 0;
-    outline: none;
-    margin-right: 10px;
-    background: transparent;
+    > input {
+      flex: 1 1 auto;
+      height: 56px;
+      border: 0;
+      outline: none;
+      margin-right: 10px;
+      background: transparent;
+    }
   }
 }
