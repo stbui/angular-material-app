@@ -1,11 +1,6 @@
 @import '~@angular/material/theming';
 @import './app/component/core/theming/all-theme';
 
-// ngx-datatable
-@import '~@swimlane/ngx-datatable/release/index.css';
-@import '~@swimlane/ngx-datatable/release/themes/material.css';
-@import '~@swimlane/ngx-datatable/release/assets/icons.css';
-
 @import '../node_modules/quill/dist/quill.snow.css';
 
 @include mat-core();

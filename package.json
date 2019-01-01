@@ -45,7 +45,6 @@
     "@ngx-translate/core": "^11.0.0",
     "@swimlane/dragula": "^3.7.3",
     "@swimlane/ngx-charts": "^10.0.0",
-    "@swimlane/ngx-datatable": "^14.0.0",
     "angular-calendar": "^0.26.3",
     "apollo-angular": "^1.5.0",
     "apollo-angular-link-http": "^1.4.0",

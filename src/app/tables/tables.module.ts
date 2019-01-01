@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { SharedModule } from '../shared/shared.module';
-import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 
 import { TableModule } from '../component';
 
@@ -13,13 +12,7 @@ import { DynamicComponent } from './dynamic/dynamic.component';
 import { DynamicService } from './dynamic/dynamic.service';
 
 @NgModule({
-  imports: [
-    SharedModule,
-    HttpClientModule,
-    TablesRoutingModule,
-    NgxDatatableModule,
-    TableModule
-  ],
+  imports: [SharedModule, HttpClientModule, TablesRoutingModule, TableModule],
   declarations: [
     TablesComponent,
     StaticComponent,
