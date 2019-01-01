@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { MatRadioModule } from '@angular/material/radio';
 
 @NgModule({
-  imports: [CommonModule],
-  declarations: [MatRadioModule]
+  imports: [CommonModule, MatRadioModule],
+  declarations: []
 })
 export class CustomizerModule {}

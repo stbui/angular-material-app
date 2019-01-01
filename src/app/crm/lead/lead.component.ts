@@ -59,7 +59,7 @@ export class LeadComponent implements OnInit {
     this.selection.toggle(row);
   }
 
-  onNew() {
+  onNew(event) {
     let dialogRef = this.dialog.open(NewComponent, {
       width: '500px'
     });

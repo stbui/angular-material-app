@@ -59,7 +59,7 @@ export class ContactComponent implements OnInit {
     this.onUpdateContact(row);
   }
 
-  onNew() {
+  onNew(event) {
     let dialogRef = this.dialog.open(ContactUpdateComponent, {
       width: '500px',
       data: {}
