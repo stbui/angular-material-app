@@ -9,6 +9,7 @@ import { FileSizePipe } from '../component/file-upload/file-size.pipe';
 import { BaseLayoutModule } from '../layouts';
 
 import { PagesRoutingModule } from './pages.routing';
+import { UserModule } from './user/user.module';
 import { PagesComponent } from './pages.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
@@ -19,8 +20,6 @@ import { BlogArticleComponent } from './blog/article/article.component';
 import { BlogService } from './blog/blog.grahql';
 
 import { ProfileComponent } from './profile/profile.component';
-import { UserComponent } from './user/user.component';
-import { UserService } from './user/user.service';
 import { FileManagerComponent } from './file-manager/file-manager.component';
 import { FileManagerFirebase } from './file-manager/file-manager.firebase';
 import { FileManagerService } from './file-manager/file-manager.service';
@@ -36,7 +35,8 @@ import { GraphQLModule } from '../shared/graphql.module';
     BaseLayoutModule,
     GithubButtonModule,
     LoadingModule,
-    GraphQLModule
+    GraphQLModule,
+    UserModule
   ],
   declarations: [
     PagesComponent,
@@ -46,16 +46,10 @@ import { GraphQLModule } from '../shared/graphql.module';
     BlogComponent,
     BlogArticleComponent,
     ProfileComponent,
-    UserComponent,
     FileManagerComponent,
     ProjectComponent,
     FileSizePipe
   ],
-  providers: [
-    { provide: 'UserService', useClass: UserService },
-    FileManagerFirebase,
-    FileManagerService,
-    BlogService
-  ]
+  providers: [FileManagerFirebase, FileManagerService, BlogService]
 })
 export class PagesModule {}
