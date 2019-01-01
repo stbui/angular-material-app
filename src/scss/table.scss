@@ -1,0 +1,32 @@
+$table-bg-accent: #f5f5f5;
+$table-bg-hover: rgba(0, 0, 0, 0.12);
+$table-grey-header-color: #fafafa;
+
+.table-hover {
+  > tbody > tr:hover {
+    > td {
+      background-color: $table-bg-hover;
+    }
+  }
+}
+
+.table-striped {
+  > tbody > tr:nth-child(even) {
+    > td,
+    > th {
+      background-color: $table-bg-accent;
+    }
+  }
+}
+
+.table-hover-cell {
+  > tbody > tr > td:hover {
+    background-color: $table-bg-hover;
+  }
+}
+
+.table-grey-header {
+  thead {
+    background-color: $table-grey-header-color;
+  }
+}
