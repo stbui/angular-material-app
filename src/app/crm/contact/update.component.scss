@@ -1,7 +1,9 @@
+.display-block {
+  display: block !important;
+}
 
 .form-icon {
   margin-right: 12px;
-  margin-top: 12px;
 }
 
 .header-container {
@@ -9,10 +11,6 @@
   height: 200px;
   background: linear-gradient(90deg, #00d9bf, #00d977);
   margin-bottom: 30px;
-}
-
-.contact-dialog-form {
-
 }
 
 .contact-dialog-title {
@@ -26,10 +24,7 @@
   }
   line-height: 40px;
 }
+
 .mat-dialog-container {
   padding-top: 0 !important;
-}
-
-.full-width {
-  width: 100%;
 }

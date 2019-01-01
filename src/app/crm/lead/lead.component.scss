@@ -3,6 +3,15 @@
   margin: 24px;
 }
 
-.action {
-  margin-bottom: 20px;
+button {
+  margin: 0 16px 16px 0;
+}
+
+.table-container {
+  position: relative;
+  overflow: auto;
+}
+
+table {
+  width: 100%;
 }

@@ -8,6 +8,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./new.component.scss']
 })
 export class NewComponent implements OnInit {
+  dialogClose: boolean = false;
+
   addForm: FormGroup;
   formErrors = {
     username: '',
@@ -21,10 +23,6 @@ export class NewComponent implements OnInit {
     private fb: FormBuilder
   ) {
     this.createForm();
-  }
-
-  onNoClick(): void {
-    this.dialogRef.close();
   }
 
   ngOnInit() {}
@@ -49,5 +47,6 @@ export class NewComponent implements OnInit {
 
   onSubmit() {
     console.log(this.addForm.value);
+    this.dialogRef.close();
   }
 }

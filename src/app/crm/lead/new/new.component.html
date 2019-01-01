@@ -43,7 +43,10 @@
       <input matInput placeholder="请输入跟进状态" formControlName="email">
       <mat-error *ngIf="formErrors.email">{{formErrors.email}}</mat-error>
     </mat-form-field>
-
-    <button mat-raised-button color="primary" type="submit" [disabled]="!addForm.valid">提交</button>
   </form>
 </mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>取消</button>
+  <button mat-raised-button color="primary" cdkFocusInitial (click)="onSubmit()">提交</button>
+</mat-dialog-actions>

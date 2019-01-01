@@ -6,38 +6,30 @@
       <mat-icon>close</mat-icon>
     </button>
   </div>
-
 </div>
-
 
 <mat-dialog-content>
 
   <form>
-    <div fxLayout="row" fxLayoutAlign="start start">
-      <mat-icon class="form-icon">account_circle</mat-icon>
-      <mat-form-field class="full-width">
-        <input type="text" matInput placeholder="姓名" [value]="data.name">
-      </mat-form-field>
-     </div>
+    <mat-form-field class="display-block">
+      <mat-icon class="form-icon" matPrefix>account_circle</mat-icon>
+      <input type="text" matInput placeholder="姓名" [value]="data.name">
+    </mat-form-field>
 
-    <div fxLayout="row" fxLayoutAlign="start start">
-      <mat-icon class="form-icon">account_circle</mat-icon>
-      <mat-form-field class="full-width">
-        <input type="text" matInput placeholder="手机号码" [value]="data.phone">
-      </mat-form-field>
-    </div>
-    <div fxLayout="row" fxLayoutAlign="start start">
-      <mat-icon class="form-icon">account_circle</mat-icon>
-      <mat-form-field class="full-width">
-        <input type="text" matInput placeholder="邮箱" [value]="data.mail">
-      </mat-form-field>
-    </div>
+    <mat-form-field class="display-block">
+      <mat-icon class="form-icon" matPrefix>account_circle</mat-icon>
+      <input type="text" matInput placeholder="手机号码" [value]="data.phone">
+    </mat-form-field>
+      
+    <mat-form-field class="display-block">
+      <mat-icon class="form-icon" matPrefix>account_circle</mat-icon>
+      <input type="text" matInput placeholder="邮箱" [value]="data.mail">
+    </mat-form-field>
 
   </form>
-
-
 </mat-dialog-content>
-<mat-dialog-actions fxLayout="row" fxLayoutAlign="space-between center">
-  <button mat-raised-button mat-dialog-close>关闭</button>
-  <button mat-raised-button color="primary" [mat-dialog-close]="true">更新</button>
+
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>取消</button>
+  <button mat-raised-button color="primary" [mat-dialog-close]="true" cdkFocusInitial>更新</button>
 </mat-dialog-actions>

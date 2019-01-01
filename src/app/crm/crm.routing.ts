@@ -17,14 +17,16 @@ const routes: Routes = [
     component: LayoutComponent,
     children: [
       { path: '', component: CrmComponent },
-      { path: 'crm', component: CrmComponent },
+      { path: 'dashboard', component: CrmComponent },
       { path: 'lead', component: LeadComponent },
       { path: 'customer', component: CustomerComponent },
       { path: 'contacts', component: ContactComponent },
       { path: 'customer', component: CustomerCommonComponent },
       { path: 'opportunities', component: OpportunitiesComponent },
       { path: 'contract', component: ContractComponent },
-      { path: 'product', component: ProductComponent }
+      { path: 'product', component: ProductComponent },
+      { path: 'received', component: ProductComponent },
+      { path: 'follow', component: ProductComponent }
     ]
   }
 ];

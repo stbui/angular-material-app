@@ -8,7 +8,7 @@ export class NavigationModel {
         title: '主页',
         type: 'item',
         icon: 'home',
-        url: '/home'
+        url: '/crm/dashboard'
       },
 
       {
@@ -33,31 +33,31 @@ export class NavigationModel {
             id: 'opportunities',
             title: '商机',
             type: 'item',
-            url: '/crm/contacts'
+            url: '/crm/opportunities'
           },
           {
             id: 'follow',
             title: '跟进',
             type: 'item',
-            url: '/crm/contacts'
+            url: '/crm/follow'
           },
           {
             id: 'product',
             title: '产品',
             type: 'item',
-            url: '/crm/contacts'
+            url: '/crm/product'
           },
           {
             id: 'contract',
             title: '合同',
             type: 'item',
-            url: '/crm/contacts'
+            url: '/crm/contract'
           },
           {
             id: 'received',
             title: '回款',
             type: 'item',
-            url: '/crm/contacts'
+            url: '/crm/received'
           }
         ]
       },
@@ -71,19 +71,19 @@ export class NavigationModel {
             id: 'schedule_reports',
             title: '工作报告',
             type: 'item',
-            url: '/apm/error'
+            url: '/crm/schedule_reports'
           },
           {
             id: 'task',
             title: '任务管理',
             type: 'item',
-            url: '/apm/error'
+            url: '/crm/task'
           },
           {
             id: 'check',
             title: '审批管理',
             type: 'item',
-            url: '/apm/error'
+            url: '/crm/check'
           }
         ]
       },
@@ -97,13 +97,13 @@ export class NavigationModel {
             id: 'customrank',
             title: '业绩排行',
             type: 'item',
-            url: '/apm/error'
+            url: '/crm/customrank'
           },
           {
             id: 'productreport',
             title: '产品销量',
             type: 'item',
-            url: '/apm/error'
+            url: '/crm/productreport'
           }
         ]
       },
@@ -117,19 +117,19 @@ export class NavigationModel {
             id: 'profile',
             title: '个人设置',
             type: 'item',
-            url: '/apm/error'
+            url: '/crm/profile'
           },
           {
             id: 'teamconfig',
             title: '公司信息',
             type: 'item',
-            url: '/apm/error'
+            url: '/crm/teamconfig'
           },
           {
             id: 'teammember',
             title: '部门与员工',
             type: 'item',
-            url: '/apm/error'
+            url: '/crm/teammember'
           }
         ]
       }

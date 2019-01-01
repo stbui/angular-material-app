@@ -1,47 +1,90 @@
-import { Component, OnInit, Inject, ViewEncapsulation } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  Inject,
+  ViewEncapsulation,
+  ViewChild
+} from '@angular/core';
 import { MatDialog } from '@angular/material';
 import { MAT_DIALOG_DATA } from '@angular/material';
+import { MatPaginator, MatSort, MatTableDataSource } from '@angular/material';
+import { SelectionModel } from '@angular/cdk/collections';
+import { ContactService } from './contact.service';
 
 @Component({
-  selector: 'app-contact',
+  selector: 'crm-contact',
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent implements OnInit {
+  displayedColumns: string[] = [
+    'select',
+    'name',
+    'phone',
+    'relation',
+    'company',
+    'mail',
+    'star'
+  ];
 
-  tables = {
-    datas: [
-      {
-        avatar: 'https://lh5.googleusercontent.com/-hcRNe540rco/AAAAAAAAAAI/AAAAAAAAAAk/DfS45tpAR-A/photo.jpg',
-        name: 'stbui',
-        phone: '15890031275',
-        relation: '优质客户',
-        company: 'github',
-        mail: 'w431106@163.com'
-      },
-      {
-        avatar: 'https://lh5.googleusercontent.com/-hcRNe540rco/AAAAAAAAAAI/AAAAAAAAAAk/DfS45tpAR-A/photo.jpg',
-        name: '赵日旭',
-        phone: '15890030690',
-        relation: '潜在客户',
-        company: 'google',
-        mail: '772020653@qq.com'
-      },
-      {
-        avatar: 'https://lh5.googleusercontent.com/-hcRNe540rco/AAAAAAAAAAI/AAAAAAAAAAk/DfS45tpAR-A/photo.jpg',
-        name: '赵茹君',
-        phone: '15890031290',
-        relation: '一般客户',
-        company: 'facebook',
-        mail: '4295@gmail.com'
-      }
-    ]
-  };
+  dataSource: any = new MatTableDataSource([]);
+  selection = new SelectionModel(true, []);
 
-  constructor(private dialog: MatDialog) {
-  }
+  @ViewChild(MatPaginator) paginator: MatPaginator;
+  @ViewChild(MatSort) sort: MatSort;
+
+  constructor(private service: ContactService, private dialog: MatDialog) {}
 
   ngOnInit() {
+    this.service.getList().subscribe(res => {
+      this.dataSource = new MatTableDataSource(res);
+      this.dataSource.paginator = this.paginator;
+    });
+  }
+
+  isAllSelected() {
+    const numSelected = this.selection.selected.length;
+    const numRows = this.dataSource.data.length;
+    return numSelected === numRows;
+  }
+
+  masterToggle() {
+    this.isAllSelected()
+      ? this.selection.clear()
+      : this.dataSource.data.forEach(row => this.selection.select(row));
+  }
+
+  rowSelection(row, event) {
+    this.selection.toggle(row);
+    this.onUpdateContact(row);
+  }
+
+  onNew() {
+    let dialogRef = this.dialog.open(ContactUpdateComponent, {
+      width: '500px',
+      data: {}
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+    });
+  }
+
+  onEditorTriggered(item) {
+    console.log(item);
+    let dialogRef = this.dialog.open(ContactUpdateComponent, {
+      width: '500px',
+      data: item
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+    });
+  }
+
+  onDeleteTriggered() {
+    console.log(this.selection.selected);
+    // this.service.delete(this.selection.selected);
   }
 
   onUpdateContact(contact) {
@@ -58,13 +101,11 @@ export class ContactComponent implements OnInit {
 }
 
 @Component({
-  selector: 'stb-contact-upate',
+  selector: 'crm-contact-upate',
   templateUrl: './update.component.html',
   styleUrls: ['./update.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
 export class ContactUpdateComponent {
-  constructor(@Inject(MAT_DIALOG_DATA) public data: any) {
-  }
+  constructor(@Inject(MAT_DIALOG_DATA) public data: any) {}
 }
-

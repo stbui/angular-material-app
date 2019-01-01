@@ -1,55 +1,88 @@
-import { Component, OnInit } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import {
+  MatDialog,
+  MatPaginator,
+  MatSort,
+  MatTableDataSource
+} from '@angular/material';
+import { SelectionModel } from '@angular/cdk/collections';
 import { NewComponent } from './new/new.component';
+import { LeadService } from './lead.service';
 
 @Component({
-  selector: 'app-lead',
+  selector: 'crm-lead',
   templateUrl: './lead.component.html',
   styleUrls: ['./lead.component.scss']
 })
 export class LeadComponent implements OnInit {
-  data;
+  displayedColumns: string[] = [
+    'select',
+    'name',
+    'company',
+    'tel',
+    'phone',
+    'status_mapped',
+    'lastest_revisit_log',
+    'real_revisit_at',
+    'revisit_remind_at',
+    'star'
+  ];
 
-  rows: any[] = [];
-  loadingIndicator = true;
-  reorderable = true;
+  dataSource: any = new MatTableDataSource([]);
+  selection = new SelectionModel(true, []);
 
-  selected = [];
+  @ViewChild(MatPaginator) paginator: MatPaginator;
+  @ViewChild(MatSort) sort: MatSort;
 
-  constructor(private dialog: MatDialog) {}
+  constructor(private service: LeadService, private dialog: MatDialog) {}
 
   ngOnInit() {
-    for (let i = 0; i < 50; i++) {
-      this.rows.push({
-        name: '姓名' + i,
-        company: '公司名称' + i,
-        tel: '电话' + i,
-        phone: '手机' + i,
-        status_mapped: '跟进状态' + i,
-        lastest_revisit_log: '最新跟进记录' + i,
-        real_revisit_at: '实际跟进时间' + i,
-        revisit_remind_at: '下次跟进时间' + i
-      });
-    }
-
-    this.loadingIndicator = false;
+    this.service.getList().subscribe(res => {
+      this.dataSource = new MatTableDataSource(res);
+      this.dataSource.paginator = this.paginator;
+    });
   }
 
-  onNew(e) {
+  isAllSelected() {
+    const numSelected = this.selection.selected.length;
+    const numRows = this.dataSource.data.length;
+    return numSelected === numRows;
+  }
+
+  masterToggle() {
+    this.isAllSelected()
+      ? this.selection.clear()
+      : this.dataSource.data.forEach(row => this.selection.select(row));
+  }
+
+  rowSelection(row, event) {
+    this.selection.toggle(row);
+  }
+
+  onNew() {
     let dialogRef = this.dialog.open(NewComponent, {
       width: '500px'
     });
+
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');
     });
   }
 
-  onActivate(event) {
-    console.log('Activate Event', event);
+  onEditorTriggered(item) {
+    console.log(item);
+    let dialogRef = this.dialog.open(NewComponent, {
+      width: '500px',
+      data: item
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+    });
   }
 
-  onSelect({ selected }) {
-    console.log('Select Event', selected, this.selected);
-    this.selected = selected;
+  onDeleteTriggered() {
+    console.log(this.selection.selected);
+    // this.service.delete(this.selection.selected);
   }
 }
