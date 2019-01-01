@@ -1,27 +1,26 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator, MatTableDataSource } from '@angular/material';
-import { PerformanceService } from './performance.service';
+import { CollectionService } from './collection.service';
 
 @Component({
-  selector: 'apm-performance',
-  templateUrl: './performance.component.html',
-  styleUrls: ['./performance.component.scss']
+  selector: 'apm-collection',
+  templateUrl: './collection.component.html',
+  styleUrls: ['./collection.component.scss']
 })
-export class PerformanceComponent implements OnInit {
+export class CollectionComponent implements OnInit {
   displayedColumns: string[] = [
     'id',
     'releaseStage',
-    'connect',
-    'dns',
-    'black_waiting_time',
-    'total_time',
+    'type',
+    'method',
+    'domain',
     'url'
   ];
   dataSource: any = new MatTableDataSource([]);
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
-  constructor(private service: PerformanceService) {}
+  constructor(private service: CollectionService) {}
 
   ngOnInit() {
     this.service.getList().subscribe(res => {
@@ -30,7 +29,7 @@ export class PerformanceComponent implements OnInit {
     });
   }
 
-  rowSelection(row) {
-    console.log(row);
+  onSearchTriggered(value) {
+    console.log(value);
   }
 }

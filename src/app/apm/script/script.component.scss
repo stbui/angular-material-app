@@ -1,0 +1,38 @@
+:host {
+  display: block;
+  margin: 24px;
+}
+
+.table-container {
+  position: relative;
+  overflow: auto;
+}
+
+table {
+  width: 100%;
+}
+
+.column-title {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.mat-column-id,
+.mat-column-releaseStage,
+.mat-column-name,
+.mat-column-lineNumber,
+.mat-column-columnNumber,
+.mat-column-file,
+.mat-column-message {
+  padding-right: 8px;
+}
+.mat-column-columnNumber,
+.mat-column-lineNumber {
+  min-width: 50px;
+}
+.mat-column-message {
+  min-width: 200px;
+  white-space: nowrap;
+}

@@ -1,47 +1,67 @@
-<div class="error-container">
-  <stbui-search placeholder="输入过滤条件"></stbui-search>
+<stbui-search
+  placeholder="输入过滤条件"
+  class="mat-elevation-z4 m-b-16"
+  (onSearch)="onSearchTriggered($event)"
+></stbui-search>
 
-  <div class="error-main mat-elevation-z2">
-    <div class="error-toolbar" fxLayout="row" fxLayoutAlign="start center">
-      <div class="start-wrapper" fxLayout="row" fxLayoutAlign="start center" fxFlex="240px">
-        <mat-checkbox class="checkbox" (change)="onCheckBoxAllTrigger($event)" [(ngModel)]="checked"></mat-checkbox>
-        <span>发生时间</span>
-      </div>
-      <div class="content-wrapper" fxLayout="row" fxLayoutAlign="start center" fxFlex>
-        <span>资源URL</span>
-      </div>
-      <div class="content-wrapper" fxLayout="row" fxLayoutAlign="start center" fxFlex="120px">
-        <span>事件类型</span>
-      </div>
+<div class="mat-elevation-z4">
+  <table mat-table [dataSource]="dataSource">
+    <ng-container matColumnDef="select">
+      <th mat-header-cell *matHeaderCellDef>
+        <mat-checkbox
+          (change)="$event ? masterToggle() : null"
+          [checked]="selection.hasValue() && isAllSelected()"
+          [indeterminate]="selection.hasValue() && !isAllSelected()"
+        >
+        </mat-checkbox>
+      </th>
+      <td mat-cell *matCellDef="let row">
+        <mat-checkbox
+          (click)="$event.stopPropagation()"
+          (change)="$event ? selection.toggle(row) : null"
+          [checked]="selection.isSelected(row)"
+        >
+        </mat-checkbox>
+      </td>
+    </ng-container>
 
-      <div class="end-wrapper" fxLayout="row" fxLayoutAlign="end center" fxFlex="80px">
-        <span>版本</span>
-      </div>
+    <ng-container matColumnDef="firstSeen">
+      <th mat-header-cell *matHeaderCellDef>发生时间</th>
+      <td mat-cell *matCellDef="let element">
+        {{ element.firstSeen | date: 'yyyy-MM-dd hh:mm:ss' }}
+      </td>
+    </ng-container>
 
-    </div>
+    <ng-container matColumnDef="src">
+      <th mat-header-cell *matHeaderCellDef>资源URL</th>
+      <td mat-cell *matCellDef="let element">{{ element.src }}</td>
+    </ng-container>
 
-    <div class="error-list">
-      <a class="error" fxLayout="row" *ngFor="let error of errors" (click)="onDetailTriggered(error)">
-        <div class="start-wrapper" fxLayout="row" fxLayoutAlign="start center" fxFlex="240px">
-          <mat-checkbox class="checkbox" [checked]="checked"></mat-checkbox>
-          <span>{{ error.firstSeen }}</span>
-        </div>
+    <ng-container matColumnDef="type">
+      <th mat-header-cell *matHeaderCellDef>事件类型</th>
+      <td mat-cell *matCellDef="let element">{{ element.type }}</td>
+    </ng-container>
 
-        <div class="content-wrapper" fxLayout="row" fxLayoutAlign="start center" fxFlex>
-          <span>{{ error.src }}</span>
-        </div>
+    <ng-container matColumnDef="releaseStages">
+      <th mat-header-cell *matHeaderCellDef>版本</th>
+      <td mat-cell *matCellDef="let element">{{ element.releaseStages }}</td>
+    </ng-container>
 
-        <div class="content-wrapper" fxLayout="row" fxLayoutAlign="start center" fxFlex="120px">
-          <span>{{ error.type }}</span>
-        </div>
+    <ng-container matColumnDef="star" stickyEnd>
+      <th mat-header-cell *matHeaderCellDef>操作</th>
+      <td mat-cell *matCellDef="let element">详情</td>
+    </ng-container>
 
-        <div class="end-wrapper" fxLayout="row" fxLayoutAlign="end center" fxFlex="80px">
-          <span *ngFor="let releaseStage of error.releaseStages">{{ releaseStage }}</span>
-        </div>
-      </a>
-    </div>
-
-  </div>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr
+      mat-row
+      *matRowDef="let row; columns: displayedColumns"
+      (click)="rowSelection(row, $event)"
+    ></tr>
+  </table>
 </div>
 
-<error-detail [opened]="openDetial" (onOpened)="onOpenedTriggered($event)"></error-detail>
+<error-detail
+  [opened]="openDetail"
+  (onOpened)="onOpenedTriggered($event)"
+></error-detail>

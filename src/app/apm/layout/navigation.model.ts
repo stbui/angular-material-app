@@ -8,7 +8,7 @@ export class NavigationModel {
         title: '主页',
         type: 'item',
         icon: 'home',
-        url: '/dashboard'
+        url: '/apm/dashboard'
       },
       {
         id: 'manage',

@@ -1,38 +1,32 @@
 import { NgModule } from '@angular/core';
-import { NgxDatatableModule } from '@swimlane/ngx-datatable';
-import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { CommonModule } from '@angular/common';
+
 import { SharedModule } from '../shared/shared.module';
-import { SearchModule } from '../component/search';
 
 import { ApmRoutingModule } from './apm-routing.module';
-import { ErrorComponent } from './error/error.component';
-import { DetailComponent } from './error/detail/detail.component';
-import { PerformanceComponent } from './performance/performance.component';
-import { ViewComponent } from './performance/view/view.component';
-import { PerformanceService } from './performance/performance.service';
+import { ScriptModule } from './script/script.module';
+import { ManageModule } from './manage/manage.module';
+import { CollectionModule } from './collection/collection.module';
+import { PerformanceModule } from './performance/performance.module';
 
 import { LayoutComponent } from './layout/layout.component';
 import { BrandModule } from '../admin';
 import { NavigationModule } from '../component/navigation';
-import { NavigationService } from './navigation.service';
+import { NavigationService } from './layout/navigation.service';
 
 @NgModule({
   imports: [
-    NgxDatatableModule,
-    NgxChartsModule,
+    CommonModule,
     SharedModule,
     ApmRoutingModule,
-    SearchModule,
     BrandModule,
-    NavigationModule
+    NavigationModule,
+    ScriptModule,
+    ManageModule,
+    CollectionModule,
+    PerformanceModule
   ],
-  declarations: [
-    ErrorComponent,
-    PerformanceComponent,
-    DetailComponent,
-    ViewComponent,
-    LayoutComponent
-  ],
-  providers: [NavigationService, PerformanceService]
+  declarations: [LayoutComponent],
+  providers: [NavigationService]
 })
 export class ApmModule {}

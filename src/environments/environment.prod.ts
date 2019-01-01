@@ -1,6 +1,6 @@
 export const environment = {
   production: true,
-  serverUrl:'/',
+  serverUrl: '/',
   firebase: {
     apiKey: 'AIzaSyAGcYsQtc9xqqEKstnoO3WasuZxJmKTwNc',
     authDomain: 'angular-material-app-stbui.firebaseapp.com',
@@ -15,5 +15,6 @@ export const environment = {
   chatsApi: '/assets/data/chats/list.json',
   analysisApi: '/assets/data/analysis',
   crmApi: '/assets/data/crm',
-  tableApi: '/assets/data/table'
+  tableApi: '/assets/data/table',
+  apm: '/assets/data/apm'
 };

@@ -1,66 +1,32 @@
-<div class="error-detail-container mat-elevation-z10" [class.open]="opened">
-  <div fxLayout="row" fxLayoutAlign="space-between center">
-    <span fxFlex></span>
-    <button mat-icon-button (click)="onCloseTriggered()">
-      <mat-icon>close</mat-icon>
-    </button>
-  </div>
+<div class="error-detail-container mat-elevation-z8" [class.open]="opened">
+  <button class="close" mat-icon-button (click)="onCloseTriggered()">
+    <mat-icon>close</mat-icon>
+  </button>
 
-  <div class="error-detail-main">
-    <div class="title">事件详情</div>
-    <div class="error-detail-row">
-      <div class="start-wrapper" fxLayout="row" fxLayoutAlign="start center" fxFlex="100px">
-        <span>时间</span>
-      </div>
-      <div class="content-wrapper" fxLayout="row" fxLayoutAlign="start center" fxFlex>
-        <span>2017年9月29日上午9点52分</span>
-      </div>
-    </div>
-    <div class="error-detail-row">
-      <div class="start-wrapper" fxLayout="row" fxLayoutAlign="start center" fxFlex="100px">
-        <span>错误类型</span>
-      </div>
-      <div class="content-wrapper" fxLayout="row" fxLayoutAlign="start center" fxFlex>
-        <span>httpError</span>
-      </div>
-    </div>
-    <div class="error-detail-row">
-      <div class="start-wrapper" fxLayout="row" fxLayoutAlign="start center" fxFlex="100px">
-        <span>method</span>
-      </div>
-      <div class="content-wrapper" fxLayout="row" fxLayoutAlign="start center" fxFlex>
-        <span>GET</span>
-      </div>
-    </div>
-  </div>
+  <div class="column-title">事件详情</div>
+  <table mat-table [dataSource]="dataSource">
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef></th>
+      <td mat-cell *matCellDef="let element">{{ element.name }}</td>
+    </ng-container>
+    <ng-container matColumnDef="value">
+      <th mat-header-cell *matHeaderCellDef></th>
+      <td mat-cell *matCellDef="let element">{{ element.value }}</td>
+    </ng-container>
+    <!-- <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr> -->
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  </table>
 
-
-  <div class="error-detail-main">
-    <div class="title">设备详情</div>
-    <div class="error-detail-row">
-      <div class="start-wrapper" fxLayout="row" fxLayoutAlign="start center" fxFlex="100px">
-        <span>IP</span>
-      </div>
-      <div class="content-wrapper" fxLayout="row" fxLayoutAlign="start center" fxFlex>
-        <span>127.0.0.1</span>
-      </div>
-    </div>
-    <div class="error-detail-row">
-      <div class="start-wrapper" fxLayout="row" fxLayoutAlign="start center" fxFlex="100px">
-        <span>地区</span>
-      </div>
-      <div class="content-wrapper" fxLayout="row" fxLayoutAlign="start center" fxFlex>
-        <span>中国</span>
-      </div>
-    </div>
-    <div class="error-detail-row">
-      <div class="start-wrapper" fxLayout="row" fxLayoutAlign="start center" fxFlex="100px">
-        <span>浏览器</span>
-      </div>
-      <div class="content-wrapper" fxLayout="row" fxLayoutAlign="start center" fxFlex>
-        <span>chrome 61.0.3163.100</span>
-      </div>
-    </div>
-  </div>
-{{count}}
+  <div class="column-title">设备详情</div>
+  <table mat-table [dataSource]="devicesDataSource">
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef></th>
+      <td mat-cell *matCellDef="let element">{{ element.name }}</td>
+    </ng-container>
+    <ng-container matColumnDef="value">
+      <th mat-header-cell *matHeaderCellDef></th>
+      <td mat-cell *matCellDef="let element">{{ element.value }}</td>
+    </ng-container>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  </table>
 </div>
