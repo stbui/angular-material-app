@@ -1,12 +1,14 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LayoutComponent } from './layout/layout.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 import { ScriptComponent } from './script/script.component';
 import { ManageComponent } from './manage/manage.component';
 import { CollectionComponent } from './collection/collection.component';
 import { PerformanceComponent } from './performance/performance.component';
 
 const routes: Routes = [
+  { path: 'dashboard', component: DashboardComponent },
   {
     path: '',
     component: LayoutComponent,

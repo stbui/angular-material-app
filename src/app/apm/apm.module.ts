@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { SharedModule } from '../shared/shared.module';
 
 import { ApmRoutingModule } from './apm-routing.module';
+import { DashboardModule } from './dashboard/dashboard.module';
 import { ScriptModule } from './script/script.module';
 import { ManageModule } from './manage/manage.module';
 import { CollectionModule } from './collection/collection.module';
@@ -19,6 +20,7 @@ import { NavigationService } from './layout/navigation.service';
     CommonModule,
     SharedModule,
     ApmRoutingModule,
+    DashboardModule,
     BrandModule,
     NavigationModule,
     ScriptModule,
