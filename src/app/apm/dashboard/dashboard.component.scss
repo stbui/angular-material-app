@@ -14,6 +14,9 @@
   margin-left: auto;
   max-width: 1140px;
 }
+.text-center {
+  text-align: center;
+}
 
 .navbar {
   display: flex;
@@ -64,13 +67,11 @@
 .section-container {
   position: relative;
   z-index: 1;
-
-  height: 550px;
-  color: #fff;
 }
 .hero {
   padding-top: 200px;
   padding-bottom: 200px;
+  height: 550px;
 }
 
 .footer {
@@ -100,6 +101,7 @@
   max-width: 100%;
   place-content: center;
   align-items: center;
+  color: #fff;
 }
 
 .background-holder {
@@ -123,4 +125,82 @@
 
 mat-card {
   margin: 0 10px;
+}
+
+.features {
+  padding: 100px 0;
+
+  &-intro {
+    margin-bottom: 50px;
+
+    h2 {
+      font-size: 28px;
+      font-weight: 600;
+      color: #3a3a47;
+      line-height: 1.3;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 1.6;
+      letter-spacing: 0.01em;
+      color: #818198;
+      max-width: 630px;
+      margin: 0 auto;
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.feature {
+  &-list {
+    margin: 30px 10px;
+  }
+}
+
+.card-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  margin: 0 auto;
+  background: #c86dd7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card-img {
+  width: 34px;
+  height: 34px;
+  font-size: 34px;
+  color: #fff;
+}
+.card-text h3 {
+  font-size: 21px;
+  font-weight: 500;
+  color: #364655;
+  margin-bottom: 15px;
+}
+
+.pricing {
+  padding: 100px 0;
+}
+.pricing-title {
+  font-weight: 600;
+  color: #c86dd7;
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 32px;
+}
+
+.pricing-subtitle {
+  font-family: 'Montserrat';
+  font-size: 22px;
+  font-weight: 600;
+  color: #364655;
+  opacity: 0.7;
+  margin: 20px 0;
+  text-align: center;
 }
