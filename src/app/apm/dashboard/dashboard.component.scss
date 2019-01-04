@@ -85,6 +85,15 @@
   }
 }
 
+.form-check {
+  display: block;
+  margin: 16px 0 32px;
+}
+
+.display-block {
+  display: block;
+}
+
 .hero__shape {
   position: absolute !important;
   top: auto;
@@ -186,6 +195,10 @@ mat-card {
 
 .pricing {
   padding: 100px 0;
+
+  mat-card-content div {
+    line-height: 42px;
+  }
 }
 .pricing-title {
   font-weight: 600;
@@ -203,4 +216,27 @@ mat-card {
   opacity: 0.7;
   margin: 20px 0;
   text-align: center;
+}
+
+.space {
+  padding: {
+    top: 128px;
+    bottom: 128px;
+  }
+}
+
+.bg-color-primary {
+  h3 {
+    color: #fff;
+  }
+  p {
+    color: #d2d5da;
+  }
+}
+
+.snapshot {
+  width: 565px;
+  height: 300px;
+  border: 1px solid #fff;
+  background: #ccc;
 }
