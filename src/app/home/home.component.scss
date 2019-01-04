@@ -1,3 +1,5 @@
+$primary-color: #6a82fb;
+
 .section-container {
   background: #fc5c7d;
   background: -webkit-linear-gradient(to right, #6a82fb, #fc5c7d);
@@ -102,7 +104,7 @@
     font-size: 44px;
     height: 44px;
     width: 44px;
-    color: #3f51b5;
+    color: $primary-color;
   }
 }
 
