@@ -1,7 +1,20 @@
 <div fxLayout="column" class="section-container">
+  <div class="shape shape-style-1 shape-primary">
+      <span class="circle-150"></span>
+      <span class="circle-50"></span>
+      <span class="circle-50"></span>
+      <span class="circle-75"></span>
+      <span class="circle-100"></span>
+      <span class="circle-75"></span>
+      <span class="circle-50"></span>
+      <span class="circle-100"></span>
+      <span class="circle-50"></span>
+      <span class="circle-100"></span>
+  </div>
+
   <div class="fix-width">
     <div fxLayout="row">
-      <div class="home-logo"><a [routerLink]="['/apps/navigation']">Stbui</a></div>
+      <div class="home-logo"><a [routerLink]="['/']">Stbui</a></div>
       <span fxFlex></span>
       <ul class="nav">
         <li><a href="/home">首页</a></li>
@@ -116,135 +129,87 @@
       <h2 class="text-center">旗下产品</h2>
       <div class="product-subtitle">为互联网时代的用户和企业量身打造各种高端网站，为企业提供极致服务体验。</div>
     </div>
-    <div fxLayout="row wrap">
-      <mat-card fxFlex.gt-sm="23" fxFlex.gt-xs="31" fxFlex="100">
-        <img mat-card-image src="assets/images-demo/assets/1.png">
-        <mat-card-content>
-          <mat-list>
-            <mat-list-item>
-              <mat-icon mat-list-avatar class="list-avatar-icon">search</mat-icon>
-              <h3 mat-line>社区系统</h3>
-              <p mat-line>
-                <span>社区系统</span>
-              </p>
-            </mat-list-item>
-            <mat-list-item>
-              <mat-icon mat-list-avatar class="list-avatar-icon">widgets</mat-icon>
-              <h3 mat-line>免费开源</h3>
-              <p mat-line>
-                <span>遵循Apache2开源协议发布</span>
-              </p>
-            </mat-list-item>
-            <mat-list-item>
-              <mat-icon mat-list-avatar class="list-avatar-icon">settings_input_component</mat-icon>
-              <h3 mat-line>深度整合</h3>
-              <p mat-line>
-                <span>基于angular开发框架</span>
-              </p>
-            </mat-list-item>
-          </mat-list>
-        </mat-card-content>
-        <mat-card-actions>
-          <button type="button" class="mat-button stbui-button stbui-button-outline stbui-button-block" mat-ripple>查看</button>
-        </mat-card-actions>
-      </mat-card>
+    <div fxLayout="row wrap" fxLayoutAlign="start center">
+        <div fxFlex.gt-sm="25" fxFlex.gt-xs="33.33" fxFlex="100">
+          <mat-card>
+            <img mat-card-image src="assets/images-demo/assets/1.png">
+            <mat-card-header>
+              <mat-card-title>Stbui</mat-card-title>
+              <mat-card-subtitle>中后台前端应用框架</mat-card-subtitle>
+            </mat-card-header>
+         
+            <mat-card-actions>
+              <button
+                type="button"
+                class="mat-button stbui-button stbui-button-outline stbui-button-block"
+                mat-ripple
+              >
+                查看
+              </button>
+            </mat-card-actions>
+          </mat-card>
+        </div>
 
-      <mat-card fxFlex.gt-sm="23" fxFlex.gt-xs="31" fxFlex="100">
-        <img mat-card-image src="assets/images-demo/assets/2.png">
-        <mat-card-content>
-          <mat-list>
-            <mat-list-item>
-              <mat-icon mat-list-avatar class="list-avatar-icon">home</mat-icon>
-              <h3 mat-line>企业系统（定制版）</h3>
-              <p mat-line>
-                <span>￥999起</span>
-              </p>
-            </mat-list-item>
-            <mat-list-item>
-              <mat-icon mat-list-avatar class="list-avatar-icon">star_border</mat-icon>
-              <h3 mat-line>高端打造</h3>
-              <p mat-line>
-                <span>用于商业以及企业级的开发</span>
-              </p>
-            </mat-list-item>
-            <mat-list-item>
-              <mat-icon mat-list-avatar class="list-avatar-icon">supervisor_account</mat-icon>
-              <h3 mat-line>技术支持</h3>
-              <p mat-line>
-                <span>7乘以8小时技术客服在线</span>
-              </p>
-            </mat-list-item>
-          </mat-list>
-        </mat-card-content>
-        <mat-card-actions>
-          <button type="button" class="mat-button stbui-button stbui-button-outline stbui-button-block" mat-ripple>查看</button>
-        </mat-card-actions>
-      </mat-card>
+        <div fxFlex.gt-sm="25" fxFlex.gt-xs="33.33" fxFlex="100">
+          <mat-card>
+            <img mat-card-image src="assets/images-demo/assets/2.png">
+            <mat-card-header>
+              <mat-card-title>Apm</mat-card-title>
+              <mat-card-subtitle>前端数据监控系统</mat-card-subtitle>
+            </mat-card-header>
 
-      <mat-card fxFlex.gt-sm="23" fxFlex.gt-xs="31" fxFlex="100">
-        <img mat-card-image src="assets/images-demo/assets/3.png">
-        <mat-card-content>
-          <mat-list>
-            <mat-list-item>
-              <mat-icon mat-list-avatar class="list-avatar-icon">security</mat-icon>
-              <h3 mat-line>商业授权（去版权）</h3>
-              <p mat-line>
-                <span>￥200起</span>
-              </p>
-            </mat-list-item>
-            <mat-list-item>
-              <mat-icon mat-list-avatar class="list-avatar-icon">cloud_upload</mat-icon>
-              <h3 mat-line>免费升级</h3>
-              <p mat-line>
-                <span>第一时间解决你更新升级问题</span>
-              </p>
-            </mat-list-item>
-            <mat-list-item>
-              <mat-icon mat-list-avatar class="list-avatar-icon">credit_card</mat-icon>
-              <h3 mat-line>二次开发</h3>
-              <p mat-line>
-                <span>标准HTML5开源前端实践方案</span>
-              </p>
-            </mat-list-item>
-          </mat-list>
-        </mat-card-content>
-        <mat-card-actions>
-          <button type="button" class="mat-button stbui-button stbui-button-outline stbui-button-block" mat-ripple>查看</button>
-        </mat-card-actions>
-      </mat-card>
+            <mat-card-actions>
+              <button
+                type="button"
+                class="mat-button stbui-button stbui-button-outline stbui-button-block"
+                mat-ripple
+              >
+                查看
+              </button></mat-card-actions
+            >
+          </mat-card>
+        </div>
 
-      <mat-card fxFlex.gt-sm="23" fxFlex.gt-xs="31" fxFlex="100">
-        <img mat-card-image src="assets/images-demo/assets/4.png">
-        <mat-card-content>
-          <mat-list>
-            <mat-list-item>
-              <mat-icon mat-list-avatar class="list-avatar-icon">search</mat-icon>
-              <h3 mat-line>CRM</h3>
-              <p mat-line>
-                <span>￥399起</span>
-              </p>
-            </mat-list-item>
-            <mat-list-item>
-              <mat-icon mat-list-avatar class="list-avatar-icon">widgets</mat-icon>
-              <h3 mat-line>专业的解决方案</h3>
-              <p mat-line>
-                <span>满足您快速变化的业务需求</span>
-              </p>
-            </mat-list-item>
-            <mat-list-item>
-              <mat-icon mat-list-avatar class="list-avatar-icon">settings_input_component</mat-icon>
-              <h3 mat-line>稳定可靠</h3>
-              <p mat-line>
-                <span>资源高效利用</span>
-              </p>
-            </mat-list-item>
-          </mat-list>
-        </mat-card-content>
-        <mat-card-actions>
-          <button type="button" class="mat-button stbui-button stbui-button-outline stbui-button-block" mat-ripple>查看</button>
-        </mat-card-actions>
-      </mat-card>
-    </div>
+        <div fxFlex.gt-sm="25" fxFlex.gt-xs="33.33" fxFlex="100">
+          <mat-card>
+              <img mat-card-image src="assets/images-demo/assets/3.png">
+            <mat-card-header>
+              <mat-card-title>Cms</mat-card-title>
+              <mat-card-subtitle>内容管理系统</mat-card-subtitle>
+            </mat-card-header>
+
+            <mat-card-actions>
+              <button
+                type="button"
+                class="mat-button stbui-button stbui-button-outline stbui-button-block"
+                mat-ripple
+              >
+                查看
+              </button>
+            </mat-card-actions>
+          </mat-card>
+        </div>
+
+        <div fxFlex.gt-sm="25" fxFlex.gt-xs="33.33" fxFlex="100">
+          <mat-card>
+            <img mat-card-image src="assets/images-demo/assets/4.png">
+            <mat-card-header>
+              <mat-card-title>Crm</mat-card-title>
+              <mat-card-subtitle>客户关系系统</mat-card-subtitle>
+            </mat-card-header>
+
+            <mat-card-actions>
+              <button
+                type="button"
+                class="mat-button stbui-button stbui-button-outline stbui-button-block"
+                mat-ripple
+              >
+                查看
+              </button>
+            </mat-card-actions>
+          </mat-card>
+        </div>
+      </div>
   </div>
 </div>
 

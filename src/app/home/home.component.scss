@@ -167,3 +167,97 @@ p {
 .stbui-button-block {
   width: 100%;
 }
+
+.shape-style-1.shape-primary {
+  background: linear-gradient(150deg, #281483 15%, #8f6ed5 70%, #d782d9 94%);
+}
+.shape span {
+  position: absolute;
+}
+
+.shape-style-1 span {
+  width: 120px;
+  height: 120px;
+  border-radius: 100px 130px 100px 315px;
+}
+
+.shape-style-1 :nth-child(1) {
+  bottom: auto;
+  left: -3%;
+  top: -20px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.shape-style-1 .circle-50 {
+  width: 50px;
+  height: 50px;
+}
+
+.shape-style-1 :nth-child(2) {
+  top: 15%;
+  right: 10%;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.shape-style-1 :nth-child(3) {
+  top: 280px;
+  right: 5.66666%;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.shape-style-1 .circle-75 {
+  width: 75px;
+  height: 75px;
+}
+
+.shape-style-1 :nth-child(4) {
+  top: 320px;
+  right: 7%;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.shape-style-1 .circle-100 {
+  width: 100px;
+  height: 100px;
+}
+
+.shape-style-1 :nth-child(5) {
+  top: 38%;
+  right: auto;
+  left: 1%;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.shape-style-1 :nth-child(6) {
+  top: 65%;
+  right: auto;
+  left: 35%;
+  width: 200px;
+  height: 200px;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.shape-style-1 :nth-child(7) {
+  right: 40%;
+  bottom: 45%;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.shape-style-1 :nth-child(8) {
+  right: 6%;
+  bottom: 100px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.shape-style-1 :nth-child(9) {
+  right: 5%;
+  bottom: 12%;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.shape-style-1 :nth-child(10) {
+  right: auto;
+  bottom: 11%;
+  left: 15%;
+  background: rgba(255, 255, 255, 0.05);
+}
