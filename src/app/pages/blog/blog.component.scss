@@ -7,19 +7,24 @@ mat-card {
 }
 
 .header {
+  position: relative;
+  z-index: 1;
   height: 200px;
   background: linear-gradient(0, #3f51b5, #3f51b5);
+  background: linear-gradient(90deg, #23a9f5 0, #3f51b5);
   color: #fff;
   padding: 20px;
 
-  h1, h5 {
-    margin: 0
+  h1,
+  h5 {
+    margin: 0;
   }
 
   &-desc {
-    padding-top: 6px;
+    padding-top: 12px;
+    padding-bottom: 12px;
     font-weight: 300;
-    color: #c5cae9;
+    color: #f9f9f9;
   }
 }
 

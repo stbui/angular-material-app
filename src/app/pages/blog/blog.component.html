@@ -1,25 +1,24 @@
 <div class="header" fxLayout="column" fxLayoutAlign="center start">
-    <h1>Stbui's Blog</h1>
-    <h5 class="header-desc">学习弯道超车的技巧！</h5>
-    <stbui-github-button type="link|star|fork"></stbui-github-button>
+  <h1>Stbui's Blog</h1>
+  <h5 class="header-desc">学习弯道超车的技巧！</h5>
+  <stbui-github-button type="link|star|fork"></stbui-github-button>
 </div>
 
-
 <div *ngIf="!items.length">
-    <stbui-loading-skeleton></stbui-loading-skeleton>
-    <stbui-loading-skeleton></stbui-loading-skeleton>
-    <stbui-loading-skeleton></stbui-loading-skeleton>
+  <stbui-loading-skeleton></stbui-loading-skeleton>
+  <stbui-loading-skeleton></stbui-loading-skeleton>
+  <stbui-loading-skeleton></stbui-loading-skeleton>
 </div>
 
 <mat-card *ngFor="let item of items">
-    <div class="timer">{{items.updated}}</div>
-    <mat-card-title>
-        <a class="title" href="/pages/blog/1" target="blank">{{item.title}}</a>
-    </mat-card-title>
-    <mat-card-content>
-        <pre><code>{{item.body}}</code></pre>
-        <button mat-button color="primary">阅读全文...</button>
-    </mat-card-content>
+  <div class="timer">{{ items.updated }}</div>
+  <mat-card-title>
+    <a class="title" href="/pages/blog/1" target="blank">{{ item.title }}</a>
+  </mat-card-title>
+  <mat-card-content>
+    <pre><code>{{item.body}}</code></pre>
+    <button mat-button color="primary">阅读全文...</button>
+  </mat-card-content>
 </mat-card>
 
 <stbui-pagination total="5" align="center"></stbui-pagination>

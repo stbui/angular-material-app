@@ -8,12 +8,13 @@ $css-prefix: 'stbui';
 }
 
 .#{$css-prefix}-button-outline {
-  border: 1px solid #3f51b5;
-  color: #3f51b5;
+  border: 1px solid #3f51b5 !important;
+  color: #3f51b5 !important;
+  transition: all 0.5s ease-in-out;
 
   &:hover {
     background-color: #3f51b5;
-    color: #fff;
+    color: #fff !important;
   }
 }
 

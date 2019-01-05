@@ -38,10 +38,10 @@
         <h4>
           <a
             mat-raised-button
-            class="stbui-button-lg"
-            href="https://github.com/stbui/angular-material-app/archive/master.zip"
+            class="button-free"
+            href="https://github.com/stbui/angular-material-app"
           >
-            立即下载
+            免费试用
           </a>
         </h4>
         <h5>当前版本：0.7.0 免费版</h5>
@@ -305,120 +305,112 @@
     </div>
   </section>
 
-  <section class="bg-color-primary section-container pricing">
+  <section class="bg-color-primary section-container space">
     <div class="container">
       <div fxLayout="row wrap" fxLayoutAlign="start center">
         <div fxFlex.gt-sm="25" fxFlex.gt-xs="33.33" fxFlex="100">
-          <mat-card>
-            <mat-card-header>
-              <mat-card-title class="pricing-title">0</mat-card-title>
-              <mat-card-subtitle class="pricing-subtitle"
-                >社区版</mat-card-subtitle
-              >
-            </mat-card-header>
+          <div class="pricing mat-elevation-z4 text-center">
+            <div class="pricing-header">
+              <h4>社区版</h4>
+              <h2>0<sub>元</sub></h2>
+            </div>
+            <div class="pricing-center">
+              <div class="pricing-content-item">页面级的性能上报</div>
+              <div class="pricing-content-item">页面AJAX性能上报</div>
+              <div class="pricing-content-item">页面所有加载资源性能上报</div>
+              <div class="pricing-content-item">页面所有错误信息上报</div>
+              <div class="pricing-content-item">使用source-map还原代码</div>
+            </div>
 
-            <mat-card-content>
-              <div>页面级的性能上报</div>
-              <div>页面AJAX性能上报</div>
-              <div>页面所有加载资源性能上报</div>
-              <div>页面所有错误信息上报</div>
-              <div>使用source-map还原代码</div>
-            </mat-card-content>
-            <mat-card-actions>
+            <div class="pricing-footer">
               <button
                 type="button"
-                class="mat-button stbui-button stbui-button-outline stbui-button-block"
-                mat-ripple
+                mat-button color="primary"
+                class="stbui-button-outline stbui-button-block"
               >
                 查看
               </button>
-            </mat-card-actions>
-          </mat-card>
+            </div>
+          </div>
         </div>
 
         <div fxFlex.gt-sm="25" fxFlex.gt-xs="33.33" fxFlex="100">
-          <mat-card>
-            <mat-card-header>
-              <mat-card-title class="pricing-title">1元</mat-card-title>
-              <mat-card-subtitle class="pricing-subtitle"
-                >团队版</mat-card-subtitle
-              >
-            </mat-card-header>
-
-            <mat-card-content>
-              <div>单机部署服务稳定保障</div>
-              <div>高并发场景下的服务稳定和上报</div>
-              <div>集群部署下的稳定性和合理性</div>
-              <div>用户每次访问的行为轨迹</div>
-              <div>全国省份流量热力图</div>
-            </mat-card-content>
-            <mat-card-actions>
-              <button
-                type="button"
-                class="mat-button stbui-button stbui-button-outline stbui-button-block"
-                mat-ripple
-              >
-                查看
-              </button></mat-card-actions
-            >
-          </mat-card>
+            <div class="pricing mat-elevation-z4 text-center">
+                <div class="pricing-header pricing-active">
+                  <h4>团队版</h4>
+                  <h2>1<sub>元</sub></h2>
+                </div>
+                <div class="pricing-center">
+                    <div class="pricing-content-item">单机部署服务稳定保障</div>
+                    <div class="pricing-content-item">高并发场景下的服务稳定和上报</div>
+                    <div class="pricing-content-item">集群部署下的稳定性和合理性</div>
+                    <div class="pricing-content-item">用户每次访问的行为轨迹</div>
+                    <div class="pricing-content-item">全国省份流量热力图</div>
+                </div>
+    
+                <div class="pricing-footer">
+                  <button
+                    type="button"
+                    mat-button color="primary"
+                    class="stbui-button-outline stbui-button-block"
+                  >
+                    查看
+                  </button>
+                </div>
+              </div>
         </div>
 
         <div fxFlex.gt-sm="25" fxFlex.gt-xs="33.33" fxFlex="100">
-          <mat-card>
-            <mat-card-header>
-              <mat-card-title class="pricing-title">10元</mat-card-title>
-              <mat-card-subtitle class="pricing-subtitle"
-                >企业版</mat-card-subtitle
-              >
-            </mat-card-header>
-
-            <mat-card-content>
-              <div>千万级别数据量时的查询优化方案</div>
-              <div>实时查询展示的高可用方案</div>
-              <div>消息队列的优化和合理使用方案等</div>
-              <div>servers,db,redis高可用集群方案</div>
-              <div>定位性能瓶颈</div>
-            </mat-card-content>
-            <mat-card-actions>
-              <button
-                type="button"
-                class="mat-button stbui-button stbui-button-outline stbui-button-block"
-                mat-ripple
-              >
-                查看
-              </button>
-            </mat-card-actions>
-          </mat-card>
+            <div class="pricing mat-elevation-z4 text-center">
+                <div class="pricing-header">
+                  <h4>企业版</h4>
+                  <h2>10<sub>元</sub></h2>
+                </div>
+                <div class="pricing-center">
+                    <div class="pricing-content-item">千万级别数据量查询优化方案</div>
+                    <div class="pricing-content-item">实时查询的高可用方案</div>
+                    <div class="pricing-content-item">消息队列的优化和合理使用方案</div>
+                    <div class="pricing-content-item">高可用集群方案</div>
+                    <div class="pricing-content-item">定位性能瓶颈</div>
+                </div>
+    
+                <div class="pricing-footer">
+                  <button
+                    type="button"
+                    mat-button color="primary"
+                    class="stbui-button-outline stbui-button-block"
+                  >
+                    查看
+                  </button>
+                </div>
+              </div>
         </div>
 
         <div fxFlex.gt-sm="25" fxFlex.gt-xs="33.33" fxFlex="100">
-          <mat-card>
-            <mat-card-header>
-              <mat-card-title class="pricing-title">20元</mat-card-title>
-              <mat-card-subtitle class="pricing-subtitle"
-                >开发版</mat-card-subtitle
-              >
-            </mat-card-header>
+            <div class="pricing mat-elevation-z4 text-center">
+                <div class="pricing-header">
+                  <h4>开发版</h4>
+                  <h2>20<sub>元</sub></h2>
+                </div>
+                <div class="pricing-center">
+                    <div class="pricing-content-item">功能一</div>
+                    <div class="pricing-content-item">功能二</div>
+                    <div class="pricing-content-item">功能三</div>
+                    <div class="pricing-content-item">功能四</div>
+                    <div class="pricing-content-item">功能五</div>
+                </div>
+    
+                <div class="pricing-footer">
+                  <button
+                    type="button"
+                    mat-button color="primary"
+                    class="stbui-button-outline stbui-button-block"
+                  >
+                    查看
+                  </button>
+                </div>
+              </div>
 
-            <mat-card-content>
-              <div>功能一</div>
-              <div>功能二</div>
-              <div>功能三</div>
-              <div>功能四</div>
-              <div>功能五</div>
-            </mat-card-content>
-
-            <mat-card-actions>
-              <button
-                type="button"
-                class="mat-button stbui-button stbui-button-outline stbui-button-block"
-                mat-ripple
-              >
-                查看
-              </button>
-            </mat-card-actions>
-          </mat-card>
         </div>
       </div>
     </div>
@@ -485,9 +477,9 @@
   </section>
 
   <footer class="footer">
-    <div class="fix-width">
+    <div class="container">
       <div fxLayout="row" class="footer-copyright">
-        <span>Copyright 2017. All Rights Reserved by stbui Pro</span>
+        <span>Copyright 2017-2019. All Rights Reserved by stbui Pro</span>
         <span fxFlex></span>
         <span
           >Design & Developed by
