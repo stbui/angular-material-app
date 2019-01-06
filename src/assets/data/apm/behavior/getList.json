@@ -1,0 +1,16 @@
+{
+  "code": 1000,
+  "desc": "成功",
+  "data": {
+    "datalist": [
+      {
+        "ip": "127.0.0.1",
+        "markuser": "r41W3dTwTA1546676532538",
+        "browser": "Chrome",
+        "system": "Mac OS"
+      }
+    ],
+    "totalNum": 1,
+    "pageNo": 1
+  }
+}

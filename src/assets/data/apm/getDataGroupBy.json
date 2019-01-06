@@ -1,0 +1,15 @@
+{
+  "code": 1000,
+  "desc": "成功",
+  "data": [
+    {
+      "_id": {
+        "url": "http://127.0.0.1:8080/",
+        "city": "",
+        "browser": "Chrome",
+        "system": ""
+      },
+      "count": 13
+    }
+  ]
+}
