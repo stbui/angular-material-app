@@ -7,10 +7,11 @@ import { SearchModule } from '../../component/search';
 import { ManageService } from './manage.service';
 import { ManageComponent } from './manage.component';
 import { NewComponent } from './new/new.component';
+import { SettingComponent } from './setting/setting.component';
 
 @NgModule({
   imports: [CommonModule, HttpClientModule, SharedModule, SearchModule],
-  declarations: [ManageComponent, NewComponent],
+  declarations: [ManageComponent, NewComponent, SettingComponent],
   providers: [ManageService],
   entryComponents: [NewComponent]
 })

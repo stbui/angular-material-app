@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, DatePipe } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { SharedModule } from '../../shared/shared.module';
 import { SearchModule } from '../../component/search';
@@ -12,6 +12,6 @@ import { ScriptDirective } from './script.directive';
 @NgModule({
   imports: [CommonModule, HttpClientModule, SharedModule, SearchModule],
   declarations: [ScriptComponent, DetailComponent, ScriptDirective],
-  providers: [ScriptService]
+  providers: [ScriptService, DatePipe]
 })
 export class ScriptModule {}

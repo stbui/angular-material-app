@@ -3,14 +3,21 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { SharedModule } from '../../shared/shared.module';
 import { SearchModule } from '../../component/search';
+import { WidgetModule } from '../../component/widget';
 
 import { PerformanceComponent } from './performance.component';
 import { PerformanceService } from './performance.service';
-import { ViewComponent } from './view/view.component';
+import { DetailComponent } from './detail/detail.component';
 
 @NgModule({
-  imports: [CommonModule, HttpClientModule, SharedModule, SearchModule],
-  declarations: [PerformanceComponent, ViewComponent],
+  imports: [
+    CommonModule,
+    HttpClientModule,
+    SharedModule,
+    SearchModule,
+    WidgetModule
+  ],
+  declarations: [PerformanceComponent, DetailComponent],
   providers: [PerformanceService]
 })
 export class PerformanceModule {}

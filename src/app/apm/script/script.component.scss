@@ -1,8 +1,3 @@
-:host {
-  display: block;
-  margin: 24px;
-}
-
 .table-container {
   position: relative;
   overflow: auto;
@@ -12,27 +7,16 @@ table {
   width: 100%;
 }
 
-.column-title {
-  padding-top: 16px;
-  padding-bottom: 16px;
-  font-weight: 500;
-  font-size: 16px;
-}
+.script-container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 
-.mat-column-id,
-.mat-column-releaseStage,
-.mat-column-name,
-.mat-column-lineNumber,
-.mat-column-columnNumber,
-.mat-column-file,
-.mat-column-message {
-  padding-right: 8px;
-}
-.mat-column-columnNumber,
-.mat-column-lineNumber {
-  min-width: 50px;
-}
-.mat-column-message {
-  min-width: 200px;
-  white-space: nowrap;
+  mat-sidenav-content {
+    padding: 24px;
+  }
 }

@@ -1,14 +1,27 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { environment } from '../../../environments/environment';
 
 @Injectable()
 export class PerformanceService {
-  api = '/assets/data/apm';
+  private apiUrl = environment.apm;
 
   constructor(private http: HttpClient) {}
 
-  getList() {
-    const url = `${this.api}/performance.json`;
-    return this.http.get<any>(url);
+  getList(page?: any, search?: any): Observable<any> {
+    const url: string = `${this.apiUrl}/performance/getOnePageList.json`;
+    const params = new HttpParams()
+      .set('page', page)
+      .set('resource_url', search);
+
+    return this.http.get<any>(url, { params });
+  }
+
+  getCount(startTime?: any, endTime?: any): Observable<any> {
+    const url: string = `${this.apiUrl}/ajax/getOneAjaxAvg.json`;
+    const params = { startTime, endTime };
+
+    return this.http.get<any>(url, { params });
   }
 }

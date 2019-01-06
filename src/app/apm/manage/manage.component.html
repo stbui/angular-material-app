@@ -10,57 +10,42 @@
     <table class="table-hover" mat-table [dataSource]="dataSource">
       <ng-container matColumnDef="select" sticky>
         <th mat-header-cell *matHeaderCellDef>
-          <mat-checkbox
-            (change)="$event ? masterToggle() : null"
-            [checked]="selection.hasValue() && isAllSelected()"
-            [indeterminate]="selection.hasValue() && !isAllSelected()"
-          >
+          <mat-checkbox (change)="$event ? masterToggle() : null" [checked]="selection.hasValue() && isAllSelected()"
+            [indeterminate]="selection.hasValue() && !isAllSelected()">
           </mat-checkbox>
         </th>
         <td mat-cell *matCellDef="let row">
-          <mat-checkbox
-            (click)="$event.stopPropagation()"
-            (change)="$event ? selection.toggle(row) : null"
-            [checked]="selection.isSelected(row)"
-          >
+          <mat-checkbox (click)="$event.stopPropagation()" (change)="$event ? selection.toggle(row) : null" [checked]="selection.isSelected(row)">
           </mat-checkbox>
         </td>
       </ng-container>
 
       <ng-container matColumnDef="name">
-        <th mat-header-cell *matHeaderCellDef>名称</th>
-        <td mat-cell *matCellDef="let element">{{ element.name }}</td>
+        <th mat-header-cell *matHeaderCellDef>应用名称</th>
+        <td mat-cell *matCellDef="let element">{{ element.system_name }}</td>
       </ng-container>
 
       <ng-container matColumnDef="apiKey">
-        <th mat-header-cell *matHeaderCellDef>标识</th>
-        <td mat-cell *matCellDef="let element">{{ element.apiKey }}</td>
+        <th mat-header-cell *matHeaderCellDef>appId</th>
+        <td mat-cell *matCellDef="let element">{{ element.app_id }}</td>
       </ng-container>
 
       <ng-container matColumnDef="code">
-        <th mat-header-cell *matHeaderCellDef>代码</th>
+        <th mat-header-cell *matHeaderCellDef>是否可用</th>
         <td mat-cell *matCellDef="let element">
-          {{ element.url }}/{{ element.apiKey }}
+          {{ element.is_use?"否":"是" }}
         </td>
       </ng-container>
 
       <ng-container matColumnDef="star">
-        <th mat-header-cell *matHeaderCellDef></th>
-        <td
-          mat-cell
-          *matCellDef="let element"
-          (click)="onEditorTriggered(element); $event.stopPropagation()"
-        >
+        <th mat-header-cell *matHeaderCellDef>操作</th>
+        <td mat-cell *matCellDef="let element" (click)="onEditorTriggered(element); $event.stopPropagation()">
           编辑
         </td>
       </ng-container>
 
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-      <tr
-        mat-row
-        *matRowDef="let row; columns: displayedColumns"
-        (click)="rowSelection(row)"
-      ></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns" (click)="rowSelection(row)"></tr>
     </table>
   </div>
 

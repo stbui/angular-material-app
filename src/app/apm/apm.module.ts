@@ -14,6 +14,7 @@ import { LayoutComponent } from './layout/layout.component';
 import { BrandModule } from '../admin';
 import { NavigationModule } from '../component/navigation';
 import { NavigationService } from './layout/navigation.service';
+import { BehaviorModule } from './behavior/behavior.module';
 
 @NgModule({
   imports: [
@@ -26,7 +27,8 @@ import { NavigationService } from './layout/navigation.service';
     ScriptModule,
     ManageModule,
     CollectionModule,
-    PerformanceModule
+    PerformanceModule,
+    BehaviorModule
   ],
   declarations: [LayoutComponent],
   providers: [NavigationService]

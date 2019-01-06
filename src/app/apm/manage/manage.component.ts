@@ -27,7 +27,7 @@ export class ManageComponent implements OnInit {
 
   ngOnInit() {
     this.service.getList().subscribe(res => {
-      this.dataSource = new MatTableDataSource(res);
+      this.dataSource = new MatTableDataSource(res.data);
       this.dataSource.paginator = this.paginator;
     });
   }

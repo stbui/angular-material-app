@@ -1,8 +1,15 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { MatPaginator, MatTableDataSource } from '@angular/material';
+import { DatePipe } from '@angular/common';
+import {
+  MatPaginator,
+  MatTableDataSource,
+  MatSidenav
+} from '@angular/material';
 import { SelectionModel } from '@angular/cdk/collections';
+import { merge, of as observableOf } from 'rxjs';
+import { catchError, map, startWith, switchMap } from 'rxjs/operators';
+import { SearchComponent } from '../../component';
 import { ScriptService } from './script.service';
-import userAgent from './user-agent';
 
 @Component({
   selector: 'apm-script',
@@ -11,96 +18,54 @@ import userAgent from './user-agent';
 })
 export class ScriptComponent implements OnInit {
   displayedColumns: string[] = [
-    'id',
-    'releaseStage',
-    'name',
-    'lineNumber',
-    'columnNumber',
-    'file',
-    'message',
-    'cb'
+    'resource_url',
+    'category',
+    'fullurl',
+    'line',
+    'col',
+    'method',
+    'msg',
+    'create_time'
   ];
 
   dataSource = new MatTableDataSource([]);
   selection = new SelectionModel(true, []);
 
-  openDetail: boolean = false;
+  resultsLength = 0;
+  isLoadingResults = true;
+  isRateLimitReached = false;
 
-  detailColumns: string[] = ['name', 'value'];
-  eventDataSource = [
-    {
-      name: '时间',
-      value: ''
-    },
-    {
-      name: '错误类型',
-      value: ''
-    },
-    {
-      name: '错误信息',
-      value: ''
-    },
-    {
-      name: '出错文件',
-      value: ''
-    },
-    {
-      name: '出错行号',
-      value: ''
-    },
-    {
-      name: '出错列号',
-      value: ''
-    },
-    {
-      name: '错误详情',
-      value: ''
-    },
-    {
-      name: 'metaData[script][content]',
-      value: ''
-    },
-    {
-      name: 'metaData[script][src]',
-      value: ''
-    }
-  ];
-  devicesDataSource = [
-    {
-      name: 'IP',
-      value: ''
-    },
-    {
-      name: '浏览器',
-      value: ''
-    },
-    {
-      name: 'OS',
-      value: ''
-    },
-    {
-      name: 'language',
-      value: ''
-    },
-    {
-      name: 'userAgent',
-      value: ''
-    }
-  ];
+  devicesDataSource = [];
+  eventDataSource = [];
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
+  @ViewChild(MatSidenav) sidenav: MatSidenav;
+  @ViewChild(SearchComponent) search: SearchComponent;
 
-  constructor(private service: ScriptService) {}
+  constructor(private service: ScriptService, private datePipe: DatePipe) {}
 
   ngOnInit() {
-    this.service.getList().subscribe(res => {
-      this.dataSource = new MatTableDataSource(res.data);
-      this.dataSource.paginator = this.paginator;
-    });
-  }
+    this.search.onSearch.subscribe(() => (this.paginator.pageIndex = 0));
 
-  onClickOutside(e) {
-    this.openDetail = false;
+    merge(this.search.onSearch, this.paginator.page)
+      .pipe(
+        startWith({}),
+        switchMap(search => {
+          return this.service.getList(this.paginator.pageIndex, search);
+        }),
+        map(data => {
+          this.isLoadingResults = false;
+          this.isRateLimitReached = false;
+          this.resultsLength = data.data.totalNum;
+          return data.data.datalist;
+        }),
+        catchError(() => {
+          this.isLoadingResults = false;
+          this.isRateLimitReached = true;
+          return observableOf([]);
+        })
+      )
+      .subscribe(data => (this.dataSource = data));
   }
 
   //
@@ -116,55 +81,62 @@ export class ScriptComponent implements OnInit {
       : this.dataSource.data.forEach(row => this.selection.select(row));
   }
 
-  rowSelection(row) {
+  onRowClicked(row) {
     this.selection.toggle(row);
-    this.openDetail = true;
-  }
+    this.sidenav.open();
 
-  onOpenedTriggered(opened) {
-    this.openDetail = opened;
-    console.log(this.selection.selected);
     this.eventDataSource = [
       {
-        name: '时间',
-        value: '1234'
-      },
-      {
-        name: '错误类型',
-        value: ''
-      },
-      {
-        name: '错误信息',
-        value: ''
-      },
-      {
-        name: '出错文件',
-        value: ''
+        name: '错误资源',
+        value: row.resource_url
       },
       {
         name: '出错行号',
-        value: ''
+        value: row.line
       },
       {
         name: '出错列号',
-        value: ''
+        value: row.col
       },
       {
         name: '错误详情',
+        value: row.msg
+      },
+      {
+        name: '错误类型',
+        value: row.category
+      },
+      {
+        name: '生成时间',
+        value: this.datePipe.transform(row.create_time, 'yyyy-MM-dd hh:mm:ss')
+      }
+    ];
+
+    this.devicesDataSource = [
+      {
+        name: 'IP地址',
         value: ''
       },
       {
-        name: 'metaData[script][content]',
+        name: '来源城市',
         value: ''
       },
       {
-        name: 'metaData[script][src]',
+        name: '浏览器',
+        value: ''
+      },
+      {
+        name: '操作系统',
+        value: ''
+      },
+      {
+        name: 'language',
+        value: ''
+      },
+      {
+        name: 'userAgent',
         value: ''
       }
     ];
-  }
-
-  onSearchTriggered(value) {
-    console.log(value);
   }
 }

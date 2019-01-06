@@ -1,15 +1,23 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, DatePipe } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { SharedModule } from '../../shared/shared.module';
 import { SearchModule } from '../../component/search';
+import { WidgetModule } from '../../component/widget';
 
 import { CollectionComponent } from './collection.component';
 import { CollectionService } from './collection.service';
+import { DetailComponent } from './detail/detail.component';
 
 @NgModule({
-  imports: [CommonModule, SharedModule, HttpClientModule, SearchModule],
-  declarations: [CollectionComponent],
-  providers: [CollectionService]
+  imports: [
+    CommonModule,
+    SharedModule,
+    HttpClientModule,
+    SearchModule,
+    WidgetModule
+  ],
+  declarations: [CollectionComponent, DetailComponent],
+  providers: [CollectionService, DatePipe]
 })
 export class CollectionModule {}
