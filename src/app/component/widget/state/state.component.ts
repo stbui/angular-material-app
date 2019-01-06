@@ -14,6 +14,7 @@ export class StateComponent {
   @Input() textcolor: string;
   @Input() value: string;
   @Input() valueprefix: string;
+  @Input() valuesubfix: string;
 
   constructor() {}
 }

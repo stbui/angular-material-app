@@ -41,9 +41,9 @@ export class SearchComponent implements AfterViewInit {
   ngAfterViewInit() {
     fromEvent(this.inputRef.nativeElement, 'keyup')
       .pipe(
-        map(() => this.inputValue),
         debounceTime(this.delay),
-        distinctUntilChanged()
+        distinctUntilChanged(),
+        map(() => this.inputValue),
       )
       .subscribe(input => this.onSearchChange.emit(input));
   }
