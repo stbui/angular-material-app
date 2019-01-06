@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
+
 import { SharedModule } from '../../shared/shared.module';
 import { SearchModule } from '../../component/search';
 import { WidgetModule } from '../../component/widget';
@@ -13,6 +15,7 @@ import { DetailComponent } from './detail/detail.component';
   imports: [
     CommonModule,
     HttpClientModule,
+    NgxChartsModule,
     SharedModule,
     SearchModule,
     WidgetModule

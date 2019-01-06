@@ -43,6 +43,22 @@ export class CollectionComponent implements OnInit {
   count = 0;
   duration = '0';
 
+  // chart
+  dataChart: any = [];
+
+  showXAxis = true;
+  showYAxis = true;
+  gradient = false;
+  showLegend = false;
+  showXAxisLabel = true;
+  xAxisLabel = 'Country';
+  showYAxisLabel = true;
+  yAxisLabel = 'Population';
+
+  colorScheme = {
+    domain: ['#5AA454', '#A10A28', '#C7B42C', '#AAAAAA']
+  };
+
   constructor(private service: CollectionService, private datePipe: DatePipe) {}
 
   ngOnInit() {
@@ -67,7 +83,16 @@ export class CollectionComponent implements OnInit {
           return observableOf([]);
         })
       )
-      .subscribe(data => (this.dataSource = data));
+      .subscribe(data => {
+        this.dataSource = data;
+
+        data.map(d => {
+          this.dataChart.push({
+            name: this.datePipe.transform(d.create_time,'yyyy-MM-dd hh:mm:ss'),
+            value: d.duration
+          });
+        });
+      });
 
     this.service.getCount().subscribe(res => {
       this.body_size = res.data.body_size;

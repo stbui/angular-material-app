@@ -57,6 +57,11 @@ export class NavigationModel {
         title: '应用告警',
         type: 'item',
         icon: 'alarm',
+        badge: {
+          title: '10',
+          bg: '#ff4081',
+          fg: '#fff'
+        },
         url: '/apm/alarm'
       },
       {
@@ -65,7 +70,7 @@ export class NavigationModel {
         type: 'item',
         icon: 'laptop',
         url: '/apm/manage'
-      },
+      }
     ];
   }
 }

@@ -3,7 +3,7 @@ import { Subscription } from 'rxjs';
 import { NavigationService } from './navigation.service';
 
 @Component({
-  selector: 'app-layout',
+  selector: 'apm-layout',
   templateUrl: './layout.component.html',
   styleUrls: ['./layout.component.scss']
 })

@@ -54,6 +54,14 @@ export class PerformanceComponent implements OnInit {
   tcp_time = 0;
   white_time = 9.153846153846153;
 
+  // chart
+  dataBrowserChart = [];
+  // options
+  showLegend = false;
+  // pie
+  showLabels = false;
+  doughnut = false;
+
   constructor(private service: PerformanceService, private router: Router) {}
 
   ngOnInit() {
@@ -78,6 +86,9 @@ export class PerformanceComponent implements OnInit {
         })
       )
       .subscribe(data => (this.dataSource = data));
+
+    this.dataBrowserChart.push({ name: 'Chrome', value: 13 });
+    this.dataBrowserChart.push({ name: 'IE', value: 1 });
   }
 
   onRowClicked(row) {

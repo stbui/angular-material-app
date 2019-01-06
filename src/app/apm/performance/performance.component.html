@@ -113,6 +113,16 @@
         <mat-card-header>
           <mat-card-title>浏览器分类统计</mat-card-title>
         </mat-card-header>
+        <mat-card-content class="chart-container">
+          <ngx-charts-pie-chart
+            *ngIf="dataBrowserChart?.length"
+            [results]="dataBrowserChart"
+            [legend]="showLegend"
+            [labels]="showLabels"
+            [doughnut]="doughnut"
+          >
+          </ngx-charts-pie-chart>
+        </mat-card-content>
       </mat-card>
     </div>
     <div fxFlex.gt-xs="33.33" fxFlex.lt-md="50" fxFlex.lt-sm="100">
@@ -120,6 +130,16 @@
         <mat-card-header>
           <mat-card-title>系统分类统计</mat-card-title>
         </mat-card-header>
+        <mat-card-content class="chart-container">
+          <ngx-charts-pie-chart
+            *ngIf="dataBrowserChart?.length"
+            [results]="dataBrowserChart"
+            [legend]="showLegend"
+            [labels]="showLabels"
+            [doughnut]="doughnut"
+          >
+          </ngx-charts-pie-chart>
+        </mat-card-content>
       </mat-card>
     </div>
     <div fxFlex.gt-xs="33.33" fxFlex.lt-md="50" fxFlex.lt-sm="100">
@@ -127,6 +147,16 @@
         <mat-card-header>
           <mat-card-title>地理位置分类统计</mat-card-title>
         </mat-card-header>
+        <mat-card-content class="chart-container">
+          <ngx-charts-pie-chart
+            *ngIf="dataBrowserChart?.length"
+            [results]="dataBrowserChart"
+            [legend]="showLegend"
+            [labels]="showLabels"
+            [doughnut]="doughnut"
+          >
+          </ngx-charts-pie-chart>
+        </mat-card-content>
       </mat-card>
     </div>
   </div>

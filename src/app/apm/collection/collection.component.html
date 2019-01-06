@@ -52,7 +52,19 @@
       <mat-card-header>
         <mat-card-title>性能分析</mat-card-title>
       </mat-card-header>
-      <mat-card-content>content</mat-card-content>
+      <mat-card-content class="chart-container">
+        <ngx-charts-bar-vertical
+          *ngIf="dataChart?.length"
+          [results]="dataChart"
+          [gradient]="gradient"
+          [xAxis]="showXAxis"
+          [yAxis]="showYAxis"
+          [legend]="showLegend"
+          [showXAxisLabel]="showXAxisLabel"
+          [showYAxisLabel]="showYAxisLabel"
+        >
+        </ngx-charts-bar-vertical>
+      </mat-card-content>
     </mat-card>
 
     <stbui-search
