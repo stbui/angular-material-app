@@ -26,7 +26,15 @@ const routes: Routes = [
       { path: 'contract', component: ContractComponent },
       { path: 'product', component: ProductComponent },
       { path: 'received', component: ProductComponent },
-      { path: 'follow', component: ProductComponent }
+      { path: 'follow', component: ProductComponent },
+      { path: 'schedule_reports', component: LeadComponent },
+      { path: 'task', component: LeadComponent },
+      { path: 'check', component: LeadComponent },
+      { path: 'customrank', component: LeadComponent },
+      { path: 'productreport', component: LeadComponent },
+      { path: 'profile', component: LeadComponent },
+      { path: 'teamconfig', component: LeadComponent },
+      { path: 'teammember', component: LeadComponent }
     ]
   }
 ];

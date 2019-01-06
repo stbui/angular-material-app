@@ -16,7 +16,7 @@ import { ProductComponent } from './product/product.component';
 import { LayoutComponent } from './layout/layout.component';
 import { BrandModule } from '../admin';
 import { NavigationModule } from '../component/navigation';
-import { NavigationService } from './navigation.service';
+import { NavigationService } from './layout/navigation.service';
 
 @NgModule({
   imports: [
