@@ -37,6 +37,11 @@ const routes: Routes = [
     canActivate: [AuthGuard]
   },
   {
+    path: 'shield',
+    loadChildren: './shield/shield.module#ShieldModule',
+    canActivate: [AuthGuard]
+  },
+  {
     path: '',
     component: AdminComponent,
     children: [
