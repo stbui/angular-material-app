@@ -1,0 +1,80 @@
+{
+  "code": 1000,
+  "desc": "成功",
+  "data": [
+    {
+      "_id": "5c305b18f1f5285a8d6fb23b",
+      "type": "web",
+      "user_id": ["3Q2wfAb1546672855699"],
+      "is_use": 0,
+      "slow_page_time": 5,
+      "slow_js_time": 2,
+      "slow_css_time": 2,
+      "slow_img_time": 2,
+      "slow_ajax_time": 2,
+      "is_statisi_pages": 0,
+      "is_statisi_ajax": 0,
+      "is_statisi_resource": 0,
+      "is_statisi_system": 0,
+      "is_statisi_error": 0,
+      "is_daily_use": 0,
+      "daliy_list": [],
+      "create_time": "2019-01-05T07:22:00.723Z",
+      "system_domain": "http://127.0.0.1:4200",
+      "system_name": "apm",
+      "app_id": "FYz34dy1546672920722",
+      "__v": 0,
+      "userlist": [
+        {
+          "_id": "5c305ad7f1f5285a8d6fb23a",
+          "system_ids": [],
+          "is_use": 0,
+          "level": 0,
+          "create_time": "2019-01-05T07:20:55.703Z",
+          "user_name": "admin",
+          "pass_word": "admin",
+          "token": "3Q2wfAb1546672855699",
+          "usertoken": "3Q2wfAb1546672855699",
+          "__v": 0
+        }
+      ]
+    },
+    {
+      "_id": "5c305ee2f1f5285a8d6fb24c",
+      "type": "web",
+      "user_id": ["3Q2wfAb1546672855699"],
+      "is_use": 0,
+      "slow_page_time": 5,
+      "slow_js_time": 2,
+      "slow_css_time": 2,
+      "slow_img_time": 2,
+      "slow_ajax_time": 2,
+      "is_statisi_pages": 0,
+      "is_statisi_ajax": 0,
+      "is_statisi_resource": 0,
+      "is_statisi_system": 0,
+      "is_statisi_error": 0,
+      "is_daily_use": 0,
+      "daliy_list": [],
+      "create_time": "2019-01-05T07:38:10.762Z",
+      "system_domain": "http://127.0.0.1",
+      "system_name": "cms",
+      "app_id": "Mz4EMGt1546673890761",
+      "__v": 0,
+      "userlist": [
+        {
+          "_id": "5c305ad7f1f5285a8d6fb23a",
+          "system_ids": [],
+          "is_use": 0,
+          "level": 0,
+          "create_time": "2019-01-05T07:20:55.703Z",
+          "user_name": "admin",
+          "pass_word": "admin",
+          "token": "3Q2wfAb1546672855699",
+          "usertoken": "3Q2wfAb1546672855699",
+          "__v": 0
+        }
+      ]
+    }
+  ]
+}
