@@ -170,4 +170,6 @@ export class CollectionComponent implements OnInit {
       }
     ];
   }
+
+  onSearchTriggered(event) {}
 }
