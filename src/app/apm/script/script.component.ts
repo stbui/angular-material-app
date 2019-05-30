@@ -38,11 +38,11 @@ export class ScriptComponent implements OnInit {
   devicesDataSource = [];
   eventDataSource = [];
 
-  @ViewChild(MatPaginator) paginator: MatPaginator;
-  @ViewChild(MatSidenav) sidenav: MatSidenav;
-  @ViewChild(SearchComponent) search: SearchComponent;
+  @ViewChild(MatPaginator, { static: false }) paginator: MatPaginator;
+  @ViewChild(MatSidenav, { static: false }) sidenav: MatSidenav;
+  @ViewChild(SearchComponent, { static: false }) search: SearchComponent;
 
-  constructor(private service: ScriptService, private datePipe: DatePipe) {}
+  constructor(private service: ScriptService, private datePipe: DatePipe) { }
 
   ngOnInit() {
     this.search.onSearch.subscribe(() => (this.paginator.pageIndex = 0));

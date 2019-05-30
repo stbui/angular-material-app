@@ -40,9 +40,9 @@ export class PerformanceComponent implements OnInit {
   devicesDataSource = [];
   eventDataSource = [];
 
-  @ViewChild(MatPaginator) paginator: MatPaginator;
-  @ViewChild(MatSidenav) sidenav: MatSidenav;
-  @ViewChild(SearchComponent) search: SearchComponent;
+  @ViewChild(MatPaginator, { static: false }) paginator: MatPaginator;
+  @ViewChild(MatSidenav, { static: false }) sidenav: MatSidenav;
+  @ViewChild(SearchComponent, { static: false }) search: SearchComponent;
 
   analysisDom_time = 62;
   count = 13;
@@ -62,7 +62,7 @@ export class PerformanceComponent implements OnInit {
   showLabels = false;
   doughnut = false;
 
-  constructor(private service: PerformanceService, private router: Router) {}
+  constructor(private service: PerformanceService, private router: Router) { }
 
   ngOnInit() {
     this.search.onSearch.subscribe(() => (this.paginator.pageIndex = 0));

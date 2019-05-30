@@ -31,10 +31,10 @@ export class LeadComponent implements OnInit {
   dataSource: any = new MatTableDataSource([]);
   selection = new SelectionModel(true, []);
 
-  @ViewChild(MatPaginator) paginator: MatPaginator;
-  @ViewChild(MatSort) sort: MatSort;
+  @ViewChild(MatPaginator, { static: false }) paginator: MatPaginator;
+  @ViewChild(MatSort, { static: false }) sort: MatSort;
 
-  constructor(private service: LeadService, private dialog: MatDialog) {}
+  constructor(private service: LeadService, private dialog: MatDialog) { }
 
   ngOnInit() {
     this.service.getList().subscribe(res => {

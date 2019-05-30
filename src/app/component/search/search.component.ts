@@ -4,7 +4,7 @@
  * https://github.com/stbui
  */
 
- import {
+import {
   Component,
   Input,
   Output,
@@ -34,9 +34,9 @@ export class SearchComponent implements AfterViewInit {
   @Output() onSearch: EventEmitter<string | number> = new EventEmitter<string | number>();
   @Output() onSearchChange: EventEmitter<string | number> = new EventEmitter<string | number>();
 
-  @ViewChild('inputRef') inputRef: ElementRef;
+  @ViewChild('inputRef', { static: false }) inputRef: ElementRef;
 
-  constructor() {}
+  constructor() { }
 
   ngAfterViewInit() {
     fromEvent(this.inputRef.nativeElement, 'keyup')

@@ -38,7 +38,7 @@ import { ChatWidgetAnimations } from './chat-widget.animation';
   }
 })
 export class ChatWidgetContainer extends BasePortalOutlet implements OnDestroy {
-  @ViewChild(CdkPortalOutlet) _portalOutlet: CdkPortalOutlet;
+  @ViewChild(CdkPortalOutlet, { static: false }) _portalOutlet: CdkPortalOutlet;
   _animationStateChanged = new EventEmitter<AnimationEvent>();
 
   _animationState: 'void' | 'visible' | 'hidden' = 'void';

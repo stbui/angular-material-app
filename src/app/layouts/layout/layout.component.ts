@@ -47,7 +47,7 @@ export class LayoutSidenavComponent implements OnInit {
   styleUrls: ['./layout.component.scss']
 })
 export class LayoutComponent implements OnInit {
-  @ContentChild(LayoutHeaderComponent) _headerComponent: LayoutHeaderComponent;
+  @ContentChild(LayoutHeaderComponent, { static: false }) _headerComponent: LayoutHeaderComponent;
   constructor() {}
 
   ngOnInit() {}

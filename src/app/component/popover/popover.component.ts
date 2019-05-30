@@ -26,15 +26,15 @@ import { PopoverService } from './popover.service';
   providers: [PopoverService]
 })
 export class PopoverComponent implements AfterContentInit {
-  @ViewChild(TemplateRef) templateRef: TemplateRef<any>;
-  @ViewChild('focusTrapElement') private _focusTrapElement: ElementRef;
+  @ViewChild(TemplateRef, { static: false }) templateRef: TemplateRef<any>;
+  @ViewChild('focusTrapElement', { static: false }) private _focusTrapElement: ElementRef;
 
   constructor(
     private _popoverService: PopoverService,
     private changeDetectorRef: ChangeDetectorRef
-  ) {}
+  ) { }
 
-  ngAfterContentInit() {}
+  ngAfterContentInit() { }
 
   open() {
     this._popoverService.afterOpened();

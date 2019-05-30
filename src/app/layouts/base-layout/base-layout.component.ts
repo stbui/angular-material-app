@@ -66,7 +66,7 @@ export class BaseLayoutContentComponent implements OnInit {
 })
 export class BaseLayoutComponent implements OnInit {
   @Input() scrollStrategy;
-  @ContentChild(BaseLayoutHeaderComponent) _header: BaseLayoutHeaderComponent;
+  @ContentChild(BaseLayoutHeaderComponent, { static: false }) _header: BaseLayoutHeaderComponent;
   constructor() {}
 
   ngOnInit() {}

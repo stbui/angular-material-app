@@ -30,10 +30,10 @@ export class ContactComponent implements OnInit {
   dataSource: any = new MatTableDataSource([]);
   selection = new SelectionModel(true, []);
 
-  @ViewChild(MatPaginator) paginator: MatPaginator;
-  @ViewChild(MatSort) sort: MatSort;
+  @ViewChild(MatPaginator, { static: false }) paginator: MatPaginator;
+  @ViewChild(MatSort, { static: false }) sort: MatSort;
 
-  constructor(private service: ContactService, private dialog: MatDialog) {}
+  constructor(private service: ContactService, private dialog: MatDialog) { }
 
   ngOnInit() {
     this.service.getList().subscribe(res => {
@@ -107,5 +107,5 @@ export class ContactComponent implements OnInit {
   encapsulation: ViewEncapsulation.None
 })
 export class ContactUpdateComponent {
-  constructor(@Inject(MAT_DIALOG_DATA) public data: any) {}
+  constructor(@Inject(MAT_DIALOG_DATA) public data: any) { }
 }

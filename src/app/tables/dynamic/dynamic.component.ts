@@ -24,10 +24,10 @@ export class DynamicComponent implements OnInit {
   isLoadingResults = true;
   isRateLimitReached = false;
 
-  @ViewChild(MatPaginator) paginator: MatPaginator;
-  @ViewChild(MatSort) sort: MatSort;
+  @ViewChild(MatPaginator, { static: false }) paginator: MatPaginator;
+  @ViewChild(MatSort, { static: false }) sort: MatSort;
 
-  constructor(private service: DynamicService) {}
+  constructor(private service: DynamicService) { }
 
   ngOnInit() {
     this.sort.sortChange.subscribe(() => (this.paginator.pageIndex = 0));

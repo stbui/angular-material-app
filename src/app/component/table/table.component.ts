@@ -46,7 +46,7 @@ export class TableComponent implements OnInit {
   checkboxSelection = [];
   checked: boolean = false;
 
-  @ViewChild('fixedTopCell') _fixedTopCell: ElementRef;
+  @ViewChild('fixedTopCell', { static: false }) _fixedTopCell: ElementRef;
   private cells = [];
 
   constructor(private element: ElementRef, private renderer: Renderer2) {

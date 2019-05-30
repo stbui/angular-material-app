@@ -25,11 +25,11 @@ export class ListComponent implements OnInit {
   }
   @Output() onOpenMailDetial = new EventEmitter();
 
-  @ViewChild(MatPaginator) paginator: MatPaginator;
+  @ViewChild(MatPaginator, { static: false }) paginator: MatPaginator;
 
-  constructor() {}
+  constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
   isAllSelected() {
     const numSelected = this.selection.selected.length;

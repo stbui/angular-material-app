@@ -20,10 +20,10 @@ export class ManageComponent implements OnInit {
   dataSource: any = new MatTableDataSource([]);
   selection = new SelectionModel(true, []);
 
-  @ViewChild(MatPaginator) paginator: MatPaginator;
-  @ViewChild(MatSort) sort: MatSort;
+  @ViewChild(MatPaginator, { static: false }) paginator: MatPaginator;
+  @ViewChild(MatSort, { static: false }) sort: MatSort;
 
-  constructor(private service: ManageService, private dialog: MatDialog) {}
+  constructor(private service: ManageService, private dialog: MatDialog) { }
 
   ngOnInit() {
     this.service.getList().subscribe(res => {

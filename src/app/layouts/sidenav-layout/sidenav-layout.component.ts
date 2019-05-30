@@ -22,9 +22,9 @@ import {
 })
 export class SidenavLayoutHeaderComponent implements OnInit {
   @Input() color: 'primary' | 'accent' | 'warn' = 'primary';
-  constructor() {}
+  constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 }
 
 @Component({
@@ -36,9 +36,9 @@ export class SidenavLayoutHeaderComponent implements OnInit {
   }
 })
 export class SidenavLayoutToolbarComponent implements OnInit {
-  constructor() {}
+  constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 }
 
 @Component({
@@ -50,9 +50,9 @@ export class SidenavLayoutToolbarComponent implements OnInit {
   }
 })
 export class SidenavLayoutContentComponent implements OnInit {
-  constructor() {}
+  constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 }
 
 @Component({
@@ -64,9 +64,9 @@ export class SidenavLayoutContentComponent implements OnInit {
   }
 })
 export class SidenavLayoutSideComponent implements OnInit {
-  constructor() {}
+  constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 }
 
 @Component({
@@ -82,9 +82,9 @@ export class SidenavLayoutSideComponent implements OnInit {
 export class SidenavLayoutComponent implements OnInit {
   @Input() position: 'start' | 'end' = 'start';
   @Input() scrollStrategy;
-  @ContentChild(SidenavLayoutHeaderComponent)
+  @ContentChild(SidenavLayoutHeaderComponent, { static: false })
   _header: SidenavLayoutHeaderComponent;
-  constructor() {}
+  constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 }

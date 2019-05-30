@@ -35,9 +35,9 @@ export class CollectionComponent implements OnInit {
   devicesDataSource = [];
   eventDataSource = [];
 
-  @ViewChild(MatPaginator) paginator: MatPaginator;
-  @ViewChild(MatSidenav) sidenav: MatSidenav;
-  @ViewChild(SearchComponent) search: SearchComponent;
+  @ViewChild(MatPaginator, { static: false }) paginator: MatPaginator;
+  @ViewChild(MatSidenav, { static: false }) sidenav: MatSidenav;
+  @ViewChild(SearchComponent, { static: false }) search: SearchComponent;
 
   body_size = 0;
   count = 0;
@@ -59,7 +59,7 @@ export class CollectionComponent implements OnInit {
     domain: ['#5AA454', '#A10A28', '#C7B42C', '#AAAAAA']
   };
 
-  constructor(private service: CollectionService, private datePipe: DatePipe) {}
+  constructor(private service: CollectionService, private datePipe: DatePipe) { }
 
   ngOnInit() {
     this.search.onSearch.subscribe(() => (this.paginator.pageIndex = 0));
@@ -88,7 +88,7 @@ export class CollectionComponent implements OnInit {
 
         data.map(d => {
           this.dataChart.push({
-            name: this.datePipe.transform(d.create_time,'yyyy-MM-dd hh:mm:ss'),
+            name: this.datePipe.transform(d.create_time, 'yyyy-MM-dd hh:mm:ss'),
             value: d.duration
           });
         });
@@ -171,5 +171,5 @@ export class CollectionComponent implements OnInit {
     ];
   }
 
-  onSearchTriggered(event) {}
+  onSearchTriggered(event) { }
 }

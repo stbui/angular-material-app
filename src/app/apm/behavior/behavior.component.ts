@@ -25,10 +25,10 @@ export class BehaviorComponent implements OnInit {
   devicesDataSource = [];
   eventDataSource = [];
 
-  @ViewChild(MatPaginator) paginator: MatPaginator;
-  @ViewChild(SearchComponent) search: SearchComponent;
+  @ViewChild(MatPaginator, { static: false }) paginator: MatPaginator;
+  @ViewChild(SearchComponent, { static: false }) search: SearchComponent;
 
-  constructor(private service: BehaviorService, private router: Router) {}
+  constructor(private service: BehaviorService, private router: Router) { }
 
   ngOnInit() {
     this.search.onSearch.subscribe(() => (this.paginator.pageIndex = 0));
