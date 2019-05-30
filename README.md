@@ -4,7 +4,7 @@
   <a href="./" target="blank"><img src="src/assets/logo.png" alt="stbui Logo" width="128" /></a>
 </p>
 
-基于最新`Angular 7`框架与`Material 2`技术的企业级中后台前端应用框架，涵盖了大量的常用组件和基础功能，您可以快速开发各种后台系统，最大程度上帮助企业节省时间成本和费用开支。
+基于最新`Angular 8`框架与`Material 2`技术的企业级中后台前端应用框架，涵盖了大量的常用组件和基础功能，您可以快速开发各种后台系统，最大程度上帮助企业节省时间成本和费用开支。
 
 [![Travis](https://travis-ci.org/stbui/angular-material-app.svg?branch=master)](https://travis-ci.org/stbui/angular-material-app)
 [![Docker Build Status](https://img.shields.io/docker/build/stbui/angular-material-app.svg?style=flat-square)](https://hub.docker.com/r/stbui/angular-material-app/)
@@ -15,9 +15,9 @@
 
 ### Plaform
 
-[![Angular](https://img.shields.io/badge/Angular-7.0.0-brightgreen.svg?style=flat-square)](https://github.com/angular/angular)
-[![Angular-cli](https://img.shields.io/badge/Angular.cli-7.0.1-brightgreen.svg?style=square)](https://github.com/angular/angular-cli)
-[![Angular Material 2](https://img.shields.io/badge/Material%202-7.0.0-brightgreen.svg?style=square)](https://github.com/angular/material2)
+[![Angular](https://img.shields.io/badge/Angular-8.0.0-brightgreen.svg?style=flat-square)](https://github.com/angular/angular)
+[![Angular-cli](https://img.shields.io/badge/Angular.cli-8.0.0-brightgreen.svg?style=square)](https://github.com/angular/angular-cli)
+[![Angular Material 2](https://img.shields.io/badge/Material%202-8.0.0-brightgreen.svg?style=square)](https://github.com/angular/material2)
 [![Flex-Layout](https://img.shields.io/badge/Flex.Layout-latest-brightgreen.svg?style=square)](https://github.com/angular/flex-layout)
 [![Angular FireBase](https://img.shields.io/badge/Firebase-latest-brightgreen.svg?style=square)](https://github.com/angular/angularfire2)
 [![Angular PWA](https://img.shields.io/badge/PWA-latest-brightgreen.svg?style=square)](https://github.com/angular/angular-cli)
