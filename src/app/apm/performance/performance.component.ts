@@ -40,9 +40,9 @@ export class PerformanceComponent implements OnInit {
   devicesDataSource = [];
   eventDataSource = [];
 
-  @ViewChild(MatPaginator, { static: false }) paginator: MatPaginator;
-  @ViewChild(MatSidenav, { static: false }) sidenav: MatSidenav;
-  @ViewChild(SearchComponent, { static: false }) search: SearchComponent;
+  @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
+  @ViewChild(MatSidenav, { static: true }) sidenav: MatSidenav;
+  @ViewChild(SearchComponent, { static: true }) search: SearchComponent;
 
   analysisDom_time = 62;
   count = 13;

@@ -31,9 +31,9 @@
 
     <div class="container">
       <div class="hero-content position-relative">
-        <h2 class="text-white">前端数据监控系统</h2>
+        <h2 class="text-white">前端监控系统</h2>
         <h3 class="text-center">
-          打造一款完整，高性能，高可用的前端性能监控系统，提升前端对于服务端技术的空白，体验并解决高并发系统的开发和解决方案。
+          打造一款完整，高性能，高可用的前端监控系统，提升前端对于服务端技术的空白，体验并解决高并发系统的开发和解决方案。
         </h3>
         <h4>
           <a
@@ -44,7 +44,7 @@
             免费试用
           </a>
         </h4>
-        <h5>当前版本：0.7.0 免费版</h5>
+        <h5>当前版本：0.8.0 免费版</h5>
       </div>
     </div>
 
@@ -84,8 +84,10 @@
               <mat-icon class="card-img">notifications</mat-icon>
             </div>
             <div class="card-text">
-              <h3>实时</h3>
-              <p>第一时间发送错误报警</p>
+              <h3>页面性能体验分析</h3>
+              <p>
+                实时采集页面的访问数据及性能数据，帮助技术人员快速定位页面问题。
+              </p>
             </div>
           </div>
         </div>
@@ -96,8 +98,10 @@
               <mat-icon class="card-img">notifications_active</mat-icon>
             </div>
             <div class="card-text">
-              <h3>智能</h3>
-              <p>基于机器学习聚合错误数据</p>
+              <h3>机器学习和智能告警</h3>
+              <p>
+                采用多项国际主流计算模型及统计策略，运用机器学习建立应用健康动态基线，依据业务场景变化智能调整基线值，使报警更加灵活精准。
+              </p>
             </div>
           </div>
         </div>
@@ -108,8 +112,10 @@
               <mat-icon class="card-img">notifications_none</mat-icon>
             </div>
             <div class="card-text">
-              <h3>安全</h3>
-              <p>全站HTTPS加密护航</p>
+              <h3>慢页面追踪</h3>
+              <p>
+                抓取加载时间超过设定阈值的页面上的元素信息，及每个元素的TCP建连、首包及剩余包等所需时间详细定位页面上的哪些元素的加载拖慢了页面的响应，为优化用户体验提供依据
+              </p>
             </div>
           </div>
         </div>
@@ -120,8 +126,10 @@
               <mat-icon class="card-img">notifications_off</mat-icon>
             </div>
             <div class="card-text">
-              <h3>可视化</h3>
-              <p>通过各种查询条件，快速找到详细错误日志</p>
+              <h3>Ajax请求</h3>
+              <p>
+                获取用户访问过程，页面发出的所有Ajax请求URL、引用页面URL，可以监控某一Ajax请求的响应时间、回调时间、上传数据量、下载数据量以及响应过程中服务器返回的错误
+              </p>
             </div>
           </div>
         </div>
@@ -325,7 +333,8 @@
             <div class="pricing-footer">
               <button
                 type="button"
-                mat-button color="primary"
+                mat-button
+                color="primary"
                 class="stbui-button-outline stbui-button-block"
               >
                 查看
@@ -335,82 +344,88 @@
         </div>
 
         <div fxFlex.gt-sm="25" fxFlex.gt-xs="33.33" fxFlex="100">
-            <div class="pricing mat-elevation-z4 text-center">
-                <div class="pricing-header pricing-active">
-                  <h4>团队版</h4>
-                  <h2>1<sub>元</sub></h2>
-                </div>
-                <div class="pricing-center">
-                    <div class="pricing-content-item">单机部署服务稳定保障</div>
-                    <div class="pricing-content-item">高并发场景下的服务稳定和上报</div>
-                    <div class="pricing-content-item">集群部署下的稳定性和合理性</div>
-                    <div class="pricing-content-item">用户每次访问的行为轨迹</div>
-                    <div class="pricing-content-item">全国省份流量热力图</div>
-                </div>
-    
-                <div class="pricing-footer">
-                  <button
-                    type="button"
-                    mat-button color="primary"
-                    class="stbui-button-outline stbui-button-block"
-                  >
-                    查看
-                  </button>
-                </div>
+          <div class="pricing mat-elevation-z4 text-center">
+            <div class="pricing-header pricing-active">
+              <h4>团队版</h4>
+              <h2>1<sub>元</sub></h2>
+            </div>
+            <div class="pricing-center">
+              <div class="pricing-content-item">单机部署服务稳定保障</div>
+              <div class="pricing-content-item">
+                高并发场景下的服务稳定和上报
               </div>
+              <div class="pricing-content-item">集群部署下的稳定性和合理性</div>
+              <div class="pricing-content-item">用户每次访问的行为轨迹</div>
+              <div class="pricing-content-item">全国省份流量热力图</div>
+            </div>
+
+            <div class="pricing-footer">
+              <button
+                type="button"
+                mat-button
+                color="primary"
+                class="stbui-button-outline stbui-button-block"
+              >
+                查看
+              </button>
+            </div>
+          </div>
         </div>
 
         <div fxFlex.gt-sm="25" fxFlex.gt-xs="33.33" fxFlex="100">
-            <div class="pricing mat-elevation-z4 text-center">
-                <div class="pricing-header">
-                  <h4>企业版</h4>
-                  <h2>10<sub>元</sub></h2>
-                </div>
-                <div class="pricing-center">
-                    <div class="pricing-content-item">千万级别数据量查询优化方案</div>
-                    <div class="pricing-content-item">实时查询的高可用方案</div>
-                    <div class="pricing-content-item">消息队列的优化和合理使用方案</div>
-                    <div class="pricing-content-item">高可用集群方案</div>
-                    <div class="pricing-content-item">定位性能瓶颈</div>
-                </div>
-    
-                <div class="pricing-footer">
-                  <button
-                    type="button"
-                    mat-button color="primary"
-                    class="stbui-button-outline stbui-button-block"
-                  >
-                    查看
-                  </button>
-                </div>
+          <div class="pricing mat-elevation-z4 text-center">
+            <div class="pricing-header">
+              <h4>企业版</h4>
+              <h2>10<sub>元</sub></h2>
+            </div>
+            <div class="pricing-center">
+              <div class="pricing-content-item">千万级别数据量查询优化方案</div>
+              <div class="pricing-content-item">实时查询的高可用方案</div>
+              <div class="pricing-content-item">
+                消息队列的优化和合理使用方案
               </div>
+              <div class="pricing-content-item">高可用集群方案</div>
+              <div class="pricing-content-item">定位性能瓶颈</div>
+            </div>
+
+            <div class="pricing-footer">
+              <button
+                type="button"
+                mat-button
+                color="primary"
+                class="stbui-button-outline stbui-button-block"
+              >
+                查看
+              </button>
+            </div>
+          </div>
         </div>
 
         <div fxFlex.gt-sm="25" fxFlex.gt-xs="33.33" fxFlex="100">
-            <div class="pricing mat-elevation-z4 text-center">
-                <div class="pricing-header">
-                  <h4>开发版</h4>
-                  <h2>20<sub>元</sub></h2>
-                </div>
-                <div class="pricing-center">
-                    <div class="pricing-content-item">功能一</div>
-                    <div class="pricing-content-item">功能二</div>
-                    <div class="pricing-content-item">功能三</div>
-                    <div class="pricing-content-item">功能四</div>
-                    <div class="pricing-content-item">功能五</div>
-                </div>
-    
-                <div class="pricing-footer">
-                  <button
-                    type="button"
-                    mat-button color="primary"
-                    class="stbui-button-outline stbui-button-block"
-                  >
-                    查看
-                  </button>
-                </div>
-              </div>
+          <div class="pricing mat-elevation-z4 text-center">
+            <div class="pricing-header">
+              <h4>开发版</h4>
+              <h2>20<sub>元</sub></h2>
+            </div>
+            <div class="pricing-center">
+              <div class="pricing-content-item">功能一</div>
+              <div class="pricing-content-item">功能二</div>
+              <div class="pricing-content-item">功能三</div>
+              <div class="pricing-content-item">功能四</div>
+              <div class="pricing-content-item">功能五</div>
+            </div>
 
+            <div class="pricing-footer">
+              <button
+                type="button"
+                mat-button
+                color="primary"
+                class="stbui-button-outline stbui-button-block"
+              >
+                查看
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>

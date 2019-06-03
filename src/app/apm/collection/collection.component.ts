@@ -35,9 +35,9 @@ export class CollectionComponent implements OnInit {
   devicesDataSource = [];
   eventDataSource = [];
 
-  @ViewChild(MatPaginator, { static: false }) paginator: MatPaginator;
-  @ViewChild(MatSidenav, { static: false }) sidenav: MatSidenav;
-  @ViewChild(SearchComponent, { static: false }) search: SearchComponent;
+  @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
+  @ViewChild(MatSidenav, { static: true }) sidenav: MatSidenav;
+  @ViewChild(SearchComponent, { static: true }) search: SearchComponent;
 
   body_size = 0;
   count = 0;

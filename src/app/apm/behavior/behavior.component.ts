@@ -25,8 +25,8 @@ export class BehaviorComponent implements OnInit {
   devicesDataSource = [];
   eventDataSource = [];
 
-  @ViewChild(MatPaginator, { static: false }) paginator: MatPaginator;
-  @ViewChild(SearchComponent, { static: false }) search: SearchComponent;
+  @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
+  @ViewChild(SearchComponent, { static: true }) search: SearchComponent;
 
   constructor(private service: BehaviorService, private router: Router) { }
 
