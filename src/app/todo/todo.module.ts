@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { DragDropModule } from '@angular/cdk/drag-drop';
-import { SharedModule } from '../shared/shared.module';
+import { SharedModule } from '../../@stbui/shared/shared.module';
 import { SearchModule } from '../component';
 import { LayoutModule } from '../layouts';
 

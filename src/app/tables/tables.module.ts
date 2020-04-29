@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
-import { SharedModule } from '../shared/shared.module';
+import { SharedModule } from '../../@stbui/shared/shared.module';
 
 import { TableModule } from '../component';
 

@@ -3,16 +3,17 @@ import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
-import { SharedModule } from '../shared/shared.module';
 
+import { SharedModule } from '../../@stbui/shared/shared.module';
+import { BrandModule } from '../../@stbui/admin';
+
+import { NavigationRoutingModule } from './navigation-routing.module';
 import { TagSelectModule } from '../component/tag-select';
 import { LoadingModule } from '../component/loading';
 import { GithubButtonModule } from '../component/github-button';
 import { PaginationModule } from '../component/pagination';
 import { SearchModule } from '../component/search';
-import { BrandModule } from '../admin';
 
-import { NavigationRoutingModule } from './navigation.routing';
 import { NavigationComponent } from './navigation.component';
 import { NavigationService } from './navigation.service';
 import { ActionComponent } from './action/action.component';
@@ -36,4 +37,4 @@ import { ActionComponent } from './action/action.component';
   entryComponents: [ActionComponent],
   providers: [{ provide: 'NavigationService', useClass: NavigationService }]
 })
-export class NavigationModule {}
+export class NavigationModule { }

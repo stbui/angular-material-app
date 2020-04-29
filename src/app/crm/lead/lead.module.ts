@@ -2,7 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
-import { SharedModule } from '../../shared/shared.module';
+
+import { SharedModule } from '../../../@stbui/shared';
 import { SearchModule } from '../../component/search';
 
 import { LeadComponent } from './lead.component';

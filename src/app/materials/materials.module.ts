@@ -3,7 +3,7 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
 import { CalendarModule, DateAdapter } from 'angular-calendar';
 import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 
-import { SharedModule } from '../shared/shared.module';
+import { SharedModule } from '../../@stbui/shared/shared.module';
 import {
   NotificaitonModule,
   DatePickerModule,
@@ -87,4 +87,4 @@ import { DragDropComponent } from './drag-drop/drag-drop.component';
     DragDropComponent
   ]
 })
-export class MaterialsModule {}
+export class MaterialsModule { }

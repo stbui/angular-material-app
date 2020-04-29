@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 
-import { SharedModule } from '../../shared/shared.module';
+import { SharedModule } from '../../../@stbui/shared';
 import { SearchModule } from '../../component/search';
 import { WidgetModule } from '../../component/widget';
 
@@ -23,4 +23,4 @@ import { DetailComponent } from './detail/detail.component';
   declarations: [PerformanceComponent, DetailComponent],
   providers: [PerformanceService]
 })
-export class PerformanceModule {}
+export class PerformanceModule { }

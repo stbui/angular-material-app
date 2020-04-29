@@ -3,6 +3,8 @@
 
 @import '../node_modules/quill/dist/quill.snow.css';
 
+@import "~simplebar/dist/simplebar.css";
+
 @include mat-core();
 $primary: mat-palette($mat-indigo);
 $accent: mat-palette($mat-pink, A200, A100, A400);

@@ -1,16 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SharedModule } from '../shared/shared.module';
+
+import { SharedModule } from '../../@stbui/shared';
+import { BrandModule } from '../../@stbui/admin';
+import { NavigationModule } from '../../@stbui/navigation';
+
 import { LayoutComponent } from './layout/layout.component';
-import { BrandModule } from '../admin';
-import { NavigationModule } from '../component/navigation';
 import { NavigationService } from './layout/navigation.service';
 
 import { ShieldRoutingModule } from './shield-routing.module';
-import { ShieldComponent } from './shield.component';
-
 import { LandingModule } from './landing/landing.module';
 import { DashboardModule } from './dashboard/dashboard.module';
+import { ShieldComponent } from './shield.component';
 
 @NgModule({
   imports: [
@@ -25,4 +26,4 @@ import { DashboardModule } from './dashboard/dashboard.module';
   declarations: [LayoutComponent, ShieldComponent],
   providers: [NavigationService]
 })
-export class ShieldModule {}
+export class ShieldModule { }

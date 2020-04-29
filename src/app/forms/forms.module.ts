@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { QuillModule } from 'ngx-quill';
-import { SharedModule } from '../shared/shared.module';
+import { SharedModule } from '../../@stbui/shared/shared.module';
 
 import { FormsRoutingModule } from './forms.routing';
 import { FormsComponent } from './forms.component';
@@ -10,7 +10,7 @@ import { ValidationComponent } from './validation/validation.component';
 import { EditorComponent } from './editor/editor.component';
 
 @NgModule({
-  imports: [SharedModule, FormsRoutingModule, ReactiveFormsModule, QuillModule],
+  imports: [SharedModule, FormsRoutingModule, ReactiveFormsModule, QuillModule.forRoot()],
   declarations: [
     FormsComponent,
     ElementsComponent,
@@ -18,4 +18,4 @@ import { EditorComponent } from './editor/editor.component';
     EditorComponent
   ]
 })
-export class FormModule {}
+export class FormModule { }

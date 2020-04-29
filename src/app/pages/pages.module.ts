@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
-import { SharedModule } from '../shared/shared.module';
+import { HttpClientModule } from '@angular/common/http';
+
+import { SharedModule } from '../../@stbui/shared/shared.module';
 import {
   PaginationModule,
   GithubButtonModule,
@@ -17,7 +19,7 @@ import { ServicesComponent } from './services/services.component';
 
 import { BlogComponent } from './blog/blog.component';
 import { BlogArticleComponent } from './blog/article/article.component';
-import { BlogService } from './blog/blog.grahql';
+import { BlogService } from './blog/blog.service';
 
 import { ProfileComponent } from './profile/profile.component';
 import { FileManagerComponent } from './file-manager/file-manager.component';
@@ -25,17 +27,15 @@ import { FileManagerFirebase } from './file-manager/file-manager.firebase';
 import { FileManagerService } from './file-manager/file-manager.service';
 import { ProjectComponent } from './project/project.component';
 
-import { GraphQLModule } from '../shared/graphql.module';
-
 @NgModule({
   imports: [
+    HttpClientModule,
     SharedModule,
     PaginationModule,
     PagesRoutingModule,
     BaseLayoutModule,
     GithubButtonModule,
     LoadingModule,
-    GraphQLModule,
     UserModule
   ],
   declarations: [
@@ -52,4 +52,4 @@ import { GraphQLModule } from '../shared/graphql.module';
   ],
   providers: [FileManagerFirebase, FileManagerService, BlogService]
 })
-export class PagesModule {}
+export class PagesModule { }

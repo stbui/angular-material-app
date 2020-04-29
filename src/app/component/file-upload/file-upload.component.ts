@@ -41,8 +41,7 @@ export class FileUploadComponent {
   constructor(
     private sanitizer: DomSanitizer,
     private fileUploadService: FileUploadService,
-    private firebaseService: FirebaseService
-  ) {}
+  ) { }
 
   removePreview() {
     this.previewUrl = null;
@@ -50,9 +49,9 @@ export class FileUploadComponent {
 
   onFileSelect(event) {
     if (this.useFirebase) {
-      this.firebaseService.startUpload(event);
+      this.fileUploadService.startUpload(event);
     } else {
-      this.firebaseService.startUpload(event);
+      this.fileUploadService.startUpload(event);
     }
   }
 }

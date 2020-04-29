@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
-import { SharedModule } from '../../shared/shared.module';
+import { SharedModule } from '../../../@stbui/shared';
 import { SearchModule } from '../../component/search';
 
 import { ManageService } from './manage.service';
@@ -15,4 +15,4 @@ import { SettingComponent } from './setting/setting.component';
   providers: [ManageService],
   entryComponents: [NewComponent]
 })
-export class ManageModule {}
+export class ManageModule { }

@@ -11,67 +11,47 @@ export class NavigationModel {
         url: '/shield/dashboard'
       },
       {
-        id: 'behavior',
+        id: 'nodes',
         title: '节点管理',
         type: 'item',
         icon: 'person_pin',
-        url: '/shield/behavior'
+        url: '/shield/nodes'
       },
       {
-        id: 'diagram',
+        id: 'operator',
         title: '运营管理',
         type: 'item',
         icon: 'map',
-        url: '/shield/diagram'
+        url: '/shield/operator'
       },
       {
-        id: 'script',
+        id: 'payment',
         title: '账户充值',
         type: 'item',
         icon: 'cancel',
-        url: '/shield/script'
+        url: '/shield/payment'
       },
       {
-        id: 'collection',
+        id: 'record',
         title: '购买记录',
         type: 'item',
         icon: 'subtitles',
-        url: '/shield/collection'
+        url: '/shield/record'
       },
       {
-        id: 'performance',
+        id: 'purchase',
         title: '套餐购买',
         type: 'item',
         icon: 'av_timer',
-        url: '/shield/performance'
+        url: '/shield/purchase'
       },
       {
-        id: 'track',
+        id: 'workorder',
         title: '工单管理',
         type: 'item',
         icon: 'traffic',
-        url: '/shield/track'
+        url: '/shield/workorder'
       }
-
-      // {
-      //   id: 'alarm',
-      //   title: '应用告警',
-      //   type: 'item',
-      //   icon: 'alarm',
-      //   badge: {
-      //     title: '10',
-      //     bg: '#ff4081',
-      //     fg: '#fff'
-      //   },
-      //   url: '/shield/alarm'
-      // },
-      // {
-      //   id: 'manage',
-      //   title: '应用列表',
-      //   type: 'item',
-      //   icon: 'laptop',
-      //   url: '/shield/manage'
-      // }
     ];
   }
 }

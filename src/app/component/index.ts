@@ -17,4 +17,3 @@ export * from './chat-widget';
 export * from './widget';
 export * from './message';
 export * from './dialog';
-export * from './navigation';

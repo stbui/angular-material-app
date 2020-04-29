@@ -1,5 +1,5 @@
 import { Component, Input, Inject, Output, EventEmitter } from '@angular/core';
-import { MatDialog } from '@angular/material';
+import { MatDialog } from '@angular/material/dialog';
 import { NoticeComponent } from '../notice/notice.component';
 
 @Component({

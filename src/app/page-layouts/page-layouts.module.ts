@@ -1,11 +1,8 @@
 import { NgModule } from '@angular/core';
-import { SharedModule } from '../shared/shared.module';
+import { SharedModule } from '../../@stbui/shared/shared.module';
 import { PageLayoutsRoutingModule } from './pages.routing';
 import { FullwidthComponent } from './carded/fullwidth/fullwidth.component';
 
-import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
-import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
-import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 import { Fullwidth2Component } from './carded/fullwidth2/fullwidth2.component';
 import { DemoContentComponent } from './demo-content/demo-content.component';
 import { LeftSidenavComponent } from './carded/left-sidenav/left-sidenav.component';
@@ -14,15 +11,10 @@ import { RightSidenavComponent } from './carded/right-sidenav/right-sidenav.comp
 
 import { BaseLayoutModule, SidenavLayoutModule } from '../layouts';
 
-const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
-  suppressScrollX: true
-};
-
 @NgModule({
   imports: [
     SharedModule,
     PageLayoutsRoutingModule,
-    PerfectScrollbarModule,
     BaseLayoutModule,
     SidenavLayoutModule
   ],
@@ -34,11 +26,5 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     LeftSidenavTabbedComponent,
     RightSidenavComponent
   ],
-  providers: [
-    {
-      provide: PERFECT_SCROLLBAR_CONFIG,
-      useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG
-    }
-  ]
 })
-export class PageLayoutsModule {}
+export class PageLayoutsModule { }

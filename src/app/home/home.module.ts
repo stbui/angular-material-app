@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
-import { SharedModule } from '../shared/shared.module';
+import { SharedModule } from '../../@stbui/shared/shared.module';
 import { RouterModule } from '@angular/router';
 
 import { HomeComponent } from './home.component';
-import { HomeRoutingModule } from './home.routing';
+import { HomeRoutingModule } from './home-routing.module';
 
 @NgModule({
   imports: [RouterModule, SharedModule, HomeRoutingModule],

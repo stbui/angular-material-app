@@ -5,11 +5,9 @@
 
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {
-  MatRippleModule,
-  MatButtonModule,
-  MatIconModule
-} from '@angular/material';
+import { MatRippleModule } from '@angular/material/core';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
 import { DatePickerComponent } from './date-picker.component';
 import { CalendarComponent } from './calendar/calendar.component';
 import { DatePickerPipe } from './date-picker.pipe';

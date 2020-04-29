@@ -1,0 +1,19 @@
+:host {
+  // display: block;
+  // height: calc(100% - 64px);
+  // background-color: #3c4252;
+  // color: rgba(255, 255, 255, 0.87);
+
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+}
+
+.navigation-container {
+  flex-direction: column;
+  box-sizing: border-box;
+  display: flex;
+  height: 100%;
+}

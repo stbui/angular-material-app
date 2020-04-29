@@ -1,16 +1,19 @@
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { QuillModule } from 'ngx-quill';
-import { SharedModule } from '../shared/shared.module';
+
+import { SharedModule } from '../../@stbui/shared';
+import { CoreModule } from '../../@stbui/core';
+
 import { SearchModule } from '../component/search';
 import { LayoutModule } from '../layouts';
 import {
   BrandModule,
   ToolbarUserModule,
   ToolbarNotificationModule
-} from '../admin';
+} from '../../@stbui/admin';
 
-import { MailRoutingModule } from './mail.routing';
+import { MailRoutingModule } from './mail-routing.module';
 import { MailComponent } from './mail.component';
 import { ComposeComponent } from './compose/compose.component';
 import { DetailComponent } from './detail/detail.component';
@@ -23,6 +26,7 @@ import { MailService } from './mail.service';
     HttpClientModule,
     QuillModule,
     SharedModule,
+    CoreModule,
     SearchModule,
     LayoutModule,
     MailRoutingModule,
@@ -40,4 +44,4 @@ import { MailService } from './mail.service';
   ],
   providers: [{ provide: 'mailService', useClass: MailService }]
 })
-export class MailModule {}
+export class MailModule { }

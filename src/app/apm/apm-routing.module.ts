@@ -12,12 +12,13 @@ import { BehaviorComponent } from './behavior/behavior.component';
 import { BehaviorDetailComponent } from './behavior/detail/detail.component';
 
 const routes: Routes = [
-  { path: 'dashboard', component: DashboardComponent },
+  { path: 'landing', component: DashboardComponent },
   {
     path: '',
     component: LayoutComponent,
     children: [
-      { path: '', component: ScriptComponent },
+      { path: '', component: DashboardComponent },
+      { path: 'dashboard', component: DashboardComponent },
       { path: 'script', component: ScriptComponent },
       { path: 'manage', component: ManageComponent },
       { path: 'setting', component: SettingComponent },
@@ -37,4 +38,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class ApmRoutingModule {}
+export class ApmRoutingModule { }

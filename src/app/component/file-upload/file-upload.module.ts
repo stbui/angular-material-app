@@ -7,8 +7,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { MatIconModule } from '@angular/material/icon';
-import { AngularFireDatabaseModule } from '@angular/fire/database';
-import { AngularFireStorageModule } from '@angular/fire/storage';
 
 import { FileUploadService } from './file-upload.service';
 import { FileUploadComponent } from './file-upload.component';
@@ -22,8 +20,6 @@ import {
     CommonModule,
     MatIconModule,
     HttpClientModule,
-    AngularFireDatabaseModule,
-    AngularFireStorageModule
   ],
   declarations: [
     FileUploadDirective,
@@ -33,4 +29,4 @@ import {
   exports: [FileUploadDirective, FileUploadDropDirective, FileUploadComponent],
   providers: [FileUploadService]
 })
-export class FileUploadModule {}
+export class FileUploadModule { }

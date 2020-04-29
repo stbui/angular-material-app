@@ -1,10 +1,8 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
-import {
-  MatPaginator,
-  MatTableDataSource,
-  MatSidenav
-} from '@angular/material';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatTableDataSource } from '@angular/material/table';
+import { MatSidenav } from '@angular/material/sidenav';
 import { merge, of as observableOf } from 'rxjs';
 import { catchError, map, startWith, switchMap } from 'rxjs/operators';
 import { SearchComponent } from '../../component';
@@ -40,9 +38,9 @@ export class PerformanceComponent implements OnInit {
   devicesDataSource = [];
   eventDataSource = [];
 
-  @ViewChild(MatPaginator, { static: false }) paginator: MatPaginator;
-  @ViewChild(MatSidenav, { static: false }) sidenav: MatSidenav;
-  @ViewChild(SearchComponent, { static: false }) search: SearchComponent;
+  @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
+  @ViewChild(MatSidenav, { static: true }) sidenav: MatSidenav;
+  @ViewChild(SearchComponent, { static: true }) search: SearchComponent;
 
   analysisDom_time = 62;
   count = 13;
