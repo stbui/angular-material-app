@@ -7,18 +7,17 @@ import {
   NgModule,
   ModuleWithProviders,
   SkipSelf,
-  Optional
-} from '@angular/core';
-import { CommonModule } from '@angular/common';
+  Optional,
+} from "@angular/core";
+import { CommonModule } from "@angular/common";
 
-import { AmapComponent } from './amap.component';
-import { AmapService } from './amap.service';
-import { AmapConfig, STBUI_AMAP_DATA } from './amap.config';
+import { AmapComponent } from "./amap.component";
+import { AmapService } from "./amap.service";
 import {
   STBUI_AMAP_USER_OPTIONS,
   STBUI_AMAP_DEFAULT_OPTIONS,
-  STBUI_AMAP_DEFAULT_OPTIONS_PROVIDER_FACTORY
-} from './amap.token';
+  STBUI_AMAP_DEFAULT_OPTIONS_PROVIDER_FACTORY,
+} from "./amap.token";
 
 @NgModule({
   imports: [CommonModule],
@@ -29,9 +28,9 @@ import {
     AmapService,
     {
       provide: STBUI_AMAP_DEFAULT_OPTIONS,
-      useFactory: STBUI_AMAP_DEFAULT_OPTIONS_PROVIDER_FACTORY
-    }
-  ]
+      useFactory: STBUI_AMAP_DEFAULT_OPTIONS_PROVIDER_FACTORY,
+    },
+  ],
 })
 export class AmapModule {
   constructor(
@@ -52,9 +51,9 @@ export class AmapModule {
       providers: [
         {
           provide: STBUI_AMAP_USER_OPTIONS,
-          useValue: config
-        }
-      ]
+          useValue: config,
+        },
+      ],
     };
   }
 }

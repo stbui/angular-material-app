@@ -4,7 +4,7 @@
   <a href="./" target="blank"><img src="src/assets/logo.png" alt="stbui Logo" width="128" /></a>
 </p>
 
-基于最新`Angular 8`框架与`Material 2`技术的企业级中后台前端应用框架。
+基于最新`Angular 9`框架与`Material 2`技术的企业级中后台前端应用框架。
 
 [![Travis](https://travis-ci.org/stbui/angular-material-app.svg?branch=master)](https://travis-ci.org/stbui/angular-material-app)
 [![Docker Build Status](https://img.shields.io/docker/build/stbui/angular-material-app.svg?style=flat-square)](https://hub.docker.com/r/stbui/angular-material-app/)

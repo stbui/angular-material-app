@@ -3,15 +3,15 @@
  * Copyright Stbui All Rights Reserved.
  */
 
-import { Injectable, InjectionToken, Inject } from '@angular/core';
-import { Observable, BehaviorSubject, Subject } from 'rxjs';
+import { Injectable, Inject } from "@angular/core";
+import { Subject } from "rxjs";
 
-import { AmapConfig, STBUI_AMAP_DATA } from './amap.config';
+import { AmapConfig } from "./amap.config";
 
 import {
   STBUI_AMAP_DEFAULT_OPTIONS,
-  STBUI_AMAP_USER_OPTIONS
-} from './amap.token';
+  STBUI_AMAP_USER_OPTIONS,
+} from "./amap.token";
 
 declare var AMap: any;
 
@@ -30,22 +30,22 @@ export class AmapService {
   }
 
   load() {
-    const script = document.createElement('script');
-    script.type = 'text/javascript';
+    const script = document.createElement("script");
+    script.type = "text/javascript";
     script.async = true;
     script.defer = true;
     script.src = this._getSrc();
 
-    script.onload = event => {
+    script.onload = (event) => {
       this.onLoad.next(event);
       this.onLoad.complete();
     };
 
-    script.onerror = event => {
+    script.onerror = (event) => {
       this.onLoad.error(event);
     };
 
-    document.getElementsByTagName('head')[0].appendChild(script);
+    document.getElementsByTagName("head")[0].appendChild(script);
   }
 
   createMap(element?, options?) {
@@ -64,9 +64,8 @@ export class AmapService {
   }
 
   destroyMap() {
-    this.onMap.subscribe(map => {
+    this.onMap.subscribe((map) => {
       map.clearMap();
-      // map.destroy();
     });
   }
 

@@ -1,6 +1,6 @@
 {
   "name": "angular-material-app",
-  "description": "基于最新`8`框架与`Material 2`技术的企业级中后台前端应用框架。",
+  "description": "基于最新`Angular 9`框架与`Material 2`技术的企业级中后台前端应用框架。",
   "homepage": "https://github.com/stbui/angular-material-app",
   "bugs": "https://github.com/stbui/angular-material-app/issues",
   "version": "0.8.0",
@@ -50,7 +50,6 @@
     "firebase": "^7.14.2",
     "hammerjs": "^2.0.8",
     "material-design-icons": "^3.0.1",
-    "ngx-perfect-scrollbar": "^9.0.0",
     "ngx-quill": "^8.1.7",
     "normalize.css": "^8.0.1",
     "quill": "^1.3.7",
