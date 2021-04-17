@@ -124,12 +124,13 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-}
-.background-holder--left-top {
-  background-position: left top;
-}
-.background-holder--auto {
-  background-size: auto;
+
+  &--left-top {
+      background-position: left top;
+  }
+  &--auto {
+      background-size: auto;
+  }
 }
 
 mat-card {

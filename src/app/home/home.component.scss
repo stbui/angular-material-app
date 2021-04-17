@@ -4,12 +4,13 @@ $primary-color: #6a82fb;
   background: #fc5c7d;
   background: -webkit-linear-gradient(to right, #6a82fb, #fc5c7d);
   background: linear-gradient(to right, #6a82fb, #fc5c7d);
-  height: 500px;
+  height: 1000px;
   color: #fff;
   padding: 0 20px;
 
   .content {
-    margin-top: 20px;
+    width: 44%;
+    margin-top: 200px;
   }
 }
 
@@ -262,4 +263,17 @@ p {
   bottom: 11%;
   left: 15%;
   background: rgba(255, 255, 255, 0.05);
+}
+
+.hero {
+  height: 870px;
+  width: 745px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  right: 10%;
+  top: 15%;
+  z-index: 2;
+  background-image: url('https://irtech.biz/tf/oxo/assets/img/header-slider/startup/01.png');
+  background-image: url('https://apdash.themetags.com/assets/img/hero-image.svg');
 }

@@ -6,6 +6,8 @@
 
 基于最新`Angular 11`框架与`Material 2`技术的企业级中后台前端应用框架。
 
+React =>  [https://github.com/stbui/prophet](https://github.com/stbui/prophet)
+
 [![Travis](https://travis-ci.org/stbui/angular-material-app.svg?branch=master)](https://travis-ci.org/stbui/angular-material-app)
 [![Docker Build Status](https://img.shields.io/docker/build/stbui/angular-material-app.svg?style=flat-square)](https://hub.docker.com/r/stbui/angular-material-app/)
 [![Dependency Status](https://img.shields.io/david/stbui/angular-material-app.svg?style=flat-square)](https://david-dm.org/stbui/angular-material-app)
