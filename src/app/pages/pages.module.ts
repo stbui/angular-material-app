@@ -23,7 +23,6 @@ import { BlogService } from './blog/blog.service';
 
 import { ProfileComponent } from './profile/profile.component';
 import { FileManagerComponent } from './file-manager/file-manager.component';
-import { FileManagerFirebase } from './file-manager/file-manager.firebase';
 import { FileManagerService } from './file-manager/file-manager.service';
 import { ProjectComponent } from './project/project.component';
 
@@ -50,6 +49,6 @@ import { ProjectComponent } from './project/project.component';
     ProjectComponent,
     FileSizePipe
   ],
-  providers: [FileManagerFirebase, FileManagerService, BlogService]
+  providers: [ FileManagerService, BlogService]
 })
 export class PagesModule { }

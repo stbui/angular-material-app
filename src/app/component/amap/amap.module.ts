@@ -3,12 +3,7 @@
  * Copyright Stbui All Rights Reserved.
  */
 
-import {
-  NgModule,
-  ModuleWithProviders,
-  SkipSelf,
-  Optional,
-} from "@angular/core";
+import { NgModule, SkipSelf, Optional } from "@angular/core";
 import { CommonModule } from "@angular/common";
 
 import { AmapComponent } from "./amap.component";
@@ -45,7 +40,7 @@ export class AmapModule {
     }
   }
 
-  static forRoot(config?): ModuleWithProviders {
+  static forRoot(config?) {
     return {
       ngModule: AmapModule,
       providers: [

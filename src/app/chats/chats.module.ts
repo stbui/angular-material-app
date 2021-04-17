@@ -3,7 +3,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { SharedModule } from '../../@stbui/shared/shared.module';
 
 import { ChatsService } from './chats.service';
-import { ChatsFirebase } from './chats.firebase';
+// import { ChatsFirebase } from './chats.firebase';
 import { ChatsComponent } from './chats.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { ChatComponent } from './chat/chat.component';
@@ -24,7 +24,7 @@ import { ChatRoutingModule } from './chats.routing';
   ],
   entryComponents: [NoticeComponent],
   providers: [
-    ChatsFirebase,
+    // ChatsFirebase,
     ChatsService,
   ]
 })

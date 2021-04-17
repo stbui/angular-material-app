@@ -12,7 +12,7 @@ import {
 } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { FileUploadService } from './file-upload.service';
-import { FirebaseService } from './firebase.service';
+// import { FirebaseService } from './firebase.service';
 @Component({
   moduleId: module.id,
   selector: 'stbui-file-upload',

@@ -1,23 +1,25 @@
-import { AfterContentInit, Directive, ElementRef, Input, NgZone } from '@angular/core';
-import defaultsDeep from 'lodash-es/defaultsDeep';
-import SimpleBar from 'simplebar';
-import { scrollbarOptions } from './scrollbar-options';
+import {
+  AfterContentInit,
+  Directive,
+  ElementRef,
+  Input,
+  NgZone,
+} from "@angular/core";
+import SimpleBar from "simplebar";
+import { scrollbarOptions } from "./scrollbar-options";
 
 @Directive({
-  selector: '[stbuiScrollbar],stbui-scrollbar'
+  selector: "[stbuiScrollbar],stbui-scrollbar",
 })
 export class ScrollbarDirective implements AfterContentInit {
-
-  @Input('stbuiScrollbar') options: Partial<any>;
+  @Input("stbuiScrollbar") options: Partial<any>;
 
   scrollbarRef: SimpleBar;
 
-  constructor(private _element: ElementRef,
-              private zone: NgZone) {
-  }
+  constructor(private _element: ElementRef, private zone: NgZone) {}
 
   ngAfterContentInit() {
-    const options = defaultsDeep(this.options, scrollbarOptions);
+    const options = { ...this.options, ...scrollbarOptions };
 
     this.scrollbarRef = new SimpleBar(this._element.nativeElement, options);
   }

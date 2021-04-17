@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { ChatsFirebase } from './chats.firebase';
+// import { ChatsFirebase } from './chats.firebase';
 import { ChatsService } from './chats.service';
 
 @Component({

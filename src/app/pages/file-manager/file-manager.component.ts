@@ -1,5 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { FileManagerFirebase } from './file-manager.firebase';
+// import { FileManagerFirebase } from './file-manager.firebase';
 import { FileManagerService } from './file-manager.service';
 
 @Component({
